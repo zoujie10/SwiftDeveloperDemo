@@ -1,0 +1,11 @@
+version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
+options: "d9844a03d72c1034e949c7b3dd25e12c"
+build_time: [1526020605, 808740000]
+inputs:
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/WebDemoViewController.swift": [1525934233, 0]
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/DeviceInfo.swift": [1525933503, 0]
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/ViewController.swift": [1525933503, 0]
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/ScrollViewController.swift": [9223372036, 854775807]
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/AlertAndActionViewController.swift": [1525937671, 0]
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/AppDelegate.swift": [1525675449, 0]
+  "/Users/zoujie/DemoFolder/iOSDeveloperDemo/iOSDeveloperDemo/TextViewController.swift": [1525761969, 0]
