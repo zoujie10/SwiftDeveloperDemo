@@ -222,6 +222,19 @@ SWIFT_CLASS("_TtC16iOSDeveloperDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIDatePicker;
+
+SWIFT_CLASS("_TtC16iOSDeveloperDemo22PickDataViewController")
+@interface PickDataViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UIDatePicker * _Null_unspecified datePickView;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified displayDateLB;
+- (IBAction)pickDateAction:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIScrollView;
 @class UIView;
 @class UITextField;
@@ -251,6 +264,7 @@ SWIFT_CLASS("_TtC16iOSDeveloperDemo20ScrollViewController")
 
 SWIFT_CLASS("_TtC16iOSDeveloperDemo18TextViewController")
 @interface TextViewController : UIViewController
+- (IBAction)JumpPickView:(UIButton * _Nonnull)sender;
 - (IBAction)leftSwitchTouch:(UISwitch * _Nonnull)sender;
 - (IBAction)RightSwitchTouch:(id _Nonnull)sender;
 - (IBAction)segBtn:(UISegmentedControl * _Nonnull)sender;

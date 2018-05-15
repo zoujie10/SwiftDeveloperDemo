@@ -2,16 +2,7 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "Expression_8.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "3x"
+      "filename" : "Expression_8.png"
     }
   ],
   "info" : {

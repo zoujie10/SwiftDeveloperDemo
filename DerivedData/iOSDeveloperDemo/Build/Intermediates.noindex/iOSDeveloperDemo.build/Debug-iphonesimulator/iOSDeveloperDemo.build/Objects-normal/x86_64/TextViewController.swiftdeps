@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["16iOSDeveloperDemo18TextViewControllerC", ""]
 provides-dynamic-lookup:
+- "JumpPickView"
 - "RightSwitchTouch"
 - "didReceiveMemoryWarning"
 - "leftSwitchTouch"
@@ -21,6 +22,7 @@ depends-top-level:
 - "Set"
 - !private "StringLiteralType"
 - "TextViewController"
+- "UIButton"
 - !private "UIColor"
 - "UIEvent"
 - "UISegmentedControl"
@@ -149,8 +151,10 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So21NSItemProviderReadingP", "brown"]
 - !private ["So21NSItemProviderWritingP", "brown"]
+- ["So8NSObjectC", "JumpPickView"]
 - ["So8NSObjectC", "RightSwitchTouch"]
 - ["So8NSObjectC", "Set"]
+- ["So8NSObjectC", "UIButton"]
 - !private ["So8NSObjectC", "UIColor"]
 - ["So8NSObjectC", "UIEvent"]
 - ["So8NSObjectC", "UISegmentedControl"]
@@ -195,8 +199,10 @@ depends-member:
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- ["16iOSDeveloperDemo18TextViewControllerC", "JumpPickView"]
 - ["16iOSDeveloperDemo18TextViewControllerC", "RightSwitchTouch"]
 - ["16iOSDeveloperDemo18TextViewControllerC", "Set"]
+- ["16iOSDeveloperDemo18TextViewControllerC", "UIButton"]
 - !private ["16iOSDeveloperDemo18TextViewControllerC", "UIColor"]
 - ["16iOSDeveloperDemo18TextViewControllerC", "UIEvent"]
 - ["16iOSDeveloperDemo18TextViewControllerC", "UISegmentedControl"]
@@ -295,8 +301,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "value"]
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "JumpPickView"]
 - ["So11UIResponderC", "RightSwitchTouch"]
 - ["So11UIResponderC", "Set"]
+- ["So11UIResponderC", "UIButton"]
 - !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UIEvent"]
 - ["So11UIResponderC", "UISegmentedControl"]
@@ -365,8 +373,10 @@ depends-member:
 - !private ["So6UIViewC", "maximumValue"]
 - !private ["So6UIViewC", "selectedSegmentIndex"]
 - !private ["So6UIViewC", "value"]
+- ["So16UIViewControllerC", "JumpPickView"]
 - ["So16UIViewControllerC", "RightSwitchTouch"]
 - ["So16UIViewControllerC", "Set"]
+- ["So16UIViewControllerC", "UIButton"]
 - !private ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UIEvent"]
 - ["So16UIViewControllerC", "UISegmentedControl"]
@@ -501,5 +511,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "411ed57b8c95d091979acfa86d6d0ae6"
+interface-hash: "35c7bb6e6d174087af5a6596b100e385"

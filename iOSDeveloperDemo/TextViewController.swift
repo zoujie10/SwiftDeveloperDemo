@@ -10,6 +10,9 @@ import UIKit
 
 class TextViewController: UIViewController {
 
+	@IBAction func JumpPickView(_ sender: UIButton) {
+		
+	}
 	@IBAction func leftSwitchTouch(_ sender: UISwitch) {
 		print("Left:",sender.isOn)
 	}
