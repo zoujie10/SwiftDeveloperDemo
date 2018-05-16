@@ -404,13 +404,36 @@
                                     <action selector="pickDateAction:" destination="YhS-9f-Sps" eventType="touchUpInside" id="mhq-k8-Mdo"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-kw-Iiu">
+                                <rect key="frame" x="0.0" y="337" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-3b-UgT">
+                                <rect key="frame" x="63" y="561" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.58890261082193363" blue="0.59371938992654028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbl-46-J8t">
+                                <rect key="frame" x="63" y="612" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.56693850681644209" green="1" blue="0.98029132146716291" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="PickAddress"/>
+                                <connections>
+                                    <action selector="clickAddressBtn:" destination="YhS-9f-Sps" eventType="touchUpInside" id="5YH-uu-0jI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="XbI-au-4j8"/>
                     </view>
                     <connections>
                         <outlet property="datePickView" destination="3jh-TO-VIL" id="hE2-UH-WNU"/>
+                        <outlet property="displayAddressLB" destination="xhK-3b-UgT" id="1hG-oU-uV7"/>
                         <outlet property="displayDateLB" destination="dGn-JA-IrK" id="XV9-t8-55Z"/>
+                        <outlet property="pickerView" destination="vA7-kw-Iiu" id="9Rs-Qc-BOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqt-3Y-HjU" userLabel="First Responder" sceneMemberID="firstResponder"/>

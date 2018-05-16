@@ -222,15 +222,23 @@ SWIFT_CLASS("_TtC16iOSDeveloperDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIPickerView;
 @class UIDatePicker;
 
 SWIFT_CLASS("_TtC16iOSDeveloperDemo22PickDataViewController")
-@interface PickDataViewController : UIViewController
+@interface PickDataViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, strong) IBOutlet UIPickerView * _Null_unspecified pickerView;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified displayAddressLB;
+- (IBAction)clickAddressBtn:(UIButton * _Nonnull)sender;
 @property (nonatomic, strong) IBOutlet UIDatePicker * _Null_unspecified datePickView;
 @property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified displayDateLB;
 - (IBAction)pickDateAction:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

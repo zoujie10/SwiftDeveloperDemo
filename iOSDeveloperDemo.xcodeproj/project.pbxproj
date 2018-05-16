@@ -19,6 +19,7 @@
 		84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */; };
 		84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */; };
 		84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BFE20A038760031DEEE /* TextViewController.swift */; };
+		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
 		84FA589320A41CC800C89323 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA589220A41CC800C89323 /* DeviceInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDeveloperDemoTests.swift; sourceTree = "<group>"; };
 		84E37BF520A02D3B0031DEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E37BFE20A038760031DEEE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
 		84FA589220A41CC800C89323 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
+				84E9DB6520AAB61100C65A12 /* Resource */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
 				84E37BF220A02D3B0031DEEE /* iOSDeveloperDemoTests */,
 				84E37BDC20A02D390031DEEE /* Products */,
@@ -115,6 +118,14 @@
 				84E37BF520A02D3B0031DEEE /* Info.plist */,
 			);
 			path = iOSDeveloperDemoTests;
+			sourceTree = "<group>";
+		};
+		84E9DB6520AAB61100C65A12 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				84E9DB6620AAB66E00C65A12 /* China_cities.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */,
 				8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */,
 				84E37BE420A02D390031DEEE /* Main.storyboard in Resources */,
+				84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
