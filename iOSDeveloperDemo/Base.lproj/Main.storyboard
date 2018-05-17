@@ -88,7 +88,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="-139"/>
+            <point key="canvasLocation" x="-551" y="-190"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="Zad-AH-2LZ">
+            <objects>
+                <collectionViewController id="8oN-IA-Ml2" customClass="CollectionViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ALP-nE-eyr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97268140447451423" green="1" blue="0.99292396389982995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zfh-jf-1Av">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="gQF-26-FT5" customClass="Cell" customModule="iOSDeveloperDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7T9-h7-soH">
+                                            <rect key="frame" x="35" y="20" width="80" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.69508114173803848" blue="0.65412520725693579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzO-At-MeF">
+                                            <rect key="frame" x="35" y="109" width="80" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.99648198045998726" green="1" blue="0.99934395972038526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.97021493768680822" green="1" blue="0.98390850124341844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="customSize" width="150" height="150"/>
+                                <connections>
+                                    <outlet property="imageView" destination="7T9-h7-soH" id="d4e-IC-O2d"/>
+                                    <outlet property="sportLB" destination="EzO-At-MeF" id="SdG-uV-I9Z"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8oN-IA-Ml2" id="xzd-xA-m1X"/>
+                            <outlet property="delegate" destination="8oN-IA-Ml2" id="2jR-3u-Id0"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNr-PM-9vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584.79999999999995" y="-862.3152709359606"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="Zyc-2B-Spu">
@@ -167,9 +222,15 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fva-s9-hRJ">
-                                <rect key="frame" x="182" y="350" width="100" height="30"/>
+                                <rect key="frame" x="182" y="346" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="1" green="0.60251835228952144" blue="0.54213648016453364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CollectionView"/>
+                                <connections>
+                                    <segue destination="8oN-IA-Ml2" kind="popoverPresentation" popoverAnchorView="Fva-s9-hRJ" id="y9c-o4-WNh">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLv-w8-BWU">
                                 <rect key="frame" x="187" y="476" width="100" height="30"/>
@@ -188,7 +249,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w6-02-JmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DyH-FY-Qoy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="864.79999999999995" y="-127.83251231527095"/>
+            <point key="canvasLocation" x="561" y="-191"/>
         </scene>
         <!--Alert And Action View Controller-->
         <scene sceneID="3kt-Tn-9ut">
@@ -493,7 +554,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                         </subviews>
-                        <color key="backgroundColor" red="0.46805915622212724" green="1" blue="0.073222302163454267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66230725133913038" green="1" blue="0.87764673750507949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nMO-G2-Hhw"/>
                     </view>
                     <connections>
