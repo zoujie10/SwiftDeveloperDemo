@@ -41,7 +41,8 @@ class CollectionViewController: UICollectionViewController {
 	
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let event = self.evevts[indexPath.section*2 + indexPath.row] as! NSDictionary
-		print("select event name:%@",event["name"] as! String)
+		print("select event name:",event["name"] as! String)
+		
 	}
 	//MARK: END
 

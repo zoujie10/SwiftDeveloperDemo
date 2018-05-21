@@ -24,6 +24,12 @@
 		84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */; };
 		84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BFE20A038760031DEEE /* TextViewController.swift */; };
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
+		84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */; };
+		84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */; };
+		84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA020AEA96800B6914A /* team_dictionary.plist */; };
+		84FA0FA320AEA96800B6914A /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA120AEA96800B6914A /* team.plist */; };
+		84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0FA420AEC4D700B6914A /* CustomTableViewController.swift */; };
+		84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0FA620AEC72700B6914A /* CustomTableViewCell.swift */; };
 		84FA589320A41CC800C89323 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA589220A41CC800C89323 /* DeviceInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,12 @@
 		84E37BF520A02D3B0031DEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E37BFE20A038760031DEEE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
+		84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FootBallTeam.xcassets; sourceTree = "<group>"; };
+		84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		84FA0FA020AEA96800B6914A /* team_dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team_dictionary.plist; sourceTree = "<group>"; };
+		84FA0FA120AEA96800B6914A /* team.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team.plist; sourceTree = "<group>"; };
+		84FA0FA420AEC4D700B6914A /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		84FA0FA620AEC72700B6914A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		84FA589220A41CC800C89323 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,8 +95,6 @@
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
-				840D87D920AD4EC600BA6A1D /* Flag.xcassets */,
-				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
 				84E9DB6520AAB61100C65A12 /* Resource */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
 				84E37BF220A02D3B0031DEEE /* iOSDeveloperDemoTests */,
@@ -104,6 +114,7 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84FA0F9F20AEA69100B6914A /* Cell View */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
 				84FA589220A41CC800C89323 /* DeviceInfo.swift */,
 				84E37BE020A02D390031DEEE /* ViewController.swift */,
@@ -113,9 +124,13 @@
 				84D5307720A5717C00598810 /* ScrollViewController.swift */,
 				8438A40520A983010077A37F /* PickDataViewController.swift */,
 				846BB12E20AC1B5100268E6D /* CollectionViewController.swift */,
+				84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */,
+				84FA0FA420AEC4D700B6914A /* CustomTableViewController.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
-				846BB13420AC26B500268E6D /* Cell.swift */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
+				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
+				840D87D920AD4EC600BA6A1D /* Flag.xcassets */,
+				84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */,
 				84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */,
 				84E37BEA20A02D3B0031DEEE /* Info.plist */,
 			);
@@ -136,8 +151,19 @@
 			children = (
 				84E9DB6620AAB66E00C65A12 /* China_cities.plist */,
 				846BB13220AC1CBC00268E6D /* events.plist */,
+				84FA0FA020AEA96800B6914A /* team_dictionary.plist */,
+				84FA0FA120AEA96800B6914A /* team.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		84FA0F9F20AEA69100B6914A /* Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				846BB13420AC26B500268E6D /* Cell.swift */,
+				84FA0FA620AEC72700B6914A /* CustomTableViewCell.swift */,
+			);
+			path = "Cell View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +250,13 @@
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
 				84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */,
 				840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */,
+				84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */,
 				8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */,
 				84E37BE420A02D390031DEEE /* Main.storyboard in Resources */,
 				84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */,
+				84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */,
 				846BB13320AC1CBC00268E6D /* events.plist in Resources */,
+				84FA0FA320AEA96800B6914A /* team.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +276,9 @@
 			files = (
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
+				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				84FA589320A41CC800C89323 /* DeviceInfo.swift in Sources */,
+				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
@@ -255,6 +286,7 @@
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
+				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
