@@ -12,6 +12,8 @@
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
+		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
+		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
@@ -52,6 +54,8 @@
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
+		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		845D81E520B412CE00ABD88A /* AlterCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterCellViewController.swift; sourceTree = "<group>"; };
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8443766D20BBD93E00F28BA8 /* ToolsClass */ = {
+			isa = PBXGroup;
+			children = (
+				84FA589220A41CC800C89323 /* DeviceInfo.swift */,
+			);
+			path = ToolsClass;
+			sourceTree = "<group>";
+		};
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +132,9 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8443766D20BBD93E00F28BA8 /* ToolsClass */,
 				84FA0F9F20AEA69100B6914A /* Cell View */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
-				84FA589220A41CC800C89323 /* DeviceInfo.swift */,
 				84E37BE020A02D390031DEEE /* ViewController.swift */,
 				84E37BFE20A038760031DEEE /* TextViewController.swift */,
 				84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */,
@@ -135,9 +147,11 @@
 				843E494B20B2DB9300CF190C /* SectionTableViewController.swift */,
 				845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */,
 				845D81E520B412CE00ABD88A /* AlterCellViewController.swift */,
+				8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
 				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
+				8443767020BBF76400F28BA8 /* FruitImage.xcassets */,
 				840D87D920AD4EC600BA6A1D /* Flag.xcassets */,
 				84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */,
 				84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */,
@@ -257,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
+				8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */,
 				84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */,
 				840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */,
 				84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */,
@@ -296,6 +311,7 @@
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
+				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
@@ -468,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ZJ-11.iOSDeveloperDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -486,7 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ZJ-11.iOSDeveloperDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

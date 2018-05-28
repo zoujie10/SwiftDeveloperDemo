@@ -17,6 +17,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 	@IBOutlet var DisPlayTextView: UITextView!
 	@IBOutlet var InputNameTextField: UITextField!
 	@IBOutlet var AbstractLB: UILabel!
+	
 	@IBAction func OKBtn(_ sender: UIButton) {
 		if changeTag == true{
 			DisplayLB.text = "Hello"
@@ -27,6 +28,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 			DisplayLB.backgroundColor = UIColor.blue
 			changeTag = true
 		}
+		
 //		self.present(TextViewController(), animated: true) {
 //				print("Jump TextViewController")
 //		}
@@ -34,9 +36,12 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 	//MARK: 生命周期
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
 		changeTag = true
 		deviceInfo()
+		
+		let notificationCenter = NotificationCenter.default
+		notificationCenter.addObserver(self, selector:#selector(registerCompletion(notification:)), name:NSNotification.Name(rawValue: "RegisterCompletionNotification"), object: nil)
+
 		
 	}
 	override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +54,16 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+	
+	@objc func registerCompletion(notification: Notification){
+		
+		let theDate : NSDictionary = notification.userInfo! as NSDictionary
+		let userID = theDate.object(forKey: "userID")
+		DisplayLB.text = userID as? String
+		
+	}
+	
+	
 	//MARK: 协议
 	func textFieldShouldClear(_ textField: UITextField) -> Bool {
 		InputNameTextField.text = nil
