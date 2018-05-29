@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOSDeveloperDemo/ViewController.swift"
-            timestampString = "549184897.729838"
+            timestampString = "549193458.306071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "registerCompletion(notification:)"
             landmarkType = "7">
          </BreakpointContent>

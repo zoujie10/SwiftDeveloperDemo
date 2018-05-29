@@ -14,6 +14,7 @@
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
+		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
@@ -56,6 +57,7 @@
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
+		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		845D81E520B412CE00ABD88A /* AlterCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterCellViewController.swift; sourceTree = "<group>"; };
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */,
 				845D81E520B412CE00ABD88A /* AlterCellViewController.swift */,
 				8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */,
+				8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
 				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
@@ -301,6 +304,7 @@
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
+				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				84FA589320A41CC800C89323 /* DeviceInfo.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,

@@ -39,6 +39,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 		changeTag = true
 		deviceInfo()
 		
+		//注册通知
 		let notificationCenter = NotificationCenter.default
 		notificationCenter.addObserver(self, selector:#selector(registerCompletion(notification:)), name:NSNotification.Name(rawValue: "RegisterCompletionNotification"), object: nil)
 
