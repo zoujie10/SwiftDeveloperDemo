@@ -25,7 +25,7 @@ class PickDataViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 		displayAddressLB.text = title as String
 	}
 	
-	//MARK: PickView END~~~~~~~~~~~~~
+	
 	//MARK:  DatePickView~~~~~~~~~~~~~~~~~
 	@IBOutlet var datePickView: UIDatePicker!
 	@IBOutlet var displayDateLB: UILabel!
@@ -39,10 +39,10 @@ class PickDataViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 		print(dateFormatter.string(from: theDate as Date))
 		self.displayDateLB.text = dateFormatter.string(from: theDate as Date)
 	}
-	//MARK: DatePickView END~~~~~~~~~~~~~~~~~~~~~~~
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		
 		let pistPath = Bundle.main.path(forResource: "China_cities", ofType: "plist")
 		let dataA:NSArray = NSArray(contentsOfFile:pistPath!)!//all data
 		let allCities : NSMutableArray = NSMutableArray()
@@ -92,6 +92,4 @@ class PickDataViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 			self.pickerView.reloadComponent(1)
 		}
 	}
-	
-	//MARK:  END
 }

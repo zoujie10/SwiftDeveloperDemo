@@ -52,9 +52,6 @@ class WebDemoViewController: UIViewController, WKNavigationDelegate,WKUIDelegate
 	
 	
 	//MARK:代理
-	
-	
-	
 	//请求服务器跳转请求
 	func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
 		

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D87D920AD4EC600BA6A1D /* Flag.xcassets */; };
+		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */; };
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
@@ -20,6 +21,10 @@
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
 		846BB13320AC1CBC00268E6D /* events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846BB13220AC1CBC00268E6D /* events.plist */; };
 		846BB13520AC26B500268E6D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB13420AC26B500268E6D /* Cell.swift */; };
+		847A569720BE7CC100EBB06C /* provinces_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 847A569620BE7CC000EBB06C /* provinces_cities.plist */; };
+		847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569820BE81F200EBB06C /* TabLTableViewController.swift */; };
+		847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */; };
+		847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569C20BE83D500EBB06C /* DetailViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
@@ -30,6 +35,8 @@
 		84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */; };
 		84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BFE20A038760031DEEE /* TextViewController.swift */; };
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
+		84EE672720BD32C00051F86C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672620BD32C00051F86C /* PageViewController.swift */; };
+		84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672820BD344D0051F86C /* SubPageViewController.swift */; };
 		84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */; };
 		84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */; };
 		84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA020AEA96800B6914A /* team_dictionary.plist */; };
@@ -51,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		840D87D920AD4EC600BA6A1D /* Flag.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Flag.xcassets; sourceTree = "<group>"; };
+		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndActionViewController.swift; sourceTree = "<group>"; };
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		846BB13220AC1CBC00268E6D /* events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = events.plist; sourceTree = "<group>"; };
 		846BB13420AC26B500268E6D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		847A569620BE7CC000EBB06C /* provinces_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces_cities.plist; sourceTree = "<group>"; };
+		847A569820BE81F200EBB06C /* TabLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabLTableViewController.swift; sourceTree = "<group>"; };
+		847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
+		847A569C20BE83D500EBB06C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +89,8 @@
 		84E37BF520A02D3B0031DEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E37BFE20A038760031DEEE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
+		84EE672620BD32C00051F86C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		84EE672820BD344D0051F86C /* SubPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPageViewController.swift; sourceTree = "<group>"; };
 		84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FootBallTeam.xcassets; sourceTree = "<group>"; };
 		84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		84FA0FA020AEA96800B6914A /* team_dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team_dictionary.plist; sourceTree = "<group>"; };
@@ -138,6 +152,7 @@
 				84FA0F9F20AEA69100B6914A /* Cell View */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
 				84E37BE020A02D390031DEEE /* ViewController.swift */,
+				847A569820BE81F200EBB06C /* TabLTableViewController.swift */,
 				84E37BFE20A038760031DEEE /* TextViewController.swift */,
 				84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */,
 				8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */,
@@ -151,6 +166,11 @@
 				845D81E520B412CE00ABD88A /* AlterCellViewController.swift */,
 				8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */,
 				8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */,
+				84EE672620BD32C00051F86C /* PageViewController.swift */,
+				84EE672820BD344D0051F86C /* SubPageViewController.swift */,
+				847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */,
+				847A569C20BE83D500EBB06C /* DetailViewController.swift */,
+				840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
 				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
@@ -179,6 +199,7 @@
 				846BB13220AC1CBC00268E6D /* events.plist */,
 				84FA0FA020AEA96800B6914A /* team_dictionary.plist */,
 				84FA0FA120AEA96800B6914A /* team.plist */,
+				847A569620BE7CC000EBB06C /* provinces_cities.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -274,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
+				847A569720BE7CC100EBB06C /* provinces_cities.plist in Resources */,
 				8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */,
 				84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */,
 				840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */,
@@ -303,21 +325,27 @@
 			files = (
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
+				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
+				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				84FA589320A41CC800C89323 /* DeviceInfo.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
+				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
+				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
+				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
+				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
