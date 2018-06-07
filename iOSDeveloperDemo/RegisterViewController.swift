@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
 			print("点击保存返回登录界面")
 			
 			let dataDic = NSDictionary(object: self.UserIdInPutTextField.text as Any, forKey: "userID" as NSCopying)
-			
+			//发送通知  接受通知在登录页
 			NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RegisterCompletionNotification"), object: nil, userInfo: (dataDic as! [AnyHashable : Any]))
 		}
 		

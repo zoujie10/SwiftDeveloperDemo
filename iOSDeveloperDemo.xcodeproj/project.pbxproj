@@ -25,6 +25,10 @@
 		847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569820BE81F200EBB06C /* TabLTableViewController.swift */; };
 		847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */; };
 		847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569C20BE83D500EBB06C /* DetailViewController.swift */; };
+		8485482E20C6648600A99E36 /* AppStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485482D20C6648600A99E36 /* AppStatusObserver.swift */; };
+		84B5BD5D20C5107500D2047C /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD5C20C5107500D2047C /* Singleton.swift */; };
+		84B5BD5F20C52D9200D2047C /* Philosopher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD5E20C52D9200D2047C /* Philosopher.swift */; };
+		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
@@ -75,6 +79,10 @@
 		847A569820BE81F200EBB06C /* TabLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabLTableViewController.swift; sourceTree = "<group>"; };
 		847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
 		847A569C20BE83D500EBB06C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8485482D20C6648600A99E36 /* AppStatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
+		84B5BD5C20C5107500D2047C /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		84B5BD5E20C52D9200D2047C /* Philosopher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
+		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +134,23 @@
 			path = ToolsClass;
 			sourceTree = "<group>";
 		};
+		84B5BD5A20C50FCE00D2047C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B5BD5C20C5107500D2047C /* Singleton.swift */,
+				84B5BD5E20C52D9200D2047C /* Philosopher.swift */,
+				8485482D20C6648600A99E36 /* AppStatusObserver.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B5BD5B20C50FE200D2047C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +173,8 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84B5BD5B20C50FE200D2047C /* View */,
+				84B5BD5A20C50FCE00D2047C /* Model */,
 				8443766D20BBD93E00F28BA8 /* ToolsClass */,
 				84FA0F9F20AEA69100B6914A /* Cell View */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
@@ -171,6 +198,7 @@
 				847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */,
 				847A569C20BE83D500EBB06C /* DetailViewController.swift */,
 				840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */,
+				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
 				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
@@ -328,11 +356,13 @@
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
+				84B5BD5F20C52D9200D2047C /* Philosopher.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				84FA589320A41CC800C89323 /* DeviceInfo.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
+				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
@@ -344,8 +374,10 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
+				8485482E20C6648600A99E36 /* AppStatusObserver.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
+				84B5BD5D20C5107500D2047C /* Singleton.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
