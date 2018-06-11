@@ -15,7 +15,7 @@ class MineViewController: UIViewController,PhilosopherDelegate {
 		let Person = Philosopher()
 		Person.delegate = self
 		Person.start()
-		
+		print("on my View in put:",Singleton.sharedInstance.str1,".")
     }
 
     override func didReceiveMemoryWarning() {

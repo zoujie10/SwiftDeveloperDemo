@@ -7,15 +7,19 @@
 //
 
 import UIKit
+//TODO:swift静态库引用问题待解决
+import ToolModelFrameWorkSDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		// Override poi$(PROJECT_DIR)/iOSDeveloperiPadDemont for customization after application launch.
+//		Singleton.sharedInstance.str1 = "iPad User Name"
+//		print(Singleton)
 		return true
 	}
 

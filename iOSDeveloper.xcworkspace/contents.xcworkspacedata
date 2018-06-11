@@ -7,4 +7,7 @@
    <FileRef
       location = "group:iOSDeveloperDemo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ToolModelFrameWorkSDK/ToolModelFrameWorkSDK.xcodeproj">
+   </FileRef>
 </Workspace>

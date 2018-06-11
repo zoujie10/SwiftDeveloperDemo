@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
 class YellowViewController: UIViewController {
 
 	
 	@IBAction func TapYellow(_ sender: UIButton) {
 		print("Tap YellowView")
+		
 	}
 	override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		deviceInfo()
-		print(Singleton.sharedInstance)
+		Singleton.sharedInstance.str1 = "User Name"
+		print("Login View test data:",Singleton.sharedInstance.str1)
 		
 		//KVO 监听APP状态
 		self.observer = AppStatusObserver()
