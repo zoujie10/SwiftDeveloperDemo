@@ -30,6 +30,8 @@
 		848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465620CE1DA100F982F2 /* Philosopher.swift */; };
 		848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A467820CE5B2900F982F2 /* DeviceInfo.swift */; };
 		848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A467A20CE5CF200F982F2 /* DataPersistence.swift */; };
+		848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A467E20CE6DF600F982F2 /* NoteByPlist.swift */; };
+		848A468120CE965E00F982F2 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A468020CE965E00F982F2 /* Note.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
@@ -85,6 +87,8 @@
 		848A465620CE1DA100F982F2 /* Philosopher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
 		848A467820CE5B2900F982F2 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		848A467A20CE5CF200F982F2 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
+		848A467E20CE6DF600F982F2 /* NoteByPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteByPlist.swift; sourceTree = "<group>"; };
+		848A468020CE965E00F982F2 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		847515D620D0F040005CC145 /* PersistenceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				848A467E20CE6DF600F982F2 /* NoteByPlist.swift */,
+				848A467A20CE5CF200F982F2 /* DataPersistence.swift */,
+			);
+			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
 		848A465320CE1DA100F982F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +148,7 @@
 				848A465420CE1DA100F982F2 /* AppStatusObserver.swift */,
 				848A465520CE1DA100F982F2 /* Singleton.swift */,
 				848A465620CE1DA100F982F2 /* Philosopher.swift */,
-				848A467A20CE5CF200F982F2 /* DataPersistence.swift */,
+				848A468020CE965E00F982F2 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +227,7 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				847515D620D0F040005CC145 /* PersistenceLayer */,
 				849FC3A020C9187100C1D18B /* BusinessLogicLayer */,
 				849FC39E20C9176B00C1D18B /* PresentationLayer */,
 				848A465320CE1DA100F982F2 /* Model */,
@@ -388,6 +402,7 @@
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
+				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */,
 				848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
@@ -396,6 +411,7 @@
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
+				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
