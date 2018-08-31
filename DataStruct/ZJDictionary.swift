@@ -9,5 +9,8 @@
 import UIKit
 
 class ZJDictionary: NSObject {
-
+	public func stringCharacters(string : String) {
+		let result = Dictionary(string.map{($0,1)},uniquingKeysWith: +)
+		print(result.count,result.endIndex.hashValue)
+	}
 }
