@@ -18,6 +18,10 @@
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
+		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
+		8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01821393AE100FC6B5C /* ZJArray.swift */; };
+		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
+		8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */; };
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
 		846BB13320AC1CBC00268E6D /* events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846BB13220AC1CBC00268E6D /* events.plist */; };
 		846BB13520AC26B500268E6D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB13420AC26B500268E6D /* Cell.swift */; };
@@ -76,6 +80,10 @@
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		845D81E520B412CE00ABD88A /* AlterCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterCellViewController.swift; sourceTree = "<group>"; };
+		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
+		8467E01821393AE100FC6B5C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJArray.swift; path = DataStruct/ZJArray.swift; sourceTree = SOURCE_ROOT; };
+		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
+		8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJSetAndDictionary.swift; path = DataStruct/ZJSetAndDictionary.swift; sourceTree = SOURCE_ROOT; };
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		846BB13220AC1CBC00268E6D /* events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = events.plist; sourceTree = "<group>"; };
 		846BB13420AC26B500268E6D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -134,6 +142,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8467E01621393A9800FC6B5C /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				8467E01821393AE100FC6B5C /* ZJArray.swift */,
+				8467E01921393AE100FC6B5C /* ZJDictionary.swift */,
+				8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */,
+				8467E01721393AE100FC6B5C /* ZJString.swift */,
+			);
+			name = DataStruct;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		847515D620D0F040005CC145 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +231,7 @@
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
+				8467E01621393A9800FC6B5C /* DataStruct */,
 				84E9DB6520AAB61100C65A12 /* Resource */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
 				84E37BF220A02D3B0031DEEE /* iOSDeveloperDemoTests */,
@@ -406,8 +427,11 @@
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
+				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
+				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */,
 				848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */,
+				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
@@ -425,6 +449,7 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
+				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
