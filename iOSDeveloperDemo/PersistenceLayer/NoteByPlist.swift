@@ -16,8 +16,7 @@ extension String {
 }
 
 public func handlePlist(){
-	let dateFomatter : DateFormatter = DateFormatter()
-	dateFomatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+	let dateFomatter : DateFormatter = dateFomatterMethod()
 	let datetest = dateFomatter.date(from: "2017-06-28 16:10:17")
 	let NoteTest = Note(date: datetest! as NSDate, content: "添加第4条")
 	
@@ -30,6 +29,13 @@ public func handlePlist(){
 //		one.remove(model: NoteTest)
 //	one.findAll()
 //	one.findById(model: NoteTest)
+}
+
+
+func dateFomatterMethod() -> DateFormatter{
+	let dateFomatter : DateFormatter = DateFormatter()
+	dateFomatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+	return dateFomatter
 }
 
 class NoteByPlist: NSObject {
@@ -54,13 +60,8 @@ class NoteByPlist: NSObject {
 		}
 		return path
 	}
-	//end
 	
-	func dateFomatterMethod() -> DateFormatter{
-		let dateFomatter : DateFormatter = DateFormatter()
-		dateFomatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		return dateFomatter
-	}
+	
 	
 	
 	func createEditableCopyOfDatabaseIfNeeded(){
@@ -86,7 +87,7 @@ class NoteByPlist: NSObject {
 	
 	public func create(model : Note){
 		
-		let dateFomatter : DateFormatter = self.dateFomatterMethod()
+		let dateFomatter : DateFormatter = dateFomatterMethod()
 		var path : String
 		if PlistfilePath.isEmpty{
 			path = self.applicationDocumentsDirectoryFile()
@@ -103,7 +104,7 @@ class NoteByPlist: NSObject {
 	}
 	
 	public func remove(model : Note) -> Int{
-		let dateFomatter : DateFormatter = self.dateFomatterMethod()
+		let dateFomatter : DateFormatter = dateFomatterMethod()
 		
 		let path = self.applicationDocumentsDirectoryFile()
 		let array = NSMutableArray(contentsOfFile: path)!
@@ -125,7 +126,7 @@ class NoteByPlist: NSObject {
 	}
 	
 	public func modify(model : Note) -> Int{
-		let dateFomatter : DateFormatter = self.dateFomatterMethod()
+		let dateFomatter : DateFormatter = dateFomatterMethod()
 		
 		let path = self.applicationDocumentsDirectoryFile()
 		let array = NSMutableArray(contentsOfFile: path)!
@@ -146,7 +147,7 @@ class NoteByPlist: NSObject {
 	}
 	
 	public func findAll() -> NSMutableArray{
-		let dateFomatter : DateFormatter = self.dateFomatterMethod()
+		let dateFomatter : DateFormatter = dateFomatterMethod()
 		let path = PlistfilePath
 		let array = NSMutableArray(contentsOfFile: path)!
 		
@@ -165,7 +166,7 @@ class NoteByPlist: NSObject {
 	}
 	
 	public func findById(model : Note) -> Note?{
-		let dateFomatter : DateFormatter = self.dateFomatterMethod()
+		let dateFomatter : DateFormatter = dateFomatterMethod()
 		let path = self.applicationDocumentsDirectoryFile()
 		let array = NSMutableArray(contentsOfFile: path)!
 		

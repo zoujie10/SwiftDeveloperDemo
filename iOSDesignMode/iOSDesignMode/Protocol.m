@@ -1,0 +1,13 @@
+//
+//  Protocol.m
+//  iOSDesignMode
+//
+//  Created by Zoujie on 2018/6/22.
+//  Copyright © 2018年 Zoujie. All rights reserved.
+//
+
+#import "Protocol.h"
+
+@implementation Protocol
+
+@end

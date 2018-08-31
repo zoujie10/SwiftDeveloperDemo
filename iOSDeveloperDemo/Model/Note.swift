@@ -8,7 +8,17 @@
 
 import UIKit
 
-public class Note {
+public class Note : NSObject,NSCoding{
+	public func encode(with aCoder: NSCoder) {
+		aCoder.encode(date, forKey: "date")
+		aCoder.encode(content, forKey: "content")
+	}
+	
+	public required init?(coder aDecoder: NSCoder) {
+		self.date = aDecoder.decodeObject(forKey: "date") as! NSDate
+		self.content = aDecoder.decodeObject(forKey: "content") as! NSString
+	}
+	
 	public var date : NSDate
 	public var content : NSString
 	
@@ -16,4 +26,6 @@ public class Note {
 		self.date = date
 		self.content = content
 	}
+	
+	
 }
