@@ -39,10 +39,7 @@ import Foundation
 class Singleton {
 	var date : DateFormatter = DateFormatter()
 	var str1 : String = String()
-	static let sharedInstance = Singleton()
-	
-	//test data
-
+	static let sharedInstance = Singleton()	
 	private init() {} // 这就阻止其他对象使用这个类的默认的'()'初始化方法
 }
 
