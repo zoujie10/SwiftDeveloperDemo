@@ -28,7 +28,6 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 			DisplayLB.backgroundColor = UIColor.blue
 			changeTag = true
 		}
-		
 //		self.present(TextViewController(), animated: true) {
 //				print("Jump TextViewController")
 //		}

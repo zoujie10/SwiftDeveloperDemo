@@ -24,7 +24,6 @@ class TabLTableViewController: UIViewController, UITableViewDelegate, UITableVie
 		self.Tableview.frame = CGRect(x: 0, y: 147, width: 375, height: 506)
 		self.view.addSubview(self.Tableview)
 		self.Tableview.register(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifierThree")
-		
 		let plistPath = Bundle.main.path(forResource: "provinces_cities", ofType: "plist")
 		self.dicData = NSDictionary(contentsOfFile: plistPath!)
 		self.listData = self.dicData.allKeys as NSArray
