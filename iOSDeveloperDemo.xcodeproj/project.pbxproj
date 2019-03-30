@@ -53,6 +53,11 @@
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
 		84EE672720BD32C00051F86C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672620BD32C00051F86C /* PageViewController.swift */; };
 		84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672820BD344D0051F86C /* SubPageViewController.swift */; };
+		84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8BF12224F6A3E002E5389 /* CoreData.framework */; };
+		84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */; };
+		84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF18224F815D002E5389 /* CoreDataDAO.swift */; };
+		84F8BF1C224F8240002E5389 /* NSManageredObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF1A224F8240002E5389 /* NSManageredObject+CoreDataClass.swift */; };
+		84F8BF1D224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF1B224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift */; };
 		84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */; };
 		84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */; };
 		84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA020AEA96800B6914A /* team_dictionary.plist */; };
@@ -122,6 +127,11 @@
 		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
 		84EE672620BD32C00051F86C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		84EE672820BD344D0051F86C /* SubPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPageViewController.swift; sourceTree = "<group>"; };
+		84F8BF12224F6A3E002E5389 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84F8BF16224F6A6B002E5389 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		84F8BF18224F815D002E5389 /* CoreDataDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
+		84F8BF1A224F8240002E5389 /* NSManageredObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSManageredObject+CoreDataClass.swift"; path = "/Users/zoujie/Github/SwiftDeveloperDemo/iOSDeveloperDemo/PersistenceLayer/CoreData/NSManageredObject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		84F8BF1B224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSManageredObject+CoreDataProperties.swift"; path = "/Users/zoujie/Github/SwiftDeveloperDemo/iOSDeveloperDemo/PersistenceLayer/CoreData/NSManageredObject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FootBallTeam.xcassets; sourceTree = "<group>"; };
 		84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		84FA0FA020AEA96800B6914A /* team_dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team_dictionary.plist; sourceTree = "<group>"; };
@@ -135,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */,
 				84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */,
 				8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */,
 			);
@@ -165,6 +176,7 @@
 		8471D40F223FDD3D00BE5DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84F8BF12224F6A3E002E5389 /* CoreData.framework */,
 				84159564224796DE0026259B /* libsqlite3.0.tbd */,
 				8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */,
 			);
@@ -174,6 +186,7 @@
 		847515D620D0F040005CC145 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				84F8BF14224F6A5A002E5389 /* CoreData */,
 				848A467E20CE6DF600F982F2 /* NoteByPlist.swift */,
 				847515D720D122B1005CC145 /* NoteByArchiver.swift */,
 				8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */,
@@ -306,6 +319,17 @@
 				847A569620BE7CC000EBB06C /* provinces_cities.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		84F8BF14224F6A5A002E5389 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */,
+				84F8BF18224F815D002E5389 /* CoreDataDAO.swift */,
+				84F8BF1A224F8240002E5389 /* NSManageredObject+CoreDataClass.swift */,
+				84F8BF1B224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		84FA0F9F20AEA69100B6914A /* Cell View */ = {
@@ -455,6 +479,7 @@
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
+				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
@@ -469,9 +494,12 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
+				84F8BF1C224F8240002E5389 /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
+				84F8BF1D224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift in Sources */,
+				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
 				848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */,
@@ -739,6 +767,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84F8BF16224F6A6B002E5389 /* Model.xcdatamodel */,
+			);
+			currentVersion = 84F8BF16224F6A6B002E5389 /* Model.xcdatamodel */;
+			path = CoreDataNote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84E37BD320A02D390031DEEE /* Project object */;
 }
