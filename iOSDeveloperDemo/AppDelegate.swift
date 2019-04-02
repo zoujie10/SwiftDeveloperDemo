@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		deviceInfo()
 		Singleton.sharedInstance.str1 = "User Name"
 		print("Login View test data:",Singleton.sharedInstance.str1)
-		
+		//读取应用设置 Root.plist
+//		let defaults = UserDefaults.standard
+//		defaults.string(forKey: "name_preference")
+//		defaults.string(forKey: "Name")
 		//数据持久化
 		handlePlist()
 		
@@ -58,9 +61,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 		self.appStatus = "terminate"
 	}
+}
 
-	
-	// MARK:重构进持久层中
+
+
+
+// MARK:重构进持久层中
 //	// MARK: - Core Data stack
 //	lazy var applicationDocumentsDirectory: NSURL = {
 //		// The directory the application uses to store the Core Data store file. This code uses a directory named "lsw.self.MyGraphics" in the application's documents Application Support directory.
@@ -128,6 +134,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //		}
 //	}
 
-	
-}
 
