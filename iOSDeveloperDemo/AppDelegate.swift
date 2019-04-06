@@ -62,9 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.appStatus = "terminate"
 	}
 	
-	//国际化读取文本
+	//MARK:国际化读取文本
 	func NSlocalizeStrings(){
 //		NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
+	}
+	
+	//MARK:访问联系人
+	func AccessContactPerson(){
+		
 	}
 }
 

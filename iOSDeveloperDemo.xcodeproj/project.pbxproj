@@ -12,6 +12,13 @@
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
+		842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */; };
+		842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */; };
+		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
+		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
+		842F78702258ACAF0048B63A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786F2258ACAF0048B63A /* AddressBookUI.framework */; };
+		842F78722258AD4C0048B63A /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78712258AD4C0048B63A /* Contacts.framework */; };
+		842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78732258AD560048B63A /* ContactsUI.framework */; };
 		8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */; };
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
@@ -58,8 +65,6 @@
 		84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8BF12224F6A3E002E5389 /* CoreData.framework */; };
 		84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */; };
 		84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF18224F815D002E5389 /* CoreDataDAO.swift */; };
-		84F8BF1C224F8240002E5389 /* NSManageredObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF1A224F8240002E5389 /* NSManageredObject+CoreDataClass.swift */; };
-		84F8BF1D224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF1B224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift */; };
 		84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */; };
 		84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */; };
 		84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA020AEA96800B6914A /* team_dictionary.plist */; };
@@ -87,6 +92,13 @@
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		842F786522583FE90048B63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManageredObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManageredObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessContactPersonViewcontroller.swift; sourceTree = "<group>"; };
+		842F786D2258ACA70048B63A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		842F786F2258ACAF0048B63A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		842F78712258AD4C0048B63A /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		842F78732258AD560048B63A /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndActionViewController.swift; sourceTree = "<group>"; };
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
@@ -137,8 +149,6 @@
 		84F8BF12224F6A3E002E5389 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84F8BF16224F6A6B002E5389 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		84F8BF18224F815D002E5389 /* CoreDataDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
-		84F8BF1A224F8240002E5389 /* NSManageredObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSManageredObject+CoreDataClass.swift"; path = "/Users/zoujie/Github/SwiftDeveloperDemo/iOSDeveloperDemo/PersistenceLayer/CoreData/NSManageredObject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		84F8BF1B224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSManageredObject+CoreDataProperties.swift"; path = "/Users/zoujie/Github/SwiftDeveloperDemo/iOSDeveloperDemo/PersistenceLayer/CoreData/NSManageredObject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FootBallTeam.xcassets; sourceTree = "<group>"; };
 		84FA0F9D20AEA68A00B6914A /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		84FA0FA020AEA96800B6914A /* team_dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team_dictionary.plist; sourceTree = "<group>"; };
@@ -152,6 +162,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */,
+				842F78722258AD4C0048B63A /* Contacts.framework in Frameworks */,
+				842F78702258ACAF0048B63A /* AddressBookUI.framework in Frameworks */,
+				842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */,
 				84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */,
 				84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */,
 				8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */,
@@ -191,6 +205,10 @@
 		8471D40F223FDD3D00BE5DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				842F78732258AD560048B63A /* ContactsUI.framework */,
+				842F78712258AD4C0048B63A /* Contacts.framework */,
+				842F786F2258ACAF0048B63A /* AddressBookUI.framework */,
+				842F786D2258ACA70048B63A /* AddressBook.framework */,
 				84F8BF12224F6A3E002E5389 /* CoreData.framework */,
 				84159564224796DE0026259B /* libsqlite3.0.tbd */,
 				8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */,
@@ -255,6 +273,7 @@
 				847A569C20BE83D500EBB06C /* DetailViewController.swift */,
 				840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */,
 				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
+				842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -343,8 +362,8 @@
 			children = (
 				84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */,
 				84F8BF18224F815D002E5389 /* CoreDataDAO.swift */,
-				84F8BF1A224F8240002E5389 /* NSManageredObject+CoreDataClass.swift */,
-				84F8BF1B224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift */,
+				842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */,
+				842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -488,6 +507,7 @@
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
+				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
@@ -500,10 +520,12 @@
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
+				842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
+				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
@@ -514,11 +536,9 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
-				84F8BF1C224F8240002E5389 /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
-				84F8BF1D224F8240002E5389 /* NSManageredObject+CoreDataProperties.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,

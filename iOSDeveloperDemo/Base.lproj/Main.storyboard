@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1356,14 +1356,95 @@
                     <view key="view" contentMode="scaleToFill" id="7dk-JW-ocR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-Km-6g1">
+                                <rect key="frame" x="289" y="59" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="I1h-Yf-KQx"/>
+                                    <constraint firstAttribute="width" constant="45" id="RcF-pt-Gqb"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="bBf-Fw-zw5" kind="popoverPresentation" popoverAnchorView="7H7-Km-6g1" id="Fa7-ph-XuA">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.85859307299026599" green="1" blue="0.69218993668137507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dhO-Tq-DfE" firstAttribute="trailing" secondItem="7H7-Km-6g1" secondAttribute="trailing" constant="41" id="69j-y8-5AQ"/>
+                            <constraint firstItem="7H7-Km-6g1" firstAttribute="top" secondItem="dhO-Tq-DfE" secondAttribute="top" constant="15" id="ArS-qv-8Uh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dhO-Tq-DfE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mine" image="TabIconMine" id="H73-nB-cvf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20t-3K-UDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="-2973"/>
+            <point key="canvasLocation" x="178.40000000000001" y="-3113.0541871921182"/>
+        </scene>
+        <!--Access Contact Person Viewcontroller-->
+        <scene sceneID="BIj-fm-P4y">
+            <objects>
+                <viewController id="z51-jN-YUT" customClass="AccessContactPersonViewcontroller" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6TE-Gw-yxt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcD-8V-EXV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzk-aB-n2x">
+                                <rect key="frame" x="100" y="191" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="联系人列表"/>
+                                <connections>
+                                    <action selector="ToContactList:" destination="z51-jN-YUT" eventType="touchUpInside" id="imI-KD-FA9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A7-h3-Oal">
+                                <rect key="frame" x="100" y="256" width="101" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="联系详情"/>
+                                <connections>
+                                    <action selector="ToContactDetail:" destination="z51-jN-YUT" eventType="touchUpInside" id="KKG-z3-rFS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxZ-rK-WNT">
+                                <rect key="frame" x="100" y="318" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97245005439999999" blue="0.412560861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="获取列表数据"/>
+                                <connections>
+                                    <action selector="getListData:" destination="z51-jN-YUT" eventType="touchUpInside" id="qYP-VW-30K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-TE-0jP">
+                                <rect key="frame" x="100" y="141" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97245005439999999" blue="0.412560861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="新增联系人"/>
+                                <connections>
+                                    <action selector="addContactPerson:" destination="z51-jN-YUT" eventType="touchUpInside" id="joh-Pw-xUK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60512225320000002" blue="0.72948300669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="23y-V5-TDy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KGb-IW-e5T"/>
+                    <connections>
+                        <outlet property="saerchBar" destination="xcD-8V-EXV" id="cPu-Wg-DZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrZ-h7-JhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="-3116.0098522167491"/>
         </scene>
         <!--Tree-->
         <scene sceneID="XeR-5l-J2V">
@@ -1421,6 +1502,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-sN-v6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6210.3999999999996" y="-2359.3596059113302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jLj-Mb-SFZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bBf-Fw-zw5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8vq-gr-Enf">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z51-jN-YUT" kind="relationship" relationship="rootViewController" id="84K-HS-Ssq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POI-cP-EPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="-3116.0098522167491"/>
         </scene>
     </scenes>
     <resources>
