@@ -11,6 +11,7 @@
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
+		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */; };
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
@@ -82,6 +83,10 @@
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84196BB622539CAF0088F117 /* SwiftDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftDemo.bundle; sourceTree = "<group>"; };
+		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		842F786522583FE90048B63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndActionViewController.swift; sourceTree = "<group>"; };
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +168,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842F785F22583F300048B63A /* Internationalization */ = {
+			isa = PBXGroup;
+			children = (
+				842F786422583FDE0048B63A /* InfoPlist.strings */,
+			);
+			path = Internationalization;
+			sourceTree = "<group>";
+		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +298,7 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				842F785F22583F300048B63A /* Internationalization */,
 				847515D620D0F040005CC145 /* PersistenceLayer */,
 				849FC3A020C9187100C1D18B /* BusinessLogicLayer */,
 				849FC39E20C9176B00C1D18B /* PresentationLayer */,
@@ -419,6 +433,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 84E37BD220A02D390031DEEE;
 			productRefGroup = 84E37BDC20A02D390031DEEE /* Products */;
@@ -437,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
+				842F786222583FDE0048B63A /* InfoPlist.strings in Resources */,
 				847A569720BE7CC100EBB06C /* provinces_cities.plist in Resources */,
 				8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */,
 				84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */,
@@ -529,10 +545,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		842F786422583FDE0048B63A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842F786322583FDE0048B63A /* zh-Hans */,
+				842F786522583FE90048B63A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		84E37BE220A02D390031DEEE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				84E37BE320A02D390031DEEE /* Base */,
+				842F785D22583ECC0048B63A /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -541,6 +567,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84E37BE820A02D3B0031DEEE /* Base */,
+				842F785E22583ECC0048B63A /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -552,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -612,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,177 @@
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "3qW-9X-lKC"; */
+"3qW-9X-lKC.normalTitle" = "OK";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "3rH-lk-wWs"; */
+"3rH-lk-wWs.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "AlertBtn"; ObjectID = "5St-xa-1Sc"; */
+"5St-xa-1Sc.normalTitle" = "AlertBtn";
+
+/* Class = "UITextField"; placeholder = "Input Text"; ObjectID = "8FW-wv-Bfr"; */
+"8FW-wv-Bfr.placeholder" = "Input Text";
+
+/* Class = "UISearchBar"; placeholder = "Search for Name"; ObjectID = "CiT-QA-gJa"; */
+"CiT-QA-gJa.placeholder" = "Search for Name";
+
+/* Class = "UISearchBar"; CiT-QA-gJa.scopeButtonTitles[0] = "英文"; ObjectID = "CiT-QA-gJa"; */
+"CiT-QA-gJa.scopeButtonTitles[0]" = "英文";
+
+/* Class = "UISearchBar"; CiT-QA-gJa.scopeButtonTitles[1] = "中文"; ObjectID = "CiT-QA-gJa"; */
+"CiT-QA-gJa.scopeButtonTitles[1]" = "中文";
+
+/* Class = "UIButton"; normalTitle = "AlterCell"; ObjectID = "DTe-0m-f2j"; */
+"DTe-0m-f2j.normalTitle" = "AlterCell";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EzO-At-MeF"; */
+"EzO-At-MeF.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "F9R-Sz-hhq"; */
+"F9R-Sz-hhq.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "in put some text."; ObjectID = "FDv-vu-B7d"; */
+"FDv-vu-B7d.placeholder" = "in put some text.";
+
+/* Class = "UIButton"; normalTitle = "CollectionView"; ObjectID = "Fva-s9-hRJ"; */
+"Fva-s9-hRJ.normalTitle" = "CollectionView";
+
+/* Class = "UIButton"; normalTitle = "ActionBtn"; ObjectID = "GpH-3D-iqS"; */
+"GpH-3D-iqS.normalTitle" = "ActionBtn";
+
+/* Class = "UIButton"; normalTitle = "Load Request"; ObjectID = "Gur-tg-OXH"; */
+"Gur-tg-OXH.normalTitle" = "Load Request";
+
+/* Class = "UITabBarItem"; title = "Mine"; ObjectID = "H73-nB-cvf"; */
+"H73-nB-cvf.title" = "Mine";
+
+/* Class = "UIButton"; normalTitle = "MIDDLE"; ObjectID = "IuM-eQ-aKI"; */
+"IuM-eQ-aKI.normalTitle" = "MIDDLE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MWN-g5-Pbe"; */
+"MWN-g5-Pbe.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "LoadHTMLString"; ObjectID = "ODe-Ug-n2A"; */
+"ODe-Ug-n2A.normalTitle" = "LoadHTMLString";
+
+/* Class = "UIButton"; normalTitle = "SectionTable"; ObjectID = "Pbt-0B-GPj"; */
+"Pbt-0B-GPj.normalTitle" = "SectionTable";
+
+/* Class = "UIButton"; normalTitle = "LoadData"; ObjectID = "Qn7-TS-GKm"; */
+"Qn7-TS-GKm.normalTitle" = "LoadData";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "Rvo-OW-Sk6"; */
+"Rvo-OW-Sk6.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "TcD-qb-HVG"; */
+"TcD-qb-HVG.normalTitle" = "注册";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "Txw-1h-qSZ"; */
+"Txw-1h-qSZ.normalTitle" = "登录";
+
+/* Class = "UILabel"; text = "点击"; ObjectID = "Uoa-cB-8RH"; */
+"Uoa-cB-8RH.text" = "点击";
+
+/* Class = "UIButton"; normalTitle = "Page分页"; ObjectID = "UxU-t5-M80"; */
+"UxU-t5-M80.normalTitle" = "Page分页";
+
+/* Class = "UIBarButtonItem"; title = "add"; ObjectID = "V96-7q-sgM"; */
+"V96-7q-sgM.title" = "add";
+
+/* Class = "UIButton"; normalTitle = "PickView"; ObjectID = "W3S-oi-3Kd"; */
+"W3S-oi-3Kd.normalTitle" = "PickView";
+
+/* Class = "UIBarButtonItem"; title = "save"; ObjectID = "WPO-NT-muT"; */
+"WPO-NT-muT.title" = "save";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "YsX-ic-M7p"; */
+"YsX-ic-M7p.text" = "Name:";
+
+/* Class = "UIButton"; normalTitle = "PickAddress"; ObjectID = "Zbl-46-J8t"; */
+"Zbl-46-J8t.normalTitle" = "PickAddress";
+
+/* Class = "UIBarButtonItem"; title = "Two"; ObjectID = "Zk1-72-Am7"; */
+"Zk1-72-Am7.title" = "Two";
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "ZtC-0o-sYJ"; */
+"ZtC-0o-sYJ.placeholder" = "User Name";
+
+/* Class = "UIButton"; normalTitle = "TOP"; ObjectID = "bFR-eq-9Rt"; */
+"bFR-eq-9Rt.normalTitle" = "TOP";
+
+/* Class = "UIBarButtonItem"; title = "Three"; ObjectID = "bbs-Ke-Hd0"; */
+"bbs-Ke-Hd0.title" = "Three";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dGn-JA-IrK"; */
+"dGn-JA-IrK.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "StaticTableview"; ObjectID = "dLv-w8-BWU"; */
+"dLv-w8-BWU.normalTitle" = "StaticTableview";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "e8W-Hr-XPQ"; */
+"e8W-Hr-XPQ.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "User ID"; ObjectID = "eaH-1S-RxA"; */
+"eaH-1S-RxA.text" = "User ID";
+
+/* Class = "UIButton"; normalTitle = "PickDate"; ObjectID = "fHS-if-5Fg"; */
+"fHS-if-5Fg.normalTitle" = "PickDate";
+
+/* Class = "UIButton"; normalTitle = "CustomTableView"; ObjectID = "fUX-Bh-CKB"; */
+"fUX-Bh-CKB.normalTitle" = "CustomTableView";
+
+/* Class = "UIViewController"; title = "Other"; ObjectID = "fjb-Xf-orb"; */
+"fjb-Xf-orb.title" = "Other";
+
+/* Class = "UILabel"; text = "Abstract"; ObjectID = "fpR-w6-d4I"; */
+"fpR-w6-d4I.text" = "Abstract";
+
+/* Class = "UIButton"; normalTitle = "TableView"; ObjectID = "gMs-TW-54M"; */
+"gMs-TW-54M.normalTitle" = "TableView";
+
+/* Class = "UINavigationItem"; title = "登录页"; ObjectID = "gU3-eR-LJo"; */
+"gU3-eR-LJo.title" = "登录页";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "hd3-z6-jay"; */
+"hd3-z6-jay.title" = "Save";
+
+/* Class = "UINavigationItem"; title = "Warning"; ObjectID = "iuZ-8K-UKn"; */
+"iuZ-8K-UKn.title" = "Warning";
+
+/* Class = "UIViewController"; title = "Mine"; ObjectID = "jR6-5e-uPO"; */
+"jR6-5e-uPO.title" = "Mine";
+
+/* Class = "UIBarButtonItem"; title = "one"; ObjectID = "kSc-W2-XTw"; */
+"kSc-W2-XTw.title" = "one";
+
+/* Class = "UIButton"; normalTitle = "PageController"; ObjectID = "lr9-og-F7Y"; */
+"lr9-og-F7Y.normalTitle" = "PageController";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lxx-ka-XMU"; */
+"lxx-ka-XMU.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "注册"; ObjectID = "p4L-2D-V5P"; */
+"p4L-2D-V5P.title" = "注册";
+
+/* Class = "UITabBarItem"; badgeValue = "12"; ObjectID = "uXU-2T-b8y"; */
+"uXU-2T-b8y.badgeValue" = "12";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "uXU-2T-b8y"; */
+"uXU-2T-b8y.title" = "Home";
+
+/* Class = "UILabel"; text = "创建新账户"; ObjectID = "upP-Jg-5mq"; */
+"upP-Jg-5mq.text" = "创建新账户";
+
+/* Class = "UITabBarItem"; title = "Tree"; ObjectID = "vPy-ON-ncD"; */
+"vPy-ON-ncD.title" = "Tree";
+
+/* Class = "UIButton"; normalTitle = "Login "; ObjectID = "w7F-Mg-76L"; */
+"w7F-Mg-76L.normalTitle" = "Login ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xhK-3b-UgT"; */
+"xhK-3b-UgT.text" = "Label";
+
+/* Class = "UISegmentedControl"; yvl-8c-fgn.segmentTitles[0] = "Left"; ObjectID = "yvl-8c-fgn"; */
+"yvl-8c-fgn.segmentTitles[0]" = "Left";
+
+/* Class = "UISegmentedControl"; yvl-8c-fgn.segmentTitles[1] = "Right"; ObjectID = "yvl-8c-fgn"; */
+"yvl-8c-fgn.segmentTitles[1]" = "Right";
