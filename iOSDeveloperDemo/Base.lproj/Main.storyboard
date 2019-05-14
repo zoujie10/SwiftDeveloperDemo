@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1370,6 +1370,15 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-2A-1eO">
+                                <rect key="frame" x="60" y="96" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.72793912000000005" blue="0.68847925570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Pattern"/>
+                                <connections>
+                                    <segue destination="GX6-bP-9vG" kind="presentation" id="9Zc-Hk-da1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85859307299026599" green="1" blue="0.69218993668137507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1503,6 +1512,22 @@
             </objects>
             <point key="canvasLocation" x="6210.3999999999996" y="-2359.3596059113302"/>
         </scene>
+        <!--Select Design Pattern View Controller-->
+        <scene sceneID="4dB-cG-A4J">
+            <objects>
+                <viewController id="93v-lG-x36" customClass="SelectDesignPatternViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yB3-19-kQf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.72793912000000005" blue="0.68847925570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="V8F-kp-353"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rKI-Vb-yX2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6O-TC-6gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551.2" y="-3764.039408866995"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jLj-Mb-SFZ">
             <objects>
@@ -1520,6 +1545,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POI-cP-EPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101.5999999999999" y="-3116.0098522167491"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nnv-aN-xa2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GX6-bP-9vG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3R-y2-2oj">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="93v-lG-x36" kind="relationship" relationship="rootViewController" id="O4T-2D-797"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcr-Id-NTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608.79999999999995" y="-3764.039408866995"/>
         </scene>
     </scenes>
     <resources>

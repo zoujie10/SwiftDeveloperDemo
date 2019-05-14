@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411ACE228ABACC001BF135 /* DecorateViewController.swift */; };
+		4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */; };
+		4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */; };
 		840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D87D920AD4EC600BA6A1D /* Flag.xcassets */; };
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
@@ -84,6 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F411ACE228ABACC001BF135 /* DecorateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorateViewController.swift; sourceTree = "<group>"; };
+		4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDesignPatternViewController.swift; sourceTree = "<group>"; };
 		840D87D920AD4EC600BA6A1D /* Flag.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Flag.xcassets; sourceTree = "<group>"; };
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -182,6 +188,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F411ACC228AB9DA001BF135 /* DesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F411ACD228ABAB8001BF135 /* DecoratePattern */,
+			);
+			path = DesignPattern;
+			sourceTree = "<group>";
+		};
+		4F411ACD228ABAB8001BF135 /* DecoratePattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F411ACE228ABACC001BF135 /* DecorateViewController.swift */,
+				4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */,
+			);
+			path = DecoratePattern;
+			sourceTree = "<group>";
+		};
 		842F785F22583F300048B63A /* Internationalization */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +297,7 @@
 				840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */,
 				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */,
+				4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -317,6 +341,7 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4F411ACC228AB9DA001BF135 /* DesignPattern */,
 				842F785F22583F300048B63A /* Internationalization */,
 				847515D620D0F040005CC145 /* PersistenceLayer */,
 				849FC3A020C9187100C1D18B /* BusinessLogicLayer */,
@@ -528,9 +553,12 @@
 				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
+				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
+				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
+				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
