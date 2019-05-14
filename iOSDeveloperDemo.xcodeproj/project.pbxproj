@@ -10,6 +10,7 @@
 		4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411ACE228ABACC001BF135 /* DecorateViewController.swift */; };
 		4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */; };
 		4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */; };
+		4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD5228AC164001BF135 /* DelegateProtocol.swift */; };
 		840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D87D920AD4EC600BA6A1D /* Flag.xcassets */; };
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
@@ -90,6 +91,7 @@
 		4F411ACE228ABACC001BF135 /* DecorateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorateViewController.swift; sourceTree = "<group>"; };
 		4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDesignPatternViewController.swift; sourceTree = "<group>"; };
+		4F411AD5228AC164001BF135 /* DelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProtocol.swift; sourceTree = "<group>"; };
 		840D87D920AD4EC600BA6A1D /* Flag.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Flag.xcassets; sourceTree = "<group>"; };
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 		4F411ACC228AB9DA001BF135 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				4F411AD4228AC120001BF135 /* DelegatePattern */,
 				4F411ACD228ABAB8001BF135 /* DecoratePattern */,
 			);
 			path = DesignPattern;
@@ -203,6 +206,14 @@
 				4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */,
 			);
 			path = DecoratePattern;
+			sourceTree = "<group>";
+		};
+		4F411AD4228AC120001BF135 /* DelegatePattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F411AD5228AC164001BF135 /* DelegateProtocol.swift */,
+			);
+			path = DelegatePattern;
 			sourceTree = "<group>";
 		};
 		842F785F22583F300048B63A /* Internationalization */ = {
@@ -558,6 +569,7 @@
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
+				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
