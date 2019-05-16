@@ -11,6 +11,10 @@
 		4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */; };
 		4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */; };
 		4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD5228AC164001BF135 /* DelegateProtocol.swift */; };
+		4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E197228CFF3D0017192B /* ObserverProtocol.swift */; };
+		4FC4E19A228D01570017192B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E199228D01570017192B /* Observer.swift */; };
+		4FC4E19C228D021C0017192B /* Observerd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E19B228D021C0017192B /* Observerd.swift */; };
+		4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E19D228D02D70017192B /* ObserverPatternViewController.swift */; };
 		840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D87D920AD4EC600BA6A1D /* Flag.xcassets */; };
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
@@ -92,6 +96,10 @@
 		4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDesignPatternViewController.swift; sourceTree = "<group>"; };
 		4F411AD5228AC164001BF135 /* DelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateProtocol.swift; sourceTree = "<group>"; };
+		4FC4E197228CFF3D0017192B /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
+		4FC4E199228D01570017192B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		4FC4E19B228D021C0017192B /* Observerd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observerd.swift; sourceTree = "<group>"; };
+		4FC4E19D228D02D70017192B /* ObserverPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverPatternViewController.swift; sourceTree = "<group>"; };
 		840D87D920AD4EC600BA6A1D /* Flag.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Flag.xcassets; sourceTree = "<group>"; };
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -193,6 +201,7 @@
 		4F411ACC228AB9DA001BF135 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				4FC4E196228CFED60017192B /* ObserverPattern */,
 				4F411AD4228AC120001BF135 /* DelegatePattern */,
 				4F411ACD228ABAB8001BF135 /* DecoratePattern */,
 			);
@@ -214,6 +223,17 @@
 				4F411AD5228AC164001BF135 /* DelegateProtocol.swift */,
 			);
 			path = DelegatePattern;
+			sourceTree = "<group>";
+		};
+		4FC4E196228CFED60017192B /* ObserverPattern */ = {
+			isa = PBXGroup;
+			children = (
+				4FC4E197228CFF3D0017192B /* ObserverProtocol.swift */,
+				4FC4E199228D01570017192B /* Observer.swift */,
+				4FC4E19B228D021C0017192B /* Observerd.swift */,
+				4FC4E19D228D02D70017192B /* ObserverPatternViewController.swift */,
+			);
+			path = ObserverPattern;
 			sourceTree = "<group>";
 		};
 		842F785F22583F300048B63A /* Internationalization */ = {
@@ -538,6 +558,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
+				4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */,
+				4FC4E19A228D01570017192B /* Observer.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
@@ -554,11 +576,13 @@
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
+				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
+				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,

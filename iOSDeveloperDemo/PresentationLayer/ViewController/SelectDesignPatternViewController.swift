@@ -27,6 +27,8 @@ class SelectDesignPatternViewController: UIViewController,UITableViewDelegate,UI
             self.navigationController?.pushViewController(DecorateViewController(), animated: true)
         }else if indexPath.row == 1{
             
+        }else if indexPath.row == 2{
+            self.navigationController?.pushViewController(ObserverPatternViewController(), animated: true)
         }
     }
     
@@ -35,7 +37,7 @@ class SelectDesignPatternViewController: UIViewController,UITableViewDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSouce = ["DecoratePattern","DelegatePattern","Other2"]
+        dataSouce = ["DecoratePattern","DelegatePattern","ObserverPattern"]
         tableview.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.view.frame.width, height: self.view.frame.height))
         tableview.delegate = self;
         tableview.dataSource = self;
