@@ -1,0 +1,16 @@
+PODS:
+  - Google-Mobile-Ads-SDK (7.34.0)
+
+DEPENDENCIES:
+  - Google-Mobile-Ads-SDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Google-Mobile-Ads-SDK
+
+SPEC CHECKSUMS:
+  Google-Mobile-Ads-SDK: a1cbce28c0c78ca1fb0b6c4f213485f55527c99f
+
+PODFILE CHECKSUM: de8cd1942d9e75b074bfcfcda2722b0db3455bcc
+
+COCOAPODS: 1.6.0.beta.1

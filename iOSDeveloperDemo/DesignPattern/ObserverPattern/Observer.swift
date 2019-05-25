@@ -16,4 +16,11 @@ class Observer: ObserverDelegate {
     func Valuechange() {
         print("被观察者 改变")
     }
+	func addObserver(ob: Observer) {
+		
+	}
+	
+	func removeObserver(index: NSInteger) {
+		
+	}
 }
