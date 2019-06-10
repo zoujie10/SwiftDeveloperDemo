@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var observer : AppStatusObserver!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let lineEat = subEatLine()
+        lineEat.lineToEat()
+        
 		deviceInfo()
 		Singleton.sharedInstance.str1 = "User Name"
 		print("Login View test data:",Singleton.sharedInstance.str1)
