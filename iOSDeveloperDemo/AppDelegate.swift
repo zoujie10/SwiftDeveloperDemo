@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var observer : AppStatusObserver!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        self.testPatternMethod()
 		deviceInfo()
 		
 		Singleton.sharedInstance.str1 = "User Name"
@@ -72,6 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func AccessContactPerson(){
 		
 	}
+    
+    func testPatternMethod(){
+        let lineEat = subEatLine()
+        lineEat.lineToEat()
+    }
 }
 
 

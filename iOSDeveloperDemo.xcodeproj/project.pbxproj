@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2092D12DB16156F8C8C6B57E /* libPods-iOSDeveloperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3C68CCD3F6177293BB3E42 /* libPods-iOSDeveloperDemo.a */; };
+		4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD8E22ADF2C600B8CB35 /* CopyPatternDelegate.swift */; };
+		4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9022ADF4F700B8CB35 /* CopyClass.swift */; };
+		4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9222ADF52C00B8CB35 /* CopyObject.swift */; };
+		4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9522AE281F00B8CB35 /* TemplateClass.swift */; };
+		4F02FD9822AE2CC700B8CB35 /* subEatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9722AE2CC700B8CB35 /* subEatLine.swift */; };
+		4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9C22AF817A00B8CB35 /* IteratorProtocol.swift */; };
+		4F02FD9F22AF819F00B8CB35 /* IteratorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9E22AF819F00B8CB35 /* IteratorClass.swift */; };
+		4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FDA022AF867E00B8CB35 /* ConcreteAggregrate.swift */; };
 		4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411ACE228ABACC001BF135 /* DecorateViewController.swift */; };
 		4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */; };
 		4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */; };
@@ -96,6 +104,14 @@
 
 /* Begin PBXFileReference section */
 		06C9D69DD0EED4E6E728B095 /* Pods-iOSDeveloperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDeveloperDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSDeveloperDemo/Pods-iOSDeveloperDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4F02FD8E22ADF2C600B8CB35 /* CopyPatternDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPatternDelegate.swift; sourceTree = "<group>"; };
+		4F02FD9022ADF4F700B8CB35 /* CopyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyClass.swift; sourceTree = "<group>"; };
+		4F02FD9222ADF52C00B8CB35 /* CopyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyObject.swift; sourceTree = "<group>"; };
+		4F02FD9522AE281F00B8CB35 /* TemplateClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateClass.swift; sourceTree = "<group>"; };
+		4F02FD9722AE2CC700B8CB35 /* subEatLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subEatLine.swift; sourceTree = "<group>"; };
+		4F02FD9C22AF817A00B8CB35 /* IteratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorProtocol.swift; sourceTree = "<group>"; };
+		4F02FD9E22AF819F00B8CB35 /* IteratorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorClass.swift; sourceTree = "<group>"; };
+		4F02FDA022AF867E00B8CB35 /* ConcreteAggregrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteAggregrate.swift; sourceTree = "<group>"; };
 		4F411ACE228ABACC001BF135 /* DecorateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorateViewController.swift; sourceTree = "<group>"; };
 		4F411AD0228ABB32001BF135 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDesignPatternViewController.swift; sourceTree = "<group>"; };
@@ -217,9 +233,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4F02FD8D22ADE10500B8CB35 /* CopyPattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD8E22ADF2C600B8CB35 /* CopyPatternDelegate.swift */,
+				4F02FD9022ADF4F700B8CB35 /* CopyClass.swift */,
+				4F02FD9222ADF52C00B8CB35 /* CopyObject.swift */,
+			);
+			path = CopyPattern;
+			sourceTree = "<group>";
+		};
+		4F02FD9422AE27D500B8CB35 /* TemplatePattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD9522AE281F00B8CB35 /* TemplateClass.swift */,
+				4F02FD9722AE2CC700B8CB35 /* subEatLine.swift */,
+			);
+			path = TemplatePattern;
+			sourceTree = "<group>";
+		};
+		4F02FD9922AF7D4E00B8CB35 /* IteratorPattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD9C22AF817A00B8CB35 /* IteratorProtocol.swift */,
+				4F02FD9E22AF819F00B8CB35 /* IteratorClass.swift */,
+				4F02FDA022AF867E00B8CB35 /* ConcreteAggregrate.swift */,
+			);
+			path = IteratorPattern;
+			sourceTree = "<group>";
+		};
 		4F411ACC228AB9DA001BF135 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				4F02FD9922AF7D4E00B8CB35 /* IteratorPattern */,
+				4F02FD9422AE27D500B8CB35 /* TemplatePattern */,
+				4F02FD8D22ADE10500B8CB35 /* CopyPattern */,
 				4FC4E196228CFED60017192B /* ObserverPattern */,
 				4F411AD4228AC120001BF135 /* DelegatePattern */,
 				4F411ACD228ABAB8001BF135 /* DecoratePattern */,
@@ -639,6 +687,7 @@
 				8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */,
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
+				4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */,
 				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
@@ -653,6 +702,7 @@
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
+				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
@@ -661,13 +711,19 @@
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
+				4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
+				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
+				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
+				4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */,
+				4F02FD9822AE2CC700B8CB35 /* subEatLine.swift in Sources */,
+				4F02FD9F22AF819F00B8CB35 /* IteratorClass.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
