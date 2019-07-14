@@ -42,7 +42,6 @@
 		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
 		8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */; };
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
-		846BB13320AC1CBC00268E6D /* events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846BB13220AC1CBC00268E6D /* events.plist */; };
 		846BB13520AC26B500268E6D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB13420AC26B500268E6D /* Cell.swift */; };
 		8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */; };
 		8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */; };
@@ -61,6 +60,8 @@
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
+		84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */; };
+		84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BD22DB3633001AC087 /* JSONParser.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
 		84E37BE120A02D390031DEEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BE020A02D390031DEEE /* ViewController.swift */; };
@@ -132,7 +133,6 @@
 		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
 		8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJSetAndDictionary.swift; path = DataStruct/ZJSetAndDictionary.swift; sourceTree = SOURCE_ROOT; };
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		846BB13220AC1CBC00268E6D /* events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = events.plist; sourceTree = "<group>"; };
 		846BB13420AC26B500268E6D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBySQLite.swift; sourceTree = "<group>"; };
 		8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -151,6 +151,8 @@
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesXMLParser.swift; sourceTree = "<group>"; };
+		84D305BD22DB3633001AC087 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E37BDE20A02D390031DEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 		847515D620D0F040005CC145 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				84D305B922D10CAD001AC087 /* XMLParser */,
 				84F8BF14224F6A5A002E5389 /* CoreData */,
 				848A467E20CE6DF600F982F2 /* NoteByPlist.swift */,
 				847515D720D122B1005CC145 /* NoteByArchiver.swift */,
@@ -367,6 +370,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		84D305B922D10CAD001AC087 /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */,
+				84D305BD22DB3633001AC087 /* JSONParser.swift */,
+			);
+			path = XMLParser;
+			sourceTree = "<group>";
+		};
+		84D305BC22D1A25E001AC087 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +411,7 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84D305BC22D1A25E001AC087 /* Request */,
 				4F411ACC228AB9DA001BF135 /* DesignPattern */,
 				842F785F22583F300048B63A /* Internationalization */,
 				847515D620D0F040005CC145 /* PersistenceLayer */,
@@ -425,7 +445,6 @@
 			isa = PBXGroup;
 			children = (
 				84E9DB6620AAB66E00C65A12 /* China_cities.plist */,
-				846BB13220AC1CBC00268E6D /* events.plist */,
 				84FA0FA020AEA96800B6914A /* team_dictionary.plist */,
 				84FA0FA120AEA96800B6914A /* team.plist */,
 				847A569620BE7CC000EBB06C /* provinces_cities.plist */,
@@ -559,7 +578,6 @@
 				84E37BE420A02D390031DEEE /* Main.storyboard in Resources */,
 				84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */,
 				84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */,
-				846BB13320AC1CBC00268E6D /* events.plist in Resources */,
 				84FA0FA320AEA96800B6914A /* team.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,9 +651,11 @@
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
+				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
+				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,

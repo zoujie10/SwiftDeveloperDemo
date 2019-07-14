@@ -1,13 +1,12 @@
-//
-//  TabLTableViewController.swift
-//  iOSDeveloperDemo
-//
+
 //  Created by Zoujie on 2018/5/30.
-//  Copyright © 2018年 Zoujie. All rights reserved.
-//
+
+
+//XML解析
+//JSON解析
 
 import UIKit
-
+import Alamofire
 class TabLTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var dicData : NSDictionary!
@@ -28,13 +27,33 @@ class TabLTableViewController: UIViewController, UITableViewDelegate, UITableVie
 		self.dicData = NSDictionary(contentsOfFile: plistPath!)
 		self.listData = self.dicData.allKeys as NSArray
 		self.title = "省份"
+		
+		requestData()//Alamofire
+		
+		let refresh = UIRefreshControl()
+		refresh.attributedTitle = NSAttributedString(string: "下拉刷新中")
+		refresh.addTarget(self, action: #selector(refreshBtn), for: UIControlEvents.valueChanged)
+		self.Tableview.refreshControl = refresh
+		
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	
+	func requestData(){
+		UIApplication.shared.isNetworkActivityIndicatorVisible = true //状态栏菊花  网络活动指示器
+		Alamofire.request("www.baidu.com",method: .post,parameters: ["key":"value"]).responseJSON { response in
+//			print(response.request)  // 原始的URL请求
+//			print(response.response) // HTTP URL响应
+//			print(response.data)     // 服务器返回的数据
+//			print(response.result)   // 响应序列化结果，在这个闭包里，存储的是JSON数据
+			
+			if let JSON = response.result.value {
+				print("JSON: \(JSON)")
+			}
+		}
+	}
 	
 	//MARK: DATASOURCE
 	 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +74,7 @@ class TabLTableViewController: UIViewController, UITableViewDelegate, UITableVie
 		let seletedIndex = indexPath?.row
 		
 		let seletedName = self.listData[seletedIndex!] as! String
-		citiesViewController.listData = self.dicData[seletedName] as! NSArray
+		citiesViewController.listData = self.dicData[seletedName] as? NSArray
 		citiesViewController.title = seletedName
 		self.navigationController?.pushViewController(citiesViewController, animated: true)
 	}
@@ -72,14 +91,13 @@ class TabLTableViewController: UIViewController, UITableViewDelegate, UITableVie
 //		}
 //	}
 	
-    /*
-    // MARK: - Navigation
+	@objc func refreshBtn(){
+		print("下拉刷新")
+		self.Tableview.refreshControl?.endRefreshing()
+		UIApplication.shared.isNetworkActivityIndicatorVisible = false
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	
+	
 }

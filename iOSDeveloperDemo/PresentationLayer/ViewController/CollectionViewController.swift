@@ -13,7 +13,7 @@ class CollectionViewController: UICollectionViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		let plistPath = Bundle.main.path(forResource: "events", ofType: "plist")
+		let plistPath = Bundle.main.path(forResource: "provinces_cities", ofType: "plist")
 		self.evevts = NSArray(contentsOfFile: plistPath!)!
         // Do any additional setup after loading the view.
     }

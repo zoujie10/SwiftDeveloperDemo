@@ -59,5 +59,6 @@ class Stack {
 		}else{
 			return nil
 		}
+		
 	}
 }

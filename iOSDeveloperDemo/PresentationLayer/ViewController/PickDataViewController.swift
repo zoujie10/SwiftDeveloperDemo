@@ -55,7 +55,7 @@ class PickDataViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 			let cities  = (dataSingel as AnyObject) .object(forKey: "cities") as! NSArray
 			self.pickData .setObject(cities, forKey: dicP)
 		}
-		self.pickCitiesData = allCities.firstObject as! NSMutableArray
+		self.pickCitiesData = allCities.firstObject as? NSMutableArray
 		self.pickerView.delegate = self
 		self.pickerView.dataSource = self
 		
