@@ -38,6 +38,8 @@
 		842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78732258AD560048B63A /* ContactsUI.framework */; };
 		8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */; };
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
+		843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843358CE22EC2285003AB31D /* CoreLocation.framework */; };
+		843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843358D022EC2571003AB31D /* LocationAndMapViewController.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
@@ -137,6 +139,8 @@
 		842F78732258AD560048B63A /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndActionViewController.swift; sourceTree = "<group>"; };
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
+		843358CE22EC2285003AB31D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		843358D022EC2571003AB31D /* LocationAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndMapViewController.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */,
 				84BE37832298E18800910E7E /* iAd.framework in Frameworks */,
 				842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */,
 				842F78722258AD4C0048B63A /* Contacts.framework in Frameworks */,
@@ -311,6 +316,13 @@
 			path = Internationalization;
 			sourceTree = "<group>";
 		};
+		843358CD22EC20CC003AB31D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +338,7 @@
 		8471D40F223FDD3D00BE5DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				843358CE22EC2285003AB31D /* CoreLocation.framework */,
 				84BE37822298E18800910E7E /* iAd.framework */,
 				842F78732258AD560048B63A /* ContactsUI.framework */,
 				842F78712258AD4C0048B63A /* Contacts.framework */,
@@ -399,6 +412,7 @@
 				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */,
 				4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */,
+				843358D022EC2571003AB31D /* LocationAndMapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -406,6 +420,7 @@
 		849FC3A020C9187100C1D18B /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				843358CD22EC20CC003AB31D /* Map */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -671,6 +686,7 @@
 			files = (
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
 				4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */,
+				843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */,
 				4FC4E19A228D01570017192B /* Observer.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,

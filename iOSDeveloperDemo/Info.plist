@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>app使用时地理位置权限</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>常开地理位置权限</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>所有地理位置权限</string>
 	<key>NSContactsUsageDescription</key>
 	<string>通讯录权限</string>
 	<key>CFBundleDevelopmentRegion</key>
