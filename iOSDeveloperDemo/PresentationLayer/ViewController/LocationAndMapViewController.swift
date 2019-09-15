@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation //1.导入模块
 import AddressBook
+import MapKit
 class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {//2.声明协议
 	var currLocation = CLLocation()
 	@IBOutlet var txtlng: UITextField!
@@ -143,4 +144,37 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		self.searchKeyWords.resignFirstResponder()
 	}
+
+	@IBAction func pushAppleMap(_ sender: UIButton) {
+		if self.searchKeyWords.text == nil {
+			return
+		}
+		
+		let geocoder = CLGeocoder()
+		geocoder.geocodeAddressString(self.searchKeyWords.text!,completionHandler: {(placeMarks, error) -> Void in
+			if placeMarks!.count > 0{
+				//				NSLog("查询记录数 i%", placeMarks?.count ?? NSInteger.self)
+				
+				let placemark = placeMarks![0] as CLPlacemark
+				let coord = placemark.location?.coordinate
+				
+				let  city = placemark.locality as NSString?
+				let address = placemark.addressDictionary
+
+				self.address.text = city as String?
+				
+				let place = MKPlacemark(coordinate: coord!, addressDictionary: address as? [String : Any])
+				let mapItem = MKMapItem(placemark: place)
+				mapItem.openInMaps(launchOptions: nil)
+//				MKMapItem.openMaps(with: <#T##[MKMapItem]#>, launchOptions: <#T##[String : Any]?#>)多个标注时
+//				let options = NSDictionary(object: MKLaunchOptionsDirectionsModeDriving, forKey: MKLaunchOptionsDirectionsModeKey as NSCopying)
+//				mapItem.openInMaps(launchOptions: options as! [String : Any])控制地图初始化信息
+			}
+		})
+		
+		self.searchKeyWords.resignFirstResponder()
+		
+	}
+	
+	
 }

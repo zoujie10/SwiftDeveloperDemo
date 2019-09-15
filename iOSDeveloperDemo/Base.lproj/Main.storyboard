@@ -259,6 +259,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50E-Ui-bXh">
+                                <rect key="frame" x="156" y="351" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="内置地图"/>
+                                <connections>
+                                    <segue destination="sX5-a1-GaZ" kind="showDetail" id="k1W-d1-q1I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-9v-NhA">
+                                <rect key="frame" x="154" y="389" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="跳转地图"/>
+                                <connections>
+                                    <action selector="pushAppleMap:" destination="3l2-qx-uJe" eventType="touchUpInside" id="GKh-Tr-wSt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b2R-Xf-8xg"/>
@@ -278,6 +294,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLx-1f-pVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4421.6000000000004" y="-1634.4827586206898"/>
+        </scene>
+        <!--Map Kit View Controller-->
+        <scene sceneID="bCy-Yv-WWZ">
+            <objects>
+                <viewController id="sX5-a1-GaZ" customClass="MapKitViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SPb-5Q-Kj7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yRk-ee-9Zt">
+                                <rect key="frame" x="0.0" y="326" width="375" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="输入查询地点关键字" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xK-gf-5Yb">
+                                <rect key="frame" x="16" y="111" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-p3-9H5">
+                                <rect key="frame" x="276" y="111" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查询"/>
+                                <connections>
+                                    <action selector="geocodeQuery:" destination="sX5-a1-GaZ" eventType="touchUpInside" id="jL6-zL-cab"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pxW-o6-5Nh"/>
+                    </view>
+                    <connections>
+                        <outlet property="ConfirmBtn" destination="rQt-p3-9H5" id="diq-us-hR8"/>
+                        <outlet property="mapView" destination="yRk-ee-9Zt" id="Ust-ob-hbu"/>
+                        <outlet property="txtQueryKey" destination="2xK-gf-5Yb" id="unj-TN-SyU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mD-An-rVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5157.6000000000004" y="-1638.1773399014778"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="lhn-7G-af4">
