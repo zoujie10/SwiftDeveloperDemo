@@ -38,6 +38,29 @@ func dateFomatterMethod() -> DateFormatter{
 	return dateFomatter
 }
 
+func  readFromArray(path:String) -> NSMutableArray?{
+	let data = NSMutableData(contentsOfFile: path as String)
+	//反序列化到属性列表对象(NSMutableArray)
+	do {
+		let array = try PropertyListSerialization.propertyList(from: data! as Data, options: PropertyListSerialization.ReadOptions(rawValue: PropertyListSerialization.MutabilityOptions.mutableContainers.rawValue), format: nil)
+		return array as? NSMutableArray
+	} catch  _ as NSError{
+		return nil
+	}
+}
+
+func write(array : NSMutableArray,toFilePath path:String){
+	//把塑性列表对象（NSMutableArray）序列化为NSData
+	do {
+		let data : NSData = try PropertyListSerialization.data(fromPropertyList: array, format: PropertyListSerialization.PropertyListFormat.binary, options: PropertyListSerialization.WriteOptions(PropertyListSerialization.MutabilityOptions.mutableContainers.rawValue)) as NSData
+		let success : Bool? =  data.write(toFile: path, atomically: true)
+		if success!{
+			assert(success!,"错误写入文件")
+		}
+	} catch  _ as NSError{
+		
+	}
+}
 class NoteByPlist: NSObject {
 	
 	var PlistfilePath : String = String()

@@ -45,7 +45,8 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 		//监听系统通知
 		notificationCenter.addObserver(self, selector:#selector(handleEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
 		notificationCenter.addObserver(self, selector:#selector(handleEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-		
+		//监听内存警告⚠️
+		notificationCenter.addObserver(self, selector:#selector(handleMemoryWarning), name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
 	}
 	override func viewWillAppear(_ animated: Bool) {
 		
@@ -72,6 +73,9 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 	
 	@objc func handleEnterForeground(){
 		print("Foreground")
+	}
+	@objc func handleMemoryWarning(){
+		print("Warning ----- Noti")
 	}
 	//MARK: 协议
 	func textFieldShouldClear(_ textField: UITextField) -> Bool {

@@ -41,12 +41,17 @@ class CoreDataDAO: NSObject {
 			// Create the coordinator and store
 			let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
 	//		let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite"
+			var pragmaOptions = NSMutableDictionary()
+			let string : NSString = "synchronous"
+			pragmaOptions.setObject("OFF", forKey:string)
+			let storeOptions = NSDictionary(object: pragmaOptions, forKey: NSSQLitePragmasOption as NSString)
+			
 			let url = self.applicationDocumentsDirectory.appendingPathComponent("SingleViewCoreData.sqlite")//<xcdatamodeld文件>
 			var error : NSError? = nil
 			var failureReason = "There was an error creating or loading the application's saved data."
 	
 			do {
-				try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: nil, options: nil)//NSSQLiteStoreType,NSBinaryStoreType,NSInMemoryStoreType
+				try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: nil, options: (storeOptions as! [AnyHashable : Any]))//NSSQLiteStoreType,NSBinaryStoreType,NSInMemoryStoreType
 			} catch {
 				// Report any error we got.
 				var dict = [String: AnyObject]()

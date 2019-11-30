@@ -44,6 +44,10 @@ class CollectionViewController: UICollectionViewController {
 		print("select event name:",event["name"] as! String)
 		
 	}
-	//MARK: END
-
+	
+	
+	override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+		let headview : UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderIndentifier", for: indexPath)
+		return headview;
+	}
 }
