@@ -26,7 +26,7 @@ class MyAnnotation: NSObject,MKAnnotation {
 	}
 	
 	var subtitle: String?{
-		var res = NSMutableString()
+		let res = NSMutableString()
 		if(self.state != nil){
 			res.appendFormat("%@", self.state)
 		}

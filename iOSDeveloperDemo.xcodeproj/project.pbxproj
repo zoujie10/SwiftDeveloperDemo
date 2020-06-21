@@ -85,6 +85,7 @@
 		84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */; };
 		84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */; };
 		84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BFE20A038760031DEEE /* TextViewController.swift */; };
+		84E55ABC249F0EAF00A152A8 /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
 		84EE672720BD32C00051F86C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672620BD32C00051F86C /* PageViewController.swift */; };
 		84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672820BD344D0051F86C /* SubPageViewController.swift */; };
@@ -457,18 +458,21 @@
 			path = XMLParser;
 			sourceTree = "<group>";
 		};
-		84D305BC22D1A25E001AC087 /* Request */ = {
+		84D305BC22D1A25E001AC087 /* OlympicProject */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Request;
+			path = OlympicProject;
 			sourceTree = "<group>";
 		};
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
 				8467E01621393A9800FC6B5C /* DataStruct */,
+				4F411ACC228AB9DA001BF135 /* DesignPattern */,
 				84E9DB6520AAB61100C65A12 /* Resource */,
+				842F785F22583F300048B63A /* Internationalization */,
+				84D305BC22D1A25E001AC087 /* OlympicProject */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
 				84E37BF220A02D3B0031DEEE /* iOSDeveloperDemoTests */,
 				84E37BDC20A02D390031DEEE /* Products */,
@@ -489,9 +493,6 @@
 		84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				84D305BC22D1A25E001AC087 /* Request */,
-				4F411ACC228AB9DA001BF135 /* DesignPattern */,
-				842F785F22583F300048B63A /* Internationalization */,
 				847515D620D0F040005CC145 /* PersistenceLayer */,
 				849FC3A020C9187100C1D18B /* BusinessLogicLayer */,
 				849FC39E20C9176B00C1D18B /* PresentationLayer */,
@@ -772,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E55ABC249F0EAF00A152A8 /* ZJString.swift in Sources */,
 				84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
