@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -34,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.observer = AppStatusObserver()
 		self.addObserver(self.observer, forKeyPath: "appStatus", options:[.new,.old], context: nil)
 		self.appStatus = "launch"
+		
+		//TODO 异步初始化数据库 判断数据是否需要更新
+		let schemaVersion : UInt64 = 0
+		
 		return true
 	}
 	

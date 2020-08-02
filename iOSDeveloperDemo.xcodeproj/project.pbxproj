@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2092D12DB16156F8C8C6B57E /* libPods-iOSDeveloperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3C68CCD3F6177293BB3E42 /* libPods-iOSDeveloperDemo.a */; };
+		2D4C8B5AFE5D132613F115D5 /* Pods_iOSDeveloperDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E492A3C46FFD3BDE0612A1 /* Pods_iOSDeveloperDemo.framework */; };
 		4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD8E22ADF2C600B8CB35 /* CopyPatternDelegate.swift */; };
 		4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9022ADF4F700B8CB35 /* CopyClass.swift */; };
 		4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD9222ADF52C00B8CB35 /* CopyObject.swift */; };
@@ -86,6 +86,8 @@
 		84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */; };
 		84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BFE20A038760031DEEE /* TextViewController.swift */; };
 		84E55ABC249F0EAF00A152A8 /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
+		84E55ABE24C8735E00A152A8 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E55ABD24C8735E00A152A8 /* Events.swift */; };
+		84E55AC024C8746F00A152A8 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E55ABF24C8746F00A152A8 /* Schedule.swift */; };
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
 		84EE672720BD32C00051F86C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672620BD32C00051F86C /* PageViewController.swift */; };
 		84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672820BD344D0051F86C /* SubPageViewController.swift */; };
@@ -196,6 +198,8 @@
 		84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDeveloperDemoTests.swift; sourceTree = "<group>"; };
 		84E37BF520A02D3B0031DEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E37BFE20A038760031DEEE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		84E55ABD24C8735E00A152A8 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		84E55ABF24C8746F00A152A8 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
 		84EE672620BD32C00051F86C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		84EE672820BD344D0051F86C /* SubPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPageViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +213,7 @@
 		84FA0FA420AEC4D700B6914A /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		84FA0FA620AEC72700B6914A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		8EFEC534B8D7D416F0E8FC7E /* Pods-iOSDeveloperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDeveloperDemo.release.xcconfig"; path = "Target Support Files/Pods-iOSDeveloperDemo/Pods-iOSDeveloperDemo.release.xcconfig"; sourceTree = "<group>"; };
-		BF3C68CCD3F6177293BB3E42 /* libPods-iOSDeveloperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSDeveloperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0E492A3C46FFD3BDE0612A1 /* Pods_iOSDeveloperDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDeveloperDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +230,7 @@
 				84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */,
 				84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */,
 				8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */,
-				2092D12DB16156F8C8C6B57E /* libPods-iOSDeveloperDemo.a in Frameworks */,
+				2D4C8B5AFE5D132613F115D5 /* Pods_iOSDeveloperDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +362,7 @@
 				84F8BF12224F6A3E002E5389 /* CoreData.framework */,
 				84159564224796DE0026259B /* libsqlite3.0.tbd */,
 				8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */,
-				BF3C68CCD3F6177293BB3E42 /* libPods-iOSDeveloperDemo.a */,
+				E0E492A3C46FFD3BDE0612A1 /* Pods_iOSDeveloperDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -461,6 +465,8 @@
 		84D305BC22D1A25E001AC087 /* OlympicProject */ = {
 			isa = PBXGroup;
 			children = (
+				84E55ABD24C8735E00A152A8 /* Events.swift */,
+				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
 			);
 			path = OlympicProject;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 				84E37BD820A02D390031DEEE /* Frameworks */,
 				84E37BD920A02D390031DEEE /* Resources */,
 				849FC3A120C9216000C1D18B /* Headers */,
+				E6ACA40460412814D3EF0BE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -693,6 +700,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6ACA40460412814D3EF0BE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSDeveloperDemo/Pods-iOSDeveloperDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSDeveloperDemo/Pods-iOSDeveloperDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSDeveloperDemo/Pods-iOSDeveloperDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -702,8 +726,10 @@
 			files = (
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
 				4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */,
+				84E55AC024C8746F00A152A8 /* Schedule.swift in Sources */,
 				843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */,
 				4FC4E19A228D01570017192B /* Observer.swift in Sources */,
+				84E55ABE24C8735E00A152A8 /* Events.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,

@@ -1,24 +1,34 @@
 PODS:
   - Alamofire (4.7.3)
   - Google-Mobile-Ads-SDK (7.34.0)
+  - Realm (5.3.2):
+    - Realm/Headers (= 5.3.2)
+  - Realm/Headers (5.3.2)
+  - RealmSwift (5.3.2):
+    - Realm (= 5.3.2)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - Google-Mobile-Ads-SDK
+  - RealmSwift
   - SnapKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Google-Mobile-Ads-SDK
+    - Realm
+    - RealmSwift
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Google-Mobile-Ads-SDK: a1cbce28c0c78ca1fb0b6c4f213485f55527c99f
+  Realm: c6794276ca8884808ba168a22f9d71362b170b85
+  RealmSwift: 42ec6cec3170aeeda407f797f07268a7d055ebc7
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: af98b75a835f5b2b4b4e7f9abcb0dc1ce74df181
+PODFILE CHECKSUM: 29c558d0c555e36a2f5e7cc5bad085ed074e4f61
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.9.3
