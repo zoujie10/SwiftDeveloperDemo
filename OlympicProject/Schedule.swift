@@ -7,16 +7,21 @@
 //
 
 import UIKit
-
-class Schedule: NSObject {
+import RealmSwift
+class Schedule : Object{
+	//Q:"Cannot convert value of type 'Schedule' to expected argument type 'Object
+	//https://stackoverflow.com/questions/33115641/swift-cannot-convert-value-of-type-to-expected-argument-in-realm/36658150
 	//编号
-	var ScheduleID : Int?
+	@objc dynamic var ScheduleID : Int = 0
 	//比赛日期
-	var GameDate : NSString?
+	@objc dynamic var GameDate : NSString? = ""
 	//比赛时间
-	var GameTime : NSString?
+	@objc dynamic var GameTime : NSString? = ""
 	//比赛描述
-	var GameInfo : NSString?
+	@objc dynamic var GameInfo : NSString? = ""
 	//比赛项目
 	var Event : Events?
 }
+
+
+

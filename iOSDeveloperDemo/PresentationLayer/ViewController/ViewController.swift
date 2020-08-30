@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 	var changeTag = Bool()
@@ -17,7 +18,32 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 	@IBOutlet var DisPlayTextView: UITextView!
 	@IBOutlet var InputNameTextField: UITextField!
 	@IBOutlet var AbstractLB: UILabel!
+	@IBOutlet var Dils: UILabel!
 	
+	@IBAction func clickSaveData(_ sender: UIButton) {
+		
+		let Swim = Schedule()
+		Swim.ScheduleID = 1111
+		Swim.GameDate = "2020.08.08"
+		Swim.GameTime = "16:00"
+		Swim.GameInfo = "游泳"
+		Swim.Event?.EventID = 01
+		//		写入数据库
+		let realm = try! Realm()
+		//打印出数据库地址
+		print(realm.configuration.fileURL ?? "")
+		try! realm.write{
+			realm.add(Swim)
+		}
+		let swimTags = realm.objects(Schedule.self)
+		for i in 0..<5 {
+			let swim = swimTags[i]
+			// ...
+			self.Dils.text = swim.GameDate as String?
+		}
+
+		
+	}
 	@IBAction func OKBtn(_ sender: UIButton) {
 		if changeTag == true{
 			DisplayLB.text = "Hello"
@@ -47,6 +73,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 		notificationCenter.addObserver(self, selector:#selector(handleEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
 		//监听内存警告⚠️
 		notificationCenter.addObserver(self, selector:#selector(handleMemoryWarning), name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
+
 	}
 	override func viewWillAppear(_ animated: Bool) {
 		

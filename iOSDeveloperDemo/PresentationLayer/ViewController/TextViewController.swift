@@ -19,7 +19,6 @@ class TextViewController: UIViewController {
 
 	
 	@IBAction func RightSwitchTouch(_ sender: Any) {
-		
 		let switchBtn = sender as! UISwitch
 		let setting = switchBtn.isOn
 		print("Right:",setting)
