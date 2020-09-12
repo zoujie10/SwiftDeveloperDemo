@@ -42,7 +42,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
 			self.Dils.text = swim.GameDate as String?
 		}
 
-		
+		self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
 	}
 	@IBAction func OKBtn(_ sender: UIButton) {
 		if changeTag == true{
