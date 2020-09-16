@@ -50,6 +50,7 @@
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
 		84598C0E2348500D00E72C8B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0D2348500D00E72C8B /* MasterViewController.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
+		845A724B251108A900398876 /* SwiftBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A724A251108A900398876 /* SwiftBasicViewController.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
 		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
@@ -159,6 +160,7 @@
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
 		84598C0D2348500D00E72C8B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		84598C0F234851B900E72C8B /* NoteBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
+		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		845D81E520B412CE00ABD88A /* AlterCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterCellViewController.swift; sourceTree = "<group>"; };
 		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
@@ -323,6 +325,13 @@
 			path = ObserverPattern;
 			sourceTree = "<group>";
 		};
+		842D64E2250C6FCF003DE586 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		842F785F22583F300048B63A /* Internationalization */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +345,14 @@
 			children = (
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		845A7249251107E800398876 /* Book-Moblie */ = {
+			isa = PBXGroup;
+			children = (
+				845A724A251108A900398876 /* SwiftBasicViewController.swift */,
+			);
+			path = "Book-Moblie";
 			sourceTree = "<group>";
 		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
@@ -399,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				849FC39F20C917D000C1D18B /* ViewController */,
+				845A7249251107E800398876 /* Book-Moblie */,
 				84B5BD5B20C50FE200D2047C /* View */,
 			);
 			path = PresentationLayer;
@@ -465,6 +483,7 @@
 		84D305BC22D1A25E001AC087 /* OlympicProject */ = {
 			isa = PBXGroup;
 			children = (
+				842D64E2250C6FCF003DE586 /* New Group */,
 				84E55ABD24C8735E00A152A8 /* Events.swift */,
 				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
 			);
@@ -770,6 +789,7 @@
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
+				845A724B251108A900398876 /* SwiftBasicViewController.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
