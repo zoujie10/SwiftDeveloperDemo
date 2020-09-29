@@ -41,6 +41,7 @@
 		843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843358CE22EC2285003AB31D /* CoreLocation.framework */; };
 		843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843358D022EC2571003AB31D /* LocationAndMapViewController.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
+		843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
@@ -50,7 +51,6 @@
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
 		84598C0E2348500D00E72C8B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0D2348500D00E72C8B /* MasterViewController.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
-		845A724B251108A900398876 /* SwiftBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A724A251108A900398876 /* SwiftBasicViewController.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
 		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
@@ -73,6 +73,7 @@
 		848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A467A20CE5CF200F982F2 /* DataPersistence.swift */; };
 		848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A467E20CE6DF600F982F2 /* NoteByPlist.swift */; };
 		848A468120CE965E00F982F2 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A468020CE965E00F982F2 /* Note.swift */; };
+		8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A724A251108A900398876 /* SwiftBasicViewController.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -151,6 +152,7 @@
 		843358CE22EC2285003AB31D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		843358D022EC2571003AB31D /* LocationAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndMapViewController.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
+		843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAdvanceViewController.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
@@ -325,13 +327,6 @@
 			path = ObserverPattern;
 			sourceTree = "<group>";
 		};
-		842D64E2250C6FCF003DE586 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		842F785F22583F300048B63A /* Internationalization */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				845A724A251108A900398876 /* SwiftBasicViewController.swift */,
+				843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */,
 			);
 			path = "Book-Moblie";
 			sourceTree = "<group>";
@@ -483,7 +479,6 @@
 		84D305BC22D1A25E001AC087 /* OlympicProject */ = {
 			isa = PBXGroup;
 			children = (
-				842D64E2250C6FCF003DE586 /* New Group */,
 				84E55ABD24C8735E00A152A8 /* Events.swift */,
 				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
 			);
@@ -743,6 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */,
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
 				4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */,
 				84E55AC024C8746F00A152A8 /* Schedule.swift in Sources */,
@@ -789,7 +785,6 @@
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
-				845A724B251108A900398876 /* SwiftBasicViewController.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
@@ -799,6 +794,7 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
+				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
 				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
