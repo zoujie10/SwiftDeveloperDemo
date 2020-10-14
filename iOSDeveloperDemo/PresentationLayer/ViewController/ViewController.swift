@@ -26,6 +26,9 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 		print(self.dataArray[indexPath.row])
 		if(indexPath.row == 0){
 			self.navigationController?.pushViewController(SwiftBasicViewController(), animated: true)
+//			self.present(SwiftBasicViewController(), animated: true, completion: nil)
+		}else if(indexPath.row == 1){
+			self.navigationController?.pushViewController(SwiftAdvanceViewController(), animated: true)
 		}
 	}
 	

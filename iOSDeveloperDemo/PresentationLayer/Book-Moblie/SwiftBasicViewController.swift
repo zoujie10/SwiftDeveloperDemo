@@ -179,7 +179,7 @@ class SwiftBasicViewController: UIViewController {
 		var index = 0
 		while index < 3 {
 			if(index == 2){
-				continue//停止本次循环，进入下次循环
+//				continue//停止本次循环，进入下次循环
 			}
 			index+=1
 		}

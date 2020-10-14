@@ -8,10 +8,48 @@
 
 import UIKit
 import iAd
-class MineViewController: UIViewController,PhilosopherDelegate,ADBannerViewDelegate {
+class MineViewController: UIViewController,PhilosopherDelegate,ADBannerViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.dataArray.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+		cell.textLabel?.text = (self.dataArray[indexPath.row] as! String)
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		print(self.dataArray[indexPath.row])
+		if(indexPath.row == 0){
+			self.navigationController?.pushViewController(CopyPatternViewController(), animated: true)
+		}else if(indexPath.row == 1){
+			self.navigationController?.pushViewController(SwiftAdvanceViewController(), animated: true)
+		}
+	}
+	
+	var dataArray = NSArray()
+	var tableView = UITableView()
+	
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		self.dataArray = ["CopyPattern","IteratorPattern","TemplatePattern","ObserverPattern","DelegatePattern","DecoratePattern","设计模式"]
+	
+		self.view.addSubview(self.tableView)
+		self.tableView.snp.makeConstraints { (make) in
+			make.top.left.right.equalTo(self.view)
+			make.height.equalTo(400)
+		}
+		self.tableView.dataSource = self;
+		self.tableView.delegate = self;
+		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		
+		
+		
 		let Person = Philosopher()
 		Person.delegate = self
 		Person.start()
@@ -118,15 +156,4 @@ class MineViewController: UIViewController,PhilosopherDelegate,ADBannerViewDeleg
 //
 //	}
 	
-	
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -46,6 +46,7 @@
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
+		84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84480F4C253731B800A738B0 /* CopyPatternViewController.swift */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -157,6 +158,7 @@
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		84480F4C253731B800A738B0 /* CopyPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPatternViewController.swift; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				4F02FD8E22ADF2C600B8CB35 /* CopyPatternDelegate.swift */,
 				4F02FD9022ADF4F700B8CB35 /* CopyClass.swift */,
 				4F02FD9222ADF52C00B8CB35 /* CopyObject.swift */,
+				84480F4C253731B800A738B0 /* CopyPatternViewController.swift */,
 			);
 			path = CopyPattern;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				84E37BE020A02D390031DEEE /* ViewController.swift */,
+				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				847A569820BE81F200EBB06C /* TabLTableViewController.swift */,
 				84E37BFE20A038760031DEEE /* TextViewController.swift */,
 				84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */,
@@ -441,7 +445,6 @@
 				847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */,
 				847A569C20BE83D500EBB06C /* DetailViewController.swift */,
 				840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */,
-				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */,
 				4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */,
 				843358D022EC2571003AB31D /* LocationAndMapViewController.swift */,
@@ -777,6 +780,7 @@
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
+				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
