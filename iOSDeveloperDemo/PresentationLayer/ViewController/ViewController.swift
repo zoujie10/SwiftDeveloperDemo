@@ -29,13 +29,15 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 //			self.present(SwiftBasicViewController(), animated: true, completion: nil)
 		}else if(indexPath.row == 1){
 			self.navigationController?.pushViewController(SwiftAdvanceViewController(), animated: true)
+		}else if(indexPath.row == 2){
+			self.navigationController?.pushViewController(UIViewAndCALayerVC(), animated: true)
 		}
 	}
 	
 	
 	var dataArray = NSArray()
 	var tableView = UITableView()
-	
+
 	@IBAction func clickSaveData(_ sender: UIButton) {
 		
 		let Swim = Schedule()
@@ -58,7 +60,18 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 	//MARK: 生命周期
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.dataArray = ["Swift 基本语法","Swift 进阶语法","视图UIView和层CALayer","ViewController","经典控件","UITableView","UICollectionView","触屏事件和触摸手势","动画声音视频","Alamofire","WKWebView与HTML5","数据持久化"]
+		self.dataArray = ["Swift 基本语法",
+						  "Swift 进阶语法",
+						  "视图UIView和层CALayer",
+						  "ViewController",
+						  "经典控件",
+						  "UITableView",
+						  "UICollectionView",
+						  "触屏事件和触摸手势",
+						  "动画声音视频",
+						  "Alamofire",
+						  "WKWebView与HTML5",
+						  "数据持久化"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

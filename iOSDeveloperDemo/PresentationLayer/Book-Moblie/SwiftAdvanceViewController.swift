@@ -15,6 +15,7 @@ class SwiftAdvanceViewController: UIViewController {
 
         //函数定义和调用
 		//1.传参
+		
 		//2.为参数设置默认值
 		//3.设置可变的函数参数数量
 		//4.函数作为参数和返回类型
