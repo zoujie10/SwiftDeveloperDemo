@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1322,7 +1322,7 @@
         <!--iOS移动开发目录-->
         <scene sceneID="It7-C3-aa6">
             <objects>
-                <navigationController title="iOS移动开发目录" automaticallyAdjustsScrollViewInsets="NO" id="4AL-gL-dDn" sceneMemberID="viewController">
+                <navigationController title="iOS移动开发目录" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="4AL-gL-dDn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="TabIconHome" landscapeImage="Algeria" badgeValue="12" selectedImage="TabIconHome" id="uXU-2T-b8y">
                         <color key="badgeColor" red="1" green="0.6395348573726245" blue="0.35246621052638671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -1362,7 +1362,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dwa-Xb-stq">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QKr-kj-dqO" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="QKr-kj-dqO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vIM-Tj-i98">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1643,9 +1643,6 @@
         <image name="fruiticons_buttons_apple" width="512" height="512"/>
         <image name="fruiticons_buttons_lemon" width="512" height="512"/>
         <image name="fruiticons_buttons_orange" width="512" height="512"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

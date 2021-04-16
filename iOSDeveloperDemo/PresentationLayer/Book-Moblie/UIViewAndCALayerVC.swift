@@ -12,7 +12,8 @@ class UIViewAndCALayerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		self.view.backgroundColor = UIColor.white
+		
         // Do any additional setup after loading the view.
 		//视图UIView
 //		NSObject ->
@@ -25,14 +26,14 @@ class UIViewAndCALayerVC: UIViewController {
 		view.alpha = 0.9
 		view.isHidden = false
 		view.clipsToBounds = false //限制子视图的显示范围不超过父视图的显示区域
-		view.frame = CGRect.init(x: 100, y: 100, width: 100, height: 100)
+		view.frame = CGRect.init(x: 100, y: 100, width: 200, height: 200)
 		self.view.addSubview(view)
 		
 		//1.2UIView几何属性
 		//了解坐标系  UIKit X轴正方向向右 → Y轴正方向向下 “↓”  Quartz 2D绘图 X轴正方向向右 → Y轴正方向向上 “↑”
 		let view1 = UIView()
-		view1.frame = CGRect.init(x: 10, y: 10, width: 50, height: 50)
-//		view1.transform3D
+		view1.frame = CGRect.init(x: 10, y: 10, width: 100, height: 100)
+		view1.backgroundColor = UIColor.red
 		
 		//1.3UIView嵌套层次关系  层次管理方法
 		view.addSubview(view1)
@@ -49,13 +50,18 @@ class UIViewAndCALayerVC: UIViewController {
 //		view1 .addInteraction(drop)
 		
 		//1.5UIView变型操作
-		let trans = CGAffineTransform.init()
-		trans.translatedBy(x: 0, y: 50)
-		view1.transform = trans
-		trans.rotated(by: 10)///旋转
-		trans.scaledBy(x: 100, y: 100)//缩放
-		trans.inverted()//反转
-		trans.concatenating(trans) //放射效果叠加
+//		let trans = CGAffineTransform.init()
+//		view1.transform = trans
+
+//		trans.translatedBy(x: 0, y: 50)
+//		trans.rotated(by: 30)
+
+//		trans.scaledBy(x: 50, y: 50)//缩放
+		
+//		trans.rotated(by: 10)//旋转
+//		trans.inverted()//反转
+//		trans.concatenating(trans) //放射效果叠加
+		
 		//1.6自定义UIView
 		
 		
@@ -72,11 +78,20 @@ class UIViewAndCALayerVC: UIViewController {
 		//2.3CALayer圆角
 		layer.cornerRadius = 10
 		layer.masksToBounds = true //沿着圆角边缘对视图中的内容进行裁切
-		//2.4CALayer渐变
-//		layer.
-    }
-	@objc func addTap(){
+		view.layer.borderColor = UIColor.red.cgColor
 		
+		//2.4CALayer渐变
+		let layerColor =	CAGradientLayer()
+		layerColor.colors = [UIColor.red.cgColor,UIColor.orange.cgColor,UIColor.blue.cgColor]
+		layerColor.frame = view1.frame
+		layerColor.startPoint = CGPoint(x: 0, y: 0)
+		layerColor.endPoint = CGPoint(x: 1, y: 1)
+		layerColor.locations = [0,0.3,1]//设置渐变层的各颜色点在颜色线中的分布情况。在locations属性值数组中的0.3表示渐变线中间的颜色，即橙色将位于渐变线30%的位置
+		view1.layer.addSublayer(layerColor)
+    }
+	
+	@objc func addTap(){
+		print("Tap---Tap")
 	}
 
     /*
