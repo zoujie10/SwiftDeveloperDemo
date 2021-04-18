@@ -60,9 +60,9 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 	//MARK: 生命周期
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.dataArray = ["Swift 基本语法",
+		self.dataArray = ["Swift 基本语法---SwiftBasicViewController",
 						  "Swift 进阶语法",
-						  "视图UIView和层CALayer",
+						  "视图UIView和层CALayer---UIViewAndCALayerVC",
 						  "ViewController",
 						  "经典控件",
 						  "UITableView",
@@ -71,7 +71,8 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 						  "动画声音视频",
 						  "Alamofire",
 						  "WKWebView与HTML5",
-						  "数据持久化"]
+						  "数据持久化",
+						  "Git版本控制实践---GitHubManagerVC"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
