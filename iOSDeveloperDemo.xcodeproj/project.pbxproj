@@ -54,6 +54,7 @@
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
+		845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E0A6D2679CA9E00F11606 /* IteratorTools.swift */; };
 		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
 		8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01821393AE100FC6B5C /* ZJArray.swift */; };
 		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
@@ -170,6 +171,7 @@
 		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		845D81E520B412CE00ABD88A /* AlterCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterCellViewController.swift; sourceTree = "<group>"; };
+		845E0A6D2679CA9E00F11606 /* IteratorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorTools.swift; sourceTree = "<group>"; };
 		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
 		8467E01821393AE100FC6B5C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJArray.swift; path = DataStruct/ZJArray.swift; sourceTree = SOURCE_ROOT; };
 		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
@@ -291,6 +293,7 @@
 				4F02FD9C22AF817A00B8CB35 /* IteratorProtocol.swift */,
 				4F02FD9E22AF819F00B8CB35 /* IteratorClass.swift */,
 				4F02FDA022AF867E00B8CB35 /* ConcreteAggregrate.swift */,
+				845E0A6D2679CA9E00F11606 /* IteratorTools.swift */,
 			);
 			path = IteratorPattern;
 			sourceTree = "<group>";
@@ -351,7 +354,7 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
-		845A7249251107E800398876 /* Book-Moblie */ = {
+		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
 				845A724A251108A900398876 /* SwiftBasicViewController.swift */,
@@ -360,7 +363,7 @@
 				849387922622968700C2914C /* UIViewControllerVC.swift */,
 				849387B4262BC83100C2914C /* GitHubManagerVC.swift */,
 			);
-			path = "Book-Moblie";
+			path = "Book-Moblie🐱";
 			sourceTree = "<group>";
 		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
@@ -425,7 +428,7 @@
 			children = (
 				84E37BE020A02D390031DEEE /* ViewController.swift */,
 				849FC39F20C917D000C1D18B /* ViewController */,
-				845A7249251107E800398876 /* Book-Moblie */,
+				845A7249251107E800398876 /* Book-Moblie🐱 */,
 				84B5BD5B20C50FE200D2047C /* View */,
 			);
 			path = PresentationLayer;
@@ -761,6 +764,7 @@
 				849387932622968700C2914C /* UIViewControllerVC.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
+				845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,

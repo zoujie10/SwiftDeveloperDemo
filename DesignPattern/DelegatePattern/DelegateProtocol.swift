@@ -7,7 +7,16 @@
 //
 
 import Foundation
-
 //实现多继承
 //NSProxy
+
+protocol delegateProtocol {
+	func doSomeThingFirst()
+	func doSomeThingSecond() -> String
+	
+}
+
+class manloadClass: NSObject {
+	
+}
 
