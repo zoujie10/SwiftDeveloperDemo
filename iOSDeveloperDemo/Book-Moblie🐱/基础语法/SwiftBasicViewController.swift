@@ -101,8 +101,8 @@ class SwiftBasicViewController: UIViewController {
 		*/
 		var  message = "Hi Jerry.\n\"Good Morning\""
 		//判断字符串的前后部分
-		message.hasPrefix("Jerry")
-		message.hasSuffix("Morining")
+        print(message.hasPrefix("Jerry"))
+        print(message.hasSuffix("Morining"))
 		//大小写转换
 		message.uppercased()
 		message.lowercased()
@@ -142,16 +142,19 @@ class SwiftBasicViewController: UIViewController {
 		
 		let minOne = -one
 		let plusOne = +one
-		
+		print(minOne,plusOne)
+        
 		let isMan = true
 		let isMen = !true
-		
+		print(isMan,isMen)
+        
 		let two1 = 3+2
 		let two2 = 3-2
 		let two3 = 3*2
 		let two4 = 3/2
-		let tow5 = 3%2
-		
+		let two5 = 3%2
+		print(two1,two2,two3,two4,two5)
+        
 		let three = 33
 		let result = (three >= 20) ? true : false
 	}
@@ -213,55 +216,59 @@ class SwiftBasicViewController: UIViewController {
 		var array = [1,2,3,4,5]
 		
 		print(array[0])
-		intArray.isEmpty
-		intArray.count
-		intArray.contains(3)
+        print(intArray.isEmpty)
+        print(intArray.count)
+        print(intArray.contains(3))
 		
 		array += [6]
 		array.append(7)
 		array.insert(8, at: 3)
 		
 		array[3...5] = [8,9,10]
+        //MARK:删除操作
 		array.removeFirst()
 		array.removeAll()
-		array.remove(at: 2)
-		array.removeSubrange(Range(1..<3))//remove index 1-2
-		
+        if(array.count > 3){
+            array.remove(at: 2)
+        }else if(array.count > 4){
+            array.removeSubrange(Range(1..<3))//remove index 1-2
+        }
 		array.sort()//升序
 		array.sort(by:>)//降序
 		
-		//复杂类型排序
+		//MARK:复杂类型排序
 		var userList = [(name:"TT",age:20),(name:"BB",age:21),(name:"CC",age:22),(name:"AA",age:24)]
 		userList.sort(by: {$0.name > $1.name})//$0,$1 占位变量
 		
-		//多维数组
-		var int_Array = [[Int]]()
+		//MARK:多维数组
+		let int_Array = [[Int]]()
 		var numbers = [["1","2","3"],["1","2","3"]]
 		numbers.append(["4"])
 		let number = numbers[1][2]
-		
-		//数组遍历
+		print(number)
+        
+		//MARK:数组遍历
 		for index in int_Array {
-			
+			print(index)
 		}
 		for index in 0 ..< int_Array.count{
-			
+			print(index)
 		}
 		
 		let range = 2 ..< numbers.count
 		for (index,value) in zip(range, numbers[range]) {
-			
+			print(index,value)
 		}
 		
-		//复杂元素数组遍历
+		//MARK:复杂元素数组遍历
 		for (student,age) in userList {
-			
+			print(student,age)
 		}
 		
-		//多维数组遍历
+		//MARK:多维数组遍历
 		for subNumbers in numbers{
 			for sub_Number in subNumbers{
-				
+				print(sub_Number)
 			}
 		}
 	}

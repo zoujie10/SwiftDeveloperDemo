@@ -26,17 +26,17 @@ class TextViewController: UIViewController {
 	
 	@IBAction func segBtn(_ sender: UISegmentedControl) {
 		print("segNo:",sender.selectedSegmentIndex)
-//		if sender.selectedSegmentIndex == 1{
+		if sender.selectedSegmentIndex == 1{
 			sliderValue.value = sliderValue.value + 0.1
-//		}
+		}
 	}
 	@IBOutlet var sliderValue: UISlider!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = UIColor.brown
-		sliderValue.value = 0
-		sliderValue.maximumValue = 3
+//		sliderValue.value = 0
+//		sliderValue.maximumValue = 3
 		
         // Do any additional setup after loading the view.
     }
@@ -51,14 +51,4 @@ class TextViewController: UIViewController {
 			
 		}
 	}
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

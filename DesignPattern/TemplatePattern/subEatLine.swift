@@ -24,7 +24,7 @@ class subEatLine: MakeFood {
     }
     
     func doOtherOpertion(){
-        print("Plat a game")
+        print("Play a game")
     }
 }
 

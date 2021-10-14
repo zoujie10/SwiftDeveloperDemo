@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 import SnapKit
-class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableViewDataSource,UITableViewDelegate {
+class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableViewDataSource,UITableViewDelegate {
 	
 	//MARK: UITableview data source
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +31,21 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 			self.navigationController?.pushViewController(SwiftAdvanceViewController(), animated: true)
 		}else if(indexPath.row == 2){
 			self.navigationController?.pushViewController(UIViewAndCALayerVC(), animated: true)
-		}
+        }else if(indexPath.row == 3){
+            self.navigationController?.pushViewController(UIViewControllerVC(), animated: true)
+        }else if(indexPath.row == 4){
+            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+        }else if(indexPath.row == 5){
+            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+        }else if(indexPath.row == 6){
+            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+        }else if(indexPath.row == 7){
+            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+        }else if(indexPath.row == 8){
+            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+        }else if(indexPath.row == 9){
+            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+        }
 	}
 	
 	
@@ -47,12 +61,12 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 		Swim.GameInfo = "游泳"
 		Swim.Event?.EventID = 01
 		//		写入数据库
-		let realm = try! Realm()
-		//打印出数据库地址
-		print(realm.configuration.fileURL ?? "")
-		try! realm.write{
-			realm.add(Swim)
-		}
+//		let realm = try! Realm()
+//		//打印出数据库地址
+//		print(realm.configuration.fileURL ?? "")
+//		try! realm.write{
+//			realm.add(Swim)
+//		}
 //		let swimTags = realm.objects(Schedule.self)
 
 		self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
@@ -60,19 +74,19 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 	//MARK: 生命周期
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.dataArray = ["Swift 基本语法---SwiftBasicViewController",
-						  "Swift 进阶语法",
-						  "视图UIView和层CALayer---UIViewAndCALayerVC",
-						  "ViewController",
-						  "经典控件",
-						  "UITableView",
-						  "UICollectionView",
-						  "触屏事件和触摸手势",
-						  "动画声音视频",
-						  "Alamofire",
-						  "WKWebView与HTML5",
-						  "数据持久化",
-						  "Git版本控制实践---GitHubManagerVC"]
+		self.dataArray = ["1.Swift 基本语法---SwiftBasicViewController",
+						  "2.Swift 进阶语法",
+						  "3.视图UIView和层CALayer---UIViewAndCALayerVC",
+						  "4.ViewController",
+						  "5.经典控件",
+						  "6.UITableView",
+						  "7.UICollectionView",
+						  "8.触屏事件和触摸手势",
+						  "9.动画声音视频",
+						  "10.Alamofire",
+						  "11.WKWebView与HTML5",
+						  "12.数据持久化",
+						  "13.Git版本控制实践---GitHubManagerVC"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
@@ -104,8 +118,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 		
 		let theDate : NSDictionary = notification.userInfo! as NSDictionary
 		let userID = theDate.object(forKey: "userID")
-	
-		
+        print(userID as Any)
 	}
 	
 	@objc func handleEnterBackground(){

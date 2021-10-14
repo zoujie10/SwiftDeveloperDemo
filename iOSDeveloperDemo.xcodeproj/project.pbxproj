@@ -55,6 +55,9 @@
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
 		845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E0A6D2679CA9E00F11606 /* IteratorTools.swift */; };
+		845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E0AF12679F70A00F11606 /* TemplateLineClass.swift */; };
+		845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC7E927148A100006651E /* UIKitComponentVC.swift */; };
+		845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC7F027181CDB0006651E /* ZJ_TextField.swift */; };
 		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
 		8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01821393AE100FC6B5C /* ZJArray.swift */; };
 		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
@@ -86,7 +89,7 @@
 		84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BD22DB3633001AC087 /* JSONParser.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
-		84E37BE120A02D390031DEEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BE020A02D390031DEEE /* ViewController.swift */; };
+		84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BE020A02D390031DEEE /* HomeVC.swift */; };
 		84E37BE420A02D390031DEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE220A02D390031DEEE /* Main.storyboard */; };
 		84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE520A02D3B0031DEEE /* Assets.xcassets */; };
 		84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */; };
@@ -172,6 +175,9 @@
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		845D81E520B412CE00ABD88A /* AlterCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterCellViewController.swift; sourceTree = "<group>"; };
 		845E0A6D2679CA9E00F11606 /* IteratorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorTools.swift; sourceTree = "<group>"; };
+		845E0AF12679F70A00F11606 /* TemplateLineClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLineClass.swift; sourceTree = "<group>"; };
+		845EC7E927148A100006651E /* UIKitComponentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitComponentVC.swift; sourceTree = "<group>"; };
+		845EC7F027181CDB0006651E /* ZJ_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_TextField.swift; sourceTree = "<group>"; };
 		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
 		8467E01821393AE100FC6B5C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJArray.swift; path = DataStruct/ZJArray.swift; sourceTree = SOURCE_ROOT; };
 		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
@@ -203,7 +209,7 @@
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E37BDE20A02D390031DEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84E37BE020A02D390031DEEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84E37BE020A02D390031DEEE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		84E37BE320A02D390031DEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E37BE520A02D3B0031DEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E37BE820A02D3B0031DEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -283,6 +289,7 @@
 			children = (
 				4F02FD9522AE281F00B8CB35 /* TemplateClass.swift */,
 				4F02FD9722AE2CC700B8CB35 /* subEatLine.swift */,
+				845E0AF12679F70A00F11606 /* TemplateLineClass.swift */,
 			);
 			path = TemplatePattern;
 			sourceTree = "<group>";
@@ -357,13 +364,55 @@
 		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
-				845A724A251108A900398876 /* SwiftBasicViewController.swift */,
-				843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */,
+				845EC7ED271582030006651E /* 基础语法 */,
+				845EC7EE2715820F0006651E /* 高级语法 */,
+				845EC7EC2715801B0006651E /* UIKitComponent-系统控件 */,
+				845EC7EB271569250006651E /* UIViewController */,
 				8493878E262295A200C2914C /* UIViewAndCALayerVC.swift */,
-				849387922622968700C2914C /* UIViewControllerVC.swift */,
 				849387B4262BC83100C2914C /* GitHubManagerVC.swift */,
 			);
 			path = "Book-Moblie🐱";
+			sourceTree = "<group>";
+		};
+		845EC7EB271569250006651E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849387922622968700C2914C /* UIViewControllerVC.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		845EC7EC2715801B0006651E /* UIKitComponent-系统控件 */ = {
+			isa = PBXGroup;
+			children = (
+				845EC7EF27181CAD0006651E /* View */,
+				845EC7E927148A100006651E /* UIKitComponentVC.swift */,
+			);
+			path = "UIKitComponent-系统控件";
+			sourceTree = "<group>";
+		};
+		845EC7ED271582030006651E /* 基础语法 */ = {
+			isa = PBXGroup;
+			children = (
+				845A724A251108A900398876 /* SwiftBasicViewController.swift */,
+			);
+			path = "基础语法";
+			sourceTree = "<group>";
+		};
+		845EC7EE2715820F0006651E /* 高级语法 */ = {
+			isa = PBXGroup;
+			children = (
+				843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */,
+			);
+			path = "高级语法";
+			sourceTree = "<group>";
+		};
+		845EC7EF27181CAD0006651E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845EC7F027181CDB0006651E /* ZJ_TextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
@@ -426,9 +475,7 @@
 		849FC39E20C9176B00C1D18B /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				84E37BE020A02D390031DEEE /* ViewController.swift */,
 				849FC39F20C917D000C1D18B /* ViewController */,
-				845A7249251107E800398876 /* Book-Moblie🐱 */,
 				84B5BD5B20C50FE200D2047C /* View */,
 			);
 			path = PresentationLayer;
@@ -532,7 +579,9 @@
 				849FC3A020C9187100C1D18B /* BusinessLogicLayer */,
 				849FC39E20C9176B00C1D18B /* PresentationLayer */,
 				848A465320CE1DA100F982F2 /* Model */,
+				845A7249251107E800398876 /* Book-Moblie🐱 */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
+				84E37BE020A02D390031DEEE /* HomeVC.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
 				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
@@ -782,7 +831,7 @@
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */,
-				84E37BE120A02D390031DEEE /* ViewController.swift in Sources */,
+				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				84598C0E2348500D00E72C8B /* MasterViewController.swift in Sources */,
@@ -792,11 +841,13 @@
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
+				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
+				845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
@@ -804,6 +855,7 @@
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
+				845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
@@ -1006,7 +1058,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SF5VKU74NM;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",

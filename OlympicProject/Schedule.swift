@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RealmSwift
-class Schedule : Object{
+//import RealmSwift
+class Schedule : NSObject{
 	//Q:"Cannot convert value of type 'Schedule' to expected argument type 'Object
 	//https://stackoverflow.com/questions/33115641/swift-cannot-convert-value-of-type-to-expected-argument-in-realm/36658150
 	//编号

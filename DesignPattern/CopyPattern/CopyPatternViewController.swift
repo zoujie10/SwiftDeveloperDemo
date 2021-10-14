@@ -36,7 +36,5 @@ class CopyPatternViewController: UIViewController {
 		arrayCopy_2[1] = "999"
 		print(arrayCopy_1,arrayCopy_2,arrayCopy)
     }
-    
-
 
 }

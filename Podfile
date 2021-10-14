@@ -1,8 +1,8 @@
 target 'iOSDeveloperDemo' do
-	platform :ios, '9.0'
+	platform :ios, '10.0'
 	pod 'SnapKit'
 	pod 'Alamofire'
-	pod 'RealmSwift'
+#	pod 'RealmSwift'
 	use_frameworks!
 end
 
