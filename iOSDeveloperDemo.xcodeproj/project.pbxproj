@@ -58,6 +58,7 @@
 		845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E0AF12679F70A00F11606 /* TemplateLineClass.swift */; };
 		845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC7E927148A100006651E /* UIKitComponentVC.swift */; };
 		845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC7F027181CDB0006651E /* ZJ_TextField.swift */; };
+		845EC7F6271AADF30006651E /* TextAndImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC7F5271AADF30006651E /* TextAndImageVC.swift */; };
 		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
 		8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01821393AE100FC6B5C /* ZJArray.swift */; };
 		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
@@ -178,6 +179,7 @@
 		845E0AF12679F70A00F11606 /* TemplateLineClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLineClass.swift; sourceTree = "<group>"; };
 		845EC7E927148A100006651E /* UIKitComponentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitComponentVC.swift; sourceTree = "<group>"; };
 		845EC7F027181CDB0006651E /* ZJ_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_TextField.swift; sourceTree = "<group>"; };
+		845EC7F5271AADF30006651E /* TextAndImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndImageVC.swift; sourceTree = "<group>"; };
 		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
 		8467E01821393AE100FC6B5C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJArray.swift; path = DataStruct/ZJArray.swift; sourceTree = SOURCE_ROOT; };
 		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
@@ -366,10 +368,11 @@
 			children = (
 				845EC7ED271582030006651E /* 基础语法 */,
 				845EC7EE2715820F0006651E /* 高级语法 */,
+				845EC7F2271AAD6F0006651E /* UIViewAndCALayer */,
 				845EC7EC2715801B0006651E /* UIKitComponent-系统控件 */,
 				845EC7EB271569250006651E /* UIViewController */,
-				8493878E262295A200C2914C /* UIViewAndCALayerVC.swift */,
-				849387B4262BC83100C2914C /* GitHubManagerVC.swift */,
+				845EC7F3271AAD9F0006651E /* Git */,
+				845EC7F4271AADCF0006651E /* 图文混排 */,
 			);
 			path = "Book-Moblie🐱";
 			sourceTree = "<group>";
@@ -413,6 +416,30 @@
 				845EC7F027181CDB0006651E /* ZJ_TextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		845EC7F2271AAD6F0006651E /* UIViewAndCALayer */ = {
+			isa = PBXGroup;
+			children = (
+				8493878E262295A200C2914C /* UIViewAndCALayerVC.swift */,
+			);
+			path = UIViewAndCALayer;
+			sourceTree = "<group>";
+		};
+		845EC7F3271AAD9F0006651E /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				849387B4262BC83100C2914C /* GitHubManagerVC.swift */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
+		845EC7F4271AADCF0006651E /* 图文混排 */ = {
+			isa = PBXGroup;
+			children = (
+				845EC7F5271AADF30006651E /* TextAndImageVC.swift */,
+			);
+			path = "图文混排";
 			sourceTree = "<group>";
 		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
@@ -804,6 +831,7 @@
 			files = (
 				8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */,
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
+				845EC7F6271AADF30006651E /* TextAndImageVC.swift in Sources */,
 				4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */,
 				84E55AC024C8746F00A152A8 /* Schedule.swift in Sources */,
 				843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */,

@@ -20,9 +20,9 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         self.view.backgroundColor = .white
         self.title = "UIViewController"
 //         1.UIViewController
+        VC_ForScrollView()
         VC_Content()
         VC_Rotation()
-        VC_ForScrollView()
         //MARK:     2.UITabBarController
         
         //MARK:  3.UINavigationController
@@ -69,7 +69,7 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         btn.addTarget(self, action: #selector(popMethod), for: .touchUpInside)
         self.view.addSubview(btn)
         btn.snp.makeConstraints { make in
-            make.center.equalTo(self.view)
+            make.center.equalTo(self.view).offset(100)
             make.width.height.equalTo(100)
         }
     }
@@ -80,7 +80,7 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         popView.popoverPresentationController?.delegate = self;
         popView.popoverPresentationController?.sourceView = btn
         popView.popoverPresentationController?.sourceRect = CGRect.init(x: 0, y: 0, width: 100, height: 100)
-        popView.popoverPresentationController?.permittedArrowDirections = .left;
+        popView.popoverPresentationController?.permittedArrowDirections = .any;
         popView.popoverPresentationController?.backgroundColor = .orange;
         popView.popoverPresentationController?.canOverlapSourceViewRect = false;
         let subView = UIView()
@@ -93,6 +93,7 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         self.present(popView, animated: true) {
             
         }
+        
     }
     //POP View 必须实现的代理
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
