@@ -167,8 +167,6 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
        let switchBtn = UISwitch()
         switchBtn.onTintColor = .red
         switchBtn.thumbTintColor = .orange
-//        switchBtn.onImage = UIImage.init(named: "ww_shoping_carts_submit_Integration_add")
-//        switchBtn.offImage = UIImage.init(named: "ww_shoping_carts_submit_Integration_reduce")
         switchBtn.addTarget(self, action: #selector(clickSwitchBtn), for: .touchUpInside)
         return switchBtn
     }()
