@@ -24,9 +24,9 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         VC_Content()
         VC_Rotation()
         //MARK:     2.UITabBarController
-        
+        VC_TabbarController()
         //MARK:  3.UINavigationController
-
+        VC_Navgation()
  
     }
     //MARK:BEGIN --- VC_Content
@@ -91,7 +91,7 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
             $0.width.height.equalTo(30)
         }
         self.present(popView, animated: true) {
-            
+        
         }
         
     }
@@ -125,9 +125,11 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
     }
     //生命周期
     override func viewWillAppear(_ animated: Bool) {// Called when the view is about to made visible. Default does nothing
+        self.navigationItem.prompt = "正在载入..." //导航栏变为74
         super.viewWillAppear(animated)
     }
     override func viewDidAppear(_ animated: Bool) {// Called when the view has been fully transitioned onto the screen. Default does nothing
+        
         super.viewDidAppear(animated)
     }
     override func viewWillDisappear(_ animated: Bool) {// Called when the view is dismissed, covered or otherwise hidden. Default does nothing
@@ -136,11 +138,11 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
     override func viewDidDisappear(_ animated: Bool) {// Called after the view was dismissed, covered or otherwise hidden. Default does nothing
         super.viewDidDisappear(animated)
     }
-    override func viewWillLayoutSubviews(){
+    override func viewWillLayoutSubviews(){//即将布局子视图
         
     }
 
-    override func viewDidLayoutSubviews(){
+    override func viewDidLayoutSubviews(){//子视图布局完成
         
     }
 
@@ -156,8 +158,39 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         }
     }
     
-    //MARK: NavigationViewController
-    
-    
     //MARK:UITabbarController
+    func VC_TabbarController(){
+    let tabBar =  UITabBarController()
+        tabBar.selectedIndex = 0
+//        tabBar.tabBar.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44)//Top
+        let navArr = NSMutableArray()
+        let arrayVC = [HomeVC.self,SwiftBasicViewController.self,SwiftAdvanceViewController.self]
+        for vc in arrayVC {
+            let nav = UINavigationController.init(rootViewController: vc.init())
+//            nav.tabBarItem.title = vc.title
+//            nav.tabBarItem.image = vc.image
+//            nav.tabBarItem.selectedImage = vc.selectImage
+            if(vc.isMember(of: HomeVC.self)){
+                nav.tabBarItem.badgeValue = "100"
+                nav.tabBarItem.badgeColor = .red
+            }
+            navArr.add(nav)
+        }
+        tabBar.viewControllers = navArr as? [UIViewController]
+
+    }
+    
+    //MARK: NavigationViewController
+    func VC_Navgation(){
+        
+//        let nav = UINavigationController.init(rootViewController: HomeVC.init())
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Jump", style: .plain, target: self, action: #selector(JumpNextPage))
+        self.navigationController?.setToolbarHidden(true, animated: false)
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+    }
+    
+    @objc func JumpNextPage(){
+        
+    }
 }
