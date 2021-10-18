@@ -366,6 +366,7 @@
 		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
+				845EC7F7271C172C0006651E /* CocoaPods */,
 				845EC7ED271582030006651E /* 基础语法 */,
 				845EC7EE2715820F0006651E /* 高级语法 */,
 				845EC7F2271AAD6F0006651E /* UIViewAndCALayer */,
@@ -440,6 +441,13 @@
 				845EC7F5271AADF30006651E /* TextAndImageVC.swift */,
 			);
 			path = "图文混排";
+			sourceTree = "<group>";
+		};
+		845EC7F7271C172C0006651E /* CocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CocoaPods;
 			sourceTree = "<group>";
 		};
 		8467E01621393A9800FC6B5C /* DataStruct */ = {
