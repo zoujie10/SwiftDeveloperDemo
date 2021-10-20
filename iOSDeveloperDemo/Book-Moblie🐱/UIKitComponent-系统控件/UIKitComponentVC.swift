@@ -172,6 +172,9 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
     }()
     @objc func clickSwitchBtn(){
         print("switchBtn----状态---\(self.switchBtn.isOn)")
+        let vc = WWAfterSaleDisplayPicEgVC()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     //MARK:Segment
