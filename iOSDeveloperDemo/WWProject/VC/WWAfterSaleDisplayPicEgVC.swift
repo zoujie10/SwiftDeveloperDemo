@@ -9,7 +9,9 @@
 import UIKit
 
 class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    typealias clickBtnBlock = () -> Void
+    var clickBlock : clickBtnBlock?
+    
     let cellId = "CellId"
 
     
@@ -64,6 +66,7 @@ class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableVie
  
     @objc func knowMethod(){
         self.dismiss(animated: false, completion: nil)
+        self.clickBlock?()    
     }
     
     lazy var picTableView : UITableView = {

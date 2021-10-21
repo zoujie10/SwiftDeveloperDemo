@@ -174,6 +174,9 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
         print("switchBtn----状态---\(self.switchBtn.isOn)")
         let vc = WWAfterSaleDisplayPicEgVC()
         vc.modalPresentationStyle = .overFullScreen
+        vc.clickBlock = {
+            print("block 回调")
+        }
         self.present(vc, animated: true, completion: nil)
     }
     
