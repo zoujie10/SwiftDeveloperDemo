@@ -1,20 +1,30 @@
 PODS:
   - Alamofire (4.7.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - SnapKit (4.0.1)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - SnapKit
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - SnapKit
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 82a694f213cc8d60103662f50c37f2c1b92739a4
+PODFILE CHECKSUM: 68af15ce7ac086648dcdc7798af764e6fd5152ec
 
 COCOAPODS: 1.10.1

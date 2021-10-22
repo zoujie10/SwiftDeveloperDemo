@@ -100,7 +100,65 @@ class SwiftAdvanceViewController: UIViewController {
         
     }
     //MARK:11.枚举语法 枚举值遍历 枚举原始值 给枚举添加方法
+    enum enumType {
+        case typeOne
+        case typeTwo
+        case typeThree
+        case typeFour
+    }
+    
+    func enumMethod(){
+//        let enumTpyeValue = enumType.typeOne
+    }
+    
+    enum enumOriginalValue : String{
+        case value1 = "value1"
+        case value2 = "value2"
+        case value3 = "value3"
+        case value4 = "value4"
+    }
+    
+    enum enumAddMethod : String {
+        case enumOne
+        case enumTwo
+        case enumThree
+        case enumNone
+        func enumMethod() -> String {
+            switch self {
+                case .enumOne:
+                    return "1"
+                case .enumTwo:
+                    return "2"
+                case .enumThree:
+                    return "3"
+                default:
+                    return "0"
+            }
+        }
+    }
+    let enumTypeV = enumAddMethod.enumTwo
+    func enumPrintMethod(){
+        print(enumTypeV.enumMethod())
+    }
+    
     //MARK:12.结构体定义 给结构体添加方法 结构体下标
+    struct structDemo {
+        var structStr : String
+        var structDic : NSDictionary
+        let paramInt : Int
+        mutating func structMethod(){
+            self.structStr = "结构体字符串"
+            self.structDic = ["key":"value"]
+        }
+        //结构体下标
+        subscript(index: Int) -> Int {
+            return  paramInt / index
+        }
+    }
+    func structDemoMethod(){
+        let test = structDemo(structStr: "1", structDic: ["key":"value"], paramInt: 100)
+        print("结构体脚标测试------\(test[9])")
+    }
     //MARK:13.类 类属性的set和get方法  willSet和didSet方法 类的静态方法 类的析构 类的继承 类的延迟加载（懒加载）  类的引用特征  类型检查 Any和AnyObject
     //MARK:14.类和结构体 区别
     //MARK:15.扩展 扩展类型的属性 扩展类型的方法
