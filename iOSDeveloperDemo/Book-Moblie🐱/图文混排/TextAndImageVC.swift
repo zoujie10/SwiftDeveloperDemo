@@ -13,7 +13,8 @@ class TextAndImageVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //1.CoreText
+        //2.TextKit
 //     let coreText = CoreText()
 //        let textView = UITextView()
     }
