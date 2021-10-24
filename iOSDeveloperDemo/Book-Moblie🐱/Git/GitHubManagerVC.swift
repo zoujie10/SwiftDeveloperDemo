@@ -29,12 +29,18 @@ class GitHubManagerVC: UIViewController {
 		6.撤销操作
 		7.标签（略）
 		*/
+        
     }
+    lazy var mainTextView : UITextView = {
+       let mainTextView = UITextView()
+        mainTextView.font = .boldSystemFont(ofSize: 14)
+        return mainTextView
+    }()
 }
     
 /*
  # GitLab (Global Information Tracker)
- ## Git原理
+## Git原理
  ### Git特点
  1.绝大多数操作都只需要访问本地文件和资源（正如git官网的title：--everything-is-local）
  2.本地磁盘就有完整的项目历史，没有网络也可以进行版本管理
@@ -155,7 +161,7 @@ class GitHubManagerVC: UIViewController {
  (第一个develop是我的本地分支名，origin/develop指的是远程分支，这样新生成的本地develop分支就已经关联了远程的develop分支）
 
  已有分支关联远程分支：
- **git branch --set-upstream-to=origin/**远程分支名 本地分支名
+ **git branch --set-upstream-to=origin/远程分支名 本地分支名
  即：git branch --set-upstream-to=origin/develop develop
  再通过git branch -vv 确认是否关联成功
 
@@ -183,6 +189,5 @@ class GitHubManagerVC: UIViewController {
 
  分析：head 到 =======里面的lalala是自己的commit的内容
 
- =========到 >>>>>>里面的hehehe是下拉的内容
-
- */*/
+ =========到 >>>>>>里面的hehehe是下拉的内容"
+*/
