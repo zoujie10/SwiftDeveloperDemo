@@ -25,7 +25,7 @@ class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! WWAfterSalePicEgCell
-        cell.imageView?.image = self.picArray[indexPath.row] as? UIImage
+        cell.picImageView.image = self.picArray[indexPath.row] as? UIImage
         return cell
     }
     
@@ -53,8 +53,10 @@ class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableVie
         self.picTableView.snp.makeConstraints {
             $0.top.equalTo(self.operateView.snp_top).offset(20)
             $0.bottom.equalTo(self.operateView.snp_bottom).offset(-20)
-            $0.left.equalTo(self.operateView).offset(20)
-            $0.right.equalTo(self.operateView).offset(-20)
+//            $0.left.equalTo(self.operateView).offset(20)
+//            $0.right.equalTo(self.operateView).offset(-20)
+            $0.width.equalTo(280)
+            $0.centerX.equalTo(self.operateView)
         }
         
         self.knowBtn.snp.makeConstraints {

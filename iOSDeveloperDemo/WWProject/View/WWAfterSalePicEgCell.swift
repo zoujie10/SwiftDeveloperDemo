@@ -25,11 +25,13 @@ class WWAfterSalePicEgCell: UITableViewCell {
         self.picImageView.snp.makeConstraints{
             $0.width.equalTo(260)
             $0.height.equalTo(160)
-            $0.center.equalTo(self.contentView)
+            $0.left.equalTo(self.contentView).offset(5)
+            $0.right.equalTo(self.contentView).offset(-5)
         }
     }
     var picImageView : UIImageView = {
         let picImageView  = UIImageView()
+        picImageView.contentMode = .center
         return picImageView
     }()
     
