@@ -40,7 +40,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
         }else if(indexPath.row == 6){
             self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
         }else if(indexPath.row == 7){
-            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
+            self.navigationController?.pushViewController(SwiftTouchViewAndGestureVC(), animated: true)
         }else if(indexPath.row == 8){
             self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
         }else if(indexPath.row == 9){

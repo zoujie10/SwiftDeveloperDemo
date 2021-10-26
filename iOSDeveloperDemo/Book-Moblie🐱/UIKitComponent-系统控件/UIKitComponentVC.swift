@@ -99,8 +99,7 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
         return btn
     }()
     
-    @objc func clickBtn(){
-    
+    @objc func clickBtn(sender : UIButton){
         print("switchBtn----状态---\(self.switchBtn.isOn)")
     }
     //MARK:Label
