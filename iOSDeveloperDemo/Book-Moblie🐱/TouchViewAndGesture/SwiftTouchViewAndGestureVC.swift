@@ -15,18 +15,25 @@ class SwiftTouchViewAndGestureVC: UIViewController {
         self.view.backgroundColor = UIColor.white
         //1.触摸事件的检测
         //1）触摸事件阶段的检测
+        
         //2）检测是否触摸到某个视图
         checkTouchView()
         //3）实现视图的拖动
+        //touchesMoved
         
         //2.触摸手势的使用
         //1）单点触摸手势
         tapOneGesture()
+        
         //2) 双点触摸手势
         tapDouble()
+       
         //3) 长按手势
+        longPressGesture()
+       
         //4) 捏合手势
-        
+        pinchGesture()
+    
         //3.3D touch
     }
     
@@ -34,7 +41,7 @@ class SwiftTouchViewAndGestureVC: UIViewController {
     
     //1）触摸事件阶段的检测 4个方法
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan\(String(describing: touches.first?.view))")
+//        print("touchesBegan\(String(describing: touches.first?.view))")
         
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,7 +49,7 @@ class SwiftTouchViewAndGestureVC: UIViewController {
         let touch : UITouch = touches.first!
         let point : CGPoint =  touch.location(in: oneView)
         print("touchesMoved\(point)")
-   
+        self.doubleView.frame.origin = point
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touchesEnded")
@@ -87,12 +94,11 @@ class SwiftTouchViewAndGestureVC: UIViewController {
 //        ges.addTarget(self, action: #selector(oneTapClick))
         oneView.isUserInteractionEnabled = true
         oneView.addGestureRecognizer(ges)
-        
     }
-    
     @objc func oneTapClick(){
         print("Tap Tap Tap")
     }
+    
     //2) 双点触摸手势
     var doubleView : UIView = {
        let doubleView = UIView()
@@ -111,24 +117,85 @@ class SwiftTouchViewAndGestureVC: UIViewController {
         doubleGes.numberOfTapsRequired = 2
         self.doubleView.addGestureRecognizer(doubleGes)
     }
-    
     @objc func doubleTapMethod(){
         print("Doubel Tap")
     }
     
     //3) 长按手势
+    var isLongPress : Bool = true
+    var longPressView : UIImageView = {
+       let longPressView = UIImageView()
+        longPressView.image = UIImage.init(named: "达芬奇-蒙娜丽莎")
+        longPressView.isUserInteractionEnabled = true
+        return longPressView
+    }()
+    
     func longPressGesture(){
+        let longPress = UILongPressGestureRecognizer.init()
+        longPress.addTarget(self, action: #selector(longPressMethod))
+        longPress.minimumPressDuration = 2
         
+        self.view.addSubview(self.longPressView)
+        self.longPressView.snp.makeConstraints {
+            $0.width.height.equalTo(200)
+            $0.centerY.equalTo(self.oneView)
+            $0.left.equalTo(self.oneView.snp_right).offset(20)
+        }
+        self.longPressView.addGestureRecognizer(longPress)
+        
+    }
+    
+    @objc func longPressMethod(sender : UILongPressGestureRecognizer){
+        if(self.isLongPress == true){
+            self.longPressView.image = longPressView.image?.scaleTo(fitSize: CGSize.init(width: 100, height: 100))
+            
+            self.longPressView.snp.updateConstraints {
+                $0.width.height.equalTo(100)
+                $0.centerY.equalTo(self.oneView)
+                $0.left.equalTo(self.oneView.snp_right).offset(20)
+            }
+            self.isLongPress = false
+        }
+     
     }
     
     //4) 捏合手势
-    func pinGesture(){
+    var pinGesImageView : UIImageView = {
+        let pinGesImageView = UIImageView()
+        pinGesImageView.isUserInteractionEnabled = true
+        pinGesImageView.image = UIImage.init(named: "fruiticons_buttons_orange")
+        return pinGesImageView
+    }()
+    func pinchGesture(){
+        let pinGes = UIPinchGestureRecognizer.init()
+        pinGes.addTarget(self, action: #selector(pinGesMethod))
         
+        self.view.addSubview(self.pinGesImageView)
+        self.pinGesImageView.snp.makeConstraints {
+            $0.width.height.equalTo(300)
+            $0.bottom.equalTo(self.view.snp_bottom).offset(-100)
+            $0.right.equalTo(self.view.snp_right).offset(-100)
+        }
+        self.pinGesImageView.addGestureRecognizer(pinGes)
     }
     
+    @objc func pinGesMethod(sender : UIPinchGestureRecognizer){
+        print("\(sender.scale)+++\(sender.velocity)")
+    }
     //3.3D touch
-
-    
-    
+    func threeDtouch() {
+        let addEventsIcon = UIApplicationShortcutIcon.init(type: .add)
+        let jumpGesVCIcon = UIApplicationShortcutIcon.init(templateImageName: "搜索")
+        let jumpComponentVCIcon = UIApplicationShortcutIcon.init(templateImageName: "ww_shoping_carts_submit_Integration_reduce")
+        
+        
+        let addEvent = UIApplicationShortcutItem.init(type: "add.Event", localizedTitle:  "添加时间" , localizedSubtitle: nil, icon: addEventsIcon, userInfo: nil)
+        let jumpGesEvent = UIApplicationShortcutItem.init(type: "jump.Event", localizedTitle:  "跳转手势VC" , localizedSubtitle: nil, icon: jumpGesVCIcon, userInfo: nil)
+        let jumpComponentsEvent = UIApplicationShortcutItem.init(type: "jump.components.Event", localizedTitle:  "跳转UI组件VC" , localizedSubtitle: nil, icon: jumpComponentVCIcon, userInfo: nil)
+        
+        let Itmes = [addEvent,jumpGesEvent,jumpComponentsEvent]
+//        application.shortcutItems = Itmes
+        print(Itmes)
+    }
     
 }

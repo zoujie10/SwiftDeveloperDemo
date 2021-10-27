@@ -56,10 +56,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //				print("Realm 数据库配置失败：\(error.localizedDescription)")
 //			}
 //		}
+        threeDtouch(application: application)
 		return true
 	}
-	
-	
+    func threeDtouch( application : UIApplication) {
+        let addEventsIcon = UIApplicationShortcutIcon.init(type: .add)
+        let jumpGesVCIcon = UIApplicationShortcutIcon.init(templateImageName: "中国")
+        let jumpComponentVCIcon = UIApplicationShortcutIcon.init(templateImageName: "Nigeria")
+        
+        let addEvent = UIApplicationShortcutItem.init(type: "add.Event", localizedTitle:  "添加时间" , localizedSubtitle: nil, icon: addEventsIcon, userInfo: nil)
+        let jumpGesEvent = UIApplicationShortcutItem.init(type: "jump.Event", localizedTitle:  "跳转手势VC" , localizedSubtitle: nil, icon: jumpGesVCIcon, userInfo: nil)
+        let jumpComponentsEvent = UIApplicationShortcutItem.init(type: "jump.components.Event", localizedTitle:  "跳转UI组件VC" , localizedSubtitle: nil, icon: jumpComponentVCIcon, userInfo: nil)
+        
+        let Itmes = [addEvent,jumpGesEvent,jumpComponentsEvent]
+        application.shortcutItems = Itmes
+    }
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if shortcutItem.type == "jump.Event"{
+            let vc = SwiftTouchViewAndGestureVC()
+            self.window?.rootViewController?.present(vc, animated: true, completion: {
+                
+            })
+        }else if shortcutItem.type == "jump.components.Event"{
+            guard let tabBarVC = window?.rootViewController as? UITabBarController else { return }
+            let username = UIKitComponentVC()
+
+            username.hidesBottomBarWhenPushed = true
+
+            tabBarVC.selectedViewController?.childViewControllers.last?.navigationController?.pushViewController(username, animated: true)
+        }
+    }
 	func applicationWillResignActive(_ application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 		// Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
