@@ -1,0 +1,57 @@
+# CocoaPods
+## 安装
+1.检查Ruby版本
+gem --version
+
+版本低于Cocoapods要求时，需要更新Ruby
+换源：
+gem sources --remove https://rubygems.org
+gem sources -a https://ruby.taobao.org
+gem sources -list
+
+Ruby版本升级：
+sudo gem update --system
+
+安装CocoaPods：
+sudu gem install cocoapods
+
+初始化环境：
+pod setup
+
+Podspec镜像使用:
+pod repo remove master
+pod repo add master https://git.oschina.net/akuandev/Specs.git
+pod repo update
+
+## CocoaPods实践
+pod init 创建Podfile文本文件
+
+~~~
+platform:ios,'9.0'
+use_frameworks
+
+target 'iOSDeveloperDemo' do
+	platform :ios, '10.0'
+	pod 'SnapKit'
+	pod 'Alamofire'
+  pod 'Charts'
+  pod 'SwiftyJSON'
+#	pod 'RealmSwift'
+	use_frameworks!
+end
+~~~
+
+pod install
+
+pod update
+## CocoaPods-app
+
+## Q:使用过CocoPods吗？它是什么？CocoaPods的原理？
+CocoaPods 是Mac OS X 和 iOS 应用程序开发的一个第三方库依赖的管理工具，你可以用它来 帮助集中导入、配置以及更新所用到的第三方。
+CocoaPods的原理是将所有的依赖库都放到另一个名为Pods的项目中,然而让主项目依赖Pods项目,这样,源码管理工作任务从主项目移到了Pods项目中.
+　　1.Pods项目最终会编译成一个名为libPods.a的文件, 主项目只要依赖这个.a文件即可.
+　　2.对于资源文件, CocoaPods提供了一个名为Pods-resources.sh的bash脚步, 该脚本在每次项目
+　　 编译的时候都会执行,将第三方库的各种资源文件复制到目标目录中.
+　　3.CocoaPods通过一个名为Pods.xcconfig的文件在编译设置所有的依赖和参数
+
+

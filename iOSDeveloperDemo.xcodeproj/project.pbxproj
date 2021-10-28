@@ -70,6 +70,8 @@
 		84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */; };
 		84710DA727245FD200A40507 /* SwiftCocoaPodsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DA627245FD200A40507 /* SwiftCocoaPodsVC.swift */; };
 		84710DAB2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */; };
+		84710DAF272A9BBA00A40507 /* CocoAtext.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84710DAE272A9BBA00A40507 /* CocoAtext.txt */; };
+		84710DB1272A9CF200A40507 /* GitText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84710DB0272A9CF200A40507 /* GitText.txt */; };
 		8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */; };
 		8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */; };
 		847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847515D720D122B1005CC145 /* NoteByArchiver.swift */; };
@@ -196,6 +198,8 @@
 		84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftImageAndVideoVC.swift; sourceTree = "<group>"; };
 		84710DA627245FD200A40507 /* SwiftCocoaPodsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCocoaPodsVC.swift; sourceTree = "<group>"; };
 		84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTouchViewAndGestureVC.swift; sourceTree = "<group>"; };
+		84710DAE272A9BBA00A40507 /* CocoAtext.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoAtext.txt; sourceTree = "<group>"; };
+		84710DB0272A9CF200A40507 /* GitText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GitText.txt; sourceTree = "<group>"; };
 		8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBySQLite.swift; sourceTree = "<group>"; };
 		8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		847515D720D122B1005CC145 /* NoteByArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteByArchiver.swift; sourceTree = "<group>"; };
@@ -692,6 +696,8 @@
 				84196BB622539CAF0088F117 /* SwiftDemo.bundle */,
 				84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */,
 				84E37BEA20A02D3B0031DEEE /* Info.plist */,
+				84710DAE272A9BBA00A40507 /* CocoAtext.txt */,
+				84710DB0272A9CF200A40507 /* GitText.txt */,
 			);
 			path = iOSDeveloperDemo;
 			sourceTree = "<group>";
@@ -837,10 +843,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
+				84710DB1272A9CF200A40507 /* GitText.txt in Resources */,
 				842F786222583FDE0048B63A /* InfoPlist.strings in Resources */,
 				847A569720BE7CC100EBB06C /* provinces_cities.plist in Resources */,
 				8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */,
 				84E37BE620A02D3B0031DEEE /* Assets.xcassets in Resources */,
+				84710DAF272A9BBA00A40507 /* CocoAtext.txt in Resources */,
 				84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */,
 				840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */,
 				84FA0F9C20AEA5DB00B6914A /* FootBallTeam.xcassets in Resources */,
@@ -1180,7 +1188,7 @@
 					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/frameworks\"",
 				);
 				INFOPLIST_FILE = iOSDeveloperDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1206,7 +1214,7 @@
 				EXCLUDED_ARCHS = arm64;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = iOSDeveloperDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

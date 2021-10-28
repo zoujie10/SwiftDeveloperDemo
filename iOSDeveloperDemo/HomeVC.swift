@@ -44,7 +44,13 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
         }else if(indexPath.row == 8){
             self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
         }else if(indexPath.row == 9){
-            self.navigationController?.pushViewController(SwiftTouchViewAndGestureVC(), animated: true)
+            self.navigationController?.pushViewController(TextAndImageVC(), animated: true)
+        }else if(indexPath.row == 13){
+            self.navigationController?.pushViewController(SwiftCocoaPodsVC(), animated: true)
+        }else if(indexPath.row == 14){
+            self.navigationController?.pushViewController(GitHubManagerVC(), animated: true)
+        }else if(indexPath.row == 15){
+            self.navigationController?.pushViewController(TextAndImageVC(), animated: true)
         }
 	}
 	
@@ -86,7 +92,10 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 						  "10.Alamofire",
 						  "11.WKWebView与HTML5",
 						  "12.数据持久化",
-						  "13.Git版本控制实践---GitHubManagerVC"]
+						  "13.Git版本控制实践---GitHubManagerVC",
+                          "14.CocoaPods",
+                          "15.GitHub",
+                          "16.图文混编"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

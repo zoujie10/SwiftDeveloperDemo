@@ -29,14 +29,31 @@ class GitHubManagerVC: UIViewController {
 		6.撤销操作
 		7.标签（略）
 		*/
-        
+        madeTextView()
     }
-    lazy var mainTextView : UITextView = {
-       let mainTextView = UITextView()
-        mainTextView.font = .boldSystemFont(ofSize: 14)
+    func getTextFileStr(filename:String!) -> String! {
+        if let path = Bundle.main.path(forResource: filename, ofType: "txt") {
+            do {
+                let data = try String(contentsOfFile: path, encoding: .utf8)
+                return data
+            } catch {
+                print(error)
+            }
+        }
+        return ""
+    }
+    var mainTextView : UITextView = {
+        let mainTextView = UITextView()
         return mainTextView
     }()
-}
+    
+    func madeTextView(){
+        self.mainTextView.text = getTextFileStr(filename: "GitText")
+        self.view.addSubview(self.mainTextView)
+        self.mainTextView.snp.makeConstraints {
+            $0.edges.equalTo(self.view)
+        }
+    }}
     
 /*
  # GitLab (Global Information Tracker)

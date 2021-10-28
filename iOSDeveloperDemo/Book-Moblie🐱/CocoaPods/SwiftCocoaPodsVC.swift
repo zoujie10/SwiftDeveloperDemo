@@ -12,12 +12,38 @@ class SwiftCocoaPodsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.white
+        self.title = "CocoaPods"
         /**
             1.CocoaPods,SPM,Carthage
             2.CocoaPods-app使用
          
          */
+        madeTextView()
+    }
+    
+    func getTextFileStr(filename:String!) -> String! {
+        if let path = Bundle.main.path(forResource: filename, ofType: "txt") {
+            do {
+                let data = try String(contentsOfFile: path, encoding: .utf8)
+                return data
+            } catch {
+                print(error)
+            }
+        }
+        return ""
+    }
+    var mainTextView : UITextView = {
+        let mainTextView = UITextView()
+        return mainTextView
+    }()
+    
+    func madeTextView(){
+        self.mainTextView.text = getTextFileStr(filename: "CocoAtext")
+        self.view.addSubview(self.mainTextView)
+        self.mainTextView.snp.makeConstraints {
+            $0.edges.equalTo(self.view)
+        }
     }
 }
 /**
