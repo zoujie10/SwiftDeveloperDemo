@@ -72,6 +72,12 @@
 		84710DAB2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */; };
 		84710DAF272A9BBA00A40507 /* CocoAtext.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84710DAE272A9BBA00A40507 /* CocoAtext.txt */; };
 		84710DB1272A9CF200A40507 /* GitText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84710DB0272A9CF200A40507 /* GitText.txt */; };
+		84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DB2272ACA6900A40507 /* SwiftListVC.swift */; };
+		84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DB5272ACAD200A40507 /* ZJ_TableView.swift */; };
+		84710DB8272B97E300A40507 /* ZJ_CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DB7272B97E300A40507 /* ZJ_CollectionView.swift */; };
+		84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DBA272B9AD900A40507 /* ZJ_ProductsModel.swift */; };
+		84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DBC272B9D5000A40507 /* ZJ_RightTableView.swift */; };
+		84710DBF272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DBE272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift */; };
 		8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */; };
 		8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */; };
 		847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847515D720D122B1005CC145 /* NoteByArchiver.swift */; };
@@ -200,6 +206,12 @@
 		84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTouchViewAndGestureVC.swift; sourceTree = "<group>"; };
 		84710DAE272A9BBA00A40507 /* CocoAtext.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoAtext.txt; sourceTree = "<group>"; };
 		84710DB0272A9CF200A40507 /* GitText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GitText.txt; sourceTree = "<group>"; };
+		84710DB2272ACA6900A40507 /* SwiftListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftListVC.swift; sourceTree = "<group>"; };
+		84710DB5272ACAD200A40507 /* ZJ_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_TableView.swift; sourceTree = "<group>"; };
+		84710DB7272B97E300A40507 /* ZJ_CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_CollectionView.swift; sourceTree = "<group>"; };
+		84710DBA272B9AD900A40507 /* ZJ_ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_ProductsModel.swift; sourceTree = "<group>"; };
+		84710DBC272B9D5000A40507 /* ZJ_RightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_RightTableView.swift; sourceTree = "<group>"; };
+		84710DBE272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBySQLite.swift; sourceTree = "<group>"; };
 		8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		847515D720D122B1005CC145 /* NoteByArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteByArchiver.swift; sourceTree = "<group>"; };
@@ -524,6 +536,9 @@
 		84710DA82725AF4700A40507 /* TableViewAndCollecView */ = {
 			isa = PBXGroup;
 			children = (
+				84710DB9272B9A7A00A40507 /* Model */,
+				84710DB4272ACA8D00A40507 /* View */,
+				84710DB2272ACA6900A40507 /* SwiftListVC.swift */,
 			);
 			path = TableViewAndCollecView;
 			sourceTree = "<group>";
@@ -534,6 +549,25 @@
 				84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */,
 			);
 			path = TouchViewAndGesture;
+			sourceTree = "<group>";
+		};
+		84710DB4272ACA8D00A40507 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84710DB5272ACAD200A40507 /* ZJ_TableView.swift */,
+				84710DBE272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift */,
+				84710DBC272B9D5000A40507 /* ZJ_RightTableView.swift */,
+				84710DB7272B97E300A40507 /* ZJ_CollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84710DB9272B9A7A00A40507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84710DBA272B9AD900A40507 /* ZJ_ProductsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8471D40F223FDD3D00BE5DDB /* Frameworks */ = {
@@ -918,6 +952,7 @@
 			files = (
 				8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */,
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
+				84710DB8272B97E300A40507 /* ZJ_CollectionView.swift in Sources */,
 				845EC7F6271AADF30006651E /* TextAndImageVC.swift in Sources */,
 				4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */,
 				84E55AC024C8746F00A152A8 /* Schedule.swift in Sources */,
@@ -932,9 +967,11 @@
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
+				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
+				84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */,
 				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */,
 				84598C10234851B900E72C8B /* NoteBL.swift in Sources */,
@@ -972,6 +1009,7 @@
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
+				84710DBF272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
 				845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */,
@@ -986,6 +1024,8 @@
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
+				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,
+				84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
 				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,

@@ -42,7 +42,7 @@ class GitHubManagerVC: UIViewController {
         }
         return ""
     }
-    var mainTextView : UITextView = {
+    lazy var mainTextView : UITextView = {
         let mainTextView = UITextView()
         return mainTextView
     }()

@@ -68,8 +68,8 @@ class SwiftTouchViewAndGestureVC: UIViewController {
         print(touches.first?.tapCount as Any)
     }
     //2）检测是否触摸到某个视图
-    var oneView : UIView = {
-       let oneView = UIView()
+    lazy var oneView : UIView = {
+        let oneView = UIView()
         oneView.backgroundColor = UIColor.orange
         return oneView
     }()
@@ -100,7 +100,7 @@ class SwiftTouchViewAndGestureVC: UIViewController {
     }
     
     //2) 双点触摸手势
-    var doubleView : UIView = {
+    lazy var doubleView : UIView = {
        let doubleView = UIView()
         doubleView.backgroundColor = UIColor.green
         return doubleView
@@ -123,7 +123,7 @@ class SwiftTouchViewAndGestureVC: UIViewController {
     
     //3) 长按手势
     var isLongPress : Bool = true
-    var longPressView : UIImageView = {
+    lazy var longPressView : UIImageView = {
        let longPressView = UIImageView()
         longPressView.image = UIImage.init(named: "达芬奇-蒙娜丽莎")
         longPressView.isUserInteractionEnabled = true
@@ -160,7 +160,7 @@ class SwiftTouchViewAndGestureVC: UIViewController {
     }
     
     //4) 捏合手势
-    var pinGesImageView : UIImageView = {
+    lazy var pinGesImageView : UIImageView = {
         let pinGesImageView = UIImageView()
         pinGesImageView.isUserInteractionEnabled = true
         pinGesImageView.image = UIImage.init(named: "fruiticons_buttons_orange")

@@ -23,7 +23,7 @@ class TextAndImageVC: UIViewController {
         
     }
 
-    var mainTextView : UITextView = {
+    lazy var mainTextView : UITextView = {
         let mainTextView = UITextView()
         return mainTextView
     }()
@@ -34,5 +34,6 @@ class TextAndImageVC: UIViewController {
         self.mainTextView.snp.makeConstraints {
             $0.edges.equalTo(self.view)
         }
+        
     }
 }
