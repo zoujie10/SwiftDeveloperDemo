@@ -12,6 +12,7 @@ class SwiftListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "ListVC"
         self.view.backgroundColor = UIColor.white
         creatUI()
     }

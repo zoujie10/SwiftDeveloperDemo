@@ -33,7 +33,7 @@ class SwiftBasicViewController: UIViewController {
 	func basicSwift(){
 		let pi = 3.141592
 		var enemyKilled = 100
-		var wide = 100*pi,length = 200*pi,height = 10*pi
+		let wide = 100*pi,length = 200*pi,height = 10*pi
 		
 		var age : Int = 10*enemyKilled
 		age+=1
@@ -44,7 +44,7 @@ class SwiftBasicViewController: UIViewController {
 		let name = "邹杰"
 		
 		print(猫)
-		debugPrint(👿)
+		debugPrint(👿,wide,length,height)
 		dump(age)
 		
 		print("我的名字叫\(name),年龄\(age).")
@@ -135,6 +135,7 @@ class SwiftBasicViewController: UIViewController {
 		let result =	(2,3)>(1,3)//true
 		let result1 = ("class1",98)>("class2",54)//false
 		let result2 = (7,"Sunday")==(7,"Sunday")
+        print(result,result1,result2)
 	}
 	
 	func dataOperator(){
