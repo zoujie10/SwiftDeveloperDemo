@@ -15,6 +15,10 @@ class SwiftThirdPartyVC: UIViewController {
 
         // Do any additional setup after loading the view.
         //model 框架
+        //1.数据格式 XML ,Plist,JSON
+        //2.AlamofireObjectMapper
+        //3.ObjectMapper
+        //4.Moya
     }
     
 

@@ -185,9 +185,9 @@ class SwiftAdvanceViewController: UIViewController {
         case 老板,经理,正式员工,外派员工
     }
     
-    func enumMethod(){
+    func enumChineseMethod(chinese:ChineseEnumType){
 //        let enumTpyeValue = enumType.typeOne
-        let chinese = ChineseEnumType.老板
+//        let chinese = ChineseEnumType.老板
         
         switch chinese {
             case .老板:
@@ -230,6 +230,7 @@ class SwiftAdvanceViewController: UIViewController {
     let enumTypeV = enumAddMethod.enumTwo
     func enumPrintMethod(){
         print(enumTypeV.enumMethod())
+        print(ChineseEnumType.老板)
     }
     
     //MARK:12.结构体定义 给结构体添加方法 结构体下标

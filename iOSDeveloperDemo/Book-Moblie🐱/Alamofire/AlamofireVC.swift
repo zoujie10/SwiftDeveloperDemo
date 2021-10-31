@@ -12,8 +12,11 @@ class AlamofireVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //1.Alamofire的网络是否联通和连接方式
+        //2.GET和POST请求
+        //3.文件上传及进度显示
+        //4.文件下载及进度显示
+        
     }
     
 }
