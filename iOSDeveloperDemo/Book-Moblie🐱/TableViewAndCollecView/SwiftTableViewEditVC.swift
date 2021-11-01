@@ -1,22 +1,46 @@
 //
-//  ZJ_TableView.swift
+//  SwiftTableViewEditVC.swift
 //  iOSDeveloperDemo
 //
-//  Created by Zoujie on 2021/10/28.
+//  Created by Zoujie on 2021/11/1.
 //  Copyright © 2021 Zoujie. All rights reserved.
 //
 
 import UIKit
-
-class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
+//单元格的选择和取消选择 系统的 ---- 最好的还是自定义 选择样式
+//移动单元格的位置
+class SwiftTableViewEditVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
     let cellID = "cellId"
     var sourceArray = Array<String>()
-   
+    
     typealias clickindexPathBlock = (IndexPath) -> Void
     var clickBlock : clickindexPathBlock?
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
+        self.sourceArray = ["one",
+                            "two",
+                            "three",
+                            "four",
+                            "five",
+                            "six",
+                            "seven",
+                            "eight",
+                            "nine",]
+        creatUI()
+    }
+    
+    func creatUI(){
+        self.view.addSubview(self.tableView)
+        self.tableView.snp.makeConstraints {
+            $0.edges.equalTo(self.view)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return self.sourceArray.count
+        return self.sourceArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,34 +53,12 @@ class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
         }else{
             cell.textLabel?.textColor = UIColor.init(red: 133/255, green: 134/255, blue: 138/255, alpha: 1)
         }
+        cell.selectionStyle = .default
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
-        self.clickBlock!(indexPath)
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        creatUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func creatUI(){
-        self.addSubview(self.tableView)
-        self.tableView.snp.makeConstraints {
-            $0.edges.equalTo(self)
-        }
-    }
-    
-    func update(array : [String]){
-        self.sourceArray = array
     }
     
     lazy var tableView : UITableView = {
@@ -66,11 +68,9 @@ class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
+       
         tableView.backgroundColor = UIColor.init(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
-        
+
         return tableView
     }()
-
-    //移动单元格的位置
-    //表格嵌套
 }
