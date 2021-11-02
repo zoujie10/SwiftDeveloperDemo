@@ -58,6 +58,7 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         let title = array.first?.ProductName
         return title
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.sourceArray.count
     }
@@ -81,6 +82,11 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let array = self.viewMdeol.sourceArray[indexPath.section]
+//        let model = array[indexPath.row]
+//        let att = NSAttributedString.init(string: model.ProductName!)
+//        att.boundingRect(with: CGSize.init(width: <#T##CGFloat#>, height: <#T##CGFloat#>), options: <#T##NSStringDrawingOptions#>, context: nil)
+        //文本高度 设置cell
         return 110
     }
     

@@ -20,6 +20,7 @@ class SwiftTableViewEditVC: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(changeRightView))
         self.sourceArray = ["one",
                             "two",
                             "three",
@@ -30,6 +31,9 @@ class SwiftTableViewEditVC: UIViewController,UITableViewDelegate,UITableViewData
                             "eight",
                             "nine",]
         creatUI()
+    }
+    @objc func changeRightView(){
+        self.tableView.isEditing =  !self.tableView.isEditing
     }
     
     func creatUI(){
@@ -58,8 +62,26 @@ class SwiftTableViewEditVC: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         
+        if cell?.accessoryType == .checkmark{
+            cell?.accessoryType = .none
+        }else{
+            cell?.accessoryType = .checkmark
+        }
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+       //处理数据源
+    }
+    
     
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
@@ -68,7 +90,7 @@ class SwiftTableViewEditVC: UIViewController,UITableViewDelegate,UITableViewData
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-       
+        tableView.isEditing = false
         tableView.backgroundColor = UIColor.init(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
 
         return tableView

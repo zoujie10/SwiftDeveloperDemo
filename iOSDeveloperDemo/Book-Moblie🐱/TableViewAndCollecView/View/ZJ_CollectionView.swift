@@ -52,6 +52,12 @@ class ZJ_CollectionView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        let imageView = cell?.viewWithTag(1)
+        imageView?.layer.opacity = 1.0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.dataSource.count
     }

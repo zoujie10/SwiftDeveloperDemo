@@ -38,6 +38,8 @@ class ZJ_ProductCollectionCell: UICollectionViewCell {
     
     lazy var imageIconView : UIImageView = {
         let imageIconView = UIImageView()
+        imageIconView.layer.opacity = 0.5
+        imageIconView.tag = 1
         return imageIconView
     }()
     

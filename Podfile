@@ -1,5 +1,5 @@
 target 'iOSDeveloperDemo' do
-	platform :ios, '10.0'
+	platform :ios, '12.0'
 	pod 'SnapKit'
 	pod 'Alamofire'
   pod 'Charts'
