@@ -84,6 +84,7 @@
 		84710DCD272F925C00A40507 /* ZJ_ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DCC272F925C00A40507 /* ZJ_ProductsViewModel.swift */; };
 		84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DCE272FC8B300A40507 /* SwiftTableViewEditVC.swift */; };
 		84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DD0272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift */; };
+		84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DD327314E0900A40507 /* WW_URL_Define.swift */; };
 		8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */; };
 		8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */; };
 		847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847515D720D122B1005CC145 /* NoteByArchiver.swift */; };
@@ -224,6 +225,7 @@
 		84710DCC272F925C00A40507 /* ZJ_ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_ProductsViewModel.swift; sourceTree = "<group>"; };
 		84710DCE272FC8B300A40507 /* SwiftTableViewEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTableViewEditVC.swift; sourceTree = "<group>"; };
 		84710DD0272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_ProductCollectionCell.swift; sourceTree = "<group>"; };
+		84710DD327314E0900A40507 /* WW_URL_Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_URL_Define.swift; sourceTree = "<group>"; };
 		8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBySQLite.swift; sourceTree = "<group>"; };
 		8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		847515D720D122B1005CC145 /* NoteByArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteByArchiver.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 		845EC801271FECC40006651E /* WWProject */ = {
 			isa = PBXGroup;
 			children = (
+				84710DD227314DE500A40507 /* Model */,
 				845EC804271FECEF0006651E /* ViewModel */,
 				845EC803271FECEA0006651E /* View */,
 				845EC802271FECE50006651E /* VC */,
@@ -618,6 +621,14 @@
 				84710DCC272F925C00A40507 /* ZJ_ProductsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84710DD227314DE500A40507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8471D40F223FDD3D00BE5DDB /* Frameworks */ = {
@@ -1090,6 +1101,7 @@
 				84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */,
 				8493878F262295A200C2914C /* UIViewAndCALayerVC.swift in Sources */,
 				4F02FD9F22AF819F00B8CB35 /* IteratorClass.swift in Sources */,
+				84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,

@@ -1,30 +1,51 @@
 PODS:
   - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - ObjectMapper (3.5.3)
+  - Result (4.1.0)
   - SnapKit (4.0.1)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireObjectMapper
   - Charts
+  - Moya
+  - ObjectMapper
   - SnapKit
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireObjectMapper
     - Charts
+    - Moya
+    - ObjectMapper
+    - Result
     - SnapKit
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 68af15ce7ac086648dcdc7798af764e6fd5152ec
+PODFILE CHECKSUM: 67b1fbcf9f1ddd6637cf31bf794686a65f95c22f
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

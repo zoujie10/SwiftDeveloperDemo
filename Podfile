@@ -4,7 +4,10 @@ target 'iOSDeveloperDemo' do
 	pod 'Alamofire'
   pod 'Charts'
   pod 'SwiftyJSON'
-#	pod 'RealmSwift'
+  pod 'AlamofireObjectMapper'
+  pod 'ObjectMapper'
+  pod 'Moya'
+  #	pod 'RealmSwift'
 	use_frameworks!
 end
 
