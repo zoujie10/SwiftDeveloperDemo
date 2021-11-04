@@ -27,9 +27,27 @@ class AlamofireVC: UIViewController {
     
     //1.Alamofire的网络是否联通和连接方式
     @objc func networkStatueClick(){
-        //        let manager = NetworkReachabilityManager.init()
+                let manager = NetworkReachabilityManager.init()
                 
-        //      let statue =  Alamofire.NetworkReachabilityManager.startListening
+        manager?.listener = {status in
+            switch status {
+
+               case .reachable(.ethernetOrWiFi):
+                   print("The network is reachable over the WiFi connection")
+
+               case .reachable(.wwan):
+                   print("The network is reachable over the WWAN connection")
+
+               case .notReachable:
+                   print("The network is not reachable")
+
+               case .unknown :
+                   print("It is unknown whether the network is reachable")
+
+               }
+        }
+       
+        manager?.startListening()
     }
     //2.GET和POST请求
     @objc func getRequest(){
@@ -105,14 +123,37 @@ class AlamofireVC: UIViewController {
         
     }
     //4.文件下载及进度显示
-    
     @objc func downloadRequest(){
+//        var resumeData : Data
+
+        let des = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory, in: .userDomainMask)
+        Alamofire.download("https://hotkidceo-1251330842.file.myqcloud.com/2021063013572601348.jpg",to: des).downloadProgress { progress in
+            print("Download Progress: \(progress.fractionCompleted)")
+        }
+        .responseData { response in
+            if(response.destinationURL != nil){//读取本地图片
+                print(response.destinationURL?.path as Any)
+                let str =   response.destinationURL!.path
+                let image = UIImage.init(contentsOfFile: str)
+                self.downLoadImageView.image = image
+            }else{
+                if let data = response.value {//下载成功 data获取图片
+                    let image = UIImage(data: data )
+                    self.downLoadImageView.image = image
+                }
+            }
+        }
         
+//        download.task?.cancel()
+        
+//        Alamofire.download(resumingWith: resumeData).responseData { response in
+//            if let data = response.value {
+//                let image = UIImage(data: data)
+//            }
+//        }
     }
     
     
-
-
     //MARK:UI
     func addGetBtn(){
         self.view.addSubview(self.getRequestBtn)
@@ -147,6 +188,13 @@ class AlamofireVC: UIViewController {
         self.downloadRequestBtn.snp.makeConstraints {
             $0.top.equalTo(self.postRequestBtn.snp_bottom).offset(30)
             $0.centerX.equalTo(self.postRequestBtn)
+        }
+        
+        self.view.addSubview(self.downLoadImageView)
+        self.downLoadImageView.snp.makeConstraints {
+            $0.top.equalTo(self.netWorkReachabilityBtn.snp_bottom)
+            $0.width.height.equalTo(100)
+            $0.centerX.equalTo(self.view)
         }
     }
     func networkStatue(){
@@ -199,5 +247,10 @@ class AlamofireVC: UIViewController {
        let responseTextView = UITextView()
         responseTextView.textColor = .black
         return responseTextView
+    }()
+    
+    lazy var downLoadImageView : UIImageView = {
+        let downLoadImageView = UIImageView()
+        return downLoadImageView
     }()
 }
