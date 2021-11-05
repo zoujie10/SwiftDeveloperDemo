@@ -57,6 +57,7 @@ class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     func update(array : [String]){
         self.sourceArray = array
+        self.tableView.reloadData()
     }
     
     lazy var tableView : UITableView = {
@@ -70,7 +71,4 @@ class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
         
         return tableView
     }()
-
-    //移动单元格的位置
-    //表格嵌套
 }

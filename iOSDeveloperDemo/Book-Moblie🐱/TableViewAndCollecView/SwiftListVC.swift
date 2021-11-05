@@ -9,13 +9,27 @@
 import UIKit
 
 class SwiftListVC: UIViewController {
-
+    let viewModel = ZJ_ProductsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "ListVC"
         self.view.backgroundColor = UIColor.white
+        request()
         creatUI()
     }
+    
+    func request(){
+        self.viewModel.requestLeftTag()
+        self.viewModel.dataComplete = {
+            var array = [String]()
+            for item : categoryInfoItemModel in self.viewModel.tagsArray{
+                array.append(item.displayName)
+            }
+            self.leftView.update(array:array)
+        }
+    }
+    
     func creatUI(){
         self.view.addSubview(self.leftView)
         self.view.addSubview(self.rigView)
@@ -38,16 +52,6 @@ class SwiftListVC: UIViewController {
             $0.width.equalTo(self.view.frame.width - 120)
         }
         
-        self.leftView.update(array: ["one",
-                                     "two",
-                                     "three",
-                                     "four",
-                                     "five",
-                                     "six",
-                                     "seven",
-                                     "eight",
-                                     "nine",])
-
         self.leftView.clickBlock = { IndexPath in
             print(IndexPath)
         }

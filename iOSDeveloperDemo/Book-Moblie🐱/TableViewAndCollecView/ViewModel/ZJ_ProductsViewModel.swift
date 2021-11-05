@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class ZJ_ProductsViewModel: NSObject {
     var sourceArray = Array<Array<ZJ_ProductsModel>>()
+    var tagsArray = [categoryInfoItemModel]()
    
+    typealias dataCompleteBlock = () -> Void
+    var dataComplete : dataCompleteBlock?
    
+    
     func rightListProducts() -> [[ZJ_ProductsModel]] {
         var section1 = Array<ZJ_ProductsModel>()
         var section2 = Array<ZJ_ProductsModel>()
@@ -75,5 +80,30 @@ class ZJ_ProductsViewModel: NSObject {
             self.sourceArray[0] = array
         }
         return self.sourceArray
+    }
+    
+    func requestLeftTag(){
+        let headers : HTTPHeaders = [
+            "Content-Type":"application/json"
+        ]
+//        areas = LB;
+//        channelId = B06022853001;
+//        isWholeSale = 1;
+        let param = ["channelId":"B06022853001"]
+   
+        //POST
+        Alamofire.request(WW_CategoryTagList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
+            
+            debugPrint(response)
+            debugPrint(response.request as Any)//发送到服务端的请求
+            debugPrint(response.response as Any)//服务端返回的响应
+            debugPrint(response.result)//枚举  Success value有值。Failure value nil
+            debugPrint(response.data as Any)//二级制数据
+            debugPrint(response.timeline)//请求到收到响应的整个时间
+            let productModel = try! JSONDecoder().decode(TagsModel.self, from: response.data!)
+            let model :  categoryInfoModel = productModel.data
+            self.tagsArray = model.categoryInfo
+            self.dataComplete!()
+        }
     }
 }

@@ -7,19 +7,70 @@
 //
 
 import UIKit
+import Alamofire
 
 class SwiftThirdPartyVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         //model 框架
         //1.数据格式 XML ,Plist,JSON
+        
         //2.AlamofireObjectMapper
+        
         //3.ObjectMapper
+        
         //4.Moya
+        
+        //5.swift4.0 Codable协议
+        useCodableParse()
     }
     
-
+    
+    
+    
+    func useCodableParse(){
+        let headers : HTTPHeaders = [
+            "Content-Type":"application/json"
+        ]
+//        areas = LB;
+//        channelId = B06022853001;
+//        isWholeSale = 1;
+        let param = ["channelId":"B06022853001"]
+   
+        //POST
+        Alamofire.request(WW_CategoryTagList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
+            
+            debugPrint(response)
+            debugPrint(response.request as Any)//发送到服务端的请求
+            debugPrint(response.response as Any)//服务端返回的响应
+            debugPrint(response.result)//枚举  Success value有值。Failure value nil
+            debugPrint(response.data as Any)//二级制数据
+            debugPrint(response.timeline)//请求到收到响应的整个时间
+            let productModel = try! JSONDecoder().decode(useCodableModel.self, from: response.data!)
+            let model :  subModel = productModel.data
+            print("tags---count\(model.categoryInfo.count )")
+            print("tags---count\(String(describing: model.categoryInfo.first?.displayName))")
+        }
+    }
 }
+
+//5.swift4.0 Codable协议
+//继承Codable
+struct items : Codable{
+    var displayName : String
+//    var productId : String
+}
+
+struct subModel : Codable {
+    var categoryInfo : [items]
+}
+
+struct useCodableModel : Codable{
+    var msg : String
+    var code : Int
+    var data : subModel
+}
+ 

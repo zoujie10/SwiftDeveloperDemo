@@ -8,11 +8,13 @@
 
 import UIKit
 
-//POST
-let WW_CategoryList_Url =  "http://dev-api.hotkidceo.com/appapi/root-ceo-commodity/categoryApi/categoryList"
+//MARK:POST
+//分类
+let WW_CategoryTagList_Url =  "http://dev-api.hotkidceo.com/appapi/root-ceo-commodity/categoryApi/categoryList"
+let WW_CategoryProductsList_Url = "http://dev-api.hotkidceo.com/appapi/root-ceo-commodity/categoryApi/commoditiesByCategory"
 
-//GET
+//MARK:GET
 let WW_showChart_Get_Url = "http://dev-api.hotkidceo.com/ceo/order/showChart"
 
-//UPLoad
+//MARK:UPLoad
 let WW_uploadImage_Url = "http://dev-api.hotkidceo.com/ceo/order/service/uploadImage"

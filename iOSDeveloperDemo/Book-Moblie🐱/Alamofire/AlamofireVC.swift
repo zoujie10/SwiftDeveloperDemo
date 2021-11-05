@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+
 class AlamofireVC: UIViewController {
 
     override func viewDidLoad() {
@@ -27,28 +29,45 @@ class AlamofireVC: UIViewController {
     
     //1.Alamofire的网络是否联通和连接方式
     @objc func networkStatueClick(){
-                let manager = NetworkReachabilityManager.init()
+//        let manager = NetworkReachabilityManager.init()
+//        manager?.listener = {status in
+//            switch status {
+//
+//                case .reachable(.ethernetOrWiFi):
+//                    print("The network is reachable over the WiFi connection")
+//
+//                case .reachable(.wwan):
+//                    print("The network is reachable over the WWAN connection")
+//
+//                case .notReachable:
+//                    print("The network is not reachable")
+//
+//                case .unknown :
+//                    print("It is unknown whether the network is reachable")
+//
+//            }
+//        }
+//        manager?.startListening()
+      
+        //封装网络监控
+        let status: NetworkReachabilityManager.NetworkReachabilityStatus = MyNetWorkReachabilityManager.shareManager.netWorkReachabilityStatus()
+        
+        switch status {
+            case .reachable(.ethernetOrWiFi):
+                print("The network is reachable over the WiFi connection")
                 
-        manager?.listener = {status in
-            switch status {
-
-               case .reachable(.ethernetOrWiFi):
-                   print("The network is reachable over the WiFi connection")
-
-               case .reachable(.wwan):
-                   print("The network is reachable over the WWAN connection")
-
-               case .notReachable:
-                   print("The network is not reachable")
-
-               case .unknown :
-                   print("It is unknown whether the network is reachable")
-
-               }
+            case .reachable(.wwan):
+                print("The network is reachable over the WWAN connection")
+                
+            case .notReachable:
+                print("The network is not reachable")
+                
+            case .unknown :
+                print("It is unknown whether the network is reachable")
+                
         }
-       
-        manager?.startListening()
     }
+    
     //2.GET和POST请求
     @objc func getRequest(){
         self.responseTextView.text = nil
@@ -73,9 +92,19 @@ class AlamofireVC: UIViewController {
         let param = ["channelId":"B06022853001"]
    
         //POST
-        Alamofire.request(WW_CategoryList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseJSON {response in
+        Alamofire.request(WW_CategoryTagList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
             
             debugPrint(response)
+            debugPrint(response.request as Any)//发送到服务端的请求
+            debugPrint(response.response as Any)//服务端返回的响应
+            debugPrint(response.result)//枚举  Success value有值。Failure value nil
+            debugPrint(response.data as Any)//二级制数据
+            debugPrint(response.timeline)//请求到收到响应的整个时间
+            let productModel = try! JSONDecoder().decode(TagsModel.self, from: response.data!)
+            let model :  categoryInfoModel = productModel.data
+            print("tags---count\(model.categoryInfo.count )")
+            let name = model.categoryInfo.first?.displayName
+            self.responseTextView.text = name
         }
     }
     //3.文件上传及进度显示
@@ -112,6 +141,7 @@ class AlamofireVC: UIViewController {
                     request.uploadProgress { progress in
                         debugPrint(progress)
                     }
+                    request.validate()
                     //上传结果回调
                     request.responseJSON { response in
                         debugPrint(response)

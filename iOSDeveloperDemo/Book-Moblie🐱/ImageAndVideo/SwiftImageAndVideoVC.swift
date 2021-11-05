@@ -14,6 +14,7 @@ class SwiftImageAndVideoVC: UIViewController {
         super.viewDidLoad()
         //1.CoreImage
         //1.1 CoreImage制作单色调效果
+        let coreImgae = CoreImage.CGColor.init(gray: 1, alpha: 1)
         //1.2 图片添加马赛克
         //1.3 处理视频画面
         //1.4 所有滤镜
