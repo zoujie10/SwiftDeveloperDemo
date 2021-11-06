@@ -87,6 +87,7 @@
 		84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DD327314E0900A40507 /* WW_URL_Define.swift */; };
 		84710DD627342B3400A40507 /* MyNetWorkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DD527342B3400A40507 /* MyNetWorkReachabilityManager.swift */; };
 		84710DD82734D90600A40507 /* WW_TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DD72734D90600A40507 /* WW_TagsModel.swift */; };
+		84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DDA2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift */; };
 		8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */; };
 		8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */; };
 		847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847515D720D122B1005CC145 /* NoteByArchiver.swift */; };
@@ -230,6 +231,8 @@
 		84710DD327314E0900A40507 /* WW_URL_Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_URL_Define.swift; sourceTree = "<group>"; };
 		84710DD527342B3400A40507 /* MyNetWorkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetWorkReachabilityManager.swift; sourceTree = "<group>"; };
 		84710DD72734D90600A40507 /* WW_TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_TagsModel.swift; sourceTree = "<group>"; };
+		84710DD9273624F300A40507 /* ZGR不骗ZGR.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZGR不骗ZGR.mp4"; sourceTree = "<group>"; };
+		84710DDA2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCoreImageVideoVC.swift; sourceTree = "<group>"; };
 		8471D40D223FDC3200BE5DDB /* NoteBySQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBySQLite.swift; sourceTree = "<group>"; };
 		8471D410223FDD3D00BE5DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		847515D720D122B1005CC145 /* NoteByArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteByArchiver.swift; sourceTree = "<group>"; };
@@ -551,6 +554,8 @@
 			isa = PBXGroup;
 			children = (
 				84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */,
+				84710DDA2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift */,
+				84710DD9273624F300A40507 /* ZGR不骗ZGR.mp4 */,
 			);
 			path = ImageAndVideo;
 			sourceTree = "<group>";
@@ -1064,6 +1069,7 @@
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */,
+				84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,

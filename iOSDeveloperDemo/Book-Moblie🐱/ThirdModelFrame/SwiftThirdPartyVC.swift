@@ -24,13 +24,15 @@ class SwiftThirdPartyVC: UIViewController {
         
         //4.Moya
         
-        //5.swift4.0 Codable协议
+        //5.SwiftJSON
+        
+        //swift4.0 Codable协议
         useCodableParse()
     }
     
     
     
-    
+
     func useCodableParse(){
         let headers : HTTPHeaders = [
             "Content-Type":"application/json"
@@ -43,15 +45,8 @@ class SwiftThirdPartyVC: UIViewController {
         //POST
         Alamofire.request(WW_CategoryTagList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
             
-            debugPrint(response)
-            debugPrint(response.request as Any)//发送到服务端的请求
-            debugPrint(response.response as Any)//服务端返回的响应
-            debugPrint(response.result)//枚举  Success value有值。Failure value nil
-            debugPrint(response.data as Any)//二级制数据
-            debugPrint(response.timeline)//请求到收到响应的整个时间
             let productModel = try! JSONDecoder().decode(useCodableModel.self, from: response.data!)
             let model :  subModel = productModel.data
-            print("tags---count\(model.categoryInfo.count )")
             print("tags---count\(String(describing: model.categoryInfo.first?.displayName))")
         }
     }

@@ -57,6 +57,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
             self.navigationController?.pushViewController(GitHubManagerVC(), animated: true)
         }else if(indexPath.row == 15){
             self.navigationController?.pushViewController(SwiftThirdPartyVC(), animated: true)
+        }else if(indexPath.row == 16){
+            self.navigationController?.pushViewController(SwiftImageAndVideoVC(), animated: true)
         }
 	}
 	
@@ -101,7 +103,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 						  "13.数据持久化",
 						  "14.Git版本控制实践---GitHubManagerVC",
                           "15.CocoaPods",
-                          "16.数据解析"]
+                          "16.数据解析",
+                          "17.图片和视频处理"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
