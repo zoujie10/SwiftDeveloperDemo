@@ -42,8 +42,10 @@ class SwiftImageAndVideoVC: UIViewController {
         //1.3 处理视频画面
         
         //1.4 所有滤镜
-       
+//       coreImageAllFilter()
+        
         //1.5 CIDetector CIFeature 人脸检测
+//        CIDetectorAndCIFeature()
         
         //2.UIBlerEffect and CGBlendMode
         
@@ -54,7 +56,9 @@ class SwiftImageAndVideoVC: UIViewController {
         
         self.view.addSubview(self.changeImageBtn)
         self.changeImageBtn.snp.makeConstraints {
-            $0.center.equalTo(CGPoint.init(x: 100, y: 150))
+            $0.center.equalTo(CGPoint.init(x: 100, y: 120))
+            $0.width.equalTo(120)
+            $0.height.equalTo(30)
         }
         self.view.addSubview(self.processVideoBtn)
         self.processVideoBtn.snp.makeConstraints {
@@ -127,11 +131,11 @@ class SwiftImageAndVideoVC: UIViewController {
         self.orgImageView.isHidden = true
         let imageView = UIImageView()
         self.view.addSubview(imageView)
-        imageView.image = UIImage(named: "达芬奇-蒙娜丽莎")
+        imageView.image = UIImage(named: "girls")
         imageView.snp.makeConstraints {
             $0.center.equalTo(self.view)
-            $0.height.equalTo(330)
-            $0.width.equalTo(220)
+            $0.height.equalTo(630)
+            $0.width.equalTo(320)
         }
         
         let ciImage = CIImage(image: imageView.image!)
@@ -156,21 +160,89 @@ class SwiftImageAndVideoVC: UIViewController {
         }
     }
     
+    func blurEffectMethod(){
+        let blurlight = UIBlurEffect(style: .light)
+        let blurlightView = UIVisualEffectView(effect: blurlight)
+        self.orgImageView.addSubview(blurlightView)
+        blurlightView.snp.makeConstraints {
+            $0.left.bottom.equalTo(self.orgImageView)
+            $0.right.equalTo(self.orgImageView.snp_centerX)
+            $0.top.equalTo(self.orgImageView.snp_top).offset(100)
+        }
+//        blurView.layer.cornerRadius = 30
+//        blurView.layer.masksToBounds = true
+        
+        let blurextraLight = UIBlurEffect(style: .dark)
+        let blurextraLightView = UIVisualEffectView(effect: blurextraLight)
+        self.orgImageView.addSubview(blurextraLightView)
+        blurextraLightView.snp.makeConstraints {
+            $0.left.equalTo(blurlightView.snp_right)
+            $0.right.bottom.equalTo(self.orgImageView)
+            $0.top.equalTo(self.orgImageView.snp_top).offset(100)
+        }
+    }
+    
+    func blendModelMethod(){
+        let originalImage = UIImageView()
+        originalImage.image = UIImage(named: "chrysanthemum tree")
+        self.view.addSubview(originalImage)
+        originalImage.snp.makeConstraints {
+            $0.left.equalTo(self.view.snp_left).offset(20)
+            $0.top.equalTo(self.changeImageBtn.snp_bottom).offset(30)
+            $0.width.equalTo(70)
+            $0.height.equalTo(100)
+        }
+        
+        let redlImage = UIImageView()
+        redlImage.image = UIImage(named: "chrysanthemum tree")?.blendColor(color: .red)
+        self.view.addSubview(redlImage)
+        redlImage.snp.makeConstraints {
+            $0.left.equalTo(originalImage.snp_right).offset(20)
+            $0.top.equalTo(self.changeImageBtn.snp_bottom).offset(30)
+            $0.width.equalTo(70)
+            $0.height.equalTo(100)
+        }
+        
+        let orangeImage = UIImageView()
+        orangeImage.image = UIImage(named: "chrysanthemum tree")?.blendColor(color: .orange)
+        self.view.addSubview(orangeImage)
+        orangeImage.snp.makeConstraints {
+            $0.left.equalTo(redlImage.snp_right).offset(20)
+            $0.top.equalTo(self.changeImageBtn.snp_bottom).offset(30)
+            $0.width.equalTo(70)
+            $0.height.equalTo(100)
+        }
+        
+        
+        let blueImage = UIImageView()
+        blueImage.image = UIImage(named: "chrysanthemum tree")?.blendColor(color: .blue)
+        self.view.addSubview(blueImage)
+        blueImage.snp.makeConstraints {
+            $0.left.equalTo(orangeImage.snp_right).offset(20)
+            $0.top.equalTo(self.changeImageBtn.snp_bottom).offset(30)
+            $0.width.equalTo(70)
+            $0.height.equalTo(100)
+        }
+    }
+    
     @objc func changeImage(){
         self.clickIndex += 1
         if self.clickIndex == 1{
             coreImageMethod()
+            blendModelMethod()
         }else if self.clickIndex == 2{
-            CIDetectorAndCIFeature()
-        }else if self.clickIndex == 3{
-            coreImageAllFilter()
-        }else if self.clickIndex == 4{
             coreImageMosaic()
+        }else if self.clickIndex == 3{
+            blurEffectMethod()
+        }else if self.clickIndex == 4{
+            coreImageAllFilter()
+        }else if self.clickIndex == 5{
+            CIDetectorAndCIFeature()
         }
     }
     
     @objc func processVideo(){
-        
+        self.navigationController?.pushViewController(SwiftCoreImageVideoVC(), animated: true)
     }
     
     lazy var processVideoBtn : UIButton = {
@@ -194,4 +266,22 @@ class SwiftImageAndVideoVC: UIViewController {
         orgImageView.image = UIImage.init(named: "达芬奇-蒙娜丽莎")
         return orgImageView
     }()
+}
+
+
+extension UIImage{
+    func blendColor(color : UIColor) -> UIImage{
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        color.setFill()
+        UIRectFill(rect)
+        let blendMode = CGBlendMode.destinationIn
+        draw(in: rect, blendMode: blendMode, alpha: 1)
+        
+        let blendImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return blendImage!
+    }
 }

@@ -24,6 +24,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print(self.dataArray[indexPath.row])
+        self.tabBarController?.hidesBottomBarWhenPushed = true
 		if(indexPath.row == 0){
 			self.navigationController?.pushViewController(SwiftBasicViewController(), animated: true)
 //			self.present(SwiftBasicViewController(), animated: true, completion: nil)
@@ -60,6 +61,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
         }else if(indexPath.row == 16){
             self.navigationController?.pushViewController(SwiftImageAndVideoVC(), animated: true)
         }
+        
 	}
 	
 	
