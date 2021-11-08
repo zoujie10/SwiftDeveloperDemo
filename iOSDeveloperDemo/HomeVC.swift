@@ -60,6 +60,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
             self.navigationController?.pushViewController(SwiftThirdPartyVC(), animated: true)
         }else if(indexPath.row == 16){
             self.navigationController?.pushViewController(SwiftImageAndVideoVC(), animated: true)
+        }else if(indexPath.row == 17){
+            self.navigationController?.pushViewController(SwiftAnimationSoundVideoVC(), animated: true)
         }
         
 	}
@@ -106,7 +108,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 						  "14.Git版本控制实践---GitHubManagerVC",
                           "15.CocoaPods",
                           "16.数据解析",
-                          "17.图片和视频处理"]
+                          "17.图片和视频处理",
+                          "18.动画音频视频播放"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
