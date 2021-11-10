@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SwiftAnimationSoundVideoVC: UIViewController {
+class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.title = "动画音频视频"
+        self.title = "动画"
         //1.动画
         //1.1 UIView动画
         uiviewAnimationMethod()
@@ -22,14 +22,7 @@ class SwiftAnimationSoundVideoVC: UIViewController {
 //        uiimageviewAnimation()
        
         //1.3 位移关键帧动画
-        
-        //2.音频播放
-        //2.1 Sysetm Sound Services 简短声音
-        //2.2 AVAudioPlayer 播放音乐
-        
-        //3.视频播放
-        //3.1 AVPlayer播放影片
-        //3.1 影片的画中画功能
+//        KeyframeAnimation()
     }
     
     func uiviewAnimationMethod(){
@@ -42,6 +35,13 @@ class SwiftAnimationSoundVideoVC: UIViewController {
             $0.center.equalTo(self.view)
             $0.width.height.equalTo(100)
         }
+        self.view.addSubview(self.topAnimationImageView)
+        self.topAnimationImageView.snp.makeConstraints {
+            $0.left.equalTo(self.view).offset(100)
+            $0.top.equalTo(self.view).offset(100)
+            $0.width.height.equalTo(50)
+        }
+        
         self.view.addSubview(self.blueAnimationView)
         self.blueAnimationView.snp.makeConstraints {
             $0.bottom.equalTo(self.animationView.snp_top).offset(-20)
@@ -77,6 +77,17 @@ class SwiftAnimationSoundVideoVC: UIViewController {
             $0.top.equalTo(button.snp_bottom).offset(10)
             $0.centerX.equalTo(self.animationView)
         }
+        
+        let jumpbutton = UIButton()
+        jumpbutton.setTitle("Jump Sound Video", for: .normal)
+        jumpbutton.setTitleColor(.blue, for: .normal)
+        jumpbutton.addTarget(self, action: #selector(jumpMethod), for: .touchUpInside)
+        
+        self.view.addSubview(jumpbutton)
+        jumpbutton.snp.makeConstraints {
+            $0.top.equalTo(cancelbutton.snp_bottom).offset(10)
+            $0.centerX.equalTo(self.animationView)
+        }
     }
     
     lazy var animationView : UIView = {
@@ -96,6 +107,12 @@ class SwiftAnimationSoundVideoVC: UIViewController {
         let animationImageView = UIImageView()
         animationImageView.image = UIImage(named: "cornel_branch_tree")
         return animationImageView
+    }()
+    
+    lazy var topAnimationImageView : UIImageView = {
+        let topAnimationImageView = UIImageView()
+        topAnimationImageView.image = #imageLiteral(resourceName: "Expression_1")
+        return topAnimationImageView
     }()
     
     @objc func animationMethod(){
@@ -133,6 +150,47 @@ class SwiftAnimationSoundVideoVC: UIViewController {
 //          self.animationView.center.x -= 100
 //        }, completion: nil)
         
+
+        let image = #imageLiteral(resourceName: "cornel_branch_tree")
+        let otherimage = #imageLiteral(resourceName: "green_plant")
+        //Transitions 过渡
+        UIView.transition(with: self.animationImageView , duration: 0.6 , options: .transitionFlipFromLeft , animations: {
+            if self.animationImageView.image ==  image {
+                self.animationImageView.image = otherimage
+            }else{
+                self.animationImageView.image = image
+            }
+        }, completion: nil)
+
+//        UIView.transition(from: , to:, duration:, options:, completion:) 这个方法需要两个view ，第一个会被第二个替换掉。
+        
+        uiimageviewAnimation()
+        KeyframeAnimation()
+    }
+    @objc func cancelanimationMethod(){
+        self.animationView.layer.removeAllAnimations() //取消动画
+        self.blueAnimationView.transform = CGAffineTransform.identity //回到原位
+    }
+    
+    
+    func uiimageviewAnimation(){
+
+        let imageView = UIImageView()
+        imageView.animationImages = [UIImage(named: "ww_imgs_refresh_footer_img_1")!,
+                                     UIImage(named: "ww_imgs_refresh_footer_img_2")!,
+                                     UIImage(named: "ww_imgs_refresh_footer_img_3")!,
+                                     UIImage(named: "ww_imgs_refresh_footer_img_4")!]
+//        imageView.animationRepeatCount = 5
+        imageView.animationDuration = 1
+        self.view.addSubview(imageView)
+        imageView.snp.makeConstraints {
+            $0.top.equalTo(self.animationView.snp_bottom).offset(100)
+            $0.width.height.equalTo(100)
+        }
+        imageView.startAnimating()
+    }
+    
+    func KeyframeAnimation(){
         //Keyframe 关键帧动画
         var p = self.animationView.center
         let dur = 0.25
@@ -170,40 +228,42 @@ class SwiftAnimationSoundVideoVC: UIViewController {
           })
         }, completion: nil)
 
-        let image = #imageLiteral(resourceName: "cornel_branch_tree")
-        let otherimage = #imageLiteral(resourceName: "green_plant")
-        //Transitions 过渡
-        UIView.transition(with: self.animationImageView , duration: 0.6 , options: .transitionFlipFromLeft , animations: {
-            if self.animationImageView.image ==  image {
-                self.animationImageView.image = otherimage
-            }else{
-                self.animationImageView.image = image
-            }
-        }, completion: nil)
+        //CAKeyframeAnimation 关键帧动画
+        /**
+            1.设置关键帧动画的视图属性，比如opacity，position，transform，bounds
+            2.设置属性开始，中间，结束等多个阶段时的值
+            3.设置两个关键帧之间的时长
+            4.设置整个动画的播放时长
+         */
+        let animation = CAKeyframeAnimation(keyPath: "position")//靠 keypath 小心打错
+        let point1 = CGPoint(x: 150, y: 100)
+        let point2 = CGPoint(x: 280, y: 100)
+        let point3 = CGPoint(x: 100, y: 300)
+        let point4 = CGPoint(x: 280, y: 300)
 
-//        UIView.transition(from: , to:, duration:, options:, completion:) 这个方法需要两个view ，第一个会被第二个替换掉。
-        uiimageviewAnimation()
-    }
-    @objc func cancelanimationMethod(){
-        self.animationView.layer.removeAllAnimations() //取消动画
-        self.blueAnimationView.transform = CGAffineTransform.identity //回到原位
+        animation.values = [NSValue(cgPoint: point1),
+                            NSValue(cgPoint: point2),
+                            NSValue(cgPoint: point3),
+                            NSValue(cgPoint: point4)]
+
+        animation.keyTimes = [NSNumber(value: 0.0),
+                              NSNumber(value: 0.4),
+                              NSNumber(value: 0.6),
+                              NSNumber(value: 1.0)]
+        animation.delegate = self
+        animation.duration = 5
+
+        self.topAnimationImageView.layer.add(animation,forKey: "Move")
     }
     
+    func animationDidStart(_ anim: CAAnimation) {
+        debugPrint("animation start")
+    }
     
-    func uiimageviewAnimation(){
-
-        let imageView = UIImageView()
-        imageView.animationImages = [UIImage(named: "ww_imgs_refresh_footer_img_1")!,
-                                     UIImage(named: "ww_imgs_refresh_footer_img_2")!,
-                                     UIImage(named: "ww_imgs_refresh_footer_img_3")!,
-                                     UIImage(named: "ww_imgs_refresh_footer_img_4")!]
-//        imageView.animationRepeatCount = 5
-        imageView.animationDuration = 1
-        self.view.addSubview(imageView)
-        imageView.snp.makeConstraints {
-            $0.top.equalTo(self.animationView.snp_bottom).offset(100)
-            $0.width.height.equalTo(100)
-        }
-        imageView.startAnimating()
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        debugPrint("animation stop")
+    }
+    @objc func jumpMethod(){
+        self.navigationController?.pushViewController(SwiftSoundVideoVC(), animated: true)
     }
 }
