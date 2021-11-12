@@ -8,9 +8,12 @@
 
 import UIKit
 import AudioToolbox
+import AVFAudio
 
-class SwiftSoundVideoVC: UIViewController {
+class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
 
+    var audioPlayer : AVAudioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -43,10 +46,43 @@ class SwiftSoundVideoVC: UIViewController {
     
     func studyVideoMethod(){
         self.view.addSubview(self.clickVideoBtn)
-        self.clickSoundBtn.snp.makeConstraints {
+        self.clickVideoBtn.snp.makeConstraints {
             $0.centerX.equalTo(self.view)
             $0.top.equalTo(self.clickSoundBtn.snp_bottom).offset(20)
         }
+        
+        //2.2 AVAudioPlayer 播放音乐
+        /**
+         1.播放任意时长的音频文件
+         2.播放文件中或者内存缓存区中的声音
+         3.进行音频文件的循环播放
+         4.使用多个AVAudioPlayer实例可以同时播放多个音频文件
+         5.控制播放的音量，设置立体声，还可以设置播放中声音的速率
+         6.支持进行声音播放的快进和后退
+         */
+        
+        //Audio Queue Services可以完全实现对声音的控制,可以将声音数据从文件中读取到内存缓冲区,并对声音数据进行特殊处理,比如进行声音的快进,慢速播放,或者改变声音音色.
+        //Open AL 是一个跨平台的开源音频处理接口，为音频播放提供了一套更加底层，精细的方案，特别适合具有复杂音频使用场景的游戏开发。
+        let path = Bundle.main.path(forResource: "宇宙骑士reason", ofType: "mp3")
+        let soundId = URL(fileURLWithPath: path!)
+        
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOf: soundId)//指定路径加载音频文件
+            audioPlayer.volume = 1.0 //音量
+            audioPlayer.delegate = self
+            audioPlayer.numberOfLoops = -1 //循环播放次数 -1 无限循环  1 播放完会日志输出播放完毕
+//            audioPlayer.pan = 0 立体声平移位置，-1.0完全左声道，0.0左右声道平衡 1.0完全右声道
+//            audioPlayer.numberOfChannels 声道数
+//            audioPlayer.duration 音频的总长度，单位为s
+//            audioPlayer.currentTime 当前播放位置的时间点，单位为s
+//            audioPlayer.prepareToPlay() 音频加载到缓冲区，为音频播放准备
+//            audioPlayer.play(atTime: <#T##TimeInterval#>) 指定的位置开始音频文件的播放
+//            audioPlayer.stop()停止音频
+            
+        }catch{
+            print(error)
+        }
+        
     }
     
     
@@ -70,21 +106,27 @@ class SwiftSoundVideoVC: UIViewController {
 //            AudioServicesPlaySystemSound(soundID)
         },nil)
         AudioServicesPlaySystemSound(_soundId)//调用音频的播放
+        //<https://blog.csdn.net/qq_18505715/article/details/79868677>
     }
     @objc func clickSound(){
-        //2.2 AVAudioPlayer 播放音乐
-        /**
-         1.播放任意时长的音频文件
-         2.播放文件中或者内存缓存区中的声音
-         3.进行音频文件的循环播放
-         4.使用多个AVAudioPlayer实例可以同时播放多个音频文件
-         5.控制播放的音量，设置立体声，还可以设置播放中声音的速率
-         6.支持进行声音播放的快进和后退
-         */
+      
         
-        //Audio Queue Services可以完全实现对声音的控制,可以将声音数据从文件中读取到内存缓冲区,并对声音数据进行特殊处理,比如进行声音的快进,慢速播放,或者改变声音音色.
-        //Open AL 是一个跨平台的开源音频处理接口，为音频播放提供了一套更加底层，精细的方案，特别适合具有复杂音频使用场景的游戏开发。
+        if(self.audioPlayer.isPlaying){//是否处于播放状态
+            self.audioPlayer.pause()//暂停
+        }else{
+            self.audioPlayer.play()
+            debugPrint("\(self.audioPlayer.currentTime)----\(self.audioPlayer.deviceCurrentTime)---\(self.audioPlayer.rate)-----\(self.audioPlayer.duration)")
+        }
+        
     }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("audioPlayerDidFinishPlaying ---\(player)----\(flag)")
+    }
+    func audioPlayerBeginInterruption(_ player: AVAudioPlayer) {
+        print("BeginInterruption ---- \(player)")
+    }
+    
     @objc func clickVideo(){
         //3.1 AVPlayer播放影片
         //3.1 影片的画中画功能
@@ -101,7 +143,7 @@ class SwiftSoundVideoVC: UIViewController {
     
     lazy var clickSoundBtn : UIButton = {
         let clickSoundBtn = UIButton()
-        clickSoundBtn.setTitle("播放音乐", for: .normal)
+        clickSoundBtn.setTitle("播放/暂停 音乐", for: .normal)
         clickSoundBtn.setTitleColor(.black, for: .normal)
         clickSoundBtn.addTarget(self, action: #selector(clickSound), for: .touchUpInside)
         clickSoundBtn.backgroundColor = .red

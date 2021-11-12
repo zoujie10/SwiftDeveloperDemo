@@ -567,7 +567,6 @@
 			children = (
 				84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */,
 				84710DDA2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift */,
-				84710DD9273624F300A40507 /* ZGR_no_lie_ZGR.mp4 */,
 			);
 			path = ImageAndVideo;
 			sourceTree = "<group>";
@@ -661,6 +660,7 @@
 				84710DE4273BFE9100A40507 /* SwiftSoundVideoVC.swift */,
 				84710DE227390E2D00A40507 /* pop_drip.wav */,
 				84710DE6273D59BB00A40507 /* 宇宙骑士reason.mp3 */,
+				84710DD9273624F300A40507 /* ZGR_no_lie_ZGR.mp4 */,
 			);
 			path = AnimationSoundVideo;
 			sourceTree = "<group>";

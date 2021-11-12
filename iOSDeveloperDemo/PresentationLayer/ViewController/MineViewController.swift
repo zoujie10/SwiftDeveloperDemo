@@ -8,7 +8,7 @@
 
 import UIKit
 import iAd
-class MineViewController: UIViewController,PhilosopherDelegate,ADBannerViewDelegate,UITableViewDataSource,UITableViewDelegate {
+class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSource,UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.dataArray.count
