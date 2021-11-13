@@ -9,20 +9,26 @@
 import UIKit
 import AudioToolbox
 import AVFAudio
+import AVFoundation
+import AVKit
 
 class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
 
     var audioPlayer : AVAudioPlayer = AVAudioPlayer()
-    
+    var avPlayer : AVPlayer = AVPlayer()
+    var playerItem: AVPlayerItem?
+    var playerController: AVPlayerViewController!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.hidesBottomBarWhenPushed = true
         self.view.backgroundColor = .white
         self.title = "音频-视频"
         //2.音频播放
         studySoundMethod()
         //2.1 Sysetm Sound Services 简短声音
         //2.2 AVAudioPlayer 播放音乐
-        
+        studyMusicMethod()
         //3.视频播放
         studyVideoMethod()
         //3.1 AVPlayer播放影片
@@ -43,14 +49,7 @@ class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
             $0.top.equalTo(self.clickSystemSoundBtn.snp_bottom).offset(20)
         }
     }
-    
-    func studyVideoMethod(){
-        self.view.addSubview(self.clickVideoBtn)
-        self.clickVideoBtn.snp.makeConstraints {
-            $0.centerX.equalTo(self.view)
-            $0.top.equalTo(self.clickSoundBtn.snp_bottom).offset(20)
-        }
-        
+    func studyMusicMethod(){
         //2.2 AVAudioPlayer 播放音乐
         /**
          1.播放任意时长的音频文件
@@ -70,7 +69,7 @@ class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
             try audioPlayer = AVAudioPlayer(contentsOf: soundId)//指定路径加载音频文件
             audioPlayer.volume = 1.0 //音量
             audioPlayer.delegate = self
-            audioPlayer.numberOfLoops = -1 //循环播放次数 -1 无限循环  1 播放完会日志输出播放完毕
+            audioPlayer.numberOfLoops = 0 //循环播放次数 -1 无限循环  1 播放完会日志输出播放完毕
 //            audioPlayer.pan = 0 立体声平移位置，-1.0完全左声道，0.0左右声道平衡 1.0完全右声道
 //            audioPlayer.numberOfChannels 声道数
 //            audioPlayer.duration 音频的总长度，单位为s
@@ -83,6 +82,24 @@ class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
             print(error)
         }
         
+    }
+    func studyVideoMethod(){
+        self.view.addSubview(self.clickVideoBtn)
+        self.clickVideoBtn.snp.makeConstraints {
+            $0.centerX.equalTo(self.view)
+            $0.top.equalTo(self.clickSoundBtn.snp_bottom).offset(20)
+        }
+        self.view.addSubview(self.picInPicVideoBtn)
+        self.picInPicVideoBtn.snp.makeConstraints {
+            $0.centerX.equalTo(self.view)
+            $0.top.equalTo(self.clickVideoBtn.snp_bottom).offset(20)
+        }
+        
+        let moviePath = Bundle.main.path(forResource: "VRTM-329", ofType: "mp4")
+        let movieRUL = URL(fileURLWithPath: moviePath!)
+        
+        self.avPlayer = AVPlayer(url: movieRUL as URL)
+       
     }
     
     
@@ -129,7 +146,31 @@ class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
     
     @objc func clickVideo(){
         //3.1 AVPlayer播放影片
+        let avPlayerLayer = AVPlayerLayer(player: self.avPlayer)
+        avPlayerLayer.frame = self.view.bounds
+        //resizeAspect 在视频层的显示范围内缩放视频大小，以保持视频的原始宽高比
+        //resizeAspectFill 保留视频的宽高比，并对视频进行缩放，以填满层的范围区域
+        //resize 将视频内容拉伸来匹配视频层的显示范围
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
+        
+        self.view.layer.addSublayer(avPlayerLayer)
+        self.avPlayer.play()
+        
+    }
+    
+    @objc func clickpicInPicVideo(){
         //3.1 影片的画中画功能
+        let moviePath = Bundle.main.path(forResource: "movie", ofType: "mp4")//本地文件
+        let movieURL = URL(fileURLWithPath: moviePath!)
+        
+        playerController = AVPlayerViewController()
+        playerItem = AVPlayerItem(url: movieURL)
+        playerController.player = AVPlayer(playerItem: playerItem)
+        //            playerController.videoGravity = .resizeAspectFill
+        playerController.view.frame = CGRect(x: 0, y: 200, width: view.frame.width, height: 350)
+//        playerController.allowsPictureInPicturePlayback = true
+//        playerController.showsPlaybackControls = true
+        view.addSubview(playerController.view)
     }
     lazy var clickSystemSoundBtn : UIButton = {
         let clickSystemSoundBtn = UIButton()
@@ -160,4 +201,15 @@ class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
         clickVideoBtn.setTitleColor(.white, for: .normal)
         return clickVideoBtn
     }()
+    
+    lazy var picInPicVideoBtn : UIButton = {
+        let picInPicVideoBtn = UIButton()
+        picInPicVideoBtn.setTitle("画中画视频", for: .normal)
+        picInPicVideoBtn.setTitleColor(.black, for: .normal)
+        picInPicVideoBtn.addTarget(self, action: #selector(clickpicInPicVideo), for: .touchUpInside)
+        picInPicVideoBtn.backgroundColor = .red
+        picInPicVideoBtn.setTitleColor(.white, for: .normal)
+        return picInPicVideoBtn
+    }()
+    
 }

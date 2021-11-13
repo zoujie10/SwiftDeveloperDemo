@@ -236,7 +236,6 @@
 		84710DD327314E0900A40507 /* WW_URL_Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_URL_Define.swift; sourceTree = "<group>"; };
 		84710DD527342B3400A40507 /* MyNetWorkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetWorkReachabilityManager.swift; sourceTree = "<group>"; };
 		84710DD72734D90600A40507 /* WW_TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_TagsModel.swift; sourceTree = "<group>"; };
-		84710DD9273624F300A40507 /* ZGR_no_lie_ZGR.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZGR_no_lie_ZGR.mp4; sourceTree = "<group>"; };
 		84710DDA2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCoreImageVideoVC.swift; sourceTree = "<group>"; };
 		84710DDD2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAnimationSoundVideoVC.swift; sourceTree = "<group>"; };
 		84710DE027382BC400A40507 /* SwiftDataPersistenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPersistenceVC.swift; sourceTree = "<group>"; };
@@ -660,7 +659,6 @@
 				84710DE4273BFE9100A40507 /* SwiftSoundVideoVC.swift */,
 				84710DE227390E2D00A40507 /* pop_drip.wav */,
 				84710DE6273D59BB00A40507 /* 宇宙骑士reason.mp3 */,
-				84710DD9273624F300A40507 /* ZGR_no_lie_ZGR.mp4 */,
 			);
 			path = AnimationSoundVideo;
 			sourceTree = "<group>";
@@ -1361,7 +1359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ZJ-11.iOSDeveloperDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/RealmSwift";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
@@ -1387,7 +1385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ZJ-11.iOSDeveloperDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/RealmSwift";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};

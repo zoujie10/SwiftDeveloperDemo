@@ -12,7 +12,8 @@ class SwiftUsuallyDevicesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .white
+            title = "常用设备使用"
         //1.Photos and Camera 的使用
         //1.1 读取Photos中的图片
         //1.2 调用相机拍摄功能

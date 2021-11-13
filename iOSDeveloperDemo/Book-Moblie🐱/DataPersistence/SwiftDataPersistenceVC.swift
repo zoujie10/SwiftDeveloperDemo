@@ -12,7 +12,8 @@ class SwiftDataPersistenceVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .white
+        title = "数据持久化"
         //1.plist文件
         //1.1 创建和解析plist文件
         //1.2 信息写入plist文件

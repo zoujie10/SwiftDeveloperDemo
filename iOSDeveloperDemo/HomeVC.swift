@@ -62,6 +62,10 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
             self.navigationController?.pushViewController(SwiftImageAndVideoVC(), animated: true)
         }else if(indexPath.row == 17){
             self.navigationController?.pushViewController(SwiftAnimationSoundVideoVC(), animated: true)
+        }else if indexPath.row == 18 {
+            self.navigationController?.pushViewController(SwiftUsuallyDevicesVC(), animated: true)
+        }else if indexPath.row == 19 {
+            self.navigationController?.pushViewController(SwiftDataPersistenceVC(), animated: true)
         }
         
 	}
@@ -109,7 +113,9 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
                           "15.CocoaPods",
                           "16.数据解析",
                           "17.图片和视频处理",
-                          "18.动画音频视频播放"]
+                          "18.动画音频视频播放",
+                          "19.常用设备使用",
+                            "20.数据持久化"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
