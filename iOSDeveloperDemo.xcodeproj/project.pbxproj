@@ -28,6 +28,7 @@
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
+		842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */; };
 		842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */; };
@@ -50,7 +51,6 @@
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
-		84598C0E2348500D00E72C8B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0D2348500D00E72C8B /* MasterViewController.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
 		845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E520B412CE00ABD88A /* AlterCellViewController.swift */; };
@@ -173,6 +173,7 @@
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84196BB622539CAF0088F117 /* SwiftDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftDemo.bundle; sourceTree = "<group>"; };
+		842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeviceMotionVC.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -198,7 +199,6 @@
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
-		84598C0D2348500D00E72C8B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		84598C0F234851B900E72C8B /* NoteBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
 		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
 		845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
@@ -632,6 +632,8 @@
 			isa = PBXGroup;
 			children = (
 				84710DC9272EF48900A40507 /* SwiftUsuallyDevicesVC.swift */,
+				842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */,
+				843358D022EC2571003AB31D /* LocationAndMapViewController.swift */,
 			);
 			path = usuallyDevices;
 			sourceTree = "<group>";
@@ -750,9 +752,7 @@
 				840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */,
 				842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */,
 				4F411AD2228ABB8F001BF135 /* SelectDesignPatternViewController.swift */,
-				843358D022EC2571003AB31D /* LocationAndMapViewController.swift */,
 				84516C4E232D41CC003F9F6F /* MapKitViewController.swift */,
-				84598C0D2348500D00E72C8B /* MasterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1074,6 +1074,7 @@
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
 				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
+				842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */,
@@ -1094,7 +1095,6 @@
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
-				84598C0E2348500D00E72C8B /* MasterViewController.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,

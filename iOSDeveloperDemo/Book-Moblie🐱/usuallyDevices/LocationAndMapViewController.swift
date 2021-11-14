@@ -12,6 +12,8 @@ import AddressBook
 import MapKit
 class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {//2.声明协议
 	var currLocation = CLLocation()
+    var locationManager:CLLocationManager!
+    
 	@IBOutlet var txtlng: UITextField!
 	
 	@IBOutlet var txtLat: UITextField!
@@ -29,7 +31,7 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 	@IBOutlet var lng: UILabel!
 	
 	@IBOutlet var address: UILabel!
-	var locationManager:CLLocationManager!
+	
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +43,19 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 		
 		//地理信息反编码  地标类
 //		CLPlacemark
-		//实现地理坐标与地理文字描述信息之间的转换
+        //实现地理坐标与地理文字描述信息之间的转换
 //		CLGeocoder
+        /**
+            地理编码：根据指定的地名，获得经纬度，地址的全程等具体的位置信息
+            反地理编码：根据给定的经纬度，获得具体的位置信息
+        
+         */
+        
 		self.locationManager = CLLocationManager()
 		self.locationManager.delegate = self
 		self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
 		self.locationManager.distanceFilter = 1000.0 //距离过滤，定义设备移动后获得位置信息的最小距离
-		
+        
 		self.locationManager.requestWhenInUseAuthorization()//用户授权
 		self.locationManager.requestAlwaysAuthorization()
 		
@@ -62,10 +70,11 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 	
 	//MARK:delegate
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
 		let currLocation = locations.last
 		self.currLocation = locations.last!
-		self.txtLat.text = NSString(format: "%3.5f", (currLocation?.coordinate.latitude)!) as String
-		self.txtlng.text = NSString(format: "%3.5f", (currLocation?.coordinate.longitude)!) as String
+		self.txtLat.text = NSString(format: "%3.5f", (currLocation?.coordinate.latitude)!) as String//纬度
+		self.txtlng.text = NSString(format: "%3.5f", (currLocation?.coordinate.longitude)!) as String//经度
 		self.txtAlt.text = NSString(format: "%3.5f", (currLocation?.altitude)!) as String
 		print("%3.5f",currLocation?.coordinate.latitude as Any)
 	}
@@ -110,8 +119,10 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 		}
 		
 		let geocoder = CLGeocoder()
+        
 		geocoder.geocodeAddressString(self.searchKeyWords.text!,completionHandler: {(placeMarks, error) -> Void in
-			if placeMarks!.count > 0{
+			
+            if placeMarks!.count > 0{
 //				NSLog("查询记录数 i%", placeMarks?.count ?? NSInteger.self)
 				
 				let placemark = placeMarks![0] as CLPlacemark
@@ -159,7 +170,7 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 				let coord = placemark.location?.coordinate
 				
 				let  city = placemark.locality as NSString?
-				let address = placemark.addressDictionary
+                let address = [placemark.name : "name"]
 
 				self.address.text = city as String?
 				

@@ -14,7 +14,7 @@ class WebDemoViewController: UIViewController, WKNavigationDelegate,WKUIDelegate
 	
 	@IBOutlet var progressLine: UIProgressView!
 	
-	@IBOutlet var webViewDeprecated: UIWebView!
+//	@IBOutlet var webViewDeprecated: UIWebView!
 	
 	@IBOutlet var NewWebKit: WKWebView!
 	

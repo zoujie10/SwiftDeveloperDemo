@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyB-gH-Cw1"/>
                         <viewControllerLayoutGuide type="bottom" id="6u1-uj-5YE"/>
@@ -26,12 +26,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2677.5999999999999" y="-1579.0640394088671"/>
+            <point key="canvasLocation" x="2278" y="-1512"/>
         </scene>
         <!--Location And Map View Controller-->
         <scene sceneID="AJn-mx-izC">
             <objects>
-                <viewController id="3l2-qx-uJe" customClass="LocationAndMapViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="locationVC" hidesBottomBarWhenPushed="YES" id="3l2-qx-uJe" customClass="LocationAndMapViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aSs-gw-OyG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1339,7 +1339,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9H-5l-2Ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="-1615"/>
+            <point key="canvasLocation" x="1191" y="-1535"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gTv-aQ-9e8">
@@ -1382,7 +1382,7 @@
         <!--Mine-->
         <scene sceneID="Rc4-id-ba1">
             <objects>
-                <viewController title="Mine" id="jR6-5e-uPO" customClass="MineViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mine" hidesBottomBarWhenPushed="YES" id="jR6-5e-uPO" customClass="MineViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7dk-JW-ocR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1426,7 +1426,7 @@
         <!--Access Contact Person Viewcontroller-->
         <scene sceneID="BIj-fm-P4y">
             <objects>
-                <viewController id="z51-jN-YUT" customClass="AccessContactPersonViewcontroller" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="z51-jN-YUT" customClass="AccessContactPersonViewcontroller" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6TE-Gw-yxt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

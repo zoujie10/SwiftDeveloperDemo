@@ -94,8 +94,10 @@ class SwiftSoundVideoVC: UIViewController,AVAudioPlayerDelegate {
             $0.centerX.equalTo(self.view)
             $0.top.equalTo(self.clickVideoBtn.snp_bottom).offset(20)
         }
-        
         let moviePath = Bundle.main.path(forResource: "VRTM-329", ofType: "mp4")
+        if moviePath == nil {
+            return
+        }
         let movieRUL = URL(fileURLWithPath: moviePath!)
         
         self.avPlayer = AVPlayer(url: movieRUL as URL)
