@@ -29,6 +29,8 @@
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
 		842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */; };
+		842991AC27413CEE00A50077 /* SwiftTestModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842991AB27413CEE00A50077 /* SwiftTestModel.plist */; };
+		842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */; };
 		842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */; };
@@ -174,6 +176,8 @@
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84196BB622539CAF0088F117 /* SwiftDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftDemo.bundle; sourceTree = "<group>"; };
 		842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeviceMotionVC.swift; sourceTree = "<group>"; };
+		842991AB27413CEE00A50077 /* SwiftTestModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SwiftTestModel.plist; sourceTree = "<group>"; };
+		842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebViewAndHTML5VC.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -404,6 +408,14 @@
 			path = ObserverPattern;
 			sourceTree = "<group>";
 		};
+		842991AD2741506400A50077 /* WebViewAndHTML5 */ = {
+			isa = PBXGroup;
+			children = (
+				842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */,
+			);
+			path = WebViewAndHTML5;
+			sourceTree = "<group>";
+		};
 		842F785F22583F300048B63A /* Internationalization */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +450,7 @@
 				84710DC8272EF45500A40507 /* usuallyDevices */,
 				84710DDC2737CBCA00A40507 /* AnimationSoundVideo */,
 				84710DDF27382BA100A40507 /* DataPersistence */,
+				842991AD2741506400A50077 /* WebViewAndHTML5 */,
 			);
 			path = "Book-Moblie🐱";
 			sourceTree = "<group>";
@@ -669,6 +682,7 @@
 			isa = PBXGroup;
 			children = (
 				84710DE027382BC400A40507 /* SwiftDataPersistenceVC.swift */,
+				842991AB27413CEE00A50077 /* SwiftTestModel.plist */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -979,6 +993,7 @@
 			files = (
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
 				84710DE7273D59BB00A40507 /* 宇宙骑士reason.mp3 in Resources */,
+				842991AC27413CEE00A50077 /* SwiftTestModel.plist in Resources */,
 				84710DB1272A9CF200A40507 /* GitText.txt in Resources */,
 				842F786222583FDE0048B63A /* InfoPlist.strings in Resources */,
 				847A569720BE7CC100EBB06C /* provinces_cities.plist in Resources */,
@@ -1088,6 +1103,7 @@
 				84710DC5272C4A0F00A40507 /* AlamofireVC.swift in Sources */,
 				84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */,
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
+				842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */,
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */,

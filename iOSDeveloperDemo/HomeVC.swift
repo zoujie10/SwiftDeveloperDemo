@@ -51,7 +51,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
         }else if indexPath.row == 11{
             self.navigationController?.pushViewController(AlamofireVC(), animated: true)
         }else if indexPath.row == 12{
-            self.navigationController?.pushViewController(AlamofireVC(), animated: true)
+            self.navigationController?.pushViewController(SwiftDataPersistenceVC(), animated: true)
         }else if(indexPath.row == 13){
             self.navigationController?.pushViewController(SwiftCocoaPodsVC(), animated: true)
         }else if(indexPath.row == 14){
@@ -115,7 +115,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
                           "17.图片和视频处理",
                           "18.动画音频视频播放",
                           "19.常用设备使用",
-                            "20.数据持久化"]
+                            "20.WKWebViewAndHTML5"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

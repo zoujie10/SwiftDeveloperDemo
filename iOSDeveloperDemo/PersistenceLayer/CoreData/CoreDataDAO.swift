@@ -28,7 +28,7 @@ class CoreDataDAO: NSObject {
 		}()
 	
 		//返回被管理的对象模型
-		lazy var managedObjectModel: NSManagedObjectModel = { //NSManagedObjectModel 被管理对象模型，是系统中的实体，与数据库中的表等对象对应
+		lazy var managedObjectModel: NSManagedObjectModel = { //NSManagedObjectModel 被管理对象模型，是系统中的实体，与数据库中的表对象对应
 			// The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
 	//		let modelURL = Bundle.main.url(forResource: "YourDataModelName", withExtension: "momd")!CoreDataNote
 			let modelURL = Bundle.main.url(forResource: "CoreDataNote", withExtension: "momd")! //xcdatamodeld在编译发布时变成momd

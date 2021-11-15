@@ -15,7 +15,7 @@ extension NSManageredObject {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<NSManageredObject> {
         return NSFetchRequest<NSManageredObject>(entityName: "Note")
     }
-
+    //@NSManaged == @dynamic，
     @NSManaged public var content: String?
     @NSManaged public var date: NSDate?
 
