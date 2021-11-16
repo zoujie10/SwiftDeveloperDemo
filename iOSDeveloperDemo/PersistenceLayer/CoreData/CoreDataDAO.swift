@@ -215,6 +215,6 @@ class CoreDataDAO: NSObject {
 	}
 }
 //Swift 中的 Error Handling   https://swift.gg/2018/05/31/error-handling-swift/   do catch
-
+//@NSManaged == @dynamic
 
 

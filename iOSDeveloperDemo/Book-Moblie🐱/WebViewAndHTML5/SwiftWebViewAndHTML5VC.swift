@@ -8,7 +8,12 @@
 
 import UIKit
 import WebKit
-
+//WKWebView
+//1.加载网页
+//2.加载HTML字符串 和GIF动画
+//3.加载本地网页
+//4.回调原生程序
+//
 class SwiftWebViewAndHTML5VC: UIViewController {
 //    var webView = WKWebView()
     

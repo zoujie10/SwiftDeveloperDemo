@@ -27,7 +27,7 @@ class AlamofireVC: UIViewController {
         addDownloadBtn()
     }
     
-    //1.Alamofire的网络是否联通和连接方式
+    // MARK:  1.Alamofire的网络是否联通和连接方式
     @objc func networkStatueClick(){
 //        let manager = NetworkReachabilityManager.init()
 //        manager?.listener = {status in
@@ -68,7 +68,7 @@ class AlamofireVC: UIViewController {
         }
     }
     
-    //2.GET和POST请求
+    // MARK:  2.GET和POST请求
     @objc func getRequest(){
         self.responseTextView.text = nil
         Alamofire.request(WW_showChart_Get_Url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
@@ -107,7 +107,7 @@ class AlamofireVC: UIViewController {
             self.responseTextView.text = name
         }
     }
-    //3.文件上传及进度显示
+    // MARK:  3.文件上传及进度显示
     @objc func uploadRequest(){
         
         let image : UIImage = UIImage.init(named: "灌篮高手3")!
@@ -152,7 +152,7 @@ class AlamofireVC: UIViewController {
         }
         
     }
-    //4.文件下载及进度显示
+    // MARK:  4.文件下载及进度显示
     @objc func downloadRequest(){
 //        var resumeData : Data
 
@@ -184,7 +184,7 @@ class AlamofireVC: UIViewController {
     }
     
     
-    //MARK:UI
+    // MARK:  UI
     func addGetBtn(){
         self.view.addSubview(self.getRequestBtn)
         self.getRequestBtn.snp.makeConstraints {

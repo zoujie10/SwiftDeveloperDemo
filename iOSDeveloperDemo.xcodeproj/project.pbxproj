@@ -31,9 +31,9 @@
 		842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */; };
 		842991AC27413CEE00A50077 /* SwiftTestModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842991AB27413CEE00A50077 /* SwiftTestModel.plist */; };
 		842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */; };
+		842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 842991B0274238B900A50077 /* ProductsListModel.xcdatamodeld */; };
+		842991D42743A5A400A50077 /* CTImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D32743A5A400A50077 /* CTImageView.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
-		842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */; };
-		842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
 		842F78702258ACAF0048B63A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786F2258ACAF0048B63A /* AddressBookUI.framework */; };
@@ -178,12 +178,12 @@
 		842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeviceMotionVC.swift; sourceTree = "<group>"; };
 		842991AB27413CEE00A50077 /* SwiftTestModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SwiftTestModel.plist; sourceTree = "<group>"; };
 		842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebViewAndHTML5VC.swift; sourceTree = "<group>"; };
+		842991B1274238B900A50077 /* ProductsListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductsListModel.xcdatamodel; sourceTree = "<group>"; };
+		842991D32743A5A400A50077 /* CTImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTImageView.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		842F786522583FE90048B63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManageredObject+CoreDataClass.swift"; sourceTree = "<group>"; };
-		842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManageredObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessContactPersonViewcontroller.swift; sourceTree = "<group>"; };
 		842F786D2258ACA70048B63A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		842F786F2258ACAF0048B63A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -416,6 +416,27 @@
 			path = WebViewAndHTML5;
 			sourceTree = "<group>";
 		};
+		842991D02742A93300A50077 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
+		842991D12742A93C00A50077 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		842991D22742A98F00A50077 /* SafeAndEncryption */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SafeAndEncryption;
+			sourceTree = "<group>";
+		};
 		842F785F22583F300048B63A /* Internationalization */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +472,9 @@
 				84710DDC2737CBCA00A40507 /* AnimationSoundVideo */,
 				84710DDF27382BA100A40507 /* DataPersistence */,
 				842991AD2741506400A50077 /* WebViewAndHTML5 */,
+				842991D12742A93C00A50077 /* Thread */,
+				842991D02742A93300A50077 /* MapKit */,
+				842991D22742A98F00A50077 /* SafeAndEncryption */,
 			);
 			path = "Book-Moblie🐱";
 			sourceTree = "<group>";
@@ -507,6 +531,7 @@
 		845EC7F3271AAD9F0006651E /* Git */ = {
 			isa = PBXGroup;
 			children = (
+				84710DB0272A9CF200A40507 /* GitText.txt */,
 				849387B4262BC83100C2914C /* GitHubManagerVC.swift */,
 			);
 			path = Git;
@@ -516,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				845EC7F5271AADF30006651E /* TextAndImageVC.swift */,
+				842991D32743A5A400A50077 /* CTImageView.swift */,
 			);
 			path = "图文混排";
 			sourceTree = "<group>";
@@ -524,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				84710DA627245FD200A40507 /* SwiftCocoaPodsVC.swift */,
+				84710DAE272A9BBA00A40507 /* CocoAtext.txt */,
 			);
 			path = CocoaPods;
 			sourceTree = "<group>";
@@ -681,8 +708,9 @@
 		84710DDF27382BA100A40507 /* DataPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				84710DE027382BC400A40507 /* SwiftDataPersistenceVC.swift */,
 				842991AB27413CEE00A50077 /* SwiftTestModel.plist */,
+				84710DE027382BC400A40507 /* SwiftDataPersistenceVC.swift */,
+				842991B0274238B900A50077 /* ProductsListModel.xcdatamodeld */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -845,8 +873,6 @@
 				84196BB622539CAF0088F117 /* SwiftDemo.bundle */,
 				84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */,
 				84E37BEA20A02D3B0031DEEE /* Info.plist */,
-				84710DAE272A9BBA00A40507 /* CocoAtext.txt */,
-				84710DB0272A9CF200A40507 /* GitText.txt */,
 			);
 			path = iOSDeveloperDemo;
 			sourceTree = "<group>";
@@ -881,8 +907,6 @@
 			children = (
 				84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */,
 				84F8BF18224F815D002E5389 /* CoreDataDAO.swift */,
-				842F78672258A4B50048B63A /* NSManageredObject+CoreDataClass.swift */,
-				842F78682258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1093,6 +1117,7 @@
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */,
+				842991D42743A5A400A50077 /* CTImageView.swift in Sources */,
 				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */,
 				84598C10234851B900E72C8B /* NoteBL.swift in Sources */,
@@ -1112,7 +1137,6 @@
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
-				842F786A2258A4B50048B63A /* NSManageredObject+CoreDataProperties.swift in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
 				845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */,
@@ -1124,7 +1148,6 @@
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				84710DD627342B3400A40507 /* MyNetWorkReachabilityManager.swift in Sources */,
 				84710DA727245FD200A40507 /* SwiftCocoaPodsVC.swift in Sources */,
-				842F78692258A4B50048B63A /* NSManageredObject+CoreDataClass.swift in Sources */,
 				84710DE127382BC400A40507 /* SwiftDataPersistenceVC.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
@@ -1145,6 +1168,7 @@
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
 				845EC808271FEED90006651E /* WWAfterSalePicEgCell.swift in Sources */,
+				842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */,
 				4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
@@ -1482,6 +1506,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		842991B0274238B900A50077 /* ProductsListModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				842991B1274238B900A50077 /* ProductsListModel.xcdatamodel */,
+			);
+			currentVersion = 842991B1274238B900A50077 /* ProductsListModel.xcdatamodel */;
+			path = ProductsListModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

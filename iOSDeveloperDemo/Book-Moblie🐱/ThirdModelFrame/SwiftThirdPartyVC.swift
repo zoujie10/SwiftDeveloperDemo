@@ -23,16 +23,18 @@ class SwiftThirdPartyVC: UIViewController {
         //3.ObjectMapper
         
         //4.Moya
-        
+        studyMoyaMethod()
         //5.SwiftJSON
         
         //swift4.0 Codable协议
         useCodableParse()
     }
     
+    func studyMoyaMethod(){
+        
+    }
     
-    
-
+//MARK:  use Codable parse
     func useCodableParse(){
         let headers : HTTPHeaders = [
             "Content-Type":"application/json"
