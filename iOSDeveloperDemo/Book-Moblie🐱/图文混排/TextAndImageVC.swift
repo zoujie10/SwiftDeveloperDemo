@@ -19,12 +19,10 @@ class TextAndImageVC: UIViewController {
         
         //1.CoreText
         useCoreText()
+       
         //2.TextKit
         madeTextView()
   
-//     let coreText = CoreText()
-//        let textView = UITextView()
-        
     }
         //MARK: CoreText
     func useCoreText(){
@@ -37,12 +35,12 @@ class TextAndImageVC: UIViewController {
          */
         
         //2.设备所有字体
-        printALLFont()
+//        printALLFont()
         //3.富文本创建
         studyNSAttributedStringMethod()
         //4.图文混排实现
         //CoreText and Core Graphics
-        
+        textAndPicMethod()
     }
     
     func printALLFont(){
@@ -76,24 +74,32 @@ class TextAndImageVC: UIViewController {
         self.attStrLabel.attributedText = string
     }
     
+    func textAndPicMethod(){
+        view.addSubview(self.textAndPic)
+        self.textAndPic.snp.makeConstraints { make in
+            make.top.equalTo(self.attStrLabel.snp_bottom)
+            make.left.right.equalTo(self.view)
+            make.height.equalTo(450)
+        }
+    }
+    
+    lazy var textAndPic : CTImageView = {
+        let textAndPic = CTImageView()
+        return textAndPic
+    }()
+    
     //MARK: TextKit
     func useTextKit(){
         //1.文字分栏
+        
         //2.图文混排效果
     }
-    lazy var mainTextView : UITextView = {
-        let mainTextView = UITextView()
-        return mainTextView
-    }()
+
     
     func madeTextView(){
-        self.mainTextView.text = self.str
-        self.view.addSubview(self.mainTextView)
-        self.mainTextView.snp.makeConstraints {
-            $0.top.equalTo(self.attStrLabel.snp_bottom)
-            $0.left.right.bottom.equalTo(self.view)
-        }
+    
     }
+    
     lazy var attStrLabel : UILabel = {
         let attStrLabel = UILabel()
         attStrLabel.backgroundColor = .white
