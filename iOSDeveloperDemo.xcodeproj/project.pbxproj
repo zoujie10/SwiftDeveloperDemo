@@ -33,6 +33,7 @@
 		842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */; };
 		842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 842991B0274238B900A50077 /* ProductsListModel.xcdatamodeld */; };
 		842991D42743A5A400A50077 /* CTImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D32743A5A400A50077 /* CTImageView.swift */; };
+		842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D527467EFF00A50077 /* SwiftMixTextPicVC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
@@ -180,6 +181,7 @@
 		842991AE2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebViewAndHTML5VC.swift; sourceTree = "<group>"; };
 		842991B1274238B900A50077 /* ProductsListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductsListModel.xcdatamodel; sourceTree = "<group>"; };
 		842991D32743A5A400A50077 /* CTImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTImageView.swift; sourceTree = "<group>"; };
+		842991D527467EFF00A50077 /* SwiftMixTextPicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMixTextPicVC.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				845EC7F5271AADF30006651E /* TextAndImageVC.swift */,
+				842991D527467EFF00A50077 /* SwiftMixTextPicVC.swift */,
 				842991D32743A5A400A50077 /* CTImageView.swift */,
 			);
 			path = "图文混排";
@@ -1171,6 +1174,7 @@
 				842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */,
 				4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
+				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,

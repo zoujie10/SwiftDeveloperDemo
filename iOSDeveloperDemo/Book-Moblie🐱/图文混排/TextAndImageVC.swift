@@ -21,7 +21,7 @@ class TextAndImageVC: UIViewController {
         useCoreText()
        
         //2.TextKit
-        madeTextView()
+        useTextKit()
   
     }
         //MARK: CoreText
@@ -54,12 +54,21 @@ class TextAndImageVC: UIViewController {
     }
     
     func studyNSAttributedStringMethod(){
-        view.addSubview(self.attStrLabel)
-        self.attStrLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.snp_top).offset(100)
-            make.left.right.equalTo(view)
+        view.addSubview(self.jumpBtn)
+        self.jumpBtn.snp.makeConstraints { make in
+            make.top.equalTo(view.snp_top).offset(80)
+            make.left.equalTo(view)
+            make.width.equalTo(100)
             make.height.equalTo(50)
         }
+        
+        view.addSubview(self.attStrLabel)
+        self.attStrLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.snp_top).offset(80)
+            make.left.equalTo(self.jumpBtn.snp_right)
+            make.height.equalTo(50)
+        }
+       
         let string = NSMutableAttributedString(string: "Interactive tutorials for Xcode")
        
         let font = CTFontCreateWithName(("CourierNerPS-BoldMT" as CFString?)!, 22, nil)
@@ -79,7 +88,7 @@ class TextAndImageVC: UIViewController {
         self.textAndPic.snp.makeConstraints { make in
             make.top.equalTo(self.attStrLabel.snp_bottom)
             make.left.right.equalTo(self.view)
-            make.height.equalTo(450)
+            make.height.equalTo(380)
         }
     }
     
@@ -91,13 +100,80 @@ class TextAndImageVC: UIViewController {
     //MARK: TextKit
     func useTextKit(){
         //1.文字分栏
+        /**
+         1.NSTextStorage 用来存储控件中的文本信息和属性
+         2.NSTextContainer 表示文本视图的显示区域
+         3.NSLayoutManager
+         */
+       madeTextView()
+        
         
         //2.图文混排效果
     }
 
-    
     func madeTextView(){
-    
+        let firstRect = CGRect(x: 0, y: 550, width: 80, height: 200)
+//        let firstTextContainer = NSTextContainer()
+//        let firstTextView = UITextView(frame: firstRect, textContainer: firstTextContainer)
+        let firstTextView = UITextView(frame: firstRect)
+        firstTextView.isScrollEnabled = false
+        firstTextView.backgroundColor = .green
+        firstTextView.isEditable = false
+        view.addSubview(firstTextView)
+        
+//        firstTextView.snp.makeConstraints { make in
+//            make.top.equalTo(self.textAndPic.snp_bottom).offset(10)
+//            make.left.equalTo(view).offset(10)
+//            make.width.equalTo(view.frame.size.width/2 - 10)
+//            make.height.equalTo(200)
+//        }
+        
+        let textStorage = firstTextView.textStorage
+        let path = Bundle.main.url(forResource: "GitText", withExtension: "txt")
+        do{
+            let string = try String(contentsOf: path!)
+            textStorage.replaceCharacters(in: NSRange(location: 0, length: 0), with: string)
+//            firstTextView.textStorage.replaceCharacters(in: NSRange(location: 0, length: 0), with: string)
+        }
+        catch{
+            print("读取文件错误!")
+        }
+        
+        let secondRect = CGRect(x: 90, y: 550, width: 80, height: 200)
+        let secondTextContainer = NSTextContainer()
+        let secondTextView = UITextView(frame: secondRect, textContainer: secondTextContainer)
+        secondTextView.isScrollEnabled = false
+        secondTextView.backgroundColor = .orange
+        secondTextView.isEditable = false
+        view.addSubview(secondTextView)
+        
+//        secondTextView.snp.makeConstraints { make in
+//            make.top.equalTo(self.textAndPic.snp_bottom).offset(10)
+//            make.right.equalTo(view).offset(-10)
+//            make.width.equalTo(view.frame.size.width/2 - 10)
+//            make.height.equalTo(200)
+//        }
+        let rect = CGRect(x: 180, y: 550, width: 80, height: 200)
+        let thirdTextContainer = NSTextContainer()
+        let thirdTextView = UITextView(frame: rect, textContainer: thirdTextContainer)
+        thirdTextView.isScrollEnabled = false
+        thirdTextView.backgroundColor = .purple
+        thirdTextView.isEditable = false
+        view.addSubview(thirdTextView)
+       
+//        thirdTextView.snp.makeConstraints { make in
+//            make.top.equalTo(secondTextView.snp_bottom).offset(10)
+//            make.left.equalTo(view).offset(10)
+//            make.right.equalTo(view).offset(-10)
+//            make.bottom.equalTo(view)
+//        }
+        
+        let layoutManager = NSLayoutManager()
+        layoutManager.addTextContainer(firstTextView.textContainer)
+        layoutManager.addTextContainer(secondTextContainer)
+        layoutManager.addTextContainer(thirdTextContainer)
+        
+        textStorage.addLayoutManager(layoutManager)
     }
     
     lazy var attStrLabel : UILabel = {
@@ -106,4 +182,15 @@ class TextAndImageVC: UIViewController {
         attStrLabel.textAlignment = .center
         return attStrLabel
     }()
+    lazy var jumpBtn : UIButton = {
+        let jumpBtn = UIButton()
+        jumpBtn.setTitle("跳转", for: .normal)
+        jumpBtn.setTitleColor(.black, for: .normal)
+        jumpBtn.addTarget(self, action: #selector(JumpClick), for: .touchUpInside)
+        return jumpBtn
+    }()
+    
+    @objc func JumpClick(){
+        self.navigationController?.pushViewController(SwiftMixTextPicVC(), animated: true)
+    }
 }
