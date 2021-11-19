@@ -49,7 +49,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
         }else if indexPath.row == 10{
             self.navigationController?.pushViewController(AlamofireVC(), animated: true)
         }else if indexPath.row == 11{
-            self.navigationController?.pushViewController(AlamofireVC(), animated: true)
+            self.navigationController?.pushViewController(SwiftMapKitVC(), animated: true)
         }else if indexPath.row == 12{
             self.navigationController?.pushViewController(SwiftDataPersistenceVC(), animated: true)
         }else if(indexPath.row == 13){
@@ -107,7 +107,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 						  "9.动画声音视频",
                           "10.图文混编",
 						  "11.Alamofire",
-						  "12.WKWebView与HTML5",
+						  "12.MapKit",
 						  "13.数据持久化",
 						  "14.Git版本控制实践---GitHubManagerVC",
                           "15.CocoaPods",

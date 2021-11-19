@@ -157,12 +157,16 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 	}
 
 	@IBAction func pushAppleMap(_ sender: UIButton) {
-		if self.searchKeyWords.text == nil {
+        if self.searchKeyWords.text!.count < 1{
+            print("请输入地址信息")
 			return
 		}
 		
 		let geocoder = CLGeocoder()
 		geocoder.geocodeAddressString(self.searchKeyWords.text!,completionHandler: {(placeMarks, error) -> Void in
+            if (error != nil) {
+                return
+            }
 			if placeMarks!.count > 0{
 				//				NSLog("查询记录数 i%", placeMarks?.count ?? NSInteger.self)
 				

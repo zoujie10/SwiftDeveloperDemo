@@ -34,6 +34,8 @@
 		842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 842991B0274238B900A50077 /* ProductsListModel.xcdatamodeld */; };
 		842991D42743A5A400A50077 /* CTImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D32743A5A400A50077 /* CTImageView.swift */; };
 		842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D527467EFF00A50077 /* SwiftMixTextPicVC.swift */; };
+		842991D82747788300A50077 /* SwiftSafeAndEncryptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D72747788300A50077 /* SwiftSafeAndEncryptionVC.swift */; };
+		842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991D92747790900A50077 /* SwiftMapKitVC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
@@ -182,6 +184,9 @@
 		842991B1274238B900A50077 /* ProductsListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductsListModel.xcdatamodel; sourceTree = "<group>"; };
 		842991D32743A5A400A50077 /* CTImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTImageView.swift; sourceTree = "<group>"; };
 		842991D527467EFF00A50077 /* SwiftMixTextPicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMixTextPicVC.swift; sourceTree = "<group>"; };
+		842991D72747788300A50077 /* SwiftSafeAndEncryptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSafeAndEncryptionVC.swift; sourceTree = "<group>"; };
+		842991D92747790900A50077 /* SwiftMapKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapKitVC.swift; sourceTree = "<group>"; };
+		842991DB2747CF6F00A50077 /* result.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = result.gpx; path = "/Users/zoujie/Github/SwiftDeveloperDemo/SwiftDeveloperDemo/iOSDeveloperDemo/Book-Moblie🐱/MapKit/result.gpx"; sourceTree = "<absolute>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -421,6 +426,8 @@
 		842991D02742A93300A50077 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				842991D92747790900A50077 /* SwiftMapKitVC.swift */,
+				842991DB2747CF6F00A50077 /* result.gpx */,
 			);
 			path = MapKit;
 			sourceTree = "<group>";
@@ -435,6 +442,7 @@
 		842991D22742A98F00A50077 /* SafeAndEncryption */ = {
 			isa = PBXGroup;
 			children = (
+				842991D72747788300A50077 /* SwiftSafeAndEncryptionVC.swift */,
 			);
 			path = SafeAndEncryption;
 			sourceTree = "<group>";
@@ -1127,6 +1135,7 @@
 				848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */,
 				848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */,
 				8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */,
+				842991D82747788300A50077 /* SwiftSafeAndEncryptionVC.swift in Sources */,
 				84710DC2272C45E700A40507 /* SwiftThirdPartyVC.swift in Sources */,
 				84710DC5272C4A0F00A40507 /* AlamofireVC.swift in Sources */,
 				84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */,
@@ -1180,6 +1189,7 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
+				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,
 				84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */,
