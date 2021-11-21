@@ -41,6 +41,9 @@
 		842991E627491EDF00A50077 /* UserService.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842991E827491EDF00A50077 /* UserService.strings */; };
 		842991ED2749234700A50077 /* tiantiansifangmao-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 842991EC2749234700A50077 /* tiantiansifangmao-09.png */; };
 		842991EE2749236100A50077 /* tiantiansifangmao-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 842991F02749236100A50077 /* tiantiansifangmao-07.png */; };
+		842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F227494A4C00A50077 /* SwiftThreadVC.swift */; };
+		842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */; };
+		842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F6274A4BE300A50077 /* SwiftGCDVC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
@@ -199,6 +202,9 @@
 		842991EC2749234700A50077 /* tiantiansifangmao-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiantiansifangmao-09.png"; sourceTree = "<group>"; };
 		842991EF2749236100A50077 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/tiantiansifangmao-07.png"; sourceTree = "<group>"; };
 		842991F1274923CD00A50077 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/tiantiansifangmao-07.png"; sourceTree = "<group>"; };
+		842991F227494A4C00A50077 /* SwiftThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThreadVC.swift; sourceTree = "<group>"; };
+		842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOperationVC.swift; sourceTree = "<group>"; };
+		842991F6274A4BE300A50077 /* SwiftGCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGCDVC.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -447,6 +453,9 @@
 		842991D12742A93C00A50077 /* Thread */ = {
 			isa = PBXGroup;
 			children = (
+				842991F227494A4C00A50077 /* SwiftThreadVC.swift */,
+				842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */,
+				842991F6274A4BE300A50077 /* SwiftGCDVC.swift */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -1156,6 +1165,7 @@
 				842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
+				842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */,
 				84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */,
 				842991D42743A5A400A50077 /* CTImageView.swift in Sources */,
 				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
@@ -1213,6 +1223,7 @@
 				842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */,
 				4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
+				842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */,
 				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
@@ -1235,6 +1246,7 @@
 				4F02FD9F22AF819F00B8CB35 /* IteratorClass.swift in Sources */,
 				84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
+				842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */,
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,

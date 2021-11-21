@@ -68,8 +68,8 @@ class SwiftUsuallyDevicesVC: UIViewController,UIImagePickerControllerDelegate,UI
     @objc func pickImage(){
         self.pickImgaeVC.delegate = self
         self.pickImgaeVC.allowsEditing = true
-//        self.pickImgaeVC.sourceType = .photoLibrary //camera 打开相机
-        self.pickImgaeVC.sourceType = .camera
+        self.pickImgaeVC.sourceType = .photoLibrary //camera 打开相机
+//        self.pickImgaeVC.sourceType = .camera
         self.pickImgaeVC.navigationBar.barTintColor = .orange
         self.pickImgaeVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         self.pickImgaeVC.navigationBar.tintColor = .white

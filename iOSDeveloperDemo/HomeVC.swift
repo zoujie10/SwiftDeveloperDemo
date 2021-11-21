@@ -68,6 +68,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
             self.navigationController?.pushViewController(SwiftDataPersistenceVC(), animated: true)
         }else if indexPath.row == 20 {
             self.navigationController?.pushViewController(SwiftLocalizationVC(), animated: true)
+        }else if indexPath.row == 21 {
+            self.navigationController?.pushViewController(SwiftThreadVC(), animated: true)
         }
         
 	}
@@ -117,8 +119,9 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
                           "17.图片和视频处理",
                           "18.动画音频视频播放",
                           "19.常用设备使用",
-                            "20.WKWebViewAndHTML5",
-                          "21.Localization"]
+                          "20.WKWebViewAndHTML5",
+                          "21.Localization",
+                          "21.多线程"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
