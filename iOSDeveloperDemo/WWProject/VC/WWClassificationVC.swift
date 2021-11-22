@@ -1,5 +1,5 @@
 //
-//  SwiftGCDVC.swift
+//  WWClassificationVC.swift
 //  iOSDeveloperDemo
 //
 //  Created by Zoujie on 2021/11/21.
@@ -7,18 +7,11 @@
 //
 
 import UIKit
-
-class SwiftGCDVC: UIViewController {
+//分类 VC
+class WWClassificationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "GCD"
-        //1 查询IP
-        
-        //2 DisPatch Group
-        
+
     }
-
-
 }

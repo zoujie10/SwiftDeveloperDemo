@@ -44,6 +44,8 @@
 		842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F227494A4C00A50077 /* SwiftThreadVC.swift */; };
 		842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */; };
 		842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F6274A4BE300A50077 /* SwiftGCDVC.swift */; };
+		842991F9274A8F7B00A50077 /* WWClassificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WWClassificationVC.swift */; };
+		842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
@@ -205,6 +207,8 @@
 		842991F227494A4C00A50077 /* SwiftThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThreadVC.swift; sourceTree = "<group>"; };
 		842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOperationVC.swift; sourceTree = "<group>"; };
 		842991F6274A4BE300A50077 /* SwiftGCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGCDVC.swift; sourceTree = "<group>"; };
+		842991F8274A8F7B00A50077 /* WWClassificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWClassificationVC.swift; sourceTree = "<group>"; };
+		842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSearchTitleView.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -616,6 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
+				842991F8274A8F7B00A50077 /* WWClassificationVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -624,6 +629,7 @@
 			isa = PBXGroup;
 			children = (
 				845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */,
+				842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1163,6 +1169,7 @@
 				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */,
+				842991F9274A8F7B00A50077 /* WWClassificationVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */,
@@ -1187,6 +1194,7 @@
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
+				842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,

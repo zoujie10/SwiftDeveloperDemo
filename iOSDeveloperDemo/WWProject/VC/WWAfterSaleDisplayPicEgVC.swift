@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//实例弹框
 class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     typealias clickBtnBlock = () -> Void
     var clickBlock : clickBtnBlock?
