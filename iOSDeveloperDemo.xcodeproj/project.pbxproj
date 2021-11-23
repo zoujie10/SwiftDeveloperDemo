@@ -63,6 +63,9 @@
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
 		84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84480F4C253731B800A738B0 /* CopyPatternViewController.swift */; };
+		844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */; };
+		844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */; };
+		844F3ED4274CDADB006762D0 /* ww_launchscreen_centimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -229,6 +232,9 @@
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		84480F4C253731B800A738B0 /* CopyPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPatternViewController.swift; sourceTree = "<group>"; };
+		844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWGuidePageVC.swift; sourceTree = "<group>"; };
+		844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_botimg.png; sourceTree = "<group>"; };
+		844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_centimg.png; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -621,6 +627,7 @@
 			children = (
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
 				842991F8274A8F7B00A50077 /* WWClassificationVC.swift */,
+				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -949,6 +956,8 @@
 				84FA0FA020AEA96800B6914A /* team_dictionary.plist */,
 				84FA0FA120AEA96800B6914A /* team.plist */,
 				847A569620BE7CC000EBB06C /* provinces_cities.plist */,
+				844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */,
+				844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1067,8 +1076,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
+				844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */,
 				842991EE2749236100A50077 /* tiantiansifangmao-07.png in Resources */,
 				84710DE7273D59BB00A40507 /* 宇宙骑士reason.mp3 in Resources */,
+				844F3ED4274CDADB006762D0 /* ww_launchscreen_centimg.png in Resources */,
 				842991AC27413CEE00A50077 /* SwiftTestModel.plist in Resources */,
 				84710DB1272A9CF200A40507 /* GitText.txt in Resources */,
 				842F786222583FDE0048B63A /* InfoPlist.strings in Resources */,
@@ -1237,6 +1248,7 @@
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
+				844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,

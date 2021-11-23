@@ -34,28 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.addObserver(self.observer, forKeyPath: "appStatus", options:[.new,.old], context: nil)
 		self.appStatus = "launch"
 		
-		//TODO 异步初始化数据库 判断数据是否需要更新
-//		let schemaVersion : UInt64 = 0
-//		let config = Realm.Configuration(schemaVersion: schemaVersion, migrationBlock: { migration, oldSchemaVersion in
-//			
-//			/* 什么都不要做！Realm 会自行检测新增和需要移除的属性，然后自动更新硬盘上的数据库架构 */
-//			if (oldSchemaVersion < schemaVersion) {}
-//		})
-//		Realm.Configuration.defaultConfiguration = config
-//		Realm.asyncOpen { (realm, error) in
-//			
-//			/* Realm 成功打开，迁移已在后台线程中完成 */
-//			if let _ = realm {
-//				print("Realm 数据库配置成功")
-//				
-//			}
-//			/* 处理打开 Realm 时所发生的错误 */
-//			else if let error = error {
-//				
-//				print("Realm 数据库配置失败：\(error.localizedDescription)")
-//			}
-//		}
+        dataInit()
         threeDtouch(application: application)
+        guidePageShow()
 		return true
 	}
     func threeDtouch( application : UIApplication) {
@@ -69,6 +50,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let Itmes = [addEvent,jumpGesEvent,jumpComponentsEvent]
         application.shortcutItems = Itmes
+    }
+    func guidePageShow(){
+        
+    }
+    func dataInit(){
+        //TODO 异步初始化数据库 判断数据是否需要更新
+//        let schemaVersion : UInt64 = 0
+//        let config = Realm.Configuration(schemaVersion: schemaVersion, migrationBlock: { migration, oldSchemaVersion in
+//
+//            /* 什么都不要做！Realm 会自行检测新增和需要移除的属性，然后自动更新硬盘上的数据库架构 */
+//            if (oldSchemaVersion < schemaVersion) {}
+//        })
+//        Realm.Configuration.defaultConfiguration = config
+//        Realm.asyncOpen { (realm, error) in
+//
+//            /* Realm 成功打开，迁移已在后台线程中完成 */
+//            if let _ = realm {
+//                print("Realm 数据库配置成功")
+//
+//            }
+//            /* 处理打开 Realm 时所发生的错误 */
+//            else if let error = error {
+//
+//                print("Realm 数据库配置失败：\(error.localizedDescription)")
+//            }
+//        }
     }
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         if shortcutItem.type == "jump.Event"{

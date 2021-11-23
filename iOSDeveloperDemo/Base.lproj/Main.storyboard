@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyB-gH-Cw1"/>
                         <viewControllerLayoutGuide type="bottom" id="6u1-uj-5YE"/>
@@ -1362,7 +1362,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dwa-Xb-stq">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="QKr-kj-dqO" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QKr-kj-dqO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vIM-Tj-i98">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

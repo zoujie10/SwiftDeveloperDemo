@@ -16,6 +16,7 @@ class SwiftThreadVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "线程"
+        self.tabBarController?.hidesBottomBarWhenPushed = true
         //1.使用Thread
 
         //2.Operation
