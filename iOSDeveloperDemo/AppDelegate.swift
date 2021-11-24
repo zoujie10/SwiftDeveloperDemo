@@ -52,7 +52,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.shortcutItems = Itmes
     }
     func guidePageShow(){
-        
+
+        //1.在最底层
+        let windows = UIApplication.shared.windows.last
+        windows?.addSubview(makeUI())
+        //2.无法移除
+//        window?.rootViewController = WWGuidePageVC()
+//        window?.makeKeyAndVisible()
+
+    }
+    func makeUI() -> UIView{
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "罗丹-思想者")
+        imageView.frame = UIScreen.main.bounds
+//        view.addSubview(imageView)
+//        imageView.snp.makeConstraints { make in
+//            make.edges.equalTo()
+//        }
+        return imageView
     }
     func dataInit(){
         //TODO 异步初始化数据库 判断数据是否需要更新
