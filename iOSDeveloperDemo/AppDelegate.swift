@@ -54,11 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func guidePageShow(){
 
         //1.在最底层
-        let windows = UIApplication.shared.windows.last
-        windows?.addSubview(makeUI())
+//        let windows = UIApplication.shared.windows.last
+//        windows?.addSubview(makeUI())
         //2.无法移除
-//        window?.rootViewController = WWGuidePageVC()
-//        window?.makeKeyAndVisible()
+        window?.rootViewController = WWGuidePageVC()
+        window?.makeKeyAndVisible()
 
     }
     func makeUI() -> UIView{

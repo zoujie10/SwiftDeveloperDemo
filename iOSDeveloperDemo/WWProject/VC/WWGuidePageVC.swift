@@ -26,5 +26,9 @@ class WWGuidePageVC: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.isHidden = true
+        
+        let main : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = main.instantiateInitialViewController()
+        UIApplication.shared.windows.first?.rootViewController = vc
     }
 }
