@@ -48,7 +48,7 @@ class SwiftGCDVC: UIViewController {
         
         globalQueue.async {
             let result = try? Data(contentsOf: apiUrl!)
-            let message = String(data: result!, encoding: String.Encoding.utf8)
+            let message = String(data: result ?? Data.init(), encoding: String.Encoding.utf8)
             DispatchQueue.main.async {
                 self.label.text = message
             }
