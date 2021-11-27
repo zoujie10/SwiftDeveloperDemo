@@ -69,6 +69,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
             self.navigationController?.pushViewController(SwiftLocalizationVC(), animated: true)
         }else if indexPath.row == 21 {
             self.navigationController?.pushViewController(SwiftThreadVC(), animated: true)
+        }else if indexPath.row == 22 {
+            self.navigationController?.pushViewController(SwiftSafeAndEncryptionVC(), animated: true)
         }
         
 	}
@@ -120,7 +122,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
                           "19.常用设备使用",
                           "20.WKWebViewAndHTML5",
                           "21.Localization",
-                          "21.多线程"]
+                          "21.多线程",
+                          "22.加密与安全"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

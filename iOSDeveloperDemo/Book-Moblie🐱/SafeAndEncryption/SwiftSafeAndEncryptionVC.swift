@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CommonCrypto
 
 class SwiftSafeAndEncryptionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .white
+        title = "加密与安全"
+        view.addSubview(self.DecrypTextLabel)
+        self.DecrypTextLabel.snp.makeConstraints { make in
+            make.center.equalTo(view)
+        }
         /**加密与安全**/
         /**
          1.设备存储内容进行加密
@@ -24,7 +30,7 @@ class SwiftSafeAndEncryptionVC: UIViewController {
         SymmetricCryptographyAndAsymmetricCryptography()
         
         //2.3DES
-        
+        encrypt(encryptData:"your daddy")
         //3.SHA1
         //4.MD5
         //5.越狱情况的判断
@@ -45,6 +51,121 @@ class SwiftSafeAndEncryptionVC: UIViewController {
          目前最常用的非对称加密算法是RSA算法.
          */
     }
+    private let randomStringArray : [Character] = "asdfghjklqwertyuiopzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890".map({$0})
     
+    var key : String = ""
+    func Method_3_DES(){
+        /**
+        采用单钥密码的加密方法，同一个密钥可以同时用来加密和解密，这种加密方法称为对称加密，也称为单密钥加密。常用的单向加密算法：
+        1、DES（Data Encryption Standard）：数据加密标准，速度较快，适用于加密大量数据的场合；
+        2、3DES（Triple DES）：是基于DES，对一块数据用三个不同的密钥进行三次加密，强度更高；
+        3、AES（Advanced Encryption Standard）：高级加密标准，是下一代的加密算法标准，速度快，安全级别高，支持128、192、256、512位密钥的加密；
+        4、Blowfish
+        算法特征
+        1、加密方和解密方使用同一个密钥；
+        2、加密解密的速度比较快，适合数据比较长时的使用；
+        3、密钥传输的过程不安全，且容易被破解，密钥管理也比较麻烦；
+        */
+        
+    }
+    //获得指定长度的随机字符串 uniform用来产生0~（n-1）范围内的随机数
+    func randomSrtingOfLenth(_ length : Int) -> String{
+        var string = ""
+        for _ in 1...length{
+            string.append(randomStringArray[Int(arc4random_uniform(UInt32(randomStringArray.count)-1))])
+        }
+        return string
+    }
+    
+    func encrypt(encryptData:String){
+        key =  randomSrtingOfLenth(kCCKeySize3DES)//kCCKeySize3DES Triple DES加解密key的大小 其值为24
+        let inputData : Data = encryptData.data(using: String.Encoding.utf8)!
+        
+        let keyData : Data = key.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+        let keyBytes = UnsafeMutableRawPointer(mutating: (keyData as NSData).bytes)//UnsafeMutableRawPointer 指针
+        let keyLength = size_t(kCCKeySize3DES)
+        
+        let dataLength = Int(inputData.count)
+        let dataBytes = UnsafeRawPointer((inputData as NSData).bytes)
+        let bufferData = NSMutableData(length: Int(dataLength) + kCCKeySize3DES)!
+        let bufferPointer = UnsafeMutableRawPointer(bufferData.mutableBytes)
+        let bufferLength = size_t(bufferData.length)
+        var bytesDecrypted = Int(0)
+        
+        let cryptStatus = CCCrypt(UInt32(kCCEncrypt),//加密还是解密
+                                  UInt32(kCCAlgorithm3DES),//加密的算法
+                                  UInt32(kCCOptionECBMode + kCCOptionPKCS7Padding),//使用秘钥和算法对文本进行加密时的方法，这里是两者中任意一个
+                                  keyBytes,
+                                  keyLength,
+                                  nil,
+                                  dataBytes,
+                                  dataLength,
+                                  bufferPointer,
+                                  bufferLength,
+                                  &bytesDecrypted)
+        /**
+        @constant   kCCSuccess          Operation completed normally.
+        @constant   kCCParamError       Illegal parameter value.
+        @constant   kCCBufferTooSmall   Insufficent buffer provided for specified
+                                        operation.
+        @constant   kCCMemoryFailure    Memory allocation failure.
+        @constant   kCCAlignmentError   Input size was not aligned properly.
+        @constant   kCCDecodeError      Input data did not decode or decrypt
+                                        properly.
+        @constant   kCCUnimplemented    Function not implemented for the current
+                                        algorithm.
+        @constant   kCCInvalidKey       Key is not valid.
+         */
+        if Int32(cryptStatus) == Int32(kCCSuccess){
+            bufferData.length = bytesDecrypted
+            decrypt(inputData:bufferData as Data)
+        }else{
+            print("加密出错\(cryptStatus)")
+        }
+        
+    }
+    
+    func decrypt(inputData : Data){
+      
+        let keyData : Data = key.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+        let keyBytes = UnsafeMutableRawPointer(mutating: (keyData as NSData).bytes)//UnsafeMutableRawPointer 指针
+        let keyLength = size_t(kCCKeySize3DES)
+        
+        let dataLength = Int(inputData.count)
+        let dataBytes = UnsafeRawPointer((inputData as NSData).bytes)
+        let bufferData = NSMutableData(length: Int(dataLength) + kCCKeySize3DES)!
+        let bufferPointer = UnsafeMutableRawPointer(bufferData.mutableBytes)
+        let bufferLength = size_t(bufferData.length)
+        var bytesDecrypted = Int(0)
+        
+        
+        let cryptStatus = CCCrypt(UInt32(kCCDecrypt),//加密还是解密
+                                  UInt32(kCCAlgorithm3DES),//加密的算法
+                                  UInt32(kCCOptionECBMode + kCCOptionPKCS7Padding),//使用秘钥和算法对文本进行加密时的方法，这里是两者中任意一个
+                                  keyBytes,
+                                  keyLength,
+                                  nil,
+                                  dataBytes,
+                                  dataLength,
+                                  bufferPointer,
+                                  bufferLength,
+                                  &bytesDecrypted)
+        
+        if Int32(cryptStatus) == Int32(kCCSuccess){
+            bufferData.length = bytesDecrypted
+            let string = NSString(data: bufferData as Data, encoding: String.Encoding.utf8.rawValue)
+            print(string!)
+            self.DecrypTextLabel.text = string as String?
+        }else{
+            print("解密出错\(cryptStatus)")
+        }
+    }
+    lazy var DecrypTextLabel : UILabel = {
+        let DecrypTextLabel = UILabel()
+        DecrypTextLabel.textAlignment = .center
+        DecrypTextLabel.backgroundColor = .orange
+        DecrypTextLabel.textColor = .white
+        return DecrypTextLabel;
+    }()
     
 }
