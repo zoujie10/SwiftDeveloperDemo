@@ -32,8 +32,11 @@ class SwiftSafeAndEncryptionVC: UIViewController {
         //2.3DES
         encrypt(encryptData:"your daddy")
         //3.SHA1
+        Method_SHA1()
         //4.MD5
+        Method_MD5()
         //5.越狱情况的判断
+        jailbreak()
     }
 
     func SymmetricCryptographyAndAsymmetricCryptography(){
@@ -168,4 +171,135 @@ class SwiftSafeAndEncryptionVC: UIViewController {
         return DecrypTextLabel;
     }()
     
+    
+    
+    func Method_SHA1(){
+        /**
+        SHA-1（英语：Secure Hash Algorithm 1，中文名：安全散列算法1）是一种密码散列函数，美国国家安全局设计，并由美国国家标准技术研究所（NIST）发布为联邦数据处理标准（FIPS）。SHA-1可以生成一个被称为消息摘要的160位（20字节）散列值，散列值通常的呈现形式为40个十六进制数。 [1]
+        SHA-1已经不再视为可抵御有充足资金、充足计算资源的攻击者。2005年，密码分析人员发现了对SHA-1的有效攻击方法，这表明该算法可能不够安全，不能继续使用，自2010年以来，许多组织建议用SHA-2或SHA-3来替换SHA-1。Microsoft、Google以及Mozilla都宣布，它们旗下的浏览器将在2017年前停止接受使用SHA-1算法签名的SSL证书。
+        */
+        let string = "your daddy"
+        print("SHA1-加密结果:+\(string.SHA1())")
+        print("SHA512-加密结果:+\(string.SHA512())")
+    }
+    func Method_MD5(){
+        /**
+        MD5信息摘要算法（英语：MD5 Message-Digest Algorithm），一种被广泛使用的密码散列函数，可以产生出一个128位（16字节）的散列值（hash value），用于确保信息传输完整一致。
+        */
+        //This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).
+        let string = "your func mother"
+        print("MD5-加密结果:+\(string.MD5())")
+    }
+    
+    
+    func jailbreak() -> Bool{
+        //1.通过越狱后增加的越狱文件判断,判断这些文件是否存在，让文件添加到数组中，遍历数组，如果存在任何一个文件，就认为是越狱了
+        let jailbreak_tool_paths = ["/Applications/Cydia.app",
+                                    "/Library/MobileSubstrate/MobileSubstrate.dylib",
+                                    "/bin/bash",
+                                    "/usr/sbin/sshd",
+                                    "/etc/apt"]
+        
+        for path in jailbreak_tool_paths {
+            //通过文件管理器，判断在指定的目录下，是否在对应的应用程序。如果存在的话。就表示当前设备为越狱设备。
+            if FileManager.default.fileExists(atPath: path){
+                return true
+            }
+        }
+        //2.是否能打开cydia这个协议头
+        if UIApplication.shared.canOpenURL(URL(string: "cydia://")!){
+            return true
+        }
+        //3.越狱后的手机是可以获取到手机内安装的所有应用程序的，如果可以获取到就说明越狱了
+//        if ([[NSFileManager defaultManager] fileExistsAtPath:@"User/Applications/"]) {
+//        NSLog(@"The device is jail broken!");
+//        NSArray *appList = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:@"User/Applications/" error:nil];
+//        NSLog(@"appList = %@", appList);
+//        return YES;
+//        }
+        
+        //4.使用C语言的函数来判断，使用star方法判断cydia是否存在
+//        int checkInject() {
+//        int ret;
+//        Dl_info dylib_info;
+//        int (*func_stat)(const char*, struct stat*) = stat;
+//        char *dylib_name = "/usr/lib/system/libsystem_kernel.dylib";
+//        if ((ret = dladdr(func_stat, &dylib_info)) && strncmp(dylib_info.dli_fname, dylib_name, strlen(dylib_name))) {
+//        return 0;
+//        }
+//        return 1;
+//        }
+//        int checkCydia() {
+//        struct stat stat_info;
+//        if (!checkInject()) {
+//        if (0 == stat("/Applications/Cydia.app", &stat_info)) {
+//        return 1;
+//        }
+//        } else {
+//        return 1;
+//        }
+        //5.根据读取的环境变量是否有值判断
+//        char* printEnv(void) {
+//        charchar *env = getenv("DYLD_INSERT_LIBRARIES");
+//        NSLog(@"%s", env);
+//        return env;
+//        }
+//        - (BOOL)isJailBreak {
+//        if (printEnv()) {
+//        NSLog(@"The device is jail broken!");
+//        return YES;
+//        }
+        return false
+    }
+    
+}
+
+extension Int{
+    func hexedString() -> String{//整型类型转换为十六进制字符串
+        return NSString(format: "%02x", self) as String
+    }
+}
+extension NSData{
+    func hexedString() -> String{
+        var string = String()
+        let unsafePointer = bytes.assumingMemoryBound(to: UInt8.self)
+        for i in UnsafeBufferPointer<UInt8>(start: unsafePointer, count: length){
+            string += Int(i).hexedString()
+        }
+        return string
+    }
+    func SHA1() -> NSData{//SHA1加密
+        let result = NSMutableData(length: Int(CC_SHA1_DIGEST_LENGTH))!
+        let unsafePointer = result.mutableBytes.assumingMemoryBound(to: UInt8.self)
+        CC_SHA1(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(unsafePointer))
+        return NSData(data: result as Data)
+    }
+    
+    func MD5() -> NSData{
+        let result = NSMutableData(length: Int(CC_MD5_DIGEST_LENGTH))!
+        let unsafePointer = result.mutableBytes.assumingMemoryBound(to: UInt8.self)
+        CC_MD5(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(unsafePointer))//This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).
+        return NSData(data: result as Data)
+    }
+    
+    func SHA512() -> NSData{
+        let result = NSMutableData(length: Int(CC_SHA512_DIGEST_LENGTH))!
+        let unsafePointer = result.mutableBytes.assumingMemoryBound(to: UInt8.self)
+        CC_SHA512(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(unsafePointer))
+        return NSData(data: result as Data)
+    }
+}
+extension String{
+    func SHA1() -> String{
+        let data = (self as NSString).data(using: String.Encoding.utf8.rawValue)! as NSData
+        return data.SHA1().hexedString()
+    }
+    func MD5() -> String{
+        let data = (self as NSString).data(using: String.Encoding.utf8.rawValue)! as NSData
+        return data.MD5().hexedString()
+    }
+    func SHA512() -> String{
+        let data = (self as NSString).data(using: String.Encoding.utf8.rawValue)! as NSData
+        return data.SHA512().hexedString()
+    }
 }
