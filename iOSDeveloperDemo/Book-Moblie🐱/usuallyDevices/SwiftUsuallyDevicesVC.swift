@@ -231,6 +231,6 @@ class SwiftUsuallyDevicesVC: UIViewController,UIImagePickerControllerDelegate,UI
     }()
     
     @objc func jumpdeviceMotion(){
-                self.navigationController?.pushViewController(SwiftDeviceMotionVC(), animated: true)
+        self.navigationController?.pushViewController(SwiftDeviceMotionVC(), animated: true)
     }
 }

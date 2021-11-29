@@ -66,6 +66,8 @@
 		844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */; };
 		844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */; };
 		844F3ED4274CDADB006762D0 /* ww_launchscreen_centimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */; };
+		844F3EDD2753CD65006762D0 /* AnotherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F3EDC2753CD65006762D0 /* AnotherStoryboard.storyboard */; };
+		844F3EDF2753D16C006762D0 /* OtherStoryBoardSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EDE2753D16C006762D0 /* OtherStoryBoardSecondVC.swift */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -235,6 +237,8 @@
 		844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWGuidePageVC.swift; sourceTree = "<group>"; };
 		844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_botimg.png; sourceTree = "<group>"; };
 		844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_centimg.png; sourceTree = "<group>"; };
+		844F3EDC2753CD65006762D0 /* AnotherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnotherStoryboard.storyboard; sourceTree = "<group>"; };
+		844F3EDE2753D16C006762D0 /* OtherStoryBoardSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherStoryBoardSecondVC.swift; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -506,6 +510,16 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		844F3EDB2753CBFE006762D0 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				84E37BFE20A038760031DEEE /* TextViewController.swift */,
+				844F3EDC2753CD65006762D0 /* AnotherStoryboard.storyboard */,
+				844F3EDE2753D16C006762D0 /* OtherStoryBoardSecondVC.swift */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +544,7 @@
 				842991D02742A93300A50077 /* MapKit */,
 				842991DC2747E9B200A50077 /* Localization */,
 				842991D22742A98F00A50077 /* SafeAndEncryption */,
+				844F3EDB2753CBFE006762D0 /* StoryBoard */,
 			);
 			path = "Book-Moblie🐱";
 			sourceTree = "<group>";
@@ -833,7 +848,6 @@
 			children = (
 				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				847A569820BE81F200EBB06C /* TabLTableViewController.swift */,
-				84E37BFE20A038760031DEEE /* TextViewController.swift */,
 				84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */,
 				8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */,
 				84D5307720A5717C00598810 /* ScrollViewController.swift */,
@@ -1097,6 +1111,7 @@
 				84E37BE420A02D390031DEEE /* Main.storyboard in Resources */,
 				84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */,
 				842991E327491EDB00A50077 /* Localizable.strings in Resources */,
+				844F3EDD2753CD65006762D0 /* AnotherStoryboard.storyboard in Resources */,
 				84FA0FA220AEA96800B6914A /* team_dictionary.plist in Resources */,
 				84FA0FA320AEA96800B6914A /* team.plist in Resources */,
 			);
@@ -1271,6 +1286,7 @@
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
+				844F3EDF2753D16C006762D0 /* OtherStoryBoardSecondVC.swift in Sources */,
 				848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

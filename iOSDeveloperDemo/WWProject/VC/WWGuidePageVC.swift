@@ -27,11 +27,11 @@ class WWGuidePageVC: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
-        UIView.animate(withDuration: 3) {
+        UIView.animate(withDuration: 1) {
             self.view.alpha = 0.5;
         } completion:{_ in
             let main : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = main.instantiateInitialViewController()
+            let vc = main.instantiateInitialViewController()//根视图
             UIApplication.shared.windows.first?.rootViewController = vc
         }
     }

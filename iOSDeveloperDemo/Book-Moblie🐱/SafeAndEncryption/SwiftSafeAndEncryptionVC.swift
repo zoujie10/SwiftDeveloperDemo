@@ -19,6 +19,7 @@ class SwiftSafeAndEncryptionVC: UIViewController {
         self.DecrypTextLabel.snp.makeConstraints { make in
             make.center.equalTo(view)
         }
+        self.hidesBottomBarWhenPushed = true
         /**加密与安全**/
         /**
          1.设备存储内容进行加密

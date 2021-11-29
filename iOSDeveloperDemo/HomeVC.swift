@@ -71,6 +71,20 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
             self.navigationController?.pushViewController(SwiftThreadVC(), animated: true)
         }else if indexPath.row == 22 {
             self.navigationController?.pushViewController(SwiftSafeAndEncryptionVC(), animated: true)
+        }else if indexPath.row == 23{
+//            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "stroryboardVC")
+            //first page
+            let storyboard = UIStoryboard(name: "AnotherStoryboard", bundle: nil)
+            let vcRoot = storyboard.instantiateInitialViewController()
+            vcRoot?.title = "other board"
+            self.navigationController?.pushViewController(vcRoot!, animated: true)
+
+            //other page
+//            let vc = UIStoryboard(name: "AnotherStoryboard", bundle: nil).instantiateViewController(withIdentifier: "OtherStoryBoardSecondVC") as! OtherStoryBoardSecondVC //跳转另一个storyboard
+//            vc.message = "Jump Success"
+//            vc.title = "other board"
+//            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
         
 	}
@@ -123,7 +137,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
                           "20.WKWebViewAndHTML5",
                           "21.Localization",
                           "21.多线程",
-                          "22.加密与安全"]
+                          "22.加密与安全",
+                          "23.Storyboard"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

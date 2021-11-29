@@ -5,6 +5,7 @@
         <deployment version="4352" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -173,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLx-1f-pVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4421.6000000000004" y="-1634.4827586206898"/>
+            <point key="canvasLocation" x="4268" y="-1535"/>
         </scene>
         <!--Map Kit View Controller-->
         <scene sceneID="bCy-Yv-WWZ">
@@ -213,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mD-An-rVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5157.6000000000004" y="-1638.1773399014778"/>
+            <point key="canvasLocation" x="5180" y="-1535"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="lhn-7G-af4">
@@ -471,7 +472,7 @@
         <!--Text View Controller-->
         <scene sceneID="Zyc-2B-Spu">
             <objects>
-                <viewController id="BpS-r2-n7F" customClass="TextViewController" customModule="iOSDeveloperDemo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stroryboardVC" id="BpS-r2-n7F" customClass="TextViewController" customModule="iOSDeveloperDemo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3QY-jT-Yeu"/>
                         <viewControllerLayoutGuide type="bottom" id="D7Y-jx-uZ7"/>
@@ -595,6 +596,17 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vw-8b-Nja">
+                                <rect key="frame" x="48" y="609" width="275" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Jump another story board vc">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tXE-qX-GaV"/>
                         <color key="backgroundColor" red="0.39818463729475106" green="0.66652182462077036" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -607,7 +619,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w6-02-JmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DyH-FY-Qoy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="-956"/>
+            <point key="canvasLocation" x="-1116" y="-996"/>
         </scene>
         <!--Alter Cell View Controller-->
         <scene sceneID="18C-un-ztV">
@@ -1610,7 +1622,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R30-dd-thw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3479.1999999999998" y="-1634.4827586206898"/>
+            <point key="canvasLocation" x="3228" y="-1513"/>
         </scene>
         <!--设计模式-->
         <scene sceneID="qFn-C1-nAT">
@@ -1645,6 +1657,12 @@
         <image name="fruiticons_buttons_orange" width="512" height="512"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
