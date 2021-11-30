@@ -85,6 +85,10 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 //            vc.title = "other board"
 //            self.navigationController?.pushViewController(vc, animated: true)
             
+        }else if indexPath.row == 24{
+            let url = "http://dev-api.hotkidceo.com/manual/?channelId=S09033033001"
+            let vc = SwiftWebViewAndHTML5VC.init(url: url, webTitle: "webView")
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
 	}
@@ -138,7 +142,8 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
                           "21.Localization",
                           "21.多线程",
                           "22.加密与安全",
-                          "23.Storyboard"]
+                          "23.Storyboard",
+                          "24.WebView"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

@@ -17,34 +17,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVf-Ao-Icm">
-                                <rect key="frame" x="68" y="473" width="249" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="跳转另一个StoryBoard">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-vf-Qv9">
-                                <rect key="frame" x="68" y="222" width="249" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="下一页">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Tbb-mJ-n3C" kind="showDetail" id="fqX-VK-r78"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8j-T7-Bt9">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVf-Ao-Icm">
+                                        <rect key="frame" x="100" y="400" width="190" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="iSl-q4-Gzn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="跳转另一个StoryBoard">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-vf-Qv9">
+                                        <rect key="frame" x="100" y="200" width="190" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="V8J-Tb-pfk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="下一页">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Tbb-mJ-n3C" kind="showDetail" id="fqX-VK-r78"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-KQ-s7f">
+                                        <rect key="frame" x="119" y="538.33333333333337" width="171" height="62.666666666666629"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIi-VZ-l5c">
+                                        <rect key="frame" x="120" y="661" width="150" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="vLY-QF-oIE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="italicSystem" pointSize="30"/>
+                                            <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JIi-VZ-l5c" secondAttribute="bottom" constant="45" id="2ZR-mt-ZEl"/>
+                                    <constraint firstAttribute="trailing" secondItem="xK3-KQ-s7f" secondAttribute="trailing" constant="100" id="32v-FK-fEL"/>
+                                    <constraint firstItem="UVf-Ao-Icm" firstAttribute="leading" secondItem="9WH-vf-Qv9" secondAttribute="leading" id="5hO-b8-C1H"/>
+                                    <constraint firstAttribute="trailing" secondItem="9WH-vf-Qv9" secondAttribute="trailing" constant="100" id="7sT-f8-ziY"/>
+                                    <constraint firstItem="9WH-vf-Qv9" firstAttribute="leading" secondItem="K8j-T7-Bt9" secondAttribute="leading" constant="100" id="Fze-Zk-2qe"/>
+                                    <constraint firstItem="xK3-KQ-s7f" firstAttribute="firstBaseline" secondItem="UVf-Ao-Icm" secondAttribute="baseline" constant="100" id="MKd-qq-7Ui"/>
+                                    <constraint firstItem="JIi-VZ-l5c" firstAttribute="leading" secondItem="K8j-T7-Bt9" secondAttribute="leading" constant="120" id="Mmb-4V-E41"/>
+                                    <constraint firstItem="xK3-KQ-s7f" firstAttribute="leading" secondItem="K8j-T7-Bt9" secondAttribute="leading" constant="119" id="Yje-fw-4JG"/>
+                                    <constraint firstItem="UVf-Ao-Icm" firstAttribute="trailing" secondItem="9WH-vf-Qv9" secondAttribute="trailing" id="gJd-RO-xvm"/>
+                                    <constraint firstItem="9WH-vf-Qv9" firstAttribute="top" secondItem="K8j-T7-Bt9" secondAttribute="top" constant="200" id="gmG-m0-NZt"/>
+                                    <constraint firstItem="UVf-Ao-Icm" firstAttribute="top" secondItem="9WH-vf-Qv9" secondAttribute="bottom" constant="100" id="irH-e0-Xzc"/>
+                                    <constraint firstAttribute="trailing" secondItem="JIi-VZ-l5c" secondAttribute="trailing" constant="120" id="js6-Ve-VdO"/>
+                                    <constraint firstItem="JIi-VZ-l5c" firstAttribute="top" secondItem="xK3-KQ-s7f" secondAttribute="bottom" constant="60" id="ywE-Xd-6Dp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="K8j-T7-Bt9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6PR-vo-F0D"/>
+                            <constraint firstItem="K8j-T7-Bt9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kWw-xY-dwf"/>
+                            <constraint firstItem="K8j-T7-Bt9" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="qz8-Nz-rA5"/>
+                            <constraint firstItem="K8j-T7-Bt9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uYf-Jg-Huh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ez0-Ck-48u"/>
                 </viewController>
@@ -107,6 +158,12 @@
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
