@@ -86,8 +86,9 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 //            self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 24{
-            let url = "http://dev-api.hotkidceo.com/manual/?channelId=S09033033001"
-            let vc = SwiftWebViewAndHTML5VC.init(url: url, webTitle: "webView")
+//            let url = "http://dev-api.hotkidceo.com/manual/?channelId=S09033033001"
+            let bigTurnplate = "https://dev-h5.hotkidceo.com/ceo/lotterydraw/index?ordertype=0&id=172"
+            let vc = SwiftWebViewAndHTML5VC.init(url: bigTurnplate, webTitle: "webView")
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

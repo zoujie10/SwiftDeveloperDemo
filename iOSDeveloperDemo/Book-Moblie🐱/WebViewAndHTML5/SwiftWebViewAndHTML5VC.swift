@@ -26,7 +26,7 @@ class SwiftWebViewAndHTML5VC: UIViewController,WKScriptMessageHandler,WKNavigati
    
     //MARK:Delegate
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print(message)
+        print(message.name)
     }
     
     
@@ -34,7 +34,14 @@ class SwiftWebViewAndHTML5VC: UIViewController,WKScriptMessageHandler,WKNavigati
     var progressView = UIProgressView()
     var contentController = WKUserContentController()
     var url = ""
-    
+    let scriptArray = ["back",
+                "signOut",
+                "truedown",
+                "isHandLogin",
+                "addressChoose",
+                "refurbish",
+                "webViewJump"]
+
 //    init(){
 //        super.init(nibName: nil, bundle: nil)
 //    }
@@ -53,6 +60,18 @@ class SwiftWebViewAndHTML5VC: UIViewController,WKScriptMessageHandler,WKNavigati
         view.backgroundColor = .white
         configWebView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+      
+        for str: String in self.scriptArray{
+            self.webView.configuration.userContentController.add(self, name:str)
+        }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        for str: String in self.scriptArray{
+            self.webView.configuration.userContentController.removeScriptMessageHandler(forName: str)
+        }
+    }
+    
     
     func configWebView(){
         let config = WKWebViewConfiguration()
@@ -62,6 +81,10 @@ class SwiftWebViewAndHTML5VC: UIViewController,WKScriptMessageHandler,WKNavigati
         let cookiecript = WKUserScript(source: "", injectionTime: .atDocumentStart, forMainFrameOnly: false)
         userContentVC.addUserScript(cookiecript)
         config.userContentController = userContentVC
+        
+        let preferences = WKPreferences()
+        preferences.javaScriptCanOpenWindowsAutomatically = true
+        config.preferences = preferences
         
         self.webView = WKWebView(frame: view.bounds, configuration: config)
         view.addSubview(self.webView)
