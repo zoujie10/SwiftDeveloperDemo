@@ -14,17 +14,17 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     typealias clickindexPathBlock = (IndexPath) -> Void
     var clickBlock : clickindexPathBlock?
     
-    var sourceArray = Array<Array<ZJ_ProductsModel>>()
+    var sourceArray = Array<WW_ProductListInfoModel>()
     let viewMdeol  = ZJ_ProductsViewModel()
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.section == 1 && indexPath.row == 1){
             //单元格的插入
-            self.sourceArray = self.viewMdeol.insertProductToList(index: indexPath.row)
+//            self.sourceArray = self.viewMdeol.insertProductToList(index: indexPath.row)
 //            tableView.insertRows(at: [indexPath], with: .automatic)//1 section时用 不用手动reloadData
             self.tableView.reloadData()
         }else if indexPath.section == 0 && indexPath.row == 2 {//删除
-            self.sourceArray = self.viewMdeol.deleteProductToList(index: indexPath.row)
+//            self.sourceArray = self.viewMdeol.deleteProductToList(index: indexPath.row)
 //            tableView.deleteRows(at: [indexPath], with: .automatic)//1 section时用 不用手动reloadData
             self.tableView.reloadData()
         }else if indexPath.section == 2 && indexPath.row == 1{
@@ -40,9 +40,9 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         var array = [String]()
         for item in self.sourceArray{
-            for items in item{
-                array.append(items.ProductName ?? "无")
-            }
+//            for items in item{
+            array.append(item.name)
+//            }
         }
         return array
     }
@@ -54,30 +54,30 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let array = self.sourceArray[section]
-        let title = array.first?.ProductName
-        return title
+//        let array = self.sourceArray[section]
+//        let title = array.first?.ProductName
+        return "Product List"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.sourceArray.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sourceArray[section].count
+        return self.sourceArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let cell : ZJ_ProductsTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellID)! as! ZJ_ProductsTableViewCell
-        let array = self.sourceArray[indexPath.section]
+        let model : WW_ProductListInfoModel = self.sourceArray[indexPath.row]
       
-        cell.titleLabel.text = array[indexPath.row].ProductName as String?
-        let str = array[indexPath.row].ProductIcon as String?
-        cell.iconImageView.image = UIImage.init(named: str!)
-        let doubelStr : Double = array[indexPath.row].productPrice! as Double
-        cell.priceLable.text = "\(doubelStr)"
-        cell.desLabel.text = array[indexPath.row].keyInfo
+        cell.titleLabel.text = model.name
+//        let str = array[indexPath.row].ProductIcon as String?
+//        cell.iconImageView.image = UIImage.init(named: str!)
+//        let doubelStr : Double = array[indexPath.row].productPrice! as Double
+        cell.priceLable.text = model.retailPrice
+        cell.desLabel.text = model.displayName
         return cell
     }
     
@@ -105,9 +105,12 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         self.tableView.snp.makeConstraints {
             $0.edges.equalTo(self)
         }
-        self.sourceArray = self.viewMdeol.rightListProducts()
+//        self.sourceArray = self.viewMdeol.rightListProducts()
     }
-    
+    func update(array : [WW_ProductListInfoModel]){
+        self.sourceArray = array
+        self.tableView.reloadData()
+    }
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
         tableView.register(ZJ_ProductsTableViewCell.classForCoder(), forCellReuseIdentifier:self.cellID)

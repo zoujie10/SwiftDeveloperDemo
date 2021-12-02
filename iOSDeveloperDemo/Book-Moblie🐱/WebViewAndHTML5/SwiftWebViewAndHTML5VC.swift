@@ -13,7 +13,7 @@ import WebKit
 //2.加载HTML字符串 和GIF动画
 //3.加载本地网页
 //4.回调原生程序
-//
+
 
 //单例
 class SwiftProcessPool {
@@ -27,7 +27,15 @@ class SwiftWebViewAndHTML5VC: UIViewController,WKScriptMessageHandler,WKNavigati
     //MARK:Delegate
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print(message.name)
+        if(message.name == "isHandLogin"){
+            if message.body as! Bool == true{
+                self.navigationController?.popViewController(animated: true)
+            }else{
+                self.webView.reload()
+            }
+        }
     }
+    
     
     
     var webView = WKWebView()

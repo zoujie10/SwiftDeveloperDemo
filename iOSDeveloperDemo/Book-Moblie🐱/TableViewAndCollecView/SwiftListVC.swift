@@ -22,17 +22,19 @@ class SwiftListVC: UIViewController {
     func request(){
         self.viewModel.requestLeftTag()
         self.viewModel.dataComplete = {
-            var array = [String]()
-            for item : categoryInfoItemModel in self.viewModel.tagsArray{
-                array.append(item.displayName)
-            }
+            let array:[categoryInfoItemModel] = self.viewModel.tagsArray
+
             self.leftView.update(array:array)
+        }
+        self.viewModel.dataProductComplete = {
+            let source : [WW_ProductListInfoModel] = self.viewModel.productsArray
+            self.rightView.update(array: source)
         }
     }
     
     func creatUI(){
         self.view.addSubview(self.leftView)
-        self.view.addSubview(self.rigView)
+        self.view.addSubview(self.rightView)
         self.view.addSubview(self.rigCollectionView)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(changeRightView))
@@ -42,7 +44,7 @@ class SwiftListVC: UIViewController {
             $0.width.equalTo(120)
         }
         
-        self.rigView.snp.makeConstraints {
+        self.rightView.snp.makeConstraints {
             $0.right.top.bottom.equalTo(self.view)
             $0.width.equalTo(self.view.frame.width - 120)
         }
@@ -54,9 +56,11 @@ class SwiftListVC: UIViewController {
         
         self.leftView.clickBlock = { IndexPath in
             print(IndexPath)
+            let model : categoryInfoItemModel = self.viewModel.tagsArray[IndexPath.row]
+            self.viewModel.requestRightByMoya(catkey: model.code)
         }
         
-        self.rigView.clickBlock = { IndexPath in
+        self.rightView.clickBlock = { IndexPath in
             if(IndexPath.section == 2 && IndexPath.row == 1){
                 let vc = SwiftTableViewEditVC()
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -64,7 +68,7 @@ class SwiftListVC: UIViewController {
         }
     }
     @objc func changeRightView(){
-        self.rigView.isHidden = !self.rigView.isHidden
+        self.rightView.isHidden = !self.rightView.isHidden
         self.rigCollectionView.isHidden = !self.rigCollectionView.isHidden
     }
     
@@ -74,7 +78,7 @@ class SwiftListVC: UIViewController {
         return leftView
     }()
     
-    lazy var rigView : ZJ_RightTableView = {
+    lazy var rightView : ZJ_RightTableView = {
         let rightView = ZJ_RightTableView()
         rightView.isHidden = false
         return rightView

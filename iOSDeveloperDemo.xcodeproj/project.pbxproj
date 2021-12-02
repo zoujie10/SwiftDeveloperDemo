@@ -68,6 +68,10 @@
 		844F3ED4274CDADB006762D0 /* ww_launchscreen_centimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */; };
 		844F3EDD2753CD65006762D0 /* AnotherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F3EDC2753CD65006762D0 /* AnotherStoryboard.storyboard */; };
 		844F3EDF2753D16C006762D0 /* OtherStoryBoardSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EDE2753D16C006762D0 /* OtherStoryBoardSecondVC.swift */; };
+		844F3EE12758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE02758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift */; };
+		844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */; };
+		844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */; };
+		844F3EE72758B1C5006762D0 /* MoYaNetManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -239,6 +243,10 @@
 		844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_centimg.png; sourceTree = "<group>"; };
 		844F3EDC2753CD65006762D0 /* AnotherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnotherStoryboard.storyboard; sourceTree = "<group>"; };
 		844F3EDE2753D16C006762D0 /* OtherStoryBoardSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherStoryBoardSecondVC.swift; sourceTree = "<group>"; };
+		844F3EE02758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_ProductsRightViewModel.swift; sourceTree = "<group>"; };
+		844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationRightProductsModel.swift; sourceTree = "<group>"; };
+		844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationLeftTagsModel.swift; sourceTree = "<group>"; };
+		844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoYaNetManage.swift; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -756,6 +764,8 @@
 			isa = PBXGroup;
 			children = (
 				84710DCC272F925C00A40507 /* ZJ_ProductsViewModel.swift */,
+				844F3EE02758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift */,
+				844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -764,6 +774,8 @@
 			isa = PBXGroup;
 			children = (
 				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
+				844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */,
+				844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1216,8 +1228,10 @@
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */,
+				844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */,
 				84710DAB2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift in Sources */,
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
+				844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */,
@@ -1236,6 +1250,7 @@
 				84710DE127382BC400A40507 /* SwiftDataPersistenceVC.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
+				844F3EE12758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
 				845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */,
 				84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */,
@@ -1275,6 +1290,7 @@
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */,
+				844F3EE72758B1C5006762D0 /* MoYaNetManage.swift in Sources */,
 				4F02FD9822AE2CC700B8CB35 /* subEatLine.swift in Sources */,
 				84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */,
 				8493878F262295A200C2914C /* UIViewAndCALayerVC.swift in Sources */,

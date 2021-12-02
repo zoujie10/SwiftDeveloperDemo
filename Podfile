@@ -1,5 +1,5 @@
 target 'iOSDeveloperDemo' do
-	platform :ios, '12.0'
+	platform :ios, '13.0'
 	pod 'SnapKit'
 	pod 'Alamofire'
   pod 'Charts'
@@ -7,6 +7,7 @@ target 'iOSDeveloperDemo' do
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
   pod 'Moya'
+  pod 'Kingfisher'
   #	pod 'RealmSwift'
 	use_frameworks!
 end

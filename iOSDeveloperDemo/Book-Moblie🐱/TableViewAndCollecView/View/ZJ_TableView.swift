@@ -10,7 +10,7 @@ import UIKit
 
 class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
     let cellID = "cellId"
-    var sourceArray = Array<String>()
+    var sourceArray = [categoryInfoItemModel]()
    
     typealias clickindexPathBlock = (IndexPath) -> Void
     var clickBlock : clickindexPathBlock?
@@ -21,7 +21,8 @@ class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellID)!
-        cell.textLabel?.text = self.sourceArray[indexPath.row]
+        let model : categoryInfoItemModel = self.sourceArray[indexPath.row]
+        cell.textLabel?.text = model.displayName
         cell.backgroundColor = UIColor.init(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
         cell.selectedBackgroundView?.backgroundColor = UIColor.white
         if(cell.isSelected){
@@ -55,7 +56,7 @@ class ZJ_TableView: UIView,UITableViewDelegate,UITableViewDataSource {
         }
     }
     
-    func update(array : [String]){
+    func update(array : [categoryInfoItemModel]){
         self.sourceArray = array
         self.tableView.reloadData()
     }

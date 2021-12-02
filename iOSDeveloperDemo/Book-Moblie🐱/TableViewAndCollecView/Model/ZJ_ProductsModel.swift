@@ -21,4 +21,6 @@ class ZJ_ProductsModel: NSObject {
     var basicsInfo : String?
    //价格
     var productPrice : Double?
+    //图片地址
+    var listImages : String?
 }
