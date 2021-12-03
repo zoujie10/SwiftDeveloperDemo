@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyB-gH-Cw1"/>
                         <viewControllerLayoutGuide type="bottom" id="6u1-uj-5YE"/>
@@ -1345,7 +1345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9H-5l-2Ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-1535"/>
+            <point key="canvasLocation" x="1551" y="-1535"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gTv-aQ-9e8">

@@ -85,15 +85,20 @@ class ZJ_ProductsViewModel: NSObject {
         return self.sourceArray
     }
     
+    //设置选择cell
+    func selectedAtRowCell(row : NSInteger){
+        for i in 0..<self.tagsArray.count{
+            self.tagsArray[i].isSelected = false
+            self.tagsArray[row].isSelected = true
+        }
+    }
+    
     func requestLeftTag(){
         let headers : HTTPHeaders = [
             "Content-Type":"application/json"
         ]
-//        areas = LB;
-//        channelId = B06022853001;
-//        isWholeSale = 1;
-        let param = ["channelId":"B06022853001"]
-   
+        var param = ["channelId":"S09033033001"]
+        param["areas"] = "DN"
         //POST
         Alamofire.request(WW_CategoryTagList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
             
@@ -103,6 +108,7 @@ class ZJ_ProductsViewModel: NSObject {
             debugPrint(response.result)//枚举  Success value有值。Failure value nil
             debugPrint(response.data as Any)//二级制数据
             debugPrint(response.timeline)//请求到收到响应的整个时间
+            
             let productModel = try! JSONDecoder().decode(TagsModel.self, from: response.data!)
             let model :  categoryInfoModel = productModel.data
             self.tagsArray = model.categoryInfo
@@ -111,52 +117,31 @@ class ZJ_ProductsViewModel: NSObject {
     }
     
     func requestRightByMoya(catkey:String){
-//        NetworkProvider.request(NetworkAPI.CategoryProductsList(catkey: catkey)) { result in
-//
-//            switch result {
-//                case let .success(moyaResponse):
-//                    let data = moyaResponse.data
-//                    let statusCode = moyaResponse.statusCode
-//                    // do something with the response data or statusCode
-//                case let .failure(error): break
-//            }
-////            if let response = result.value {
-////                // 解析数据
-////                print(response)
-//////                let jsonDic = try! response.mapJSON() as! NSDictionary
-////                let productModel = try! JSONDecoder().decode(WW_ProductsListModel.self, from: response.data)
-////                let model :  WW_ProductsInfoModel = productModel.data
-////                self.productsArray = model.commodityInfo
-////                self.dataProductComplete!()
-////            }
-//        }
-        
-        
-        
-        let headers : HTTPHeaders = [
-            "Content-Type":"application/json"
-        ]
-//        areas = LB;
-//        channelId = B06022853001;
-//        isWholeSale = 1;
-        var param = ["channelId":"B06022853001"]
-        param["catkey"] = catkey
-        param["channelId"] = "S09033033001"
-        param["areas"] = "DN"
-        param["pageSize"] = "10000"
-        //POST
-        Alamofire.request(WW_CategoryProductsList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
-            
-            debugPrint(response)
-            debugPrint(response.request as Any)//发送到服务端的请求
-            debugPrint(response.response as Any)//服务端返回的响应
-            debugPrint(response.result)//枚举  Success value有值。Failure value nil
-            debugPrint(response.data as Any)//二级制数据
-            debugPrint(response.timeline)//请求到收到响应的整个时间
-            let productModel :WW_ProductsListModel = try! JSONDecoder().decode(WW_ProductsListModel.self, from: response.data!)
-            let model :  WW_ProductsInfoModel = productModel.data
-            self.productsArray = model.commodityInfo
-            self.dataProductComplete!()
+    
+        NetworkProvider.request(NetworkAPI.CategoryProductsList(catkey: catkey)) { result in
+
+            switch result {
+                case .success(_):
+                    guard let data = result.value?.data  else { return }
+                    let dataAsString = String(data: data, encoding: .utf8)
+                    print("responese ---- \(String(describing: dataAsString))")
+
+                    do {
+                        /**
+                         model 数据类型不对应 解析报错:
+                         typeMismatch(Swift.String，Swift.DecodingError.Context(codingPath:[CodingKeys（stringValue:“error”，intValue:nil）]，debugDescription:“应解码字符串，但找到字典instead."，underlyingError:nil））
+                         */
+                        let myDecoder = JSONDecoder()
+                        let productModel = try myDecoder.decode(WW_ProductsListModel?.self, from: data)
+                        let model :  WW_ProductsInfoModel = productModel!.data!
+                        self.productsArray = model.commodityInfo
+                        self.dataProductComplete!()
+                    } catch let error {
+                        print("Failed to create JSON with error: ", error)
+                    }
+                case .failure(_): break
+            }
         }
+        
     }
 }

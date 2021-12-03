@@ -12,6 +12,7 @@ struct categoryInfoItemModel : Codable{
     var code : String
     var displayName : String
     var smallImages : String
+    var isSelected : Bool?
 }
 struct categoryInfoModel : Codable {
     var categoryInfo : [categoryInfoItemModel]

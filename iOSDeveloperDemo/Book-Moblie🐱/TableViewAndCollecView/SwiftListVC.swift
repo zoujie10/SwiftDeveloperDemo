@@ -22,8 +22,9 @@ class SwiftListVC: UIViewController {
     func request(){
         self.viewModel.requestLeftTag()
         self.viewModel.dataComplete = {
+            self.viewModel.selectedAtRowCell(row: 0)
             let array:[categoryInfoItemModel] = self.viewModel.tagsArray
-
+            
             self.leftView.update(array:array)
         }
         self.viewModel.dataProductComplete = {
@@ -56,6 +57,9 @@ class SwiftListVC: UIViewController {
         
         self.leftView.clickBlock = { IndexPath in
             print(IndexPath)
+            self.viewModel.selectedAtRowCell(row: IndexPath.row)
+            self.leftView.update(array: self.viewModel.tagsArray)
+            
             let model : categoryInfoItemModel = self.viewModel.tagsArray[IndexPath.row]
             self.viewModel.requestRightByMoya(catkey: model.code)
         }

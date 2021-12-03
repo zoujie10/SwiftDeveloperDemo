@@ -35,16 +35,18 @@ extension NetworkAPI:TargetType{
         return .post
     }
     
-    // 请求任务事件（这里附带上参数）
+    // 请求任务事件
     public var task: Task {
         var parmeters: [String : Any] = [:]
         switch self {
-                
+                //MARK:传参 注意大小下 也要区分
             case .CategoryProductsList(let catkey):
-                parmeters["catkey"] = catkey
+                parmeters["catKey"] = catkey
                 parmeters["channelId"] = "S09033033001"
+                parmeters["ceoStatus"] = "1"
                 parmeters["areas"] = "DN"
                 parmeters["pageSize"] = "10000"
+                parmeters["page"] = 1
                 return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
         }
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
 
@@ -37,21 +38,21 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     
     //索引目录
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        var array = [String]()
-        for item in self.sourceArray{
-//            for items in item{
-            array.append(item.name)
-//            }
-        }
-        return array
-    }
+//    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        var array = [String]()
+//        for item in self.sourceArray{
+////            for items in item{
+//            array.append(item.name)
+////            }
+//        }
+//        return array
+//    }
     
     //点击索引
-    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        print("click index--\(index)")
-        return index
-    }
+//    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+//        print("click index--\(index)")
+//        return index
+//    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        let array = self.sourceArray[section]
@@ -72,12 +73,14 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         let cell : ZJ_ProductsTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellID)! as! ZJ_ProductsTableViewCell
         let model : WW_ProductListInfoModel = self.sourceArray[indexPath.row]
       
-        cell.titleLabel.text = model.name
-//        let str = array[indexPath.row].ProductIcon as String?
-//        cell.iconImageView.image = UIImage.init(named: str!)
+        cell.titleLabel.text = model.template.name
+        let str = model.template.listImages
+        cell.iconImageView.kf.setImage(with: URL.init(string: str))
+        cell.iconImageView.kf.indicatorType = .activity
 //        let doubelStr : Double = array[indexPath.row].productPrice! as Double
-        cell.priceLable.text = model.retailPrice
-        cell.desLabel.text = model.displayName
+
+        cell.priceLable.text = String(model.template.origPrice)
+        cell.desLabel.text = model.template.displayName
         return cell
     }
     
@@ -105,7 +108,6 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         self.tableView.snp.makeConstraints {
             $0.edges.equalTo(self)
         }
-//        self.sourceArray = self.viewMdeol.rightListProducts()
     }
     func update(array : [WW_ProductListInfoModel]){
         self.sourceArray = array
