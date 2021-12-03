@@ -108,11 +108,14 @@ class ZJ_ProductsViewModel: NSObject {
             debugPrint(response.result)//枚举  Success value有值。Failure value nil
             debugPrint(response.data as Any)//二级制数据
             debugPrint(response.timeline)//请求到收到响应的整个时间
-            
-            let productModel = try! JSONDecoder().decode(TagsModel.self, from: response.data!)
-            let model :  categoryInfoModel = productModel.data
-            self.tagsArray = model.categoryInfo
-            self.dataComplete!()
+            do {
+                let productModel = try? JSONDecoder().decode(TagsModel.self, from: response.data!)
+                let model :  categoryInfoModel = productModel!.data
+                self.tagsArray = model.categoryInfo
+                self.dataComplete!()
+            }catch let error {
+                print("Failed to create JSON with error: ", error)
+            }
         }
     }
     

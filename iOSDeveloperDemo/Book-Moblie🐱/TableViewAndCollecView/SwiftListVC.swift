@@ -17,6 +17,7 @@ class SwiftListVC: UIViewController {
         self.view.backgroundColor = UIColor.white
         request()
         creatUI()
+        creatNav()
     }
     
     func request(){
@@ -32,7 +33,12 @@ class SwiftListVC: UIViewController {
             self.rightView.update(array: source)
         }
     }
-    
+    func creatNav(){
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3"), style: .plain, target: self, action: #selector(click_back))
+    }
+    @objc func click_back(){
+        self.navigationController?.popViewController(animated: true)
+    }
     func creatUI(){
         self.view.addSubview(self.leftView)
         self.view.addSubview(self.rightView)
