@@ -72,6 +72,7 @@
 		844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */; };
 		844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */; };
 		844F3EE72758B1C5006762D0 /* MoYaNetManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */; };
+		844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EFD275CEF05006762D0 /* SwiftReleaseIPAVC.swift */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -247,6 +248,7 @@
 		844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationRightProductsModel.swift; sourceTree = "<group>"; };
 		844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationLeftTagsModel.swift; sourceTree = "<group>"; };
 		844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoYaNetManage.swift; sourceTree = "<group>"; };
+		844F3EFD275CEF05006762D0 /* SwiftReleaseIPAVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReleaseIPAVC.swift; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -528,6 +530,14 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
+		844F3EFC275CEE9F006762D0 /* ReleaseAndIPA */ = {
+			isa = PBXGroup;
+			children = (
+				844F3EFD275CEF05006762D0 /* SwiftReleaseIPAVC.swift */,
+			);
+			path = ReleaseAndIPA;
+			sourceTree = "<group>";
+		};
 		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +563,7 @@
 				842991DC2747E9B200A50077 /* Localization */,
 				842991D22742A98F00A50077 /* SafeAndEncryption */,
 				844F3EDB2753CBFE006762D0 /* StoryBoard */,
+				844F3EFC275CEE9F006762D0 /* ReleaseAndIPA */,
 			);
 			path = "Book-Moblie🐱";
 			sourceTree = "<group>";
@@ -1276,6 +1287,7 @@
 				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
+				844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */,
