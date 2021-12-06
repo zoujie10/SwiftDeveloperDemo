@@ -8,7 +8,7 @@
 
 import UIKit
 //示例弹框
-class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class WWAfterSaleDisplayPicEgVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
     typealias clickBtnBlock = () -> Void
     var clickBlock : clickBtnBlock?
     
@@ -50,20 +50,21 @@ class WWAfterSaleDisplayPicEgVC: UIViewController,UITableViewDelegate,UITableVie
             $0.width.equalTo(340)
         }
         
+        self.knowBtn.snp.makeConstraints {
+            $0.bottom.equalTo(self.operateView).offset(-15);
+            $0.centerX.equalTo(self.operateView)
+            $0.width.equalTo(160)
+        }
+        
         self.picTableView.snp.makeConstraints {
             $0.top.equalTo(self.operateView.snp_top).offset(20)
-            $0.bottom.equalTo(self.operateView.snp_bottom).offset(-20)
+            $0.bottom.equalTo(self.knowBtn.snp_top).offset(-15)
 //            $0.left.equalTo(self.operateView).offset(20)
 //            $0.right.equalTo(self.operateView).offset(-20)
             $0.width.equalTo(280)
             $0.centerX.equalTo(self.operateView)
         }
         
-        self.knowBtn.snp.makeConstraints {
-            $0.bottom.equalTo(self.operateView).offset(-15);
-            $0.centerX.equalTo(self.operateView)
-            $0.width.equalTo(160)
-        }
     }
  
     @objc func knowMethod(){

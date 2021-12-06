@@ -8,7 +8,7 @@
 
 import UIKit
 //分类 VC
-class WWClassificationVC: UIViewController {
+class WWClassificationListVC: WW_MainBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

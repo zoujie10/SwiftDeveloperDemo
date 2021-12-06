@@ -44,7 +44,7 @@
 		842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F227494A4C00A50077 /* SwiftThreadVC.swift */; };
 		842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */; };
 		842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F6274A4BE300A50077 /* SwiftGCDVC.swift */; };
-		842991F9274A8F7B00A50077 /* WWClassificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WWClassificationVC.swift */; };
+		842991F9274A8F7B00A50077 /* WWClassificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WWClassificationListVC.swift */; };
 		842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
@@ -73,6 +73,11 @@
 		844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */; };
 		844F3EE72758B1C5006762D0 /* MoYaNetManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */; };
 		844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EFD275CEF05006762D0 /* SwiftReleaseIPAVC.swift */; };
+		844F3F00275DAEBC006762D0 /* WW_MainBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */; };
+		844F3F02275DB5E2006762D0 /* WW_MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F01275DB5E2006762D0 /* WW_MainVC.swift */; };
+		844F3F04275DBAFE006762D0 /* WW_AfterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */; };
+		844F3F06275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F05275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift */; };
+		844F3F08275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F07275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -217,7 +222,7 @@
 		842991F227494A4C00A50077 /* SwiftThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThreadVC.swift; sourceTree = "<group>"; };
 		842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOperationVC.swift; sourceTree = "<group>"; };
 		842991F6274A4BE300A50077 /* SwiftGCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGCDVC.swift; sourceTree = "<group>"; };
-		842991F8274A8F7B00A50077 /* WWClassificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWClassificationVC.swift; sourceTree = "<group>"; };
+		842991F8274A8F7B00A50077 /* WWClassificationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWClassificationListVC.swift; sourceTree = "<group>"; };
 		842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSearchTitleView.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -249,6 +254,11 @@
 		844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationLeftTagsModel.swift; sourceTree = "<group>"; };
 		844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoYaNetManage.swift; sourceTree = "<group>"; };
 		844F3EFD275CEF05006762D0 /* SwiftReleaseIPAVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReleaseIPAVC.swift; sourceTree = "<group>"; };
+		844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_MainBaseVC.swift; sourceTree = "<group>"; };
+		844F3F01275DB5E2006762D0 /* WW_MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_MainVC.swift; sourceTree = "<group>"; };
+		844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterDetailVC.swift; sourceTree = "<group>"; };
+		844F3F05275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationLeftTagsViewModel.swift; sourceTree = "<group>"; };
+		844F3F07275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationRightProductsViewModel.swift; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -659,8 +669,11 @@
 		845EC802271FECE50006651E /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
+				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
+				842991F8274A8F7B00A50077 /* WWClassificationListVC.swift */,
+				844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */,
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
-				842991F8274A8F7B00A50077 /* WWClassificationVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 			);
 			path = VC;
@@ -678,6 +691,9 @@
 		845EC804271FECEF0006651E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */,
+				844F3F05275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift */,
+				844F3F07275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -776,7 +792,6 @@
 			children = (
 				84710DCC272F925C00A40507 /* ZJ_ProductsViewModel.swift */,
 				844F3EE02758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift */,
-				844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -785,8 +800,8 @@
 			isa = PBXGroup;
 			children = (
 				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
-				844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */,
 				844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */,
+				844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1218,7 +1233,7 @@
 				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */,
-				842991F9274A8F7B00A50077 /* WWClassificationVC.swift in Sources */,
+				842991F9274A8F7B00A50077 /* WWClassificationListVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */,
@@ -1246,6 +1261,7 @@
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */,
+				844F3F06275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
@@ -1260,6 +1276,7 @@
 				84710DA727245FD200A40507 /* SwiftCocoaPodsVC.swift in Sources */,
 				84710DE127382BC400A40507 /* SwiftDataPersistenceVC.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
+				844F3F08275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
 				844F3EE12758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
@@ -1269,6 +1286,7 @@
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
+				844F3F02275DB5E2006762D0 /* WW_MainVC.swift in Sources */,
 				84710DDE2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift in Sources */,
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				84710DBF272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift in Sources */,
@@ -1295,6 +1313,7 @@
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,
+				844F3F04275DBAFE006762D0 /* WW_AfterDetailVC.swift in Sources */,
 				84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
 				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,
@@ -1313,6 +1332,7 @@
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
+				844F3F00275DAEBC006762D0 /* WW_MainBaseVC.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
 				844F3EDF2753D16C006762D0 /* OtherStoryBoardSecondVC.swift in Sources */,
 				848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */,

@@ -3,12 +3,12 @@ target 'iOSDeveloperDemo' do
 	pod 'SnapKit'
 	pod 'Alamofire'
   pod 'Charts'
-  pod 'SwiftyJSON'
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
   pod 'Moya'
   pod 'Kingfisher'
   #	pod 'RealmSwift'
+  # pod 'SwiftyJSON'
 	use_frameworks!
 end
 

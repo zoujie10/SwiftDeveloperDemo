@@ -9,24 +9,29 @@
 import UIKit
 import Moya
 
+
 let NetworkProvider = MoyaProvider<NetworkAPI>()
 
 enum NetworkAPI {
 
     case CategoryProductsList(catkey:String)
+    case CategoryTagsList(params : [String:Any])
 }
 extension NetworkAPI:TargetType{
     public var baseURL: URL{
         switch self {
             case .CategoryProductsList:
                 return URL(string:WW_CategoryProductsList_Url)!
+            case .CategoryTagsList:
+                return URL(string: WW_CategoryTagList_Url)!
         }
     }
     
     // 对应的不同API path
     var path: String {
         switch self {
-            case .CategoryProductsList: return ""
+            case .CategoryProductsList,.CategoryTagsList: return ""
+           
         }
     }
     
@@ -37,16 +42,18 @@ extension NetworkAPI:TargetType{
     
     // 请求任务事件
     public var task: Task {
-        var parmeters: [String : Any] = [:]
+        var parmetersInner: [String : Any] = [:]
         switch self {
                 //MARK:传参 注意大小下 也要区分
             case .CategoryProductsList(let catkey):
-                parmeters["catKey"] = catkey
-                parmeters["channelId"] = "S09033033001"
-                parmeters["ceoStatus"] = "1"
-                parmeters["areas"] = "DN"
-                parmeters["pageSize"] = "10000"
-                parmeters["page"] = 1
+                parmetersInner["catKey"] = catkey
+                parmetersInner["channelId"] = "S09033033001"
+                parmetersInner["ceoStatus"] = "1"
+                parmetersInner["areas"] = "DN"
+                parmetersInner["pageSize"] = "10000"
+                parmetersInner["page"] = 1
+                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+            case .CategoryTagsList(let parmeters):
                 return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
         }
     }

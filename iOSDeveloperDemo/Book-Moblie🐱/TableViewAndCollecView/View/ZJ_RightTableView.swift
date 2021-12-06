@@ -54,11 +54,11 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
 //        return index
 //    }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let array = self.sourceArray[section]
-//        let title = array.first?.ProductName
-        return "Product List"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+////        let array = self.sourceArray[section]
+////        let title = array.first?.ProductName
+//        return "Product List"
+//    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -74,12 +74,11 @@ class ZJ_RightTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         let model : WW_ProductListInfoModel = self.sourceArray[indexPath.row]
       
         cell.titleLabel.text = model.template.name
-        let str = model.template.listImages
+        let str = model.template.listImages ?? " "
         cell.iconImageView.kf.setImage(with: URL.init(string: str))
         cell.iconImageView.kf.indicatorType = .activity
-//        let doubelStr : Double = array[indexPath.row].productPrice! as Double
-
-        cell.priceLable.text = String(model.template.origPrice)
+//        cell.priceLable.text = String(format: "￥%.2f", model.template.origPrice!)
+        cell.priceLable.text = "￥\(model.template.origPrice ?? "")" 
         cell.desLabel.text = model.template.displayName
         return cell
     }

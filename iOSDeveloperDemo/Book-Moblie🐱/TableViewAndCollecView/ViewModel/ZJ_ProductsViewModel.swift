@@ -137,7 +137,7 @@ class ZJ_ProductsViewModel: NSObject {
                         let myDecoder = JSONDecoder()
                         let productModel = try myDecoder.decode(WW_ProductsListModel?.self, from: data)
                         let model :  WW_ProductsInfoModel = productModel!.data!
-                        self.productsArray = model.commodityInfo
+                        self.productsArray = model.commodityInfo ?? [WW_ProductListInfoModel]()
                         self.dataProductComplete!()
                     } catch let error {
                         print("Failed to create JSON with error: ", error)
