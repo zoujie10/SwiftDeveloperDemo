@@ -45,7 +45,7 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
-            
+            self.navigationController?.pushViewController(WW_ClassificationListVC(), animated: true)
         }else if indexPath.row == 1{
             self.navigationController?.pushViewController(WW_AfterDetailVC(), animated: true)
         }else if indexPath.row == 2{

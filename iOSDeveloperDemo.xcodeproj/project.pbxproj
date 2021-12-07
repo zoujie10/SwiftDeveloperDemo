@@ -44,7 +44,7 @@
 		842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F227494A4C00A50077 /* SwiftThreadVC.swift */; };
 		842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */; };
 		842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F6274A4BE300A50077 /* SwiftGCDVC.swift */; };
-		842991F9274A8F7B00A50077 /* WWClassificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WWClassificationListVC.swift */; };
+		842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */; };
 		842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
@@ -78,6 +78,10 @@
 		844F3F04275DBAFE006762D0 /* WW_AfterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */; };
 		844F3F06275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F05275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift */; };
 		844F3F08275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F07275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift */; };
+		844F3F0A275F075E006762D0 /* WW_TagsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F09275F075E006762D0 /* WW_TagsTableView.swift */; };
+		844F3F0C275F0D0F006762D0 /* WW_RightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F0B275F0D0F006762D0 /* WW_RightTableView.swift */; };
+		844F3F0E275F3243006762D0 /* WW_ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F0D275F3243006762D0 /* WW_ProductsTableViewCell.swift */; };
+		844F3F10275F3740006762D0 /* WW_LeftTagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3F0F275F3740006762D0 /* WW_LeftTagsTableViewCell.swift */; };
 		84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C4E232D41CC003F9F6F /* MapKitViewController.swift */; };
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
@@ -222,7 +226,7 @@
 		842991F227494A4C00A50077 /* SwiftThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThreadVC.swift; sourceTree = "<group>"; };
 		842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOperationVC.swift; sourceTree = "<group>"; };
 		842991F6274A4BE300A50077 /* SwiftGCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGCDVC.swift; sourceTree = "<group>"; };
-		842991F8274A8F7B00A50077 /* WWClassificationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWClassificationListVC.swift; sourceTree = "<group>"; };
+		842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationListVC.swift; sourceTree = "<group>"; };
 		842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSearchTitleView.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -259,6 +263,10 @@
 		844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterDetailVC.swift; sourceTree = "<group>"; };
 		844F3F05275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationLeftTagsViewModel.swift; sourceTree = "<group>"; };
 		844F3F07275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationRightProductsViewModel.swift; sourceTree = "<group>"; };
+		844F3F09275F075E006762D0 /* WW_TagsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_TagsTableView.swift; sourceTree = "<group>"; };
+		844F3F0B275F0D0F006762D0 /* WW_RightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RightTableView.swift; sourceTree = "<group>"; };
+		844F3F0D275F3243006762D0 /* WW_ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		844F3F0F275F3740006762D0 /* WW_LeftTagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_LeftTagsTableViewCell.swift; sourceTree = "<group>"; };
 		84516C4E232D41CC003F9F6F /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
@@ -671,7 +679,7 @@
 			children = (
 				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
-				842991F8274A8F7B00A50077 /* WWClassificationListVC.swift */,
+				842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */,
 				844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */,
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
@@ -684,6 +692,10 @@
 			children = (
 				845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */,
 				842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */,
+				844F3F09275F075E006762D0 /* WW_TagsTableView.swift */,
+				844F3F0B275F0D0F006762D0 /* WW_RightTableView.swift */,
+				844F3F0F275F3740006762D0 /* WW_LeftTagsTableViewCell.swift */,
+				844F3F0D275F3243006762D0 /* WW_ProductsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1233,7 +1245,7 @@
 				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */,
-				842991F9274A8F7B00A50077 /* WWClassificationListVC.swift in Sources */,
+				842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */,
@@ -1242,6 +1254,7 @@
 				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */,
 				84598C10234851B900E72C8B /* NoteBL.swift in Sources */,
+				844F3F0C275F0D0F006762D0 /* WW_RightTableView.swift in Sources */,
 				848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */,
 				848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */,
 				8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */,
@@ -1303,6 +1316,7 @@
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
 				842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */,
 				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
+				844F3F0E275F3243006762D0 /* WW_ProductsTableViewCell.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */,
@@ -1325,6 +1339,8 @@
 				4F02FD9822AE2CC700B8CB35 /* subEatLine.swift in Sources */,
 				84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */,
 				8493878F262295A200C2914C /* UIViewAndCALayerVC.swift in Sources */,
+				844F3F10275F3740006762D0 /* WW_LeftTagsTableViewCell.swift in Sources */,
+				844F3F0A275F075E006762D0 /* WW_TagsTableView.swift in Sources */,
 				4F02FD9F22AF819F00B8CB35 /* IteratorClass.swift in Sources */,
 				84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,

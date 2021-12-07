@@ -24,8 +24,8 @@ class WW_ClassificationLeftTagsViewModel: NSObject {
             switch result {
                 case .success(_):
                     guard let data = result.value?.data  else { return }
-                    let dataAsString = String(data: data, encoding: .utf8)
-                    print("responese ---- \(String(describing: dataAsString))")
+//                    let dataAsString = String(data: data, encoding: .utf8)
+//                    print("responese ---- \(String(describing: dataAsString))")
     
                     let productModel = try? JSONDecoder().decode(WW_TagsModel.self, from:data)
                     let model :  WW_CategoryInfoModel = productModel!.data
@@ -36,5 +36,13 @@ class WW_ClassificationLeftTagsViewModel: NSObject {
             }
         }
     
+    }
+    
+    //设置选择cell
+    func selectedAtRowCell(row : NSInteger){
+        for i in 0..<self.tagsArray.count{
+            self.tagsArray[i].isSelected = false
+            self.tagsArray[row].isSelected = true//选中
+        }
     }
 }

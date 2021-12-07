@@ -13,6 +13,7 @@ struct WW_CategoryInfoItemModel : Codable{
     var code : String
     var displayName : String
     var smallImages : String
+    var isSelected : Bool?
 }
 
 struct WW_CategoryInfoModel : Codable {
