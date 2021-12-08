@@ -7,6 +7,8 @@ target 'iOSDeveloperDemo' do
   pod 'ObjectMapper'
   pod 'Moya'
   pod 'Kingfisher'
+  pod 'MJRefresh'
+  pod 'MBProgressHUD'
   #	pod 'RealmSwift'
   # pod 'SwiftyJSON'
 	use_frameworks!

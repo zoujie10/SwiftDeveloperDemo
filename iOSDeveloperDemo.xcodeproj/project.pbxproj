@@ -26,6 +26,8 @@
 		4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E19D228D02D70017192B /* ObserverPatternViewController.swift */; };
 		840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D87D920AD4EC600BA6A1D /* Flag.xcassets */; };
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
+		84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */; };
+		84117B752760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
 		842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */; };
@@ -205,6 +207,8 @@
 		4FC4E19D228D02D70017192B /* ObserverPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverPatternViewController.swift; sourceTree = "<group>"; };
 		840D87D920AD4EC600BA6A1D /* Flag.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Flag.xcassets; sourceTree = "<group>"; };
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
+		84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RefreshStateHeader.swift; sourceTree = "<group>"; };
+		84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RefreshAutoGifFooter.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84196BB622539CAF0088F117 /* SwiftDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftDemo.bundle; sourceTree = "<group>"; };
 		842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeviceMotionVC.swift; sourceTree = "<group>"; };
@@ -475,6 +479,15 @@
 			path = ObserverPattern;
 			sourceTree = "<group>";
 		};
+		84117B71276081CF00D8B0BB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */,
+				84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		842991AD2741506400A50077 /* WebViewAndHTML5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +679,7 @@
 		845EC801271FECC40006651E /* WWProject */ = {
 			isa = PBXGroup;
 			children = (
+				84117B71276081CF00D8B0BB /* Tools */,
 				84710DD227314DE500A40507 /* Model */,
 				845EC804271FECEF0006651E /* ViewModel */,
 				845EC803271FECEA0006651E /* View */,
@@ -1235,6 +1249,7 @@
 				84E55ABE24C8735E00A152A8 /* Events.swift in Sources */,
 				84710DD82734D90600A40507 /* WW_TagsModel.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
+				84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */,
 				849387932622968700C2914C /* UIViewControllerVC.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
@@ -1258,6 +1273,7 @@
 				848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */,
 				848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */,
 				8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */,
+				84117B752760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift in Sources */,
 				842991D82747788300A50077 /* SwiftSafeAndEncryptionVC.swift in Sources */,
 				84710DC2272C45E700A40507 /* SwiftThirdPartyVC.swift in Sources */,
 				84710DC5272C4A0F00A40507 /* AlamofireVC.swift in Sources */,
