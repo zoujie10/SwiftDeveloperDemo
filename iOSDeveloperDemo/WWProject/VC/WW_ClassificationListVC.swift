@@ -13,8 +13,8 @@ class WW_ClassificationListVC: WW_MainBaseVC {
 
     let leftViewModel = WW_ClassificationLeftTagsViewModel()
     let rightViewModel = WW_ClassificationRightProductsViewModel()
-    var header = MJRefreshGifHeader()
-    var footer = MJRefreshAutoGifFooter()
+    var header = WW_RefreshStateHeader()
+    var footer = WW_RefreshAutoGifFooter()
     var selectLeftRow = 0
     
     override func viewDidLoad() {
@@ -72,7 +72,7 @@ class WW_ClassificationListVC: WW_MainBaseVC {
         self.rightView.tableView.mj_header = header
         
         footer.setRefreshingTarget(self, refreshingAction: #selector(footerRefresh))
-        footer.isAutomaticallyRefresh = false
+//        footer.isAutomaticallyRefresh = false
         footer.stateLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         footer.stateLabel?.textColor = UIColor(red: 184/255, green: 184/255, blue: 184/255, alpha: 1)
         self.rightView.tableView.mj_footer = footer
@@ -116,29 +116,13 @@ class WW_ClassificationListVC: WW_MainBaseVC {
         }
     }
     func setHeaderTitle(productName: String){
-        let imageName = "ww_classifys_pulldown_updata_arrow"
-        let image = UIImage(named: imageName)
-        header.setImages([image!], for: .idle)
-        header.setImages([image!], for: .pulling)
-        header.setImages([image!], for: .refreshing)
-        
-        header.setTitle("拉下继续浏览 \(productName)", for: .idle)
-        header.setTitle("拉下继续浏览 \(productName)", for: .pulling)
-        header.setTitle("拉下继续浏览 \(productName)", for: .refreshing)
+        let str = "拉下继续浏览 \(productName)"
+        header.configRefreshContext(title: str)
     }
     
     func setFooterTitle(productName: String){
-        let imageName = "ww_classifys_pullup_updata_arrow"
-        let footerImage = UIImage(named:imageName)
-        
-        footer.setImages([footerImage!], for: .idle)
-        footer.setImages([footerImage!], for: .pulling)
-        footer.setImages([footerImage!], for: .refreshing)
-        footer.gifView?.isHidden = false
-        footer.setTitle("上拉继续浏览 \(productName)", for: .idle)
-        footer.setTitle("上拉继续浏览 \(productName)", for: .pulling)
-        footer.setTitle("上拉继续浏览 \(productName)", for: .refreshing)
-        footer.placeSubviews()
+        let str = "上拉继续浏览 \(productName)"
+        footer.configFooterRefreshContext(title: str)
     }
     
     @objc func headerRefresh(){
