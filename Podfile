@@ -9,6 +9,7 @@ target 'iOSDeveloperDemo' do
   pod 'Kingfisher'
   pod 'MJRefresh'
   pod 'MBProgressHUD'
+  pod 'HMSegmentedControl'
   #	pod 'RealmSwift'
   # pod 'SwiftyJSON'
 	use_frameworks!

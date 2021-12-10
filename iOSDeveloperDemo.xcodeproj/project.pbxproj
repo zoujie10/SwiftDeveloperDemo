@@ -28,6 +28,7 @@
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */; };
 		84117B752760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */; };
+		84117B7727634D0700D8B0BB /* WW_OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B7627634D0700D8B0BB /* WW_OrderListVC.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
 		842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */; };
@@ -209,6 +210,7 @@
 		840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelViewController.swift; sourceTree = "<group>"; };
 		84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RefreshStateHeader.swift; sourceTree = "<group>"; };
 		84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RefreshAutoGifFooter.swift; sourceTree = "<group>"; };
+		84117B7627634D0700D8B0BB /* WW_OrderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_OrderListVC.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84196BB622539CAF0088F117 /* SwiftDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftDemo.bundle; sourceTree = "<group>"; };
 		842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeviceMotionVC.swift; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */,
 				844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */,
+				84117B7627634D0700D8B0BB /* WW_OrderListVC.swift */,
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 			);
@@ -1294,6 +1297,7 @@
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
+				84117B7727634D0700D8B0BB /* WW_OrderListVC.swift in Sources */,
 				845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */,
 				84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,

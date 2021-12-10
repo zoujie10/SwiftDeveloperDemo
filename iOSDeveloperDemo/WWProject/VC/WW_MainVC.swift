@@ -49,7 +49,7 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
         }else if indexPath.row == 1{
             self.navigationController?.pushViewController(WW_AfterDetailVC(), animated: true)
         }else if indexPath.row == 2{
-            
+            self.navigationController?.pushViewController(WW_OrderListVC(), animated: true)
         }
     }
 
