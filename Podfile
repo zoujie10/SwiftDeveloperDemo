@@ -6,6 +6,7 @@ target 'iOSDeveloperDemo' do
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
   pod 'Moya'
+  pod 'Then'
   pod 'Kingfisher'
   pod 'MJRefresh'
   pod 'MBProgressHUD'

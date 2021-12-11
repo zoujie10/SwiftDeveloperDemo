@@ -29,6 +29,8 @@
 		84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */; };
 		84117B752760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */; };
 		84117B7727634D0700D8B0BB /* WW_OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B7627634D0700D8B0BB /* WW_OrderListVC.swift */; };
+		84117B792764C9B800D8B0BB /* WW_OrderPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B782764C9B800D8B0BB /* WW_OrderPageVC.swift */; };
+		84117B7B2764CE5500D8B0BB /* WW_OrderSingleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B7A2764CE5500D8B0BB /* WW_OrderSingleVC.swift */; };
 		84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84159564224796DE0026259B /* libsqlite3.0.tbd */; };
 		84196BB722539CAF0088F117 /* SwiftDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84196BB622539CAF0088F117 /* SwiftDemo.bundle */; };
 		842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */; };
@@ -211,6 +213,8 @@
 		84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RefreshStateHeader.swift; sourceTree = "<group>"; };
 		84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_RefreshAutoGifFooter.swift; sourceTree = "<group>"; };
 		84117B7627634D0700D8B0BB /* WW_OrderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_OrderListVC.swift; sourceTree = "<group>"; };
+		84117B782764C9B800D8B0BB /* WW_OrderPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_OrderPageVC.swift; sourceTree = "<group>"; };
+		84117B7A2764CE5500D8B0BB /* WW_OrderSingleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_OrderSingleVC.swift; sourceTree = "<group>"; };
 		84159564224796DE0026259B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		84196BB622539CAF0088F117 /* SwiftDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftDemo.bundle; sourceTree = "<group>"; };
 		842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeviceMotionVC.swift; sourceTree = "<group>"; };
@@ -698,6 +702,8 @@
 				842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */,
 				844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */,
 				84117B7627634D0700D8B0BB /* WW_OrderListVC.swift */,
+				84117B782764C9B800D8B0BB /* WW_OrderPageVC.swift */,
+				84117B7A2764CE5500D8B0BB /* WW_OrderSingleVC.swift */,
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 			);
@@ -1331,11 +1337,13 @@
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
 				845EC808271FEED90006651E /* WWAfterSalePicEgCell.swift in Sources */,
+				84117B7B2764CE5500D8B0BB /* WW_OrderSingleVC.swift in Sources */,
 				842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */,
 				4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
 				842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */,
 				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
+				84117B792764C9B800D8B0BB /* WW_OrderPageVC.swift in Sources */,
 				844F3F0E275F3243006762D0 /* WW_ProductsTableViewCell.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
