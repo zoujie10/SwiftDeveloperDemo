@@ -53,6 +53,7 @@ class WW_OrderPageVC: WW_MainBaseVC {
             let direction:UIPageViewController.NavigationDirection = currentSelectIndex > index ? .reverse : .forward
             pageVC.setViewControllers(target, direction: direction, animated: false) { [weak self] (finish) in
                 self?.currentSelectIndex = index
+                
             }
         }
     }
