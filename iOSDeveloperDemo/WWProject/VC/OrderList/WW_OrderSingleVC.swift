@@ -20,10 +20,10 @@ class WW_OrderSingleVC: WW_MainBaseVC {
 
     func configUI(){
         view.addSubview(self.tableView)
-
+       
         self.tableView.snp.makeConstraints { make in
             make.left.top.right.equalTo(view)
-            make.height.equalTo(300)
+            make.height.equalTo(UIScreen.main.bounds.size.height - 130)
         }
     }
     
@@ -35,7 +35,7 @@ class WW_OrderSingleVC: WW_MainBaseVC {
     
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier:"myCell")
+        tableView.register(WW_OrderListCell.classForCoder(), forCellReuseIdentifier:"myCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
@@ -59,11 +59,11 @@ extension WW_OrderSingleVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = String(index)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! WW_OrderListCell
+        cell.reportPriceLabel.text = String(self.index)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 250
     }
 }

@@ -19,7 +19,6 @@ class WW_OrderListVC: WW_MainBaseVC {
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
         configUI()
-        
     }
     
 
@@ -42,7 +41,7 @@ class WW_OrderListVC: WW_MainBaseVC {
     
     
     private lazy var pageVC: WW_OrderPageVC = {
-//        var vcs: [WW_OrderSingleVC] = []
+
         for _ in 0...2 {
             let vc = WW_OrderSingleVC()
             vcs.append(WW_OrderSingleVC())
