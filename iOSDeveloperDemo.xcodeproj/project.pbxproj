@@ -157,6 +157,9 @@
 		84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */; };
 		84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BD22DB3633001AC087 /* JSONParser.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
+		84DAA51A2768743E00A97694 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA5192768743E00A97694 /* Global.swift */; };
+		84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */; };
+		84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51E2768817B00A97694 /* UIColorExtension.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
 		84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BE020A02D390031DEEE /* HomeVC.swift */; };
 		84E37BE420A02D390031DEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE220A02D390031DEEE /* Main.storyboard */; };
@@ -348,6 +351,9 @@
 		84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesXMLParser.swift; sourceTree = "<group>"; };
 		84D305BD22DB3633001AC087 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		84DAA5192768743E00A97694 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Global.swift; path = iOSDeveloperDemo/WWProject/Global.swift; sourceTree = SOURCE_ROOT; };
+		84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BDInformOrderListModel.swift; sourceTree = "<group>"; };
+		84DAA51E2768817B00A97694 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E37BDE20A02D390031DEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E37BE020A02D390031DEEE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -714,6 +720,7 @@
 		845EC801271FECC40006651E /* WWProject */ = {
 			isa = PBXGroup;
 			children = (
+				84DAA51D2768816300A97694 /* Extension */,
 				84117B71276081CF00D8B0BB /* Tools */,
 				84710DD227314DE500A40507 /* Model */,
 				845EC804271FECEF0006651E /* ViewModel */,
@@ -732,6 +739,7 @@
 				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
+				84DAA5192768743E00A97694 /* Global.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -864,6 +872,7 @@
 				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
 				844F3EE42758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift */,
 				844F3EE22758B06F006762D0 /* WW_ClassificationRightProductsModel.swift */,
+				84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1004,6 +1013,14 @@
 				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
 			);
 			path = OlympicProject;
+			sourceTree = "<group>";
+		};
+		84DAA51D2768816300A97694 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84DAA51E2768817B00A97694 /* UIColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		84E37BD220A02D390031DEEE = {
@@ -1289,6 +1306,7 @@
 				84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */,
 				849387932622968700C2914C /* UIViewControllerVC.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
+				84DAA51A2768743E00A97694 /* Global.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
@@ -1391,8 +1409,10 @@
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */,
+				84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */,
 				844F3EE72758B1C5006762D0 /* MoYaNetManage.swift in Sources */,
 				4F02FD9822AE2CC700B8CB35 /* subEatLine.swift in Sources */,
+				84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */,
 				84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */,
 				8493878F262295A200C2914C /* UIViewAndCALayerVC.swift in Sources */,
 				844F3F10275F3740006762D0 /* WW_LeftTagsTableViewCell.swift in Sources */,

@@ -64,6 +64,13 @@ extension WW_OrderSingleVC : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        if indexPath.row == 2{
+            let tw = UITextView().then { $0.font = UIFont.systemFont(ofSize: 13) }
+            tw.text = "已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复已回复"
+            let height = tw.sizeThatFits(CGSize(width: WWScreenWidth - 70, height: CGFloat.infinity)).height
+            return 250 + height
+        }else{
+            return 250
+        }
     }
 }

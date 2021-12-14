@@ -126,10 +126,12 @@ class WW_OrderListCell: UITableViewCell {
     }
     
     lazy var replyContextLabel = UILabel().then { make in
-        make.textColor = UIColor(red: 138/255, green: 143/255, blue: 150/255, alpha: 1)
-        make.text = "已回复已回复已回复"
+//        make.textColor = UIColor(red: 138/255, green: 143/255, blue: 150/255, alpha: 1)
+        make.textColor = UIColor(red: 138, green: 143, blue: 150)
+        make.text = " "
         make.textAlignment = .left
         make.font = UIFont.boldSystemFont(ofSize: 13)
+        make.numberOfLines = 0
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
