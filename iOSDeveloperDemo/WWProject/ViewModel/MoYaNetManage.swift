@@ -18,19 +18,17 @@ enum NetworkAPI {
     case CategoryTagsList(params : [String:Any])
 }
 extension NetworkAPI:TargetType{
-    public var baseURL: URL{
-        switch self {
-            case .CategoryProductsList:
-                return URL(string:WW_CategoryProductsList_Url)!
-            case .CategoryTagsList:
-                return URL(string: WW_CategoryTagList_Url)!
-        }
-    }
     
+    var baseURL: URL {
+        return URL(string: WW_BaseURL)!
+    }
     // 对应的不同API path
     var path: String {
         switch self {
-            case .CategoryProductsList,.CategoryTagsList: return ""
+            case .CategoryProductsList:
+                return WW_CategoryProductsList_Url
+             case .CategoryTagsList:
+                return WW_CategoryTagList_Url
            
         }
     }

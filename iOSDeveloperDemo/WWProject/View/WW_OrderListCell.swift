@@ -126,8 +126,8 @@ class WW_OrderListCell: UITableViewCell {
     }
     
     lazy var replyContextLabel = UILabel().then { make in
-//        make.textColor = UIColor(red: 138/255, green: 143/255, blue: 150/255, alpha: 1)
-        make.textColor = UIColor(red: 138, green: 143, blue: 150)
+
+        make.textColor = UIColor(r: 138, g: 143, b: 150)
         make.text = " "
         make.textAlignment = .left
         make.font = UIFont.boldSystemFont(ofSize: 13)
