@@ -16,6 +16,7 @@ enum NetworkAPI {
 
     case CategoryProductsList(catkey:String)
     case CategoryTagsList(params : [String:Any])
+    case kBDInformPriceOrderList(params : [String:Any])
 }
 extension NetworkAPI:TargetType{
     
@@ -29,7 +30,8 @@ extension NetworkAPI:TargetType{
                 return WW_CategoryProductsList_Url
              case .CategoryTagsList:
                 return WW_CategoryTagList_Url
-           
+            case .kBDInformPriceOrderList:
+                return WW_kBDInformPriceOrderList
         }
     }
     
@@ -51,8 +53,12 @@ extension NetworkAPI:TargetType{
                 parmetersInner["pageSize"] = "10000"
                 parmetersInner["page"] = 1
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+           
             case .CategoryTagsList(let parmeters):
                 return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
+            
+            case .kBDInformPriceOrderList(params: let params):
+                return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     // 是否执行Alamofire验证

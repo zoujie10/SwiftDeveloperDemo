@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class WW_ClassificationLeftTagsViewModel: NSObject {
     var tagsArray = [WW_CategoryInfoItemModel]()

@@ -10,11 +10,14 @@ import UIKit
 
 class WW_OrderSingleVC: WW_MainBaseVC {
 
+    var viewModel = WW_InformListViewModel()
+    let statusArray = ["ALL","UN_REPLY","REPLY"]
     var index : NSInteger = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        reloadByIndex(indexPage: 0)
         configUI()
     }
 
@@ -30,8 +33,13 @@ class WW_OrderSingleVC: WW_MainBaseVC {
     func reloadByIndex(indexPage :NSInteger){
         print(indexPage)
         index = indexPage
-        self.tableView.reloadData()
+        self.viewModel.getInformOrderList(status: self.statusArray[index], currentPage: 1, pageSize: 10)
+        self.viewModel.dataInformListComplete = { [self] in
+            self.tableView.reloadData()
+        }
     }
+    
+    
     
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
@@ -47,20 +55,16 @@ class WW_OrderSingleVC: WW_MainBaseVC {
 extension WW_OrderSingleVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(index == 0){
-            return 10
-        }else if (index == 1){
-            return 5
-        }else if (index == 2){
-            return 3
-        }
-        return 0
+        return self.viewModel.productsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! WW_OrderListCell
-        cell.reportPriceLabel.text = String(self.index)
+        let price = self.viewModel.productsArray[indexPath.row].reportPrice
+        cell.reportPriceLabel.text = "￥\(price ?? "")" 
+        cell.listImageView.kf.setImage(with: URL.init(string: self.viewModel.productsArray[indexPath.row].listImages ?? ""))
+        cell.replyStateLabel.text = (self.viewModel.productsArray[indexPath.row].status == "1") ? "已回复" : "未回复"
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

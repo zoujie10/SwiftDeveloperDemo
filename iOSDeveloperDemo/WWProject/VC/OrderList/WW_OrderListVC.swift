@@ -46,7 +46,7 @@ class WW_OrderListVC: WW_MainBaseVC {
             let vc = WW_OrderSingleVC()
             vcs.append(WW_OrderSingleVC())
         }
-        return WW_OrderPageVC(titles: ["全部", "已回复", "未回复"],
+        return WW_OrderPageVC(titles: ["全部","待回复","已回复",],
                                    vcs: vcs,
                                    pageStyle: .topTabBar)
     }()

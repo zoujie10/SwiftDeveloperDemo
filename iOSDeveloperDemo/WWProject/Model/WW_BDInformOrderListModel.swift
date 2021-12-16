@@ -9,26 +9,34 @@
 import UIKit
 
 struct WWBDInformItem : Codable{
-    var id : Double?
+    @WW_dataTransString var id : String?
     var commodityName : String?
     var productName : String?
-    var retailPrice : Double?
-    var supplyPrice : Double?
-    var reportPrice : Double?
+    var ptKey : Int?
+    @WW_dataTransString var retailPrice : String?
+    @WW_dataTransString var supplyPrice : String?
+    @WW_dataTransString var reportPrice : String?
     var unit : String?
     var reportSource : String?
-    var status : Double?
+    var memberKey : Int?
+    var reporterNumber : String?
+    var reporterArea : String?
+    var reporterCompany : String?
+    var reporterOffice : String?
+    @WW_dataTransString var status : String?
     var createdTime : String?
+    var `operator` : String?
     var reportResult : String?
+    var listImages : String?
 }
 
 struct WWBDInformData : Codable{
-    var total : NSInteger?
+    var total : Int?
     var records : [WWBDInformItem]?
 }
 
 struct WW_BDInformOrderListModel: Codable {
     var msg : String?
-    var code : String?
+    var code : Int?
     var data : WWBDInformData?
 }
