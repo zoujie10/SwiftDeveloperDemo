@@ -32,7 +32,12 @@ class WW_InformListViewModel: NSObject {
                         let myDecoder = JSONDecoder()
                         let productModel = try myDecoder.decode(WW_BDInformOrderListModel?.self, from: data)
                         let model :  WWBDInformData = productModel!.data!
-                        self.productsArray = model.records ?? [WWBDInformItem]()
+                        if currentPage == 1{
+                            self.productsArray = model.records ?? [WWBDInformItem]()
+                        }else{
+                            self.productsArray.append(contentsOf: model.records!)
+                        }
+                        
                         self.dataInformListComplete!()
                         
                     } catch let error {

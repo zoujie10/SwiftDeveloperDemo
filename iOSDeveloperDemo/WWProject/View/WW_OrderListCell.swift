@@ -64,7 +64,7 @@ class WW_OrderListCell: UITableViewCell {
         }
         self.productPriceLabel.snp.makeConstraints { make in
             make.left.equalTo(self.productTitleLabel)
-            make.top.equalTo(self.productSpecLabel.snp_bottom).offset(12)
+            make.top.equalTo(self.productSpecLabel.snp_bottom).offset(18)
         }
         self.replyContextLabel.snp.makeConstraints { make in
             make.left.equalTo(self.replyTitleLabel.snp_right).offset(10)
@@ -74,7 +74,7 @@ class WW_OrderListCell: UITableViewCell {
         self.replyTitleLabel.snp.makeConstraints { make in
             make.left.equalTo(self.contentView).offset(14)
             make.top.equalTo(self.replyContextLabel.snp_top)
-            make.width.equalTo(25)
+            make.width.equalTo(30)
             make.height.equalTo(18)
         }
         
@@ -113,13 +113,13 @@ class WW_OrderListCell: UITableViewCell {
     }
     
     lazy var productPriceLabel = UILabel().then { make in
-        make.textColor = UIColor(red: 138/255, green: 143/255, blue: 150/255, alpha: 1)
+        make.textColor = .black
         make.text = "12.12"
         make.textAlignment = .left
     }
     
     lazy var replyTitleLabel = UILabel().then { make in
-        make.textColor = UIColor(red: 138/255, green: 143/255, blue: 150/255, alpha: 1)
+        make.textColor = UIColor(r: 241, g: 37, b: 37)
         make.text = "回复"
         make.textAlignment = .left
         make.font = UIFont.boldSystemFont(ofSize: 13)
@@ -127,7 +127,7 @@ class WW_OrderListCell: UITableViewCell {
     
     lazy var replyContextLabel = UILabel().then { make in
 
-        make.textColor = UIColor(r: 138, g: 143, b: 150)
+        make.textColor = .black
         make.text = " "
         make.textAlignment = .left
         make.font = UIFont.boldSystemFont(ofSize: 13)

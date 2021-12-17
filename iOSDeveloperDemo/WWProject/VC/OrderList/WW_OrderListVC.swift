@@ -30,7 +30,7 @@ class WW_OrderListVC: WW_MainBaseVC {
         self.pageVC.segment.selectionIndicatorHeight = 6
 //        self.pageVC.segment.borderColor = .white
         self.pageVC.segment.indexChangeBlock = { [self] index in
-            vcs[Int(index)].reloadByIndex(indexPage: NSInteger(index))
+            vcs[Int(index)].reloadByIndex(indexPage: NSInteger(index),currentPage: 1)
         }
         self.pageVC.view.snp.makeConstraints { make in
             make.top.equalTo(85)

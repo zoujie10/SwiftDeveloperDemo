@@ -91,4 +91,10 @@ class SwiftGCDVC: UIViewController {
         gcdGroupBtn.addTarget(self, action: #selector(gcdGroupMethod), for: .touchUpInside)
         return gcdGroupBtn
     }()
+    
+    
+    func gcdMethodTest(){
+        
+        
+    }
 }
