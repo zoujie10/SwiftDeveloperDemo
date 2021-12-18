@@ -16,7 +16,7 @@ enum NetworkAPI {
 
     case CategoryProductsList(catkey:String)
     case CategoryTagsList(params : [String:Any])
-    case kBDInformPriceOrderList(params : [String:Any])
+    case kBDInformPriceOrderList(currentpage : Int, orderStatus : String ,pagesize : Int)
 }
 extension NetworkAPI:TargetType{
     
@@ -43,6 +43,7 @@ extension NetworkAPI:TargetType{
     // 请求任务事件
     public var task: Task {
         var parmetersInner: [String : Any] = [:]
+        parmetersInner["memberKey"] = "17721789"
         switch self {
                 //MARK:传参 注意大小下 也要区分
             case .CategoryProductsList(let catkey):
@@ -57,10 +58,14 @@ extension NetworkAPI:TargetType{
             case .CategoryTagsList(let parmeters):
                 return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
             
-            case .kBDInformPriceOrderList(params: let params):
-                return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+            case .kBDInformPriceOrderList(let currentPage, let status, let pagesize):
+                parmetersInner["currentPage"] = currentPage
+                parmetersInner["pageSize"] = pagesize
+                parmetersInner["status"] = status
+                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
         }
     }
+    
     // 是否执行Alamofire验证
     public var validate: Bool {
         return false

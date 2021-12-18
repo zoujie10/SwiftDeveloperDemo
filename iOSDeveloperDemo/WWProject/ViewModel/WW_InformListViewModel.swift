@@ -16,11 +16,8 @@ class WW_InformListViewModel: NSObject {
     var dataInformListComplete : dataInformListCompleteBlock?
     
     func getInformOrderList(status:String,currentPage:Int,pageSize:Int){
-        let params = ["currentPage":currentPage,
-                      "pageSize":10,
-                      "status":status,
-                      "memberKey":"17721789"] as [String : Any]
-        NetworkProvider.request(NetworkAPI.kBDInformPriceOrderList(params: params)) { result in
+   
+        NetworkProvider.request(NetworkAPI.kBDInformPriceOrderList(currentpage: currentPage, orderStatus: status, pagesize: 10)) { result in
             switch result {
                 case .success(_):
                     guard let data = result.value?.data  else { return }
