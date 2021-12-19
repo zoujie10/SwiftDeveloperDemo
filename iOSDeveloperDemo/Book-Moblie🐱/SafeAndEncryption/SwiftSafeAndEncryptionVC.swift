@@ -37,7 +37,7 @@ class SwiftSafeAndEncryptionVC: UIViewController {
         //4.MD5
         Method_MD5()
         //5.越狱情况的判断
-        jailbreak()
+       print(jailbreak())
     }
 
     func SymmetricCryptographyAndAsymmetricCryptography(){
@@ -278,8 +278,8 @@ extension NSData{
     
     func MD5() -> NSData{
         let result = NSMutableData(length: Int(CC_MD5_DIGEST_LENGTH))!
-        let unsafePointer = result.mutableBytes.assumingMemoryBound(to: UInt8.self)
-        CC_MD5(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(unsafePointer))//This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).
+//        let unsafePointer = result.mutableBytes.assumingMemoryBound(to: UInt8.self)
+//        CC_MD5(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(unsafePointer))//This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).
         return NSData(data: result as Data)
     }
     

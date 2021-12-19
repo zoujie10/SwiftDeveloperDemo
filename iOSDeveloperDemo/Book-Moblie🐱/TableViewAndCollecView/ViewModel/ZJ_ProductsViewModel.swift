@@ -113,8 +113,6 @@ class ZJ_ProductsViewModel: NSObject {
                 let model :  categoryInfoModel = productModel!.data
                 self.tagsArray = model.categoryInfo
                 self.dataComplete!()
-            }catch let error {
-                print("Failed to create JSON with error: ", error)
             }
         }
     }

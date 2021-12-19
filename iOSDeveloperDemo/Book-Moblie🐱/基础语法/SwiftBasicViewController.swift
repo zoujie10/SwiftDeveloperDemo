@@ -20,9 +20,9 @@ class SwiftBasicViewController: UIViewController {
 		//元组
 		dataTuple()
 		//dataOperator 运算符
-		dataOperator()
+		dataOperator(num: 30)
 		//循环语句
-		cycleMethod()
+		cycleMethod(num: 12)
 		//数组和字典 为了安全性 都通过显示类型标注或类型推断 创建
 		//array
 		arrayMethod()
@@ -68,20 +68,21 @@ class SwiftBasicViewController: UIViewController {
 //		Int 自动兼容32（Int32），64位平台(Int64)
 		let minValueOfUInt8 = UInt8.min
 		let maxValueOfUInt8 = UInt8.max
+        debugPrint(minValueOfUInt8,maxValueOfUInt8)
 //		UInt16.min
 //		UInt.max
 		
 //		Float 小数精度6位
 //		Double 小数精度15位
 		
-		var number = -10.10
-		number.advanced(by: 10) //+10
-		number.distance(to: 23.3) //-
-		number.isFinite //是否有限
-		number.isInfinite //是否无限
-		number.isZero //是否是零
-		number.isLess(than: 1) //是否小于
-		
+		let number = -10.10
+		let num1 = number.advanced(by: 10) //+10
+		let num2 = number.distance(to: 23.3) //-
+		let num3 = number.isFinite //是否有限
+		let num4 = number.isInfinite //是否无限
+		let num5 = number.isZero //是否是零
+		let num6 = number.isLess(than: 1) //是否小于
+        debugPrint(number,num1,num2,num3,num4,num5,num6)
 //		Character
 		let characterA : Character = "A"
 		let sun = "\u{2600}"
@@ -90,7 +91,8 @@ class SwiftBasicViewController: UIViewController {
 		let str = "\(characterA)+\(sun)"
 		let str1 = ""
 		let str2 = String()
-		str.isEmpty
+		let str3 = str.isEmpty
+        debugPrint(str,str1,str2,str3)
 //		转义符
 		/*
 		/0 空字符
@@ -104,13 +106,13 @@ class SwiftBasicViewController: UIViewController {
         print(message.hasPrefix("Jerry"))
         print(message.hasSuffix("Morining"))
 		//大小写转换
-		message.uppercased()
-		message.lowercased()
+		let msg1 = message.uppercased()
+		let msg2 = message.lowercased()
 		//截取和替换  NSString
 //		message.substring(to: <#T##String.Index#>)
 //		message.substring(from: )
-		message.replacingOccurrences(of:"Hi", with:"Hello")
-		message.remove(at: message.index(message.startIndex, offsetBy: 5))
+		let msg3 = message.replacingOccurrences(of:"Hi", with:"Hello")
+		let msg4 = message.remove(at: message.index(message.startIndex, offsetBy: 5))
 		//字符串遍历
 		var num = 0
 		let hello = "18971118756"
@@ -119,6 +121,7 @@ class SwiftBasicViewController: UIViewController {
 				num+=1
 			}
 		}
+        debugPrint(message,msg1,msg2,msg3,msg4)
 	}
 	
 	
@@ -138,7 +141,7 @@ class SwiftBasicViewController: UIViewController {
         print(result,result1,result2)
 	}
 	
-	func dataOperator(){
+    func dataOperator(num : Int){
 		let one = 1
 		
 		let minOne = -one
@@ -156,21 +159,21 @@ class SwiftBasicViewController: UIViewController {
 		let two5 = 3%2
 		print(two1,two2,two3,two4,two5)
         
-		let three = 33
-		let result = (three >= 20) ? true : false
+		let result = (num >= 20) ? true : false
+        debugPrint(result)
 	}
 	
-	func cycleMethod() {
+    func cycleMethod(num : Int) {
 		//for
-		for index in 0..<3{
+		for _ in 0..<3{
 			
 		}
-		for index in 0...3{
+		for _ in 0...3{
 			
 		}
 		
 		let array = ["1","2","3"]
-		for index in array{
+		for _ in array{
 			
 		}
 		
@@ -194,7 +197,7 @@ class SwiftBasicViewController: UIViewController {
 		while index < 3
 		
 		
-		let time = 12
+		let time = num
 		switch time {
 			case 7:
 				print("7")
@@ -216,7 +219,7 @@ class SwiftBasicViewController: UIViewController {
 		let intArray = [Int]()
 		var array = [1,2,3,4,5]
 		
-		print(array[0])
+		print(strArray,array[0])
         print(intArray.isEmpty)
         print(intArray.count)
         print(intArray.contains(3))
@@ -277,22 +280,23 @@ class SwiftBasicViewController: UIViewController {
 	
 	func dictionaryMethod(){
 		var dic = ["key":"value","key2":"value2","key3":"value3"]
-		var dic1 = Dictionary<String,String>()
+		let dic1 = Dictionary<String,String>()
 		
 		let string = dic["key"]
 		dic.updateValue("value_1", forKey: "key")
 		dic.removeValue(forKey: "key")
 		dic["key2"] = nil
+        debugPrint(dic1,string as Any)
 		for key in dic.keys {
-			
+			print(key)
 		}
 		
 		for value in dic.values{
-			
+			print(value)
 		}
 		
 		for (key,value) in dic{
-			
+			print(key,value)
 		}
 	}
 }

@@ -12,14 +12,14 @@ class JSONParser: NSObject{
 	func start(json:Data){
 		do{
 			let dic : NSDictionary = try JSONSerialization.jsonObject(with: json, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+            debugPrint(dic)
 		}catch{
 			
 		}
 		
 		let request = URLRequest(url: NSURL(fileURLWithPath: "www.google.com") as URL)
 		let session = URLSession.shared
-		var datatask = URLSessionDataTask()
-		
-		datatask = session.dataTask(with: request)
+		let datatask = session.dataTask(with: request)
+        debugPrint(datatask)
 	}
 }
