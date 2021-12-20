@@ -60,10 +60,13 @@ class NoteByArchiver: NSObject {
 			array.add(note2)
 			
 			let theData = NSMutableData()
-			let archiver = NSKeyedArchiver(forWritingWith: theData)
-			archiver.encode(array, forKey: ARCHIVE_KEY)
-			archiver.finishEncoding()
+//			let archiver = NSKeyedArchiver(forWritingWith: theData)
+//			archiver.encode(array, forKey: ARCHIVE_KEY)
+//          archiver.finishEncoding()
+            //等价于下面
+            let data = try! NSKeyedArchiver.archivedData(withRootObject:theData,requiringSecureCoding: true)
 			
+			print(data)
 			theData.write(toFile: writableDBPath, atomically: true)
 		}
 	}
@@ -130,8 +133,8 @@ class NoteByArchiver: NSObject {
 		
 		if theData.length > 0 {
 			let archiver = NSKeyedArchiver(forWritingWith: theData as! NSMutableData)
-			listData = archiver.decodeObject(forKey: ARCHIVE_KEY) as! NSMutableArray
-			archiver.finishEncoding()
+            listData = archiver.decodeObject(forKey: ARCHIVE_KEY) as! NSMutableArray
+            archiver.finishEncoding()
 		}
 		return listData
 	}
@@ -142,7 +145,8 @@ class NoteByArchiver: NSObject {
 		let theData = NSData(contentsOfFile: path)!
 		
 		if theData.length > 0 {
-			let archiver = NSKeyedUnarchiver(forReadingWith: theData as Data)
+//			let archiver = NSKeyedUnarchiver(forReadingWith: theData as Data)
+            let archiver = try! NSKeyedUnarchiver(forReadingFrom: theData as Data)
 			listData = archiver.decodeObject(forKey: ARCHIVE_KEY) as! NSMutableArray
 			archiver.finishDecoding()
 			
