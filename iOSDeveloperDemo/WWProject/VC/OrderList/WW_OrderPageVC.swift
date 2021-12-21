@@ -49,11 +49,10 @@ class WW_OrderPageVC: WW_MainBaseVC {
     @objc func changeIndex(segment: UISegmentedControl) {
         let index = segment.selectedSegmentIndex
         if currentSelectIndex != index {
-            let target:[UIViewController] = [vcs[index]]
+            let target = [vcs[index]]
             let direction:UIPageViewController.NavigationDirection = currentSelectIndex > index ? .reverse : .forward
             pageVC.setViewControllers(target, direction: direction, animated: false) { [weak self] (finish) in
                 self?.currentSelectIndex = index
-                
             }
         }
     }

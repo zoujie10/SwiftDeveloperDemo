@@ -29,12 +29,12 @@ class WW_OrderListVC: WW_MainBaseVC {
         self.pageVC.segment.selectionIndicatorColor = UIColor.red
         self.pageVC.segment.selectionIndicatorHeight = 6
 //        self.pageVC.segment.borderColor = .white
-        self.pageVC.segment.indexChangeBlock = { [self] index in
-            vcs[Int(index)].reloadByIndex(indexPage: NSInteger(index),currentPage: 1)
-        }
+//        self.pageVC.segment.indexChangeBlock = {
+//            vcs[Int(index)].reloadByIndex(indexPage: NSInteger(index),currentPage: 1)
+//        }
         self.pageVC.view.snp.makeConstraints { make in
             make.top.equalTo(85)
-            make.left.right.height.equalTo(view)
+            make.left.right.bottom.equalTo(view)
         }
     }
     
@@ -47,7 +47,7 @@ class WW_OrderListVC: WW_MainBaseVC {
             vcs.append(WW_OrderSingleVC())
         }
         return WW_OrderPageVC(titles: ["全部","待回复","已回复",],
-                                   vcs: vcs,
+                              vcs:[WW_OrderSingleVC.init(),WW_OrderSingleVCTwo.init(),WW_OrderSingleVCThree.init()],
                                    pageStyle: .topTabBar)
     }()
     

@@ -11,7 +11,7 @@ import UIKit
 class WW_InformListViewModel: NSObject {
     
     var productsArray = [WWBDInformItem]()
-    
+    var dataModel =  WWBDInformData()
     typealias dataInformListCompleteBlock = () -> Void
     var dataInformListComplete : dataInformListCompleteBlock?
     
@@ -29,6 +29,7 @@ class WW_InformListViewModel: NSObject {
                         let myDecoder = JSONDecoder()
                         let productModel = try myDecoder.decode(WW_BDInformOrderListModel?.self, from: data)
                         let model :  WWBDInformData = productModel!.data!
+                        self.dataModel = model
                         if currentPage == 1{
                             self.productsArray = model.records ?? [WWBDInformItem]()
                         }else{
