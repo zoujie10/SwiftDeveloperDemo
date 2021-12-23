@@ -7,6 +7,7 @@ PODS:
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
   - HMSegmentedControl (1.5.6)
+  - JXSegmentedView (1.2.7)
   - Kingfisher (7.1.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.3.1)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper
   - Charts
   - HMSegmentedControl
+  - JXSegmentedView
   - Kingfisher
   - MBProgressHUD
   - MJRefresh
@@ -39,6 +41,7 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - Charts
     - HMSegmentedControl
+    - JXSegmentedView
     - Kingfisher
     - MBProgressHUD
     - MJRefresh
@@ -53,6 +56,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   HMSegmentedControl: 34c1f54d822d8308e7b24f5d901ec674dfa31352
+  JXSegmentedView: eb1cad21f57c2543c00c3e08b8fd3c7ca54f5acd
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
@@ -62,6 +66,6 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: e803f5d98f0ee43270997dc3999188a03f531d29
+PODFILE CHECKSUM: 7fb5381b60a7f1d94c4205a3f6c80c54463931c0
 
 COCOAPODS: 1.11.2

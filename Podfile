@@ -11,6 +11,7 @@ target 'iOSDeveloperDemo' do
   pod 'MJRefresh'
   pod 'MBProgressHUD'
   pod 'HMSegmentedControl'
+  pod 'JXSegmentedView'
   #	pod 'RealmSwift'
   # pod 'SwiftyJSON'
 	use_frameworks!

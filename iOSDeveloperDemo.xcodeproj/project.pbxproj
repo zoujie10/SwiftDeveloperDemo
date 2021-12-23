@@ -167,6 +167,9 @@
 		84DAA537277367C400A97694 /* WWSearchHotWordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA536277367C400A97694 /* WWSearchHotWordsVC.swift */; };
 		84DAA539277367D700A97694 /* WWSearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA538277367D700A97694 /* WWSearchResultVC.swift */; };
 		84DAA53B277367FF00A97694 /* WW_SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA53A277367FF00A97694 /* WW_SearchViewModel.swift */; };
+		84DAA53E2774738400A97694 /* WW_HeroListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA53D2774738400A97694 /* WW_HeroListVC.swift */; };
+		84DAA5402774746400A97694 /* WW_ChiefInspectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA53F2774746400A97694 /* WW_ChiefInspectorVC.swift */; };
+		84DAA5422774748500A97694 /* WW_FamousSayingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA5412774748500A97694 /* WW_FamousSayingVC.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
 		84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BE020A02D390031DEEE /* HomeVC.swift */; };
 		84E37BE420A02D390031DEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE220A02D390031DEEE /* Main.storyboard */; };
@@ -368,6 +371,9 @@
 		84DAA536277367C400A97694 /* WWSearchHotWordsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSearchHotWordsVC.swift; sourceTree = "<group>"; };
 		84DAA538277367D700A97694 /* WWSearchResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSearchResultVC.swift; sourceTree = "<group>"; };
 		84DAA53A277367FF00A97694 /* WW_SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchViewModel.swift; sourceTree = "<group>"; };
+		84DAA53D2774738400A97694 /* WW_HeroListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HeroListVC.swift; sourceTree = "<group>"; };
+		84DAA53F2774746400A97694 /* WW_ChiefInspectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ChiefInspectorVC.swift; sourceTree = "<group>"; };
+		84DAA5412774748500A97694 /* WW_FamousSayingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_FamousSayingVC.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E37BDE20A02D390031DEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E37BE020A02D390031DEEE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -750,6 +756,7 @@
 		845EC802271FECE50006651E /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				84DAA53C2774735D00A97694 /* OtherPage */,
 				84DAA5352773679900A97694 /* HomePage */,
 				84DAA5342773677F00A97694 /* SearchPage */,
 				84117B7E27672DB200D8B0BB /* AfterSale */,
@@ -1058,6 +1065,16 @@
 			children = (
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		84DAA53C2774735D00A97694 /* OtherPage */ = {
+			isa = PBXGroup;
+			children = (
+				84DAA53D2774738400A97694 /* WW_HeroListVC.swift */,
+				84DAA53F2774746400A97694 /* WW_ChiefInspectorVC.swift */,
+				84DAA5412774748500A97694 /* WW_FamousSayingVC.swift */,
+			);
+			path = OtherPage;
 			sourceTree = "<group>";
 		};
 		84E37BD220A02D390031DEEE = {
@@ -1407,6 +1424,7 @@
 				844F3EE12758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift in Sources */,
 				84DAA539277367D700A97694 /* WWSearchResultVC.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
+				84DAA53E2774738400A97694 /* WW_HeroListVC.swift in Sources */,
 				845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */,
 				84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
@@ -1436,12 +1454,14 @@
 				84117B792764C9B800D8B0BB /* WW_OrderPageVC.swift in Sources */,
 				844F3F0E275F3243006762D0 /* WW_ProductsTableViewCell.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
+				84DAA5422774748500A97694 /* WW_FamousSayingVC.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
+				84DAA5402774746400A97694 /* WW_ChiefInspectorVC.swift in Sources */,
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,

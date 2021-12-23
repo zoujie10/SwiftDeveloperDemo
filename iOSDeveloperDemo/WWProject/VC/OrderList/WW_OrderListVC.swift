@@ -11,7 +11,6 @@ import HMSegmentedControl
 
 class WW_OrderListVC: WW_MainBaseVC {
 
-    var vcs: [WW_OrderSingleVC] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +41,6 @@ class WW_OrderListVC: WW_MainBaseVC {
     
     private lazy var pageVC: WW_OrderPageVC = {
 
-        for _ in 0...2 {
-            let vc = WW_OrderSingleVC()
-            vcs.append(WW_OrderSingleVC())
-        }
         return WW_OrderPageVC(titles: ["全部","待回复","已回复",],
                               vcs:[WW_OrderSingleVC.init(),WW_OrderSingleVCTwo.init(),WW_OrderSingleVCThree.init()],
                                    pageStyle: .topTabBar)

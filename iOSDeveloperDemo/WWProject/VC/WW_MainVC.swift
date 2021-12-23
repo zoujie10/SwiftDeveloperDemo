@@ -30,7 +30,8 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
     func dataArrayMethod(){
         dataArray = ["分类页",
         "售后",
-        "订单列表"]
+        "订单列表",
+        "榜单"]
     }
     //MARK: UITableview data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +51,8 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
             self.navigationController?.pushViewController(WW_AfterDetailVC(), animated: true)
         }else if indexPath.row == 2{
             self.navigationController?.pushViewController(WW_OrderListVC(), animated: true)
+        }else if indexPath.row == 3{
+            self.navigationController?.pushViewController(WW_HeroListVC(), animated: true)
         }
     }
 

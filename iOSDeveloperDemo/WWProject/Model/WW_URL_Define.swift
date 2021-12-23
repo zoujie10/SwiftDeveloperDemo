@@ -31,3 +31,10 @@ let WW_kBDInformSubmitPricereport   = "appapi/root-ceo-commodity/reportApi/submi
 let WW_kBDInformPriceUnreadMessage = "appapi/root-ceo-commodity/reportApi/reportReminder" // 价格举报未读消息
 let WW_kBDInformPriceOrderList  = "appapi/root-ceo-commodity/reportApi/queryReport" //举报列表
 let WW_kBDInformOrderDetail     = "appapi/root-ceo-commodity/reportApi/queryReportById" //举报详情
+
+//首页
+let kHomeListUrl       = "appapi/api/root-ceo-content/hpPageConfigure/pageList" //首页
+let kSearchKeywordsUrl = "appapi/root-ceo-commodity/commodityApi/searchWords"  //热词
+let kHomeSearchUrl    = "appapi/root-ceo-commodity/commodityApi/commoditySearch" //搜索结果
+let kSearchWordListUrl  = "appapi/root-ceo-commodity/esApi/suggestion" //搜索词联想
+let kProductTagMoreUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMore" //猜你喜欢
