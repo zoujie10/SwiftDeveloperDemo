@@ -10,8 +10,6 @@ import UIKit
 
 class WW_OrderListCell: UITableViewCell {
 
-    
-    
     func creatUI(){
         contentView.addSubview(self.timeLineLabel)
         let bgview = UIView()

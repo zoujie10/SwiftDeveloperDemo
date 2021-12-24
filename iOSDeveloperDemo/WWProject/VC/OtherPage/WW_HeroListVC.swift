@@ -9,9 +9,8 @@
 import UIKit
 import JXSegmentedView
 
-class WW_HeroListVC: WW_MainBaseVC{
-
-   
+class WW_HeroListVC: WW_JXSegmentContentBaseVC{
+    var totalItemWidth: CGFloat = 0
     let backgroundImage = UIImageView()
 
     override func viewDidLoad() {
@@ -19,7 +18,6 @@ class WW_HeroListVC: WW_MainBaseVC{
 
         title = "英雄榜"
         view.backgroundColor = .white
-    
         // Do any additional setup after loading the view.
         configUI()
     }
@@ -35,9 +33,46 @@ class WW_HeroListVC: WW_MainBaseVC{
         self.backgroundImage.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
-//        let segmentedView = SegmentedControl()
-//        segmentedView.delegate = self
-//        self.view.addSubview(self.segmentedView)
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor(r: 255, g: 255, b: 255, a: 0.8)
+        self.backgroundImage.addSubview(bgView)
+        //segmentedView.frame = CGRect(x: 80, y: 260, width: totalItemWidth, height: 40)
+        bgView.snp.makeConstraints { make in
+            make.left.right.equalTo(view)
+            make.top.equalTo(view).offset(265)
+            make.bottom.equalTo(view)
+        }
+        totalItemWidth = UIScreen.main.bounds.size.width - 80*2
+        let titles = ["总监英雄榜", "名言堂"]
+        let titleDataSource = JXSegmentedTitleDataSource()
+        titleDataSource.itemWidth = totalItemWidth/CGFloat(titles.count)
+        titleDataSource.titles = titles
+        titleDataSource.isTitleMaskEnabled = true
+        titleDataSource.titleNormalColor = .white
+        titleDataSource.titleSelectedColor = .red
+        titleDataSource.itemSpacing = 0
+        segmentedDataSource = titleDataSource
+        
+        segmentedView.dataSource = titleDataSource
+        segmentedView.layer.masksToBounds = true
+        segmentedView.layer.cornerRadius = 20
+//        segmentedView.layer.borderColor = UIColor.red.cgColor
+//        segmentedView.layer.borderWidth = 1/UIScreen.main.scale
+        segmentedView.backgroundColor = UIColor(r: 255, g: 255, b: 255, a: 0.2)
+//        segmentedView.backgroundColor = .orange
+        let indicator = JXSegmentedIndicatorBackgroundView()
+        indicator.indicatorHeight = 40
+        indicator.indicatorWidthIncrement = 0
+        indicator.indicatorColor = UIColor.white
+        segmentedView.indicators = [indicator]
+      
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
 
+        segmentedView.frame = CGRect(x: 80, y: 275, width: totalItemWidth, height: 40)
+        view.bringSubview(toFront: segmentedView)
+        view.bringSubview(toFront: listContainerView)
+    }
 }
+
