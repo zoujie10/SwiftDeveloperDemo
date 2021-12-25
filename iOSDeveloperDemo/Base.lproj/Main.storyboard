@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKr-kj-dqO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
@@ -222,7 +222,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WTm-le-5Fu" customClass="PageViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joq-im-e4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6226.3999999999996" y="-638.42364532019712"/>
+            <point key="canvasLocation" x="5847" y="-689"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dbC-BZ-uaW">
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Amu-CG-DeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6260" y="58"/>
+            <point key="canvasLocation" x="5687" y="-10"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Wg7-Yd-Kbj">
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aba-39-03K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="58"/>
+            <point key="canvasLocation" x="5025" y="-67"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="20h-0E-weK">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pg5-eo-hEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7148" y="-638.42364532019712"/>
+            <point key="canvasLocation" x="6449" y="-10"/>
         </scene>
         <!--Page Control View Controller-->
         <scene sceneID="JHb-Lr-HeB">
@@ -319,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d3-aU-WpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5063.1999999999998" y="-539.40886699507394"/>
+            <point key="canvasLocation" x="5063" y="-703"/>
         </scene>
         <!--注册-->
         <scene sceneID="H6K-7U-SbE">
@@ -1228,31 +1228,6 @@
             </objects>
             <point key="canvasLocation" x="2145" y="-518"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="dwa-Xb-stq">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="QKr-kj-dqO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vIM-Tj-i98">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.0" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <tabBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <color key="selectionIndicatorTintColor" red="0.0" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        </tabBarAppearance>
-                    </tabBar>
-                    <connections>
-                        <segue destination="4AL-gL-dDn" kind="relationship" relationship="viewControllers" id="VAS-1O-5PX"/>
-                        <segue destination="3xF-T6-OKu" kind="relationship" relationship="viewControllers" id="Gvc-dj-MQr"/>
-                        <segue destination="AK5-Fg-HQq" kind="relationship" relationship="viewControllers" id="FCf-dd-bx1"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fE3-V7-hkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-839" y="-1784"/>
-        </scene>
         <!--Mine-->
         <scene sceneID="Rc4-id-ba1">
             <objects>
@@ -1493,9 +1468,6 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

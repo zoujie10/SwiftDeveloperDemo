@@ -16,15 +16,27 @@ class WW_HeroListVC: WW_JXSegmentContentBaseVC{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "英雄榜"
+        title = "榜单推荐"
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
         configUI()
     }
     override func viewWillAppear(_ animated: Bool) {
+        let app = UINavigationBarAppearance.init()
+        app.configureWithOpaqueBackground()  // 重置背景和阴影颜色
+        app.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
         //设置导航栏背景透明
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(),for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = .clear
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3"), style: .plain,target: self,action: #selector(pressBack))
+        self.navigationController!.navigationBar.standardAppearance = app // 常规页面
+    }
+    
+    @objc override func pressBack(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     func configUI(){

@@ -173,6 +173,8 @@
 		84DAA5442774D02800A97694 /* WW_JXSegmentContentBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA5432774D02800A97694 /* WW_JXSegmentContentBaseVC.swift */; };
 		84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA5452774D12700A97694 /* WW_JXListBaseViewController.swift */; };
 		84DAA548277601CA00A97694 /* WW_HeroListFamousSayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA547277601CA00A97694 /* WW_HeroListFamousSayingCell.swift */; };
+		84DAA54A27770F8900A97694 /* WW_BaseNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA54927770F8900A97694 /* WW_BaseNavVC.swift */; };
+		84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA54C277711E400A97694 /* WW_BaseTabBarVC.swift */; };
 		84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BDE20A02D390031DEEE /* AppDelegate.swift */; };
 		84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BE020A02D390031DEEE /* HomeVC.swift */; };
 		84E37BE420A02D390031DEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE220A02D390031DEEE /* Main.storyboard */; };
@@ -380,6 +382,8 @@
 		84DAA5432774D02800A97694 /* WW_JXSegmentContentBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_JXSegmentContentBaseVC.swift; sourceTree = "<group>"; };
 		84DAA5452774D12700A97694 /* WW_JXListBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_JXListBaseViewController.swift; sourceTree = "<group>"; };
 		84DAA547277601CA00A97694 /* WW_HeroListFamousSayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HeroListFamousSayingCell.swift; sourceTree = "<group>"; };
+		84DAA54927770F8900A97694 /* WW_BaseNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BaseNavVC.swift; sourceTree = "<group>"; };
+		84DAA54C277711E400A97694 /* WW_BaseTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BaseTabBarVC.swift; sourceTree = "<group>"; };
 		84E37BDB20A02D390031DEEE /* iOSDeveloperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E37BDE20A02D390031DEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E37BE020A02D390031DEEE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -762,13 +766,13 @@
 		845EC802271FECE50006651E /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				84DAA54B27770F8C00A97694 /* Base */,
 				84DAA53C2774735D00A97694 /* OtherPage */,
 				84DAA5352773679900A97694 /* HomePage */,
 				84DAA5342773677F00A97694 /* SearchPage */,
 				84117B7E27672DB200D8B0BB /* AfterSale */,
 				84117B7D27672D9400D8B0BB /* Classification */,
 				84117B7C27672D7B00D8B0BB /* OrderList */,
-				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 				84DAA5192768743E00A97694 /* Global.swift */,
@@ -1086,6 +1090,16 @@
 			path = OtherPage;
 			sourceTree = "<group>";
 		};
+		84DAA54B27770F8C00A97694 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84DAA54927770F8900A97694 /* WW_BaseNavVC.swift */,
+				84DAA54C277711E400A97694 /* WW_BaseTabBarVC.swift */,
+				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
@@ -1380,6 +1394,7 @@
 				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
 				842991AA2740A4C100A50077 /* SwiftDeviceMotionVC.swift in Sources */,
+				84DAA54A27770F8900A97694 /* WW_BaseNavVC.swift in Sources */,
 				842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
@@ -1438,6 +1453,7 @@
 				84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */,
 				84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
+				84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */,
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
 				84DAA537277367C400A97694 /* WWSearchHotWordsVC.swift in Sources */,
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,

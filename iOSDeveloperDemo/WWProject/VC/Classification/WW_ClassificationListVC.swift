@@ -20,8 +20,6 @@ class WW_ClassificationListVC: WW_MainBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "分类"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 252/255, green: 85/255, blue: 108/255, alpha: 1)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         requestNet()
         makeUI()
         configInteraction()

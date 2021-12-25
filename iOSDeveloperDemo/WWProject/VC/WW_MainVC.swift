@@ -23,6 +23,11 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
         //隐藏返回按钮
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true

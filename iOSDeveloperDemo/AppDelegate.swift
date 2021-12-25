@@ -33,10 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.observer = AppStatusObserver()
 		self.addObserver(self.observer, forKeyPath: "appStatus", options:[.new,.old], context: nil)
 		self.appStatus = "launch"
-		
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = WW_BaseTabBarVC()
+        window?.makeKeyAndVisible()
+        
+        
         dataInit()
         threeDtouch(application: application)
-        guidePageShow()
+//        guidePageShow()
 		return true
 	}
     func threeDtouch( application : UIApplication) {

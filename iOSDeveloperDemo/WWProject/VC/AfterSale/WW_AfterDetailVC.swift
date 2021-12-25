@@ -27,6 +27,7 @@ class WW_AfterDetailVC: WW_MainBaseVC {
         changeImageBtn.addTarget(self, action: #selector(changeImage), for: .touchUpInside)
         return changeImageBtn
     }()
+    
     @objc func changeImage(){
         let vc = WWAfterSaleDisplayPicEgVC()
         vc.modalPresentationStyle = .overFullScreen
