@@ -59,7 +59,7 @@ class WW_HeroListFamousSayingCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.isUserInteractionEnabled = true
-        self.selectionStyle = .default
+        self.selectionStyle = .none
         self.backgroundColor = UIColor(r: 134, g: 25, b: 37)
         creatUI()
     }

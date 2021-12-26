@@ -35,7 +35,7 @@ class WW_FamousSayingVC: WW_MainBaseVC{
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
-        
+    
         return tableView
     }()
 

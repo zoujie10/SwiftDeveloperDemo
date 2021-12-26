@@ -31,7 +31,7 @@ class WW_HeroListVC: WW_JXSegmentContentBaseVC{
 //        self.navigationController?.setNavigationBarHidden(true, animated: true)
         //设置导航栏背景透明
         self.navigationController?.navigationBar.barTintColor = .clear
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3"), style: .plain,target: self,action: #selector(pressBack))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3")?.withTintColor(.white, renderingMode: .alwaysOriginal), style: .plain,target: self,action: #selector(pressBack))
         self.navigationController!.navigationBar.standardAppearance = app // 常规页面
     }
     

@@ -39,8 +39,7 @@ class WW_MainBaseVC: UIViewController {
             self.navigationController?.navigationBar.standardAppearance = app // 常规页面
             self.navigationController?.setNavigationBarHidden(false, animated: true)
             
-            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3"), style: .plain,target: self,action: #selector(pressBack))
-            
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3")?.withTintColor(.white, renderingMode: .alwaysOriginal), style: .plain,target: self,action: #selector(pressBack))
         }
     }
     @objc func pressBack(){
