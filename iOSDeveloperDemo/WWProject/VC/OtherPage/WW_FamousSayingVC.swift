@@ -13,6 +13,7 @@ class WW_FamousSayingVC: WW_MainBaseVC{
     var vcTitle : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .clear
         creatUI()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +63,6 @@ extension WW_FamousSayingVC : JXSegmentedListContainerViewListDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 120
     }
 }

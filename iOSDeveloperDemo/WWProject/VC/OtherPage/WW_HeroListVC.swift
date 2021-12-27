@@ -45,13 +45,14 @@ class WW_HeroListVC: WW_JXSegmentContentBaseVC{
         self.backgroundImage.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
-        let bgView = UIView()
-        bgView.backgroundColor = UIColor(r: 255, g: 255, b: 255, a: 0.8)
-        self.backgroundImage.addSubview(bgView)
+        let subImageView = UIImageView()
+        subImageView.image = UIImage(named: "ww_heroList_subBackimage")
+//        subImageView.layer.cornerRadius = 8
+        self.backgroundImage.addSubview(subImageView)
         //segmentedView.frame = CGRect(x: 80, y: 260, width: totalItemWidth, height: 40)
-        bgView.snp.makeConstraints { make in
+        subImageView.snp.makeConstraints { make in
             make.left.right.equalTo(view)
-            make.top.equalTo(view).offset(265)
+            make.top.equalTo(view).offset(245)
             make.bottom.equalTo(view)
         }
         totalItemWidth = UIScreen.main.bounds.size.width - 80*2
@@ -77,8 +78,8 @@ class WW_HeroListVC: WW_JXSegmentContentBaseVC{
         indicator.indicatorWidthIncrement = 0
         indicator.indicatorColor = UIColor.white
         segmentedView.indicators = [indicator]
-      
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 

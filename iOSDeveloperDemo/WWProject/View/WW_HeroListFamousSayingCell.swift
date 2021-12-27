@@ -10,21 +10,33 @@ import UIKit
 
 class WW_HeroListFamousSayingCell: UITableViewCell {
     func creatUI(){
-        self.contentView.addSubview(self.famousSayingLabel)
-        self.contentView.addSubview(self.nameLabel)
-        self.contentView.addSubview(self.headImageView)
+        let backView = UIView()
+        backView.backgroundColor = UIColor(r: 134, g: 25, b: 37)
+        backView.layer.borderColor = UIColor(r:209, g:153, b:135, a:1).cgColor
+        backView.layer.cornerRadius = 8
+        self.contentView.addSubview(backView)
+        backView.addSubview(self.famousSayingLabel)
+        backView.addSubview(self.nameLabel)
+        backView.addSubview(self.headImageView)
+        
+        backView.snp.makeConstraints { make in
+            make.left.equalTo(self.contentView.snp_left).offset(12)
+            make.right.equalTo(self.contentView.snp_right).offset(-12)
+            make.top.equalTo(self.contentView.snp_top).offset(10)
+            make.bottom.equalTo(self.contentView.snp_bottom).offset(-5)
+        }
         
         famousSayingLabel.snp.makeConstraints { make in
-            make.left.equalTo(self.contentView).offset(12)
-            make.top.equalTo(self.contentView).offset(10)
-            make.right.equalTo(self.contentView).offset(-12)
+            make.left.equalTo(backView).offset(12)
+            make.top.equalTo(backView).offset(10)
+            make.right.equalTo(backView).offset(-12)
             make.height.equalTo(30)
         }
         
         headImageView.snp.makeConstraints { make in
             make.width.height.equalTo(30)
             make.top.equalTo(famousSayingLabel.snp_bottom).offset(20)
-            make.left.equalTo(self.contentView).offset(12)
+            make.left.equalTo(backView).offset(12)
         }
         
         nameLabel.snp.makeConstraints { make in
@@ -60,7 +72,7 @@ class WW_HeroListFamousSayingCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.isUserInteractionEnabled = true
         self.selectionStyle = .none
-        self.backgroundColor = UIColor(r: 134, g: 25, b: 37)
+        self.backgroundColor = .clear
         creatUI()
     }
     required init?(coder: NSCoder) {
