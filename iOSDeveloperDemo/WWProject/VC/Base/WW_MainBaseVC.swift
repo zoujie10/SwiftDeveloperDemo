@@ -35,11 +35,14 @@ class WW_MainBaseVC: UIViewController {
             ]
             app.backgroundColor = UIColor(r:252,g:85,b:108,a:1) // 设置导航栏背景色
             app.shadowImage = UIColor.clear.image()  // 设置导航栏下边界分割线透明
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3")?.withTintColor(.white, renderingMode: .alwaysOriginal), style: .plain,target: self,action: #selector(pressBack))
+          
+         
             self.navigationController?.navigationBar.scrollEdgeAppearance = app  // 带scroll滑动的页面
             self.navigationController?.navigationBar.standardAppearance = app // 常规页面
             self.navigationController?.setNavigationBarHidden(false, animated: true)
-            
-            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3")?.withTintColor(.white, renderingMode: .alwaysOriginal), style: .plain,target: self,action: #selector(pressBack))
+            let navBg = self.navigationController?.navigationBar.subviews.first
+            navBg?.alpha = 1
         }
     }
     @objc func pressBack(){

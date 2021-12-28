@@ -108,12 +108,12 @@ class ZJ_ProductsViewModel: NSObject {
             debugPrint(response.result)//枚举  Success value有值。Failure value nil
             debugPrint(response.data as Any)//二级制数据
             debugPrint(response.timeline)//请求到收到响应的整个时间
-            do {
-                let productModel = try? JSONDecoder().decode(TagsModel.self, from: response.data!)
-                let model :  categoryInfoModel = productModel!.data
-                self.tagsArray = model.categoryInfo
-                self.dataComplete!()
-            }
+       
+            let productModel = try! JSONDecoder().decode(TagsModel.self, from: response.data!)
+            let model :  categoryInfoModel = productModel.data
+            self.tagsArray = model.categoryInfo
+            self.dataComplete!()
+            
         }
     }
     

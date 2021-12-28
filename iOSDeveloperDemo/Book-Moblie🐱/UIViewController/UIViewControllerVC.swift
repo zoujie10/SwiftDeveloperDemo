@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate,UIScrollViewDelegate {
+class UIViewControllerVC: WW_MainBaseVC,UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate,UIScrollViewDelegate {
     private var _orientations = UIInterfaceOrientationMask.portrait
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
     get { return self._orientations }
@@ -24,9 +24,9 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         VC_Content()
         VC_Rotation()
         //MARK:     2.UITabBarController
-        VC_TabbarController()
+//        VC_TabbarController()
         //MARK:  3.UINavigationController
-        VC_Navgation()
+//        VC_Navgation()
  
     }
     //MARK:BEGIN --- VC_Content
@@ -93,7 +93,6 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         self.present(popView, animated: true) {
         
         }
-        
     }
     //POP View 必须实现的代理
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -125,11 +124,11 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
     }
     //生命周期
     override func viewWillAppear(_ animated: Bool) {// Called when the view is about to made visible. Default does nothing
-        self.navigationItem.prompt = "正在载入..." //导航栏变为74
         super.viewWillAppear(animated)
+        self.navigationItem.prompt = "正在载入..." //导航栏变为74
     }
     override func viewDidAppear(_ animated: Bool) {// Called when the view has been fully transitioned onto the screen. Default does nothing
-        
+
         super.viewDidAppear(animated)
     }
     override func viewWillDisappear(_ animated: Bool) {// Called when the view is dismissed, covered or otherwise hidden. Default does nothing
@@ -139,11 +138,11 @@ class UIViewControllerVC: UIViewController,UIPopoverControllerDelegate, UIPopove
         super.viewDidDisappear(animated)
     }
     override func viewWillLayoutSubviews(){//即将布局子视图
-        
+
     }
 
     override func viewDidLayoutSubviews(){//子视图布局完成
-        
+
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

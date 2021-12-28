@@ -28,10 +28,11 @@ class WW_HeroListVC: WW_JXSegmentContentBaseVC{
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
-//        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        //设置导航栏背景透明
-        self.navigationController?.navigationBar.barTintColor = .clear
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ww_navs_main_back_bar_btn_img_3")?.withTintColor(.white, renderingMode: .alwaysOriginal), style: .plain,target: self,action: #selector(pressBack))
+        let navBg = self.navigationController?.navigationBar.subviews.first
+        if #available(iOS 15, *) {
+            navBg?.alpha = 0//设置导航栏背景透明
+        }
         self.navigationController!.navigationBar.standardAppearance = app // 常规页面
     }
     

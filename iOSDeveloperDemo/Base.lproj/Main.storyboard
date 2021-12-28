@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="-1512.5615763546798"/>
+            <point key="canvasLocation" x="1857" y="-1462"/>
         </scene>
         <!--Location And Map View Controller-->
         <scene sceneID="AJn-mx-izC">
@@ -1176,10 +1176,10 @@
             </objects>
             <point key="canvasLocation" x="1797.5999999999999" y="-2377.0935960591132"/>
         </scene>
-        <!--iOS移动开发目录-->
+        <!--Home-->
         <scene sceneID="It7-C3-aa6">
             <objects>
-                <navigationController title="iOS移动开发目录" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="4AL-gL-dDn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="4AL-gL-dDn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="TabIconHome" landscapeImage="Algeria" badgeValue="12" selectedImage="TabIconHome" id="uXU-2T-b8y">
                         <color key="badgeColor" red="1" green="0.6395348573726245" blue="0.35246621052638671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -1208,7 +1208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9H-5l-2Ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="-1535.4679802955666"/>
+            <point key="canvasLocation" x="950" y="-1461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gTv-aQ-9e8">
