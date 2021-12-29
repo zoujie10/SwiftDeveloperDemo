@@ -10,6 +10,7 @@ import UIKit
 
 class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
     var dataArray = [String]()
+    var vcArray = [String]()
     var tableView = UITableView()
     
     override func viewDidLoad() {
@@ -36,7 +37,15 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
         dataArray = ["分类页",
         "售后",
         "订单列表",
-        "榜单"]
+        "榜单",
+        "搜索"]
+        //存跳转的控制器
+        vcArray = [self.swiftStringFromClass(cls: WW_ClassificationListVC.self),
+                   self.swiftStringFromClass(cls: WW_AfterDetailVC.self),
+                   self.swiftStringFromClass(cls: WW_OrderListVC.self),
+                   self.swiftStringFromClass(cls: WW_HeroListVC.self),
+                   self.swiftStringFromClass(cls: WW_SearchHotWordsVC.self)
+        ]
     }
     //MARK: UITableview data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,15 +59,20 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
     }
   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
-            self.navigationController?.pushViewController(WW_ClassificationListVC(), animated: true)
-        }else if indexPath.row == 1{
-            self.navigationController?.pushViewController(WW_AfterDetailVC(), animated: true)
-        }else if indexPath.row == 2{
-            self.navigationController?.pushViewController(WW_OrderListVC(), animated: true)
-        }else if indexPath.row == 3{
-            self.navigationController?.pushViewController(WW_HeroListVC(), animated: true)
+        let vc : AnyClass = self.classFromString(str: vcArray[indexPath.row])
+        guard let jumpVC = vc as? UIViewController.Type else{
+            return
         }
+        self.navigationController?.pushViewController(jumpVC.init(), animated: true)
     }
-
+ 
+    func swiftStringFromClass(cls : AnyClass) -> String{
+        let str : String = NSStringFromClass(cls)
+        return str
+    }
+    
+    func classFromString(str : String) -> AnyClass{
+        let cls: AnyClass? = NSClassFromString(str)
+        return cls!
+    }
 }

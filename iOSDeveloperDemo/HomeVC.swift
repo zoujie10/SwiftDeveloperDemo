@@ -38,40 +38,38 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
         }else if(indexPath.row == 5){
             self.navigationController?.pushViewController(SwiftListVC(), animated: true)
         }else if(indexPath.row == 6){
-            self.navigationController?.pushViewController(UIKitComponentVC(), animated: true)
-        }else if(indexPath.row == 7){
             self.navigationController?.pushViewController(SwiftTouchViewAndGestureVC(), animated: true)
-        }else if(indexPath.row == 8){
-            self.navigationController?.pushViewController(SwiftListVC(), animated: true)
-        }else if(indexPath.row == 9){
-            self.navigationController?.pushViewController(TextAndImageVC(), animated: true)
-        }else if indexPath.row == 10{
-            self.navigationController?.pushViewController(AlamofireVC(), animated: true)
-        }else if indexPath.row == 11{
-            self.navigationController?.pushViewController(SwiftMapKitVC(), animated: true)
-        }else if indexPath.row == 12{
-            self.navigationController?.pushViewController(SwiftDataPersistenceVC(), animated: true)
-        }else if(indexPath.row == 13){
-            self.navigationController?.pushViewController(SwiftCocoaPodsVC(), animated: true)
-        }else if(indexPath.row == 14){
-            self.navigationController?.pushViewController(GitHubManagerVC(), animated: true)
-        }else if(indexPath.row == 15){
-            self.navigationController?.pushViewController(SwiftThirdPartyVC(), animated: true)
-        }else if(indexPath.row == 16){
-            self.navigationController?.pushViewController(SwiftImageAndVideoVC(), animated: true)
-        }else if(indexPath.row == 17){
+        }else if(indexPath.row == 7){
             self.navigationController?.pushViewController(SwiftAnimationSoundVideoVC(), animated: true)
-        }else if indexPath.row == 18 {
-            self.navigationController?.pushViewController(SwiftUsuallyDevicesVC(), animated: true)
-        }else if indexPath.row == 19 {
+        }else if(indexPath.row == 8){
+            self.navigationController?.pushViewController(TextAndImageVC(), animated: true)
+        }else if indexPath.row == 9{
+            self.navigationController?.pushViewController(AlamofireVC(), animated: true)
+        }else if indexPath.row == 10{
+            self.navigationController?.pushViewController(SwiftMapKitVC(), animated: true)
+        }else if indexPath.row == 11{
             self.navigationController?.pushViewController(SwiftDataPersistenceVC(), animated: true)
-        }else if indexPath.row == 20 {
+        }else if(indexPath.row == 12){
+            self.navigationController?.pushViewController(SwiftCocoaPodsVC(), animated: true)
+        }else if(indexPath.row == 13){
+            self.navigationController?.pushViewController(GitHubManagerVC(), animated: true)
+        }else if(indexPath.row == 14){
+            self.navigationController?.pushViewController(SwiftThirdPartyVC(), animated: true)
+        }else if(indexPath.row == 15){
+            self.navigationController?.pushViewController(SwiftImageAndVideoVC(), animated: true)
+        }else if(indexPath.row == 16){
+            self.navigationController?.pushViewController(SwiftUsuallyDevicesVC(), animated: true)
+        }else if indexPath.row == 17 {
+            let bigTurnplate = "https://dev-h5.hotkidceo.com/ceo/lotterydraw/index?ordertype=0&id=172"
+            let vc = SwiftWebViewAndHTML5VC.init(url: bigTurnplate, webTitle: "webView")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.row == 18 {
             self.navigationController?.pushViewController(SwiftLocalizationVC(), animated: true)
-        }else if indexPath.row == 21 {
+        }else if indexPath.row == 19 {
             self.navigationController?.pushViewController(SwiftThreadVC(), animated: true)
-        }else if indexPath.row == 22 {
+        }else if indexPath.row == 20 {
             self.navigationController?.pushViewController(SwiftSafeAndEncryptionVC(), animated: true)
-        }else if indexPath.row == 23{
+        }else if indexPath.row == 21 {
 //            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "stroryboardVC")
             //first page
             let storyboard = UIStoryboard(name: "AnotherStoryboard", bundle: nil)
@@ -84,12 +82,6 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 //            vc.message = "Jump Success"
 //            vc.title = "other board"
 //            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }else if indexPath.row == 24{
-//            let url = "http://dev-api.hotkidceo.com/manual/?channelId=S09033033001"
-            let bigTurnplate = "https://dev-h5.hotkidceo.com/ceo/lotterydraw/index?ordertype=0&id=172"
-            let vc = SwiftWebViewAndHTML5VC.init(url: bigTurnplate, webTitle: "webView")
-            self.navigationController?.pushViewController(vc, animated: true)
         }
         
 	}
@@ -126,25 +118,22 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 						  "4.ViewController",
 						  "5.经典控件",
 						  "6.UITableView",
-						  "7.UICollectionView",
-						  "8.触屏事件和触摸手势",
-						  "9.动画声音视频",
-                          "10.图文混编",
-						  "11.Alamofire",
-						  "12.MapKit",
-						  "13.数据持久化",
-						  "14.Git版本控制实践---GitHubManagerVC",
-                          "15.CocoaPods",
-                          "16.数据解析",
-                          "17.图片和视频处理",
-                          "18.动画音频视频播放",
-                          "19.常用设备使用",
-                          "20.WKWebViewAndHTML5",
-                          "21.Localization",
-                          "21.多线程",
-                          "22.加密与安全",
-                          "23.Storyboard",
-                          "24.WebView"]
+						  "7.触屏事件和触摸手势",
+						  "8.动画声音视频",
+                          "9.图文混编",
+						  "10.Alamofire",
+						  "11.MapKit",
+						  "12.数据持久化",
+						  "13.Git版本控制实践---GitHubManagerVC",
+                          "14.CocoaPods",
+                          "15.数据解析",
+                          "16.图片和视频处理",
+                          "17.常用设备使用",
+                          "18.WKWebViewAndHTML5",
+                          "19.Localization",
+                          "20.多线程",
+                          "21.加密与安全",
+                          "22.Storyboard"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in

@@ -45,7 +45,8 @@ class SwiftThirdPartyVC: UIViewController {
         let param = ["channelId":"B06022853001"]
    
         //POST
-        Alamofire.request(WW_CategoryTagList_Url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
+        let strUrl = WW_BaseURL + WW_CategoryTagList_Url
+        Alamofire.request(strUrl, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).responseData {response in
             
             let productModel = try! JSONDecoder().decode(useCodableModel.self, from: response.data!)
             let model :  subModel = productModel.data
