@@ -8,11 +8,18 @@
 
 import UIKit
 
-class WW_SearchTitleView: UIView,UISearchBarDelegate {
-
-    var searchWords : NSString = ""
+class WW_SearchTitleView: UIView {
+    var searchTextfield : UITextField?
+    var searchWords : String {
+        set (searchWord){
+            self.searchBar.text = searchWord
+        }
+        get {
+            return self.searchBar.text ?? ""
+        }
+    }
     
-    typealias clickSearchBarBlock = () -> NSString
+    typealias clickSearchBarBlock = (_ serchText : NSString) -> Void
     var clickSearchBlock : clickSearchBarBlock?
     
     override init(frame: CGRect) {
@@ -27,9 +34,6 @@ class WW_SearchTitleView: UIView,UISearchBarDelegate {
     
     func configUI(){
         self.addSubview(self.searchBar)
-        self.searchBar.snp.makeConstraints { make in
-            make.top.equalTo(self).offset(12)
-        }
     }
     
     lazy var searchBar : UISearchBar = {
@@ -38,25 +42,25 @@ class WW_SearchTitleView: UIView,UISearchBarDelegate {
         bar.returnKeyType = .search
         bar.backgroundImage = UIImage()
         
-        let textfield : UITextField = bar.value(forKey: "seearchField") as! UITextField
+        let textfield : UITextField = bar.value(forKey: "searchField") as! UITextField
         textfield.font = UIFont.systemFont(ofSize: 13)
         textfield.backgroundColor = .clear
         textfield.textColor = UIColor(r: 163, g: 163, b: 163)
         textfield.enablesReturnKeyAutomatically = false
-        
+
         let leftImageView = UIImageView.init(frame: CGRect(x: 10, y: 5, width: 12, height: 12))
         leftImageView.image = UIImage(named: "ww_ceos_acting_search_btn_img")
         leftImageView.contentMode = .center
-        
+
         let leftPaddingView = UIView.init(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
         leftPaddingView.addSubview(leftImageView)
         textfield.leftView = leftPaddingView
-        
+
         let clearBtn : UIButton = textfield.value(forKey: "_clearButton") as! UIButton
         clearBtn.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
         clearBtn.setImage(UIImage(named: "ww_search_clear_btn_img"), for: .normal)
         clearBtn.setImage(UIImage(named: "ww_search_clear_btn_img"), for: .highlighted)
-        
+
         bar.frame = CGRect(x: 0, y: 0, width: 270, height: 35)
         bar.delegate = self
         bar.layer.cornerRadius = 16
@@ -66,8 +70,37 @@ class WW_SearchTitleView: UIView,UISearchBarDelegate {
         return bar
     }()
     
-    lazy var searchTextfield : UITextField = {
-        let textfield = UITextField()
-        return textfield
-    }()
+}
+
+extension WW_SearchTitleView:UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else {
+            return
+        }
+        self.searchWords = text
+        
+        self.searchBar.resignFirstResponder()
+        if(self.clickSearchBlock != nil){
+            self.clickSearchBlock!(self.searchWords as NSString)
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return true
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchText.isEmpty){
+            return
+        }
+        
+        if (searchText.count > 20){
+            searchBar.text = searchText.substring(to: 20)
+            return
+        }
+    }
 }
