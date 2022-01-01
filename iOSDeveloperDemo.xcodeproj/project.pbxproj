@@ -65,6 +65,8 @@
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
 		843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
+		8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */; };
+		8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
@@ -276,6 +278,8 @@
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
 		843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAdvanceViewController.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
+		8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeListVC.swift; sourceTree = "<group>"; };
+		8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsCollectionCell.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
@@ -666,6 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				8453CFD6277DA0D700FC6C9F /* WW_SearchTitleView.swift */,
+				8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1103,6 +1108,7 @@
 		84DAA5352773679900A97694 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -1435,6 +1441,7 @@
 				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */,
 				84598C10234851B900E72C8B /* NoteBL.swift in Sources */,
+				8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */,
 				844F3F0C275F0D0F006762D0 /* WW_RightTableView.swift in Sources */,
 				848A467B20CE5CF200F982F2 /* DataPersistence.swift in Sources */,
 				848A467920CE5B2900F982F2 /* DeviceInfo.swift in Sources */,
@@ -1446,6 +1453,7 @@
 				84710DC5272C4A0F00A40507 /* AlamofireVC.swift in Sources */,
 				84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */,
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
+				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */,
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
