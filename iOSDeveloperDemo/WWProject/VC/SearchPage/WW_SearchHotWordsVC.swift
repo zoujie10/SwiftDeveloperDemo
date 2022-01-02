@@ -12,15 +12,21 @@ import MapKit
 class WW_SearchHotWordsVC: WW_MainBaseVC {
 
     var searchTitleView = WW_SearchTitleView()
+    var searchViewmodel = WW_SearchViewModel()
+    var historyWordsArray = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        requestHotWords(words: "牛奶")
         configUI()
     }
     func configUI(){
         self.navigationItem.titleView = self.searchTitleView
         self.searchTitleView.frame = CGRect(x: 0, y: 0, width: 270, height: 35)
         self.searchTitleView.searchWords = "旺仔牛奶"
+        self.searchTitleView.clickSearchBlock = { words in
+            self.requestHotWords(words: words as String)
+        }
     }
     
     
@@ -40,18 +46,58 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
 }
 
 extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if (self.historyWordsArray.count > 0){
+            return 2
+        }else{
+            return 1
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        if (section == 1){
+            return self.historyWordsArray.count
+        }else{
+            return self.searchViewmodel.wordsArray.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : WW_SearchHotWordsCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "hotWordsCell", for: indexPath) as! WW_SearchHotWordsCollectionCell
+        
+        if (indexPath.section == 0){
+            let model = self.searchViewmodel.wordsArray[indexPath.item] as WW_SearchHotWordsItem
+            cell.nameLabel.text = model.name
+            if(model.isHighlight == "1"){
+                cell.nameLabel.textColor = .red
+                cell.contentView.backgroundColor = .white
+            }else{
+                cell.nameLabel.textColor = .lightGray
+                cell.contentView.backgroundColor = UIColor(r: 252, g: 250, b: 250)
+            }
+            cell.deleteBtn.isHidden = true
+        }else{
+            cell.nameLabel.text = self.historyWordsArray[indexPath.item] as? String
+            cell.nameLabel.textColor = .lightGray
+            cell.contentView.backgroundColor = UIColor(r: 252, g: 250, b: 250)
+            
+            cell.clickBlock = {
+                
+            }
+        }
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headView : UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView", for: indexPath)
+       
+        return headView
+    }
     
-   
     func requestHotWords(words : String){
-        
+        self.searchViewmodel.getHotWordsRequest()
+        self.searchViewmodel.datahotWordsComplete = {
+            self.mainCollectionView.reloadData()
+        }
     }
     
     func requestAssociationalWord(word : String){

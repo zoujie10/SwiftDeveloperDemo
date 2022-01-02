@@ -33,8 +33,8 @@ let WW_kBDInformPriceOrderList  = "appapi/root-ceo-commodity/reportApi/queryRepo
 let WW_kBDInformOrderDetail     = "appapi/root-ceo-commodity/reportApi/queryReportById" //举报详情
 
 //首页
-let kHomeListUrl       = "appapi/api/root-ceo-content/hpPageConfigure/pageList" //首页
-let kSearchKeywordsUrl = "appapi/root-ceo-commodity/commodityApi/searchWords"  //热词
-let kHomeSearchUrl    = "appapi/root-ceo-commodity/commodityApi/commoditySearch" //搜索结果
-let kSearchWordListUrl  = "appapi/root-ceo-commodity/esApi/suggestion" //搜索词联想
-let kProductTagMoreUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMore" //猜你喜欢
+let WW_kHomeListUrl       = "appapi/api/root-ceo-content/hpPageConfigure/pageList" //首页
+let WW_kSearchKeywordsUrl = "appapi/root-ceo-commodity/commodityApi/searchWords"  //热词
+let WW_kHomeSearchUrl    = "appapi/root-ceo-commodity/commodityApi/commoditySearch" //搜索结果
+let WW_kSearchWordListUrl  = "appapi/root-ceo-commodity/esApi/suggestion" //搜索词联想
+let WW_kProductTagMoreUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMore" //猜你喜欢

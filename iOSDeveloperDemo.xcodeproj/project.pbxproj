@@ -67,6 +67,7 @@
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
 		8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */; };
 		8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */; };
+		8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
@@ -280,6 +281,7 @@
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeListVC.swift; sourceTree = "<group>"; };
 		8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsCollectionCell.swift; sourceTree = "<group>"; };
+		8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHistoryWordsManager.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
@@ -633,6 +635,15 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		8440F0FA27818095001FE7A1 /* BaseRequest */ = {
+			isa = PBXGroup;
+			children = (
+				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
+				844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */,
+			);
+			path = BaseRequest;
+			sourceTree = "<group>";
+		};
 		844F3EDB2753CBFE006762D0 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +665,7 @@
 		8453CFD1277C52E200FC6C9F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84DAA53A277367FF00A97694 /* WW_SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -662,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				8453CFD4277C532000FC6C9F /* WW_SearchHotWordsModel.swift */,
+				8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -830,11 +843,9 @@
 		845EC804271FECEF0006651E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */,
 				844F3F05275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift */,
 				844F3F07275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift */,
 				84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */,
-				84DAA53A277367FF00A97694 /* WW_SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1128,7 +1139,7 @@
 		84DAA54B27770F8C00A97694 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
+				8440F0FA27818095001FE7A1 /* BaseRequest */,
 				84DAA54927770F8900A97694 /* WW_BaseNavVC.swift */,
 				84DAA54C277711E400A97694 /* WW_BaseTabBarVC.swift */,
 				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
@@ -1419,6 +1430,7 @@
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */,
 				849387932622968700C2914C /* UIViewControllerVC.swift in Sources */,
+				8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84DAA51A2768743E00A97694 /* Global.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
