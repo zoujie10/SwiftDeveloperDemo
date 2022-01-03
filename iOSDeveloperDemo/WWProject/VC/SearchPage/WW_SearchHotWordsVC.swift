@@ -14,6 +14,7 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
     var searchTitleView = WW_SearchTitleView()
     var searchViewmodel = WW_SearchViewModel()
     var historyWordsArray = NSMutableArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -27,6 +28,8 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
         self.searchTitleView.clickSearchBlock = { words in
             self.requestHotWords(words: words as String)
         }
+        self.view.addSubview(self.mainCollectionView)
+    
     }
     
     
@@ -34,7 +37,8 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
         let layout = UICollectionViewFlowLayout()
         let view = UICollectionView.init(frame: CGRect(x: 0, y: 0, width:WWScreenWidth , height: WWScreenHeight), collectionViewLayout: layout)
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        view.register(UICollectionReusableView.classForCoder(), forCellWithReuseIdentifier: "headView")
+
+        view.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView")
         view.register(WW_SearchHotWordsCollectionCell.classForCoder(), forCellWithReuseIdentifier: "hotWordsCell")
         view.showsVerticalScrollIndicator = false
         view.delegate = self
@@ -50,9 +54,8 @@ extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSourc
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if (self.historyWordsArray.count > 0){
             return 2
-        }else{
-            return 1
         }
+        return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (section == 1){
@@ -87,10 +90,32 @@ extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSourc
         }
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 30)//TODO
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headView : UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView", for: indexPath)
        
+        let sectionTitleLabel = UILabel()
+        sectionTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        headView.addSubview(sectionTitleLabel)
+        sectionTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(headView).offset(18)
+            make.left.equalTo(20)
+        }
+        if(indexPath.section == 0){
+            sectionTitleLabel.text = "热门搜索"
+        }else if (indexPath.section == 1){
+            sectionTitleLabel.text = "历史搜索"
+//            let deleteBtn = UIButton()
+        }
         return headView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: WWScreenWidth, height: 50)
     }
     
     func requestHotWords(words : String){
