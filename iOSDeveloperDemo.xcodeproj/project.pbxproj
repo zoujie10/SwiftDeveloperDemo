@@ -68,6 +68,7 @@
 		8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */; };
 		8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */; };
 		8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */; };
+		8440F0FC2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
@@ -282,6 +283,7 @@
 		8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeListVC.swift; sourceTree = "<group>"; };
 		8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsCollectionCell.swift; sourceTree = "<group>"; };
 		8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHistoryWordsManager.swift; sourceTree = "<group>"; };
+		8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsFlowLayout.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 			children = (
 				8453CFD6277DA0D700FC6C9F /* WW_SearchTitleView.swift */,
 				8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */,
+				8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1513,6 +1516,7 @@
 				844F3F02275DB5E2006762D0 /* WW_MainVC.swift in Sources */,
 				84710DDE2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift in Sources */,
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
+				8440F0FC2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift in Sources */,
 				84710DBF272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				84DAA5312771C9CD00A97694 /* WW_OrderSingleVCThree.swift in Sources */,

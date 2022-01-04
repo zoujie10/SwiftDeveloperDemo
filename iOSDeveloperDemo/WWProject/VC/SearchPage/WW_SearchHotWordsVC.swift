@@ -34,7 +34,7 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
     
     
     lazy var mainCollectionView : UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = WW_SearchHotWordsFlowLayout.init(with: .AlignWithLeft, betweenOfCell: 10)
         let view = UICollectionView.init(frame: CGRect(x: 0, y: 0, width:WWScreenWidth , height: WWScreenHeight), collectionViewLayout: layout)
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
 
