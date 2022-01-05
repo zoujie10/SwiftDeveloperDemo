@@ -69,6 +69,7 @@
 		8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */; };
 		8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */; };
 		8440F0FC2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */; };
+		8440F0FE27857FA9001FE7A1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FD27857FA9001FE7A1 /* StringExtension.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
@@ -284,6 +285,7 @@
 		8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsCollectionCell.swift; sourceTree = "<group>"; };
 		8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHistoryWordsManager.swift; sourceTree = "<group>"; };
 		8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsFlowLayout.swift; sourceTree = "<group>"; };
+		8440F0FD27857FA9001FE7A1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
@@ -1103,6 +1105,7 @@
 			isa = PBXGroup;
 			children = (
 				84DAA51E2768817B00A97694 /* UIColorExtension.swift */,
+				8440F0FD27857FA9001FE7A1 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1549,6 +1552,7 @@
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,
 				844F3F04275DBAFE006762D0 /* WW_AfterDetailVC.swift in Sources */,
+				8440F0FE27857FA9001FE7A1 /* StringExtension.swift in Sources */,
 				84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
 				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,

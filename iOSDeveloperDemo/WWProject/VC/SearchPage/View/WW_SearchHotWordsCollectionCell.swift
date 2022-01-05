@@ -25,6 +25,7 @@ class WW_SearchHotWordsCollectionCell: UICollectionViewCell {
     }
     
     func creatUI(){
+        self.contentView.layer.cornerRadius = 12
         self.contentView.addSubview(self.nameLabel)
         self.contentView.addSubview(self.deleteBtn)
         

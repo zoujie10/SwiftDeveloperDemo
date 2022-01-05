@@ -41,8 +41,8 @@ class WW_SearchHotWordsFlowLayout: UICollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let layoutAttributes_t : [UICollectionViewLayoutAttributes] = super.layoutAttributesForElements(in: rect)! as [UICollectionViewLayoutAttributes]
         let layoutAttributes : [UICollectionViewLayoutAttributes] = NSArray.init(array: layoutAttributes_t , copyItems: true) as! [UICollectionViewLayoutAttributes]
-        let layoutAttributesTemp : NSMutableArray = NSMutableArray()
-
+        var layoutAttributesTemp = NSMutableArray()
+        
         for index in 0..<layoutAttributes.count {
             let currentAttr : UICollectionViewLayoutAttributes = layoutAttributes[index]
             var previousAttr : UICollectionViewLayoutAttributes?
@@ -75,41 +75,43 @@ class WW_SearchHotWordsFlowLayout: UICollectionViewFlowLayout {
                     layoutAttributesTemp.removeAllObjects()
                     self.sumCellWidth = 0
                 }else{
-                    
+                    self.setCellFrameWith(layoutAttributes: &layoutAttributesTemp)
                 }
             }else if currentY != nextY{
-                
+                self.setCellFrameWith(layoutAttributes: &layoutAttributesTemp)
             }
         }
         return layoutAttributes
     }
     
-    func setCellFrameWith(mut layoutAttributes : inout [UICollectionViewLayoutAttributes]){
+    func setCellFrameWith( layoutAttributes : inout NSMutableArray){
         var nowWidth : CGFloat = 0
         
         switch self.cellType {
             case .AlignWithLeft:
                 nowWidth = self.sectionInset.left
-                for attributes : UICollectionViewLayoutAttributes in layoutAttributes{
-                    var nowFrame : CGRect = attributes.frame
+                for attributes in layoutAttributes{
+                    let att = attributes as! UICollectionViewLayoutAttributes
+                    var nowFrame : CGRect = att.frame
                     nowFrame.origin.x = nowWidth
                     nowWidth += nowFrame.size.width + self.betweenOfCell
                 }
                 self.sumCellWidth = 0.0
-                layoutAttributes.removeAll()
+                layoutAttributes.removeAllObjects()
             case .AlignWithCenter:
                 nowWidth = CGFloat(((self.collectionView?.frame.size.width)! - self.sumCellWidth - (CGFloat((layoutAttributes.count - 1)) * self.betweenOfCell)) / 2)
-                for attributes : UICollectionViewLayoutAttributes in layoutAttributes{
-                    var nowFrame : CGRect = attributes.frame
+                for attributes in layoutAttributes{
+                    let att = attributes as! UICollectionViewLayoutAttributes
+                    var nowFrame : CGRect = att.frame
                     nowFrame.origin.x = nowWidth
                     nowWidth += nowFrame.size.width + self.betweenOfCell
                 }
                 self.sumCellWidth = 0.0
-                layoutAttributes.removeAll()
+                layoutAttributes.removeAllObjects()
             case .AlignWithRight:
                 nowWidth = (self.collectionView?.frame.size.width)! - self.sectionInset.right
                 for index in (layoutAttributes.count - 1)...0{
-                    let attributes : UICollectionViewLayoutAttributes = layoutAttributes[index]
+                    let attributes : UICollectionViewLayoutAttributes = layoutAttributes[index] as! UICollectionViewLayoutAttributes
                     var nowFrame : CGRect = attributes.frame
                     nowFrame.origin.x = nowWidth - nowFrame.size.width
                     attributes.frame = nowFrame

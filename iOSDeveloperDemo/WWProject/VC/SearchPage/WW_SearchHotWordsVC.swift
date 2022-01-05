@@ -14,12 +14,22 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
     var searchTitleView = WW_SearchTitleView()
     var searchViewmodel = WW_SearchViewModel()
     var historyWordsArray = NSMutableArray()
-    
+    let historyManage = WW_SearchHistoryWordsManager()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         requestHotWords(words: "牛奶")
         configUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.historyManage.hasWords{
+//            self.historyWordsArray
+            let array = self.historyManage.wordsData()
+            self.historyWordsArray = NSMutableArray.init(array: array)
+        }
     }
     func configUI(){
         self.navigationItem.titleView = self.searchTitleView
@@ -51,6 +61,7 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
 
 extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
+    //MARK: datasource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if (self.historyWordsArray.count > 0){
             return 2
@@ -90,14 +101,15 @@ extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSourc
         }
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 30)//TODO
-    }
-    
+  
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headView : UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView", for: indexPath)
        
+        for view in headView.subviews{
+            view.removeFromSuperview()
+        }
+        
         let sectionTitleLabel = UILabel()
         sectionTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         headView.addSubview(sectionTitleLabel)
@@ -113,9 +125,45 @@ extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSourc
         }
         return headView
     }
+    //MARK:  layout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var size : CGSize = CGSize.zero
+        if indexPath.section == 0{
+            if self.searchViewmodel.wordsArray.count > 0{
+                let wordItem : WW_SearchHotWordsItem = self.searchViewmodel.wordsArray[indexPath.item]
+                //String 算size 先转 NSString
+                size = NSString(string: wordItem.name).size(withAttributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14)])
+            }
+        }else{
+            if self.historyWordsArray.count > 0{
+                let str : NSString = self.historyWordsArray[indexPath.item] as! NSString
+                size = str.size(withAttributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14)])
+            }
+            //TODO delete
+        }
+        if size.width > WWScreenWidth - 20{
+            return CGSize(width: WWScreenWidth-20, height: 30)
+        }
+        return CGSize(width: size.width+30, height: 30)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: WWScreenWidth, height: 50)
+    }
+    
+    //MARK: delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(indexPath.section == 0){
+            let wordItem : WW_SearchHotWordsItem = self.searchViewmodel.wordsArray[indexPath.item]
+            
+            if(self.historyWordsArray.count > 0){
+                self.historyWordsArray.removeAllObjects()
+            }
+            self.historyWordsArray = NSMutableArray.init(array: self.historyManage.saveWord(word: wordItem.name))
+        }else if (indexPath.section == 1){
+            let word : String = self.historyWordsArray[indexPath.item] as! String
+            self.historyWordsArray = NSMutableArray.init(array: self.historyManage.saveWord(word: word))
+        }
     }
     
     func requestHotWords(words : String){
