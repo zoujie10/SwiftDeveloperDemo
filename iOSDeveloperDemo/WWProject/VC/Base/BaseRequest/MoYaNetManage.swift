@@ -18,6 +18,7 @@ enum NetworkAPI {
     case CategoryTagsList(params : [String:Any])
     case kBDInformPriceOrderList(currentpage : Int, orderStatus : String ,pagesize : Int)
     case SearchWords
+    case SearchProducts(ptkey:String,currentpage : Int,pagesize : Int)
 }
 extension NetworkAPI:TargetType{
     
@@ -35,6 +36,8 @@ extension NetworkAPI:TargetType{
                 return WW_kBDInformPriceOrderList
             case .SearchWords:
                 return WW_kSearchKeywordsUrl
+            case .SearchProducts:
+                return WW_kHomeSearchUrl
         }
     }
     
@@ -70,6 +73,16 @@ extension NetworkAPI:TargetType{
             case .SearchWords:
                 parmetersInner["channelId"] = "S09033033001"
                 parmetersInner["isWholeSale"] = "0"
+                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                
+            case .SearchProducts(let ptkey, let currentPage,let pageSize):
+                parmetersInner["searchKey"] = ptkey
+                parmetersInner["searchType"] = "ordinaryDesc"
+                parmetersInner["ceoStatus"] = "1"
+                parmetersInner["areas"] = "DN"
+                parmetersInner["pageSize"] = pageSize
+                parmetersInner["page"] = currentPage
+                parmetersInner["isWholeSale"] = "1"
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
         }
     }

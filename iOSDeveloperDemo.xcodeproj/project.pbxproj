@@ -70,6 +70,8 @@
 		8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */; };
 		8440F0FC2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */; };
 		8440F0FE27857FA9001FE7A1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FD27857FA9001FE7A1 /* StringExtension.swift */; };
+		8440F1002786C1AF001FE7A1 /* WW_SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FF2786C1AF001FE7A1 /* WW_SearchResultViewModel.swift */; };
+		8440F1022786C1C6001FE7A1 /* WW_SearchProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F1012786C1C6001FE7A1 /* WW_SearchProductsModel.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
@@ -286,6 +288,8 @@
 		8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHistoryWordsManager.swift; sourceTree = "<group>"; };
 		8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsFlowLayout.swift; sourceTree = "<group>"; };
 		8440F0FD27857FA9001FE7A1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8440F0FF2786C1AF001FE7A1 /* WW_SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchResultViewModel.swift; sourceTree = "<group>"; };
+		8440F1012786C1C6001FE7A1 /* WW_SearchProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchProductsModel.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
@@ -670,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				84DAA53A277367FF00A97694 /* WW_SearchViewModel.swift */,
+				8440F0FF2786C1AF001FE7A1 /* WW_SearchResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 		8453CFD2277C52EB00FC6C9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8440F1012786C1C6001FE7A1 /* WW_SearchProductsModel.swift */,
 				8453CFD4277C532000FC6C9F /* WW_SearchHotWordsModel.swift */,
 				8440F0F6278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift */,
 			);
@@ -1543,6 +1549,7 @@
 				84DAA5442774D02800A97694 /* WW_JXSegmentContentBaseVC.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */,
+				8440F1002786C1AF001FE7A1 /* WW_SearchResultViewModel.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */,
@@ -1578,6 +1585,7 @@
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
 				844F3F00275DAEBC006762D0 /* WW_MainBaseVC.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
+				8440F1022786C1C6001FE7A1 /* WW_SearchProductsModel.swift in Sources */,
 				844F3EDF2753D16C006762D0 /* OtherStoryBoardSecondVC.swift in Sources */,
 				848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */,
 			);
