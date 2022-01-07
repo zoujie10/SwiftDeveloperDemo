@@ -25,12 +25,17 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let rightItem : UIBarButtonItem = UIBarButtonItem.init(title: "搜索", style: .plain, target: self, action: #selector(pushToSearchResult))
+        rightItem.tintColor = .white
+        self.navigationItem.rightBarButtonItem = rightItem
+        
         if self.historyManage.hasWords{
 //            self.historyWordsArray
             let array = self.historyManage.wordsData()
             self.historyWordsArray = NSMutableArray.init(array: array)
         }
     }
+    
     func configUI(){
         self.navigationItem.titleView = self.searchTitleView
         self.searchTitleView.frame = CGRect(x: 0, y: 0, width: 270, height: 35)
@@ -40,6 +45,13 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
         }
         self.view.addSubview(self.mainCollectionView)
     
+    }
+    
+        //MARK: private method
+    @objc func pushToSearchResult(){
+        let vc = WW_SearchResultVC()
+        vc.keyWord = self.searchTitleView.searchWords
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -57,6 +69,7 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
         view.contentSize = CGSize(width: WWScreenWidth,height: WWScreenHeight)
         return view
     }()
+    
 }
 
 extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{

@@ -18,7 +18,7 @@ enum NetworkAPI {
     case CategoryTagsList(params : [String:Any])
     case kBDInformPriceOrderList(currentpage : Int, orderStatus : String ,pagesize : Int)
     case SearchWords
-    case SearchProducts(ptkey:String,currentpage : Int,pagesize : Int)
+    case SearchProducts(searchKey:String,currentpage : Int,pagesize : Int)
 }
 extension NetworkAPI:TargetType{
     
@@ -75,8 +75,8 @@ extension NetworkAPI:TargetType{
                 parmetersInner["isWholeSale"] = "0"
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
                 
-            case .SearchProducts(let ptkey, let currentPage,let pageSize):
-                parmetersInner["searchKey"] = ptkey
+            case .SearchProducts(let searchKey, let currentPage,let pageSize):
+                parmetersInner["searchKey"] = searchKey
                 parmetersInner["searchType"] = "ordinaryDesc"
                 parmetersInner["ceoStatus"] = "1"
                 parmetersInner["areas"] = "DN"

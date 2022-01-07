@@ -14,9 +14,9 @@ class WW_SearchResultViewModel: NSObject {
     typealias dataResultCompleteBlock = () -> Void
     var dataResultComplete : dataResultCompleteBlock?
     
-    func getSearchWords(ptkey:String,currentPage:Int,pageSize:Int){
+    func getSearchWords(serchWord:String,currentPage:Int,pageSize:Int){
 
-        NetworkProvider.request(NetworkAPI.SearchProducts(ptkey: "56", currentpage: 1, pagesize: 1000)) { result in
+        NetworkProvider.request(NetworkAPI.SearchProducts(searchKey: serchWord, currentpage: 1, pagesize: 1000)) { result in
             switch result{
                 case .success(_):
                     guard let data = result.value?.data  else { return }
@@ -35,4 +35,7 @@ class WW_SearchResultViewModel: NSObject {
             }
         }
     }
+    
+    
+    
 }

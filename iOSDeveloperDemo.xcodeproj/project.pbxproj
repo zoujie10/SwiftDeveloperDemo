@@ -110,6 +110,7 @@
 		845EC7F6271AADF30006651E /* TextAndImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC7F5271AADF30006651E /* TextAndImageVC.swift */; };
 		845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */; };
 		845EC808271FEED90006651E /* WWAfterSalePicEgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */; };
+		8460CE78278826CB00E7790A /* WW_SearchResultProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */; };
 		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
 		8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01821393AE100FC6B5C /* ZJArray.swift */; };
 		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
@@ -329,6 +330,7 @@
 		845EC7F5271AADF30006651E /* TextAndImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndImageVC.swift; sourceTree = "<group>"; };
 		845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAfterSaleDisplayPicEgVC.swift; sourceTree = "<group>"; };
 		845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAfterSalePicEgCell.swift; sourceTree = "<group>"; };
+		8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchResultProductsCell.swift; sourceTree = "<group>"; };
 		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
 		8467E01821393AE100FC6B5C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJArray.swift; path = DataStruct/ZJArray.swift; sourceTree = SOURCE_ROOT; };
 		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
@@ -695,6 +697,7 @@
 				8453CFD6277DA0D700FC6C9F /* WW_SearchTitleView.swift */,
 				8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */,
 				8440F0FB2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift */,
+				8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1583,6 +1586,7 @@
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,
+				8460CE78278826CB00E7790A /* WW_SearchResultProductsCell.swift in Sources */,
 				844F3F00275DAEBC006762D0 /* WW_MainBaseVC.swift in Sources */,
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
 				8440F1022786C1C6001FE7A1 /* WW_SearchProductsModel.swift in Sources */,
