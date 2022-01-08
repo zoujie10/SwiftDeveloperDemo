@@ -17,17 +17,18 @@ class WW_SearchProductsItem : Codable {
     var name : String?
     var spec : String?
     var Description : String?
-    var retailPrice : String?
-    var supplyPrice : String?
-    var origPrice : String?
-    var seckillPrice : String?
+    @WW_dataTransString var retailPrice : String?
+    @WW_dataTransString var supplyPrice : String?
+    @WW_dataTransString var origPrice : String?
+    @WW_dataTransString var seckillPrice : String?
     var unit : String?
     var listImages : String?
-    var ptKey : String?
+    @WW_dataTransString var ptKey : String?
     var displayName : String?
-    var startSaleNum : String?
-    var buyAddNum : String?
-    var multiPtKeyNum : String?
+    @WW_dataTransString var startSaleNum : String?
+    @WW_dataTransString var buyAddNum : String?
+    @WW_dataTransString var multiPtKeyNum : String?
+    @WW_dataTransString var sold : String?
     var productPictureLabelResponseList : [WW_ProductPictureLabelResponseList]?
     var actTags : [String]?
     var commodityBatchList : [WW_CommodityBatchList]?
@@ -35,33 +36,13 @@ class WW_SearchProductsItem : Codable {
 
 class WW_SearchResultProductsData : Codable{
     var templateList : [WW_SearchProductsItem]?
-    var total : String?
-    var totalPage : String?
+    var total : Int?
+    var totalPage : Int?
 }
 
 class WW_SearchProductsModel: Codable {
     var data : WW_SearchResultProductsData?
-    var code : String?
+    var code : Int?
     var msg : String?
 }
-/** 批次
- @property (nonatomic, copy) NSString *sku;
 
- /// 生产日期
- @property (nonatomic, copy) NSString *productionDate;
-
- /// 预计过期日期
- @property (nonatomic, copy) NSString *expireDate;
-
- /// 生产日期
- @property (nonatomic, copy) NSString *shelfLife;
-
- /// 口味
- @property (nonatomic, copy) NSString *flavour;
-
- /// 规格
- @property (nonatomic, copy) NSString *spec;
-
- /// 名称
- @property (nonatomic, copy) NSString *name;
- */

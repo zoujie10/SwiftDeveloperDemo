@@ -59,7 +59,7 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
         let layout = WW_SearchHotWordsFlowLayout.init(with: .AlignWithLeft, betweenOfCell: 10)
         let view = UICollectionView.init(frame: CGRect(x: 0, y: 0, width:WWScreenWidth , height: WWScreenHeight), collectionViewLayout: layout)
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-
+        
         view.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView")
         view.register(WW_SearchHotWordsCollectionCell.classForCoder(), forCellWithReuseIdentifier: "hotWordsCell")
         view.showsVerticalScrollIndicator = false

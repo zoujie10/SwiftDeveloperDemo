@@ -117,7 +117,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 						  "3.视图UIView和层CALayer---UIViewAndCALayerVC",
 						  "4.ViewController",
 						  "5.经典控件",
-						  "6.UITableView",
+						  "6.UITableView+UICollectionView",
 						  "7.触屏事件和触摸手势",
 						  "8.动画声音视频",
                           "9.图文混编",
@@ -154,12 +154,7 @@ class HomeVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UITableVie
 			//监听内存警告⚠️
 			notificationCenter.addObserver(self, selector:#selector(handleMemoryWarning), name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
 	}
-	override func viewWillAppear(_ animated: Bool) {
-		
-	}
-	override func viewWillDisappear(_ animated: Bool) {
-		
-	}
+	
 	
 	@objc func registerCompletion(notification: Notification){
 		

@@ -24,8 +24,8 @@ class WW_SearchResultViewModel: NSObject {
                     print("responese ---- \(String(describing: dataAsString))")
                     do {
                         let myDecoder = JSONDecoder()
-                        let productModel = try myDecoder.decode(WW_SearchProductsModel.self, from: data)
-                        let model : WW_SearchResultProductsData = productModel.data!
+                        let productModel = try myDecoder.decode(WW_SearchProductsModel?.self, from: data)
+                        let model : WW_SearchResultProductsData = productModel!.data!
                         self.productsArray = model.templateList ?? [WW_SearchProductsItem]()
                         self.dataResultComplete!()
                     } catch let error {
