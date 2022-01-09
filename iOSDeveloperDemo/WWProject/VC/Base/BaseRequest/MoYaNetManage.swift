@@ -19,6 +19,7 @@ enum NetworkAPI {
     case kBDInformPriceOrderList(currentpage : Int, orderStatus : String ,pagesize : Int)
     case SearchWords
     case SearchProducts(searchKey:String,currentpage : Int,pagesize : Int)
+    case GuessYourLike(pageIndex : Int)
 }
 extension NetworkAPI:TargetType{
     
@@ -38,6 +39,8 @@ extension NetworkAPI:TargetType{
                 return WW_kSearchKeywordsUrl
             case .SearchProducts:
                 return WW_kHomeSearchUrl
+            case .GuessYourLike:
+                return WW_kGuessYourLikeUrl
         }
     }
     
@@ -84,6 +87,13 @@ extension NetworkAPI:TargetType{
                 parmetersInner["page"] = currentPage
                 parmetersInner["isWholeSale"] = "1"
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+            case .GuessYourLike(let page):
+                parmetersInner["page"] = page
+                parmetersInner["isWholeSale"] = "1"
+                parmetersInner["areas"] = "DN"
+                parmetersInner["channelId"] = "S09033033001"
+                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                 
         }
     }
     

@@ -36,8 +36,12 @@ class WW_SearchProductsItem : Codable {
 
 class WW_SearchResultProductsData : Codable{
     var templateList : [WW_SearchProductsItem]?
+    //搜索结果
     var total : Int?
     var totalPage : Int?
+    //猜你喜欢
+    var pageCount : Int?
+    var totalCount : Int?
 }
 
 class WW_SearchProductsModel: Codable {

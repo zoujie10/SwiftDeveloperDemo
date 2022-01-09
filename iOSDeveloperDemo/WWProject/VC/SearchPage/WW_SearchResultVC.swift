@@ -21,6 +21,10 @@ class WW_SearchResultVC: WW_MainBaseVC {
         self.searchResultViewmodel.dataResultComplete = {
             self.mainCollectionView.reloadData()
         }
+        self.searchResultViewmodel.getGuessYourlike(page: 1)
+        self.searchResultViewmodel.guessYourLikedataResultComplete = {
+            self.mainCollectionView.reloadData()
+        }
         configUI()
     }
    
@@ -31,9 +35,13 @@ class WW_SearchResultVC: WW_MainBaseVC {
         self.searchTitleView.clickSearchBlock = { words in
 //            self.requestHotWords(words: words as String)
         }
+        let rightItem : UIBarButtonItem = UIBarButtonItem.init(image: (UIImage(named: "ww_homes_cart_white_btn_img")?.withRenderingMode(.alwaysOriginal)), style: .plain, target: self, action: #selector(pushToCartVC))
+        self.navigationItem.rightBarButtonItem = rightItem
         self.view.addSubview(self.mainCollectionView)
     }
-
+    @objc func pushToCartVC(){
+        
+    }
     lazy var mainCollectionView : UICollectionView = {
 
         let layout = UICollectionViewFlowLayout()
@@ -55,21 +63,33 @@ class WW_SearchResultVC: WW_MainBaseVC {
 
 extension WW_SearchResultVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
   
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.searchResultViewmodel.productsArray.count
+        if(section == 1){
+            return self.searchResultViewmodel.guessLikeArray.count
+        }else{
+            return self.searchResultViewmodel.productsArray.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : WW_SearchResultProductsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "productsCell", for: indexPath) as! WW_SearchResultProductsCell
-        
-        let model : WW_SearchProductsItem = self.searchResultViewmodel.productsArray[indexPath.item]
+        let model : WW_SearchProductsItem
+        if(indexPath.section == 1){
+            model = self.searchResultViewmodel.guessLikeArray[indexPath.item]
+        }else{
+            model  = self.searchResultViewmodel.productsArray[indexPath.item]
+        }
         let str = model.listImages
         cell.productImageView.kf.setImage(with: URL.init(string: str ?? ""))
         cell.productImageView.kf.indicatorType = .activity
         cell.nameLabel.text = model.name
         cell.specLabel.text = model.displayName
         cell.saleCountLabel.text = model.sold
-        cell.priceAndUnitLabel.text = "\(model.retailPrice ?? "")/\(model.unit ?? "")"
+        cell.priceAndUnitLabel.text = "￥\(model.retailPrice ?? "")/\(model.unit ?? "")"
         return cell
     }
     
@@ -84,6 +104,31 @@ extension WW_SearchResultVC:UICollectionViewDelegate,UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //TODO JumpDetail
         debugPrint(indexPath.item)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if(section == 1){
+            return CGSize(width: WWScreenWidth, height: 35)
+        }else{
+            return CGSize(width: WWScreenWidth, height: 1)
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headView : UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView", for: indexPath)
+       
+        for view in headView.subviews{
+            view.removeFromSuperview()
+        }
+        if(indexPath.section == 1){
+            let headImageView = UIImageView()
+            headImageView.image = UIImage(named: "ww_homes_cell_recommend_head_img")
+            headView.addSubview(headImageView)
+            headImageView.snp.makeConstraints { make in
+                make.center.equalTo(headView)
+            }
+        }else{
+            
+        }
+        return headView
     }
 }
 

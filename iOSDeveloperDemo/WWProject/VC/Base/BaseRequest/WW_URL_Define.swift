@@ -37,4 +37,4 @@ let WW_kHomeListUrl       = "appapi/api/root-ceo-content/hpPageConfigure/pageLis
 let WW_kSearchKeywordsUrl = "appapi/root-ceo-commodity/commodityApi/searchWords"  //热词
 let WW_kHomeSearchUrl    = "appapi/root-ceo-commodity/commodityApi/commoditySearch" //搜索结果
 let WW_kSearchWordListUrl  = "appapi/root-ceo-commodity/esApi/suggestion" //搜索词联想
-let WW_kProductTagMoreUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMore" //猜你喜欢
+let WW_kGuessYourLikeUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMore" //猜你喜欢
