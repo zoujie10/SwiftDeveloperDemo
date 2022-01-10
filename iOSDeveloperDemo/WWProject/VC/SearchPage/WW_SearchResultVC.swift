@@ -11,23 +11,42 @@ import UIKit
 class WW_SearchResultVC: WW_MainBaseVC {
     var searchTitleView = WW_SearchTitleView()
     var searchResultViewmodel = WW_SearchResultViewModel()
+    
     var keyWord : String = ""
     let historyManage = WW_SearchHistoryWordsManager()
+    var header = WW_RefreshStateHeader()
+    var footer = WW_RefreshAutoGifFooter()
+    var indexPage : Int = 1
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(r: 247, g: 247, b: 247)
-        self.searchResultViewmodel.getSearchWords(serchWord: "牛奶", currentPage: 1, pageSize: 1)
-        self.searchResultViewmodel.dataResultComplete = {
-            self.mainCollectionView.reloadData()
-        }
-        self.searchResultViewmodel.getGuessYourlike(page: 1)
-        self.searchResultViewmodel.guessYourLikedataResultComplete = {
-            self.mainCollectionView.reloadData()
-        }
+        self.requestSearchResult(keyWord: keyWord, currentPage: 1, pageSize: 12)
         configUI()
     }
-   
+    func requestSearchResult(keyWord:String,currentPage:Int,pageSize:Int){
+        self.searchResultViewmodel.getSearchWords(serchWord: keyWord, currentPage: currentPage, pageSize: 12)
+        self.searchResultViewmodel.dataResultComplete = {
+            if self.searchResultViewmodel.searchNoMore == true{
+                self.requestGuessYourLike(page: 1)
+            }else{
+                self.mainCollectionView.reloadData()
+            }
+        }
+    }
+    
+    func requestGuessYourLike(page:Int){
+        self.searchResultViewmodel.getGuessYourlike(page: page)
+        self.searchResultViewmodel.guessYourLikedataResultComplete = {
+            if self.searchResultViewmodel.guessYourLikeNoMore == true{
+                self.mainCollectionView.mj_footer?.endRefreshingWithNoMoreData()
+            }
+            self.mainCollectionView.reloadData()
+            
+        }
+    }
+    
     func configUI(){
         self.navigationItem.titleView = self.searchTitleView
         self.searchTitleView.frame = CGRect(x: 0, y: 0, width: 270, height: 35)
@@ -42,6 +61,17 @@ class WW_SearchResultVC: WW_MainBaseVC {
     @objc func pushToCartVC(){
         
     }
+    
+    @objc func headerRefresh(){
+        self.indexPage = 0
+        self.requestSearchResult(keyWord: self.searchTitleView.searchBar.text ?? "", currentPage: 1, pageSize: 12)
+       }
+       
+       @objc func footerRefresh(){
+           self.indexPage += 1
+           self.requestGuessYourLike(page: self.indexPage)
+       }
+    
     lazy var mainCollectionView : UICollectionView = {
 
         let layout = UICollectionViewFlowLayout()
@@ -56,7 +86,19 @@ class WW_SearchResultVC: WW_MainBaseVC {
         view.backgroundColor = .clear
         view.contentSize = CGSize(width: WWScreenWidth,height: WWScreenHeight)
         
-        //TODO 上啦下拉刷新
+        //刷新
+        header.setRefreshingTarget(self, refreshingAction:#selector(headerRefresh))
+        header.lastUpdatedTimeLabel?.isHidden = true
+        header.stateLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        header.stateLabel?.textColor = UIColor(red: 184/255, green: 184/255, blue: 184/255, alpha: 1)
+        
+        view.mj_header = header
+        
+        footer.setRefreshingTarget(self, refreshingAction: #selector(footerRefresh))
+        //        footer.isAutomaticallyRefresh = false
+        footer.stateLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        footer.stateLabel?.textColor = UIColor(red: 184/255, green: 184/255, blue: 184/255, alpha: 1)
+        view.mj_footer = footer
         return view
     }()
 }
@@ -64,7 +106,11 @@ class WW_SearchResultVC: WW_MainBaseVC {
 extension WW_SearchResultVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
   
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        if (self.searchResultViewmodel.searchNoMore == true){
+            return 2
+        }else{
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

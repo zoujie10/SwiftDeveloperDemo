@@ -92,6 +92,7 @@ extension NetworkAPI:TargetType{
                 parmetersInner["isWholeSale"] = "1"
                 parmetersInner["areas"] = "DN"
                 parmetersInner["channelId"] = "S09033033001"
+                parmetersInner["pageSize"] = 12
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
                  
         }

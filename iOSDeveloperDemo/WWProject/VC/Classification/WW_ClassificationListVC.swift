@@ -130,8 +130,6 @@ class WW_ClassificationListVC: WW_MainBaseVC {
         
         let model : WW_CategoryInfoItemModel = self.leftViewModel.tagsArray[selectLeftRow]
         self.requestRightProduct(code: model.code)
-        
-        
     }
     
     @objc func footerRefresh(){

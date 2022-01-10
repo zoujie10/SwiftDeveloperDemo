@@ -176,8 +176,11 @@ extension WW_SearchHotWordsVC:UICollectionViewDelegate,UICollectionViewDataSourc
         }else if (indexPath.section == 1){
             let word : String = self.historyWordsArray[indexPath.item] as! String
             self.historyWordsArray = NSMutableArray.init(array: self.historyManage.saveWord(word: word))
+            let vc = WW_SearchResultVC()
+            vc.keyWord = word
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        self.navigationController?.pushViewController(WW_SearchResultVC(), animated: true)
+       
     }
     
     func requestHotWords(words : String){
