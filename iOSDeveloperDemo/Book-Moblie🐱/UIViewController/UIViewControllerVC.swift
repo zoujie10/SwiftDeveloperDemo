@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIViewControllerVC: WW_MainBaseVC,UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate,UIScrollViewDelegate {
+class UIViewControllerVC: WW_MainBaseVC,UIScrollViewDelegate {
     private var _orientations = UIInterfaceOrientationMask.portrait
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
     get { return self._orientations }
@@ -79,9 +79,12 @@ class UIViewControllerVC: WW_MainBaseVC,UIPopoverControllerDelegate, UIPopoverPr
         popView.modalPresentationStyle = .popover
         popView.popoverPresentationController?.delegate = self;
         popView.popoverPresentationController?.sourceView = btn
-        popView.popoverPresentationController?.sourceRect = CGRect.init(x: 0, y: 0, width: 100, height: 100)
+        popView.popoverPresentationController?.sourceRect = CGRect.init(x: 0, y: 0, width: 90 , height: 150)
         popView.popoverPresentationController?.permittedArrowDirections = .any;
-        popView.popoverPresentationController?.backgroundColor = .orange;
+        popView.popoverPresentationController?.backgroundColor = .orange
+//        popView.popoverPresentationController?.popoverBackgroundViewClass
+//        popView.isModalInPopover = true
+//        popView.isModalInPresentation = true
         popView.popoverPresentationController?.canOverlapSourceViewRect = false;
         let subView = UIView()
         subView.backgroundColor = .red
@@ -192,4 +195,8 @@ class UIViewControllerVC: WW_MainBaseVC,UIPopoverControllerDelegate, UIPopoverPr
     @objc func JumpNextPage(){
         
     }
+}
+
+extension UIViewControllerVC :UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate{
+   
 }
