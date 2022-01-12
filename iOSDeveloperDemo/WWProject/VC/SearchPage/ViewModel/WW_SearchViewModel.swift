@@ -21,7 +21,7 @@ class WW_SearchViewModel: NSObject {
                 case .success(_):
                     guard let data = result.value?.data  else { return }
                     let dataAsString = String(data: data, encoding: .utf8)
-                    print("responese ---- \(String(describing: dataAsString))")
+                    dataAsString?.jsonStringPrint()
                     
                     do {
                         let myDecoder = JSONDecoder()

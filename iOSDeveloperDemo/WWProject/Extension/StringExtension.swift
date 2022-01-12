@@ -48,4 +48,11 @@ extension String {
         let trimmedStr = self.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmedStr.isEmpty
     }
+    
+    //打印json
+    func jsonStringPrint(){
+        let jsonData : Data = (self.data(using: String.Encoding.utf8, allowLossyConversion: false))!
+        let json = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+        debugPrint(json as Any)
+    }
 }

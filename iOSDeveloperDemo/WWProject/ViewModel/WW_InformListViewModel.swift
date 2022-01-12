@@ -21,8 +21,8 @@ class WW_InformListViewModel: NSObject {
             switch result {
                 case .success(_):
                     guard let data = result.value?.data  else { return }
-//                    let dataAsString = String(data: data, encoding: .utf8)
-//                    print("responese ---- \(String(describing: dataAsString))")
+                    let dataAsString = String(data: data, encoding: .utf8)
+                    dataAsString?.jsonStringPrint()
                     
                     do {
                         
