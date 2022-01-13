@@ -28,10 +28,16 @@ class WW_SearchResultVC: WW_MainBaseVC {
     func requestSearchResult(keyWord:String,currentPage:Int,pageSize:Int){
         self.searchResultViewmodel.getSearchWords(serchWord: keyWord, currentPage: currentPage, pageSize: 12)
         self.searchResultViewmodel.dataResultComplete = {
-            if self.searchResultViewmodel.searchNoMore == true{
+            if(self.searchResultViewmodel.productsArray.count < 1){
+                self.emptyView.isHidden = false;
                 self.requestGuessYourLike(page: 1)
             }else{
-                self.mainCollectionView.reloadData()
+                self.emptyView.isHidden = true
+                if self.searchResultViewmodel.searchNoMore == true{
+                    self.requestGuessYourLike(page: 1)
+                }else{
+                    self.mainCollectionView.reloadData()
+                }
             }
         }
     }
@@ -50,7 +56,7 @@ class WW_SearchResultVC: WW_MainBaseVC {
     func configUI(){
         self.navigationItem.titleView = self.searchTitleView
         self.searchTitleView.frame = CGRect(x: 0, y: 0, width: 270, height: 35)
-        self.searchTitleView.searchWords = "旺仔牛奶"
+//        self.searchTitleView.searchWords = "旺仔牛奶"
         self.searchTitleView.clickSearchBlock = { words in
 //            self.requestHotWords(words: words as String)
         }
@@ -100,6 +106,12 @@ class WW_SearchResultVC: WW_MainBaseVC {
         footer.stateLabel?.textColor = UIColor(red: 184/255, green: 184/255, blue: 184/255, alpha: 1)
         view.mj_footer = footer
         return view
+    }()
+    
+    lazy var emptyView : WW_NoDataView = {
+        let v = WW_NoDataView()
+        v.isHidden = true
+        return v
     }()
 }
 
@@ -155,7 +167,11 @@ extension WW_SearchResultVC:UICollectionViewDelegate,UICollectionViewDataSource,
         if(section == 1){
             return CGSize(width: WWScreenWidth, height: 35)
         }else{
-            return CGSize(width: WWScreenWidth, height: 1)
+            if(self.searchResultViewmodel.productsArray.count < 1){
+                return CGSize(width: WWScreenWidth, height: 280)
+            }else{
+                return CGSize(width: WWScreenWidth, height: 1)
+            }
         }
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -172,7 +188,12 @@ extension WW_SearchResultVC:UICollectionViewDelegate,UICollectionViewDataSource,
                 make.center.equalTo(headView)
             }
         }else{
-            
+            headView.addSubview(self.emptyView)
+
+            self.emptyView.snp.makeConstraints { make in
+                make.centerX.equalTo(headView)
+                make.top.equalTo(130)
+            }
         }
         return headView
     }

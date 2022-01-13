@@ -38,13 +38,15 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
         "售后",
         "订单列表",
         "榜单",
-        "搜索"]
+        "搜索",
+        "首页"]
         //存跳转的控制器
         vcArray = [self.swiftStringFromClass(cls: WW_ClassificationListVC.self),
                    self.swiftStringFromClass(cls: WW_AfterDetailVC.self),
                    self.swiftStringFromClass(cls: WW_OrderListVC.self),
                    self.swiftStringFromClass(cls: WW_HeroListVC.self),
-                   self.swiftStringFromClass(cls: WW_SearchHotWordsVC.self)
+                   self.swiftStringFromClass(cls: WW_SearchHotWordsVC.self),
+                   self.swiftStringFromClass(cls: WW_HomeListVC.self)
         ]
     }
     //MARK: UITableview data source

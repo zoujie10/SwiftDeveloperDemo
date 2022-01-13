@@ -60,6 +60,8 @@
 		842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78732258AD560048B63A /* ContactsUI.framework */; };
 		8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */; };
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
+		8432086027905C3400E5DC09 /* WW_HomePageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432085F27905C3400E5DC09 /* WW_HomePageListModel.swift */; };
+		8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432086327905CB600E5DC09 /* WW_NoDataView.swift */; };
 		843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843358CE22EC2285003AB31D /* CoreLocation.framework */; };
 		843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843358D022EC2571003AB31D /* LocationAndMapViewController.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
@@ -279,6 +281,8 @@
 		842F78732258AD560048B63A /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndActionViewController.swift; sourceTree = "<group>"; };
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
+		8432085F27905C3400E5DC09 /* WW_HomePageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomePageListModel.swift; sourceTree = "<group>"; };
+		8432086327905CB600E5DC09 /* WW_NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_NoDataView.swift; sourceTree = "<group>"; };
 		843358CE22EC2285003AB31D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		843358D022EC2571003AB31D /* LocationAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndMapViewController.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
@@ -638,6 +642,44 @@
 			path = Internationalization;
 			sourceTree = "<group>";
 		};
+		8432085C27905BBB00E5DC09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8432085D27905BC200E5DC09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8432085F27905C3400E5DC09 /* WW_HomePageListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8432085E27905BC800E5DC09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8432086127905C8F00E5DC09 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8432086227905CA200E5DC09 /* View */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		8432086227905CA200E5DC09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8432086327905CB600E5DC09 /* WW_NoDataView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		843358CD22EC20CC003AB31D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +868,7 @@
 			isa = PBXGroup;
 			children = (
 				84DAA54B27770F8C00A97694 /* Base */,
+				8432086127905C8F00E5DC09 /* Public */,
 				84DAA53C2774735D00A97694 /* OtherPage */,
 				84DAA5352773679900A97694 /* HomePage */,
 				84DAA5342773677F00A97694 /* SearchPage */,
@@ -1134,6 +1177,9 @@
 		84DAA5352773679900A97694 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				8432085E27905BC800E5DC09 /* View */,
+				8432085D27905BC200E5DC09 /* Model */,
+				8432085C27905BBB00E5DC09 /* ViewModel */,
 				8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */,
 			);
 			path = HomePage;
@@ -1446,6 +1492,7 @@
 				84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */,
 				849387932622968700C2914C /* UIViewControllerVC.swift in Sources */,
 				8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */,
+				8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84DAA51A2768743E00A97694 /* Global.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
@@ -1454,6 +1501,7 @@
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
 				8453CFD5277C532000FC6C9F /* WW_SearchHotWordsModel.swift in Sources */,
+				8432086027905C3400E5DC09 /* WW_HomePageListModel.swift in Sources */,
 				84DAA5332771CD3500A97694 /* WW_SingleOrderBaseVC.swift in Sources */,
 				84710DB3272ACA6900A40507 /* SwiftListVC.swift in Sources */,
 				843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */,
