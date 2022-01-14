@@ -32,5 +32,13 @@ extension UIColor{
         UIGraphicsEndImageContext()
         return image!
     }
+    
+    func defaultLightGrayBgViewColor()->UIColor{
+        return UIColor(r: 244, g: 244, b: 244)
+    }
+
+    func defaultNavRedBgViewColor()->UIColor{
+        return UIColor(r: 249, g: 60, b: 89)
+    }
 }
 
