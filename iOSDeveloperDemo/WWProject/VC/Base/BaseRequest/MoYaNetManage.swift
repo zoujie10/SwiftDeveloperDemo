@@ -20,6 +20,7 @@ enum NetworkAPI {
     case SearchWords
     case SearchProducts(searchKey:String,currentpage : Int,pagesize : Int)
     case GuessYourLike(pageIndex : Int)
+    case HomePageList
 }
 extension NetworkAPI:TargetType{
     
@@ -41,6 +42,8 @@ extension NetworkAPI:TargetType{
                 return WW_kHomeSearchUrl
             case .GuessYourLike:
                 return WW_kGuessYourLikeUrl
+            case .HomePageList:
+                return WW_kHomeListUrl
         }
     }
     
@@ -54,6 +57,11 @@ extension NetworkAPI:TargetType{
         var parmetersInner: [String : Any] = [:]
         parmetersInner["memberKey"] = "17721789"
         switch self {
+            case .HomePageList:
+                parmetersInner["channelId"] = "S09033033001"
+                parmetersInner["areas"] = "DN"
+                parmetersInner["type"] = "2"
+                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
                 //MARK:传参 注意大小下 也要区分
             case .CategoryProductsList(let catkey):
                 parmetersInner["catKey"] = catkey
@@ -94,7 +102,6 @@ extension NetworkAPI:TargetType{
                 parmetersInner["channelId"] = "S09033033001"
                 parmetersInner["pageSize"] = 12
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
-                 
         }
     }
     
