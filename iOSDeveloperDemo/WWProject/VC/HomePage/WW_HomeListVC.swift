@@ -9,10 +9,11 @@
 import UIKit
 
 class WW_HomeListVC: WW_MainBaseVC {
-
+    
+    let homePageViewModel  = WW_HomePageListViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.homePageViewModel.getHomePageList()
     }
     
 }

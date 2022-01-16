@@ -23,9 +23,7 @@ class WW_SearchResultViewModel: NSObject {
                 case .success(_):
                     guard let data = result.value?.data  else { return }
                     let dataAsString = String(data: data, encoding: .utf8)
-                    let jsonData : Data = (dataAsString?.data(using: String.Encoding.utf8, allowLossyConversion: false))!
-                    let json = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
-                    debugPrint(json as Any)
+                    dataAsString?.jsonStringPrint()
                     do {
                         let myDecoder = JSONDecoder()
                         let productModel = try myDecoder.decode(WW_SearchProductsModel?.self, from: data)

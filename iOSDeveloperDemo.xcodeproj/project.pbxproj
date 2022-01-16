@@ -62,6 +62,7 @@
 		8431573A20A2E1C500AE0A4E /* ToolItem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8431573920A2E1C500AE0A4E /* ToolItem.xcassets */; };
 		8432086027905C3400E5DC09 /* WW_HomePageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432085F27905C3400E5DC09 /* WW_HomePageListModel.swift */; };
 		8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432086327905CB600E5DC09 /* WW_NoDataView.swift */; };
+		843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843208652792DBB000E5DC09 /* WW_HomePageListViewModel.swift */; };
 		843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843358CE22EC2285003AB31D /* CoreLocation.framework */; };
 		843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843358D022EC2571003AB31D /* LocationAndMapViewController.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
@@ -283,6 +284,7 @@
 		8431573920A2E1C500AE0A4E /* ToolItem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ToolItem.xcassets; sourceTree = "<group>"; };
 		8432085F27905C3400E5DC09 /* WW_HomePageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomePageListModel.swift; sourceTree = "<group>"; };
 		8432086327905CB600E5DC09 /* WW_NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_NoDataView.swift; sourceTree = "<group>"; };
+		843208652792DBB000E5DC09 /* WW_HomePageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomePageListViewModel.swift; sourceTree = "<group>"; };
 		843358CE22EC2285003AB31D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		843358D022EC2571003AB31D /* LocationAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndMapViewController.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 		8432085C27905BBB00E5DC09 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				843208652792DBB000E5DC09 /* WW_HomePageListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1529,6 +1532,7 @@
 				84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */,
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
+				843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */,
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */,
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
