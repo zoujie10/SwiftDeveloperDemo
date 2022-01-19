@@ -66,6 +66,7 @@
 		843208682793BE8900E5DC09 /* WW_HomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843208672793BE8900E5DC09 /* WW_HomeItemViewModel.swift */; };
 		8432086A2793BE9D00E5DC09 /* WW_HomeItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843208692793BE9D00E5DC09 /* WW_HomeItemDetailViewModel.swift */; };
 		8432086C2793BEAB00E5DC09 /* WW_HomeItemDetailLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432086B2793BEAB00E5DC09 /* WW_HomeItemDetailLinkViewModel.swift */; };
+		843208712796A98800E5DC09 /* HomeBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843208702796A98800E5DC09 /* HomeBaseCell.swift */; };
 		843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843358CE22EC2285003AB31D /* CoreLocation.framework */; };
 		843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843358D022EC2571003AB31D /* LocationAndMapViewController.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
@@ -291,6 +292,7 @@
 		843208672793BE8900E5DC09 /* WW_HomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeItemViewModel.swift; sourceTree = "<group>"; };
 		843208692793BE9D00E5DC09 /* WW_HomeItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeItemDetailViewModel.swift; sourceTree = "<group>"; };
 		8432086B2793BEAB00E5DC09 /* WW_HomeItemDetailLinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeItemDetailLinkViewModel.swift; sourceTree = "<group>"; };
+		843208702796A98800E5DC09 /* HomeBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseCell.swift; sourceTree = "<group>"; };
 		843358CE22EC2285003AB31D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		843358D022EC2571003AB31D /* LocationAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndMapViewController.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 		8432085E27905BC800E5DC09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				843208702796A98800E5DC09 /* HomeBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1508,6 +1511,7 @@
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84DAA51A2768743E00A97694 /* Global.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
+				843208712796A98800E5DC09 /* HomeBaseCell.swift in Sources */,
 				845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 class WW_SearchTitleView: UIView {
     var searchTextfield : UITextField?
+    
     var searchWords : String {
         set (searchWord){
             self.searchBar.text = searchWord
@@ -18,6 +19,8 @@ class WW_SearchTitleView: UIView {
             return self.searchBar.text ?? ""
         }
     }
+    
+    var onOnlyJump : Bool = false
     
     typealias clickSearchBarBlock = (_ serchText : NSString) -> Void
     var clickSearchBlock : clickSearchBarBlock?
