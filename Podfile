@@ -12,6 +12,9 @@ target 'iOSDeveloperDemo' do
   pod 'MBProgressHUD'
   pod 'HMSegmentedControl'
   pod 'JXSegmentedView'
+  pod 'SDWebImage'
+  pod 'SDCycleScrollView'
+  # 配合SDCycleScrollView
   #	pod 'RealmSwift'
   # pod 'SwiftyJSON'
 	use_frameworks!
