@@ -169,6 +169,7 @@
 		849387932622968700C2914C /* UIViewControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849387922622968700C2914C /* UIViewControllerVC.swift */; };
 		849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849387B4262BC83100C2914C /* GitHubManagerVC.swift */; };
 		8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A724A251108A900398876 /* SwiftBasicViewController.swift */; };
+		84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -396,6 +397,7 @@
 		8493878E262295A200C2914C /* UIViewAndCALayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAndCALayerVC.swift; sourceTree = "<group>"; };
 		849387922622968700C2914C /* UIViewControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerVC.swift; sourceTree = "<group>"; };
 		849387B4262BC83100C2914C /* GitHubManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManagerVC.swift; sourceTree = "<group>"; };
+		84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeRecommendsCell.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -678,6 +680,7 @@
 			children = (
 				843208702796A98800E5DC09 /* WW_HomeBaseCell.swift */,
 				843208722798331500E5DC09 /* WW_HomeBannerCell.swift */,
+				84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1558,6 +1561,7 @@
 				844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */,
 				84710DAB2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift in Sources */,
 				84DAA52D276B0B7D00A97694 /* WW_InformListViewModel.swift in Sources */,
+				84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */,
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,

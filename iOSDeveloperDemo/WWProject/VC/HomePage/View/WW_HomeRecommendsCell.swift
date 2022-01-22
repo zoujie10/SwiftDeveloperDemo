@@ -1,21 +1,20 @@
 //
-//  WW_SearchResultProductsCell.swift
+//  WW_HomeRecommendsCell.swift
 //  iOSDeveloperDemo
 //
-//  Created by Zoujie on 2022/1/7.
+//  Created by Zoujie on 2022/1/21.
 //  Copyright © 2022 Zoujie. All rights reserved.
 //
 
 import UIKit
 
-class WW_SearchResultProductsCell: UICollectionViewCell {
+class WW_HomeRecommendsCell: WW_HomeBaseCell {
     //加入购物车
     typealias clickAddToCartCellBlock = () -> Void
     var clickaddToCartBlock : clickAddToCartCellBlock?
     //分享
     typealias clickToShareCellBlock = () -> Void
     var clickToShareBlock : clickToShareCellBlock?
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
