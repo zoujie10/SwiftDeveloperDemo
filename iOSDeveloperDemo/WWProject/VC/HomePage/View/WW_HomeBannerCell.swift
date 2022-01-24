@@ -65,12 +65,9 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
     typealias scrollBlock = (NSInteger) -> Void
     var clickBlock : scrollBlock?
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func initContentView(){
+        super.initContentView()
         self.setUpSubviews()
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     func setUpSubviews(){
         self.contentView.addSubview(self.cycleScrollView)

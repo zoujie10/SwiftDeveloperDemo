@@ -9,7 +9,9 @@
 import UIKit
 
 class WW_HomeBaseCell: UICollectionViewCell {
-   
+    typealias cellActionBlock = () -> Void
+    var cellAction_block : cellActionBlock?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
