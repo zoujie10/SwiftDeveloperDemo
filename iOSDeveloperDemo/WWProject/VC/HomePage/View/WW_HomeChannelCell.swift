@@ -9,8 +9,8 @@
 import UIKit
 
 class WW_HomeChannelCell: WW_HomeBaseCell {
-    let kCellWidth = WWScreenWidth/5.0
-    let kIndicatiorBgWidth = 50
+    let kCellWidth : CGFloat = CGFloat(WWScreenWidth/5.0)
+    let kIndicatiorBgWidth : CGFloat = 50.00
     
     override func initContentView() {
         super.initContentView()
@@ -27,7 +27,7 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
         self.indicatorBgView.snp.makeConstraints { make in
             make.centerX.equalTo(self.contentView)
             make.top.equalTo(self.collectionView.snp_bottom).offset(10)
-            make.size.equalTo(CGSize(width: self.kIndicatiorBgWidth, height: 3))
+            make.size.equalTo(CGSize(width: self.kIndicatiorBgWidth, height: 3.00))
         }
         
         self.indicatorView.snp.makeConstraints { make in
@@ -37,6 +37,28 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
     }
     
     
+    override func updateData<T>(itemData: T) where T : NSObject {
+        
+        self.collectionView.reloadData()
+    }
+    func calculateIndicatorWidth(){
+        let cellCount : NSInteger = self.cellCount()
+        var width : CGFloat = (self.kIndicatiorBgWidth / CGFloat(cellCount) * 5)
+        width = min(width, CGFloat(self.kIndicatiorBgWidth))
+        self.indicatorView.snp.updateConstraints { make in
+            make.width.equalTo(width)
+        }
+    }
+    func cellCount() -> NSInteger{
+//        if data.count % 2{
+//            return data.count/2 + 1
+//        }
+        return 20/2 //data.count/2
+    }
+    
+    func isShowIndicator() -> Bool{
+        return true //data.count > 0
+    }
     lazy var collectionView : UICollectionView = {
         let c = UICollectionView.init(frame: .zero, collectionViewLayout: self.layout)
         c.backgroundColor = .clear
@@ -82,5 +104,17 @@ extension WW_HomeChannelCell : UICollectionViewDelegateFlowLayout,UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.kCellWidth, height: collectionView.frame.size.height)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let cellCount : NSInteger = self.cellCount()
+        var offsetX : Float = Float(scrollView.contentOffset.x * CGFloat((self.kIndicatiorBgWidth/CGFloat(cellCount)))/self.kCellWidth)
+        offsetX = max(offsetX, 0)
+        let indicatorWidth : CGFloat = (self.kIndicatiorBgWidth / CGFloat(cellCount) * 5)
+        offsetX = min(offsetX, Float(self.kIndicatiorBgWidth) - Float(indicatorWidth))
+        
+        self.indicatorView.snp.updateConstraints { make in
+            make.width.equalTo(self.indicatorBgView).offset(offsetX)
+        }
     }
 }

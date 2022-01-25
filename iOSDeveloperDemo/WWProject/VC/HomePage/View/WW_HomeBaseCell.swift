@@ -19,8 +19,12 @@ class WW_HomeBaseCell: UICollectionViewCell {
         self.contentView.layer.cornerRadius = 4
         self.initContentView()
     }
-    
+    //cell 布局
     func initContentView(){
+        
+    }
+    //更新cell 数据
+    func updateData<T:NSObject>(itemData: T){
         
     }
     
