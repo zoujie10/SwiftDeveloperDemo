@@ -107,6 +107,9 @@
 		84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84516C50232D46A5003F9F6F /* MyAnnotation.swift */; };
 		8453CFD5277C532000FC6C9F /* WW_SearchHotWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453CFD4277C532000FC6C9F /* WW_SearchHotWordsModel.swift */; };
 		8453CFD7277DA0D700FC6C9F /* WW_SearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453CFD6277DA0D700FC6C9F /* WW_SearchTitleView.swift */; };
+		8455A26C279E830C007EE634 /* WW_HomeChannelSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455A26B279E830C007EE634 /* WW_HomeChannelSubCell.swift */; };
+		8455A26E279E9D93007EE634 /* WW_HomeChannelSingleItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455A26D279E9D93007EE634 /* WW_HomeChannelSingleItemCell.swift */; };
+		8455A270279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455A26F279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
@@ -161,7 +164,6 @@
 		847E9512279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */; };
 		847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */; };
 		847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */; };
-		847E9518279B9CB800B52AEA /* WW_HomeChannelSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9517279B9CB800B52AEA /* WW_HomeChannelSubCell.swift */; };
 		847E951A279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */; };
 		848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465420CE1DA100F982F2 /* AppStatusObserver.swift */; };
 		848A465820CE1DA100F982F2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465520CE1DA100F982F2 /* Singleton.swift */; };
@@ -340,6 +342,9 @@
 		84516C50232D46A5003F9F6F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		8453CFD4277C532000FC6C9F /* WW_SearchHotWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsModel.swift; sourceTree = "<group>"; };
 		8453CFD6277DA0D700FC6C9F /* WW_SearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchTitleView.swift; sourceTree = "<group>"; };
+		8455A26B279E830C007EE634 /* WW_HomeChannelSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelSubCell.swift; sourceTree = "<group>"; };
+		8455A26D279E9D93007EE634 /* WW_HomeChannelSingleItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelSingleItemCell.swift; sourceTree = "<group>"; };
+		8455A26F279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelSingleItemSubCell.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
 		84598C0F234851B900E72C8B /* NoteBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
 		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
@@ -395,7 +400,6 @@
 		847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomePubicNoticeCell.swift; sourceTree = "<group>"; };
 		847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeCouponCell.swift; sourceTree = "<group>"; };
 		847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelCell.swift; sourceTree = "<group>"; };
-		847E9517279B9CB800B52AEA /* WW_HomeChannelSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelSubCell.swift; sourceTree = "<group>"; };
 		847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeMagicCubeCell.swift; sourceTree = "<group>"; };
 		848A465420CE1DA100F982F2 /* AppStatusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
 		848A465520CE1DA100F982F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -692,9 +696,11 @@
 				843208722798331500E5DC09 /* WW_HomeBannerCell.swift */,
 				84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */,
 				847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */,
-				847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */,
 				847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */,
-				847E9517279B9CB800B52AEA /* WW_HomeChannelSubCell.swift */,
+				8455A26B279E830C007EE634 /* WW_HomeChannelSubCell.swift */,
+				8455A26D279E9D93007EE634 /* WW_HomeChannelSingleItemCell.swift */,
+				8455A26F279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift */,
+				847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */,
 				847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */,
 			);
 			path = View;
@@ -1531,6 +1537,7 @@
 				8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				84DAA51A2768743E00A97694 /* Global.swift in Sources */,
+				8455A270279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				843208712796A98800E5DC09 /* WW_HomeBaseCell.swift in Sources */,
 				845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */,
@@ -1566,6 +1573,7 @@
 				847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */,
 				84710DC5272C4A0F00A40507 /* AlamofireVC.swift in Sources */,
 				84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */,
+				8455A26C279E830C007EE634 /* WW_HomeChannelSubCell.swift in Sources */,
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
 				843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */,
@@ -1591,7 +1599,6 @@
 				84117B7727634D0700D8B0BB /* WW_OrderListVC.swift in Sources */,
 				845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */,
 				84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */,
-				847E9518279B9CB800B52AEA /* WW_HomeChannelSubCell.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
@@ -1630,6 +1637,7 @@
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
+				8455A26E279E9D93007EE634 /* WW_HomeChannelSingleItemCell.swift in Sources */,
 				845EC808271FEED90006651E /* WWAfterSalePicEgCell.swift in Sources */,
 				8432086C2793BEAB00E5DC09 /* WW_HomeItemDetailLinkViewModel.swift in Sources */,
 				84117B7B2764CE5500D8B0BB /* WW_OrderSingleVC.swift in Sources */,
