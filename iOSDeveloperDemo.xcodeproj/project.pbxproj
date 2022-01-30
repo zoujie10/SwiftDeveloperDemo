@@ -183,6 +183,9 @@
 		84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */; };
 		84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BD22DB3633001AC087 /* JSONParser.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
+		84D95B2127A6CECD00052E04 /* WW_ HomeFrequentlyBuyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2027A6CECD00052E04 /* WW_ HomeFrequentlyBuyListCell.swift */; };
+		84D95B2327A6CEED00052E04 /* WW_HomeFreeGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */; };
+		84D95B2527A6CF0500052E04 /* WW_HomeSecondKillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */; };
 		84DAA51A2768743E00A97694 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA5192768743E00A97694 /* Global.swift */; };
 		84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */; };
 		84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51E2768817B00A97694 /* UIColorExtension.swift */; };
@@ -418,6 +421,9 @@
 		84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesXMLParser.swift; sourceTree = "<group>"; };
 		84D305BD22DB3633001AC087 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		84D95B2027A6CECD00052E04 /* WW_ HomeFrequentlyBuyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WW_ HomeFrequentlyBuyListCell.swift"; sourceTree = "<group>"; };
+		84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeFreeGiftCell.swift; sourceTree = "<group>"; };
+		84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeSecondKillCell.swift; sourceTree = "<group>"; };
 		84DAA5192768743E00A97694 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Global.swift; path = iOSDeveloperDemo/WWProject/Global.swift; sourceTree = SOURCE_ROOT; };
 		84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BDInformOrderListModel.swift; sourceTree = "<group>"; };
 		84DAA51E2768817B00A97694 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -702,6 +708,9 @@
 				8455A26F279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift */,
 				847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */,
 				847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */,
+				84D95B2027A6CECD00052E04 /* WW_ HomeFrequentlyBuyListCell.swift */,
+				84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */,
+				84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1529,6 +1538,7 @@
 				843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */,
 				4FC4E19A228D01570017192B /* Observer.swift in Sources */,
 				84E55ABE24C8735E00A152A8 /* Events.swift in Sources */,
+				84D95B2527A6CF0500052E04 /* WW_HomeSecondKillCell.swift in Sources */,
 				84710DD82734D90600A40507 /* WW_TagsModel.swift in Sources */,
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */,
@@ -1542,6 +1552,7 @@
 				843208712796A98800E5DC09 /* WW_HomeBaseCell.swift in Sources */,
 				845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
+				84D95B2327A6CEED00052E04 /* WW_HomeFreeGiftCell.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
 				8453CFD5277C532000FC6C9F /* WW_SearchHotWordsModel.swift in Sources */,
@@ -1636,6 +1647,7 @@
 				845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
+				84D95B2127A6CECD00052E04 /* WW_ HomeFrequentlyBuyListCell.swift in Sources */,
 				4F411AD1228ABB32001BF135 /* UIImage+Extension.swift in Sources */,
 				8455A26E279E9D93007EE634 /* WW_HomeChannelSingleItemCell.swift in Sources */,
 				845EC808271FEED90006651E /* WWAfterSalePicEgCell.swift in Sources */,

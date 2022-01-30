@@ -61,7 +61,7 @@ class WW_HomeChannelSingleItemCell: WW_HomeBaseCell {
     func isShowIndicator() -> Bool{
 //        return (data.count > 5 &&
 //                data.count != 10);
-        return true 
+        return true
     }
     
     lazy var collectionView : UICollectionView = {
