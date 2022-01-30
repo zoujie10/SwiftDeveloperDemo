@@ -18,5 +18,7 @@ import UIKit
 口|口
  */
 class WW_HomeMagicCubeCell: WW_HomeBaseCell {
-    
+    override func initContentView() {
+        super.initContentView()
+    }
 }
