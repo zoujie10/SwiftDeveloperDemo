@@ -74,16 +74,15 @@ class WW_HomeCouponCell: WW_HomeBaseCell {
     
     lazy var couponCollectionView : UICollectionView = {
         let layout = WW_SearchHotWordsFlowLayout.init(with: .AlignWithLeft, betweenOfCell: 10)
-        let view = UICollectionView.init(frame: CGRect(x: 0, y: 0, width:WWScreenWidth , height: WWScreenHeight), collectionViewLayout: layout)
-        view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        let view = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         
-        view.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView")
-        view.register(WW_SearchHotWordsCollectionCell.classForCoder(), forCellWithReuseIdentifier: "hotWordsCell")
+        view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+    
+        view.register(WW_HomeCouponItemsCell.classForCoder(), forCellWithReuseIdentifier: "WW_HomeCouponItemsCell")
         view.showsVerticalScrollIndicator = false
         view.delegate = self
         view.dataSource = self
         view.backgroundColor = .clear
-        view.contentSize = CGSize(width: WWScreenWidth,height: WWScreenHeight)
         return view
     }()
 
