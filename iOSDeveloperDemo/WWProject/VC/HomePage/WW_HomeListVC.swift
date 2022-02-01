@@ -5,6 +5,8 @@
 //  Created by Zoujie on 2022/1/1.
 //  Copyright © 2022 Zoujie. All rights reserved.
 
+//HAPPY NEW YEAR 2022.02.01
+
 //1. UI searchTitleView +navBgImageView + collectionView
 //2. Cell 注册 根据请求 取要用的cell
 //3. 首页包含的Cell 注册  按请求显示需要展示的cell
