@@ -18,14 +18,15 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.contentView.backgroundColor = UIColor.white
+        self.contentView.backgroundColor = UIColor.clear
         self.layer.shadowColor = UIColor(r: 181, g: 197, b: 220).cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 0)
         self.layer.shadowOpacity = 0.36
         self.layer.shadowRadius = 3
         self.layer.cornerRadius = 5
         self.layer.masksToBounds = true
-        
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.lightGray.cgColor
         creatUI()
     }
     
@@ -45,7 +46,7 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
         
         self.productImageView.snp.makeConstraints { make in
             make.top.left.right.equalTo(self.contentView)
-            make.height.equalTo(productImageView.snp_width)
+            make.height.equalTo(120)
         }
         
         self.nameLabel.snp.makeConstraints { make in
@@ -77,7 +78,17 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
             make.width.height.equalTo(35)
             make.right.equalTo(self.contentView).offset(-10)
         }
+        updateData(itemData: ProductsModel())
     }
+    
+    override func updateData<T>(itemData: T) where T : NSObject {
+        
+        productImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021092614513400097.jpeg"))
+        productImageView.kf.indicatorType = .activity
+    }
+    
+    
+    
     //商品图
     lazy var productImageView : UIImageView = {
         let imageView = UIImageView()
@@ -90,6 +101,7 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
         label.backgroundColor = .white
         label.textColor = .black
         label.numberOfLines = 2
+        label.text = "甜麦圈-XX"
         return label;
     }()
     //商品规格
@@ -98,6 +110,7 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
         label.textAlignment = .left
         label.backgroundColor = .white
         label.textColor = .black
+        label.text = "难吃看得见"
         return label;
     }()
     //已售
@@ -106,6 +119,7 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
         label.textAlignment = .left
         label.backgroundColor = .white
         label.textColor = .gray
+        label.text = "0袋"
         return label;
     }()
     //商品价格+单位
@@ -114,6 +128,7 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
         label.textAlignment = .left
         label.backgroundColor = .white
         label.textColor = .red
+        label.text = "￥10元/袋"
         return label;
     }()
     //加入购物车 按钮

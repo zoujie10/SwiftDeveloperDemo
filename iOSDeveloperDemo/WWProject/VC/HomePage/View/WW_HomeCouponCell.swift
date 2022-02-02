@@ -78,7 +78,7 @@ class WW_HomeCouponCell: WW_HomeBaseCell {
         
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     
-        view.register(WW_HomeCouponItemsCell.classForCoder(), forCellWithReuseIdentifier: "WW_HomeCouponItemsCell")
+        view.register(WW_HomeCouponItemsCell.classForCoder(), forCellWithReuseIdentifier: NSStringFromClass(WW_HomeCouponItemsCell.classForCoder()))
         view.showsVerticalScrollIndicator = false
         view.delegate = self
         view.dataSource = self

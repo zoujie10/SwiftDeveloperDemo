@@ -70,7 +70,7 @@ class WW_HomeChannelSingleItemCell: WW_HomeBaseCell {
         c.delegate = self
         c.dataSource = self
         c.showsHorizontalScrollIndicator = false
-        c.register(WW_HomeChannelSubCell.classForCoder(), forCellWithReuseIdentifier: NSStringFromClass(WW_HomeChannelSubCell.classForCoder()))
+        c.register(WW_HomeChannelSingleItemSubCell.classForCoder(), forCellWithReuseIdentifier: NSStringFromClass(WW_HomeChannelSingleItemSubCell.classForCoder()))
         return c
     }()
     lazy var layout :UICollectionViewFlowLayout = {
