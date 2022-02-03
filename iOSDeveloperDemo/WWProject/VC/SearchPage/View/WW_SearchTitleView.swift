@@ -19,8 +19,18 @@ class WW_SearchTitleView: UIView {
             return self.searchBar.text ?? ""
         }
     }
-    
-    var onOnlyJump : Bool = false
+    var isJ = false
+    var onOnlyJump : Bool {
+
+        set (isJump){
+            isJ = isJump
+            searchTextfield?.clearButtonMode = .never
+        }
+        
+        get {
+            return isJ
+        }
+    }
     
     typealias clickSearchBarBlock = (_ serchText : NSString) -> Void
     var clickSearchBlock : clickSearchBarBlock?
@@ -93,6 +103,11 @@ extension WW_SearchTitleView:UISearchBarDelegate{
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        if(self.isJ == true){
+            if(self.clickSearchBlock != nil){
+                self.clickSearchBlock!("Jump")
+            }
+        }
         return true
     }
     

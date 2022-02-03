@@ -15,8 +15,7 @@
 import UIKit
 
 class WW_HomeListVC: WW_MainBaseVC {
-    
-    let collectionCellID  = "collectionCellID"
+        
     let homePageViewModel  = WW_HomePageListViewModel()
     
     let totalCellClassArray = [WW_HomeBannerCell.classForCoder(),
@@ -36,17 +35,33 @@ class WW_HomeListVC: WW_MainBaseVC {
         configUI()
         registerAllCell()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func configUI(){
-        self.view.addSubview(self.navSearchTitleView)
+        let navBgView = UIView()
+        navBgView.backgroundColor = UIColor(r: 252, g: 85, b: 108)
+        navBgView.addSubview(self.navSearchTitleView)
+        self.view.addSubview(navBgView)
         self.view.addSubview(self.collectionView)
         
+        navBgView.snp.makeConstraints { make in
+            make.top.equalTo(self.view)
+            make.left.right.equalTo(self.view)
+            make.height.equalTo(100)
+        }
+        
         self.navSearchTitleView.snp.makeConstraints { make in
-            make.left.right.top.equalTo(self.view)
-            make.height.equalTo(120)
+            make.width.equalTo(270)
+            make.height.equalTo(35)
+            make.top.equalTo(navBgView).offset(55)
+            make.centerX.equalTo(navBgView)
         }
         self.collectionView.snp.makeConstraints { make in
             make.left.right.bottom.equalTo(self.view)
-            make.top.equalTo(self.navSearchTitleView.snp_bottom)
+            make.top.equalTo(navBgView.snp_bottom)
         }
     }
     func registerAllCell(){
@@ -70,8 +85,15 @@ class WW_HomeListVC: WW_MainBaseVC {
         return v
     }()
     
-    lazy var navSearchTitleView : WWSearchTitleView = {
-        let v = WWSearchTitleView()
+    lazy var navSearchTitleView : WW_SearchTitleView = {
+        let v = WW_SearchTitleView()
+        v.searchWords = "旺仔牛奶"
+        v.clickSearchBlock = { words in
+            if words == "Jump"{
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        v.onOnlyJump = true
         return v
     }()
 }
