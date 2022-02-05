@@ -21,6 +21,9 @@ class WW_HomePubicNoticeCell: WW_HomeBaseCell {
         self.oneImageView.snp.makeConstraints { make in
             make.edges.equalTo(self.mainBgView)
         }
+        
+        self.oneImageView.kf.setImage(with: URL.init(string:"https://hotkidceo-1251330842.file.myqcloud.com/2021092618412500151.jpeg"))
+        self.oneImageView.kf.indicatorType = .activity
     }
     
     @objc func tapGesture(tap : UITapGestureRecognizer){

@@ -19,11 +19,11 @@ class WW_HomeListVC: WW_MainBaseVC {
     let homePageViewModel  = WW_HomePageListViewModel()
     
     let totalCellClassArray = [WW_HomeBannerCell.classForCoder(),
-                               WW_HomePubicNoticeCell.classForCoder(),
                                WW_HomeChannelCell.classForCoder(),
                                WW_HomeChannelSingleItemCell.classForCoder(),
                                WW_HomeCouponCell.classForCoder(),
                                WW_HomeMagicCubeCell.classForCoder(),
+                               WW_HomePubicNoticeCell.classForCoder(),
                                WW_HomeFrequentlyBuyListCell.classForCoder(),
                                WW_HomeFreeGiftCell.classForCoder(),
                                WW_HomeSecondKillCell.classForCoder(),
@@ -132,6 +132,8 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
         let cell: AnyClass = self.totalCellClassArray[indexPath.section]
         if cell == WW_HomeRecommendsCell.classForCoder(){
             return CGSize.init(width: Int(WWScreenWidth-40) / 2, height: 250)
+        }else if cell == WW_HomePubicNoticeCell.classForCoder(){
+            return CGSize.init(width: WWScreenWidth, height: 30)
         }else{
             return CGSize.init(width: WWScreenWidth, height: 120)
         }
