@@ -59,6 +59,12 @@ class WW_HomeChannelSubCell: UICollectionViewCell {
             make.top.equalTo(self.downImageView.snp_bottom)
             make.left.right.equalTo(self.downBgView)
         }
+        
+        self.upImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021121709491500052.png"))
+        self.upImageView.kf.indicatorType = .activity
+        
+        self.downImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021121709492300053.png"))
+        self.downImageView.kf.indicatorType = .activity
     }
     
     lazy var upBgView : UIView = {
@@ -68,6 +74,7 @@ class WW_HomeChannelSubCell: UICollectionViewCell {
     
     lazy var upImageView : UIImageView = {
         let iV = UIImageView()
+        iV.layer.cornerRadius = 8
         return iV
     }()
     
@@ -76,6 +83,7 @@ class WW_HomeChannelSubCell: UICollectionViewCell {
         l.font = UIFont.boldSystemFont(ofSize: 12)
         l.textColor = UIColor(r: 133, g: 134, b: 138)
         l.textAlignment = .center
+        l.text = "标签"
         return l
     }()
     
@@ -85,6 +93,7 @@ class WW_HomeChannelSubCell: UICollectionViewCell {
     }()
     lazy var downImageView : UIImageView = {
         let iV = UIImageView()
+        iV.layer.cornerRadius = 8
         return iV
     }()
     lazy var downLabel : UILabel = {
@@ -92,6 +101,7 @@ class WW_HomeChannelSubCell: UICollectionViewCell {
         l.font = UIFont.boldSystemFont(ofSize: 12)
         l.textColor = UIColor(r: 133, g: 134, b: 138)
         l.textAlignment = .center
+        l.text = "分类"
         return l
     }()
 }

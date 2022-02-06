@@ -34,6 +34,7 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
             make.left.centerY.equalTo(self.indicatorBgView)
             make.size.equalTo(CGSize(width: 0, height: 3))
         }
+        calculateIndicatorWidth()
     }
     
     
@@ -114,7 +115,7 @@ extension WW_HomeChannelCell : UICollectionViewDelegateFlowLayout,UICollectionVi
         offsetX = min(offsetX, Float(self.kIndicatiorBgWidth) - Float(indicatorWidth))
         
         self.indicatorView.snp.updateConstraints { make in
-            make.width.equalTo(self.indicatorBgView).offset(offsetX)
+            make.left.equalTo(self.indicatorBgView).offset(offsetX)
         }
     }
 }

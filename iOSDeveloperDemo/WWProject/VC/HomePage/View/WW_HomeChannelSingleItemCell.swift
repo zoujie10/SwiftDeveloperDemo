@@ -119,7 +119,7 @@ extension WW_HomeChannelSingleItemCell: UICollectionViewDelegateFlowLayout,UICol
         offsetX = min(offsetX, Float(self.kIndicatiorBgWidth) - Float(indicatorWidth))
         
         self.indicatorView.snp.updateConstraints { make in
-            make.width.equalTo(self.indicatorBgView).offset(offsetX)
+            make.left.equalTo(self.indicatorBgView).offset(offsetX)
         }
         
     }

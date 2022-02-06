@@ -134,7 +134,10 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
             return CGSize.init(width: Int(WWScreenWidth-40) / 2, height: 250)
         }else if cell == WW_HomePubicNoticeCell.classForCoder(){
             return CGSize.init(width: WWScreenWidth, height: 30)
-        }else{
+        }else if cell == WW_HomeChannelCell.classForCoder(){
+            return CGSize.init(width: WWScreenWidth, height: 160)
+        }
+        else{
             return CGSize.init(width: WWScreenWidth, height: 120)
         }
     }
