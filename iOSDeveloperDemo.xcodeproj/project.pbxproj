@@ -186,7 +186,7 @@
 		84D95B2127A6CECD00052E04 /* WW_HomeFrequentlyBuyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2027A6CECD00052E04 /* WW_HomeFrequentlyBuyListCell.swift */; };
 		84D95B2327A6CEED00052E04 /* WW_HomeFreeGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */; };
 		84D95B2527A6CF0500052E04 /* WW_HomeSecondKillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */; };
-		84DAA51A2768743E00A97694 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA5192768743E00A97694 /* Global.swift */; };
+		84D95B2727B0248C00052E04 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2627B0248C00052E04 /* Global.swift */; };
 		84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */; };
 		84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51E2768817B00A97694 /* UIColorExtension.swift */; };
 		84DAA52D276B0B7D00A97694 /* WW_InformListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */; };
@@ -424,7 +424,7 @@
 		84D95B2027A6CECD00052E04 /* WW_HomeFrequentlyBuyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeFrequentlyBuyListCell.swift; sourceTree = "<group>"; };
 		84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeFreeGiftCell.swift; sourceTree = "<group>"; };
 		84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeSecondKillCell.swift; sourceTree = "<group>"; };
-		84DAA5192768743E00A97694 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Global.swift; path = iOSDeveloperDemo/WWProject/Global.swift; sourceTree = SOURCE_ROOT; };
+		84D95B2627B0248C00052E04 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = WWProject/Global.swift; sourceTree = SOURCE_ROOT; };
 		84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BDInformOrderListModel.swift; sourceTree = "<group>"; };
 		84DAA51E2768817B00A97694 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_InformListViewModel.swift; sourceTree = "<group>"; };
@@ -811,7 +811,7 @@
 				84710DC3272C49F500A40507 /* Alamofire */,
 				84710DC0272C45A800A40507 /* ThirdModelFrame */,
 				84710DA327243C6A00A40507 /* ImageAndVideo */,
-				84710DC8272EF45500A40507 /* usuallyDevices */,
+				84710DC8272EF45500A40507 /* UsuallyDevices */,
 				84710DDC2737CBCA00A40507 /* AnimationSoundVideo */,
 				84710DDF27382BA100A40507 /* DataPersistence */,
 				842991AD2741506400A50077 /* WebViewAndHTML5 */,
@@ -928,7 +928,7 @@
 				84117B7C27672D7B00D8B0BB /* OrderList */,
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
-				84DAA5192768743E00A97694 /* Global.swift */,
+				84D95B2627B0248C00052E04 /* Global.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1037,14 +1037,14 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		84710DC8272EF45500A40507 /* usuallyDevices */ = {
+		84710DC8272EF45500A40507 /* UsuallyDevices */ = {
 			isa = PBXGroup;
 			children = (
 				84710DC9272EF48900A40507 /* SwiftUsuallyDevicesVC.swift */,
 				842991A92740A4C100A50077 /* SwiftDeviceMotionVC.swift */,
 				843358D022EC2571003AB31D /* LocationAndMapViewController.swift */,
 			);
-			path = usuallyDevices;
+			path = UsuallyDevices;
 			sourceTree = "<group>";
 		};
 		84710DCB272F923800A40507 /* ViewModel */ = {
@@ -1266,6 +1266,8 @@
 				4F411ACC228AB9DA001BF135 /* DesignPattern */,
 				84E9DB6520AAB61100C65A12 /* Resource */,
 				84D305BC22D1A25E001AC087 /* OlympicProject */,
+				845EC801271FECC40006651E /* WWProject */,
+				845A7249251107E800398876 /* Book-Moblie🐱 */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
 				84E37BF220A02D3B0031DEEE /* iOSDeveloperDemoTests */,
 				84E37BDC20A02D390031DEEE /* Products */,
@@ -1289,9 +1291,7 @@
 				847515D620D0F040005CC145 /* PersistenceLayer */,
 				849FC3A020C9187100C1D18B /* BusinessLogicLayer */,
 				849FC39E20C9176B00C1D18B /* PresentationLayer */,
-				845EC801271FECC40006651E /* WWProject */,
 				848A465320CE1DA100F982F2 /* Model */,
-				845A7249251107E800398876 /* Book-Moblie🐱 */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
 				84E37BE020A02D390031DEEE /* HomeVC.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
@@ -1314,8 +1314,8 @@
 		84E9DB6520AAB61100C65A12 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
 				84E37BE520A02D3B0031DEEE /* Assets.xcassets */,
+				8431573920A2E1C500AE0A4E /* ToolItem.xcassets */,
 				8443767020BBF76400F28BA8 /* FruitImage.xcassets */,
 				840D87D920AD4EC600BA6A1D /* Flag.xcassets */,
 				84FA0F9B20AEA5DB00B6914A /* FootBallTeam.xcassets */,
@@ -1546,7 +1546,6 @@
 				8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */,
 				8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
-				84DAA51A2768743E00A97694 /* Global.swift in Sources */,
 				8455A270279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				843208712796A98800E5DC09 /* WW_HomeBaseCell.swift in Sources */,
@@ -1627,6 +1626,7 @@
 				84DAA53E2774738400A97694 /* WW_HeroListVC.swift in Sources */,
 				845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */,
 				84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */,
+				84D95B2727B0248C00052E04 /* Global.swift in Sources */,
 				84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */,

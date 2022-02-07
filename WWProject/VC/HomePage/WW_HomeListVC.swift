@@ -37,9 +37,14 @@ class WW_HomeListVC: WW_MainBaseVC {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
     func configUI(){
         let navBgView = UIView()
         navBgView.backgroundColor = UIColor(r: 252, g: 85, b: 108)

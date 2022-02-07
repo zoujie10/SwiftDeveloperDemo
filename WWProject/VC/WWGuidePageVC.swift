@@ -25,7 +25,6 @@ class WWGuidePageVC: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        
         UIView.animate(withDuration: 1) {
             self.view.alpha = 0.5;
         } completion:{_ in

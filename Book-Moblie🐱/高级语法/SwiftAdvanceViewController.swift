@@ -296,7 +296,7 @@ class SwiftAdvanceViewController: UIViewController {
             self.name = name
         }
     }
-    //类的静态方法 //类的析构
+    //类的静态方法  类的析构
     class MathTool {
         class func sum(num1:Int,num2:Int)->Int{
             return num1 + num2
