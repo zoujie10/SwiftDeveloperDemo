@@ -187,6 +187,9 @@
 		84D95B2327A6CEED00052E04 /* WW_HomeFreeGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */; };
 		84D95B2527A6CF0500052E04 /* WW_HomeSecondKillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */; };
 		84D95B2727B0248C00052E04 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2627B0248C00052E04 /* Global.swift */; };
+		84D95B2927B208D800052E04 /* SwiftCAAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */; };
+		84D95B2B27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */; };
+		84D95B2D27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */; };
 		84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */; };
 		84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51E2768817B00A97694 /* UIColorExtension.swift */; };
 		84DAA52D276B0B7D00A97694 /* WW_InformListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */; };
@@ -425,6 +428,9 @@
 		84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeFreeGiftCell.swift; sourceTree = "<group>"; };
 		84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeSecondKillCell.swift; sourceTree = "<group>"; };
 		84D95B2627B0248C00052E04 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = WWProject/Global.swift; sourceTree = SOURCE_ROOT; };
+		84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewController.swift; sourceTree = "<group>"; };
+		84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewControllerTwo.swift; sourceTree = "<group>"; };
+		84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewControllerThree.swift; sourceTree = "<group>"; };
 		84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BDInformOrderListModel.swift; sourceTree = "<group>"; };
 		84DAA51E2768817B00A97694 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_InformListViewModel.swift; sourceTree = "<group>"; };
@@ -1070,6 +1076,9 @@
 			isa = PBXGroup;
 			children = (
 				84710DDD2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift */,
+				84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */,
+				84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */,
+				84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */,
 				84710DE4273BFE9100A40507 /* SwiftSoundVideoVC.swift */,
 				84710DE227390E2D00A40507 /* pop_drip.wav */,
 				84710DE6273D59BB00A40507 /* 宇宙骑士reason.mp3 */,
@@ -1578,12 +1587,14 @@
 				8471D40E223FDC3200BE5DDB /* NoteBySQLite.swift in Sources */,
 				84117B752760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift in Sources */,
 				842991D82747788300A50077 /* SwiftSafeAndEncryptionVC.swift in Sources */,
+				84D95B2B27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift in Sources */,
 				8453CFD7277DA0D700FC6C9F /* WW_SearchTitleView.swift in Sources */,
 				84710DC2272C45E700A40507 /* SwiftThirdPartyVC.swift in Sources */,
 				847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */,
 				84710DC5272C4A0F00A40507 /* AlamofireVC.swift in Sources */,
 				84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */,
 				8455A26C279E830C007EE634 /* WW_HomeChannelSubCell.swift in Sources */,
+				84D95B2D27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift in Sources */,
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
 				843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */,
@@ -1707,6 +1718,7 @@
 				845D81E620B412CE00ABD88A /* AlterCellViewController.swift in Sources */,
 				8440F1022786C1C6001FE7A1 /* WW_SearchProductsModel.swift in Sources */,
 				844F3EDF2753D16C006762D0 /* OtherStoryBoardSecondVC.swift in Sources */,
+				84D95B2927B208D800052E04 /* SwiftCAAnimationViewController.swift in Sources */,
 				848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

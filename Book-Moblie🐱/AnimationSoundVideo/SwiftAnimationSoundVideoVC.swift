@@ -67,6 +67,7 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
             $0.centerX.equalTo(self.animationView)
         }
         
+        
         let cancelbutton = UIButton()
         cancelbutton.setTitle("Cancel Animation", for: .normal)
         cancelbutton.setTitleColor(.blue, for: .normal)
@@ -88,6 +89,40 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
             $0.top.equalTo(cancelbutton.snp_bottom).offset(10)
             $0.centerX.equalTo(self.animationView)
         }
+        
+        let cAAnimation = UIButton()
+        cAAnimation.setTitle("CAAnimation核心动画一", for: .normal)
+        cAAnimation.setTitleColor(.blue, for: .normal)
+        cAAnimation.addTarget(self, action: #selector(CAAnimationMethod), for: .touchUpInside)
+        
+        self.view.addSubview(cAAnimation)
+        cAAnimation.snp.makeConstraints {
+            $0.top.equalTo(jumpbutton.snp_bottom).offset(20)
+            $0.centerX.equalTo(self.animationView)
+        }
+        
+        let cAAnimation2 = UIButton()
+        cAAnimation2.setTitle("CAAnimation核心动画二", for: .normal)
+        cAAnimation2.setTitleColor(.blue, for: .normal)
+        cAAnimation2.addTarget(self, action: #selector(CAAnimationMethod2), for: .touchUpInside)
+        
+        self.view.addSubview(cAAnimation2)
+        cAAnimation2.snp.makeConstraints {
+            $0.top.equalTo(cAAnimation.snp_bottom).offset(20)
+            $0.centerX.equalTo(self.animationView)
+        }
+        
+        let cAAnimation3 = UIButton()
+        cAAnimation3.setTitle("CAAnimation核心动画三", for: .normal)
+        cAAnimation3.setTitleColor(.blue, for: .normal)
+        cAAnimation3.addTarget(self, action: #selector(CAAnimationMethod3), for: .touchUpInside)
+        
+        self.view.addSubview(cAAnimation3)
+        cAAnimation3.snp.makeConstraints {
+            $0.top.equalTo(cAAnimation2.snp_bottom).offset(20)
+            $0.centerX.equalTo(self.animationView)
+        }
+        
     }
     
     lazy var animationView : UIView = {
@@ -167,6 +202,20 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
         uiimageviewAnimation()
         KeyframeAnimation()
     }
+    
+    @objc func CAAnimationMethod(){
+        self.navigationController?.pushViewController(SwiftCAAnimationViewController(), animated: true)
+    }
+    
+    @objc func CAAnimationMethod2(){
+        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerTwo(), animated: true)
+    }
+    
+    @objc func CAAnimationMethod3(){
+        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerThree(), animated: true)
+    }
+    
+    
     @objc func cancelanimationMethod(){
         self.animationView.layer.removeAllAnimations() //取消动画
         self.blueAnimationView.transform = CGAffineTransform.identity //回到原位
@@ -235,7 +284,7 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
             3.设置两个关键帧之间的时长
             4.设置整个动画的播放时长
          */
-        let animation = CAKeyframeAnimation(keyPath: "position")//靠 keypath 小心打错
+        let animation = CAKeyframeAnimation(keyPath: "position")//MRAK: keypath 字符小心打错
         let point1 = CGPoint(x: 150, y: 100)
         let point2 = CGPoint(x: 280, y: 100)
         let point3 = CGPoint(x: 100, y: 300)
