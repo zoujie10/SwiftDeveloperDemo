@@ -67,7 +67,6 @@ class SwiftCAAnimationViewController: UIViewController {
         group.fillMode = kCAFillModeForwards
         group.isRemovedOnCompletion = false
         colorlayer.add(group, forKey: nil)
-        
     }
     
     func carAnimationMethod(){

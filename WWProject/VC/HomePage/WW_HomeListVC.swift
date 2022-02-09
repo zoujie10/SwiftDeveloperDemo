@@ -141,6 +141,13 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
             return CGSize.init(width: WWScreenWidth, height: 30)
         }else if cell == WW_HomeChannelCell.classForCoder(){
             return CGSize.init(width: WWScreenWidth, height: 160)
+        }else if cell == WW_HomeMagicCubeCell.classForCoder(){
+            let count = 2
+            if (count <= 2){
+                return CGSize.init(width: WWScreenWidth, height: 160)
+            }else{
+                return CGSize.init(width: WWScreenWidth, height: 160 * 2)
+            }
         }
         else{
             return CGSize.init(width: WWScreenWidth, height: 120)
