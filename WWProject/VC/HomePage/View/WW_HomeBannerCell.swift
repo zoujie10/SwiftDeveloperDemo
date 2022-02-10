@@ -82,7 +82,7 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         }
         
         self.cycleScrollView.itemDidScrollOperationBlock = { currentIndex in
-            print("itemDidScrollOperationBlock ---\(currentIndex)")
+//            print("itemDidScrollOperationBlock ---\(currentIndex)")
         }
         self.cycleScrollView.imageURLStringsGroup = ["https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021091417261400849.jpeg","https://hotkidceo-1251330842.file.myqcloud.com/2021092714372400251.jpeg"]
     }

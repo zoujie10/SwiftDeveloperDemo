@@ -47,15 +47,29 @@ class WW_HomeListVC: WW_MainBaseVC {
     }
     func configUI(){
         let navBgView = UIView()
-        navBgView.backgroundColor = UIColor(r: 252, g: 85, b: 108)
+//        navBgView.backgroundColor = UIColor(r: 252, g: 85, b: 108)
+        navBgView.backgroundColor = .clear
+        navBgView.addSubview(self.searchTitlebgImageView)
         navBgView.addSubview(self.navSearchTitleView)
+        self.view.addSubview(self.searchBgImageView)
         self.view.addSubview(navBgView)
         self.view.addSubview(self.collectionView)
+        
+        self.searchBgImageView.snp.makeConstraints { make in
+            make.top.equalTo(self.view)
+            make.left.right.equalTo(self.view)
+            make.height.equalTo(150)
+        }
+        self.searchBgImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021081916225600139.jpeg"))
+        self.searchBgImageView.kf.indicatorType = .activity
         
         navBgView.snp.makeConstraints { make in
             make.top.equalTo(self.view)
             make.left.right.equalTo(self.view)
             make.height.equalTo(100)
+        }
+        self.searchTitlebgImageView.snp.makeConstraints { make in
+            make.edges.equalTo(navBgView)
         }
         
         self.navSearchTitleView.snp.makeConstraints { make in
@@ -63,6 +77,15 @@ class WW_HomeListVC: WW_MainBaseVC {
             make.height.equalTo(35)
             make.top.equalTo(navBgView).offset(55)
             make.centerX.equalTo(navBgView)
+        }
+        let image = self.searchBgImageView.image
+        if(image != nil){
+            let rect = CGRect(x: 0, y: 0, width: image!.size.width, height: 88*image!.size.width/WWScreenWidth)
+            let imageRef = image!.cgImage!.cropping(to: rect)
+            self.searchTitlebgImageView.image = UIImage(cgImage: imageRef!)
+          
+        }else{
+            
         }
         self.collectionView.snp.makeConstraints { make in
             make.left.right.bottom.equalTo(self.view)
@@ -101,10 +124,20 @@ class WW_HomeListVC: WW_MainBaseVC {
         v.onOnlyJump = true
         return v
     }()
+    
+    lazy var searchBgImageView : UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+    
+    lazy var searchTitlebgImageView : UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
 }
 
 
-extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate{
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -115,7 +148,7 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
         }else{
           
         }
-        cell.backgroundColor = UIColor.random
+//        cell.backgroundColor = UIColor.random
         return cell
     }
     
@@ -165,5 +198,17 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.section)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0{
+            self.searchBgImageView.snp.updateConstraints { make in
+                make.top.equalTo(self.view).offset(-scrollView.contentOffset.y)
+            }
+        }else{
+            self.searchBgImageView.snp.updateConstraints { make in
+                make.top.equalTo(self.view)
+            }
+        }
     }
 }

@@ -38,7 +38,8 @@ class WW_SearchTitleView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configUI()
-        self.backgroundColor = UIColor(r: 252, g: 85, b: 108)
+//        self.backgroundColor = UIColor(r: 252, g: 85, b: 108)
+        self.backgroundColor = .clear
     }
     
     required init?(coder: NSCoder) {

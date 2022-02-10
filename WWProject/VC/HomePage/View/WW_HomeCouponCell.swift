@@ -26,7 +26,7 @@ class WW_HomeCouponItemsCell : UICollectionViewCell{
         self.contentView.addSubview(self.imageView)
         self.imageView.snp.makeConstraints { make in
             make.centerX.equalTo(self)
-            make.width.height.equalTo(50)
+            make.edges.equalTo(UIEdgeInsets(top: 10, left: 5, bottom: -5, right: -5))
         }
     }
   
@@ -47,11 +47,13 @@ class WW_HomeCouponCell: WW_HomeBaseCell {
         self.bgView.addSubview(self.couponCollectionView)
         
         self.bgView.snp.makeConstraints { make in
-            make.edges.equalTo(UIEdgeInsets(top: 15, left: 7, bottom: -15, right: -7))
+            make.edges.equalTo(UIEdgeInsets(top: 0, left: 7, bottom: 0, right: -7))
         }
         
         self.rewardCouponBtn.snp.makeConstraints { make in
-            make.right.top.bottom.equalTo(self.bgView)
+            make.right.equalTo(self.bgView.snp_right).offset(-10)
+            make.top.equalTo(self.bgView).offset(10)
+            make.bottom.equalTo(self.bgView).offset(-10)
             make.width.equalTo((WWScreenWidth-20)/4)
         }
         
@@ -69,17 +71,19 @@ class WW_HomeCouponCell: WW_HomeBaseCell {
     lazy var rewardCouponBtn : UIButton = {
         let btn = UIButton()
         btn.addTarget(self, action: #selector(rewardClick), for: .touchUpInside)
+        btn.backgroundColor = .white
         return btn
     }()
     
     lazy var couponCollectionView : UICollectionView = {
-        let layout = WW_SearchHotWordsFlowLayout.init(with: .AlignWithLeft, betweenOfCell: 10)
+        let layout = WW_SearchHotWordsFlowLayout.init(with: .AlignWithCenter, betweenOfCell: 5)
         let view = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     
         view.register(WW_HomeCouponItemsCell.classForCoder(), forCellWithReuseIdentifier: NSStringFromClass(WW_HomeCouponItemsCell.classForCoder()))
         view.showsVerticalScrollIndicator = false
+        view.isScrollEnabled = false
         view.delegate = self
         view.dataSource = self
         view.backgroundColor = .clear
@@ -88,17 +92,29 @@ class WW_HomeCouponCell: WW_HomeBaseCell {
 
     lazy var bgView : UIView = {
         let v = UIView()
-        v.backgroundColor = UIColor(r: 217, g: 217, b: 217)
+//        v.backgroundColor = UIColor(r: 217, g: 217, b: 217)
+        v.backgroundColor = .clear
         v.layer.cornerRadius = 1.5
         return v
     }()
 
 }
-extension WW_HomeCouponCell : UICollectionViewDelegate,UICollectionViewDataSource{
+extension WW_HomeCouponCell : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell : WW_HomeCouponItemsCell =  collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(WW_HomeCouponItemsCell.classForCoder()), for: indexPath) as! WW_HomeCouponItemsCell
-        
+        if(indexPath.row == 0){
+            cell.imageView.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617114800077.png"))
+        }else if(indexPath.row == 1){
+            cell.imageView.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617115500078.png"))
+        }else if(indexPath.row == 2){
+            cell.imageView.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617120200079.png"))
+        }else if (indexPath.row == 3){
+            let imageview = UIImageView()
+            imageview.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617121800080.png"))
+            self.rewardCouponBtn.setImage(imageview.image, for: .normal)
+        }
+
         return cell
     }
     
@@ -107,6 +123,6 @@ extension WW_HomeCouponCell : UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 90, height: 65)
+        return CGSize(width: (collectionView.frame.size.width-30)/3, height: collectionView.frame.size.height-10)
     }
 }

@@ -58,9 +58,10 @@ extension NetworkAPI:TargetType{
         parmetersInner["memberKey"] = "17721789"
         switch self {
             case .HomePageList:
-                parmetersInner["channelId"] = "S09033033001"
+                parmetersInner["channelId"] = "B06022853001"//S09033033001"
                 parmetersInner["areas"] = "DN"
                 parmetersInner["type"] = "2"
+                parmetersInner["memberKey"] = "17706844"
                 return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
                 //MARK:传参 注意大小下 也要区分
             case .CategoryProductsList(let catkey):
