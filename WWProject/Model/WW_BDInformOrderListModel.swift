@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//不是用的字段不添加 不会解析错误，主要是类型解析错误
+//类型解析错误
 struct WWBDInformItem : Codable{
     @WW_dataTransString var id : String?
     var commodityName : String?

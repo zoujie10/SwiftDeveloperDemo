@@ -7,15 +7,17 @@
 //
 
 import UIKit
-
-class WW_HomeItemDetailIinkMode : Codable{
+struct WW_HomeItemDetailIinkPopModel : Codable{
     var name : String?/// 跳转名称
     var type : String?/// 跳转类型
     var content : String?/// 跳转子类型或跳转所需参数
-    var subset : String?/// 跳转所需参数
+    @WW_dataTransString var subset : String?/// 跳转所需参数
+}
+struct WW_HomeItemDetailIinkMode : Codable{
+    var linkPoP:WW_HomeItemDetailIinkPopModel?
 }
 
-class WW_HomeItemDetailModel : Codable{
+struct WW_HomeItemDetailModel : Codable{
     var searchInterval : String?/// 搜索轮播间隔
     var tips : String?/// 搜索框提示文字
     var singleBackgroundURL : String?/// banner单个背景图
@@ -23,35 +25,35 @@ class WW_HomeItemDetailModel : Codable{
     var actPictureURL : String?/// 满赠左边小图
     var morePictureURL : String?/// 满赠右边小图
     var timeBackgroundColor : String?/// 满赠倒计时背景色
-    var pictureWidth : String?///新人背景图宽度
-    var pictureHeight : String?///新人背景图高度
+    var pictureWidth : Int?///新人背景图宽度
+    var pictureHeight : Int?///新人背景图高度
     var pictureName : String?/// 其他图片名称
-    var ptKey : String?/// 商品id
+    var ptKey : Int?/// 商品id
     var listImages : String?/// 商品图片地址
     var multiPtKeyNum : String?///是否单规格
 //    var productPictureLabelResponseList : NSArray?///商品标签数组
-    var discountPercentage : String?/// 商品折扣
-    var name : String?/// 商品名称
-    var desc : String?/// 商品描述
-    var displayName : String?/// 商品规格
-    var origPrice : String?/// 商品原价
-    var retailPrice : String?/// 商品零售价
-    var supplyPrice : String?/// 商品供货价
-    var seckillPrice : String?/// 商品秒杀价
-    var unit : String?/// 商品起售单位
-    var actTags : [String]?//营销标签：BUY-满赠；GROUP-团购;seckill秒杀
-    var startSaleNum : String?/// 最小销售数量
-    var buyAddNum : String?/// 递增数量
-    var normalLimitCount : String?/// 限购数量
-    var isRecommend : Bool?/// 是否为推荐商品
+//    var discountPercentage : String?/// 商品折扣
+//    var name : String?/// 商品名称
+//    var desc : String?/// 商品描述
+//    var displayName : String?/// 商品规格
+//    @WW_dataTransString var origPrice : String?/// 商品原价
+//    @WW_dataTransString var retailPrice : String?/// 商品零售价
+//    @WW_dataTransString var supplyPrice : String?/// 商品供货价
+//    @WW_dataTransString var seckillPrice : String?/// 商品秒杀价
+//    var unit : String?/// 商品起售单位
+//    var actTags : [String]?//营销标签：BUY-满赠；GROUP-团购;seckill秒杀
+//    var startSaleNum : Int?/// 最小销售数量
+//    var buyAddNum : Int?/// 递增数量
+//    var normalLimitCount : Int?/// 限购数量
+//    var isRecommend : Bool?/// 是否为推荐商品
     var linkPOP : WW_HomeItemDetailIinkMode?/// 其他跳转二级页数据
-    var searchLinkPOP : WW_HomeItemDetailIinkMode?/// 搜索框跳转二级页数据
-    var iconLinkPOP : WW_HomeItemDetailIinkMode?/// 搜索框右侧按钮跳转二级页数据
+    var searchURL : WW_HomeItemDetailIinkMode?/// 搜索框跳转二级页数据
+    var iconURL : WW_HomeItemDetailIinkMode?/// 搜索框右侧按钮跳转二级页数据
 }
 
-class WW_HomeItemModel : Codable{
+struct WW_HomeItemModel : Codable{
     var asseName : String?/// 模块名称
-    var asseType : Int?/// 模块类型
+    @WW_dataTransString var asseType : String?/// 模块类型
     var backgroundURL : String?/// banner/常购清单背景图
     var pictureURL : String?/// 秒杀背景图
     var actPictureURL : String?/// 秒杀左边小图
@@ -68,7 +70,7 @@ class WW_HomeItemModel : Codable{
     var configureAttributeList : [[WW_HomeItemDetailModel]]?/// 商品模块数据
 }
 
-class WW_HomePageListModel: Codable {
+struct WW_HomePageListModel: Codable {
     var code : Int?
     var msg : String?
     var data : [WW_HomeItemModel]?

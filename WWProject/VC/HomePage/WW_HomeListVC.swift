@@ -18,20 +18,45 @@ class WW_HomeListVC: WW_MainBaseVC {
         
     let homePageViewModel  = WW_HomePageListViewModel()
     
-    let totalCellClassArray = [WW_HomeBannerCell.classForCoder(),
-                               WW_HomeChannelCell.classForCoder(),
-                               WW_HomeChannelSingleItemCell.classForCoder(),
-                               WW_HomeCouponCell.classForCoder(),
-                               WW_HomeMagicCubeCell.classForCoder(),
-                               WW_HomePubicNoticeCell.classForCoder(),
-                               WW_HomeFrequentlyBuyListCell.classForCoder(),
-                               WW_HomeFreeGiftCell.classForCoder(),
-                               WW_HomeSecondKillCell.classForCoder(),
-                               WW_HomeRecommendsCell.classForCoder()]
+    var showCellClassArray = [WW_HomeBaseCell.classForCoder()]
+    //对应 WW_HomeItemType 枚举位置
+    let totalCellClassArray = [WW_HomeBaseCell.classForCoder(),//占位 0
+                               WW_HomeBaseCell.classForCoder(),//1
+                               WW_HomeBannerCell.classForCoder(),
+                               WW_HomeBaseCell.classForCoder(),//3
+                               WW_HomeBaseCell.classForCoder(),//4
+                               WW_HomeBaseCell.classForCoder(),//5
+                               WW_HomePubicNoticeCell.classForCoder(),//6
+                               WW_HomeCouponCell.classForCoder(),//7 优惠券（2宫格）
+                               WW_HomeCouponCell.classForCoder(),//8 优惠券（3宫格）
+                               WW_HomeCouponCell.classForCoder(),//9 优惠券（4宫格）
+                               WW_HomePubicNoticeCell.classForCoder(),//10 公告
+                               WW_HomeMagicCubeCell.classForCoder(),//11 魔方（2宫格）
+                               WW_HomeMagicCubeCell.classForCoder(),//12 魔方（3宫格）
+                               WW_HomeMagicCubeCell.classForCoder(),//13 魔方（4宫格）
+                               WW_HomeRecommendsCell.classForCoder(),//14 商品列表
+                               WW_HomePubicNoticeCell.classForCoder(),//15 为你推荐（标题）
+                               WW_HomePubicNoticeCell.classForCoder(),//16 为你推荐（结束语）
+                               WW_HomeChannelCell.classForCoder(),//17 频道导航
+                               WW_HomeFreeGiftCell.classForCoder(),//18 限时满赠
+                               WW_HomeSecondKillCell.classForCoder(),//19 限时秒杀
+                               WW_HomePubicNoticeCell.classForCoder(),//20 新人专区
+                               WW_HomeFrequentlyBuyListCell.classForCoder(),//21 常购清单
+                               WW_HomeBaseCell.classForCoder(),//22 占位
+                               WW_HomeChannelSingleItemCell.classForCoder()//23 频道导航Z型 单体item
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homePageViewModel.getHomePageList()
+        self.homePageViewModel.dataResultComplete = {
+          let array = self.homePageViewModel.itemTypeArray()
+            self.showCellClassArray.removeAll()
+            for index in array{
+                self.showCellClassArray.append(self.totalCellClassArray[Int(index)!])
+            }
+            self.collectionView.reloadData()
+        }
         configUI()
         registerAllCell()
     }
@@ -141,19 +166,19 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let classCell: AnyClass = self.totalCellClassArray[indexPath.section]
+        let classCell: AnyClass = self.showCellClassArray[indexPath.section]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:NSStringFromClass(classCell), for: indexPath)
         if classCell == WW_HomeRecommendsCell.classForCoder(){
            
         }else{
           
         }
-//        cell.backgroundColor = UIColor.random
+
         return cell
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.totalCellClassArray.count
+        return self.showCellClassArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -168,6 +193,10 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cell: AnyClass = self.totalCellClassArray[indexPath.section]
+        var height : Float = 120
+//        if self.homePageViewModel.itemTypeArray().count > 0{
+//            height = self.homePageViewModel.cellHeight(asseType: Int(self.homePageViewModel.itemTypeArray()[indexPath.section])!)
+//        }
         if cell == WW_HomeRecommendsCell.classForCoder(){
             return CGSize.init(width: Int(WWScreenWidth-40) / 2, height: 250)
         }else if cell == WW_HomePubicNoticeCell.classForCoder(){
@@ -175,20 +204,15 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
         }else if cell == WW_HomeChannelCell.classForCoder(){
             return CGSize.init(width: WWScreenWidth, height: 160)
         }else if cell == WW_HomeMagicCubeCell.classForCoder(){
-            let count = 2
-            if (count <= 2){
-                return CGSize.init(width: WWScreenWidth, height: 160)
-            }else{
-                return CGSize.init(width: WWScreenWidth, height: 160 * 2)
-            }
+            return CGSize.init(width: WWScreenWidth, height: 160 * 2)
         }
         else{
-            return CGSize.init(width: WWScreenWidth, height: 120)
+            return CGSize.init(width: WWScreenWidth, height: CGFloat(height))
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let cell: AnyClass = self.totalCellClassArray[section]
+        let cell: AnyClass = self.showCellClassArray[section]
         if cell == WW_HomeRecommendsCell.classForCoder(){
             return UIEdgeInsets.init(top: 8, left: 15, bottom: 8, right: 15)
         }else{
