@@ -182,7 +182,7 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let cell: AnyClass = self.totalCellClassArray[section]
+        let cell: AnyClass = self.showCellClassArray[section]
         if cell == WW_HomeRecommendsCell.classForCoder(){
             return 12
         }else{
@@ -192,23 +192,11 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cell: AnyClass = self.totalCellClassArray[indexPath.section]
-        var height : Float = 120
-//        if self.homePageViewModel.itemTypeArray().count > 0{
-//            height = self.homePageViewModel.cellHeight(asseType: Int(self.homePageViewModel.itemTypeArray()[indexPath.section])!)
-//        }
-        if cell == WW_HomeRecommendsCell.classForCoder(){
-            return CGSize.init(width: Int(WWScreenWidth-40) / 2, height: 250)
-        }else if cell == WW_HomePubicNoticeCell.classForCoder(){
-            return CGSize.init(width: WWScreenWidth, height: 30)
-        }else if cell == WW_HomeChannelCell.classForCoder(){
-            return CGSize.init(width: WWScreenWidth, height: 160)
-        }else if cell == WW_HomeMagicCubeCell.classForCoder(){
-            return CGSize.init(width: WWScreenWidth, height: 160 * 2)
+        var itemSize = CGSize(width: WWScreenWidth, height: 0.1)
+        if self.homePageViewModel.itemTypeArray().count > 0{
+            itemSize = self.homePageViewModel.cellSize(asseType: Int(self.homePageViewModel.itemTypeArray()[indexPath.section])!)
         }
-        else{
-            return CGSize.init(width: WWScreenWidth, height: CGFloat(height))
-        }
+        return itemSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

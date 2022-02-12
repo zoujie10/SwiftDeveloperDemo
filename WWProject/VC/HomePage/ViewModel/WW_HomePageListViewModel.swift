@@ -44,15 +44,56 @@ class WW_HomePageListViewModel: NSObject {
         return assArray as! [String]
     }
     
-    func cellHeight(asseType : Int) -> Float{
+    func cellSize(asseType : Int) -> CGSize{
         let type : WW_HomeItemType = WW_HomeItemType(rawValue: asseType) ?? .WW_HomeItemTypeNone
+
         switch type {
             case .WW_HomeItemTypeNone:
-                return 0.1
+                return CGSize.init(width: WWScreenWidth, height:0.1)
             case .WW_HomeItemTypeBanner:
-                return 120
+                return CGSize.init(width: WWScreenWidth, height:CGFloat(400*(WWScreenWidth-30)/1008.0))
+            case .WW_HomeItemTypeChannelFirst:
+                return CGSize.init(width: WWScreenWidth, height:120)
+            case .WW_HomeItemTypeChannelSecond:
+                return CGSize.init(width: WWScreenWidth, height:120)
+            case .WW_HomeItemTypeChannelThird:
+                return CGSize.init(width: WWScreenWidth, height:120)
+            case .WW_HomeItemTypeActivity  :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30)/336)*110+14)
+            case .WW_HomeItemTypeCouponFirst :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30-8)/(275+55.0)*73)+14)
+            case .WW_HomeItemTypeCouponSecond :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30-16)/(86.67*3+55.0)*73)+14)
+            case .WW_HomeItemTypeCouponThird :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30-24)/(275+55.0)*73)+14)
+            case .WW_HomeItemTypeNotify   :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30)/336)*30+11)
+            case .WW_HomeItemTypeMagicFirst  ://两宫格
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30-16-8)*0.5/156*103)+14+16)
+            case .WW_HomeItemTypeMagicSecond:
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30-16-8)/156*103)+14+16)
+            case .WW_HomeItemTypeMagicThird :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-30-16-8)/156*103)+14+16)
+            case .WW_HomeItemTypeGoods    :
+                return CGSize.init(width: (WWScreenWidth-40)/2, height:250)
+            case .WW_HomeItemTypeLike    :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-24)/330)*15+14)
+            case .WW_HomeItemTypeLife   :
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-24)/330)*11.33+14+10)
+            case .WW_HomeItemTypeChannel :
+                return CGSize.init(width: WWScreenWidth, height:156)
+            case .WW_HomeItemTypeGift,.WW_HomeItemTypeKill:
+                return CGSize.init(width: WWScreenWidth, height:136+10.0)
+            case .WW_HomeItemTypeNewUser :
+                return CGSize.init(width: WWScreenWidth, height:136+10.0)
+            case .WW_HomeItemTypeGoodsList :
+                return CGSize.init(width: WWScreenWidth, height:156)
+//                return 156 //TODO row 1 or 2
+            // 22被安卓占用
+            case .WW_HomeItemTypeChannelNew :
+                return CGSize.init(width: WWScreenWidth, height:120)
             default:
-                return 0.1
+                return CGSize(width: WWScreenWidth, height: 0.1)
         }
         
     }
