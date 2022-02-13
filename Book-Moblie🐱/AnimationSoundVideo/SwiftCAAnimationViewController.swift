@@ -12,6 +12,7 @@ class SwiftCAAnimationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "曲线/抖动"
         view.backgroundColor = .white
         makeUI()
     }

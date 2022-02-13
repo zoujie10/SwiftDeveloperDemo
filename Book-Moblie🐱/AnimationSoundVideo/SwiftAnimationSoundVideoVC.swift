@@ -122,7 +122,11 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
             $0.top.equalTo(cAAnimation2.snp_bottom).offset(20)
             $0.centerX.equalTo(self.animationView)
         }
-        
+        self.view.addSubview(self.textLabel)
+        self.textLabel.snp.makeConstraints {
+            $0.top.equalTo(cAAnimation3.snp_bottom).offset(20)
+            $0.centerX.equalTo(self.animationView)
+        }
     }
     
     lazy var animationView : UIView = {
@@ -150,6 +154,14 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
         return topAnimationImageView
     }()
     
+    lazy var textLabel : UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.backgroundColor = .orange
+        label.textColor = .white
+        label.text = "《iOS核心动画高级技巧》"
+        return label;
+    }()
     @objc func animationMethod(){
         /**
              通过修改视图的属性：  frame,bounds,center,transform,alpha,backgroundColor
