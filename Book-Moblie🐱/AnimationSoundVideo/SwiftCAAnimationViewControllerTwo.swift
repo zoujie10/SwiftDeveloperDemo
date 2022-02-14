@@ -24,6 +24,11 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         self.clickBtn.snp.makeConstraints { make in
             make.center.equalTo(view)
         }
+        self.view.addSubview(self.sortBtn)
+        self.sortBtn.snp.makeConstraints { make in
+            make.top.equalTo(self.clickBtn.snp_bottom).offset(100)
+            make.centerX.equalTo(self.clickBtn)
+        }
     }
     //添加爆炸效果
     func explosion(){
@@ -52,6 +57,15 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         }
         sender.layer.add(anim, forKey: nil)
     }
+    
+    @objc func jumpVC(){
+        let vc = SwiftSelectAndSortVC()
+        vc.showVC()
+    }
+    @objc func jumpAnimationVC(){
+        
+    }
+    
     lazy var clickBtn : UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "animation_click_default"), for: .normal)
@@ -60,6 +74,22 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         return btn
     }()
 
+    lazy var sortBtn : UIButton = {
+        let btn = UIButton()
+        btn.setTitle("弹层", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.addTarget(self, action: #selector(jumpVC), for: .touchUpInside)
+        return btn
+    }()
+
+    lazy var animationLayerBtn : UIButton = {
+        let btn = UIButton()
+        btn.setTitle("动画layer弹层", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.addTarget(self, action: #selector(jumpAnimationVC), for: .touchUpInside)
+        return btn
+    }()
+    
     lazy var emitterLayer : CAEmitterLayer = {
         let layer = CAEmitterLayer.init()
         let cell = CAEmitterCell.init()

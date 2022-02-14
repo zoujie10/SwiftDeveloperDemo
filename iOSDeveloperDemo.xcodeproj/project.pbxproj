@@ -190,6 +190,9 @@
 		84D95B2927B208D800052E04 /* SwiftCAAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */; };
 		84D95B2B27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */; };
 		84D95B2D27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */; };
+		84D95B2F27B8A2F000052E04 /* SwiftSelectAndSortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B2E27B8A2EF00052E04 /* SwiftSelectAndSortVC.swift */; };
+		84D95B4427BA994B00052E04 /* SwiftSlideAnimationMuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B4327BA994B00052E04 /* SwiftSlideAnimationMuneView.swift */; };
+		84D95B4627BAA01300052E04 /* SwiftSlideAnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D95B4527BAA01300052E04 /* SwiftSlideAnimationButton.swift */; };
 		84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */; };
 		84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA51E2768817B00A97694 /* UIColorExtension.swift */; };
 		84DAA52D276B0B7D00A97694 /* WW_InformListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */; };
@@ -431,6 +434,9 @@
 		84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewController.swift; sourceTree = "<group>"; };
 		84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewControllerTwo.swift; sourceTree = "<group>"; };
 		84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewControllerThree.swift; sourceTree = "<group>"; };
+		84D95B2E27B8A2EF00052E04 /* SwiftSelectAndSortVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSelectAndSortVC.swift; sourceTree = "<group>"; };
+		84D95B4327BA994B00052E04 /* SwiftSlideAnimationMuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSlideAnimationMuneView.swift; sourceTree = "<group>"; };
+		84D95B4527BAA01300052E04 /* SwiftSlideAnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSlideAnimationButton.swift; sourceTree = "<group>"; };
 		84DAA51B276875BF00A97694 /* WW_BDInformOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BDInformOrderListModel.swift; sourceTree = "<group>"; };
 		84DAA51E2768817B00A97694 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		84DAA52C276B0B7D00A97694 /* WW_InformListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_InformListViewModel.swift; sourceTree = "<group>"; };
@@ -1075,10 +1081,12 @@
 		84710DDC2737CBCA00A40507 /* AnimationSoundVideo */ = {
 			isa = PBXGroup;
 			children = (
+				84D95B4227BA992000052E04 /* animationView */,
 				84710DDD2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift */,
 				84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */,
 				84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */,
 				84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */,
+				84D95B2E27B8A2EF00052E04 /* SwiftSelectAndSortVC.swift */,
 				84710DE4273BFE9100A40507 /* SwiftSoundVideoVC.swift */,
 				84710DE227390E2D00A40507 /* pop_drip.wav */,
 				84710DE6273D59BB00A40507 /* 宇宙骑士reason.mp3 */,
@@ -1211,6 +1219,15 @@
 				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
 			);
 			path = OlympicProject;
+			sourceTree = "<group>";
+		};
+		84D95B4227BA992000052E04 /* animationView */ = {
+			isa = PBXGroup;
+			children = (
+				84D95B4327BA994B00052E04 /* SwiftSlideAnimationMuneView.swift */,
+				84D95B4527BAA01300052E04 /* SwiftSlideAnimationButton.swift */,
+			);
+			path = animationView;
 			sourceTree = "<group>";
 		};
 		84DAA51D2768816300A97694 /* Extension */ = {
@@ -1636,6 +1653,7 @@
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
 				84DAA53E2774738400A97694 /* WW_HeroListVC.swift in Sources */,
 				845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */,
+				84D95B4427BA994B00052E04 /* SwiftSlideAnimationMuneView.swift in Sources */,
 				84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */,
 				84D95B2727B0248C00052E04 /* Global.swift in Sources */,
 				84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */,
@@ -1655,6 +1673,7 @@
 				84DAA5312771C9CD00A97694 /* WW_OrderSingleVCThree.swift in Sources */,
 				842991DE2747EA0D00A50077 /* SwiftLocalizationVC.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
+				84D95B2F27B8A2F000052E04 /* SwiftSelectAndSortVC.swift in Sources */,
 				845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
@@ -1709,6 +1728,7 @@
 				4F02FD9F22AF819F00B8CB35 /* IteratorClass.swift in Sources */,
 				84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
+				84D95B4627BAA01300052E04 /* SwiftSlideAnimationButton.swift in Sources */,
 				842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */,
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,

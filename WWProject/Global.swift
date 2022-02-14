@@ -21,3 +21,5 @@ let WW_Device_StatusBar_Height = (IS_IPhoneX_All ? 44 : 20)
 let WW_Device_TabBar_Height = (IS_IPhoneX_All ? 83 : 49)
 //安全区高
 let WW_Device_SafeArea_BottomHeight = (IS_IPhoneX_All ? 34 : 0)
+
+let WW_KeyWindow = UIApplication.shared.keyWindow//UIApplication sharedApplication].keyWindow
