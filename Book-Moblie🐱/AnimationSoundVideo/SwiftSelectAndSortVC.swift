@@ -31,8 +31,8 @@ class SwiftSelectAndSortVC: UIViewController {
     
     
     func showVC(){
-        WW_KeyWindow?.rootViewController?.addChildViewController(self)
-        WW_KeyWindow?.addSubview(self.view)
+        WW_keyWindow?.rootViewController?.addChildViewController(self)
+        WW_keyWindow?.addSubview(self.view)
         self.view.bringSubview(toFront: self.bgView)
     }
     
