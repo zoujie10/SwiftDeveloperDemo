@@ -50,6 +50,19 @@ class SwiftSlideAnimationMuneView: UIView {
 //        CGContextAddPath(context, path.CGPath);
 //        [menuColor set];
 //        CGContextFillPath(context);
+        
+        let path = UIBezierPath.init()
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: (WW_keyWindow?.frame.size.width)!/2, y: 0))
+        path.addQuadCurve(to: CGPoint(x: (WW_keyWindow?.frame.size.width)!/2, y: (WW_keyWindow?.frame.size.height)!), controlPoint: CGPoint(x: (WW_keyWindow?.frame.size.width)!/2, y: (WW_keyWindow?.frame.size.height)!/2))
+        path.addLine(to: CGPoint(x: 0, y: (WW_keyWindow?.frame.size.height)!))
+        path.close()
+        
+        let context = UIGraphicsGetCurrentContext()!
+        context.addPath(path.cgPath)
+        muneColor.set()
+        context.fillPath()
+        
     }
     
     lazy var blurView : UIVisualEffectView = {

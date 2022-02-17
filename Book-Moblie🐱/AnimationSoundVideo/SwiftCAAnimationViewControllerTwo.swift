@@ -29,6 +29,12 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
             make.top.equalTo(self.clickBtn.snp_bottom).offset(100)
             make.centerX.equalTo(self.clickBtn)
         }
+        
+        self.view.addSubview(self.animationLayerBtn)
+        self.animationLayerBtn.snp.makeConstraints { make in
+            make.top.equalTo(self.sortBtn.snp_bottom).offset(100)
+            make.centerX.equalTo(self.sortBtn)
+        }
     }
     //添加爆炸效果
     func explosion(){
@@ -63,7 +69,8 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         vc.showVC()
     }
     @objc func jumpAnimationVC(){
-        
+        let mune =  SwiftSlideAnimationMuneView.init(["1","2","3","4"])
+        mune.switchAction()
     }
     
     lazy var clickBtn : UIButton = {
