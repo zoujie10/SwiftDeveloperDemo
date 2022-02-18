@@ -39,18 +39,6 @@ class SwiftSlideAnimationMuneView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-//        UIBezierPath *path = [UIBezierPath bezierPath];
-//        [path moveToPoint:CGPointMake(0, 0)];
-//        [path addLineToPoint:CGPointMake(CGRectGetWidth(keyWindow.frame)/2, 0)];
-//        [path addQuadCurveToPoint:CGPointMake(CGRectGetWidth(keyWindow.frame)/2, CGRectGetHeight(keyWindow.frame)) controlPoint:CGPointMake(CGRectGetWidth(keyWindow.frame)/2 + diff, CGRectGetHeight(keyWindow.frame)/2)];
-//        [path addLineToPoint:CGPointMake(0, CGRectGetHeight(keyWindow.frame))];
-//        [path closePath];
-//        
-//        CGContextRef context = UIGraphicsGetCurrentContext();
-//        CGContextAddPath(context, path.CGPath);
-//        [menuColor set];
-//        CGContextFillPath(context);
-        
         let path = UIBezierPath.init()
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: (WW_keyWindow?.frame.size.width)!/2, y: 0))
@@ -62,7 +50,6 @@ class SwiftSlideAnimationMuneView: UIView {
         context.addPath(path.cgPath)
         muneColor.set()
         context.fillPath()
-        
     }
     
     lazy var blurView : UIVisualEffectView = {
@@ -76,6 +63,36 @@ class SwiftSlideAnimationMuneView: UIView {
         self.backgroundColor = .clear;
         return v
     }()
+    
+    func addBtnAnim(){
+        
+    }
+    
+    func addBtnTitles(titles : NSArray){
+        
+    }
+    
+//    #pragma mark - func
+//    - (void)addBtnAnim{
+//        for (int i = 0; i < self.subviews.count; i++) {
+//            UIView *btn = self.subviews[i];
+//            btn.transform = CGAffineTransformMakeTranslation(-100, 0);
+//            [UIView animateWithDuration:.7 delay:i*(0.3/self.subviews.count) usingSpringWithDamping:.6 initialSpringVelocity:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//                btn.transform = CGAffineTransformIdentity;
+//            } completion:nil];
+//        }
+//    }
+//    - (void)addBtnTitles:(NSArray *)titles{
+//        CGFloat space = (CGRectGetHeight(keyWindow.bounds) - titles.count*menuBtnHeight - (titles.count-1)*buttonSpace)/2;
+//        for (int i = 0; i < titles.count; i++) {
+//            slideMenuBtn *btn = [[slideMenuBtn alloc] initWithTitle:titles[i]];
+//            btn.center = CGPointMake(CGRectGetWidth(keyWindow.bounds)/4, space + menuBtnHeight*i + buttonSpace*i);
+//            btn.bounds = CGRectMake(0, 0, CGRectGetWidth(keyWindow.bounds)/2 - 20*2, menuBtnHeight);
+//            [self addSubview:btn];
+//        }
+//    }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
