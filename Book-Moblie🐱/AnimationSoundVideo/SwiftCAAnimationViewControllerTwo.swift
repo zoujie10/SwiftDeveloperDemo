@@ -69,7 +69,7 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         vc.showVC()
     }
     @objc func jumpAnimationVC(){
-        let mune =  SwiftSlideAnimationMuneView.init(["1","2","3","4"])
+        let mune =  SwiftSlideAnimationMuneView.init(stringTitles:["1","2","3","4"])
         mune.switchAction()
     }
     
