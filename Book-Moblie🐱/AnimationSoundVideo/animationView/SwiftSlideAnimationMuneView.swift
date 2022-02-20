@@ -19,7 +19,15 @@ let menuBtnHeight = 40
 let buttonSpace = 30
 class SwiftSlideAnimationMuneView: UIView {
     let muneColor = UIColor(r: 0, g: 0.722, b: 1)
+//    UIView *helperSideView;
+//    UIView *helperCenterView;
+//    CGFloat diff;
+//
+//    CADisplayLink *displayLink;
     
+    let helperSideView = UIView()
+    let helperCenterView = UIView()
+    var diff : CGFloat = 0.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +39,14 @@ class SwiftSlideAnimationMuneView: UIView {
         self.frame = CGRect(x: -CGFloat(WW_keyWindow!.frame.size.width/2) + CGFloat(menuBlankWidth), y: 0, width: (WW_keyWindow?.frame.size.width)!/2 + CGFloat(menuBlankWidth), height: (WW_keyWindow?.frame.size.height)!)
         self.backgroundColor = .clear;
         WW_keyWindow?.addSubview(self)
+
+        helperSideView.frame = CGRect(x: -40, y: 0, width: 40, height: 40)
+        helperSideView.backgroundColor = .red
+        helperCenterView.frame = CGRect(x: -40, y:(WW_keyWindow?.bounds.size.height)!/2 - 20 , width: 40, height: 40)
+        helperCenterView.backgroundColor = .orange
+        
+        WW_keyWindow?.addSubview(helperSideView)
+        WW_keyWindow?.addSubview(helperCenterView)
         
         self.addBtnTitles(titles:stringTitles)
     }
@@ -55,16 +71,34 @@ class SwiftSlideAnimationMuneView: UIView {
     }
     
     lazy var blurView : UIVisualEffectView = {
-        
+
         let v = UIVisualEffectView(effect: UIBlurEffect.init(style: .dark))
         v.frame = WW_keyWindow!.frame
         v.alpha = 0.5
-        
 //        self.frame =CGRectMake(-(CGRectGetWidth(keyWindow.frame)/2 + menuBlankWidth), 0, CGRectGetWidth(keyWindow.frame)/2 + menuBlankWidth, CGRectGetHeight(keyWindow.frame));
         
         self.backgroundColor = .clear;
         return v
     }()
+
+    lazy var displayLink : CADisplayLink = {
+        let link = CADisplayLink(target: self, selector:#selector(displayLinkAction))
+        displayLink.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+        return link
+    }()
+    
+    @objc func displayLinkAction(){
+        //    NSLog(@"%@",NSStringFromCGRect(helperSideView.frame));
+        print(NSStringFromCGRect(helperSideView.frame))
+        let layer1 = helperSideView.layer.presentation()
+        let layer2 = helperCenterView.layer.presentation()
+        
+        let r1 : CGRect = layer1?.value(forKeyPath: "frame") as! CGRect
+        let r2 : CGRect = layer2?.value(forKeyPath: "frame") as! CGRect
+        
+        diff = r1.origin.x - r2.origin.x
+        self.setNeedsDisplay()
+    }
     
     func addBtnAnim(){
         for i in 0 ..< self.subviews.count {
