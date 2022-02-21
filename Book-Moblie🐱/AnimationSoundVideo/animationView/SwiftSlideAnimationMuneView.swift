@@ -129,16 +129,13 @@ class SwiftSlideAnimationMuneView: UIView {
     }
     
 
-//    - (void)addBtnTitles:(NSArray *)titles{
-//        CGFloat space = (CGRectGetHeight(keyWindow.bounds) - titles.count*menuBtnHeight - (titles.count-1)*buttonSpace)/2;
-//        for (int i = 0; i < titles.count; i++) {
-//            slideMenuBtn *btn = [[slideMenuBtn alloc] initWithTitle:titles[i]];
-//            btn.center = CGPointMake(CGRectGetWidth(keyWindow.bounds)/4, space + menuBtnHeight*i + buttonSpace*i);
-//            btn.bounds = CGRectMake(0, 0, CGRectGetWidth(keyWindow.bounds)/2 - 20*2, menuBtnHeight);
-//            [self addSubview:btn];
-//        }
-//    }
-    
+    //MARK: - Actions
+    //移除定时器
+    func removeDisplayLink(){
+        [self.displayLink.invalidate()]
+        self.displayLink = nil
+    }
+
     
     
     required init?(coder: NSCoder) {
