@@ -17,18 +17,13 @@ import UIKit
 let menuBlankWidth = 50
 let menuBtnHeight = 40
 let buttonSpace = 30
+let muneColor = UIColor(r: 255, g: 255, b: 255)
+
 class SwiftSlideAnimationMuneView: UIView {
-    let muneColor = UIColor(r: 0, g: 0.722, b: 1)
-//    UIView *helperSideView;
-//    UIView *helperCenterView;
-//    CGFloat diff;
-//
-//    CADisplayLink *displayLink;
-    
     let helperSideView = UIView()
     let helperCenterView = UIView()
     var diff : CGFloat = 0.0
-    
+    var swiched = false
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -47,13 +42,11 @@ class SwiftSlideAnimationMuneView: UIView {
         
         WW_keyWindow?.addSubview(helperSideView)
         WW_keyWindow?.addSubview(helperCenterView)
+        WW_keyWindow?.insertSubview(self, belowSubview: helperSideView)
         
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(dismissView))
+        self.blurView.addGestureRecognizer(tap)
         self.addBtnTitles(titles:stringTitles)
-    }
-    
-    func switchAction(){
-        
-        
     }
     
     override func draw(_ rect: CGRect) {
@@ -83,7 +76,6 @@ class SwiftSlideAnimationMuneView: UIView {
 
     lazy var displayLink : CADisplayLink = {
         let link = CADisplayLink(target: self, selector:#selector(displayLinkAction))
-        displayLink.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
         return link
     }()
     
@@ -118,24 +110,64 @@ class SwiftSlideAnimationMuneView: UIView {
       
         var num : Int = 0
         for i in 0..<titles.count{
-            let btn : SwiftSlideAnimationButton = SwiftSlideAnimationButton.init(title: titles[num] as! String)
+            let btn : SwiftSlideAnimationButton = SwiftSlideAnimationButton.init(title: titles[num])
             num += 1
             btn.center = CGPoint(x: Int((WW_keyWindow?.bounds.size.width)!)/4, y: space+menuBtnHeight*i+buttonSpace*i)
             
-            btn.bounds = CGRect(x: 0, y: 0, width: Int(CGFloat(WW_keyWindow?.bounds.size.width ?? 0/2)) - 20*2, height: menuBtnHeight)
+            btn.bounds = CGRect(x: 0, y: 0, width: Int(CGFloat(WW_keyWindow!.bounds.size.width)/2) - 20*2, height: menuBtnHeight)
             
             self.addSubview(btn)
         }
     }
     
-
+    func getDiff(){
+        self.displayLink.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+    }
     //MARK: - Actions
     //移除定时器
     func removeDisplayLink(){
-        [self.displayLink.invalidate()]
-        self.displayLink = nil
+        self.displayLink.invalidate()
+    }
+    func switchAction(){
+        if(!swiched){
+            //1.添加模糊背景
+            WW_keyWindow?.insertSubview(self.blurView, belowSubview: self)
+            //2.滑入菜单栏
+            UIView.animate(withDuration: 0.3) { [self] in
+                self.frame = self.bounds
+                blurView.alpha = 1
+            }
+            //3.添加弹簧动画
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.9, options: .beginFromCurrentState) {
+                self.helperSideView.center = CGPoint(x: (WW_keyWindow?.center.x)!, y: self.helperSideView.bounds.size.height/2)
+            } completion: {_ in
+                
+            }
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: .beginFromCurrentState) {
+                self.helperSideView.center = WW_keyWindow!.center
+            } completion: {_ in
+                self.removeDisplayLink()
+            }
+            
+            //获取差值
+            getDiff()
+            //添加按钮的动画
+            addBtnAnim()
+            swiched = true
+        }else{
+            dismissView()
+        }
     }
 
+    @objc func dismissView(){
+        swiched = false
+        UIView.animate(withDuration: 0.3) {
+            self.frame = CGRect(x: -(WW_keyWindow?.frame.size.width)!/2, y: 0, width: (WW_keyWindow?.frame.size.width)!/2 + CGFloat(menuBlankWidth), height: (WW_keyWindow?.frame.size.height)!)
+            self.blurView.alpha = 0
+            self.helperSideView.center = CGPoint(x: -20, y: 20)
+            self.helperCenterView.center = CGPoint(x:-20,y:(WW_keyWindow?.frame.size.height)!/2)
+        }
+    }
     
     
     required init?(coder: NSCoder) {
