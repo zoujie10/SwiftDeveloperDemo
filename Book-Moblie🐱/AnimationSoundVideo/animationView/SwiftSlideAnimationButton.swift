@@ -30,7 +30,8 @@ class SwiftSlideAnimationButton: UIView {
         let context = UIGraphicsGetCurrentContext()
         context?.addRect(rect)
         
-        let color = UIColor(r: 0, g: 0.722, b: 1)
+//        let color = UIColor(r: 0, g: 0.722, b: 1)
+        let color = UIColor.white
         //设置填充和描边颜色
         //    [color setFill];
         //    CGContextFillPath(context);
@@ -49,7 +50,7 @@ class SwiftSlideAnimationButton: UIView {
         let path = UIBezierPath.init(roundedRect:rect.insetBy(dx: 1, dy: 1), cornerRadius: rect.size.height/2)
         
         //设置描边颜色
-        UIColor.white.setStroke()
+        UIColor.blue.setStroke()
         path.lineWidth = 1
         color.setFill()
         //设置描边和填充
@@ -59,7 +60,7 @@ class SwiftSlideAnimationButton: UIView {
         
         let style = NSMutableParagraphStyle()
         style.alignment = .center
-        let attr = [NSAttributedStringKey.paragraphStyle:style,NSAttributedStringKey.font:UIFont.systemFont(ofSize: 24),NSAttributedStringKey.foregroundColor:UIColor.white]
+        let attr = [NSAttributedStringKey.paragraphStyle:style,NSAttributedStringKey.font:UIFont.systemFont(ofSize: 24),NSAttributedStringKey.foregroundColor:UIColor.red]
         let size = btnTitle.size(withAttributes: attr)
         let r = CGRect(x: rect.origin.x, y: rect.origin.y + (rect.size.height - size.height)/2.0, width: rect.size.width, height: rect.size.height)
         btnTitle.draw(in: r, withAttributes: attr)

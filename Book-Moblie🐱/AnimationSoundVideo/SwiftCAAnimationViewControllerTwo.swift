@@ -92,6 +92,7 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
     lazy var animationLayerBtn : UIButton = {
         let btn = UIButton()
         btn.setTitle("动画layer弹层", for: .normal)
+        btn.backgroundColor = UIColor.red
         btn.setTitleColor(.black, for: .normal)
         btn.addTarget(self, action: #selector(jumpAnimationVC), for: .touchUpInside)
         return btn

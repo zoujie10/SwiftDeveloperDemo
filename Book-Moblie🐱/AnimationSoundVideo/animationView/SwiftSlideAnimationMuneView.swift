@@ -39,7 +39,8 @@ class SwiftSlideAnimationMuneView: UIView {
         helperSideView.backgroundColor = .red
         helperCenterView.frame = CGRect(x: -40, y:(WW_keyWindow?.bounds.size.height)!/2 - 20 , width: 40, height: 40)
         helperCenterView.backgroundColor = .orange
-        
+        helperSideView.isHidden = true
+        helperCenterView.isHidden = true
         WW_keyWindow?.addSubview(helperSideView)
         WW_keyWindow?.addSubview(helperCenterView)
         WW_keyWindow?.insertSubview(self, belowSubview: helperSideView)
@@ -67,7 +68,7 @@ class SwiftSlideAnimationMuneView: UIView {
 
         let v = UIVisualEffectView(effect: UIBlurEffect.init(style: .dark))
         v.frame = WW_keyWindow!.frame
-        v.alpha = 0.5
+        v.alpha = 0.3
 //        self.frame =CGRectMake(-(CGRectGetWidth(keyWindow.frame)/2 + menuBlankWidth), 0, CGRectGetWidth(keyWindow.frame)/2 + menuBlankWidth, CGRectGetHeight(keyWindow.frame));
         
         self.backgroundColor = .clear;
@@ -139,12 +140,13 @@ class SwiftSlideAnimationMuneView: UIView {
             }
             //3.添加弹簧动画
             UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.9, options: .beginFromCurrentState) {
+                
                 self.helperSideView.center = CGPoint(x: (WW_keyWindow?.center.x)!, y: self.helperSideView.bounds.size.height/2)
             } completion: {_ in
                 
             }
             UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: .beginFromCurrentState) {
-                self.helperSideView.center = WW_keyWindow!.center
+                self.helperCenterView.center = WW_keyWindow!.center
             } completion: {_ in
                 self.removeDisplayLink()
             }
