@@ -12,8 +12,8 @@ import MapKit
 class SwiftSlideAnimationButton: UIView {
     
     var btnTitle : String = ""
-    
-    typealias clickBlock = () -> Void
+    var IndexTag : Int = 0
+    typealias clickBlock = (Int) -> Void
     var clickBlock : clickBlock?
     
     override init(frame: CGRect) {
@@ -30,26 +30,17 @@ class SwiftSlideAnimationButton: UIView {
         let context = UIGraphicsGetCurrentContext()
         context?.addRect(rect)
         
-//        let color = UIColor(r: 0, g: 0.722, b: 1)
-        let color = UIColor.white
-        //设置填充和描边颜色
-        //    [color setFill];
-        //    CGContextFillPath(context);
-        //    [[UIColor whiteColor] setStroke];
-        //    CGContextStrokePath(context);
         /*
          圆角矩形
          坑：如果不用CGRectInset，则白色边框会模糊,(猜测：在进行填充时，会影响边框)
          CGRectInset使用：平移且缩小
          */
-//        UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, 1, 1) cornerRadius: rect.size.height/2];
-//    //    UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius: rect.size.height/2];
-//
-//        //指定位置圆角矩形
-//    //    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerTopLeft cornerRadii:CGSizeMake(30, 30)];
+
+        //指定位置圆角矩形
         let path = UIBezierPath.init(roundedRect:rect.insetBy(dx: 1, dy: 1), cornerRadius: rect.size.height/2)
         
         //设置描边颜色
+        let color = UIColor.white
         UIColor.blue.setStroke()
         path.lineWidth = 1
         color.setFill()
@@ -69,7 +60,7 @@ class SwiftSlideAnimationButton: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.clickBlock != nil{
-            self.clickBlock!()
+            self.clickBlock!(self.IndexTag)
         }
     }
     required init?(coder: NSCoder) {

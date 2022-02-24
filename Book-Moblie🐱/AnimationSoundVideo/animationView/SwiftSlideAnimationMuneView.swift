@@ -116,7 +116,10 @@ class SwiftSlideAnimationMuneView: UIView {
             btn.center = CGPoint(x: Int((WW_keyWindow?.bounds.size.width)!)/4, y: space+menuBtnHeight*i+buttonSpace*i)
             
             btn.bounds = CGRect(x: 0, y: 0, width: Int(CGFloat(WW_keyWindow!.bounds.size.width)/2) - 20*2, height: menuBtnHeight)
-            
+            btn.IndexTag = 10000+i
+            btn.clickBlock = { indexTag in
+                print(indexTag)
+            }
             self.addSubview(btn)
         }
     }
@@ -170,7 +173,6 @@ class SwiftSlideAnimationMuneView: UIView {
             self.helperCenterView.center = CGPoint(x:-20,y:(WW_keyWindow?.frame.size.height)!/2)
         }
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
