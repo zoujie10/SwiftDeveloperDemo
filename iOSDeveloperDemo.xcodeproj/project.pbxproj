@@ -117,6 +117,7 @@
 		84582FDA27C7BA30005124CC /* WW_CustomerMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FD927C7BA30005124CC /* WW_CustomerMainVC.swift */; };
 		84582FDC27C7E468005124CC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDB27C7E468005124CC /* Global.swift */; };
 		84582FDE27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDD27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift */; };
+		84582FE027CB9094005124CC /* SwiftCubeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
@@ -367,6 +368,7 @@
 		84582FD927C7BA30005124CC /* WW_CustomerMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CustomerMainVC.swift; sourceTree = "<group>"; };
 		84582FDB27C7E468005124CC /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = "WWProject🤡/Global.swift"; sourceTree = SOURCE_ROOT; };
 		84582FDD27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CustomerFiltrateViewModel.swift; sourceTree = "<group>"; };
+		84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCubeDisplayView.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
 		84598C0F234851B900E72C8B /* NoteBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
 		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
@@ -1292,6 +1294,7 @@
 			children = (
 				84D95B4327BA994B00052E04 /* SwiftSlideAnimationMuneView.swift */,
 				84D95B4527BAA01300052E04 /* SwiftSlideAnimationButton.swift */,
+				84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */,
 			);
 			path = animationView;
 			sourceTree = "<group>";
@@ -1777,6 +1780,7 @@
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				84DAA5402774746400A97694 /* WW_ChiefInspectorVC.swift in Sources */,
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
+				84582FE027CB9094005124CC /* SwiftCubeDisplayView.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,
 				844F3F04275DBAFE006762D0 /* WW_AfterDetailVC.swift in Sources */,

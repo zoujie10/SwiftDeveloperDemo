@@ -35,6 +35,14 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
             make.top.equalTo(self.sortBtn.snp_bottom).offset(100)
             make.centerX.equalTo(self.sortBtn)
         }
+        
+        let cubeView = SwiftCubeDisplayView()
+        self.view.addSubview(cubeView)
+        cubeView.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.width.height.equalTo(100)
+            make.bottom.equalTo(self.clickBtn.snp_top).offset(-100)
+        }
     }
     //添加爆炸效果
     func explosion(){
