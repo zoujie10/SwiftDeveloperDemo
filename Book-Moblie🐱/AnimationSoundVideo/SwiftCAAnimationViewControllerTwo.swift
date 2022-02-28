@@ -10,7 +10,7 @@
 //侧边栏动画效果： 1.弹出膜层 2.弹层边缘弹簧效果 3.弹层内部空间弹簧效果
 import UIKit
 
-class SwiftCAAnimationViewControllerTwo: UIViewController {
+class SwiftCAAnimationViewControllerTwo: WW_MainBaseVC,UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,9 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         creatUI()
         explosion()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController!.delegate = self;//MARK:跳转导航代理
+    }
     func creatUI(){
         self.view.addSubview(self.clickBtn)
         self.clickBtn.snp.makeConstraints { make in
@@ -26,13 +29,13 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         }
         self.view.addSubview(self.sortBtn)
         self.sortBtn.snp.makeConstraints { make in
-            make.top.equalTo(self.clickBtn.snp_bottom).offset(100)
+            make.top.equalTo(self.clickBtn.snp_bottom).offset(70)
             make.centerX.equalTo(self.clickBtn)
         }
         
         self.view.addSubview(self.animationLayerBtn)
         self.animationLayerBtn.snp.makeConstraints { make in
-            make.top.equalTo(self.sortBtn.snp_bottom).offset(100)
+            make.top.equalTo(self.sortBtn.snp_bottom).offset(70)
             make.centerX.equalTo(self.sortBtn)
         }
         
@@ -43,7 +46,15 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
             make.width.height.equalTo(100)
             make.bottom.equalTo(self.clickBtn.snp_top).offset(-100)
         }
+        
+        view.addSubview(transitionLayerBtn)
+        transitionLayerBtn.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 80, height: 80))
+            make.right.equalTo(view).offset(-30)
+            make.bottom.equalTo(view).offset(-30)
+        }
     }
+    
     //添加爆炸效果
     func explosion(){
         self.emitterLayer.frame = self.clickBtn.bounds
@@ -81,6 +92,20 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         mune.switchAction()
     }
     
+    @objc func jumpThreeBytransitionVC(){
+        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerThree(), animated: false)
+    }
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push{
+            let trans = WW_CircleTransition()
+            trans.isPush = true
+            return trans
+        }else{
+            return nil
+        }
+    }
+    
+    
     lazy var clickBtn : UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "animation_click_default"), for: .normal)
@@ -103,6 +128,15 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
         btn.backgroundColor = UIColor.red
         btn.setTitleColor(.black, for: .normal)
         btn.addTarget(self, action: #selector(jumpAnimationVC), for: .touchUpInside)
+        return btn
+    }()
+    
+    
+    lazy var transitionLayerBtn : UIButton = {
+        let btn = UIButton()
+        btn.backgroundColor = UIColor.black
+        btn.layer.cornerRadius = 40
+        btn.addTarget(self, action: #selector(jumpThreeBytransitionVC), for: .touchUpInside)
         return btn
     }()
     

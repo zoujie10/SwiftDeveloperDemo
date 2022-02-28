@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
+class SwiftAnimationSoundVideoVC: WW_MainBaseVC,CAAnimationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,40 +91,40 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
         }
         
         let cAAnimation = UIButton()
-        cAAnimation.setTitle("CAAnimation核心动画一", for: .normal)
+        cAAnimation.setTitle("CAAnimation核心动画-曲线/抖动", for: .normal)
         cAAnimation.setTitleColor(.blue, for: .normal)
         cAAnimation.addTarget(self, action: #selector(CAAnimationMethod), for: .touchUpInside)
         
         self.view.addSubview(cAAnimation)
         cAAnimation.snp.makeConstraints {
-            $0.top.equalTo(jumpbutton.snp_bottom).offset(20)
+            $0.top.equalTo(jumpbutton.snp_bottom).offset(10)
             $0.centerX.equalTo(self.animationView)
         }
         
         let cAAnimation2 = UIButton()
-        cAAnimation2.setTitle("CAAnimation核心动画二", for: .normal)
+        cAAnimation2.setTitle("核心动画-弹层/立方体/点赞/自定义转场", for: .normal)
         cAAnimation2.setTitleColor(.blue, for: .normal)
         cAAnimation2.addTarget(self, action: #selector(CAAnimationMethod2), for: .touchUpInside)
         
         self.view.addSubview(cAAnimation2)
         cAAnimation2.snp.makeConstraints {
-            $0.top.equalTo(cAAnimation.snp_bottom).offset(20)
+            $0.top.equalTo(cAAnimation.snp_bottom).offset(10)
             $0.centerX.equalTo(self.animationView)
         }
         
         let cAAnimation3 = UIButton()
-        cAAnimation3.setTitle("CAAnimation核心动画三", for: .normal)
+        cAAnimation3.setTitle("CAAnimation核心动画--四", for: .normal)
         cAAnimation3.setTitleColor(.blue, for: .normal)
         cAAnimation3.addTarget(self, action: #selector(CAAnimationMethod3), for: .touchUpInside)
         
         self.view.addSubview(cAAnimation3)
         cAAnimation3.snp.makeConstraints {
-            $0.top.equalTo(cAAnimation2.snp_bottom).offset(20)
+            $0.top.equalTo(cAAnimation2.snp_bottom).offset(10)
             $0.centerX.equalTo(self.animationView)
         }
         self.view.addSubview(self.textLabel)
         self.textLabel.snp.makeConstraints {
-            $0.top.equalTo(cAAnimation3.snp_bottom).offset(20)
+            $0.top.equalTo(cAAnimation3.snp_bottom).offset(10)
             $0.centerX.equalTo(self.animationView)
         }
     }

@@ -118,6 +118,7 @@
 		84582FDC27C7E468005124CC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDB27C7E468005124CC /* Global.swift */; };
 		84582FDE27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDD27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift */; };
 		84582FE027CB9094005124CC /* SwiftCubeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */; };
+		84582FE227CCC17C005124CC /* WW_CircleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FE127CCC17C005124CC /* WW_CircleTransition.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
@@ -369,6 +370,7 @@
 		84582FDB27C7E468005124CC /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = "WWProject🤡/Global.swift"; sourceTree = SOURCE_ROOT; };
 		84582FDD27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CustomerFiltrateViewModel.swift; sourceTree = "<group>"; };
 		84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCubeDisplayView.swift; sourceTree = "<group>"; };
+		84582FE127CCC17C005124CC /* WW_CircleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CircleTransition.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
 		84598C0F234851B900E72C8B /* NoteBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
 		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
@@ -1295,6 +1297,7 @@
 				84D95B4327BA994B00052E04 /* SwiftSlideAnimationMuneView.swift */,
 				84D95B4527BAA01300052E04 /* SwiftSlideAnimationButton.swift */,
 				84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */,
+				84582FE127CCC17C005124CC /* WW_CircleTransition.swift */,
 			);
 			path = animationView;
 			sourceTree = "<group>";
@@ -1759,6 +1762,7 @@
 				842991B2274238B900A50077 /* ProductsListModel.xcdatamodeld in Sources */,
 				4F02FD9622AE281F00B8CB35 /* TemplateClass.swift in Sources */,
 				8438A40620A983010077A37F /* PickDataViewController.swift in Sources */,
+				84582FE227CCC17C005124CC /* WW_CircleTransition.swift in Sources */,
 				842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */,
 				8432086A2793BE9D00E5DC09 /* WW_HomeItemDetailViewModel.swift in Sources */,
 				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
