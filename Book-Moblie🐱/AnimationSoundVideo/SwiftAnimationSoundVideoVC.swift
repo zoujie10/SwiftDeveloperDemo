@@ -224,7 +224,7 @@ class SwiftAnimationSoundVideoVC: WW_MainBaseVC,CAAnimationDelegate {
     }
     
     @objc func CAAnimationMethod3(){
-        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerThree(), animated: true)
+//        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerThree(), animated: true)
     }
     
     

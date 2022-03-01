@@ -11,14 +11,14 @@ import UIKit
  1.实现相关转场动画协议
  2.就是添加转场动画
  */
-class SwiftCAAnimationViewControllerThree: WW_MainBaseVC,UINavigationControllerDelegate {
+class SwiftCAAnimationViewControllerThree: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .green
         // Do any additional setup after loading the view.
         title = "自定义转场"
-        self.navigationController!.delegate = self;//MARK:跳转导航代理
+//        self.navigationController!.delegate = self;//MARK:跳转导航代理
         creatUI()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +36,16 @@ class SwiftCAAnimationViewControllerThree: WW_MainBaseVC,UINavigationControllerD
     @objc func popThreeBytransitionVC(){
         self.navigationController?.popViewController(animated: false)
     }
+
+    lazy var transitionLayerBtn : UIButton = {
+        let btn = UIButton()
+        btn.backgroundColor = UIColor.black
+        btn.layer.cornerRadius = 40
+        btn.addTarget(self, action: #selector(popThreeBytransitionVC), for: .touchUpInside)
+        return btn
+    }()
+}
+extension SwiftCAAnimationViewControllerThree:UINavigationControllerDelegate{
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .pop{
@@ -46,12 +56,4 @@ class SwiftCAAnimationViewControllerThree: WW_MainBaseVC,UINavigationControllerD
             return nil
         }
     }
-    
-    lazy var transitionLayerBtn : UIButton = {
-        let btn = UIButton()
-        btn.backgroundColor = UIColor.black
-        btn.layer.cornerRadius = 40
-        btn.addTarget(self, action: #selector(popThreeBytransitionVC), for: .touchUpInside)
-        return btn
-    }()
 }

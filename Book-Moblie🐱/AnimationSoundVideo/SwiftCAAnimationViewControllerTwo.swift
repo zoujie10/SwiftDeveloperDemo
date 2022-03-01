@@ -10,7 +10,7 @@
 //侧边栏动画效果： 1.弹出膜层 2.弹层边缘弹簧效果 3.弹层内部空间弹簧效果
 import UIKit
 
-class SwiftCAAnimationViewControllerTwo: WW_MainBaseVC,UINavigationControllerDelegate {
+class SwiftCAAnimationViewControllerTwo: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,16 +93,9 @@ class SwiftCAAnimationViewControllerTwo: WW_MainBaseVC,UINavigationControllerDel
     }
     
     @objc func jumpThreeBytransitionVC(){
-        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerThree(), animated: false)
-    }
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if operation == .push{
-            let trans = WW_CircleTransition()
-            trans.isPush = true
-            return trans
-        }else{
-            return nil
-        }
+        let vc = SwiftCAAnimationViewControllerThree()
+        self.navigationController?.pushViewController(vc, animated: false)
+        
     }
     
     
@@ -163,4 +156,16 @@ class SwiftCAAnimationViewControllerTwo: WW_MainBaseVC,UINavigationControllerDel
         
         return layer
     }()
+}
+extension SwiftCAAnimationViewControllerTwo:UINavigationControllerDelegate{
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push{
+            let trans = WW_CircleTransition()
+            trans.isPush = true
+            return trans
+        }else{
+            return nil
+        }
+    }
 }
