@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwiftAnimationSoundVideoVC: WW_MainBaseVC,CAAnimationDelegate {
+class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +113,7 @@ class SwiftAnimationSoundVideoVC: WW_MainBaseVC,CAAnimationDelegate {
         }
         
         let cAAnimation3 = UIButton()
-        cAAnimation3.setTitle("CAAnimation核心动画--四", for: .normal)
+        cAAnimation3.setTitle("CAAnimation核心动画--QQ气泡/自由落体", for: .normal)
         cAAnimation3.setTitleColor(.blue, for: .normal)
         cAAnimation3.addTarget(self, action: #selector(CAAnimationMethod3), for: .touchUpInside)
         

@@ -94,8 +94,7 @@ class SwiftCAAnimationViewControllerTwo: UIViewController {
     
     @objc func jumpThreeBytransitionVC(){
         let vc = SwiftCAAnimationViewControllerThree()
-        self.navigationController?.pushViewController(vc, animated: false)
-        
+        self.navigationController?.pushViewController(vc, animated: true)//MARK:要走代理动画 必须打开
     }
     
     

@@ -25,6 +25,11 @@ class SwiftCAAnimationViewControllerThree: UIViewController {
         self.navigationController!.delegate = self;//MARK:跳转导航代理
     }
     func creatUI(){
+        view.addSubview(animationImageView)
+        animationImageView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
+        
         view.addSubview(transitionLayerBtn)
         transitionLayerBtn.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 80, height: 80))
@@ -34,7 +39,7 @@ class SwiftCAAnimationViewControllerThree: UIViewController {
     }
     
     @objc func popThreeBytransitionVC(){
-        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
 
     lazy var transitionLayerBtn : UIButton = {
@@ -43,6 +48,11 @@ class SwiftCAAnimationViewControllerThree: UIViewController {
         btn.layer.cornerRadius = 40
         btn.addTarget(self, action: #selector(popThreeBytransitionVC), for: .touchUpInside)
         return btn
+    }()
+    lazy var animationImageView : UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "girls")
+        return imageView
     }()
 }
 extension SwiftCAAnimationViewControllerThree:UINavigationControllerDelegate{
