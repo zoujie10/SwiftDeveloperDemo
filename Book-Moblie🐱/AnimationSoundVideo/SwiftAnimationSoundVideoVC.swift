@@ -102,7 +102,7 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
         }
         
         let cAAnimation2 = UIButton()
-        cAAnimation2.setTitle("核心动画-弹层/立方体/点赞/自定义转场", for: .normal)
+        cAAnimation2.setTitle("核心动画-弹层/立方体/自定义转场", for: .normal)
         cAAnimation2.setTitleColor(.blue, for: .normal)
         cAAnimation2.addTarget(self, action: #selector(CAAnimationMethod2), for: .touchUpInside)
         
@@ -113,7 +113,7 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
         }
         
         let cAAnimation3 = UIButton()
-        cAAnimation3.setTitle("CAAnimation核心动画--QQ气泡/自由落体", for: .normal)
+        cAAnimation3.setTitle("核心动画--点赞/QQ气泡/自由落体", for: .normal)
         cAAnimation3.setTitleColor(.blue, for: .normal)
         cAAnimation3.addTarget(self, action: #selector(CAAnimationMethod3), for: .touchUpInside)
         
@@ -224,7 +224,7 @@ class SwiftAnimationSoundVideoVC: UIViewController,CAAnimationDelegate {
     }
     
     @objc func CAAnimationMethod3(){
-//        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerThree(), animated: true)
+        self.navigationController?.pushViewController(SwiftCAAnimationViewControllerFour(), animated: true)
     }
     
     
