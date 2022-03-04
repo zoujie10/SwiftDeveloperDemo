@@ -17,6 +17,7 @@ class SwiftCAAnimationViewControllerFour: UIViewController {
         creatUI()
         explosion()
         configAnimatorAnimation()
+        QQbubbleAnimation()
     }
     
     func creatUI(){
@@ -96,10 +97,155 @@ class SwiftCAAnimationViewControllerFour: UIViewController {
      2.贝塞尔画形状
      3.拖动的时候固定圆的比例是缩小的
      4.到一定距离的时候会断开
-     5.松开手势就会回弹到原地
+     5.松开手势 ”>“ 大于自定义距离消失  ”<“ 自定义距离 就会回弹到原地
      */
+
+    lazy var r1 : CGFloat = 0
+    func QQbubbleAnimation(){
+   
+        view.addSubview(bubbleOneView)
+        view.addSubview(bubbleTwoView)
+        bubbleTwoView.addSubview(bubbleCountLabel)
+        bubbleOneView.frame = CGRect(x: 36, y: 300, width: 40, height: 40)
+        bubbleTwoView.frame = bubbleOneView.frame
+        bubbleCountLabel.frame = bubbleTwoView.bounds
+        //MARK：snp 去不到frame
+//        bubbleOneView.snp.makeConstraints { make in
+//            make.width.height.equalTo(40)
+//            make.left.equalTo(view).offset(40)
+//            make.bottom.equalTo(view).offset(-100)
+//        }
+//        bubbleTwoView.snp.makeConstraints { make in
+//            make.width.height.equalTo(40)
+//            make.left.equalTo(view).offset(40)
+//            make.bottom.equalTo(view).offset(-100)
+//        }
+//        bubbleCountLabel.snp.makeConstraints { make in
+//            make.edges.equalTo(bubbleTwoView)
+//        }
+        
+        let ges = UIPanGestureRecognizer.init(target: self, action: #selector(panAction))
+        bubbleTwoView.addGestureRecognizer(ges)
+        
+        oldViewFrame = bubbleOneView.frame
+        oldViewCenter = bubbleOneView.center
+        r1 = bubbleOneView.frame.size.width/2
+    }
     
+    @objc func panAction(ges : UIPanGestureRecognizer){
+
+        if ges.state == .changed{
+            //跟着手势移动
+            bubbleTwoView.center = ges.location(in: self.view)
+            if r1 < 5{
+                bubbleOneView.isHidden = true
+                shapeLayer.removeFromSuperlayer()
+            }else{
+                //计算出6个关键点，画贝塞尔曲线
+                caculPoint()
+            }
+            
+        }else if ges.state == .failed || ges.state == .ended || ges.state == .cancelled{
+            shapeLayer.removeFromSuperlayer()
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseOut) { [self] in
+                //长度大于5移除bubble和距离未到回弹
+                if r1 < 5{
+                    bubbleTwoView.isHidden = true
+                }else{
+                    bubbleTwoView.center = oldViewCenter
+                }
+            } completion: { isFinish in
+                //不移除bubble 回弹
+//                bubbleOneView.isHidden = false
+//                r1 = oldViewFrame.size.width/2
+//                bubbleOneView.frame = oldViewFrame
+//                bubbleOneView.layer.cornerRadius = r1
+            }
+
+        }
+    }
     
+    func caculPoint(){
+
+        //1.求出2个中心点
+        let center1 = bubbleOneView.center
+        let center2 = bubbleTwoView.center
+        //2.计算2个中心点的距离 sqrtf平方根
+        let dis = sqrtf(Float((center1.x - center2.x)*(center1.x - center2.x)+(center1.y - center2.y)*(center1.y - center2.y)))
+        //3.计算正弦余弦
+        //正弦是sin,余弦是cos.是相对直角三角形来说的，正弦是一个锐角的对边比斜边，余弦是一个锐角的临边比斜边。
+        let sin = Float(center2.x - center1.x)/dis
+        let cos = Float(center1.y - center2.y)/dis
+        //4.计算半径
+        let r1 = oldViewFrame.size.width/2 - CGFloat(dis)/20
+        let r2 = bubbleTwoView.bounds.size.width/2
+        self.r1 = r1
+        print(self.r1)
+        
+        //5.计算6个关键点
+        let PA = CGPoint(x: center1.x - CGFloat(cos)*r1, y: center1.y - CGFloat(sin)*r1)
+        let PB = CGPoint(x: center1.x + CGFloat(cos)*r1, y: center1.y + CGFloat(sin)*r1)
+        let PD = CGPoint(x: center2.x - CGFloat(cos)*r2, y: center2.y - CGFloat(sin)*r2)
+        let PC = CGPoint(x: center2.x + CGFloat(cos)*r2, y: center2.y + CGFloat(sin)*r2)
+        let PP = CGPoint(x: PB.x + CGFloat(sin)*CGFloat(dis)/2, y: PB.y - CGFloat(cos)*CGFloat(dis)/2)
+        let PO = CGPoint(x: PA.x + CGFloat(sin)*CGFloat(dis)/2, y: PA.y - CGFloat(cos)*CGFloat(dis)/2)
+        
+        //6.画贝塞尔曲线
+        let path = UIBezierPath.init()
+        path.move(to: PA)
+        path.addQuadCurve(to: PD, controlPoint: PO)//弯曲点
+        path.addLine(to: PC)
+        path.addQuadCurve(to: PB, controlPoint: PP)//弯曲点
+        path.close()
+        
+        //7.修改_shapeLayer的path
+        shapeLayer.path = path.cgPath
+        view.layer.insertSublayer(shapeLayer, below: bubbleTwoView.layer)////避免shapeLayer 遮挡View的label
+        
+        //8.重新设置view的大小
+        bubbleOneView.center = oldViewCenter
+        bubbleOneView.bounds = CGRect(x: 0, y: 0, width: self.r1*2, height: self.r1*2)
+        bubbleOneView.layer.cornerRadius = self.r1
+    }
+    
+    lazy var oldViewFrame : CGRect = {
+        let frame = CGRect()
+        return frame
+    }()
+    
+    lazy var oldViewCenter : CGPoint = {
+        let center = CGPoint()
+        return center
+    }()
+    
+    lazy var shapeLayer : CAShapeLayer = {
+        let layer = CAShapeLayer()
+        layer.fillColor = UIColor.red.cgColor
+        return layer
+    }()
+    
+    lazy var bubbleCountLabel : UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.backgroundColor = .clear
+        label.textColor = .white
+        label.text = "99+"
+        label.layer.cornerRadius = 20
+        return label;
+    }()
+
+    lazy var bubbleOneView : UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.red
+        v.layer.cornerRadius = 20
+        return v
+    }()
+    lazy var bubbleTwoView : UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.red
+        v.layer.cornerRadius = 20
+        return v
+    }()
     
     /*
      UI动力学
@@ -157,23 +303,6 @@ class SwiftCAAnimationViewControllerFour: UIViewController {
      
     }
     
-    @objc func panAction(ges : UIPanGestureRecognizer){
-       
-//        if ges.state == .began{
-//            
-//            let offsetPoint = UIOffset(horizontal: -30, vertical: -30)
-//            attach = UIAttachmentBehavior.init(item: footballTwo, offsetFromCenter: offsetPoint, attachedToAnchor: ges.location(in: self.view))
-//            self.animator.addBehavior(attach!)
-//        
-//        }else if ges.state == .changed{
-//            attach!.anchorPoint = ges.location(in: view)
-//     
-//        }else if ges.state == .ended || ges.state == .failed || ges.state == .cancelled{
-//            self.animator.removeBehavior(attach!)
-//        }
-    
-        
-    }
     lazy var footballOne : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "football_black_1")
