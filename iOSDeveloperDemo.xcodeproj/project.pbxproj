@@ -120,6 +120,10 @@
 		84582FE027CB9094005124CC /* SwiftCubeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */; };
 		84582FE227CCC17C005124CC /* WW_CircleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FE127CCC17C005124CC /* WW_CircleTransition.swift */; };
 		84582FE727CFA5BE005124CC /* SwiftCAAnimationViewControllerFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FE627CFA5BE005124CC /* SwiftCAAnimationViewControllerFour.swift */; };
+		84582FEB27D0BAE1005124CC /* WW_DefaultBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FEA27D0BAE1005124CC /* WW_DefaultBehavior.swift */; };
+		84582FED27D0C05F005124CC /* WW_DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FEC27D0C05F005124CC /* WW_DraggableView.swift */; };
+		84582FEF27D0F755005124CC /* NumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FEE27D0F755005124CC /* NumberExtension.swift */; };
+		84582FF127D0FAAA005124CC /* WW_FallFreeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582FF027D0FAAA005124CC /* WW_FallFreeBehavior.swift */; };
 		84598C0C23484B5C00E72C8B /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0B23484B5C00E72C8B /* NoteDAO.swift */; };
 		84598C10234851B900E72C8B /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84598C0F234851B900E72C8B /* NoteBL.swift */; };
 		845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D81E320B3FCDA00ABD88A /* StaticTableViewController.swift */; };
@@ -373,6 +377,10 @@
 		84582FDF27CB9094005124CC /* SwiftCubeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCubeDisplayView.swift; sourceTree = "<group>"; };
 		84582FE127CCC17C005124CC /* WW_CircleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CircleTransition.swift; sourceTree = "<group>"; };
 		84582FE627CFA5BE005124CC /* SwiftCAAnimationViewControllerFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCAAnimationViewControllerFour.swift; sourceTree = "<group>"; };
+		84582FEA27D0BAE1005124CC /* WW_DefaultBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_DefaultBehavior.swift; sourceTree = "<group>"; };
+		84582FEC27D0C05F005124CC /* WW_DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_DraggableView.swift; sourceTree = "<group>"; };
+		84582FEE27D0F755005124CC /* NumberExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtension.swift; sourceTree = "<group>"; };
+		84582FF027D0FAAA005124CC /* WW_FallFreeBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_FallFreeBehavior.swift; sourceTree = "<group>"; };
 		84598C0B23484B5C00E72C8B /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
 		84598C0F234851B900E72C8B /* NoteBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
 		845A724A251108A900398876 /* SwiftBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasicViewController.swift; sourceTree = "<group>"; };
@@ -886,6 +894,29 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		84582FE827D09C29005124CC /* CoreAnimationVC */ = {
+			isa = PBXGroup;
+			children = (
+				84582FE927D0B77E005124CC /* UIDynamicAnimator */,
+				84D95B2E27B8A2EF00052E04 /* SwiftSelectAndSortVC.swift */,
+				84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */,
+				84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */,
+				84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */,
+				84582FE627CFA5BE005124CC /* SwiftCAAnimationViewControllerFour.swift */,
+			);
+			path = CoreAnimationVC;
+			sourceTree = "<group>";
+		};
+		84582FE927D0B77E005124CC /* UIDynamicAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				84582FEA27D0BAE1005124CC /* WW_DefaultBehavior.swift */,
+				84582FEC27D0C05F005124CC /* WW_DraggableView.swift */,
+				84582FF027D0FAAA005124CC /* WW_FallFreeBehavior.swift */,
+			);
+			path = UIDynamicAnimator;
+			sourceTree = "<group>";
+		};
 		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1153,13 +1184,9 @@
 		84710DDC2737CBCA00A40507 /* AnimationSoundVideo */ = {
 			isa = PBXGroup;
 			children = (
+				84582FE827D09C29005124CC /* CoreAnimationVC */,
 				84D95B4227BA992000052E04 /* animationView */,
 				84710DDD2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift */,
-				84D95B2827B208D800052E04 /* SwiftCAAnimationViewController.swift */,
-				84D95B2A27B2B3A900052E04 /* SwiftCAAnimationViewControllerTwo.swift */,
-				84D95B2C27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift */,
-				84582FE627CFA5BE005124CC /* SwiftCAAnimationViewControllerFour.swift */,
-				84D95B2E27B8A2EF00052E04 /* SwiftSelectAndSortVC.swift */,
 				84710DE4273BFE9100A40507 /* SwiftSoundVideoVC.swift */,
 				84710DE227390E2D00A40507 /* pop_drip.wav */,
 				84710DE6273D59BB00A40507 /* 宇宙骑士reason.mp3 */,
@@ -1310,6 +1337,7 @@
 			children = (
 				84DAA51E2768817B00A97694 /* UIColorExtension.swift */,
 				8440F0FD27857FA9001FE7A1 /* StringExtension.swift */,
+				84582FEE27D0F755005124CC /* NumberExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1674,6 +1702,7 @@
 				842991D42743A5A400A50077 /* CTImageView.swift in Sources */,
 				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */,
+				84582FEB27D0BAE1005124CC /* WW_DefaultBehavior.swift in Sources */,
 				84598C10234851B900E72C8B /* NoteBL.swift in Sources */,
 				8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */,
 				844F3F0C275F0D0F006762D0 /* WW_RightTableView.swift in Sources */,
@@ -1691,6 +1720,7 @@
 				8455A26C279E830C007EE634 /* WW_HomeChannelSubCell.swift in Sources */,
 				84D95B2D27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift in Sources */,
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
+				84582FF127D0FAAA005124CC /* WW_FallFreeBehavior.swift in Sources */,
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
 				843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */,
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
@@ -1720,6 +1750,7 @@
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
+				84582FEF27D0F755005124CC /* NumberExtension.swift in Sources */,
 				84710DCA272EF48900A40507 /* SwiftUsuallyDevicesVC.swift in Sources */,
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
 				84710DD627342B3400A40507 /* MyNetWorkReachabilityManager.swift in Sources */,
@@ -1772,6 +1803,7 @@
 				84582FDE27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift in Sources */,
 				84117B792764C9B800D8B0BB /* WW_OrderPageVC.swift in Sources */,
 				844F3F0E275F3243006762D0 /* WW_ProductsTableViewCell.swift in Sources */,
+				84582FED27D0C05F005124CC /* WW_DraggableView.swift in Sources */,
 				84710DD1272FDA6A00A40507 /* ZJ_ProductCollectionCell.swift in Sources */,
 				84582FD827C7B9F5005124CC /* WW_CustomerFiltrateTypeVC.swift in Sources */,
 				843208682793BE8900E5DC09 /* WW_HomeItemViewModel.swift in Sources */,
