@@ -8,23 +8,20 @@
 
 import UIKit
 
-class WW_CustomerChooseHeaderView: UITableViewHeaderFooterView {
+class WW_CustomerChooseHeaderView: UICollectionReusableView {
 
-  
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         creatUI()
     }
     
- 
-    
     func creatUI(){
-        contentView.addSubview(sectionTitleLabel)
-        contentView.addSubview(jumpGradeBtn)
-        
+        self.addSubview(sectionTitleLabel)
+        self.addSubview(jumpGradeBtn)
+            
         sectionTitleLabel.snp.makeConstraints { make in
-            make.left.equalTo(contentView).offset(10)
-            make.top.bottom.equalTo(contentView)
+            make.left.equalTo(self).offset(10)
+            make.top.bottom.equalTo(self)
         }
         
         jumpGradeBtn.snp.makeConstraints { make in
@@ -48,11 +45,9 @@ class WW_CustomerChooseHeaderView: UITableViewHeaderFooterView {
     
     lazy var jumpGradeBtn : UIButton = {
         let btn = UIButton()
-//        btn.setTitle("处理图片", for: .normal)
-//        btn.setTitleColor(.black, for: .normal)
         btn.setImage(UIImage(named: "ww_customer_grade_question_mark"), for: .normal)
         btn.addTarget(self, action: #selector(jump), for: .touchUpInside)
-//        btn.isHidden = true
+        btn.isHidden = true
         return btn
     }()
     

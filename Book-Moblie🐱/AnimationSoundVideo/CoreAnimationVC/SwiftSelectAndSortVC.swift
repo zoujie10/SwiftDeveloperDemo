@@ -37,13 +37,16 @@ class SwiftSelectAndSortVC: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        UIView.animate(withDuration: 0.3) {
-            self.bgView.frame.origin.x = WWScreenWidth
-        } completion: { Bool in
-            self.removeFromParentViewController()
-            self.view.removeFromSuperview()
+        let touch = touches.first!
+        let point = touch.location(in: view)
+        let layer = self.view.layer.hitTest(point)
+        if layer == self.view.layer{
+            UIView.animate(withDuration: 0.3) {
+                self.bgView.frame.origin.x = WWScreenWidth
+            } completion: { Bool in
+                self.removeFromParentViewController()
+                self.view.removeFromSuperview()
+            }
         }
-
     }
 }

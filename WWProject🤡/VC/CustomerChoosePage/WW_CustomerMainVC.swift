@@ -28,7 +28,11 @@ class WW_CustomerMainVC: WW_MainBaseVC {
     }
     
     @objc func jumpVC(){
-//        WW_CustomerFiltrateTypeVC
+        let vc =  WW_CustomerFiltrateTypeVC()
+        vc.showVC()
+        vc.confirm_block = { dic in
+            print("--------\(dic)")
+        }
     }
     
     lazy var sortBtn : UIButton = {
