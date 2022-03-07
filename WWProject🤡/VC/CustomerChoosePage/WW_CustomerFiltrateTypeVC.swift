@@ -48,8 +48,8 @@ class WW_CustomerFiltrateTypeVC: WW_MainBaseVC {
         }
         
         confirmBtn.snp.makeConstraints { make in
-            make.height.equalTo(50);
-            make.centerY.equalTo(resetBtn);
+            make.height.equalTo(50)
+            make.centerY.equalTo(resetBtn)
             make.width.equalTo(WWScreenWidth/2 + 50)
             make.right.equalTo(bgView.snp_right).offset(-20)
         }

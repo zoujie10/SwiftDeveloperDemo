@@ -12,9 +12,10 @@ class SwiftBasicViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.view.backgroundColor = UIColor.red
-		//basic
-		basicSwift()
+        title = "Swift基础语法"
+		self.view.backgroundColor = UIColor.white
+		//basic 声明常量 变量 let var ，打印 print dump
+ 		basicSwift()
 		//string
 		dataString()
 		//元组
@@ -31,25 +32,29 @@ class SwiftBasicViewController: UIViewController {
     }
     
 	func basicSwift(){
+        print("Swift基础之声明常量 变量 let var ，打印 print dump")
 		let pi = 3.141592
 		var enemyKilled = 100
 		let wide = 100*pi,length = 200*pi,height = 10*pi
-		
 		var age : Int = 10*enemyKilled
 		age+=1
 		enemyKilled += 1
 		let 猫 = "cat"
 		let 👿 = "evel"
-		
 		let name = "邹杰"
+        print("直接打印变量：",猫)
+		debugPrint("debugPrint打印log:",👿,wide,length,height)
+        /* dump 能直接打印出对象的信息
+        * - T：是要打印的参数，是一个范型，也就是支持输出各种类型
+        * - name： 默认是空白，如果加上则会在打印内容前加入这个name
+        * - indent：缩进，默认是0，如果设置则会向前缩进相应的空白
+        * - maxDepth：最大深度，默认全部打印，可以根据层级需要设置这个参数
+        * - maxItems：最大条数，默认是全部打印，如果需要限制内容，可以设置这个参数
+        */
+        dump(age,name:"dump打印log")
 		
-		print(猫)
-		debugPrint(👿,wide,length,height)
-		dump(age)
-		
-		print("我的名字叫\(name),年龄\(age).")
-		print("杀敌人数"+String(enemyKilled)+".")
-		
+		print("变量放入字符串中：","我的名字叫\(name),年龄\(age).")
+		print("字符串类型/数字类型/换行符/放入字符串中：","杀敌人数"+String(enemyKilled)+"."+"\n")
 	}
  
 	func commentMethod() {
@@ -63,7 +68,7 @@ class SwiftBasicViewController: UIViewController {
 	func dataString() -> Void {
 		let isFriend = true
 		if(isFriend){
-			print("是好朋友")
+			print("打印Bool值:\(isFriend)")
 		}
 //		Int 自动兼容32（Int32），64位平台(Int64)
 		let minValueOfUInt8 = UInt8.min
@@ -74,7 +79,6 @@ class SwiftBasicViewController: UIViewController {
 		
 //		Float 小数精度6位
 //		Double 小数精度15位
-		
 		let number = -10.10
 		let num1 = number.advanced(by: 10) //+10
 		let num2 = number.distance(to: 23.3) //-
@@ -102,17 +106,20 @@ class SwiftBasicViewController: UIViewController {
 		\" 双引号
 		*/
 		var  message = "Hi Jerry.\n\"Good Morning\""
+        print("原字符串message:",message)
 		//判断字符串的前后部分
-        print(message.hasPrefix("Jerry"))
-        print(message.hasSuffix("Morining"))
+        print("判断message字符串的前缀部分:",message.hasPrefix("Jerry"))
+        print("判断message字符串的后缀部分:",message.hasSuffix("Morning\""))
 		//大小写转换
 		let msg1 = message.uppercased()
 		let msg2 = message.lowercased()
+        print("大小写转换:",msg1,msg2)
 		//截取和替换  NSString
 //		message.substring(to: <#T##String.Index#>)
-//		message.substring(from: )
+        print("截取字符串扩展从 （i） -- end",message.substring(from:1 ))
 		let msg3 = message.replacingOccurrences(of:"Hi", with:"Hello")
 		let msg4 = message.remove(at: message.index(message.startIndex, offsetBy: 5))
+        print("截取和替换:",msg3,msg4)
 		//字符串遍历
 		var num = 0
 		let hello = "18971118756"
@@ -121,7 +128,8 @@ class SwiftBasicViewController: UIViewController {
 				num+=1
 			}
 		}
-        debugPrint(message,msg1,msg2,msg3,msg4)
+        print("字符串遍历18971118756包含几个1:",num)
+        debugPrint("\n")
 	}
 	
 	
@@ -138,7 +146,7 @@ class SwiftBasicViewController: UIViewController {
 		let result =	(2,3)>(1,3)//true
 		let result1 = ("class1",98)>("class2",54)//false
 		let result2 = (7,"Sunday")==(7,"Sunday")
-        print(result,result1,result2)
+        print(result,result1,result2,"\n")
 	}
 	
     func dataOperator(num : Int){
@@ -157,29 +165,31 @@ class SwiftBasicViewController: UIViewController {
 		let two3 = 3*2
 		let two4 = 3/2
 		let two5 = 3%2
-		print(two1,two2,two3,two4,two5)
+		print("3+2=",two1,"3-2=",two2,"3*2",two3,"3/2",two4,"3%2",two5)
         
 		let result = (num >= 20) ? true : false
-        debugPrint(result)
+        debugPrint("表带式:(num >= 20) ? true : false  =",result,"\n")
 	}
 	
     func cycleMethod(num : Int) {
 		//for
+        
 		for _ in 0..<3{
-			
+            print("for in  0..<3")
 		}
+      
 		for _ in 0...3{
-			
+            print("for in  0...3")
 		}
-		
+       
 		let array = ["1","2","3"]
-		for _ in array{
-			
+		for item in array{
+			print("for in array = \(item)")
 		}
 		
 		let  dic = ["1":1,"2":2,"3":3]
 		for (num , age) in dic{
-			print(num + "\(age)")
+			print("for (num , age) in dic  = ",num + "\(age)")
 		}
 		
 		//while
@@ -189,6 +199,7 @@ class SwiftBasicViewController: UIViewController {
 //				continue//停止本次循环，进入下次循环
 			}
 			index+=1
+            print("while index < 3",index)
 		}
 		
 		repeat{//至少会被执行一次
@@ -200,7 +211,7 @@ class SwiftBasicViewController: UIViewController {
 		let time = num
 		switch time {
 			case 7:
-				print("7")
+				print("7","switch ----- fallthrough---执行完一个case分支，跳入下个分支")
 				fallthrough//执行完一个case分支，跳入下个分支
 			case 8,9,10:
 				print("8")
@@ -212,6 +223,7 @@ class SwiftBasicViewController: UIViewController {
 			default:
 				print("keep busy")
 		}
+        print("\n")
 	}
 	
 	func arrayMethod() {
@@ -219,16 +231,19 @@ class SwiftBasicViewController: UIViewController {
 		let intArray = [Int]()
 		var array = [1,2,3,4,5]
 		
-		print(strArray,array[0])
+		print("数组声明：Array<String>()，[Int]()，[1,2,3,4,5]",strArray,array[0])
         print(intArray.isEmpty)
         print(intArray.count)
         print(intArray.contains(3))
 		
 		array += [6]
+        print("array += [6]",array += [6])
 		array.append(7)
+        print("array.append(7)",array.append(7))
 		array.insert(8, at: 3)
-		
+        print("array.insert(8, at: 3)",array.insert(8, at: 3))
 		array[3...5] = [8,9,10]
+        print("array[3...5] = [8,9,10]",array[3...5] = [8,9,10])
         //MARK:删除操作
 		array.removeFirst()
 		array.removeAll()
@@ -275,6 +290,7 @@ class SwiftBasicViewController: UIViewController {
 				print(sub_Number)
 			}
 		}
+        print("\n")
 	}
 	
 	
@@ -286,7 +302,7 @@ class SwiftBasicViewController: UIViewController {
 		dic.updateValue("value_1", forKey: "key")
 		dic.removeValue(forKey: "key")
 		dic["key2"] = nil
-        debugPrint(dic1,string as Any)
+        debugPrint("打印dic1, string ",dic1,string as Any)
 		for key in dic.keys {
 			print(key)
 		}
