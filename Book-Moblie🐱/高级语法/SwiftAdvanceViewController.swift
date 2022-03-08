@@ -13,6 +13,7 @@ class SwiftAdvanceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        title = "swift高级语法"
         //函数定义和调用
 		//1.传参
         endFuncParams_Two(["str":1])
@@ -81,6 +82,7 @@ class SwiftAdvanceViewController: UIViewController {
     }
    
     func sendParamByMethod(amount:String,method:(String,NSNumber) -> Int) -> (String,NSNumber...) -> String {
+        
         return sendFuncParams_default
     }
     
@@ -117,8 +119,9 @@ class SwiftAdvanceViewController: UIViewController {
     func inoutMethod(){
         var param1 = "one"
         var param2 = "two"
+        print("函数调用前参数 param1  param2",param1,param2)
         swapMethod(param1: &param1, param2: &param2)
-        debugPrint(param1,param2)
+        debugPrint("函数调用后参数 param1  param2",param1,param2)
     }
     
     //MARK:8.函数的嵌套
@@ -151,26 +154,30 @@ class SwiftAdvanceViewController: UIViewController {
     //MARK:10.常用内置函数 绝对值 最小值 最大值 filter map reduce
     func usuallyBuildInMethod(){
         //abs绝对值函数 转换为正数
-        print(abs(-100))
+        print("abs绝对值函数 转换为正数 abs(-100) = ",abs(-100))
         //min最小值函数 返回不定数量参数间的最小值
-        print(min(1,2,3))
+        print("min最小值函数 返回不定数量参数间的最小值 min(1,2,3) = ",min(1,2,3))
         //max最大值函数
-        print(max(1,2,3,4))
+        print("max最大值函数  max(1,2,3,4) =",max(1,2,3,4))
+        
         //filter 函数 查找数组元素满足条件的元素
+        print("filter 函数 查找数组元素满足条件的元素")
         for i in (1...10).filter({ $0%3 == 0}){
-            print(i)
+            print("for i in (1...10).filter({ $0%3 == 0}  = ",i)
         }
         //map函数 通常用于将数组中的每个元素，通过指定方法进行转换
+        print("map函数 通常用于将数组中的每个元素，通过指定方法进行转换")
         for i in (1...4).map({ $0 * 3}){
-            print(i)
+            print("for i in (1...4).map({ $0 * 3}) = ",i)
         }
         //reduce函数 可以把数组元素组合计算为一个值 + - * /
+        print("reduce函数 可以把数组元素组合计算为一个值 + - * /")
         let resultOne = (1...4).reduce(0,{$0+$1})
-        print("reduce函数resultOne----\(resultOne)")
+        print("(1...4).reduce(0,{$0+$1})===\(resultOne)")
         let resultTwo = (1...4).reduce(0,+)
-        print("reduce函数resultTwo----\(resultTwo)")
+        print("(1...4).reduce(0,+)----\(resultTwo)")
         let resultThree = (1...4).reduce(1,*)
-        print("reduce函数resultThree----\(resultThree)")
+        print("(1...4).reduce(1,*)----\(resultThree)")
     }
    
     //MARK:11.枚举语法  枚举值遍历 枚举原始值 给枚举添加方法
@@ -247,6 +254,7 @@ class SwiftAdvanceViewController: UIViewController {
             return  paramInt / index
         }
     }
+    
     func structDemoMethod(){
         let test = structDemo(structStr: "1", structDic: ["key":"value"], paramInt: 100)
         print("结构体脚标测试------\(test[9])")
@@ -331,6 +339,7 @@ class SwiftAdvanceViewController: UIViewController {
     }
     //类型检查 is  类型转换 as
     func isAndAsMethod() {
+        print("类型检查 is  类型转换 as")
         let hero : [Hero] = [
             manHero.init(name: "BatMan"),
             womenHero.init(name: "CatMan"),
@@ -341,6 +350,7 @@ class SwiftAdvanceViewController: UIViewController {
         var manCount = 0
         var womenCount = 0
         for item in hero{
+            print("类型检查 is :   if item is manHero ")
             if item is manHero{
                 manCount = manCount+1
             }else{
@@ -350,9 +360,10 @@ class SwiftAdvanceViewController: UIViewController {
         print(manCount,womenCount)
         
         for item in hero{
+            
             if let man = item as? manHero{
                 manCount = manCount+1
-                print(man.name)
+                print("类型转换 as : let man = item as? manHero  \(man)")
             }else{
                 womenCount = womenCount+1
             }
@@ -388,7 +399,7 @@ class SwiftAdvanceViewController: UIViewController {
     var classTest = tempClass()
    
     func testClassMethod(){
-        print(classTest.setAndgetV)
+        print("Class",classTest.setAndgetV)
         classTest.setAndgetV = "5"
         print(classTest.variName,classTest.setAndgetV)
         var hero : Hero? = Hero.init(name: "1")
@@ -422,10 +433,10 @@ class SwiftAdvanceViewController: UIViewController {
     //MARK:15.扩展 扩展类型的属性 扩展类型的方法
     func extensionMethod(){
         print(9.kb,10.mb,100.gb)
-        print("s".prependString(value: "20"))
+        print("s  prepend 20 = ","s".prependString(value: "20"))
         let start = XYPoint.init(x: 0, y: 0)
         let end = XYPoint.init(x: 100, y: 100)
-        print(start.distance(point: end))
+        print("start (x,y)   end (100,100)  distance = ",start.distance(point: end))
     }
     //MARK:16.协议   定义 继承 实现
     func protocolMethod(){

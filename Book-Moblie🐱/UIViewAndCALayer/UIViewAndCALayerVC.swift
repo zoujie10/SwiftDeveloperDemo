@@ -13,7 +13,7 @@ class UIViewAndCALayerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = UIColor.white
-		
+		makeUI()
         // Do any additional setup after loading the view.
 		//视图UIView
 //		NSObject ->
@@ -31,13 +31,11 @@ class UIViewAndCALayerVC: UIViewController {
 		
 		//1.2UIView几何属性
 		//了解坐标系  UIKit X轴正方向向右 → Y轴正方向向下 “↓”  Quartz 2D绘图 X轴正方向向右 → Y轴正方向向上 “↑”
-		let view1 = UIView()
 		view1.frame = CGRect.init(x: 10, y: 10, width: 100, height: 100)
-		view1.backgroundColor = UIColor.red
-		
+        self.view.addSubview(view1)
 		//1.3UIView嵌套层次关系  层次管理方法
-		view.addSubview(view1)
-//		self.view.insertSubview(view1, at: 1)
+//		view.addSubview(view1)
+		self.view.insertSubview(view1, at: 1)
 //		self.view.insertSubview(view1, aboveSubview: view)
 //		self.view.insertSubview(view1, belowSubview: view)
 //		self.view.removeFromSuperview()
@@ -82,20 +80,46 @@ class UIViewAndCALayerVC: UIViewController {
 		
 		//2.4CALayer渐变
 		let layerColor =	CAGradientLayer()
-		layerColor.colors = [UIColor.red.cgColor,UIColor.orange.cgColor,UIColor.blue.cgColor]
+//		layerColor.colors = [UIColor.red.cgColor,UIColor.orange.cgColor,UIColor.blue.cgColor]
+        layerColor.colors = [UIColor(r: 209, g: 153, b: 135).cgColor,UIColor(r: 187, g: 108, b: 95).cgColor]
 		layerColor.frame = view1.frame
 		layerColor.startPoint = CGPoint(x: 0, y: 0)
 		layerColor.endPoint = CGPoint(x: 1, y: 1)
-		layerColor.locations = [0,0.3,1]//设置渐变层的各颜色点在颜色线中的分布情况。在locations属性值数组中的0.3表示渐变线中间的颜色，即橙色将位于渐变线30%的位置
+//		layerColor.locations = [0,0.3,1]//设置渐变层的各颜色点在颜色线中的分布情况。在locations属性值数组中的0.3表示渐变线中间的颜色，即橙色将位于渐变线30%的位置
+        layerColor.locations = [0.5,1]
 		view1.layer.addSublayer(layerColor)
     }
-	
+    
+    let trans = CGAffineTransform.init(rotationAngle: 40)
+    
 	@objc func addTap(){
 		print("Tap---Tap")
+        //UIView变型操作
+        self.view1.transform = trans
 	}
 
-    /*
- 
-    */
+    func makeUI(){
+        view.addSubview(viewsLabel)
+        viewsLabel.snp.makeConstraints { make in
+            make.left.bottom.right.equalTo(view)
+            make.height.equalTo(300)
+        }
+    }
+    
+    lazy var view1: UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.red
+        return v
+    }()
+    
+    lazy var viewsLabel : UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.backgroundColor = .white
+        label.textColor = .black
+        label.numberOfLines = 0
+        label.text = "      NSObject ->  UIResponder -> UIView -> UIWindow,UILabel,UIButton,UIPickerView,UIProgressView,UIScrollView,UITableView,UICollectionView,UIActivityIndicatorView,UIImageView,UISearchBar,UINavigationBar,UIPageControl,UISwitch,UISlider,UIDatePicker,UISegmentedControl,UITextView,UITextField"
+        return label;
+    }()
 
 }
