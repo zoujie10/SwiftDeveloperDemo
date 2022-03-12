@@ -10,7 +10,7 @@ import UIKit
 
 class WW_FallFreeBehavior: UIDynamicBehavior {
     
-    var active = true
+    var _active = true
     typealias fallFreePathBlock = (_ tornView : WW_DraggableView,_ newPinView:WW_DraggableView) -> ()
     var fallFreePath_Block : fallFreePathBlock?
     
@@ -18,28 +18,27 @@ class WW_FallFreeBehavior: UIDynamicBehavior {
         super.init()
     }
     
-    convenience init(view:WW_DraggableView,anchor : CGPoint,handler:fallFreePathBlock) {
+    convenience init(view:WW_DraggableView,anchor : CGPoint,handler:@escaping fallFreePathBlock) {
         self.init()
-        
+        _active = true
         self.addChildBehavior(UISnapBehavior.init(item: view, snapTo: anchor))
-             
-        //TODO block
-        if self.active == true {
-            let distance = min(view.bounds.size.width, view.bounds.size.height)
-           
+        let distance = min(view.bounds.size.width, view.bounds.size.height)
+        
+        self.action = { [self] in
             if !self.pointsAreWithinDistance(p1: view.center, p2: anchor, distance:distance){
-                if self.active{
+                if _active{
                     let newView = view.copy()
                     view.superview?.addSubview(newView as! WW_DraggableView)
                     let newTearOff = WW_FallFreeBehavior.init(view: newView as! WW_DraggableView, anchor: anchor, handler: handler)
-                    
+                    newTearOff._active = false
                     self.dynamicAnimator?.addBehavior(newTearOff)
+                    
                     handler(view,newView as! WW_DraggableView)
+                    
                     self.dynamicAnimator?.removeBehavior(self)
-                    self.active = false
                 }
             }else{
-                self.active = true
+                _active = true
             }
         }
     }

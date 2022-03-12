@@ -8,12 +8,13 @@
 
 
 import UIKit
+import SwiftUI
 
 class SwiftCAAnimationViewControllerFour: UIViewController {
 
     override func viewDidLoad() {
         view.backgroundColor = .white
-
+        title = "点赞/QQ消息气泡/UI动力学"
         creatUI()
         explosion()
         configAnimatorAnimation()
@@ -106,7 +107,7 @@ class SwiftCAAnimationViewControllerFour: UIViewController {
         view.addSubview(bubbleOneView)
         view.addSubview(bubbleTwoView)
         bubbleTwoView.addSubview(bubbleCountLabel)
-        bubbleOneView.frame = CGRect(x: 36, y: 300, width: 40, height: 40)
+        bubbleOneView.frame = CGRect(x: 236, y: 300, width: 40, height: 40)
         bubbleTwoView.frame = bubbleOneView.frame
         bubbleCountLabel.frame = bubbleTwoView.bounds
         //MARK：snp 去不到frame
@@ -267,22 +268,23 @@ class SwiftCAAnimationViewControllerFour: UIViewController {
         let frame = CGRect(x: 0, y: 0, width: 60, height:60)
         let dragView = WW_DraggableView.init(frame: frame, animator: self.animator!)
         dragView.center = CGPoint(x: self.view.center.x/4, y: self.view.center.y/4)
-        dragView.alpha = 0.5
+        dragView.alpha = 0.8
         self.view.addSubview(dragView)
         
         let defaultBehavior = WW_DefaultBehavior.init()
         self.animator?.addBehavior(defaultBehavior)
         self.defaultBehavior = defaultBehavior
         
-        let tearOffBehavior = WW_FallFreeBehavior.init(view: dragView, anchor: dragView.center) { tornView, newPinView in
+        let tearOffBehavior = WW_FallFreeBehavior.init(view: dragView, anchor: dragView.center) { [self] tornView, newPinView in
             tornView.alpha = 1
             defaultBehavior.addItem(item: tornView)
             
+            //Double-tap to trash    双击手势让视图消失
+            let doubleTap = UITapGestureRecognizer.init(target: self, action: #selector(doubleTapDismissView))
+            doubleTap.numberOfTapsRequired = 2
+            tornView.addGestureRecognizer(doubleTap)
         }
         self.animator?.addBehavior(tearOffBehavior)
-        
-        
-        
         
 //        //添加自由落体的行为
 //        let gravity = UIGravityBehavior.init(items: array)
@@ -296,41 +298,81 @@ class SwiftCAAnimationViewControllerFour: UIViewController {
 //        let itemBehavior = UIDynamicItemBehavior.init(items: array)
 //        itemBehavior.elasticity = 0.6
 //        self.animator.addBehavior(itemBehavior)
-//
-//        //添加拖拽手势
-        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(panAction))
-        footballTwo.addGestureRecognizer(pan)
-     
+
     }
     
-    lazy var footballOne : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "football_black_1")
-        imageView.frame = CGRect(x: 5, y: 5, width: 90, height: 90)
-        imageView.layer.cornerRadius = 16
-        imageView.contentMode = .scaleAspectFill
-        imageView.isUserInteractionEnabled = true
-        view.addSubview(imageView)
-        return imageView
-    }()
-    lazy var footballTwo : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "football_blue_1")
-        imageView.frame = CGRect(x: 45, y: 15, width: 90, height: 90)
-        imageView.layer.cornerRadius = 16
-        imageView.contentMode = .scaleAspectFill
-        imageView.isUserInteractionEnabled = true
-        view.addSubview(imageView)
-        return imageView
-    }()
-    lazy var footballThree : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "football_lightblue_1")
-        imageView.frame = CGRect(x: 85, y: 5, width: 90, height: 90)
-        imageView.layer.cornerRadius = 16
-        imageView.contentMode = .scaleAspectFill
-        imageView.isUserInteractionEnabled = true
-        view.addSubview(imageView)
-        return imageView
-    }()
+    @objc func doubleTapDismissView(tap:UITapGestureRecognizer){
+        let view = tap.view
+        //爆炸效果
+        let subviews = sliceView(view: view!, rows: 6, columns: 6)
+//        let subviews = [UIView]()
+        // Create a new animator
+        let trashAnimator = UIDynamicAnimator.init(referenceView: self.view)
+        // Create a new default behavior
+        let defaultBehavior = WW_DefaultBehavior.init()
+        
+        for subview : UIView in subviews {
+            // Add the new "exploded" view to the hierarchy
+            self.view.addSubview(subview)
+            defaultBehavior.addItem(item: subview as UIDynamicItem)
+            // Create a push animation for each
+            let push = UIPushBehavior.init(items: [subview as UIDynamicItem], mode:.instantaneous)
+//            push.pushDirection = CGVector(dx: arc4random()/RAND_MAX, dy: arc4random()/RAND_MAX))
+//            let randomNum : Int32 = arc4random_stir()
+            push.pushDirection.dx = CGFloat(1000/RAND_MAX)
+            push.pushDirection.dy = CGFloat(1000/RAND_MAX)
+            trashAnimator.addBehavior(push)
+            
+            UIView.animate(withDuration: 1) {
+                subview.alpha = 1
+            } completion: { Bool in
+                subview.removeFromSuperview()
+                trashAnimator.removeBehavior(push)
+            }
+        }
+        // Remove the old view
+        self.defaultBehavior?.removeItem(item: view!)
+        view?.removeFromSuperview()
+    }
+    
+    func sliceView(view:UIView,rows:NSInteger,columns:NSInteger) -> [UIView]{
+
+        UIGraphicsBeginImageContext(view.bounds.size)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()?.cgImage
+        UIGraphicsEndImageContext()
+
+        var views = [UIView]()
+        let width = image?.width
+        let height = image?.height
+
+        for row in 0 ..< rows{
+            for column in 0 ..< columns{
+                let rect = CGRect(x: column*(width!/columns),
+                                  y: row*(height!/rows),
+                                  width: width!/columns,
+                                  height: height!/rows)
+//                let subimage = CGImageCreateWithImageInRect(image!, rect)
+//                let subimage  = CGImage.cropping(image!)
+                let imageView = UIImageView.init(image: UIImage(named: "animation_sparkle_cell"))
+//                imageView.image = UIImage.init(cgImage: subimage as! CGImage)
+////                CGImageRelease(subimage as! CGImage)
+////                subimage = nil
+//                let rect1 = view.frame.offsetBy(dx: view.frame.minX,dy: view.frame.minY)
+                imageView.frame = rect
+                
+                self.emitterLayer.frame = imageView.bounds
+                self.emitterLayer.emitterPosition = CGPoint(x: self.emitterLayer.frame.width+10, y: self.emitterLayer.frame.size.height+10)//MARK: ？ 为毛不准 偏左上角
+                imageView.layer.addSublayer(self.emitterLayer)
+                views.append(imageView)
+            }
+        }
+        return views
+    }
+
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.animator?.removeAllBehaviors()
+    }
+    
 }

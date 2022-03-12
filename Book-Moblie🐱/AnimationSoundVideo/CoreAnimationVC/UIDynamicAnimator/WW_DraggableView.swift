@@ -20,15 +20,15 @@ class WW_DraggableView: UIView,NSCopying {
     
     convenience init(frame:CGRect,animator:UIDynamicAnimator) {
         self.init(frame: frame)
+        self.layer.cornerRadius = 30
         dynamicAnimator = animator
-//        snapBehavior = UISnapBehavior.init(item: <#T##UIDynamicItem#>, snapTo: <#T##CGPoint#>)
         
-        self.backgroundColor = UIColor.random
-        let num = Int.randomIntNumber(lower: 0, upper: 2)//图片名称随机
+//        self.backgroundColor = UIColor.random
+        let num = Int.randomIntNumber(lower: 1, upper: 4)//图片名称随机
+        print("randomIntNumber --- ",num)
         let imageView = UIImageView()
-        let imageStr = "football_black_\(num)"
+        let imageStr = "football_\(num)"
         imageView.image = UIImage(named: imageStr)
-        imageView.frame = CGRect(x: 5, y: 5, width: 90, height: 90)
         imageView.layer.cornerRadius = 16
         imageView.contentMode = .scaleAspectFill
         imageView.isUserInteractionEnabled = true
@@ -36,10 +36,6 @@ class WW_DraggableView: UIView,NSCopying {
         imageView.snp.makeConstraints { make in
             make.edges.equalTo(self)
         }
-//        self.layer.borderWidth = 1
-//        self.layer.cornerRadius = 10;
-//        self.layer.borderColor =[[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]CGColor];
-
         
         gestureRecognizer = UIPanGestureRecognizer.init(target: self, action: #selector(handlePan))
         self.addGestureRecognizer(gestureRecognizer!)
@@ -55,7 +51,9 @@ class WW_DraggableView: UIView,NSCopying {
     }
     
     func dragToPoint(point : CGPoint){
-//        self.dynamicAnimator?.removeBehavior(self.snapBehavior!)
+        if self.snapBehavior != nil{
+            self.dynamicAnimator!.removeBehavior(self.snapBehavior!)
+        }
         self.snapBehavior = UISnapBehavior.init(item: self, snapTo: point)
         self.snapBehavior!.damping = 0.25
         self.dynamicAnimator?.addBehavior(self.snapBehavior!)
@@ -78,5 +76,4 @@ class WW_DraggableView: UIView,NSCopying {
         newView.alpha = self.alpha
         return newView;
     }
-
 }
