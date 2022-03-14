@@ -87,6 +87,10 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         self.cycleScrollView.imageURLStringsGroup = ["https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021091417261400849.jpeg","https://hotkidceo-1251330842.file.myqcloud.com/2021092714372400251.jpeg"]
     }
     
+    override func updateData<T>(itemData: T) where T : NSObject {
+        
+    }
+    
     func customCollectionViewCellClass(for view: SDCycleScrollView!) -> AnyClass! {
         return WW_HomeBannerSubCell.classForCoder()
     }

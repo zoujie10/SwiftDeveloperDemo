@@ -167,11 +167,18 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let classCell: AnyClass = self.showCellClassArray[indexPath.section]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:NSStringFromClass(classCell), for: indexPath)
-        if classCell == WW_HomeRecommendsCell.classForCoder(){
-           
+        let cell : WW_HomeBaseCell = collectionView.dequeueReusableCell(withReuseIdentifier:NSStringFromClass(classCell), for: indexPath) as! WW_HomeBaseCell
+        if cell.isKind(of: WW_HomeRecommendsCell.self){
+           print("guess your like cell")
         }else{
-          
+            if (cell.isKind(of: WW_HomeBannerCell.self)){
+                print("banner cell")
+            }else if (cell.isKind(of: WW_HomeFreeGiftCell.self)){
+                print("free gift")
+            }else if (cell.isKind(of: WW_HomeSecondKillCell.self)){
+                print("second kill")
+            }
+//            classCell.updateData(itemData: self.homePageViewModel)
         }
 
         return cell
@@ -209,7 +216,7 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.section)
+        print(indexPath.section,indexPath.row)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
