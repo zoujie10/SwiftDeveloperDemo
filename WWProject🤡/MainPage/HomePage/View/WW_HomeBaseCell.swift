@@ -24,7 +24,7 @@ class WW_HomeBaseCell: UICollectionViewCell {
         
     }
     //更新cell 数据
-    func updateData<T:NSObject>(itemData: T){
+    func updateData(itemData: WW_HomeItemModel){
         
     }
     

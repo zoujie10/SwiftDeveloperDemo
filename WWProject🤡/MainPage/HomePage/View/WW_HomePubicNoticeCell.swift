@@ -12,6 +12,7 @@ class WW_HomePubicNoticeCell: WW_HomeBaseCell {
     
     override func initContentView() {
         super.initContentView()
+        self.contentView.backgroundColor = .white
         self.contentView.addSubview(self.mainBgView)
         self.mainBgView.addSubview(self.oneImageView)
         
@@ -22,8 +23,14 @@ class WW_HomePubicNoticeCell: WW_HomeBaseCell {
             make.edges.equalTo(self.mainBgView)
         }
         
-        self.oneImageView.kf.setImage(with: URL.init(string:"https://hotkidceo-1251330842.file.myqcloud.com/2021092618412500151.jpeg"))
         self.oneImageView.kf.indicatorType = .activity
+    }
+    
+    override func updateData(itemData: WW_HomeItemModel) {
+        if itemData.configureAttribute?.count ?? 0 > 0 {
+            let model = itemData.configureAttribute?.first
+            self.oneImageView.kf.setImage(with: URL.init(string:model?.pictureURL ?? " "))
+        }
     }
     
     @objc func tapGesture(tap : UITapGestureRecognizer){
@@ -31,6 +38,7 @@ class WW_HomePubicNoticeCell: WW_HomeBaseCell {
             self.cellAction_block!()
         }
     }
+    
     lazy var oneImageView : UIImageView = {
         let iV = UIImageView()
         iV.layer.masksToBounds = true

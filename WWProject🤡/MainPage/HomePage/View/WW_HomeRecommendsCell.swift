@@ -78,14 +78,13 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
             make.width.height.equalTo(35)
             make.right.equalTo(self.contentView).offset(-10)
         }
-        updateData(itemData: ProductsModel())
     }
     
-    override func updateData<T>(itemData: T) where T : NSObject {
-        
-        productImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021092614513400097.jpeg"))
-        productImageView.kf.indicatorType = .activity
-    }
+//    override func updateData<T>(itemData: T) where T : NSObject {
+//        
+//        productImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021092614513400097.jpeg"))
+//        productImageView.kf.indicatorType = .activity
+//    }
     
     
     

@@ -37,11 +37,10 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
         calculateIndicatorWidth()
     }
     
-    
-    override func updateData<T>(itemData: T) where T : NSObject {
+    override func updateData(itemData: WW_HomeItemModel) {
         
-        self.collectionView.reloadData()
     }
+    
     func calculateIndicatorWidth(){
         let cellCount : NSInteger = self.cellCount()
         var width : CGFloat = (self.kIndicatiorBgWidth / CGFloat(cellCount) * 5)

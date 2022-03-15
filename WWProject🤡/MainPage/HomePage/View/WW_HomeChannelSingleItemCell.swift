@@ -36,9 +36,8 @@ class WW_HomeChannelSingleItemCell: WW_HomeBaseCell {
         }
     }
     
-    override func updateData<T>(itemData: T) where T : NSObject {
+    override func updateData(itemData: WW_HomeItemModel) {
         
-        self.collectionView.reloadData()
     }
     
     func calculateIndicatorWidth(){

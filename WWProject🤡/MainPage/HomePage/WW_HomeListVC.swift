@@ -168,17 +168,23 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let classCell: AnyClass = self.showCellClassArray[indexPath.section]
         let cell : WW_HomeBaseCell = collectionView.dequeueReusableCell(withReuseIdentifier:NSStringFromClass(classCell), for: indexPath) as! WW_HomeBaseCell
+        
         if cell.isKind(of: WW_HomeRecommendsCell.self){
            print("guess your like cell")
         }else{
+            let model = self.homePageViewModel.creatItemViewModel(index: indexPath.section)
+            if (model != nil){
+                cell.updateData(itemData:model!)
+            }
+    
             if (cell.isKind(of: WW_HomeBannerCell.self)){
                 print("banner cell")
+
             }else if (cell.isKind(of: WW_HomeFreeGiftCell.self)){
                 print("free gift")
             }else if (cell.isKind(of: WW_HomeSecondKillCell.self)){
                 print("second kill")
             }
-//            classCell.updateData(itemData: self.homePageViewModel)
         }
 
         return cell
@@ -191,7 +197,8 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let cell: AnyClass = self.showCellClassArray[section]
         if cell == WW_HomeRecommendsCell.classForCoder(){
-            return 12
+            let model = self.homePageViewModel.creatItemViewModel(index: section)
+            return model?.configureAttributeList?.count ?? 0
         }else{
             return 1
         }

@@ -36,6 +36,7 @@ class WW_HomePageListViewModel: NSObject {
         }
     }
     
+    //MARK: 过滤 “搜索”的 数据
     func itemTypeArray()->[String]{
         let array : [WW_HomeItemModel] = self.homeModel.data?.filter() { $0.asseType != "1" } ?? [WW_HomeItemModel]()
         let assArray = array.map{
@@ -44,6 +45,17 @@ class WW_HomePageListViewModel: NSObject {
         return assArray as! [String]
     }
     
+    //MARK: 取 item 的model
+    func creatItemViewModel(index : NSInteger) -> WW_HomeItemModel?{
+        let array : [WW_HomeItemModel] = self.homeModel.data?.filter() { $0.asseType != "1" } ?? [WW_HomeItemModel]()
+        if  self.homeModel.data != nil{
+            return array[index]
+        } else{
+            return nil
+        }
+    }
+    
+    //MARK: Item 大小
     func cellSize(asseType : Int) -> CGSize{
         let type : WW_HomeItemType = WW_HomeItemType(rawValue: asseType) ?? .WW_HomeItemTypeNone
 
@@ -79,7 +91,7 @@ class WW_HomePageListViewModel: NSObject {
             case .WW_HomeItemTypeLike    :
                 return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-24)/330)*15+14)
             case .WW_HomeItemTypeLife   :
-                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-24)/330)*11.33+14+10)
+                return CGSize.init(width: WWScreenWidth, height:CGFloat((WWScreenWidth-24)/330)*15+14)
             case .WW_HomeItemTypeChannel :
                 return CGSize.init(width: WWScreenWidth, height:156)
             case .WW_HomeItemTypeGift,.WW_HomeItemTypeKill:

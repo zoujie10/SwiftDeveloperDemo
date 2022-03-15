@@ -65,6 +65,8 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
     typealias scrollBlock = (NSInteger) -> Void
     var clickBlock : scrollBlock?
     
+    var imageUrlArray = [String]()
+    
     override func initContentView(){
         super.initContentView()
         self.setUpSubviews()
@@ -84,11 +86,15 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         self.cycleScrollView.itemDidScrollOperationBlock = { currentIndex in
 //            print("itemDidScrollOperationBlock ---\(currentIndex)")
         }
-        self.cycleScrollView.imageURLStringsGroup = ["https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021091417261400849.jpeg","https://hotkidceo-1251330842.file.myqcloud.com/2021092714372400251.jpeg"]
     }
     
-    override func updateData<T>(itemData: T) where T : NSObject {
-        
+    override func updateData(itemData: WW_HomeItemModel) {
+        if itemData.configureAttribute?.count ?? 0 > 0 {
+            for item : WW_HomeItemDetailModel in itemData.configureAttribute!{
+                self.imageUrlArray.append(item.pictureURL!)
+            }
+        }
+        self.cycleScrollView.imageURLStringsGroup = self.imageUrlArray
     }
     
     func customCollectionViewCellClass(for view: SDCycleScrollView!) -> AnyClass! {
@@ -96,12 +102,10 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
     }
     
     func setupCustomCell(_ cell: UICollectionViewCell!, for index: Int, cycleScrollView view: SDCycleScrollView!) {
-        if index == 1{
+
+        if index < self.imageUrlArray.count{
             let subCell = cell as! WW_HomeBannerSubCell
-            subCell.urlString = "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021091417261400849.jpeg";
-        }else{
-            let subCell = cell as! WW_HomeBannerSubCell
-            subCell.urlString = "https://hotkidceo-1251330842.file.myqcloud.com/2021092714372400251.jpeg"
+            subCell.urlString = self.imageUrlArray[index]
         }
     }
     
