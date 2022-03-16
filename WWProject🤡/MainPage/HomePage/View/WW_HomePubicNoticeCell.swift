@@ -34,9 +34,7 @@ class WW_HomePubicNoticeCell: WW_HomeBaseCell {
     }
     
     @objc func tapGesture(tap : UITapGestureRecognizer){
-        if(self.cellAction_block != nil){
-            self.cellAction_block!()
-        }
+            print("点击公告------😝啦啦啦")
     }
     
     lazy var oneImageView : UIImageView = {

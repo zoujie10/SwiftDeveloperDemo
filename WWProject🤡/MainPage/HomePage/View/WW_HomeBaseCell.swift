@@ -9,8 +9,11 @@
 import UIKit
 
 class WW_HomeBaseCell: UICollectionViewCell {
-    typealias cellActionBlock = () -> Void
+    typealias cellActionBlock = (_ itemLinkType : WWBHomeItemLinkType,_ itemLinkSubType :WWBHomeItemLinkSubType) -> Void
     var cellAction_block : cellActionBlock?
+    
+    var itemLinkType : WWBHomeItemLinkType =  WWBHomeItemLinkType.WWBHomeItemLinkTypeNone
+    var itemLinkSubType : WWBHomeItemLinkSubType = WWBHomeItemLinkSubType.WWBHomeItemLinkSubTypeNone
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,13 +23,9 @@ class WW_HomeBaseCell: UICollectionViewCell {
         self.initContentView()
     }
     //cell 布局
-    func initContentView(){
-        
-    }
+    func initContentView(){}
     //更新cell 数据
-    func updateData(itemData: WW_HomeItemModel){
-        
-    }
+    func updateData(itemData: WW_HomeItemModel){}
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

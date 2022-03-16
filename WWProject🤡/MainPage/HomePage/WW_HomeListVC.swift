@@ -187,6 +187,10 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
             }
         }
 
+        cell.cellAction_block = { type,subType in
+            self.allClickAction(type: type, subType: subType)
+        }
+        
         return cell
     }
     
@@ -235,6 +239,55 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
             self.searchBgImageView.snp.updateConstraints { make in
                 make.top.equalTo(self.view)
             }
+        }
+    }
+    //MARK: 跳转逻辑
+    func allClickAction(type:WWBHomeItemLinkType,subType:WWBHomeItemLinkSubType){
+        switch type {
+            case .WWBHomeItemLinkTypeNone:
+                    print(type)
+            case .WWBHomeItemLinkTypeH5:
+                self.navigationController?.pushViewController(SwiftWebViewAndHTML5VC.init(url: "www.baidu.com", webTitle: "跳转"), animated: true)
+                print(type)
+            case .WWBHomeItemLinkTypeGoods:
+                print(type)
+            case .WWBHomeItemLinkTypeModule:
+                print(type)
+                self.allClickSubTypeAction(subType: subType)
+            case .WWBHomeItemLinkTypeCoupon:
+                print(type)
+            case .WWBHomeItemLinkTypeActivity:
+                print(type)
+            case .WWBHomeItemLinkTypeFile:
+                print(type)
+            case .WWBHomeItemLinkTypeFunction:
+                print(type)
+            case .WWBHomeItemLinkTypeShare:
+                print(type)
+            case .WWBHomeItemLinkTypeAddCart:
+                print(type)
+            case .WWBHomeItemLinkTypeLogin:
+                print(type)
+        }
+    }
+    func allClickSubTypeAction(subType:WWBHomeItemLinkSubType){
+        switch subType {
+            case .WWBHomeItemLinkSubTypeCouponCenter:
+                print("subtype",subType)
+            case .WWBHomeItemLinkSubTypeLabelSecond:
+                print("subtype",subType)
+            case .WWBHomeItemLinkSubTypeCategorySecond:
+                print("subtype",subType)
+            case .WWBHomeItemLinkSubTypeMessageCenter:
+                print("subtype",subType)
+            case .WWBHomeItemLinkSubTypeSearchSecond:
+                print("subtype",subType)
+            case .WWBHomeItemLinkSubTypeMyPage:
+                print("subtype",subType)
+            case .WWBHomeItemLinkSubTypeBannerSecond:
+                print("subtype",subType)
+            default:
+                print("subtype",subType)
         }
     }
 }

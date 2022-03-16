@@ -11,7 +11,8 @@ struct WW_HomeItemDetailIinkPopModel : Codable{
     var name : String?/// 跳转名称
     var type : String?/// 跳转类型
     var content : String?/// 跳转子类型或跳转所需参数
-    @WW_dataTransString var subset : String?/// 跳转所需参数
+//    var subset : String? = nil/// 跳转所需参数  //MARK:这字段 时有时无，还会返不同类型
+    //  1.”= nil“ 处理时有时无问题 2.@WW_dataTransString 类型转换为String
 }
 struct WW_HomeItemDetailIinkMode : Codable{
     var linkPoP:WW_HomeItemDetailIinkPopModel?
@@ -46,7 +47,7 @@ struct WW_HomeItemDetailModel : Codable{
 //    var buyAddNum : Int?/// 递增数量
 //    var normalLimitCount : Int?/// 限购数量
 //    var isRecommend : Bool?/// 是否为推荐商品
-    var linkPOP : WW_HomeItemDetailIinkMode?/// 其他跳转二级页数据
+    var linkPOP : WW_HomeItemDetailIinkPopModel?/// 其他跳转二级页数据  MARK: 除了搜索  直接WW_HomeItemDetailIinkPopModel
     var searchURL : WW_HomeItemDetailIinkMode?/// 搜索框跳转二级页数据
     var iconURL : WW_HomeItemDetailIinkMode?/// 搜索框右侧按钮跳转二级页数据
 }

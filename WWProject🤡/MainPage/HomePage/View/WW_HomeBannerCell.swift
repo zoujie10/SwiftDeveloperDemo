@@ -62,10 +62,13 @@ class WW_HomeBannerSubCell : UICollectionViewCell{
 
 
 class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
+  
     typealias scrollBlock = (NSInteger) -> Void
     var clickBlock : scrollBlock?
-    
+    //传viewmodel 直接赋值  待优化
     var imageUrlArray = [String]()
+    var typeArray = [String]()
+    var subTypeArray = [String]()
     
     override func initContentView(){
         super.initContentView()
@@ -81,6 +84,12 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         
         self.cycleScrollView.clickItemOperationBlock = {currentIndex in
             print("clickItemOperationBlock ---\(currentIndex)")
+            if self.cellAction_block != nil{
+                self.itemLinkType = WWBHomeItemLinkType.init(rawValue: Int(self.typeArray[currentIndex])!)!
+                self.itemLinkSubType = WWBHomeItemLinkSubType.init(rawValue: Int(self.subTypeArray[currentIndex])!)!
+                
+                self.cellAction_block!(self.itemLinkType,self.itemLinkSubType)
+            }
         }
         
         self.cycleScrollView.itemDidScrollOperationBlock = { currentIndex in
@@ -92,6 +101,8 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         if itemData.configureAttribute?.count ?? 0 > 0 {
             for item : WW_HomeItemDetailModel in itemData.configureAttribute!{
                 self.imageUrlArray.append(item.pictureURL!)
+                self.typeArray.append(item.linkPOP?.type ?? "0")
+                self.subTypeArray.append(item.linkPOP?.content ?? "0")
             }
         }
         self.cycleScrollView.imageURLStringsGroup = self.imageUrlArray
