@@ -38,7 +38,18 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
     }
     
     override func updateData(itemData: WW_HomeItemModel) {
-        
+        if itemData.configureAttribute?.count ?? 0 > 0 {
+            for item : WW_HomeItemDetailModel in itemData.configureAttribute!{
+                self.detailModelArray.append(item)
+                self.typeArray.append(item.linkPOP?.type ?? "0")
+                if item.linkPOP?.type == "1"{
+                    self.subTypeArray.append("0")
+                }else{
+                    self.subTypeArray.append(item.linkPOP?.content ?? "0")
+                }
+            }
+            self.collectionView.reloadData()
+        }
     }
     
     func calculateIndicatorWidth(){
@@ -53,7 +64,7 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
 //        if data.count % 2{
 //            return data.count/2 + 1
 //        }
-        return 20/2 //data.count/2
+        return self.detailModelArray.count/2
     }
     
     func isShowIndicator() -> Bool{
@@ -92,18 +103,37 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
 
 extension WW_HomeChannelCell : UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let index = indexPath.item * 2
+        
         let cell : WW_HomeChannelSubCell =  collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(WW_HomeChannelSubCell.classForCoder()), for: indexPath) as! WW_HomeChannelSubCell
+        let index = indexPath.item * 2
+        let upModel = self.detailModelArray[index]
+        let downModel = self.detailModelArray[index + 1]
+        cell.upLabel.text = upModel.pictureName
+        cell.downLabel.text = downModel.pictureName
+        cell.upImageView.kf.setImage(with: URL.init(string: upModel.pictureURL!))
+        cell.upImageView.kf.indicatorType = .activity
+        
+        cell.downImageView.kf.setImage(with: URL.init(string: downModel.pictureURL!))
+        cell.downImageView.kf.indicatorType = .activity
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20/2
+        return self.detailModelArray.count/2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.kCellWidth, height: collectionView.frame.size.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if self.cellAction_block != nil{
+            self.itemLinkType = WWBHomeItemLinkType.init(rawValue: Int(self.typeArray[indexPath.item])!)!
+            self.itemLinkSubType = WWBHomeItemLinkSubType.init(rawValue: Int(self.subTypeArray[indexPath.item])!)!
+            
+            self.cellAction_block!(self.itemLinkType,self.itemLinkSubType)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

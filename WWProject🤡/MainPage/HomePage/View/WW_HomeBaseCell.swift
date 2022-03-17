@@ -12,8 +12,15 @@ class WW_HomeBaseCell: UICollectionViewCell {
     typealias cellActionBlock = (_ itemLinkType : WWBHomeItemLinkType,_ itemLinkSubType :WWBHomeItemLinkSubType) -> Void
     var cellAction_block : cellActionBlock?
     
+    //跳转 type
     var itemLinkType : WWBHomeItemLinkType =  WWBHomeItemLinkType.WWBHomeItemLinkTypeNone
     var itemLinkSubType : WWBHomeItemLinkSubType = WWBHomeItemLinkSubType.WWBHomeItemLinkSubTypeNone
+    
+    ////传viewmodel 直接赋值  待优化 存跳转的数组
+    var detailModelArray = [WW_HomeItemDetailModel]()
+    var imageUrlArray = [String]()
+    var typeArray = [String]()
+    var subTypeArray = [String]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

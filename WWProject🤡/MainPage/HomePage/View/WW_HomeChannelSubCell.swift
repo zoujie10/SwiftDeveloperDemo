@@ -60,11 +60,11 @@ class WW_HomeChannelSubCell: UICollectionViewCell {
             make.left.right.equalTo(self.downBgView)
         }
         
-        self.upImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021121709491500052.png"))
-        self.upImageView.kf.indicatorType = .activity
-        
-        self.downImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021121709492300053.png"))
-        self.downImageView.kf.indicatorType = .activity
+//        self.upImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021121709491500052.png"))
+//        self.upImageView.kf.indicatorType = .activity
+//        
+//        self.downImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021121709492300053.png"))
+//        self.downImageView.kf.indicatorType = .activity
     }
     
     lazy var upBgView : UIView = {

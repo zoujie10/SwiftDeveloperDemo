@@ -65,10 +65,6 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
   
     typealias scrollBlock = (NSInteger) -> Void
     var clickBlock : scrollBlock?
-    //传viewmodel 直接赋值  待优化
-    var imageUrlArray = [String]()
-    var typeArray = [String]()
-    var subTypeArray = [String]()
     
     override func initContentView(){
         super.initContentView()
