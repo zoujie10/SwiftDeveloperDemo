@@ -41,7 +41,6 @@ class WW_HomeBannerSubCell : UICollectionViewCell{
         }
     }
     
-    
     lazy var imageView : UIImageView = {
         let iV = UIImageView()
         iV.backgroundColor = UIColor(r: 236, g: 236, b: 236)
@@ -60,7 +59,6 @@ class WW_HomeBannerSubCell : UICollectionViewCell{
     }
 }
 
-
 class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
   
     typealias scrollBlock = (NSInteger) -> Void
@@ -70,6 +68,7 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         super.initContentView()
         self.setUpSubviews()
     }
+    
     func setUpSubviews(){
         self.contentView.addSubview(self.cycleScrollView)
         self.cycleScrollView.snp.makeConstraints { make in
@@ -81,27 +80,28 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         self.cycleScrollView.clickItemOperationBlock = {currentIndex in
             print("clickItemOperationBlock ---\(currentIndex)")
             if self.cellAction_block != nil{
-                self.itemLinkType = WWBHomeItemLinkType.init(rawValue: Int(self.typeArray[currentIndex])!)!
-                self.itemLinkSubType = WWBHomeItemLinkSubType.init(rawValue: Int(self.subTypeArray[currentIndex])!)!
-                
+                let model =  self.detailModelArray[currentIndex]
+                self.itemLinkType = WWBHomeItemLinkType.init(rawValue: Int(model.linkPOP?.type! ?? "0")!)!
+                self.itemLinkSubType = WWBHomeItemLinkSubType.init(rawValue: Int(model.linkPOP?.content! ?? "0")!)!
                 self.cellAction_block!(self.itemLinkType,self.itemLinkSubType)
             }
         }
         
         self.cycleScrollView.itemDidScrollOperationBlock = { currentIndex in
-//            print("itemDidScrollOperationBlock ---\(currentIndex)")
+
         }
     }
     
     override func updateData(itemData: WW_HomeItemModel) {
+        var imageUrlArr = [String]()
         if itemData.configureAttribute?.count ?? 0 > 0 {
-            for item : WW_HomeItemDetailModel in itemData.configureAttribute!{
-                self.imageUrlArray.append(item.pictureURL!)
-                self.typeArray.append(item.linkPOP?.type ?? "0")
-                self.subTypeArray.append(item.linkPOP?.content ?? "0")
+            self.detailModelArray = NSArray.init(array: itemData.configureAttribute!) as! [WW_HomeItemDetailModel]
+            
+            for item : WW_HomeItemDetailModel in self.detailModelArray{
+                imageUrlArr.append(item.pictureURL!)
             }
         }
-        self.cycleScrollView.imageURLStringsGroup = self.imageUrlArray
+        self.cycleScrollView.imageURLStringsGroup = imageUrlArr
     }
     
     func customCollectionViewCellClass(for view: SDCycleScrollView!) -> AnyClass! {
@@ -110,9 +110,10 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
     
     func setupCustomCell(_ cell: UICollectionViewCell!, for index: Int, cycleScrollView view: SDCycleScrollView!) {
 
-        if index < self.imageUrlArray.count{
+        if index < self.detailModelArray.count{
             let subCell = cell as! WW_HomeBannerSubCell
-            subCell.urlString = self.imageUrlArray[index]
+          let model =  self.detailModelArray[index]
+            subCell.urlString = model.pictureURL!
         }
     }
     

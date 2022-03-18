@@ -39,8 +39,8 @@ class WW_HomeChannelCell: WW_HomeBaseCell {
     
     override func updateData(itemData: WW_HomeItemModel) {
         if itemData.configureAttribute?.count ?? 0 > 0 {
+            self.detailModelArray = NSArray.init(array: itemData.configureAttribute!) as! [WW_HomeItemDetailModel]
             for item : WW_HomeItemDetailModel in itemData.configureAttribute!{
-                self.detailModelArray.append(item)
                 self.typeArray.append(item.linkPOP?.type ?? "0")
                 if item.linkPOP?.type == "1"{
                     self.subTypeArray.append("0")
