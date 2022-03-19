@@ -25,7 +25,7 @@ struct WW_HomeItemDetailModel : Codable{
     var pictureURL : String?/// 其他图片地址
     var actPictureURL : String?/// 满赠左边小图
     var morePictureURL : String?/// 满赠右边小图
-    var timeBackgroundColor : String?/// 满赠倒计时背景色
+    var timeBackgroundColor : String?/// 满赠/活动倒计时背景色
     var pictureWidth : Int?///新人背景图宽度
     var pictureHeight : Int?///新人背景图高度
     var pictureName : String?/// 其他图片名称
