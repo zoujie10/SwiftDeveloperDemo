@@ -17,6 +17,10 @@ class WW_HomeSecondKillCell: WW_HomeBaseCell {
     var startToEndInterval : TimeInterval = 0
     var statusString : String = ""
     
+    var secondStr = 0
+    var minuteStr = 0
+    var hourStr = 0
+    var dayStr = 0
     override func initContentView(){
         super.initContentView()
         self.setUpSubviews()
@@ -65,6 +69,7 @@ class WW_HomeSecondKillCell: WW_HomeBaseCell {
         start()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
         if #available(iOS 15, *) {
             let currentDate = Date.now
             let startDate = formatter.date(from: itemData.startTime!)
@@ -82,6 +87,14 @@ class WW_HomeSecondKillCell: WW_HomeBaseCell {
             }else{
                 self.timeLabel.text = "距结束 00 : 00 : 00";
             }
+            
+            let calender = Calendar.current
+            let unit : Set<Calendar.Component> = [.day,.hour,.minute,.second]
+            let component : DateComponents = calender.dateComponents(unit, from: currentDate, to: endDate!)
+            secondStr = component.second!
+            minuteStr = component.minute!
+            hourStr = component.hour!
+            dayStr = component.day!
         } else {
             
         }
@@ -101,14 +114,28 @@ class WW_HomeSecondKillCell: WW_HomeBaseCell {
     }
     
     @objc func countDown(){
-        interval += 1
-        let day = self.interval / (24 * 3600)
-        let hour = (self.interval - day * (24 * 3600)) / 3600
-        let minute = (self.interval - day * (24 * 3600) - hour * 3600) / 60
-        let second = self.interval - day * (24 * 3600) - hour * 3600 - minute * 60
-        let timeString = (statusString+"\(day * 24 + hour)"+"\(minute)"+"\(second)")
-        timeLabel.text = timeString
-        if day <= 0 && hour <= 0 && minute <= 0 && second <= 0{
+//        interval += 1
+//        let day = (self.interval / (24 * 3600))
+//        let hour = (self.interval - day * (24 * 3600)) / 3600
+//        let minute = (self.interval - day * (24 * 3600) - hour * 3600) / 60
+//        let second = self.interval - day * (24 * 3600) - hour * 3600 - minute * 60
+//        let timeString = (statusString+"\(day * 24 + hour)"+"\(minute)"+"\(second)")
+//        timeLabel.text = timeString
+        secondStr -= 1
+        if secondStr == -1{
+            secondStr = 59
+            minuteStr -= 1
+            if minuteStr == -1{
+                minuteStr = 59
+                hourStr -= 1
+                if hourStr == -1{
+                    hourStr = 23
+                    dayStr -= 1
+                }
+            }
+        }
+        timeLabel.text = "\(dayStr)天  \(hourStr): \(minuteStr):\(secondStr)"
+        if dayStr <= 0 && hourStr <= 0 && minuteStr <= 0 && secondStr <= 0{
             if statusString == "距开始"{
                 statusString = "距结束"
             }else{

@@ -51,6 +51,11 @@ class WW_HomeMagicCubeCell: WW_HomeBaseCell {
             make.bottom.equalTo(self.contentView).offset(-5)
         }
     }
+    var asseType = ""
+    override func updateData(itemData: WW_HomeItemModel) {
+        self.detailModelArray = NSArray.init(array: itemData.configureAttribute!) as! [WW_HomeItemDetailModel]
+        asseType = itemData.asseType!
+    }
     
     lazy var collectionView : UICollectionView = {
         let c = UICollectionView.init(frame: .zero, collectionViewLayout: self.layout)
@@ -63,10 +68,10 @@ class WW_HomeMagicCubeCell: WW_HomeBaseCell {
     }()
     lazy var layout :UICollectionViewFlowLayout = {
         let l = UICollectionViewFlowLayout()
-//        l.minimumLineSpacing = 0
-//        l.minimumInteritemSpacing = 0
+        l.minimumLineSpacing = 5
+        l.minimumInteritemSpacing = 0
         l.sectionInset = .zero
-        l.scrollDirection = .horizontal
+//        l.scrollDirection = .horizontal
         return l
     }()
     
@@ -75,27 +80,40 @@ extension WW_HomeMagicCubeCell : UICollectionViewDelegateFlowLayout,UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell : WW_HomeMagecCubeSubCell =  collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(WW_HomeMagecCubeSubCell.classForCoder()), for: indexPath) as! WW_HomeMagecCubeSubCell
-        if(indexPath.row == 1){
-            cell.magicImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021100810355100336.png"))
-            cell.magicImageView.kf.indicatorType = .activity
-        }else{
-            cell.magicImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021100810353200335.png"))
-            cell.magicImageView.kf.indicatorType = .activity
-        }
+        let model = self.detailModelArray[indexPath.item]
+        
+        cell.magicImageView.kf.setImage(with: URL.init(string: model.pictureURL!))
+        cell.magicImageView.kf.indicatorType = .activity
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return self.detailModelArray.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if self.cellAction_block != nil{
+            let model =  self.detailModelArray[indexPath.item]
+            self.itemLinkType = WWBHomeItemLinkType.init(rawValue: Int(model.linkPOP?.type! ?? "0")!)!
+            if model.linkPOP?.type == "3"{
+                self.itemLinkSubType = WWBHomeItemLinkSubType.init(rawValue: Int(model.linkPOP?.content! ?? "0")!)!
+            }
+            self.cellAction_block!(self.itemLinkType,self.itemLinkSubType)
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // count = 3 第一个item CGSize(width: (WWScreenWidth-30), height: 160)
-        return CGSize(width: (WWScreenWidth-30)/2, height: 160)
+        if asseType == "11"{ //2宫格
+            
+        }else if asseType == "12"{//3宫格
+            
+        }
+        return CGSize(width: (WWScreenWidth-30)/2, height: (collectionView.frame.size.height-30)/2)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         // count = 3
-        
         return UIEdgeInsets.init(top: 8, left: 10, bottom: 8, right: 10)
     }
 }

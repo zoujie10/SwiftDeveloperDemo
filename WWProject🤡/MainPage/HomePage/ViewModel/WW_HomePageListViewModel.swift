@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class WW_HomePageListViewModel: NSObject {
  
@@ -54,6 +55,35 @@ class WW_HomePageListViewModel: NSObject {
             return nil
         }
     }
+    
+    //MARK: 取 推荐商品 item 的model
+    func creatGoodsListViewModel(section : NSInteger , item : NSInteger) -> WW_HomeItemDetailModel?{
+        let array : [WW_HomeItemModel] = self.homeModel.data?.filter() { $0.asseType != "1" } ?? [WW_HomeItemModel]()
+
+        let list = NSMutableArray()
+        for item in array[section].configureAttributeList!.enumerated(){
+            list.addObjects(from: item.element)
+        }
+        if  self.homeModel.data != nil{
+            return list[item] as? WW_HomeItemDetailModel
+        } else{
+            return nil
+        }
+    }
+    //MARK: 取 推荐商品 count
+    func creatGoodsListCountViewModel(section : NSInteger) -> NSInteger?{
+        let array : [WW_HomeItemModel] = self.homeModel.data?.filter() { $0.asseType != "1" } ?? [WW_HomeItemModel]()
+        let list = NSMutableArray()
+        for item in array[section].configureAttributeList!.enumerated(){
+            list.addObjects(from: item.element)
+        }
+        if  self.homeModel.data != nil{
+            return list.count
+        } else{
+            return nil
+        }
+    }
+    
     
     //MARK: Item 大小
     func cellSize(asseType : Int) -> CGSize{

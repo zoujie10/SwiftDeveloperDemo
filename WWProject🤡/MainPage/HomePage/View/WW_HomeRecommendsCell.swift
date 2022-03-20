@@ -80,12 +80,24 @@ class WW_HomeRecommendsCell: WW_HomeBaseCell {
         }
     }
     
-//    override func updateData<T>(itemData: T) where T : NSObject {
-//        
-//        productImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.file.myqcloud.com/2021092614513400097.jpeg"))
-//        productImageView.kf.indicatorType = .activity
+    var goodsList = [[WW_HomeItemDetailModel]]()
+//    var itemList = NSArray()
+//    override func updateData(itemData: WW_HomeItemModel) {
+//        goodsList = NSArray.init(array: itemData.configureAttributeList!) as! [[WW_HomeItemDetailModel]]
+//        itemList.addingObjects(from: goodsList)
+//
+//        print(itemList.count)
 //    }
     
+    override func updateGoodlistData(itemData: WW_HomeItemDetailModel) {
+        productImageView.kf.setImage(with: URL.init(string: itemData.listImages!))
+        productImageView.kf.indicatorType = .activity
+        
+        nameLabel.text = itemData.name
+        specLabel.text = itemData.displayName
+        
+        priceAndUnitLabel.text = "￥"+itemData.supplyPrice!+"/"+itemData.unit!
+    }
     
     
     //商品图

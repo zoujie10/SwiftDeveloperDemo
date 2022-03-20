@@ -34,14 +34,14 @@ struct WW_HomeItemDetailModel : Codable{
     var multiPtKeyNum : String?///是否单规格
 //    var productPictureLabelResponseList : NSArray?///商品标签数组
 //    var discountPercentage : String?/// 商品折扣
-//    var name : String?/// 商品名称
+    var name : String?/// 商品名称
 //    var desc : String?/// 商品描述
-//    var displayName : String?/// 商品规格
+    var displayName : String?/// 商品规格
 //    @WW_dataTransString var origPrice : String?/// 商品原价
 //    @WW_dataTransString var retailPrice : String?/// 商品零售价
-//    @WW_dataTransString var supplyPrice : String?/// 商品供货价
+    var supplyPrice : String?/// 商品供货价
 //    @WW_dataTransString var seckillPrice : String?/// 商品秒杀价
-//    var unit : String?/// 商品起售单位
+    var unit : String?/// 商品起售单位
 //    var actTags : [String]?//营销标签：BUY-满赠；GROUP-团购;seckill秒杀
 //    var startSaleNum : Int?/// 最小销售数量
 //    var buyAddNum : Int?/// 递增数量

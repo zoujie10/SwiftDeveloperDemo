@@ -38,45 +38,29 @@ class WW_HomeCouponItemsCell : UICollectionViewCell{
 }
 class WW_HomeCouponCell: WW_HomeBaseCell {
     
-    var couponDataArray = [Any]()
-    
     override func initContentView() {
         super.initContentView()
         self.addSubview(self.bgView)
-        self.bgView.addSubview(self.rewardCouponBtn)
         self.bgView.addSubview(self.couponCollectionView)
-        
         self.bgView.snp.makeConstraints { make in
-            make.edges.equalTo(UIEdgeInsets(top: 0, left: 7, bottom: 0, right: -7))
-        }
-        
-        self.rewardCouponBtn.snp.makeConstraints { make in
-            make.right.equalTo(self.bgView.snp_right).offset(-10)
-            make.top.equalTo(self.bgView).offset(10)
-            make.bottom.equalTo(self.bgView).offset(-10)
-            make.width.equalTo((WWScreenWidth-20)/4)
+            make.edges.equalTo(UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7))
         }
         
         self.couponCollectionView.snp.makeConstraints { make in
             make.left.top.bottom.equalTo(self.bgView)
-            make.right.equalTo(self.rewardCouponBtn.snp_left).offset(5)
+            make.right.equalTo(self.bgView)
         }
     }
-    
-    
-    @objc func rewardClick(){
+    override func updateData(itemData: WW_HomeItemModel) {
+        self.detailModelArray = NSArray.init(array: itemData.configureAttribute!) as! [WW_HomeItemDetailModel]
         
     }
     
-    lazy var rewardCouponBtn : UIButton = {
-        let btn = UIButton()
-        btn.addTarget(self, action: #selector(rewardClick), for: .touchUpInside)
-        btn.backgroundColor = .white
-        return btn
-    }()
-    
     lazy var couponCollectionView : UICollectionView = {
-        let layout = WW_SearchHotWordsFlowLayout.init(with: .AlignWithCenter, betweenOfCell: 5)
+
+        let layout = UICollectionViewFlowLayout.init()
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
         let view = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -103,26 +87,35 @@ extension WW_HomeCouponCell : UICollectionViewDelegate,UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell : WW_HomeCouponItemsCell =  collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(WW_HomeCouponItemsCell.classForCoder()), for: indexPath) as! WW_HomeCouponItemsCell
-        if(indexPath.row == 0){
-            cell.imageView.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617114800077.png"))
-        }else if(indexPath.row == 1){
-            cell.imageView.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617115500078.png"))
-        }else if(indexPath.row == 2){
-            cell.imageView.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617120200079.png"))
-        }else if (indexPath.row == 3){
-            let imageview = UIImageView()
-            imageview.kf.setImage(with:URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021061617121800080.png"))
-            self.rewardCouponBtn.setImage(imageview.image, for: .normal)
-        }
 
+        let model = self.detailModelArray[indexPath.item]
+        cell.imageView.kf.setImage(with:URL.init(string: model.pictureURL!))
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return self.detailModelArray.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.size.width-30)/3, height: collectionView.frame.size.height-10)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if self.cellAction_block != nil{
+            let model =  self.detailModelArray[indexPath.item]
+            self.itemLinkType = WWBHomeItemLinkType.init(rawValue: Int(model.linkPOP?.type! ?? "0")!)!
+            if model.linkPOP?.type == "3"{
+                self.itemLinkSubType = WWBHomeItemLinkSubType.init(rawValue: Int(model.linkPOP?.content! ?? "0")!)!
+            }
+            self.cellAction_block!(self.itemLinkType,self.itemLinkSubType)
+        }
     }
+    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let lastItemWidth = 80
+        if indexPath.row == (self.detailModelArray.count-1){
+            return CGSize(width: lastItemWidth, height: Int(collectionView.frame.size.height)-10)
+        }else{
+            return CGSize(width: (collectionView.frame.size.width-CGFloat(lastItemWidth)-20)/CGFloat((self.detailModelArray.count-1)), height: collectionView.frame.size.height-10)
+        }
+    }
+    
 }

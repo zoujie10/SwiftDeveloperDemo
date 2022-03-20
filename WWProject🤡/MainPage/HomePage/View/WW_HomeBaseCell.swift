@@ -33,7 +33,8 @@ class WW_HomeBaseCell: UICollectionViewCell {
     func initContentView(){}
     //更新cell 数据
     func updateData(itemData: WW_HomeItemModel){}
-    
+    //更新 推荐商品 列表 数据
+    func updateGoodlistData(itemData : WW_HomeItemDetailModel){}
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
