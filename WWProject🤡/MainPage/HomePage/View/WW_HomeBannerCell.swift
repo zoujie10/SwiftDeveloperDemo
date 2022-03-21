@@ -61,8 +61,8 @@ class WW_HomeBannerSubCell : UICollectionViewCell{
 
 class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
   
-    typealias scrollBlock = (NSInteger) -> Void
-    var clickBlock : scrollBlock?
+    typealias scrollBlock = (String) -> Void
+    var scrollBlock : scrollBlock?
     
     override func initContentView(){
         super.initContentView()
@@ -88,7 +88,10 @@ class WW_HomeBannerCell: WW_HomeBaseCell,SDCycleScrollViewDelegate {
         }
         
         self.cycleScrollView.itemDidScrollOperationBlock = { currentIndex in
-
+            if self.scrollBlock != nil{
+                let model =  self.detailModelArray[currentIndex]
+                self.scrollBlock!(model.singleBackgroundURL!)
+            }
         }
     }
     

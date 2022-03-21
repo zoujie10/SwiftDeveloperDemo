@@ -85,9 +85,7 @@ class WW_HomeListVC: WW_MainBaseVC {
             make.left.right.equalTo(self.view)
             make.height.equalTo(150)
         }
-        self.searchBgImageView.kf.setImage(with: URL.init(string: "https://hotkidceo-1251330842.cos.ap-shanghai.myqcloud.com/2021081916225600139.jpeg"))
-        self.searchBgImageView.kf.indicatorType = .activity
-        
+
         navBgView.snp.makeConstraints { make in
             make.top.equalTo(self.view)
             make.left.right.equalTo(self.view)
@@ -183,7 +181,11 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
             
             if (cell.isKind(of: WW_HomeBannerCell.self)){
                 print("banner cell")
-                
+                let bannerCell = cell as! WW_HomeBannerCell
+                bannerCell.scrollBlock = { picUrl in
+                    self.searchBgImageView.kf.setImage(with: URL.init(string: picUrl))
+                    self.searchBgImageView.kf.indicatorType = .activity
+                }
             }else if cell.isKind(of: WW_HomeRecommendsCell.self) {
                 print("guess your like cell")
             }
@@ -206,7 +208,6 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
         return self.showCellClassArray.count
     }
     
@@ -239,7 +240,8 @@ extension WW_HomeListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.section,indexPath.row)
+        let model = self.homePageViewModel.creatGoodsListViewModel(section: indexPath.section, item: indexPath.item)
+        print("推荐商品：",indexPath.section,indexPath.row,model?.ptKey ?? 0)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

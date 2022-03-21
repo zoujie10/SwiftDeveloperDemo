@@ -133,7 +133,7 @@ class WW_HomePageListViewModel: NSObject {
 //                return 156 //TODO row 1 or 2
             // 22被安卓占用
             case .WW_HomeItemTypeChannelNew :
-                return CGSize.init(width: WWScreenWidth, height:120)
+                return CGSize.init(width: WWScreenWidth, height:156)
             default:
                 return CGSize(width: WWScreenWidth, height: 0.1)
         }

@@ -37,7 +37,19 @@ class WW_HomeChannelSingleItemCell: WW_HomeBaseCell {
     }
     
     override func updateData(itemData: WW_HomeItemModel) {
-        
+        if itemData.configureAttribute?.count ?? 0 > 0 {
+            self.detailModelArray = NSArray.init(array: itemData.configureAttribute!) as! [WW_HomeItemDetailModel]
+            for item : WW_HomeItemDetailModel in itemData.configureAttribute!{
+                self.typeArray.append(item.linkPOP?.type ?? "0")
+                if item.linkPOP?.type == "1"{
+                    self.subTypeArray.append("0")
+                }else{
+                    self.subTypeArray.append(item.linkPOP?.content ?? "0")
+                }
+            }
+            self.collectionView.reloadData()
+        }
+        calculateIndicatorWidth()
     }
     
     func calculateIndicatorWidth(){
@@ -49,12 +61,11 @@ class WW_HomeChannelSingleItemCell: WW_HomeBaseCell {
         }
     }
     func cellCount() -> NSInteger{
-//        if (self.itemViewModel.itemDetailCount >= 10) {
-//            return (self.itemViewModel.itemDetailCount + 1) / 2;
-//        } else {
-//            return self.itemViewModel.itemDetailCount;
-//        }
-        return 20 //data.count
+        if (self.detailModelArray.count >= 10) {
+            return (self.detailModelArray.count + 1) / 2;
+        } else {
+            return self.detailModelArray.count;
+        }
     }
     
     func isShowIndicator() -> Bool{
@@ -98,12 +109,15 @@ extension WW_HomeChannelSingleItemCell: UICollectionViewDelegateFlowLayout,UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell : WW_HomeChannelSingleItemSubCell =  collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(WW_HomeChannelSingleItemSubCell.classForCoder()), for: indexPath) as! WW_HomeChannelSingleItemSubCell
-        
+        let model = self.detailModelArray[indexPath.item]
+        cell.label.text = model.pictureName
+        cell.imageView.kf.setImage(with: URL.init(string: model.pictureURL!))
+        cell.imageView.kf.indicatorType = .activity
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.detailModelArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
