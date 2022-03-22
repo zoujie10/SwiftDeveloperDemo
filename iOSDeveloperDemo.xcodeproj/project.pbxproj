@@ -175,6 +175,8 @@
 		847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569820BE81F200EBB06C /* TabLTableViewController.swift */; };
 		847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */; };
 		847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A569C20BE83D500EBB06C /* DetailViewController.swift */; };
+		847A5F5727E964E000F157B4 /* WW_HomeSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A5F5627E964E000F157B4 /* WW_HomeSearchTitleView.swift */; };
+		847A5F5927E971A800F157B4 /* WW_TextScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A5F5827E971A800F157B4 /* WW_TextScrollView.swift */; };
 		847E9512279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */; };
 		847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */; };
 		847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */; };
@@ -433,6 +435,8 @@
 		847A569820BE81F200EBB06C /* TabLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabLTableViewController.swift; sourceTree = "<group>"; };
 		847A569A20BE82E700EBB06C /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
 		847A569C20BE83D500EBB06C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		847A5F5627E964E000F157B4 /* WW_HomeSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeSearchTitleView.swift; sourceTree = "<group>"; };
+		847A5F5827E971A800F157B4 /* WW_TextScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_TextScrollView.swift; sourceTree = "<group>"; };
 		847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomePubicNoticeCell.swift; sourceTree = "<group>"; };
 		847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeCouponCell.swift; sourceTree = "<group>"; };
 		847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelCell.swift; sourceTree = "<group>"; };
@@ -754,6 +758,8 @@
 				84D95B2027A6CECD00052E04 /* WW_HomeFrequentlyBuyListCell.swift */,
 				84D95B2227A6CEED00052E04 /* WW_HomeFreeGiftCell.swift */,
 				84D95B2427A6CF0500052E04 /* WW_HomeSecondKillCell.swift */,
+				847A5F5627E964E000F157B4 /* WW_HomeSearchTitleView.swift */,
+				847A5F5827E971A800F157B4 /* WW_TextScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1669,6 +1675,7 @@
 				84710DCD272F925C00A40507 /* ZJ_ProductsViewModel.swift in Sources */,
 				843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */,
 				4FC4E19A228D01570017192B /* Observer.swift in Sources */,
+				847A5F5927E971A800F157B4 /* WW_TextScrollView.swift in Sources */,
 				84E55ABE24C8735E00A152A8 /* Events.swift in Sources */,
 				84D95B2527A6CF0500052E04 /* WW_HomeSecondKillCell.swift in Sources */,
 				84710DD82734D90600A40507 /* WW_TagsModel.swift in Sources */,
@@ -1779,6 +1786,7 @@
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				8440F0FC2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift in Sources */,
 				84710DBF272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift in Sources */,
+				847A5F5727E964E000F157B4 /* WW_HomeSearchTitleView.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				84DAA5312771C9CD00A97694 /* WW_OrderSingleVCThree.swift in Sources */,
 				842991DE2747EA0D00A50077 /* SwiftLocalizationVC.swift in Sources */,

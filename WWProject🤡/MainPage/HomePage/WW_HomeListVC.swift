@@ -56,6 +56,7 @@ class WW_HomeListVC: WW_MainBaseVC {
                 self.showCellClassArray.append(self.totalCellClassArray[Int(index)!])
             }
             self.collectionView.reloadData()
+            self.navSearchTitleView.updateByData(itemData: self.homePageViewModel.searchItemTypeData()!)
         }
         configUI()
         registerAllCell()
@@ -136,9 +137,8 @@ class WW_HomeListVC: WW_MainBaseVC {
         return v
     }()
     
-    lazy var navSearchTitleView : WW_SearchTitleView = {
-        let v = WW_SearchTitleView()
-        v.searchWords = "旺仔牛奶"
+    lazy var navSearchTitleView : WW_HomeSearchTitleView = {
+        let v = WW_HomeSearchTitleView()
         v.clickSearchBlock = { words in
             if words == "Jump"{
                 self.navigationController?.popViewController(animated: true)

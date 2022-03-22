@@ -45,6 +45,13 @@ class WW_HomePageListViewModel: NSObject {
         }
         return assArray as! [String]
     }
+    //MARK: 取 “搜索”的 数据
+    func searchItemTypeData()->WW_HomeItemDetailModel?{
+        let array : [WW_HomeItemModel] = self.homeModel.data?.filter() { $0.asseType == "1" } ?? [WW_HomeItemModel]()
+        let model = array.first
+        
+        return model?.configureAttribute?.first
+    }
     
     //MARK: 取 item 的model
     func creatItemViewModel(index : NSInteger) -> WW_HomeItemModel?{
