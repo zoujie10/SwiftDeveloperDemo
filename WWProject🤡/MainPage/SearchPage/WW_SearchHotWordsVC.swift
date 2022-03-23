@@ -39,7 +39,7 @@ class WW_SearchHotWordsVC: WW_MainBaseVC {
     func configUI(){
         self.navigationItem.titleView = self.searchTitleView
         self.searchTitleView.frame = CGRect(x: 0, y: 0, width: 270, height: 35)
-        self.searchTitleView.searchWords = "旺仔牛奶"
+//        self.searchTitleView.searchWords = "旺仔牛奶"
         self.searchTitleView.clickSearchBlock = { words in
             self.requestHotWords(words: words as String)
         }

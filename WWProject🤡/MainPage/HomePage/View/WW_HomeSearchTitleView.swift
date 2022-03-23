@@ -33,7 +33,7 @@ class WW_HomeSearchTitleView: UIView {
         }
     }
     
-    typealias clickSearchBarBlock = (_ serchText : NSString) -> Void
+    typealias clickSearchBarBlock = (String) -> Void
     var clickSearchBlock : clickSearchBarBlock?
     
     override init(frame: CGRect) {
@@ -49,7 +49,8 @@ class WW_HomeSearchTitleView: UIView {
     
     func configUI(){
         self.addSubview(self.searchBar)
-        self.searchBar.addSubview(self.titleScrollView)
+        self.addSubview(self.titleScrollView)
+        self.titleScrollView.frame = CGRect(x: 0, y: 0, width: 230, height: 35)
     }
     
     func updateByData(itemData : WW_HomeItemDetailModel){
@@ -92,6 +93,9 @@ class WW_HomeSearchTitleView: UIView {
     
     lazy var titleScrollView : WW_TextScrollView = {
         let v = WW_TextScrollView()
+        v.clickindex_block = { word in
+            self.clickSearchBlock!(word)
+        }
         return v
     }()
 }

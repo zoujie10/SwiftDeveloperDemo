@@ -40,6 +40,9 @@ class WW_TextScrollView: UIView {
     
     var dataSource = [String]()
     
+    typealias clickindexPathBlock = (String) -> Void
+    var clickindex_block : clickindexPathBlock?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         creatUI()
@@ -97,5 +100,13 @@ extension WW_TextScrollView: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 35
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idx =  indexPath.row % self.dataSource.count
+        if self.clickindex_block != nil{
+            self.clickindex_block!(self.dataSource[idx])
+        }
+        print(self.dataSource[idx])
     }
 }

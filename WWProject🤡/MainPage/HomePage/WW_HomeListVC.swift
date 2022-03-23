@@ -140,9 +140,10 @@ class WW_HomeListVC: WW_MainBaseVC {
     lazy var navSearchTitleView : WW_HomeSearchTitleView = {
         let v = WW_HomeSearchTitleView()
         v.clickSearchBlock = { words in
-            if words == "Jump"{
-                self.navigationController?.popViewController(animated: true)
-            }
+            let vc = WW_SearchHotWordsVC()
+            vc.searchTitleView.searchWords = words as String
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
         v.onOnlyJump = true
         return v
