@@ -40,7 +40,8 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
         "榜单",
         "搜索",
         "首页",
-        "客户管理"]
+        "客户管理",
+        "购物车"]
         //存跳转的控制器
         vcArray = [self.swiftStringFromClass(cls: WW_ClassificationListVC.self),
                    self.swiftStringFromClass(cls: WW_AfterDetailVC.self),

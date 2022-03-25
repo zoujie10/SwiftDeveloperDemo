@@ -43,7 +43,7 @@ class WW_HomePubicNoticeCell: WW_HomeBaseCell {
         iV.layer.cornerRadius = 4
         iV.backgroundColor = .clear
         iV.isUserInteractionEnabled = true
-        iV.contentMode = .scaleAspectFill
+        iV.contentMode = .scaleAspectFit
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapGesture))
         iV.addGestureRecognizer(tap)
         return iV
