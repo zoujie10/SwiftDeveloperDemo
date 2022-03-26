@@ -37,6 +37,7 @@ class UIViewControllerVC: WW_MainBaseVC,UIScrollViewDelegate {
         UIButton.appearance().setTitle("title", for:.normal)
         //4.UIPopoverPresentationController 气泡框
         makePopUI()
+        makeCustomizePopUI()
     }
     func VC_Rotation(){
         let btn = UIButton()
@@ -81,8 +82,8 @@ class UIViewControllerVC: WW_MainBaseVC,UIScrollViewDelegate {
         btn.addTarget(self, action: #selector(customizePopMethod), for: .touchUpInside)
         self.view.addSubview(btn)
         btn.snp.makeConstraints { make in
-            make.center.equalTo(self.view).offset(150)
-            make.width.height.equalTo(100)
+            make.center.equalTo(self.view).offset(50)
+            make.width.equalTo(150)
         }
     }
     
@@ -114,9 +115,9 @@ class UIViewControllerVC: WW_MainBaseVC,UIScrollViewDelegate {
         return .none
     }
     
-    
-    @objc func customizePopMethod(){
-        
+    @objc func customizePopMethod(sender : UIButton){
+        let pop = UIPOPoverCustomizeView.init()
+        pop.showToView(pointView: sender, content: ["收货地址","新增客户"])
     }
     func VC_ForScrollView(){
         let scrollView = UIScrollView()
