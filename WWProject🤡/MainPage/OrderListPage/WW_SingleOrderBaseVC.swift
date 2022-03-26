@@ -32,17 +32,17 @@ class WW_SingleOrderBaseVC: WW_MainBaseVC {
     
 
     func reloadByIndex(indexPage :NSInteger,currentPage:NSInteger){
-        print(indexPage)
-        self.viewModel.getInformOrderList(status: self.statusArray[indexPage], currentPage: currentPage, pageSize: 10)
-        self.viewModel.dataInformListComplete = { [self] in
-            self.tableView.mj_header?.endRefreshing()
 
+        self.viewModel.getInformOrderList(status: self.statusArray[indexPage], currentPage: currenPage, pageSize: 10) {
+            self.tableView.mj_header?.endRefreshing()
             if (self.viewModel.productsArray.count < 10 || self.viewModel.dataModel.total == self.viewModel.productsArray.count){
                 self.tableView.mj_footer?.endRefreshingWithNoMoreData()
             }else{
                 self.tableView.mj_footer?.endRefreshing()
             }
             self.tableView.reloadData()
+        } failureBlock: { msg in
+            print("网络请求失败",msg)
         }
     }
     
@@ -88,6 +88,7 @@ extension WW_SingleOrderBaseVC : UITableViewDelegate, UITableViewDataSource{
         str.append(attStr)
         cell.reportPriceLabel.attributedText = str
         cell.listImageView.kf.setImage(with: URL.init(string: self.viewModel.productsArray[indexPath.row].listImages ?? ""))
+        cell.listImageView.kf.indicatorType = .activity
         cell.replyStateLabel.text = (self.viewModel.productsArray[indexPath.row].status == "1") ? "已回复" : "未回复"
         cell.productTitleLabel.text = model.commodityName
         cell.productSpecLabel.text = "规格:\(model.productName ?? "")"

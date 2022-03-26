@@ -64,12 +64,24 @@ class UIViewControllerVC: WW_MainBaseVC,UIScrollViewDelegate {
   
     func makePopUI(){
         let btn = UIButton()
-        btn.setTitle("Pop", for: UIControlState.normal)
+        btn.setTitle("System Pop", for: UIControlState.normal)
         btn.setTitleColor(.red, for: .normal)
         btn.addTarget(self, action: #selector(popMethod), for: .touchUpInside)
         self.view.addSubview(btn)
         btn.snp.makeConstraints { make in
             make.center.equalTo(self.view).offset(100)
+            make.width.height.equalTo(100)
+        }
+    }
+    
+    func makeCustomizePopUI(){
+        let btn = UIButton()
+        btn.setTitle("Customize Pop", for: UIControlState.normal)
+        btn.setTitleColor(.red, for: .normal)
+        btn.addTarget(self, action: #selector(customizePopMethod), for: .touchUpInside)
+        self.view.addSubview(btn)
+        btn.snp.makeConstraints { make in
+            make.center.equalTo(self.view).offset(150)
             make.width.height.equalTo(100)
         }
     }
@@ -102,6 +114,10 @@ class UIViewControllerVC: WW_MainBaseVC,UIScrollViewDelegate {
         return .none
     }
     
+    
+    @objc func customizePopMethod(){
+        
+    }
     func VC_ForScrollView(){
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = true

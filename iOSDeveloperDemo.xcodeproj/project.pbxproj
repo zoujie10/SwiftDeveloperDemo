@@ -70,6 +70,8 @@
 		843208732798331500E5DC09 /* WW_HomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843208722798331500E5DC09 /* WW_HomeBannerCell.swift */; };
 		843358CF22EC2285003AB31D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843358CE22EC2285003AB31D /* CoreLocation.framework */; };
 		843358D122EC2571003AB31D /* LocationAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843358D022EC2571003AB31D /* LocationAndMapViewController.swift */; };
+		8438A01127EDAB5A00F30F6A /* WW_BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A01027EDAB5A00F30F6A /* WW_BaseViewModel.swift */; };
+		8438A01427EDE12500F30F6A /* UIPOPoverCustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A01327EDE12500F30F6A /* UIPOPoverCustomizeView.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
 		843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
@@ -329,6 +331,8 @@
 		843208722798331500E5DC09 /* WW_HomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeBannerCell.swift; sourceTree = "<group>"; };
 		843358CE22EC2285003AB31D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		843358D022EC2571003AB31D /* LocationAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndMapViewController.swift; sourceTree = "<group>"; };
+		8438A01027EDAB5A00F30F6A /* WW_BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_BaseViewModel.swift; sourceTree = "<group>"; };
+		8438A01327EDE12500F30F6A /* UIPOPoverCustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPOPoverCustomizeView.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
 		843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAdvanceViewController.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
@@ -787,11 +791,20 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		8438A01227EDE0D900F30F6A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				8438A01327EDE12500F30F6A /* UIPOPoverCustomizeView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		8440F0FA27818095001FE7A1 /* BaseRequest */ = {
 			isa = PBXGroup;
 			children = (
 				84710DD327314E0900A40507 /* WW_URL_Define.swift */,
 				844F3EE62758B1C5006762D0 /* MoYaNetManage.swift */,
+				8438A01027EDAB5A00F30F6A /* WW_BaseViewModel.swift */,
 			);
 			path = BaseRequest;
 			sourceTree = "<group>";
@@ -958,6 +971,7 @@
 		845EC7EB271569250006651E /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8438A01227EDE0D900F30F6A /* UIView */,
 				849387922622968700C2914C /* UIViewControllerVC.swift */,
 			);
 			path = UIViewController;
@@ -1046,8 +1060,8 @@
 		845EC802271FECE50006651E /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				84582FCA27C77B54005124CC /* CustomerChoosePage */,
 				84DAA54B27770F8C00A97694 /* Base */,
+				84582FCA27C77B54005124CC /* CustomerChoosePage */,
 				8432086127905C8F00E5DC09 /* Public */,
 				84DAA53C2774735D00A97694 /* OtherPage */,
 				84DAA5352773679900A97694 /* HomePage */,
@@ -1778,6 +1792,7 @@
 				84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */,
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
 				84DAA537277367C400A97694 /* WW_SearchHotWordsVC.swift in Sources */,
+				8438A01127EDAB5A00F30F6A /* WW_BaseViewModel.swift in Sources */,
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */,
@@ -1854,6 +1869,7 @@
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				84D95B4627BAA01300052E04 /* SwiftSlideAnimationButton.swift in Sources */,
 				842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */,
+				8438A01427EDE12500F30F6A /* UIPOPoverCustomizeView.swift in Sources */,
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
 				84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */,
 				848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */,

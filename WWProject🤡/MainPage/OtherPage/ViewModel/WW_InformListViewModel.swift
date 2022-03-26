@@ -8,14 +8,12 @@
 
 import UIKit
 
-class WW_InformListViewModel: NSObject {
+class WW_InformListViewModel: WW_BaseViewModel {
     
     var productsArray = [WWBDInformItem]()
     var dataModel =  WWBDInformData()
-    typealias dataInformListCompleteBlock = () -> Void
-    var dataInformListComplete : dataInformListCompleteBlock?
     
-    func getInformOrderList(status:String,currentPage:Int,pageSize:Int){
+    func getInformOrderList(status:String,currentPage:Int,pageSize:Int, successBlock : @escaping Success_Block, failureBlock : @escaping Failure_Block){
    
         NetworkProvider.request(NetworkAPI.kBDInformPriceOrderList(currentpage: currentPage, orderStatus: status, pagesize: 10)) { result in
             switch result {
@@ -36,12 +34,14 @@ class WW_InformListViewModel: NSObject {
                             self.productsArray.append(contentsOf: model.records!)
                         }
                         
-                        self.dataInformListComplete!()
+                        successBlock()
                         
                     } catch let error {
                         print("Failed to create JSON with error: ", error)
                     }
-                case .failure(_): break
+                case .failure(_):
+                    failureBlock(result.description)
+                    break
             }
         }
     }

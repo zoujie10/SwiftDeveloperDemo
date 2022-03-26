@@ -62,7 +62,7 @@ extension NetworkAPI:TargetType{
                 parmetersInner["areas"] = "DN"
                 parmetersInner["type"] = "2"
                 parmetersInner["memberKey"] = "17706844"
-                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                break
                 //MARK:传参 注意大小下 也要区分
             case .CategoryProductsList(let catkey):
                 parmetersInner["catKey"] = catkey
@@ -71,21 +71,21 @@ extension NetworkAPI:TargetType{
                 parmetersInner["areas"] = "DN"
                 parmetersInner["pageSize"] = "10000"
                 parmetersInner["page"] = 1
-                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                break
            
-            case .CategoryTagsList(let parmeters):
-                return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
-            
+            case .CategoryTagsList(_):
+                break
+    
             case .kBDInformPriceOrderList(let currentPage, let status, let pagesize):
                 parmetersInner["currentPage"] = currentPage
                 parmetersInner["pageSize"] = pagesize
                 parmetersInner["status"] = status
-                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                break
                 
             case .SearchWords:
                 parmetersInner["channelId"] = "S09033033001"
                 parmetersInner["isWholeSale"] = "0"
-                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                break
                 
             case .SearchProducts(let searchKey, let currentPage,let pageSize):
                 parmetersInner["searchKey"] = searchKey
@@ -95,15 +95,17 @@ extension NetworkAPI:TargetType{
                 parmetersInner["pageSize"] = pageSize
                 parmetersInner["page"] = currentPage
                 parmetersInner["isWholeSale"] = "1"
-                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                break
             case .GuessYourLike(let page):
                 parmetersInner["page"] = page
                 parmetersInner["isWholeSale"] = "1"
                 parmetersInner["areas"] = "DN"
                 parmetersInner["channelId"] = "S09033033001"
                 parmetersInner["pageSize"] = 12
-                return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
+                break
         }
+        print("requestPrarms:",parmetersInner)
+        return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
     }
     
     // 是否执行Alamofire验证
