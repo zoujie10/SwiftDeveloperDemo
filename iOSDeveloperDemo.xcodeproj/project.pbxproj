@@ -51,7 +51,6 @@
 		842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */; };
 		842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F6274A4BE300A50077 /* SwiftGCDVC.swift */; };
 		842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */; };
-		842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
@@ -309,7 +308,6 @@
 		842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOperationVC.swift; sourceTree = "<group>"; };
 		842991F6274A4BE300A50077 /* SwiftGCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGCDVC.swift; sourceTree = "<group>"; };
 		842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationListVC.swift; sourceTree = "<group>"; };
-		842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWSearchTitleView.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -799,6 +797,20 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		8438A01527EFFFBC00F30F6A /* ComplexOrderListPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ComplexOrderListPage;
+			sourceTree = "<group>";
+		};
+		8438A01627EFFFF800F30F6A /* CartPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CartPage;
+			sourceTree = "<group>";
+		};
 		8440F0FA27818095001FE7A1 /* BaseRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1069,6 +1081,8 @@
 				84117B7E27672DB200D8B0BB /* AfterSalePage */,
 				84117B7D27672D9400D8B0BB /* ClassificationPage */,
 				84117B7C27672D7B00D8B0BB /* OrderListPage */,
+				8438A01527EFFFBC00F30F6A /* ComplexOrderListPage */,
+				8438A01627EFFFF800F30F6A /* CartPage */,
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 			);
@@ -1361,7 +1375,6 @@
 		84DAA5342773677F00A97694 /* SearchPage */ = {
 			isa = PBXGroup;
 			children = (
-				842991FA274A8F9E00A50077 /* WWSearchTitleView.swift */,
 				8453CFD3277C52F000FC6C9F /* View */,
 				8453CFD2277C52EB00FC6C9F /* Model */,
 				8453CFD1277C52E200FC6C9F /* ViewModel */,
@@ -1760,7 +1773,6 @@
 				844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
-				842991FB274A8F9E00A50077 /* WWSearchTitleView.swift in Sources */,
 				844F3F06275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
