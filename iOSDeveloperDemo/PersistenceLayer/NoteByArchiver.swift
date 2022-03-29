@@ -77,7 +77,7 @@ class NoteByArchiver: NSObject {
 		array.add(model)
 		
 		let theData = NSMutableData()
-		let archiver = NSKeyedArchiver(forWritingWith: theData)
+        let archiver = NSKeyedArchiver.init(requiringSecureCoding: true)
 		archiver.encode(array, forKey: ARCHIVE_KEY)
 		archiver.finishEncoding()
 		theData.write(toFile:path, atomically: true)
@@ -96,7 +96,7 @@ class NoteByArchiver: NSObject {
 				array.remove(note)
 			
 				let theData = NSMutableData()
-				let archiver = NSKeyedArchiver(forWritingWith: theData)
+                let archiver = NSKeyedArchiver.init(requiringSecureCoding: true)
 				archiver.encode(array, forKey: ARCHIVE_KEY)
 				archiver.finishEncoding()
 				theData.write(toFile:path, atomically: true)
@@ -116,7 +116,8 @@ class NoteByArchiver: NSObject {
 				note.content = model.content
 				
 				let theData = NSMutableData()
-				let archiver = NSKeyedArchiver(forWritingWith: theData)
+//				let archiver = NSKeyedArchiver(forWritingWith: theData)
+                let archiver = NSKeyedArchiver.init(requiringSecureCoding: true)
 				archiver.encode(array, forKey: ARCHIVE_KEY)
 				archiver.finishEncoding()
 				theData.write(toFile:path, atomically: true)
@@ -132,7 +133,8 @@ class NoteByArchiver: NSObject {
 		let theData = NSData(contentsOfFile: path)!
 		
 		if theData.length > 0 {
-			let archiver = NSKeyedArchiver(forWritingWith: theData as! NSMutableData)
+//			let archiver = NSKeyedArchiver(forWritingWith: theData as! NSMutableData)
+            let archiver = NSKeyedArchiver.init(requiringSecureCoding: true)
             listData = archiver.decodeObject(forKey: ARCHIVE_KEY) as! NSMutableArray
             archiver.finishEncoding()
 		}

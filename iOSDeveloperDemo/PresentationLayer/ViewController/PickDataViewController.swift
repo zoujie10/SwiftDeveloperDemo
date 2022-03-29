@@ -88,7 +88,7 @@ class PickDataViewController: UIViewController,UIPickerViewDelegate,UIPickerView
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		if component == 0{
 			let seleedProvince : String = self.pickProvincesData[row] as! String
-			self.pickCitiesData = self.pickData[seleedProvince] as! NSMutableArray//省对应的市数据
+            self.pickCitiesData = (self.pickData[seleedProvince] as! NSMutableArray)//省对应的市数据
 			self.pickerView.reloadComponent(1)
 		}
 	}

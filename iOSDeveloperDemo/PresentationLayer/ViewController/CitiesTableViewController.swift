@@ -58,7 +58,7 @@ class CitiesTableViewController: UITableViewController {
 		
 		let seletedIndex = indexPath?.row
 		let dict = self.listData[seletedIndex!] as! NSDictionary
-		detailController.url = dict["url"] as! NSString
+        detailController.url = (dict["url"] as! NSString)
 		detailController.title = dict["name"] as? String
 		self.navigationController!.pushViewController(detailController, animated: true)
 	}
@@ -70,7 +70,7 @@ class CitiesTableViewController: UITableViewController {
 			let seletedIndex = indexPath!.row
 			
 			let dict = self.listData[seletedIndex] as! NSDictionary
-			detailController.url = dict["url"] as! NSString
+            detailController.url = (dict["url"] as! NSString)
 			detailController.title = dict["name"] as? String 
 		}
 	}

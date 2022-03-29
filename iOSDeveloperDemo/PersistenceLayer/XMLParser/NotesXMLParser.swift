@@ -36,7 +36,7 @@ class NotesXMLParser: NSObject,XMLParserDelegate {
 		self.currentTagName = elementName//elementName正在解析的元素名
 		
 		if self.currentTagName == "team"{
-			let id = attributeDict["id"] as! String//去除属性id
+            let id = attributeDict["id"]!//去除属性id
 			let dic = NSMutableDictionary()
 			dic.setObject(id, forKey:"id" as NSCopying)
 			self.notes.add(dic)
