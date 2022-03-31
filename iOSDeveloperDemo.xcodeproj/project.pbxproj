@@ -84,6 +84,9 @@
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
+		8446EC6427F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6327F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift */; };
+		8446EC6627F556E400F0D235 /* WW_ComplexOrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6527F556E400F0D235 /* WW_ComplexOrderListViewModel.swift */; };
+		8446EC6827F561DB00F0D235 /* WW_ComplexOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */; };
 		84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84480F4C253731B800A738B0 /* CopyPatternViewController.swift */; };
 		844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */; };
 		844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */; };
@@ -344,6 +347,9 @@
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		8446EC6327F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderSingPageVC.swift; sourceTree = "<group>"; };
+		8446EC6527F556E400F0D235 /* WW_ComplexOrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListViewModel.swift; sourceTree = "<group>"; };
+		8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListModel.swift; sourceTree = "<group>"; };
 		84480F4C253731B800A738B0 /* CopyPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPatternViewController.swift; sourceTree = "<group>"; };
 		844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWGuidePageVC.swift; sourceTree = "<group>"; };
 		844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_botimg.png; sourceTree = "<group>"; };
@@ -830,6 +836,7 @@
 		8446EC5E27F47E4200F0D235 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -844,6 +851,7 @@
 		8446EC6027F47E5100F0D235 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8446EC6527F556E400F0D235 /* WW_ComplexOrderListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -851,6 +859,7 @@
 		8446EC6127F47E5B00F0D235 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8446EC6327F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1802,6 +1811,7 @@
 				84582FDC27C7E468005124CC /* Global.swift in Sources */,
 				842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */,
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
+				8446EC6427F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */,
 				844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */,
@@ -1885,6 +1895,7 @@
 				84DAA5422774748500A97694 /* WW_FamousSayingVC.swift in Sources */,
 				847E9512279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift in Sources */,
 				84DAA5442774D02800A97694 /* WW_JXSegmentContentBaseVC.swift in Sources */,
+				8446EC6627F556E400F0D235 /* WW_ComplexOrderListViewModel.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
 				844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */,
 				8440F1002786C1AF001FE7A1 /* WW_SearchResultViewModel.swift in Sources */,
@@ -1920,6 +1931,7 @@
 				84710DD427314E0900A40507 /* WW_URL_Define.swift in Sources */,
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				84D95B4627BAA01300052E04 /* SwiftSlideAnimationButton.swift in Sources */,
+				8446EC6827F561DB00F0D235 /* WW_ComplexOrderListModel.swift in Sources */,
 				842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */,
 				8438A01427EDE12500F30F6A /* UIPOPoverCustomizeView.swift in Sources */,
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
