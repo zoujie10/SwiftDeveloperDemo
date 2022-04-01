@@ -21,9 +21,13 @@ enum NetworkAPI {
     case SearchProducts(searchKey:String,currentpage : Int,pagesize : Int)
     case GuessYourLike(pageIndex : Int)
     case HomePageList
+    case ComplexOrderList(currentpage:Int,orderStatus:String)
 }
 extension NetworkAPI:TargetType{
     
+    var url : String{
+        return WW_BaseURL + self.path
+    }
     var baseURL: URL {
         return URL(string: WW_BaseURL)!
     }
@@ -44,6 +48,8 @@ extension NetworkAPI:TargetType{
                 return WW_kGuessYourLikeUrl
             case .HomePageList:
                 return WW_kHomeListUrl
+            case .ComplexOrderList:
+                return WW_OrderListUrl
         }
     }
     
@@ -103,8 +109,15 @@ extension NetworkAPI:TargetType{
                 parmetersInner["channelId"] = "S09033033001"
                 parmetersInner["pageSize"] = 12
                 break
+            case .ComplexOrderList(let page , let status):
+                parmetersInner["page"] = page
+                parmetersInner["orderType"] = "2"
+                parmetersInner["status"] = "0"
+                parmetersInner["shareFlag"] = status
+                break
         }
-        print("requestPrarms:",parmetersInner)
+        
+        print("url:",url,"\n requestPrarms:",parmetersInner)
         return .requestParameters(parameters: parmetersInner, encoding: JSONEncoding.default)
     }
     

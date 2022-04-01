@@ -9,5 +9,19 @@
 import UIKit
 
 class WW_ComplexOrderSingPageVC: WW_MainBaseVC {
+   
+    let viewModel = WW_ComplexOrderListViewModel()
+    
+    override func viewDidLoad() {
+        
+        self.viewModel.reloadOrderListCurrentPage(page: 1, status: "ALL") {
+            
+        } failureBlock: { msg in
+            
+        }
 
+    }
+}
+extension WW_ComplexOrderSingPageVC{
+    
 }

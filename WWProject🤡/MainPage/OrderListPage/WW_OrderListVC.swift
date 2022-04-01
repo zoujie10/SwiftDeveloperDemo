@@ -14,7 +14,7 @@ class WW_OrderListVC: WW_MainBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "订单列表"
+        title = "列表"
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
         configUI()
@@ -41,8 +41,8 @@ class WW_OrderListVC: WW_MainBaseVC {
     
     private lazy var pageVC: WW_OrderPageVC = {
 
-        return WW_OrderPageVC(titles: ["全部","待回复","已回复",],
-                              vcs:[WW_OrderSingleVC.init(),WW_OrderSingleVCTwo.init(),WW_OrderSingleVCThree.init()],
+        return WW_OrderPageVC(titles: ["全部","待回复","已回复","订单列表"],
+                              vcs:[WW_OrderSingleVC.init(),WW_OrderSingleVCTwo.init(),WW_OrderSingleVCThree.init(),WW_ComplexOrderSingPageVC()],
                                    pageStyle: .topTabBar)
     }()
     

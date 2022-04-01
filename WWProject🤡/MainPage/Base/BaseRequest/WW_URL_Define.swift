@@ -38,3 +38,6 @@ let WW_kSearchKeywordsUrl = "appapi/root-ceo-commodity/commodityApi/searchWords"
 let WW_kHomeSearchUrl    = "appapi/root-ceo-commodity/commodityApi/commoditySearch" //搜索结果
 let WW_kSearchWordListUrl  = "appapi/root-ceo-commodity/esApi/suggestion" //搜索词联想
 let WW_kGuessYourLikeUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMore" //猜你喜欢
+
+//我的订单 列表
+let WW_OrderListUrl = "appapi/root-ceo-order/orderApi/queryOrderList"
