@@ -9,66 +9,71 @@
 import UIKit
 
 class WW_ComplexOrderSingleProductItem : Codable{
-    var ceoKey:String?
+    var ceoKey:Int?
     var ceoStoreName:String?
     var productTemplateCode:String?
     var itemImageNames:String?
     var name:String?
     var shortName:String?
-    var quantity:String?
-    var retailPrice:String?
-    var subTotal:String?
-    var commission:String?
+    var quantity:Int?
+    
+    @WW_dataTransString var subTotal:String?
+    var commission:Float?
     // 实际下单价格
-    var orderItemPrice:String?
-    var supplyPrice:String?
-    var origPrice:String?
+    @WW_dataTransString var orderItemPrice:String?
+    @WW_dataTransString var retailPrice:String?
+    @WW_dataTransString var supplyPrice:String?
+    @WW_dataTransString var origPrice:String?
     var imageNames:String?
     // 规格
     var displayName:String?
     // 替代之前的 displayName
     var productTemplateName:String?
-    var discountPercentage:String?
-    var discountVoucherAmount:String?
+    var discountPercentage:Float?
+    var discountVoucherAmount:Float?
     var isServiced:String?
-    var isUsedvoucher:String?
+    var isUsedvoucher:Int?
     // 商品key 替代之前的 sku
     var productTemplateKey:String?
     // 退换货新增
-    var weight:String?
+    var weight:Int?
     var refundStatus:String?
     var serviceHeaderKey:String?
     // 普通商品：0，赠品或奖品：1，秒杀商品：2
-    var isGiveaway:String?
+    var isGiveaway:Int?
     // 随机：0，其他：1（该字段有值就是赠品，无值就是奖品）
-    var sOptional:String?
+    var isOptional:Int?
     // 满赠活动id
-    var activityProductKey:String?
+    var activityProductKey:Int?
     //活动id
-    var actId:String?
+    var actId:Int?
     // 售后申请数量
-    var saleApplyCount:String?
+    var saleApplyCount:Int?
     //1 无售后 2 售后中 3 售后成功 4 部分售后成功 5 售后关闭
     var itemSaleAfterStatus:Int?
-    var key:String?
+    var key:Int?
 }
 
 class WW_ComplexOrderSingleOrderData : Codable{
     var code : String?
-    var itemCount : String?
-    var itemQuantity : String?
-    var grandTotal : String?
-    var itemsTotal : String?
-    var placedAt : String?
+    var itemCount : Int?
+    var itemQuantity : Int?
+    var grandTotal : Float?
+    var itemsTotal : Float?
+    var placedAt : String?//下单时间  "placedAt": "2022-04-1 23:31:45",
+    ///判断是否倒计时
+    var isTimers:String?
+    ///倒计时秒数
+    var time:String?//30分钟超时
     var processingAt : String?
     var status : String?
     var source : String?
     var servicedStatus : String?
     var rmbTransactionStatus : String?
     var wbTransactionStatus : String?
-    var rmbTransactionAmount : String?
+    var rmbTransactionAmount : Float?
     var wbTransactionAmount : String?
-    var deliveryFee : String?
+    var deliveryFee : Int?
     var discountAmount : String?
     var updatedAt : String?
     var receiverName : String?
@@ -85,35 +90,31 @@ class WW_ComplexOrderSingleOrderData : Codable{
     ///item奖励金额
     var commission:String?
     ///奖励金额合计
-    var  ceoCommission:String?
-    var paid:String?
+    var ceoCommission:Float?
+    var paid:Bool?
     ///0：未确认收货 显示按钮  1：确认收货 不显示按钮
-    var isManualReceived:String?
+    var isManualReceived:Int?
     ///确认收货奖励金金额
-    var manualreceivecommissionamount:String?
+    var manualreceivecommissionamount:Float?
     var method:String?
     var requestedAt:String?
-    var orderType:String?
+    var orderType:Int?
     var channel:String?
-    ///判断是否倒计时
-    var isTimers:String?
-    ///倒计时秒数
-    var time:String?
     var addressCode:String?
     var addressTag:String?
     var couponCode:String?
-    var couponDiscountAmount:String?
+    var couponDiscountAmount:Float?
     var couponDiscountDescription:String?
     var freeDescription:String?
     var freeProductSku:String?
     var invoiceCode:String?
-    var isDelete:String?
-    var type:String?
+    var isDelete:Int?
+    var type:Int?
     var origTotal:String?
     var accountId:String?
     var orderHeaderKey:String?
     ///使用积分抵扣RMB金额
-    var pointDeductionRmbAmount:String?
+    var pointDeductionRmbAmount:Float?
     var items : [WW_ComplexOrderSingleProductItem]
 }
 class WW_ComplexOrderListCount : Codable{
