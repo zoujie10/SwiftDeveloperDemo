@@ -13,6 +13,8 @@ class WW_ComplexOrderSingPageVC: WW_MainBaseVC {
     let viewModel = WW_ComplexOrderListViewModel()
 
     var currenPage : NSInteger = 1
+    var countTimeArray = NSMutableArray()
+    var countDownTimeDict = NSMutableDictionary()
     
     override func viewDidLoad() {
         
@@ -35,15 +37,73 @@ class WW_ComplexOrderSingPageVC: WW_MainBaseVC {
             }else{
                 self.tableView.mj_footer?.endRefreshing()
             }
+            self.cleanTimeAbout()
+            self.enumerateDatasourceCountDown()
             self.tableView.reloadData()
         } failureBlock: { msg in
             print("网络请求失败",msg)
         }
     }
     
+    func enumerateDatasourceCountDown(){
+        for i in 0 ..< self.viewModel.productsArray.count{
+            let model = self.viewModel.productsArray[i]
+            if model.isTimers == true {
+                countDownModel(model: model, index: i)
+            }
+        }
+    }
+    
+    func countDownModel(model : WW_ComplexOrderSingleOrderData,index:NSInteger){
+        let indexKey = "\(index)"
+        let dict = NSMutableDictionary.init()
+        dict.setObject(indexKey, forKey: "indexPath" as NSCopying)//定时器 info
+        let strTime = model.time
+        dict.setObject(strTime as Any, forKey: indexKey as NSCopying)
+        let numberInteger = self.countDownTimeDict[indexKey] ?? 0//未添加前 是空值
+        if (numberInteger as! Int) <= 0 { //添加定时器
+            
+            let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.numberTime), userInfo: dict, repeats: true)
+            self.countTimeArray.add(timer)
+            print("indexKey----------",indexKey,self.countDownTimeDict,self.countTimeArray)
+            RunLoop.current.add(timer, forMode: .commonModes)
+        }
+        self.countDownTimeDict.addEntries(from: dict as! [AnyHashable : Any])//把已添加定时器的字典添加到全局字典
+    }
+    
+    func cleanTimeAbout(){
+        self.countTimeArray.removeAllObjects()
+//        self.countTimeArray.perform(#selector(invalidate))
+        self.countDownTimeDict.removeAllObjects()
+    }
+    
+    @objc func numberTime(timer:Timer){
+
+        let dic = timer.userInfo as! NSMutableDictionary
+        let index = dic.object(forKey: "indexPath")
+        let model : WW_ComplexOrderSingleOrderData = self.viewModel.productsArray[Int(index as! String)!]
+        model.time! = model.time!-1
+        if model.time! > 0{
+            let indexPath = IndexPath.init(row: Int(index as! String)!,section: 0)
+//            guard let cell = self.tableView.cellForRow(at:indexPath) as? WW_ComplexOrderListCell else {return}
+            let cell = self.tableView.cellForRow(at:indexPath) as? WW_ComplexOrderListCell
+            cell?.paymentBtn.setTitle(ordertimeFormattedWithTimeInterval(timeInterval: model.time!), for: .normal)
+        }
+        if model.time! <= 0{
+            if model.time! == 0{
+                requestData(page: self.currenPage)
+            }
+            timer.invalidate()
+        }
+    }
+    
+    func ordertimeFormattedWithTimeInterval(timeInterval:TimeInterval)->String{
+        return "支付 " + timeInterval.minuteSecond
+    }
+    
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
-        tableView.register(WW_OrderListCell.classForCoder(), forCellReuseIdentifier:"myCell")
+        tableView.register(WW_ComplexOrderListCell.classForCoder(), forCellReuseIdentifier:"myCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
@@ -57,9 +117,8 @@ class WW_ComplexOrderSingPageVC: WW_MainBaseVC {
         let footer = WW_RefreshAutoGifFooter()
         tableView.mj_footer = footer
         tableView.mj_footer?.refreshingBlock = {
-            print("上拉刷新")
-            self.currenPage += 1
-            self.requestData(page: self.currenPage)
+//            self.currenPage += 1
+//            self.requestData(page: self.currenPage)
         }
         return tableView
     }()
@@ -73,29 +132,20 @@ extension WW_ComplexOrderSingPageVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! WW_OrderListCell
-//        let model = self.viewModel.productsArray[indexPath.row]
-//        let price = model.reportPrice
-//        let str = NSMutableAttributedString.init(string: "举报价格:")
-//        let pri = "￥\(price ?? "")"
-//        let attStr = NSAttributedString.init(string: pri, attributes: [NSAttributedString.Key.foregroundColor : UIColor(r: 241, g: 37, b: 37)])
-//        str.append(attStr)
-//        cell.reportPriceLabel.attributedText = str
-//        cell.listImageView.kf.setImage(with: URL.init(string: self.viewModel.productsArray[indexPath.row].listImages ?? ""))
-//        cell.listImageView.kf.indicatorType = .activity
-//        cell.replyStateLabel.text = (self.viewModel.productsArray[indexPath.row].status == "1") ? "已回复" : "未回复"
-//        cell.productTitleLabel.text = model.commodityName
-//        cell.productSpecLabel.text = "规格:\(model.productName ?? "")"
-//        cell.productPriceLabel.text = "零售价: ￥\(model.retailPrice ?? "")/\(model.unit ?? "")"
-//        cell.timeLineLabel.text = model.createdTime
-//        cell.replyContextLabel.text = model.reportResult
-//        if (model.status == "1"){
-//            cell.replyTitleLabel.isHidden = false
-//            cell.replyContextLabel.isHidden = false
-//        }else{
-//            cell.replyTitleLabel.isHidden = true
-//            cell.replyContextLabel.isHidden = true
-//        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! WW_ComplexOrderListCell
+        let model = self.viewModel.productsArray[indexPath.row]
+        cell.timeLineLabel.text = model.placedAt
+        cell.collectionView.updateDate(dataArray: model.items)
+        if model.status == "SUBMITTED"{
+            if (model.time! > 0){
+                cell.paymentBtn.setTitle(ordertimeFormattedWithTimeInterval(timeInterval: model.time!), for: .normal)
+            }else{
+                cell.paymentBtn.setTitle("支付超时", for: .normal)
+            }
+        }else{
+            cell.paymentBtn.setTitle("再次购买", for: .normal)
+        }
+        print("paymentBtn--------",cell.paymentBtn.titleLabel?.text ?? "0","index----",indexPath.row)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

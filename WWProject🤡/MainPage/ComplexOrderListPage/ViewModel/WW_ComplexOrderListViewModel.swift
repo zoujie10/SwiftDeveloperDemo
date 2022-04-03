@@ -40,7 +40,9 @@ class WW_ComplexOrderListViewModel: WW_BaseViewModel {
 //                    failureBlock(result.description)
 //                    break
 //            }
+            
             localGeoJsonData(page: page)
+            setDateTime()
             successBlock()
         }
     }
@@ -65,5 +67,48 @@ class WW_ComplexOrderListViewModel: WW_BaseViewModel {
         }catch let error as Error?{
             print("data failure",error!)
         }
+    }
+    //MARK: 处理倒计时 logic
+    func setDateTime(){
+        for orderItem : WW_ComplexOrderSingleOrderData in self.productsArray{
+            if orderItem.status == "SUBMITTED"{
+                orderItem.time = orderTimeFormatted(timeStr: orderItem.placedAt!)
+                orderItem.isTimers = true
+            }else{
+                orderItem.isTimers = false
+            }
+        }
+    }
+    
+    func orderTimeFormatted(timeStr : String) -> TimeInterval{
+        let past12_date = nsstringConversionNSDate(dateStr: timeStr)
+        //MARK:time 30分钟后过期
+        let past12Hour = past12_date.addingTimeInterval(1800)
+        let timeStamp12Hours = dateConversionTimeStamp(date: past12Hour)
+        let currentDate = Date.init()//当前时间 - 截止时间
+        let startLongLong = dateConversionTimeStamp(date: currentDate)
+        let finishDate = dateWithLongLong(longlongValue: timeStamp12Hours)
+        let startDate = dateWithLongLong(longlongValue: startLongLong)
+        let timeInterval = finishDate.timeIntervalSince(startDate)
+        return timeInterval
+    }
+    
+    func nsstringConversionNSDate(dateStr:String)-> Date{
+        let dateFormatter = DateFormatter.init()
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        let datestr = dateFormatter.date(from: dateStr)
+        return datestr!
+    }
+    
+    func dateConversionTimeStamp(date:Date)->TimeInterval{
+        let timeSp = date.timeIntervalSince1970 * 1000
+        return timeSp
+    }
+    
+    func dateWithLongLong(longlongValue:TimeInterval)->Date{
+        let value = longlongValue/1000
+        let nsTimeInterval = value
+        let date = Date.init(timeIntervalSince1970: TimeInterval(nsTimeInterval))
+        return date
     }
 }

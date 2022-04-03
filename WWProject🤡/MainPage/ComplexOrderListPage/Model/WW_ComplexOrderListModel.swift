@@ -62,9 +62,9 @@ class WW_ComplexOrderSingleOrderData : Codable{
     var itemsTotal : Float?
     var placedAt : String?//下单时间  "placedAt": "2022-04-1 23:31:45",
     ///判断是否倒计时
-    var isTimers:String?
+    var isTimers:Bool?
     ///倒计时秒数
-    var time:String?//30分钟超时
+    var time:TimeInterval?//30分钟超时
     var processingAt : String?
     var status : String?
     var source : String?

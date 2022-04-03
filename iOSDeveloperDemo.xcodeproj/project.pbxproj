@@ -89,6 +89,9 @@
 		8446EC6827F561DB00F0D235 /* WW_ComplexOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */; };
 		84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84480F4C253731B800A738B0 /* CopyPatternViewController.swift */; };
 		844ECB3F27F72CEF007FC276 /* orderList.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 844ECB3E27F717EC007FC276 /* orderList.geojson */; };
+		844ECB4127F83B66007FC276 /* WW_ComplexOrderListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844ECB4027F83B66007FC276 /* WW_ComplexOrderListCell.swift */; };
+		844ECB4327F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844ECB4227F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift */; };
+		844ECB4527F9499A007FC276 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844ECB4427F9499A007FC276 /* TimeIntervalExtension.swift */; };
 		844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */; };
 		844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */; };
 		844F3ED4274CDADB006762D0 /* ww_launchscreen_centimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */; };
@@ -353,6 +356,9 @@
 		8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListModel.swift; sourceTree = "<group>"; };
 		84480F4C253731B800A738B0 /* CopyPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPatternViewController.swift; sourceTree = "<group>"; };
 		844ECB3E27F717EC007FC276 /* orderList.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = orderList.geojson; sourceTree = "<group>"; };
+		844ECB4027F83B66007FC276 /* WW_ComplexOrderListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListCell.swift; sourceTree = "<group>"; };
+		844ECB4227F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListItemsCollectionView.swift; sourceTree = "<group>"; };
+		844ECB4427F9499A007FC276 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWGuidePageVC.swift; sourceTree = "<group>"; };
 		844F3ED1274CDA9A006762D0 /* ww_launchscreen_botimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_botimg.png; sourceTree = "<group>"; };
 		844F3ED3274CDADB006762D0 /* ww_launchscreen_centimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww_launchscreen_centimg.png; sourceTree = "<group>"; };
@@ -847,6 +853,8 @@
 		8446EC5F27F47E4700F0D235 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				844ECB4027F83B66007FC276 /* WW_ComplexOrderListCell.swift */,
+				844ECB4227F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1421,6 +1429,7 @@
 				84DAA51E2768817B00A97694 /* UIColorExtension.swift */,
 				8440F0FD27857FA9001FE7A1 /* StringExtension.swift */,
 				84582FEE27D0F755005124CC /* NumberExtension.swift */,
+				844ECB4427F9499A007FC276 /* TimeIntervalExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1826,11 +1835,13 @@
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
+				844ECB4127F83B66007FC276 /* WW_ComplexOrderListCell.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
 				844F3F06275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
 				84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */,
+				844ECB4527F9499A007FC276 /* TimeIntervalExtension.swift in Sources */,
 				84117B7727634D0700D8B0BB /* WW_OrderListVC.swift in Sources */,
 				845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */,
 				84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */,
@@ -1853,6 +1864,7 @@
 				845E0AF22679F70A00F11606 /* TemplateLineClass.swift in Sources */,
 				84D95B4427BA994B00052E04 /* SwiftSlideAnimationMuneView.swift in Sources */,
 				84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */,
+				844ECB4327F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift in Sources */,
 				84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
 				84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */,
