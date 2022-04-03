@@ -60,7 +60,7 @@ class WW_ComplexOrderListCell: UITableViewCell {
         self.replyTitleLabel.snp.makeConstraints { make in
             make.left.equalTo(self.contentView).offset(14)
             make.top.equalTo(self.replyContextLabel.snp_top)
-            make.width.equalTo(30)
+//            make.width.equalTo(30)
             make.height.equalTo(18)
         }
         self.paymentBtn.snp.makeConstraints { make in
@@ -132,7 +132,7 @@ class WW_ComplexOrderListCell: UITableViewCell {
         btn.setTitle("待支付", for: .normal)
         btn.setTitleColor(.black, for: .normal)
         btn.addTarget(self, action: #selector(paymentClick), for: .touchUpInside)
-        btn.layer.cornerRadius = 12
+        btn.layer.cornerRadius = 16
         btn.layer.borderWidth = 1
         btn.layer.borderColor = UIColor.lightGray.cgColor
         return btn
@@ -142,7 +142,7 @@ class WW_ComplexOrderListCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.isUserInteractionEnabled = true
-        self.selectionStyle = .default
+        self.selectionStyle = .none
         self.backgroundColor = UIColor(red: 243/255, green: 245/255, blue: 248/255, alpha: 1)
         creatUI()
     }

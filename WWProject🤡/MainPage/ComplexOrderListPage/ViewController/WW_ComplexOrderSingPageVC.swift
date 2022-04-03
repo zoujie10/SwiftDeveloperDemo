@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ 修改 orderList.geojson 下单时间  调定时器
+ */
 class WW_ComplexOrderSingPageVC: WW_MainBaseVC {
    
     let viewModel = WW_ComplexOrderListViewModel()
@@ -135,6 +137,8 @@ extension WW_ComplexOrderSingPageVC: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! WW_ComplexOrderListCell
         let model = self.viewModel.productsArray[indexPath.row]
         cell.timeLineLabel.text = model.placedAt
+        cell.replyTitleLabel.text = "订单编号:\(model.code ?? "0")"
+        cell.reportPriceLabel.text = "合计：￥\(model.grandTotal ?? 0)元"
         cell.collectionView.updateDate(dataArray: model.items)
         if model.status == "SUBMITTED"{
             if (model.time! > 0){

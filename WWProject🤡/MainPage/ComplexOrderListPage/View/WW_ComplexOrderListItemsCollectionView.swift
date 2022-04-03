@@ -76,12 +76,13 @@ class WW_ComplexOrderListItemsCollectionView: UIView,UICollectionViewDelegate,UI
         layOut.itemSize = CGSize.init(width: 100, height: 100)
         layOut.scrollDirection = .horizontal
         layOut.minimumLineSpacing = 0.1
+    
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layOut)
         collectionView.register(WW_ComplexOrderListItem.classForCoder(), forCellWithReuseIdentifier: self.collectionCellID)
         collectionView.backgroundColor = UIColor.white
         collectionView.delegate = self
         collectionView.dataSource = self
-       
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
     
