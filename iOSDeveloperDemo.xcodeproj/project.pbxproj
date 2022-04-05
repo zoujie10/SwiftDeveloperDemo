@@ -457,6 +457,8 @@
 		847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeCouponCell.swift; sourceTree = "<group>"; };
 		847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelCell.swift; sourceTree = "<group>"; };
 		847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeMagicCubeCell.swift; sourceTree = "<group>"; };
+		8483704727FC37F40012402C /* cartData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartData.geojson; sourceTree = "<group>"; };
+		8483704827FC3AD90012402C /* WW_CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartItems.swift; sourceTree = "<group>"; };
 		848A465420CE1DA100F982F2 /* AppStatusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
 		848A465520CE1DA100F982F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		848A465620CE1DA100F982F2 /* Philosopher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
@@ -827,6 +829,10 @@
 		8438A01627EFFFF800F30F6A /* CartPage */ = {
 			isa = PBXGroup;
 			children = (
+				8483704627FC37D30012402C /* ViewController */,
+				8483704527FC37CE0012402C /* View */,
+				8483704427FC37C60012402C /* ViewModel */,
+				8483704327FC37C00012402C /* Model */,
 			);
 			path = CartPage;
 			sourceTree = "<group>";
@@ -1302,6 +1308,36 @@
 				84598C0F234851B900E72C8B /* NoteBL.swift */,
 			);
 			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		8483704327FC37C00012402C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8483704827FC3AD90012402C /* WW_CartItems.swift */,
+				8483704727FC37F40012402C /* cartData.geojson */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8483704427FC37C60012402C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8483704527FC37CE0012402C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8483704627FC37D30012402C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		848A465320CE1DA100F982F2 /* Model */ = {
