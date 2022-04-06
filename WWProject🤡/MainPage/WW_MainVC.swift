@@ -49,7 +49,8 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
                    self.swiftStringFromClass(cls: WW_HeroListVC.self),
                    self.swiftStringFromClass(cls: WW_SearchHotWordsVC.self),
                    self.swiftStringFromClass(cls: WW_HomeListVC.self),
-                   self.swiftStringFromClass(cls: WW_CustomerMainVC.self)
+                   self.swiftStringFromClass(cls: WW_CustomerMainVC.self),
+                   self.swiftStringFromClass(cls: WW_CartInfoVC.self)
         ]
     }
     //MARK: UITableview data source

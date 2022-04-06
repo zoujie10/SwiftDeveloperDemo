@@ -41,3 +41,7 @@ let WW_kGuessYourLikeUrl  = "appapi/root-ceo-commodity/commodityApi/commodityMor
 
 //我的订单 列表
 let WW_OrderListUrl = "appapi/root-ceo-order/orderApi/queryOrderList"
+
+
+//购物车
+let WW_CartInfoUrl = "appapi/root-ceo-order/member/cartApi/get"

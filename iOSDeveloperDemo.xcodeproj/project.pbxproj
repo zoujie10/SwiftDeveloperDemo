@@ -189,6 +189,10 @@
 		847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */; };
 		847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */; };
 		847E951A279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */; };
+		8483704A27FC6C0B0012402C /* WW_CartInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */; };
+		8483705727FDA05E0012402C /* cartData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8483704727FC37F40012402C /* cartData.geojson */; };
+		8483705827FDA1DD0012402C /* WW_CartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704827FC3AD90012402C /* WW_CartItems.swift */; };
+		8483705A27FDC8020012402C /* WW_CartInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483705927FDC8020012402C /* WW_CartInfoVC.swift */; };
 		848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465420CE1DA100F982F2 /* AppStatusObserver.swift */; };
 		848A465820CE1DA100F982F2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465520CE1DA100F982F2 /* Singleton.swift */; };
 		848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465620CE1DA100F982F2 /* Philosopher.swift */; };
@@ -459,6 +463,8 @@
 		847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeMagicCubeCell.swift; sourceTree = "<group>"; };
 		8483704727FC37F40012402C /* cartData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartData.geojson; sourceTree = "<group>"; };
 		8483704827FC3AD90012402C /* WW_CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartItems.swift; sourceTree = "<group>"; };
+		8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInfoViewModel.swift; sourceTree = "<group>"; };
+		8483705927FDC8020012402C /* WW_CartInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInfoVC.swift; sourceTree = "<group>"; };
 		848A465420CE1DA100F982F2 /* AppStatusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
 		848A465520CE1DA100F982F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		848A465620CE1DA100F982F2 /* Philosopher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
@@ -1322,6 +1328,7 @@
 		8483704427FC37C60012402C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1336,6 +1343,7 @@
 		8483704627FC37D30012402C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8483705927FDC8020012402C /* WW_CartInfoVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1701,6 +1709,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8483705727FDA05E0012402C /* cartData.geojson in Resources */,
 				844ECB3F27F72CEF007FC276 /* orderList.geojson in Resources */,
 				84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */,
 				844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */,
@@ -1786,6 +1795,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8483705827FDA1DD0012402C /* WW_CartItems.swift in Sources */,
 				84582FDA27C7BA30005124CC /* WW_CustomerMainVC.swift in Sources */,
 				8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */,
 				846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */,
@@ -1828,6 +1838,7 @@
 				84DAA54A27770F8900A97694 /* WW_BaseNavVC.swift in Sources */,
 				842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
+				8483705A27FDC8020012402C /* WW_CartInfoVC.swift in Sources */,
 				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */,
 				84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */,
@@ -1870,6 +1881,7 @@
 				84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */,
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */,
+				8483704A27FC6C0B0012402C /* WW_CartInfoViewModel.swift in Sources */,
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				844ECB4127F83B66007FC276 /* WW_ComplexOrderListCell.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,

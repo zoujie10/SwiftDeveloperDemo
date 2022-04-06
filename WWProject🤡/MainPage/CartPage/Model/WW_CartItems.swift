@@ -6,7 +6,9 @@
 //  Copyright © 2022 Zoujie. All rights reserved.
 //
 
+import UIKit
 import Foundation
+
 class WW_CommodityBatch:Codable{
     var sku: String?
     var productionDate: String?
@@ -145,13 +147,14 @@ class WW_ComplimentaryModel:Codable{
     //满赠叠加商品标识
     var repeatFlag: String?
 }
-class WW_ActivityHeaderModel:Codable{
+
+class WW_ActivityHeaderModel : Codable{
     //规则 1、满赠；2、每满赠
-    var rule: String?
+    var rule : String?
     //1-未满 2-已满
-    var flag: String?
+    var flag : String?
     //赠送件数
-    var pieceNo: String?
+    var pieceNo : String?
     //差额
     var marginAmount: String?
     //满额
@@ -161,9 +164,9 @@ class WW_ActivityHeaderModel:Codable{
     //可选择赠品总金额
     var giftAmount: String?
     //赠品list
-    var actBuyActivityProductList: [WW_ComplimentaryModel]?
+    var actBuyActivityProductList: [WW_ComplimentaryModel]
     //选中赠品list
-    var checkedPtKeyList: [AnyHashable]?
+//    var checkedPtKeyList: [AnyHashable]?
     //阶梯所属位置  1:头部 2:中间阶梯 3:尾部阶梯
     var isMiddle: String?
     //随机叠加 1.叠加 0 不叠加
@@ -178,17 +181,17 @@ class WW_RepeatFalg:Codable{
 //floor 3
 class WW_ActivityModel : Codable{
     //活动id
-    var activityId;
+    var activityId:Int?
     //isFull
-    var isFull;
+    var isFull:String?
     //活动类型 1 -随机  2-买家自选  3-指定送
-    var way;
+    var way:String?
     //赠品信息
-    var subtotalTipsResponse:WW_ActivityHeaderModel;
+    var subtotalTipsResponse : WW_ActivityHeaderModel?
     //参加活动的购物车商品
     var cartItemList:[WW_CartItem]
     // 0 普通商品 1 满赠活动商品 2 秒杀活动商品
-    var type:String?
+    var type:Int?
     //是满赠和秒杀活动;
     var isGiftWithSkill:Bool?
 }
@@ -200,7 +203,7 @@ class WW_CartItems :Codable{
     //失效商品列表
     var invalid : [WW_ActivityModel]
     //优惠信息
-    var  wpCartDiscountInfo:WW_CartDiscountInfo
+    var  wpCartDiscountInfo:WW_CartDiscountInfo?
     //叠加活动信息
     var  repeatFlag:WW_RepeatFalg?
     //小标是否选择赠品弹窗

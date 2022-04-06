@@ -22,6 +22,7 @@ enum NetworkAPI {
     case GuessYourLike(pageIndex : Int)
     case HomePageList
     case ComplexOrderList(currentpage:Int,orderStatus:String)
+    case CartInfo
 }
 extension NetworkAPI:TargetType{
     
@@ -50,6 +51,8 @@ extension NetworkAPI:TargetType{
                 return WW_kHomeListUrl
             case .ComplexOrderList:
                 return WW_OrderListUrl
+            case .CartInfo:
+                return WW_CartInfoUrl
         }
     }
     
@@ -62,6 +65,8 @@ extension NetworkAPI:TargetType{
     public var task: Task {
         var parmetersInner: [String : Any] = [:]
         parmetersInner["memberKey"] = "17721789"
+        parmetersInner["channelId"] = "S09033033001"
+        parmetersInner["isWholeSale"] = "1"
         switch self {
             case .HomePageList:
                 parmetersInner["channelId"] = "B06022853001"//S09033033001"
@@ -114,6 +119,10 @@ extension NetworkAPI:TargetType{
                 parmetersInner["orderType"] = "2"
                 parmetersInner["status"] = "0"
                 parmetersInner["shareFlag"] = status
+                break
+            case .CartInfo:
+                parmetersInner["version"] = "3"
+                parmetersInner["roleKey"] = "DN"
                 break
         }
         
