@@ -23,84 +23,84 @@ class WW_ProductTemplate:Codable{
     //商品图片
     var list_images: String?
     //商品图片
-    var status: String?
+    var status: Int?
     //商品真实价格
-    var retailPrice: String?
+    var retailPrice: Float?
     //商品供货价格
-    var supplyPrice: String?
+    var supplyPrice: Float?
     //商品原始价格
-    var origPrice: String?
+    var origPrice: Float?
     //商品名称
     var name: String?
     //商品库存
-    var inventory: String?
+    var inventory: Int?
 }
 
 class WW_CartItem:Codable{
     //单个商品
     var wpProductTemplate: WW_ProductTemplate?
     //商品的数量
-    var quantity: String?
+    var quantity: Int?
     //商品的折扣
-    var discountPercentage: String?
+    var discountPercentage: Float?
     //商品的类型  1 零售  2箱购
     var orderType: String?
     //商品的key
-    var productTemplateKey: String?
+    var productTemplateKey: Int?
     //商品的是否选中  1 选中  0 不选中
-    var isSelect = false
+    var isSelect : Int?
     //删除商品的是否选中  1 选中  0 不选中
-    var isDeleteSelect = false
+    var isDeleteSelect : Int?
     //活动id
-    var activityId: String?
+    var activityId: Int?
     //商品参加活动的次数
-    var ptKeyActCount: String?
+    var ptKeyActCount: Int?
     //秒杀活动id
-    var seckillActivityId: String?
+    var seckillActivityId: Int?
     //是否是秒杀商品
-    var isSeckill = false
+    var isSeckill : Int
     //活动秒杀价格
-    var seckillPrice: String?
+    var seckillPrice: Float?
     //即将上涨秒杀价格
-    var increasePrice: String?
+    var increasePrice: Float?
     //秒杀商品剩余库存
-    var buyCount: String?
+    var buyCount: Int?
     //是否限购
-    var isLimit: String?
+    var isLimit: Int?
     //限购数量
-    var limitCount: String?
+    var limitCount: Int?
     //活动状态  1 未开始  2 进行中 3 已结束
-    var status: String?
+    var status: Int?
     //秒杀活动开始时间
     var endTime: String?
     //当前时间时间
     var currentTime: String?
     //原始价格
-    var originalPrice: String?
+    var originalPrice: Float?
     //积分分摊金额
-    var discountPointAmount: String?
+    var discountPointAmount: Float?
     //优惠券分摊金额
-    var discountVoucherAmount: String?
+    var discountVoucherAmount: Float?
     //优惠分摊金额
-    var singularDiscountAmount: String?
+    var singularDiscountAmount: Float?
     //批次信息
     var commodityBatchList: [WW_CommodityBatch]?
     /// 最小销售数量
-    var startSaleNum: String?
+    var startSaleNum: Int?
     /// 递增数量
-    var buyAddNum: String?
+    var buyAddNum: Int?
     /// 限购
-    var normalLimitCount: String?
+    var normalLimitCount: Int?
     /// 单位
     var unit: String?
     /// 最小单位
     var soldUnit: String?
     // 销售数量是否需要遵守低则规则 （自定义字段）
-    var orderSpecRule = false
+    var orderSpecRule : Int?
     // 叠加活动商品
-    var repeatFlag: String?
+    var repeatFlag: Int?
     //是否是新人商品
-    var isOnlyNewMember: String?
+    var isOnlyNewMember: Int?
 }
 //
 class WW_ComplimentaryModel:Codable{
