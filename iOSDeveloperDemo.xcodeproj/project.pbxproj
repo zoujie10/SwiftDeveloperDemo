@@ -193,6 +193,10 @@
 		8483705727FDA05E0012402C /* cartData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8483704727FC37F40012402C /* cartData.geojson */; };
 		8483705827FDA1DD0012402C /* WW_CartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704827FC3AD90012402C /* WW_CartItems.swift */; };
 		8483705A27FDC8020012402C /* WW_CartInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483705927FDC8020012402C /* WW_CartInfoVC.swift */; };
+		8483705F27FF1BB20012402C /* WW_CartNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483705E27FF1BB20012402C /* WW_CartNormalCell.swift */; };
+		8483706127FF1CAE0012402C /* WW_CartSeckillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483706027FF1CAE0012402C /* WW_CartSeckillCell.swift */; };
+		84837063280016760012402C /* WW_CartActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84837062280016760012402C /* WW_CartActivityCell.swift */; };
+		84837065280017530012402C /* WW_CartInvaildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84837064280017530012402C /* WW_CartInvaildCell.swift */; };
 		848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465420CE1DA100F982F2 /* AppStatusObserver.swift */; };
 		848A465820CE1DA100F982F2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465520CE1DA100F982F2 /* Singleton.swift */; };
 		848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465620CE1DA100F982F2 /* Philosopher.swift */; };
@@ -465,6 +469,10 @@
 		8483704827FC3AD90012402C /* WW_CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartItems.swift; sourceTree = "<group>"; };
 		8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInfoViewModel.swift; sourceTree = "<group>"; };
 		8483705927FDC8020012402C /* WW_CartInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInfoVC.swift; sourceTree = "<group>"; };
+		8483705E27FF1BB20012402C /* WW_CartNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartNormalCell.swift; sourceTree = "<group>"; };
+		8483706027FF1CAE0012402C /* WW_CartSeckillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartSeckillCell.swift; sourceTree = "<group>"; };
+		84837062280016760012402C /* WW_CartActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartActivityCell.swift; sourceTree = "<group>"; };
+		84837064280017530012402C /* WW_CartInvaildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInvaildCell.swift; sourceTree = "<group>"; };
 		848A465420CE1DA100F982F2 /* AppStatusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
 		848A465520CE1DA100F982F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		848A465620CE1DA100F982F2 /* Philosopher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
@@ -1336,6 +1344,10 @@
 		8483704527FC37CE0012402C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8483705E27FF1BB20012402C /* WW_CartNormalCell.swift */,
+				8483706027FF1CAE0012402C /* WW_CartSeckillCell.swift */,
+				84837062280016760012402C /* WW_CartActivityCell.swift */,
+				84837064280017530012402C /* WW_CartInvaildCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1865,6 +1877,7 @@
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
 				84582FF127D0FAAA005124CC /* WW_FallFreeBehavior.swift in Sources */,
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
+				8483706127FF1CAE0012402C /* WW_CartSeckillCell.swift in Sources */,
 				843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */,
 				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				847E951A279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift in Sources */,
@@ -1906,6 +1919,7 @@
 				844F3F08275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
 				844F3EE12758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift in Sources */,
+				84837063280016760012402C /* WW_CartActivityCell.swift in Sources */,
 				84DAA539277367D700A97694 /* WW_SearchResultVC.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
 				84DAA53E2774738400A97694 /* WW_HeroListVC.swift in Sources */,
@@ -1976,9 +1990,11 @@
 				8440F0FE27857FA9001FE7A1 /* StringExtension.swift in Sources */,
 				84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
+				84837065280017530012402C /* WW_CartInvaildCell.swift in Sources */,
 				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,
 				84710DE5273BFE9100A40507 /* SwiftSoundVideoVC.swift in Sources */,
 				84DAA548277601CA00A97694 /* WW_HeroListFamousSayingCell.swift in Sources */,
+				8483705F27FF1BB20012402C /* WW_CartNormalCell.swift in Sources */,
 				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */,
