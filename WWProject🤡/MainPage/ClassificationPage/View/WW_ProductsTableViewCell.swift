@@ -49,10 +49,7 @@ class WW_ProductsTableViewCell: UITableViewCell {
         self.selectionStyle = .default
         creatUI()
     }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+   
     lazy var iconImageView : UIImageView = {
         let iconImageView = UIImageView()
         return iconImageView
@@ -94,5 +91,9 @@ class WW_ProductsTableViewCell: UITableViewCell {
         if (self.clickBlock != nil) {
             self.clickBlock!()
         }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

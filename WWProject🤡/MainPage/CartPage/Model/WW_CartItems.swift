@@ -173,10 +173,26 @@ class WW_ActivityHeaderModel : Codable{
     var randomAdd: String?
 }
 class WW_CartDiscountInfo:Codable{
-    
+    //优惠后的总价
+    var grandTotal: Float?
+    //共使用价格
+    var pointDeductionRmbAmount: Float?
+    //共使用优惠券
+    var couponDiscountAmount: Float?
+    //优惠券是否未领标示（-1未领取；0领取）
+    var usedCouponStatus: Int?
+    //优惠券code
+    var couponCode: String?
+    //积分数量
+    var pointAmount: Float?
+    /// 购物车商品总金额
+    var cartAllAmount: Float?
+    /// 满减
+    var fullReductionAmount: Float?
 }
 class WW_RepeatFalg:Codable{
-    
+//    var repeatActList : []
+//    var repeatCartItemList : []
 }
 //floor 3
 class WW_ActivityModel : Codable{
@@ -203,9 +219,9 @@ class WW_CartItems :Codable{
     //失效商品列表
     var invalid : [WW_ActivityModel]
     //优惠信息
-    var  wpCartDiscountInfo:WW_CartDiscountInfo?
+    var wpCartDiscountInfo:WW_CartDiscountInfo?
     //叠加活动信息
-    var  repeatFlag:WW_RepeatFalg?
+    var repeatFlag:WW_RepeatFalg?
     //小标是否选择赠品弹窗
     var popupFlag:Bool?
     //弹窗文案

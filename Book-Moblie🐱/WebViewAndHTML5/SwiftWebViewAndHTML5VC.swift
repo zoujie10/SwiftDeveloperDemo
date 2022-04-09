@@ -112,7 +112,7 @@ class SwiftWebViewAndHTML5VC: UIViewController,WKScriptMessageHandler,WKNavigati
         let url : NSURL = URL.init(string: self.url)! as NSURL
         let request = NSURLRequest(url: url as URL)
         self.webView.load(request as URLRequest)
-//        webView.loadHTMLString("", baseURL: url!)
+//        webView.loadHTMLString("", baseURL:nil)
         
         /**
                 获取消息 (_:self,name: "showMessage")
