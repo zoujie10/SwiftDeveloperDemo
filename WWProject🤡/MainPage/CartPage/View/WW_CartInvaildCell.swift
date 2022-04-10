@@ -10,12 +10,7 @@ import UIKit
 
 class WW_CartInvaildCell: UITableViewCell {
    
-//    var productTitle: NSAttributedString?
-//    var productImageUrl: String?
-//    var productPrice: NSAttributedString?
-//    var productSpec: NSAttributedString?
-//    var productCount: String?
-//    var productDiscount: String?
+
 //    /// 背景view
 //    var backgroudView: UIView?
 //    /// 商品图片

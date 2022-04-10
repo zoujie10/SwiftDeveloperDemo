@@ -198,6 +198,7 @@
 		84837063280016760012402C /* WW_CartActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84837062280016760012402C /* WW_CartActivityCell.swift */; };
 		84837065280017530012402C /* WW_CartInvaildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84837064280017530012402C /* WW_CartInvaildCell.swift */; };
 		848370692801BBEE0012402C /* WW_CartInvaildHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */; };
+		8483706B2802D7070012402C /* WW_CartEditNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483706A2802D7070012402C /* WW_CartEditNumView.swift */; };
 		848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465420CE1DA100F982F2 /* AppStatusObserver.swift */; };
 		848A465820CE1DA100F982F2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465520CE1DA100F982F2 /* Singleton.swift */; };
 		848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465620CE1DA100F982F2 /* Philosopher.swift */; };
@@ -475,6 +476,7 @@
 		84837062280016760012402C /* WW_CartActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartActivityCell.swift; sourceTree = "<group>"; };
 		84837064280017530012402C /* WW_CartInvaildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInvaildCell.swift; sourceTree = "<group>"; };
 		848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInvaildHeaderView.swift; sourceTree = "<group>"; };
+		8483706A2802D7070012402C /* WW_CartEditNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartEditNumView.swift; sourceTree = "<group>"; };
 		848A465420CE1DA100F982F2 /* AppStatusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
 		848A465520CE1DA100F982F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		848A465620CE1DA100F982F2 /* Philosopher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
@@ -1352,6 +1354,7 @@
 				8483706027FF1CAE0012402C /* WW_CartSeckillCell.swift */,
 				84837062280016760012402C /* WW_CartActivityCell.swift */,
 				84837064280017530012402C /* WW_CartInvaildCell.swift */,
+				8483706A2802D7070012402C /* WW_CartEditNumView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2005,6 +2008,7 @@
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
 				84582FE027CB9094005124CC /* SwiftCubeDisplayView.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
+				8483706B2802D7070012402C /* WW_CartEditNumView.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,
 				844F3F04275DBAFE006762D0 /* WW_AfterDetailVC.swift in Sources */,
 				8440F0FE27857FA9001FE7A1 /* StringExtension.swift in Sources */,
