@@ -7,12 +7,17 @@
 //
 
 import UIKit
+enum Cart_CellType : Int {
+    case Cart_CellType_Normal = 0
+    case Cart_CellType_Activity = 1
+    case Cart_CellType_SecondKill = 2
+}
 
 class WW_CartInfoViewModel: WW_BaseViewModel {
     
     var arrayAllDatas = [WW_ActivityModel]()
-    var arrayVaildDatas = [WW_ActivityModel]()
-    var arrayInVaildDatas = [WW_ActivityModel]()
+    var arrayVaildData = [WW_ActivityModel]()
+    var arrayInVaildData = [WW_ActivityModel]()
     
     func reloaCartInfo(successBlock:@escaping Success_Block,failureBlock:@escaping Failure_Block){
         NetworkProvider.request(NetworkAPI.CartInfo) { result in
@@ -33,10 +38,24 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
             let responese = try JSONSerialization.jsonObject(with: infoJsonData, options: .mutableContainers) //read
             let myDecoder = JSONDecoder()
             let orderListModel = try myDecoder.decode(WW_CartItemsData?.self, from: infoJsonData)
-            
+            self.arrayInVaildData = orderListModel!.data!.invalid
+            self.arrayVaildData = orderListModel!.data!.valid
+            self.arrayAllDatas.append(contentsOf: orderListModel!.data!.invalid)
+            self.arrayAllDatas.append(contentsOf: orderListModel!.data!.invalid)
             print("Response:",responese)
         }catch let error as Error?{
             print("data failure",error!)
         }
+    }
+    
+    
+    func configCellModelData(index:Int)->WW_ActivityModel{
+        let cellModel : WW_ActivityModel = self.arrayAllDatas[index]
+        return cellModel
+    }
+    
+    func getCellType(index:Int) -> Cart_CellType{
+        let cellModel : WW_ActivityModel = self.arrayAllDatas[index]
+        return Cart_CellType(rawValue: cellModel.type!)!
     }
 }
