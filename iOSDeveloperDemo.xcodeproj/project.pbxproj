@@ -144,10 +144,6 @@
 		845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */; };
 		845EC808271FEED90006651E /* WWAfterSalePicEgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */; };
 		8460CE78278826CB00E7790A /* WW_SearchResultProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */; };
-		8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
-		8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01821393AE100FC6B5C /* ZJArray.swift */; };
-		8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01921393AE100FC6B5C /* ZJDictionary.swift */; };
-		8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */; };
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
 		846BB13520AC26B500268E6D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB13420AC26B500268E6D /* Cell.swift */; };
 		84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */; };
@@ -199,6 +195,13 @@
 		84837065280017530012402C /* WW_CartInvaildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84837064280017530012402C /* WW_CartInvaildCell.swift */; };
 		848370692801BBEE0012402C /* WW_CartInvaildHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */; };
 		8483706B2802D7070012402C /* WW_CartEditNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483706A2802D7070012402C /* WW_CartEditNumView.swift */; };
+		8483707628046FFC0012402C /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707228046FFC0012402C /* ZJString.swift */; };
+		8483707728046FFC0012402C /* ZJArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707328046FFC0012402C /* ZJArray.swift */; };
+		8483707828046FFC0012402C /* ZJDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707428046FFC0012402C /* ZJDictionary.swift */; };
+		8483707928046FFC0012402C /* ZJSetAndDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707528046FFC0012402C /* ZJSetAndDictionary.swift */; };
+		8483707B2804701A0012402C /* ZJAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707A2804701A0012402C /* ZJAlgorithm.swift */; };
+		8483707D28056D640012402C /* WW_CartBottomDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707C28056D640012402C /* WW_CartBottomDeleteView.swift */; };
+		8483707F28056D860012402C /* WW_CartBottomCalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483707E28056D860012402C /* WW_CartBottomCalculateView.swift */; };
 		848A465720CE1DA100F982F2 /* AppStatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465420CE1DA100F982F2 /* AppStatusObserver.swift */; };
 		848A465820CE1DA100F982F2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465520CE1DA100F982F2 /* Singleton.swift */; };
 		848A465920CE1DA100F982F2 /* Philosopher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A465620CE1DA100F982F2 /* Philosopher.swift */; };
@@ -250,7 +253,6 @@
 		84E37BE920A02D3B0031DEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */; };
 		84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BF320A02D3B0031DEEE /* iOSDeveloperDemoTests.swift */; };
 		84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E37BFE20A038760031DEEE /* TextViewController.swift */; };
-		84E55ABC249F0EAF00A152A8 /* ZJString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E01721393AE100FC6B5C /* ZJString.swift */; };
 		84E55ABE24C8735E00A152A8 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E55ABD24C8735E00A152A8 /* Events.swift */; };
 		84E55AC024C8746F00A152A8 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E55ABF24C8746F00A152A8 /* Schedule.swift */; };
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
@@ -422,10 +424,6 @@
 		845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAfterSaleDisplayPicEgVC.swift; sourceTree = "<group>"; };
 		845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAfterSalePicEgCell.swift; sourceTree = "<group>"; };
 		8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchResultProductsCell.swift; sourceTree = "<group>"; };
-		8467E01721393AE100FC6B5C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJString.swift; path = DataStruct/ZJString.swift; sourceTree = SOURCE_ROOT; };
-		8467E01821393AE100FC6B5C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJArray.swift; path = DataStruct/ZJArray.swift; sourceTree = SOURCE_ROOT; };
-		8467E01921393AE100FC6B5C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJDictionary.swift; path = DataStruct/ZJDictionary.swift; sourceTree = SOURCE_ROOT; };
-		8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJSetAndDictionary.swift; path = DataStruct/ZJSetAndDictionary.swift; sourceTree = SOURCE_ROOT; };
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		846BB13420AC26B500268E6D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftImageAndVideoVC.swift; sourceTree = "<group>"; };
@@ -477,6 +475,13 @@
 		84837064280017530012402C /* WW_CartInvaildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInvaildCell.swift; sourceTree = "<group>"; };
 		848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInvaildHeaderView.swift; sourceTree = "<group>"; };
 		8483706A2802D7070012402C /* WW_CartEditNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartEditNumView.swift; sourceTree = "<group>"; };
+		8483707228046FFC0012402C /* ZJString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJString.swift; sourceTree = "<group>"; };
+		8483707328046FFC0012402C /* ZJArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJArray.swift; sourceTree = "<group>"; };
+		8483707428046FFC0012402C /* ZJDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJDictionary.swift; sourceTree = "<group>"; };
+		8483707528046FFC0012402C /* ZJSetAndDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSetAndDictionary.swift; sourceTree = "<group>"; };
+		8483707A2804701A0012402C /* ZJAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJAlgorithm.swift; sourceTree = "<group>"; };
+		8483707C28056D640012402C /* WW_CartBottomDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartBottomDeleteView.swift; sourceTree = "<group>"; };
+		8483707E28056D860012402C /* WW_CartBottomCalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartBottomCalculateView.swift; sourceTree = "<group>"; };
 		848A465420CE1DA100F982F2 /* AppStatusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusObserver.swift; sourceTree = "<group>"; };
 		848A465520CE1DA100F982F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		848A465620CE1DA100F982F2 /* Philosopher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Philosopher.swift; sourceTree = "<group>"; };
@@ -1175,18 +1180,6 @@
 			path = MainPage;
 			sourceTree = "<group>";
 		};
-		8467E01621393A9800FC6B5C /* DataStruct */ = {
-			isa = PBXGroup;
-			children = (
-				8467E01821393AE100FC6B5C /* ZJArray.swift */,
-				8467E01921393AE100FC6B5C /* ZJDictionary.swift */,
-				8467E01A21393AE100FC6B5C /* ZJSetAndDictionary.swift */,
-				8467E01721393AE100FC6B5C /* ZJString.swift */,
-			);
-			name = DataStruct;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		84710DA327243C6A00A40507 /* ImageAndVideo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1355,6 +1348,8 @@
 				84837062280016760012402C /* WW_CartActivityCell.swift */,
 				84837064280017530012402C /* WW_CartInvaildCell.swift */,
 				8483706A2802D7070012402C /* WW_CartEditNumView.swift */,
+				8483707C28056D640012402C /* WW_CartBottomDeleteView.swift */,
+				8483707E28056D860012402C /* WW_CartBottomCalculateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1380,6 +1375,18 @@
 				848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */,
 			);
 			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		8483707128046FFC0012402C /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				8483707228046FFC0012402C /* ZJString.swift */,
+				8483707328046FFC0012402C /* ZJArray.swift */,
+				8483707428046FFC0012402C /* ZJDictionary.swift */,
+				8483707528046FFC0012402C /* ZJSetAndDictionary.swift */,
+				8483707A2804701A0012402C /* ZJAlgorithm.swift */,
+			);
+			path = DataStruct;
 			sourceTree = "<group>";
 		};
 		848A465320CE1DA100F982F2 /* Model */ = {
@@ -1563,7 +1570,7 @@
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
-				8467E01621393A9800FC6B5C /* DataStruct */,
+				8483707128046FFC0012402C /* DataStruct */,
 				4F411ACC228AB9DA001BF135 /* DesignPattern */,
 				84E9DB6520AAB61100C65A12 /* Resource */,
 				84D305BC22D1A25E001AC087 /* OlympicProject */,
@@ -1851,6 +1858,7 @@
 				84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */,
 				84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */,
 				849387932622968700C2914C /* UIViewControllerVC.swift in Sources */,
+				8483707F28056D860012402C /* WW_CartBottomCalculateView.swift in Sources */,
 				8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */,
 				8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
@@ -1862,6 +1870,7 @@
 				84D95B2327A6CEED00052E04 /* WW_HomeFreeGiftCell.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
+				8483707D28056D640012402C /* WW_CartBottomDeleteView.swift in Sources */,
 				8453CFD5277C532000FC6C9F /* WW_SearchHotWordsModel.swift in Sources */,
 				8432086027905C3400E5DC09 /* WW_HomePageListModel.swift in Sources */,
 				84DAA5332771CD3500A97694 /* WW_SingleOrderBaseVC.swift in Sources */,
@@ -1873,11 +1882,9 @@
 				842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */,
 				848A467F20CE6DF600F982F2 /* NoteByPlist.swift in Sources */,
 				8483705A27FDC8020012402C /* WW_CartInfoVC.swift in Sources */,
-				8467E01B21393AE100FC6B5C /* ZJString.swift in Sources */,
 				842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */,
 				84710DBD272B9D5000A40507 /* ZJ_RightTableView.swift in Sources */,
 				842991D42743A5A400A50077 /* CTImageView.swift in Sources */,
-				8467E01C21393AE100FC6B5C /* ZJArray.swift in Sources */,
 				84516C4F232D41CD003F9F6F /* MapKitViewController.swift in Sources */,
 				84582FEB27D0BAE1005124CC /* WW_DefaultBehavior.swift in Sources */,
 				84598C10234851B900E72C8B /* NoteBL.swift in Sources */,
@@ -1901,7 +1908,6 @@
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
 				8483706127FF1CAE0012402C /* WW_CartSeckillCell.swift in Sources */,
 				843208662792DBB000E5DC09 /* WW_HomePageListViewModel.swift in Sources */,
-				8467E01E21393AE100FC6B5C /* ZJSetAndDictionary.swift in Sources */,
 				847E951A279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift in Sources */,
 				84582FDC27C7E468005124CC /* Global.swift in Sources */,
 				842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */,
@@ -1914,6 +1920,7 @@
 				84582FD127C77BFB005124CC /* WW_CustomerChooseHeaderView.swift in Sources */,
 				84DAA52D276B0B7D00A97694 /* WW_InformListViewModel.swift in Sources */,
 				84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */,
+				8483707828046FFC0012402C /* ZJDictionary.swift in Sources */,
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
 				844F3EE32758B06F006762D0 /* WW_ClassificationRightProductsModel.swift in Sources */,
 				8483704A27FC6C0B0012402C /* WW_CartInfoViewModel.swift in Sources */,
@@ -1937,6 +1944,7 @@
 				84710DD627342B3400A40507 /* MyNetWorkReachabilityManager.swift in Sources */,
 				84710DA727245FD200A40507 /* SwiftCocoaPodsVC.swift in Sources */,
 				84710DE127382BC400A40507 /* SwiftDataPersistenceVC.swift in Sources */,
+				8483707628046FFC0012402C /* ZJString.swift in Sources */,
 				8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */,
 				844F3F08275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
@@ -1951,6 +1959,7 @@
 				844ECB4327F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift in Sources */,
 				84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
+				8483707728046FFC0012402C /* ZJArray.swift in Sources */,
 				84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */,
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
 				84DAA537277367C400A97694 /* WW_SearchHotWordsVC.swift in Sources */,
@@ -1998,6 +2007,7 @@
 				84DAA5442774D02800A97694 /* WW_JXSegmentContentBaseVC.swift in Sources */,
 				8446EC6627F556E400F0D235 /* WW_ComplexOrderListViewModel.swift in Sources */,
 				84EE672720BD32C00051F86C /* PageViewController.swift in Sources */,
+				8483707928046FFC0012402C /* ZJSetAndDictionary.swift in Sources */,
 				844F3EFE275CEF05006762D0 /* SwiftReleaseIPAVC.swift in Sources */,
 				8440F1002786C1AF001FE7A1 /* WW_SearchResultViewModel.swift in Sources */,
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
@@ -2019,7 +2029,6 @@
 				84710DE5273BFE9100A40507 /* SwiftSoundVideoVC.swift in Sources */,
 				84DAA548277601CA00A97694 /* WW_HeroListFamousSayingCell.swift in Sources */,
 				8483705F27FF1BB20012402C /* WW_CartNormalCell.swift in Sources */,
-				8467E01D21393AE100FC6B5C /* ZJDictionary.swift in Sources */,
 				84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */,
 				4F02FD8F22ADF2C600B8CB35 /* CopyPatternDelegate.swift in Sources */,
 				84DAA51F2768817B00A97694 /* UIColorExtension.swift in Sources */,
@@ -2028,6 +2037,7 @@
 				84DAA51C276875BF00A97694 /* WW_BDInformOrderListModel.swift in Sources */,
 				84516C51232D46A5003F9F6F /* MyAnnotation.swift in Sources */,
 				8493878F262295A200C2914C /* UIViewAndCALayerVC.swift in Sources */,
+				8483707B2804701A0012402C /* ZJAlgorithm.swift in Sources */,
 				844F3F10275F3740006762D0 /* WW_LeftTagsTableViewCell.swift in Sources */,
 				844F3F0A275F075E006762D0 /* WW_TagsTableView.swift in Sources */,
 				84582FE727CFA5BE005124CC /* SwiftCAAnimationViewControllerFour.swift in Sources */,
@@ -2055,7 +2065,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E55ABC249F0EAF00A152A8 /* ZJString.swift in Sources */,
 				84E37BF420A02D3B0031DEEE /* iOSDeveloperDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

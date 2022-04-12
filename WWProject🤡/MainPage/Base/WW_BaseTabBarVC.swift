@@ -35,7 +35,7 @@ class WW_BaseTabBarVC: UITabBarController {
         //TextViewController
         let otherVC = TextViewController()
         addChildViewController(otherVC,
-                               title: "其他",
+                               title: "Basic",
                                image: UIImage(named: "ww_tab_bars_cart_default_img"),
                                selectedImage: UIImage(named: "ww_tab_bars_cart_selected_img"))
     }
