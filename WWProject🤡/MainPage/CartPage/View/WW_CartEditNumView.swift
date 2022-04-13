@@ -36,7 +36,9 @@ class WW_CartEditNumView: UIView,UITextFieldDelegate {
     }
     
     func creatUI(){
-
+        self.addSubview(self.minusBtn)
+        self.addSubview(self.addBtn)
+        self.addSubview(self.textField)
         self.minusBtn.snp.makeConstraints { make in
             make.left.top.bottom.equalTo(self)
             make.width.equalTo(self.minusBtn.snp_height)

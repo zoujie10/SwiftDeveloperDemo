@@ -54,6 +54,11 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
         return cellModel
     }
     
+    func getItemInSection(section:NSInteger)->NSInteger{
+        let cellModel : WW_ActivityModel = self.arrayAllDatas[section]
+        return cellModel.cartItemList.count
+    }
+    
     func getCellType(index:Int) -> Cart_CellType{
         let cellModel : WW_ActivityModel = self.arrayAllDatas[index]
         return Cart_CellType(rawValue: cellModel.type!)!

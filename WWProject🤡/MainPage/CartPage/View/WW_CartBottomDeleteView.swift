@@ -29,17 +29,18 @@ class WW_CartBottomDeleteView: UIView {
         self.addSubview(deleteBtn)
         deleteBtn.snp.makeConstraints { make in
             make.top.right.bottom.equalTo(self)
-            make.width.equalTo(65)
+            make.width.equalTo(85)
         }
         self.addSubview(selectBtn)
         selectBtn.snp.makeConstraints { make in
             make.centerY.equalTo(self)
-            make.left.equalTo(self).offset(14)
+            make.left.equalTo(self).offset(25)
         }
         self.addSubview(selectLabel)
         selectLabel.snp.makeConstraints { make in
             make.centerY.equalTo(selectBtn)
-            make.width.equalTo(65)
+            make.width.equalTo(35)
+            make.left.equalTo(selectBtn.snp_right)
         }
     }
     

@@ -29,25 +29,29 @@ class WW_CartBottomCalculateView: UIView {
     func creatUI(){
         self.addSubview(calculateBtn)
         calculateBtn.snp.makeConstraints { make in
-            make.top.right.bottom.equalTo(self)
-            make.width.equalTo(65)
+            make.centerY.equalTo(self)
+            make.right.equalTo(self).offset(-15)
+            make.width.equalTo(95)
+            make.height.equalTo(45)
         }
         self.addSubview(calculateLabel)
         calculateLabel.snp.makeConstraints { make in
             make.centerY.equalTo(calculateBtn)
-            make.right.equalTo(calculateBtn.snp_left)
+            make.right.equalTo(calculateBtn.snp_left).offset(-10)
         }
         
         self.addSubview(selectBtn)
         selectBtn.snp.makeConstraints { make in
             make.centerY.equalTo(self)
-            make.left.equalTo(self).offset(14)
+            make.left.equalTo(self).offset(24)
         }
         self.addSubview(selectLabel)
         selectLabel.snp.makeConstraints { make in
             make.centerY.equalTo(selectBtn)
             make.width.equalTo(35)
+            make.left.equalTo(selectBtn.snp_right)
         }
+        configCalculateContext(amount:"nodata")
     }
     
     @objc func calculateMethod(){
@@ -60,7 +64,7 @@ class WW_CartBottomCalculateView: UIView {
     func configCalculateContext(amount:String){
         let att = NSMutableAttributedString.init(string: "(不含运费)")
         let calculateTitle = NSAttributedString.init(string: "合计:", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 14),NSAttributedStringKey.foregroundColor : UIColor.black])
-        let amount = NSAttributedString.init(string: "17.41", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 14),NSAttributedStringKey.foregroundColor : UIColor(r: 220, g: 222, b: 224)])
+        let amount = NSAttributedString.init(string: "￥17.41", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 14),NSAttributedStringKey.foregroundColor : UIColor(r: 252, g: 85, b: 108)])
         att.append(calculateTitle)
         att.append(amount)
         self.calculateLabel.attributedText = att
@@ -81,9 +85,9 @@ class WW_CartBottomCalculateView: UIView {
         let btn = UIButton()
         btn.setTitle("去结算(0)", for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor(r: 220, g: 222, b: 224)//(220, 222, 224, 1),(r: 252, g: 85, b: 108)
+        btn.backgroundColor = UIColor(r: 252, g: 85, b: 108)//(220, 222, 224, 1),(r: 252, g: 85, b: 108)
         btn.addTarget(self, action: #selector(calculateMethod), for: .touchUpInside)
-        btn.layer.cornerRadius = 12
+        btn.layer.cornerRadius = 18
         return btn
     }()
     
