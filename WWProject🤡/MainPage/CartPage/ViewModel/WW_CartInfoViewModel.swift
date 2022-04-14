@@ -40,7 +40,7 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
             let orderListModel = try myDecoder.decode(WW_CartItemsData?.self, from: infoJsonData)
             self.arrayInVaildData = orderListModel!.data!.invalid
             self.arrayVaildData = orderListModel!.data!.valid
-            self.arrayAllDatas.append(contentsOf: orderListModel!.data!.invalid)
+            self.arrayAllDatas.append(contentsOf: orderListModel!.data!.valid)
             self.arrayAllDatas.append(contentsOf: orderListModel!.data!.invalid)
             print("Response:",responese)
         }catch let error as Error?{

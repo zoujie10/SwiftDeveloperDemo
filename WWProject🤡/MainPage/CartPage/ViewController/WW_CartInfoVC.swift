@@ -27,7 +27,7 @@ class WW_CartInfoVC: WW_MainBaseVC {
         
         refreshTableView.snp.makeConstraints { make in
             make.left.top.right.equalTo(view);
-            make.bottom.equalTo(view).offset(70)
+            make.bottom.equalTo(view).offset(-45)
         }
         
         calculateView.snp.makeConstraints { make in
@@ -122,11 +122,15 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cellType =  self.viewModel.getCellType(index: indexPath.section)
-        
+        let model : WW_ActivityModel = self.viewModel.arrayAllDatas[indexPath.section]
+        let itemModel : WW_CartItem = model.cartItemList[indexPath.row]
         switch cellType {
             case .Cart_CellType_Normal:
-                if indexPath.section == self.viewModel.arrayAllDatas.count{
-                    let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartInvaildCell.classForCoder()), for: indexPath)
+                if indexPath.section == (self.viewModel.arrayAllDatas.count-1){
+                    let cell : WW_CartInvaildCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartInvaildCell.classForCoder()), for: indexPath) as! WW_CartInvaildCell
+                    
+                    cell.configData(model: itemModel)
+                    
                     return cell
                 }else{
                     let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartNormalCell.classForCoder()), for: indexPath)
@@ -159,7 +163,7 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
         return 145//TODO
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 65
+        return 25
     }
 }
 

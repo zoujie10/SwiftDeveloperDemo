@@ -63,6 +63,13 @@ class WW_CartInvaildCell: UITableViewCell {
         }
     }
     
+    func configData(model : WW_CartItem){
+        self.iconImageView.kf.setImage(with: URL.init(string: (model.wpProductTemplate?.list_images!)!))
+        self.iconImageView.kf.indicatorType = .activity
+        self.titleLabel.text = model.wpProductTemplate?.name
+        
+    }
+    
     lazy var iconImageView : UIImageView = {
         let iconImageView = UIImageView()
         return iconImageView

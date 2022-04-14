@@ -13,6 +13,7 @@ class WW_CartInvaildHeaderView: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor(r: 247, g: 247, b: 247)
+        creatUI()
     }
 
     
@@ -21,6 +22,8 @@ class WW_CartInvaildHeaderView: UITableViewHeaderFooterView {
     }
     
     func creatUI() {
+        self.contentView.addSubview(invaildTitleLabel)
+        self.contentView.addSubview(clearButton)
         self.invaildTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(self.contentView).offset(10)
             make.left.equalTo(self.contentView).offset(23)

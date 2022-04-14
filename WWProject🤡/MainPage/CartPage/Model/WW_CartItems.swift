@@ -22,7 +22,7 @@ class WW_ProductTemplate:Codable{
     var displayName: String?
     //商品图片
     var list_images: String?
-    //商品图片
+    //
     var status: Int?
     //商品真实价格
     var retailPrice: Float?
