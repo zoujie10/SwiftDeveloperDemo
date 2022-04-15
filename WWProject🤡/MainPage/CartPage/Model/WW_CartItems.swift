@@ -101,6 +101,8 @@ class WW_CartItem:Codable{
     var repeatFlag: Int?
     //是否是新人商品
     var isOnlyNewMember: Int?
+    //自定义属性  是否可以删除
+    var isCanDelete : Bool?
 }
 //
 class WW_ComplimentaryModel:Codable{

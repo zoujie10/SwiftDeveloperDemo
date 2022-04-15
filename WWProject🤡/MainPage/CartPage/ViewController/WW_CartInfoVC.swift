@@ -121,7 +121,7 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cellType =  self.viewModel.getCellType(index: indexPath.section)
+        let cellType =  self.viewModel.getCellType(index: indexPath.section)
         let model : WW_ActivityModel = self.viewModel.arrayAllDatas[indexPath.section]
         let itemModel : WW_CartItem = model.cartItemList[indexPath.row]
         switch cellType {
@@ -149,8 +149,11 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
         let cellType =  self.viewModel.getCellType(index: section)
         switch cellType {
             case .Cart_CellType_Normal:
-                let view = WW_CartInvaildHeaderView.init()
-                return view
+                if section == (self.viewModel.arrayAllDatas.count-1){
+                    let view = WW_CartInvaildHeaderView.init()
+                    return view
+                }
+                return UIView.init()
             case .Cart_CellType_Activity:
                 let view = WW_CartInvaildHeaderView.init()
                 return view
@@ -160,10 +163,50 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 145//TODO
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 25
+        let cellType =  self.viewModel.getCellType(index: section)
+        switch cellType {
+            case .Cart_CellType_Normal:
+                if section == (self.viewModel.arrayAllDatas.count-1){
+                    return 25
+                }
+                return 1
+            case .Cart_CellType_Activity:
+               
+                return 25
+            case .Cart_CellType_SecondKill:
+                
+                return 25
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteRowAction = UIContextualAction.init(style: .destructive, title: "删除") {  _,_,_  in
+            let model =  self.viewModel.arrayAllDatas[indexPath.section]
+            model.cartItemList.remove(at: indexPath.row)
+        }
+        deleteRowAction.backgroundColor = .red
+        let config = UISwipeActionsConfiguration.init(actions: [deleteRowAction])
+        return config
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        let model : WW_ActivityModel = self.viewModel.arrayAllDatas[indexPath.section]
+        let itemModel : WW_CartItem = model.cartItemList[indexPath.row]
+        return itemModel.isCanDelete ?? true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let model =  self.viewModel.arrayAllDatas[indexPath.section]
+        model.cartItemList.remove(at: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "删除"
     }
 }
 

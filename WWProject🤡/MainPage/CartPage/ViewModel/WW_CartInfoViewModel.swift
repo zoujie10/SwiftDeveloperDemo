@@ -20,11 +20,11 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
     var arrayInVaildData = [WW_ActivityModel]()
     
     func reloaCartInfo(successBlock:@escaping Success_Block,failureBlock:@escaping Failure_Block){
-        NetworkProvider.request(NetworkAPI.CartInfo) { result in
+//        NetworkProvider.request(NetworkAPI.CartInfo) { result in
             
             self.localGeoJsonData()
             successBlock()
-        }
+//        }
     }
     
     func localGeoJsonData(){
@@ -39,6 +39,16 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
             let myDecoder = JSONDecoder()
             let orderListModel = try myDecoder.decode(WW_CartItemsData?.self, from: infoJsonData)
             self.arrayInVaildData = orderListModel!.data!.invalid
+            for activity : WW_ActivityModel in self.arrayInVaildData{
+                for item : WW_CartItem in activity.cartItemList{
+                    item.isCanDelete = false
+                }
+            }
+            for activity : WW_ActivityModel in self.arrayVaildData{
+                for item : WW_CartItem in activity.cartItemList{
+                    item.isCanDelete = true
+                }
+            }
             self.arrayVaildData = orderListModel!.data!.valid
             self.arrayAllDatas.append(contentsOf: orderListModel!.data!.valid)
             self.arrayAllDatas.append(contentsOf: orderListModel!.data!.invalid)
