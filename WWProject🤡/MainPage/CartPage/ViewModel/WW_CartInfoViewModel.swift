@@ -42,11 +42,13 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
             for activity : WW_ActivityModel in self.arrayInVaildData{
                 for item : WW_CartItem in activity.cartItemList{
                     item.isCanDelete = false
+                    item.isSelected = false
                 }
             }
             for activity : WW_ActivityModel in self.arrayVaildData{
                 for item : WW_CartItem in activity.cartItemList{
                     item.isCanDelete = true
+                    item.isSelected = true
                 }
             }
             self.arrayVaildData = orderListModel!.data!.valid

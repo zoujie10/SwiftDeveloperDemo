@@ -103,6 +103,7 @@ class WW_CartItem:Codable{
     var isOnlyNewMember: Int?
     //自定义属性  是否可以删除
     var isCanDelete : Bool?
+    var isSelected : Bool?
 }
 //
 class WW_ComplimentaryModel:Codable{

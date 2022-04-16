@@ -66,8 +66,20 @@ class WW_CartSeckillCell: UITableViewCell {
         }
     }
     
-    @objc func clickBtnMethod(){
-        
+    //MARK: config data
+    func configData(model : WW_CartItem){
+        self.iconImageView.kf.setImage(with: URL.init(string: (model.wpProductTemplate?.list_images!)!))
+        self.iconImageView.kf.indicatorType = .activity
+        self.titleLabel.text = model.wpProductTemplate?.name
+        guard let isSelected = model.isSelected else {
+            return
+        }
+//        self.selectButton.isSelected = model.isSelected ?? false
+        self.selectButton.isSelected = isSelected
+    }
+    
+    @objc func clickBtnMethod(sender : UIButton){
+        sender.isSelected = !selectButton.isSelected
     }
     //MARK: editnumView delegate
     func cartEditNumView(_ editNumView: WW_CartEditNumView?, addButtonClick sender: UIButton?) {
@@ -105,8 +117,9 @@ class WW_CartSeckillCell: UITableViewCell {
     
     lazy var selectButton : UIButton = {
         let btn = UIButton()
-        btn.setTitle("", for: .normal)
-        btn.setTitleColor(.black, for: .normal)
+//        btn.setTitle("", for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .selected)
         btn.addTarget(self, action: #selector(clickBtnMethod), for: .touchUpInside)
         return btn
     }()

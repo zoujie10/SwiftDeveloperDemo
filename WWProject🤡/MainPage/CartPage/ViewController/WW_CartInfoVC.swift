@@ -133,14 +133,17 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
                     
                     return cell
                 }else{
-                    let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartNormalCell.classForCoder()), for: indexPath)
+                    let cell : WW_CartNormalCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartNormalCell.classForCoder()), for: indexPath) as! WW_CartNormalCell
+                    cell.configData(model: itemModel)
                     return cell
                 }
             case .Cart_CellType_Activity:
-                let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartActivityCell.classForCoder()), for: indexPath)
+                let cell : WW_CartActivityCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartActivityCell.classForCoder()), for: indexPath) as! WW_CartActivityCell
+                cell.configData(model: itemModel)
                 return cell
             case .Cart_CellType_SecondKill:
-                let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartSeckillCell.classForCoder()), for: indexPath)
+                let cell : WW_CartSeckillCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartSeckillCell.classForCoder()), for: indexPath) as! WW_CartSeckillCell
+                cell.configData(model: itemModel)
                 return cell
         }
     }
@@ -158,14 +161,21 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
                 let view = WW_CartInvaildHeaderView.init()
                 return view
             case .Cart_CellType_SecondKill:
-                let view = WW_CartInvaildHeaderView.init()
-                return view
+                return UIView.init()
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 145//TODO
+        let cellType =  self.viewModel.getCellType(index: indexPath.section)
+        switch cellType {
+            case .Cart_CellType_Normal:
+                return 145
+            case .Cart_CellType_Activity:
+                return 145
+            case .Cart_CellType_SecondKill:
+                return 165
+        }
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let cellType =  self.viewModel.getCellType(index: section)
         switch cellType {
@@ -175,11 +185,9 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
                 }
                 return 1
             case .Cart_CellType_Activity:
-               
                 return 25
             case .Cart_CellType_SecondKill:
-                
-                return 25
+                return 1
         }
     }
     

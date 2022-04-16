@@ -22,8 +22,14 @@ class WW_CartInvaildHeaderView: UITableViewHeaderFooterView {
     }
     
     func creatUI() {
+        self.contentView.addSubview(backgroudView)
         self.contentView.addSubview(invaildTitleLabel)
         self.contentView.addSubview(clearButton)
+        
+        self.backgroudView.snp.makeConstraints { make in
+            make.edges.equalTo(UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12))
+        }
+        
         self.invaildTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(self.contentView).offset(10)
             make.left.equalTo(self.contentView).offset(23)
@@ -38,6 +44,12 @@ class WW_CartInvaildHeaderView: UITableViewHeaderFooterView {
         
     }
     
+    lazy var backgroudView : UIView = {
+        let backgroudView = UIView()
+        backgroudView.backgroundColor = .white
+        backgroudView.layer.cornerRadius = 7
+        return backgroudView
+    }()
     
     lazy var invaildTitleLabel : UILabel = {
         let label = UILabel()

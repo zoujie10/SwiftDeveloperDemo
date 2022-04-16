@@ -65,6 +65,12 @@ class WW_CartActivityCell: UITableViewCell {
             $0.top.equalTo(self.iconImageView.snp_bottom).offset(-10)
         }
     }
+    //MARK: config data
+    func configData(model : WW_CartItem){
+        self.iconImageView.kf.setImage(with: URL.init(string: (model.wpProductTemplate?.list_images!)!))
+        self.iconImageView.kf.indicatorType = .activity
+        self.titleLabel.text = model.wpProductTemplate?.name
+    }
     
     @objc func clickBtnMethod(){
         
@@ -105,7 +111,9 @@ class WW_CartActivityCell: UITableViewCell {
     
     lazy var selectButton : UIButton = {
         let btn = UIButton()
-        btn.setTitle("", for: .normal)
+//        btn.setTitle("", for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .selected)
         btn.setTitleColor(.black, for: .normal)
         btn.addTarget(self, action: #selector(clickBtnMethod), for: .touchUpInside)
         return btn

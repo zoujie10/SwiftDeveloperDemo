@@ -65,6 +65,14 @@ class WW_CartNormalCell: UITableViewCell,WWCartEditNumViewDelegate {
         }
     }
     
+    func configData(model : WW_CartItem){
+        self.iconImageView.kf.setImage(with: URL.init(string: (model.wpProductTemplate?.list_images!)!))
+        self.iconImageView.kf.indicatorType = .activity
+        self.titleLabel.text = model.wpProductTemplate?.name
+        
+    }
+    
+    
     @objc func clickBtnMethod(){
         
     }
@@ -104,7 +112,9 @@ class WW_CartNormalCell: UITableViewCell,WWCartEditNumViewDelegate {
     
     lazy var selectButton : UIButton = {
         let btn = UIButton()
-        btn.setTitle("", for: .normal)
+//        btn.setTitle("", for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .selected)
         btn.setTitleColor(.black, for: .normal)
         btn.addTarget(self, action: #selector(clickBtnMethod), for: .touchUpInside)
         return btn

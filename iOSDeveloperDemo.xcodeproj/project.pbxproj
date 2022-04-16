@@ -258,6 +258,7 @@
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
 		84EE672720BD32C00051F86C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672620BD32C00051F86C /* PageViewController.swift */; };
 		84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672820BD344D0051F86C /* SubPageViewController.swift */; };
+		84F1CEB3280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1CEB2280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift */; };
 		84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8BF12224F6A3E002E5389 /* CoreData.framework */; };
 		84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */; };
 		84F8BF19224F815D002E5389 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF18224F815D002E5389 /* CoreDataDAO.swift */; };
@@ -541,6 +542,7 @@
 		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
 		84EE672620BD32C00051F86C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		84EE672820BD344D0051F86C /* SubPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPageViewController.swift; sourceTree = "<group>"; };
+		84F1CEB2280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartActivityRandomHeaderView.swift; sourceTree = "<group>"; };
 		84F8BF12224F6A3E002E5389 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84F8BF16224F6A6B002E5389 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		84F8BF18224F815D002E5389 /* CoreDataDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
@@ -1373,6 +1375,7 @@
 			isa = PBXGroup;
 			children = (
 				848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */,
+				84F1CEB2280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift */,
 			);
 			path = HeaderView;
 			sourceTree = "<group>";
@@ -1861,6 +1864,7 @@
 				8483707F28056D860012402C /* WW_CartBottomCalculateView.swift in Sources */,
 				8440F0F7278161E8001FE7A1 /* WW_SearchHistoryWordsManager.swift in Sources */,
 				8432086427905CB600E5DC09 /* WW_NoDataView.swift in Sources */,
+				84F1CEB3280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift in Sources */,
 				847A569D20BE83D500EBB06C /* DetailViewController.swift in Sources */,
 				8455A270279E9DB7007EE634 /* WW_HomeChannelSingleItemSubCell.swift in Sources */,
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,

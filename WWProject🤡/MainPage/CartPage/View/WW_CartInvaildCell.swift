@@ -40,13 +40,18 @@ class WW_CartInvaildCell: UITableViewCell {
     }
     
     func creatUI(){
+        self.contentView.addSubview(self.backgroudView)
         self.contentView.addSubview(self.iconImageView)
         self.contentView.addSubview(self.titleLabel)
         self.contentView.addSubview(self.desLabel)
         self.contentView.addSubview(self.priceLable)
        
+        backgroudView.snp.makeConstraints { make in
+            make.edges.equalTo(UIEdgeInsets(top: -5, left: 12, bottom: 0, right: 12))//子视图超出遮盖圆角
+        }
+        
         self.iconImageView.snp.makeConstraints {
-            $0.top.left.equalTo(self.contentView).offset(10)
+            $0.top.left.equalTo(self.contentView).offset(15)
             $0.width.height.equalTo(80)
         }
         self.titleLabel.snp.makeConstraints {
@@ -69,6 +74,18 @@ class WW_CartInvaildCell: UITableViewCell {
         self.titleLabel.text = model.wpProductTemplate?.name
         
     }
+    
+    
+    lazy var backgroudView : UIView = {
+        let backgroudView = UIView()
+        backgroudView.backgroundColor = .white
+        backgroudView.layer.shadowColor = UIColor(r: 0, g: 0, b: 0, a: 0.2).cgColor
+        backgroudView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        backgroudView.layer.shadowOpacity = 1
+        backgroudView.layer.shadowRadius = 5
+        backgroudView.layer.cornerRadius = 7
+        return backgroudView
+    }()
     
     lazy var iconImageView : UIImageView = {
         let iconImageView = UIImageView()
