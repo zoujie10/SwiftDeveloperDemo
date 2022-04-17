@@ -70,6 +70,7 @@ class WW_CartBottomDeleteView: UIView {
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         btn.setTitleColor(UIColor.black, for: .normal)
         btn.setImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .normal)
+        btn.setImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .selected)
         btn.imageEdgeInsets = UIEdgeInsets(top: 0.0, left: -10, bottom: 0.0, right: 0.0)
         return btn
     }()

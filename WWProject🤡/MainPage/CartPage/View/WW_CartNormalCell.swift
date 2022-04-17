@@ -40,7 +40,7 @@ class WW_CartNormalCell: UITableViewCell,WWCartEditNumViewDelegate {
         }
         
         self.iconImageView.snp.makeConstraints {
-            $0.top.left.equalTo(self.contentView).offset(40)
+            $0.top.left.equalTo(self.contentView).offset(45)
             $0.width.height.equalTo(80)
         }
         
