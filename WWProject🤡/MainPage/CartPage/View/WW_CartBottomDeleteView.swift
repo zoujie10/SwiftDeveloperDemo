@@ -12,7 +12,7 @@ class WW_CartBottomDeleteView: UIView {
     typealias deleteBlock = () -> Void
     var delete_Block : deleteBlock?
     
-    typealias selectBlock = () -> Void
+    typealias selectBlock = (_ isSelect:Bool) -> Void
     var select_Block : selectBlock?
     
     
@@ -50,8 +50,10 @@ class WW_CartBottomDeleteView: UIView {
         }
     }
     
-    @objc func selectMethod(){
-        self.select_Block!()
+    @objc func selectMethod(sender:UIButton){
+        sender.isSelected = !sender.isSelected
+        deleteBtn.backgroundColor = sender.isSelected ? UIColor(r: 252, g: 85, b: 108):UIColor(r: 220, g: 222, b: 224)
+        self.select_Block!(sender.isSelected)
     }
     lazy var deleteBtn : UIButton = {
         let btn = UIButton()
@@ -59,7 +61,8 @@ class WW_CartBottomDeleteView: UIView {
         
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.backgroundColor = UIColor(r: 252, g: 85, b: 108)//(220, 222, 224, 1)
+//        btn.backgroundColor = UIColor(r: 252, g: 85, b: 108)//(220, 222, 224, 1)
+        btn.backgroundColor = UIColor(r: 220, g: 222, b: 224)
         btn.addTarget(self, action: #selector(deleteBtnMethod), for: .touchUpInside)
         return btn
     }()

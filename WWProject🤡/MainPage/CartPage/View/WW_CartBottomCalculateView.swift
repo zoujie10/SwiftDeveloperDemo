@@ -14,7 +14,7 @@ class WW_CartBottomCalculateView: UIView {
     typealias calculateBlock = () -> Void
     var calculate_Block : calculateBlock?
     
-    typealias selectBlock = () -> Void
+    typealias selectBlock = (_ isSelect:Bool) -> Void
     var select_Block : selectBlock?
     
     override init(frame: CGRect) {
@@ -57,8 +57,10 @@ class WW_CartBottomCalculateView: UIView {
     @objc func calculateMethod(){
         self.calculate_Block!()
     }
-    @objc func selectMethod(){
-        self.select_Block!()
+    
+    @objc func selectMethod(sender:UIButton){
+        sender.isSelected = !sender.isSelected
+        self.select_Block!(sender.isSelected)
     }
    
     func configCalculateContext(amount:String){

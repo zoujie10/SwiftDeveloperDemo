@@ -58,6 +58,15 @@ class WW_CartInfoVC: WW_MainBaseVC {
         calculateView.isHidden = isEdit
     }
     
+    func selectAllItems(isSelect:Bool){
+        if isSelect{
+            self.viewModel.selectAllData()
+        }else{
+            self.viewModel.unSelectAllData()
+        }
+        self.refreshTableView.reloadData()
+    }
+    
     lazy var editBtnBtn : UIButton = {
         let editBtn = UIButton(type: .custom)
         editBtn.setTitle("编辑",for: .normal)
@@ -88,8 +97,8 @@ class WW_CartInfoVC: WW_MainBaseVC {
         let v = WW_CartBottomDeleteView()
         v.backgroundColor = UIColor.white
         v.isHidden = true
-        v.select_Block = {
-            
+        v.select_Block = { isSelect in
+            self.selectAllItems(isSelect: isSelect)
         }
         v.delete_Block = {
             
@@ -101,8 +110,8 @@ class WW_CartInfoVC: WW_MainBaseVC {
         let v = WW_CartBottomCalculateView()
         v.backgroundColor = UIColor.white
         v.isHidden = false
-        v.select_Block = {
-            
+        v.select_Block = { isSelect in
+            self.selectAllItems(isSelect: isSelect)
         }
         v.calculate_Block = {
             

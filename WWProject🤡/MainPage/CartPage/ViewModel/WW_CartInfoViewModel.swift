@@ -75,4 +75,20 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
         let cellModel : WW_ActivityModel = self.arrayAllDatas[index]
         return Cart_CellType(rawValue: cellModel.type!)!
     }
+    
+    func selectAllData(){
+        for model : WW_ActivityModel in self.arrayAllDatas{
+            for item in model.cartItemList{
+                item.isSelected = true
+            }
+        }
+    }
+    
+    func unSelectAllData(){
+        for model : WW_ActivityModel in self.arrayAllDatas{
+            for item in model.cartItemList{
+                item.isSelected = false
+            }
+        }
+    }
 }

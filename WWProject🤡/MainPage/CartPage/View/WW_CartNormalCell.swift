@@ -69,7 +69,11 @@ class WW_CartNormalCell: UITableViewCell,WWCartEditNumViewDelegate {
         self.iconImageView.kf.setImage(with: URL.init(string: (model.wpProductTemplate?.list_images!)!))
         self.iconImageView.kf.indicatorType = .activity
         self.titleLabel.text = model.wpProductTemplate?.name
-        
+        guard let isSelected = model.isSelected else {
+            return
+        }
+//        self.selectButton.isSelected = model.isSelected ?? false
+        self.selectButton.isSelected = isSelected
     }
     
     
