@@ -37,11 +37,13 @@ class TextViewController: UIViewController {
 		self.view.backgroundColor = UIColor.brown
 //		sliderValue.value = 0
 //		sliderValue.maximumValue = 3
-       let algorithm = ZJAlgorithm.init()
-        algorithm.Sort_Bubbling()
+      
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        let algorithm = ZJAlgorithm.init()
+        algorithm.Sort_Bubbling()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
