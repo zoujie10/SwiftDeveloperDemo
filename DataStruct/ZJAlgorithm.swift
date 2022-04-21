@@ -40,6 +40,22 @@ class ZJAlgorithm: NSObject {
     //外层优化
     func Sort_Bubbling_OutSide_optimize(){
         var array = [12,14,19,14,15,12,123,1234,33]
+        var count = 0
+        for i in 0 ..< array.count{
+            var jump = true
+            count = i
+            for j in i+1 ..< array.count{
+                if array[j] < array[i]{
+                    jump = false
+                    array.swapAt(i, j)
+                }
+                if jump{
+                    break
+                }
+            }
+        }
+        print("outside:",count)
+        print(array)
     }
     //内存优化
     func Sort_Bubbling_Inner_optimize(){
