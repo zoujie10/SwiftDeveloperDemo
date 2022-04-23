@@ -41,7 +41,7 @@ class TextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        let algorithm = ZJAlgorithm.init()
+        let algorithm = ZJ_Bubbling.init()
         algorithm.Sort_Bubbling()
         algorithm.Sort_Bubbling_OutSide_optimize()
     }

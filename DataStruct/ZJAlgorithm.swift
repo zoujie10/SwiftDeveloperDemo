@@ -12,8 +12,11 @@ class ZJAlgorithm: NSObject {
     override init() {
         super.init()
     }
-  
-    //TODO:https://blog.csdn.net/lin1109221208/article/details/90673080
+}
+
+//TODO:https://blog.csdn.net/lin1109221208/article/details/90673080
+class ZJ_Bubbling{
+    
     func Sort_Bubbling(){
         var array = [12,14,19,14,15,12,123,1234,33]
         var count = 0
@@ -33,9 +36,6 @@ class ZJAlgorithm: NSObject {
         print(array)
         print("循环次数:",count)
     }
-    
-    
-    
     
     //外层优化
     func Sort_Bubbling_OutSide_optimize(){
@@ -57,7 +57,7 @@ class ZJAlgorithm: NSObject {
         print("outside:",count)
         print(array)
     }
-    //内存优化
+    //内层优化
     func Sort_Bubbling_Inner_optimize(){
         var array = [12,14,19,14,15,12,123,1234,33]
         var swap = 0
