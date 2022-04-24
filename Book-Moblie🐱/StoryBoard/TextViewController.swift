@@ -41,9 +41,11 @@ class TextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        let algorithm = ZJ_Bubbling.init()
+        let algorithm = ZJ_Bubbling_Algorithm.init()
         algorithm.Sort_Bubbling()
         algorithm.Sort_Bubbling_OutSide_optimize()
+        let choose = ZJ_Choose_Sorted_Algorithm.init()
+        choose.chooseSorted_Algorithm()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

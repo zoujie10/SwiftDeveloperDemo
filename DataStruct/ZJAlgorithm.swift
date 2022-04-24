@@ -15,7 +15,7 @@ class ZJAlgorithm: NSObject {
 }
 
 //TODO:https://blog.csdn.net/lin1109221208/article/details/90673080
-class ZJ_Bubbling{
+class ZJ_Bubbling_Algorithm{
     
     func Sort_Bubbling(){
         var array = [12,14,19,14,15,12,123,1234,33]
@@ -33,7 +33,7 @@ class ZJ_Bubbling{
                 }
             }
         }
-        print(array)
+        print("bubbling algorithm = ",array)
         print("循环次数:",count)
     }
     
@@ -80,5 +80,26 @@ class ZJ_Bubbling{
         }
         print(array)
         print(count)
+    }
+}
+
+class ZJ_Choose_Sorted_Algorithm{
+    /**
+     1.线性搜索找到最小值
+     2.交换位置到最左边
+     3.依次循环
+     */
+    func chooseSorted_Algorithm(){
+        var array = [12,14,19,14,15,12,123,1234,33]
+        for i in 0 ..< array.count{
+            var min = i
+            for j in i+1 ..< array.count{
+                if array[j] < array[min]{
+                    min = j
+                }
+            }
+            array.swapAt(i, min)
+        }
+        print("choose selected algorithm = ",array)
     }
 }
