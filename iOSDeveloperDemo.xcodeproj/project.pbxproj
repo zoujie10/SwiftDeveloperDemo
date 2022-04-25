@@ -1045,7 +1045,7 @@
 			path = UIDynamicAnimator;
 			sourceTree = "<group>";
 		};
-		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
+		845A7249251107E800398876 /* Book-Swift-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
 				84E37BE020A02D390031DEEE /* HomeVC.swift */,
@@ -1073,7 +1073,7 @@
 				844F3EDB2753CBFE006762D0 /* StoryBoard */,
 				844F3EFC275CEE9F006762D0 /* ReleaseAndIPA */,
 			);
-			path = "Book-Moblie🐱";
+			path = "Book-Swift-Moblie🐱";
 			sourceTree = "<group>";
 		};
 		845EC7EB271569250006651E /* UIViewController */ = {
@@ -1578,7 +1578,7 @@
 				8483707128046FFC0012402C /* DataStruct&&Algorithm📚 */,
 				4F411ACC228AB9DA001BF135 /* DesignPattern🐔 */,
 				845EC801271FECC40006651E /* WWProject🤡 */,
-				845A7249251107E800398876 /* Book-Moblie🐱 */,
+				845A7249251107E800398876 /* Book-Swift-Moblie🐱 */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
 				84E37BF220A02D3B0031DEEE /* iOSDeveloperDemoTests */,
 				84E37BDC20A02D390031DEEE /* Products */,
