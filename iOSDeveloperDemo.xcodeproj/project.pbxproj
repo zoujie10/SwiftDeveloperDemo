@@ -625,9 +625,10 @@
 			path = IteratorPattern;
 			sourceTree = "<group>";
 		};
-		4F411ACC228AB9DA001BF135 /* DesignPattern */ = {
+		4F411ACC228AB9DA001BF135 /* DesignPattern🐔 */ = {
 			isa = PBXGroup;
 			children = (
+				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				4F02FD9922AF7D4E00B8CB35 /* IteratorPattern */,
 				4F02FD9422AE27D500B8CB35 /* TemplatePattern */,
 				4F02FD8D22ADE10500B8CB35 /* CopyPattern */,
@@ -635,7 +636,7 @@
 				4F411AD4228AC120001BF135 /* DelegatePattern */,
 				4F411ACD228ABAB8001BF135 /* DecoratePattern */,
 			);
-			path = DesignPattern;
+			path = "DesignPattern🐔";
 			sourceTree = "<group>";
 		};
 		4F411ACD228ABAB8001BF135 /* DecoratePattern */ = {
@@ -812,6 +813,7 @@
 		8432086127905C8F00E5DC09 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				846EE2C72816D3420090B0F5 /* ViewController */,
 				8432086227905CA200E5DC09 /* View */,
 			);
 			path = Public;
@@ -1046,6 +1048,7 @@
 		845A7249251107E800398876 /* Book-Moblie🐱 */ = {
 			isa = PBXGroup;
 			children = (
+				84E37BE020A02D390031DEEE /* HomeVC.swift */,
 				845EC7ED271582030006651E /* 基础语法 */,
 				845EC7EE2715820F0006651E /* 高级语法 */,
 				845EC7F2271AAD6F0006651E /* UIViewAndCALayer */,
@@ -1154,6 +1157,7 @@
 		845EC801271FECC40006651E /* WWProject🤡 */ = {
 			isa = PBXGroup;
 			children = (
+				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				84A9694A27DE3F7900950A64 /* GlobalClass */,
 				84DAA51D2768816300A97694 /* Extension */,
 				84117B71276081CF00D8B0BB /* Tools */,
@@ -1176,10 +1180,16 @@
 				84117B7C27672D7B00D8B0BB /* OrderListPage */,
 				8438A01527EFFFBC00F30F6A /* ComplexOrderListPage */,
 				8438A01627EFFFF800F30F6A /* CartPage */,
-				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
-				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		846EE2C72816D3420090B0F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				844F3ECF274C9345006762D0 /* WWGuidePageVC.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		84710DA327243C6A00A40507 /* ImageAndVideo */ = {
@@ -1380,7 +1390,7 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
-		8483707128046FFC0012402C /* DataStruct */ = {
+		8483707128046FFC0012402C /* DataStruct&&Algorithm📚 */ = {
 			isa = PBXGroup;
 			children = (
 				8483707228046FFC0012402C /* ZJString.swift */,
@@ -1389,12 +1399,14 @@
 				8483707528046FFC0012402C /* ZJSetAndDictionary.swift */,
 				8483707A2804701A0012402C /* ZJAlgorithm.swift */,
 			);
-			path = DataStruct;
+			path = "DataStruct&&Algorithm📚";
 			sourceTree = "<group>";
 		};
 		848A465320CE1DA100F982F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84E55ABD24C8735E00A152A8 /* Events.swift */,
+				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
 				848A467820CE5B2900F982F2 /* DeviceInfo.swift */,
 				848A465420CE1DA100F982F2 /* AppStatusObserver.swift */,
 				848A465520CE1DA100F982F2 /* Singleton.swift */,
@@ -1417,7 +1429,6 @@
 		849FC39F20C917D000C1D18B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
 				847A569820BE81F200EBB06C /* TabLTableViewController.swift */,
 				84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */,
 				8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */,
@@ -1491,15 +1502,6 @@
 			path = XMLParser;
 			sourceTree = "<group>";
 		};
-		84D305BC22D1A25E001AC087 /* OlympicProject */ = {
-			isa = PBXGroup;
-			children = (
-				84E55ABD24C8735E00A152A8 /* Events.swift */,
-				84E55ABF24C8746F00A152A8 /* Schedule.swift */,
-			);
-			path = OlympicProject;
-			sourceTree = "<group>";
-		};
 		84D95B4227BA992000052E04 /* animationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1564,7 +1566,6 @@
 			children = (
 				8440F0FA27818095001FE7A1 /* BaseRequest */,
 				84DAA54927770F8900A97694 /* WW_BaseNavVC.swift */,
-				84DAA54C277711E400A97694 /* WW_BaseTabBarVC.swift */,
 				844F3EFF275DAEBC006762D0 /* WW_MainBaseVC.swift */,
 			);
 			path = Base;
@@ -1573,10 +1574,9 @@
 		84E37BD220A02D390031DEEE = {
 			isa = PBXGroup;
 			children = (
-				8483707128046FFC0012402C /* DataStruct */,
-				4F411ACC228AB9DA001BF135 /* DesignPattern */,
 				84E9DB6520AAB61100C65A12 /* Resource */,
-				84D305BC22D1A25E001AC087 /* OlympicProject */,
+				8483707128046FFC0012402C /* DataStruct&&Algorithm📚 */,
+				4F411ACC228AB9DA001BF135 /* DesignPattern🐔 */,
 				845EC801271FECC40006651E /* WWProject🤡 */,
 				845A7249251107E800398876 /* Book-Moblie🐱 */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
@@ -1604,7 +1604,7 @@
 				849FC39E20C9176B00C1D18B /* PresentationLayer */,
 				848A465320CE1DA100F982F2 /* Model */,
 				84E37BDE20A02D390031DEEE /* AppDelegate.swift */,
-				84E37BE020A02D390031DEEE /* HomeVC.swift */,
+				84DAA54C277711E400A97694 /* WW_BaseTabBarVC.swift */,
 				84E37BE220A02D390031DEEE /* Main.storyboard */,
 				84196BB622539CAF0088F117 /* SwiftDemo.bundle */,
 				84E37BE720A02D3B0031DEEE /* LaunchScreen.storyboard */,

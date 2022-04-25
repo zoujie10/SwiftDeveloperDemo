@@ -66,7 +66,7 @@ class ZJ_Bubbling_Algorithm{
         for i in 0 ..< array.count {
             var flag = true
             count = i
-            for j in 0 ..< k{
+            for j in 0 ..< k{ //每轮相邻对比交换位置 直到最小值 到第一个
                 if array[j] > array[j+1]{
                     array.swapAt(j, j+1)
                     flag = false
@@ -93,7 +93,7 @@ class ZJ_Choose_Sorted_Algorithm{
         var array = [12,14,19,14,15,12,123,1234,33]
         for i in 0 ..< array.count{
             var min = i
-            for j in i+1 ..< array.count{
+            for j in i+1 ..< array.count{//循环一轮 依次对比 找最小值
                 if array[j] < array[min]{
                     min = j
                 }
@@ -102,4 +102,32 @@ class ZJ_Choose_Sorted_Algorithm{
         }
         print("choose selected algorithm = ",array)
     }
+}
+//https://www.jianshu.com/p/1fd62e4234b3
+class ZJ_Insert_Sort_Algorithm{
+    
+    func insert_Sort(){
+        var a = [12,14,19,14,15,12,123,1234,33]   // 1
+        for x in 1 ..< a.count {       // 2
+            var y = x
+            while y > 0 && a[y] < a[y - 1] { // 3
+                a.swapAt(y - 1, y)
+                y -= 1
+            }
+        }
+        print("Insert sort Algorithm",a)
+    }
+
+}
+
+class ZJ_Heap_Sort_Algorithm{
+    
+}
+
+class ZJ_Merge_Sort_Algorithm{
+    
+}
+
+class ZJ_Quick_Sort_Algorithm{
+    
 }

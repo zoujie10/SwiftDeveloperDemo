@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="-1462"/>
+            <point key="canvasLocation" x="1551" y="-1558"/>
         </scene>
         <!--Location And Map View Controller-->
         <scene sceneID="AJn-mx-izC">
@@ -222,7 +222,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WTm-le-5Fu" customClass="PageViewController" customModule="iOSDeveloperDemo" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joq-im-e4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5847" y="-689"/>
+            <point key="canvasLocation" x="5374" y="-829"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dbC-BZ-uaW">
@@ -319,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d3-aU-WpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5063" y="-703"/>
+            <point key="canvasLocation" x="4614" y="-829"/>
         </scene>
         <!--注册-->
         <scene sceneID="H6K-7U-SbE">
@@ -732,7 +732,7 @@
                                         <rect key="frame" x="0.0" y="221.00000381469727" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pE-bZ-G3A" id="aCJ-ta-t4E">
-                                            <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.33333333333331" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="创建新账户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upP-Jg-5mq">
@@ -775,7 +775,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5St-xa-1Sc">
-                                <rect key="frame" x="159" y="103" width="57" height="30"/>
+                                <rect key="frame" x="159.66666666666666" y="103" width="56" height="30"/>
                                 <color key="backgroundColor" red="0.32513745092512236" green="1" blue="0.93036708787709088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="AlertBtn"/>
                                 <connections>
@@ -1174,7 +1174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppX-wi-wMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.5999999999999" y="-2377.0935960591132"/>
+            <point key="canvasLocation" x="1551" y="-2271"/>
         </scene>
         <!--Home-->
         <scene sceneID="It7-C3-aa6">
@@ -1208,7 +1208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9H-5l-2Ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="-1461"/>
+            <point key="canvasLocation" x="609" y="-1572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gTv-aQ-9e8">
@@ -1359,7 +1359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvZ-Rl-uzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="-2314"/>
+            <point key="canvasLocation" x="609" y="-2270"/>
         </scene>
         <!--Select Design Pattern View Controller-->
         <scene sceneID="4dB-cG-A4J">
@@ -1429,7 +1429,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R30-dd-thw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4170.3999999999996" y="-1513.3004926108374"/>
+            <point key="canvasLocation" x="3260" y="-1513"/>
         </scene>
         <!--设计模式-->
         <scene sceneID="qFn-C1-nAT">

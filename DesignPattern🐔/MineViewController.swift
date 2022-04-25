@@ -24,8 +24,6 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
 		print(self.dataArray[indexPath.row])
 		if(indexPath.row == 0){
 			self.navigationController?.pushViewController(CopyPatternViewController(), animated: true)
-		}else if(indexPath.row == 1){
-			self.navigationController?.pushViewController(SwiftAdvanceViewController(), animated: true)
 		}
 	}
 	
@@ -37,7 +35,13 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.dataArray = ["CopyPattern","IteratorPattern","TemplatePattern","ObserverPattern","DelegatePattern","DecoratePattern","设计模式"]
+        self.dataArray = ["CopyPattern",
+                          "IteratorPattern",
+                          "TemplatePattern",
+                          "ObserverPattern",
+                          "DelegatePattern",
+                          "DecoratePattern",
+                          "设计模式"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
