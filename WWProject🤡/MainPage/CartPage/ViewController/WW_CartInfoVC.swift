@@ -90,6 +90,7 @@ class WW_CartInfoVC: WW_MainBaseVC {
         tableView.register(WW_CartActivityCell.classForCoder(), forCellReuseIdentifier: NSStringFromClass(WW_CartActivityCell.classForCoder()))
         tableView.register(WW_CartSeckillCell.classForCoder(), forCellReuseIdentifier: NSStringFromClass(WW_CartSeckillCell.classForCoder()))
         tableView.register(WW_CartInvaildHeaderView.classForCoder(), forHeaderFooterViewReuseIdentifier: NSStringFromClass(WW_CartInvaildHeaderView.classForCoder()))
+        tableView.register(WW_CartSuperpositionActivityView.classForCoder(), forHeaderFooterViewReuseIdentifier: NSStringFromClass(WW_CartSuperpositionActivityView.classForCoder()))
         return tableView
     }()
     
@@ -167,6 +168,13 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
                 }
                 return UIView.init()
             case .Cart_CellType_Activity:
+                if self.viewModel.haveActivityHead(index: section){
+                    let view = WW_CartSuperpositionActivityView.init()
+                    let model = self.viewModel.configHeaderData(index: section)
+                    view.cellCount = model.actList.count
+                    view.configData(data: model)
+                    return view
+                }
                 let view = WW_CartInvaildHeaderView.init()
                 return view
             case .Cart_CellType_SecondKill:
@@ -194,6 +202,9 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
                 }
                 return 1
             case .Cart_CellType_Activity:
+                if self.viewModel.haveActivityHead(index:section){
+                    return self.viewModel.configHeadHeight(index: section)
+                }
                 return 25
             case .Cart_CellType_SecondKill:
                 return 1

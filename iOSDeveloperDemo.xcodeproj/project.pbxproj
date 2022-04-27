@@ -145,6 +145,10 @@
 		8460CE78278826CB00E7790A /* WW_SearchResultProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */; };
 		846BB12F20AC1B5100268E6D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB12E20AC1B5100268E6D /* CollectionViewController.swift */; };
 		846BB13520AC26B500268E6D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB13420AC26B500268E6D /* Cell.swift */; };
+		846EE2C92818CF5C0090B0F5 /* WW_CartSuperpositionActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EE2C82818CF5C0090B0F5 /* WW_CartSuperpositionActivityView.swift */; };
+		846EE2CB2818D43C0090B0F5 /* WW_CartActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EE2CA2818D43C0090B0F5 /* WW_CartActivityModel.swift */; };
+		846EE2CD2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EE2CC2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift */; };
+		846EE2CF2818DDDE0090B0F5 /* WW_CartSuperpositionSelectActivityHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EE2CE2818DDDE0090B0F5 /* WW_CartSuperpositionSelectActivityHeaderCell.swift */; };
 		84710DA527243C9900A40507 /* SwiftImageAndVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */; };
 		84710DA727245FD200A40507 /* SwiftCocoaPodsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DA627245FD200A40507 /* SwiftCocoaPodsVC.swift */; };
 		84710DAB2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */; };
@@ -426,6 +430,10 @@
 		8460CE77278826CB00E7790A /* WW_SearchResultProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchResultProductsCell.swift; sourceTree = "<group>"; };
 		846BB12E20AC1B5100268E6D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		846BB13420AC26B500268E6D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		846EE2C82818CF5C0090B0F5 /* WW_CartSuperpositionActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartSuperpositionActivityView.swift; sourceTree = "<group>"; };
+		846EE2CA2818D43C0090B0F5 /* WW_CartActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartActivityModel.swift; sourceTree = "<group>"; };
+		846EE2CC2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartSuperpositionRandomActivityHeaderCell.swift; sourceTree = "<group>"; };
+		846EE2CE2818DDDE0090B0F5 /* WW_CartSuperpositionSelectActivityHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartSuperpositionSelectActivityHeaderCell.swift; sourceTree = "<group>"; };
 		84710DA427243C9900A40507 /* SwiftImageAndVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftImageAndVideoVC.swift; sourceTree = "<group>"; };
 		84710DA627245FD200A40507 /* SwiftCocoaPodsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCocoaPodsVC.swift; sourceTree = "<group>"; };
 		84710DAA2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTouchViewAndGestureVC.swift; sourceTree = "<group>"; };
@@ -1335,6 +1343,7 @@
 			isa = PBXGroup;
 			children = (
 				8483704827FC3AD90012402C /* WW_CartItems.swift */,
+				846EE2CA2818D43C0090B0F5 /* WW_CartActivityModel.swift */,
 				8483704727FC37F40012402C /* cartData.geojson */,
 			);
 			path = Model;
@@ -1360,6 +1369,8 @@
 				8483706A2802D7070012402C /* WW_CartEditNumView.swift */,
 				8483707C28056D640012402C /* WW_CartBottomDeleteView.swift */,
 				8483707E28056D860012402C /* WW_CartBottomCalculateView.swift */,
+				846EE2CC2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift */,
+				846EE2CE2818DDDE0090B0F5 /* WW_CartSuperpositionSelectActivityHeaderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1384,6 +1395,7 @@
 			children = (
 				848370682801BBEE0012402C /* WW_CartInvaildHeaderView.swift */,
 				84F1CEB2280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift */,
+				846EE2C82818CF5C0090B0F5 /* WW_CartSuperpositionActivityView.swift */,
 			);
 			path = HeaderView;
 			sourceTree = "<group>";
@@ -1873,6 +1885,7 @@
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,
 				842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */,
 				8483707D28056D640012402C /* WW_CartBottomDeleteView.swift in Sources */,
+				846EE2C92818CF5C0090B0F5 /* WW_CartSuperpositionActivityView.swift in Sources */,
 				8453CFD5277C532000FC6C9F /* WW_SearchHotWordsModel.swift in Sources */,
 				8432086027905C3400E5DC09 /* WW_HomePageListModel.swift in Sources */,
 				84DAA5332771CD3500A97694 /* WW_SingleOrderBaseVC.swift in Sources */,
@@ -1937,12 +1950,14 @@
 				84117B7727634D0700D8B0BB /* WW_OrderListVC.swift in Sources */,
 				845EC806271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift in Sources */,
 				84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */,
+				846EE2CD2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
 				84582FEF27D0F755005124CC /* NumberExtension.swift in Sources */,
 				84710DCA272EF48900A40507 /* SwiftUsuallyDevicesVC.swift in Sources */,
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,
+				846EE2CF2818DDDE0090B0F5 /* WW_CartSuperpositionSelectActivityHeaderCell.swift in Sources */,
 				84710DD627342B3400A40507 /* MyNetWorkReachabilityManager.swift in Sources */,
 				84710DA727245FD200A40507 /* SwiftCocoaPodsVC.swift in Sources */,
 				84710DE127382BC400A40507 /* SwiftDataPersistenceVC.swift in Sources */,
@@ -1970,6 +1985,7 @@
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */,
 				844F3F02275DB5E2006762D0 /* WW_MainVC.swift in Sources */,
+				846EE2CB2818D43C0090B0F5 /* WW_CartActivityModel.swift in Sources */,
 				84710DDE2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift in Sources */,
 				84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */,
 				8440F0FC2784306E001FE7A1 /* WW_SearchHotWordsFlowLayout.swift in Sources */,

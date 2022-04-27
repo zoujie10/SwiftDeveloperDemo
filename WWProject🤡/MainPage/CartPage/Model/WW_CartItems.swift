@@ -206,7 +206,7 @@ class WW_ActivityModel : Codable{
     //活动类型 1 -随机  2-买家自选  3-指定送
     var way:String?
     //赠品信息
-    var subtotalTipsResponse : WW_ActivityHeaderModel?
+    var actList : [WW_CartActivityModel]
     //参加活动的购物车商品
     var cartItemList:[WW_CartItem]
     // 0 普通商品 1 满赠活动商品 2 秒杀活动商品

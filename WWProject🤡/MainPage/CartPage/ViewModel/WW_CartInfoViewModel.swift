@@ -76,6 +76,21 @@ class WW_CartInfoViewModel: WW_BaseViewModel {
         return Cart_CellType(rawValue: cellModel.type!)!
     }
     
+    func haveActivityHead(index:Int)->Bool{
+        let model = self.arrayVaildData[index]
+        return  model.actList.count > 0
+    }
+    
+    func configHeaderData(index:Int)->WW_ActivityModel{
+        let model = self.arrayVaildData[index]
+        return model
+    }
+    
+    func configHeadHeight(index:Int)->CGFloat{
+        let model = self.arrayVaildData[index]
+        return CGFloat(65 * model.actList.count)
+    }
+    
     func selectAllData(){
         for model : WW_ActivityModel in self.arrayAllDatas{
             for item in model.cartItemList{

@@ -104,13 +104,18 @@ class ZJ_Choose_Sorted_Algorithm{
     }
 }
 //https://www.jianshu.com/p/1fd62e4234b3
+/*
+ 1:在函数里有两个循环，外循环依次查找数组中的每一个元素；这就是从数字堆中取最上面的数字的过程。变量x是有序部分结束和堆开始的索引。要记住的是，在任何时候，从0到x的位置数组都是有序的，剩下的则是无序的。
+
+2:内循环则从x位置的元素开始查找。x是堆顶的元素，它有可能比前面的所有元素都小。内循环从有序数组的后面开始往前查找。每次找到一个大的元素，就交换它们的位置，直到内层循环结束，数组的前面部分依然是有序的，有序的元素也增加了一个
+*/
 class ZJ_Insert_Sort_Algorithm{
     
     func insert_Sort(){
-        var a = [12,14,19,14,15,12,123,1234,33]   // 1
-        for x in 1 ..< a.count {       // 2
+        var a = [12,14,19,14,15,12,123,1234,33]
+        for x in 1 ..< a.count {       // 1
             var y = x
-            while y > 0 && a[y] < a[y - 1] { // 3
+            while y > 0 && a[y] < a[y - 1] { // 2
                 a.swapAt(y - 1, y)
                 y -= 1
             }
@@ -122,6 +127,11 @@ class ZJ_Insert_Sort_Algorithm{
 
 class ZJ_Heap_Sort_Algorithm{
     
+    
+    func heap_Sort_Algorithm(){
+//        var a = [12,14,19,14,15,12,123,1234,33]
+      
+    }
 }
 
 class ZJ_Merge_Sort_Algorithm{
