@@ -52,8 +52,6 @@
 		842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
-		842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786D2258ACA70048B63A /* AddressBook.framework */; };
-		842F78702258ACAF0048B63A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F786F2258ACAF0048B63A /* AddressBookUI.framework */; };
 		842F78722258AD4C0048B63A /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78712258AD4C0048B63A /* Contacts.framework */; };
 		842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78732258AD560048B63A /* ContactsUI.framework */; };
 		8431573820A29DC900AE0A4E /* AlertAndActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431573720A29DC900AE0A4E /* AlertAndActionViewController.swift */; };
@@ -572,8 +570,6 @@
 				84BE37832298E18800910E7E /* iAd.framework in Frameworks */,
 				842F78742258AD560048B63A /* ContactsUI.framework in Frameworks */,
 				842F78722258AD4C0048B63A /* Contacts.framework in Frameworks */,
-				842F78702258ACAF0048B63A /* AddressBookUI.framework in Frameworks */,
-				842F786E2258ACA80048B63A /* AddressBook.framework in Frameworks */,
 				84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */,
 				84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */,
 				8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */,

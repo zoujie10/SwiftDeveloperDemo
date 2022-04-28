@@ -10,11 +10,11 @@ import UIKit
 
 class WW_CartSuperpositionActivityView: UITableViewHeaderFooterView,UITableViewDelegate,UITableViewDataSource {
    
-    var cellCount : Int? = 0
+    var sourceData = [WW_CartActivityModel]()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        backgroundColor = UIColor(r: 247, g: 247, b: 247)
+        backgroundColor = UIColor(r: 246, g: 246, b: 246)
         creatUI()
     }
     required init?(coder: NSCoder) {
@@ -28,19 +28,26 @@ class WW_CartSuperpositionActivityView: UITableViewHeaderFooterView,UITableViewD
         }
     }
     func configData(data:WW_ActivityModel){
+        self.sourceData = data.actList
         self.headTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellCount!
+        return self.sourceData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 1{
+        let model = self.sourceData[indexPath.row]
+        
+        if model.way == 1{
             let cell : WW_CartSuperpositionRandomActivityHeaderCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartSuperpositionRandomActivityHeaderCell.classForCoder()), for: indexPath) as! WW_CartSuperpositionRandomActivityHeaderCell
+            cell.selectionStyle = .none
+            cell.configeCellData(data: model)
             return cell
-        }else{
+        }else{//way == 2
             let cell : WW_CartSuperpositionSelectActivityHeaderCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_CartSuperpositionSelectActivityHeaderCell.classForCoder()), for: indexPath) as! WW_CartSuperpositionSelectActivityHeaderCell
+            cell.selectionStyle = .none
+            cell.configeCellData(data: model)
             return cell
         }
     }

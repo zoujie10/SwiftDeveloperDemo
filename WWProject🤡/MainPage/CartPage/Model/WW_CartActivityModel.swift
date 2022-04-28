@@ -20,7 +20,8 @@ class WW_CartActivityModel: Codable {
     // 0 普通商品 1 满赠活动商品 2 秒杀活动商品
     var type: Int?
     //是满赠和秒杀活动;
-    var isGiftWithSkill:Bool?
+    var isGiftWithSkill: Bool?
+    var actName: String?
 }
 
 class WW_CartActivityHeaderModel : Codable{

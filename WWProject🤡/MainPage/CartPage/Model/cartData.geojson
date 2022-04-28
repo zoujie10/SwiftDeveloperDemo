@@ -13,7 +13,7 @@
             "way": null,
             "actList": [{
                 "activityId": 1522,
-                "actName": "克勤部分随机活动",
+                "actName": "部分随机活动",
                 "way": 1,
                 "subtotalTipsResponse": {
                     "ruleId": 5162,
@@ -63,7 +63,7 @@
                 "type": 1
             }, {
                 "activityId": 1552,
-                "actName": "克勤自选活动",
+                "actName": "自选活动",
                 "way": 2,
                 "subtotalTipsResponse": {
                     "ruleId": 5175,

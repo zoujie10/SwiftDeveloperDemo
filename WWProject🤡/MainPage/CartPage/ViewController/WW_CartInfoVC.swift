@@ -171,7 +171,6 @@ extension WW_CartInfoVC : UITableViewDelegate,UITableViewDataSource{
                 if self.viewModel.haveActivityHead(index: section){
                     let view = WW_CartSuperpositionActivityView.init()
                     let model = self.viewModel.configHeaderData(index: section)
-                    view.cellCount = model.actList.count
                     view.configData(data: model)
                     return view
                 }

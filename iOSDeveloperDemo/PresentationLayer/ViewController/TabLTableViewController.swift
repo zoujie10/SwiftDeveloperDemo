@@ -42,7 +42,7 @@ class TabLTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
 	func requestData(){
-		UIApplication.shared.isNetworkActivityIndicatorVisible = true //状态栏菊花  网络活动指示器
+//		UIApplication.shared.isNetworkActivityIndicatorVisible = true //状态栏菊花  网络活动指示器
 		Alamofire.request("www.baidu.com",method: .post,parameters: ["key":"value"]).responseJSON { response in
 //			print(response.request)  // 原始的URL请求
 //			print(response.response) // HTTP URL响应
@@ -98,7 +98,7 @@ class TabLTableViewController: UIViewController, UITableViewDelegate, UITableVie
 	@objc func refreshBtn(){
 		print("下拉刷新")
 		self.Tableview.refreshControl?.endRefreshing()
-		UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//		UIApplication.shared.isNetworkActivityIndicatorVisible = false
 	}
 
 	

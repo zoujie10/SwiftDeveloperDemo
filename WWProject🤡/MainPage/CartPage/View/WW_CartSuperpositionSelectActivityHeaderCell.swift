@@ -14,10 +14,16 @@ class WW_CartSuperpositionSelectActivityHeaderCell: UITableViewCell {
    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = UIColor(r: 246, g: 246, b: 246)
         contentView.addSubview(activitySubView)
         activitySubView.snp.makeConstraints { make in
-            make.edges.equalTo(UIEdgeInsets(top: 8, left: 12, bottom: 0, right: 12))
+            make.edges.equalTo(UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12))
         }
+    }
+    
+    func configeCellData(data:WW_CartActivityModel){
+        let str = data.way == 2 ? "指定赠品" : " "
+        self.activitySubView.tempLabel.text = data.actName! + str
     }
     
     required init?(coder: NSCoder) {
@@ -40,6 +46,9 @@ class WW_CartSuperpositionSelectActivityHeaderCell: UITableViewCell {
 class WW_CartActivityProdcutSelectSubview:UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
+        self.layer.borderWidth = 0.1
+        self.layer.borderColor = UIColor.lightGray.cgColor
         addSubview(tempLabel)
         tempLabel.snp.makeConstraints { make in
             make.edges.equalTo(self)
