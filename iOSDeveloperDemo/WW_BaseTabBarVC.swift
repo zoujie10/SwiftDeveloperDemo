@@ -29,15 +29,18 @@ class WW_BaseTabBarVC: UITabBarController {
         //MineViewController
         let mineVC = MineViewController()
         addChildViewController(mineVC,
-                               title: "设计模式",
+                               title: "Baisc",
                                image: UIImage(named: "ww_tab_bars_ceo_default_img"),
                                selectedImage: UIImage(named: "ww_tab_bars_ceo_selected_img"))
         //TextViewController
-        let otherVC = TextViewController()
-        addChildViewController(otherVC,
-                               title: "Basic",
+//        let otherVC = TextViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)//获取storyboard的vc
+        let vc = storyboard.instantiateViewController(withIdentifier: "stroryboardVC")
+        addChildViewController(vc,
+                               title: "StoryBoard",
                                image: UIImage(named: "ww_tab_bars_cart_default_img"),
                                selectedImage: UIImage(named: "ww_tab_bars_cart_selected_img"))
+        
     }
     func addChildViewController(_ childController: UIViewController, title:String?, image:UIImage? ,selectedImage:UIImage?) {
         

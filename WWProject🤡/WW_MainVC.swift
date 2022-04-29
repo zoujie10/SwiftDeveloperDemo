@@ -34,24 +34,25 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
         self.navigationItem.hidesBackButton = true
     }
     func dataArrayMethod(){
-        dataArray = ["分类页",
-        "售后",
-        "订单列表",
-        "榜单",
-        "搜索",
-        "首页",
-        "客户管理",
-        "购物车"]
+        dataArray = [
+            "首页🤡",
+            "分类页😁",
+            "购物车",
+            "订单列表",
+            "售后",
+            "榜单",
+            "搜索",
+            "客户管理"
+        ]
         //存跳转的控制器
-        vcArray = [self.swiftStringFromClass(cls: WW_ClassificationListVC.self),
-                   self.swiftStringFromClass(cls: WW_AfterDetailVC.self),
+        vcArray = [self.swiftStringFromClass(cls: WW_HomeListVC.self),
+                   self.swiftStringFromClass(cls: WW_ClassificationListVC.self),
+                   self.swiftStringFromClass(cls: WW_CartInfoVC.self),
                    self.swiftStringFromClass(cls: WW_OrderListVC.self),
+                   self.swiftStringFromClass(cls: WW_AfterDetailVC.self),
                    self.swiftStringFromClass(cls: WW_HeroListVC.self),
                    self.swiftStringFromClass(cls: WW_SearchHotWordsVC.self),
-                   self.swiftStringFromClass(cls: WW_HomeListVC.self),
-                   self.swiftStringFromClass(cls: WW_CustomerMainVC.self),
-                   self.swiftStringFromClass(cls: WW_CartInfoVC.self)
-        ]
+                   self.swiftStringFromClass(cls: WW_CustomerMainVC.self)]
     }
     //MARK: UITableview data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
