@@ -215,6 +215,7 @@
 		849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849387B4262BC83100C2914C /* GitHubManagerVC.swift */; };
 		8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A724A251108A900398876 /* SwiftBasicViewController.swift */; };
 		84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */; };
+		84B27C64281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -499,6 +500,7 @@
 		849387922622968700C2914C /* UIViewControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerVC.swift; sourceTree = "<group>"; };
 		849387B4262BC83100C2914C /* GitHubManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManagerVC.swift; sourceTree = "<group>"; };
 		84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeRecommendsCell.swift; sourceTree = "<group>"; };
+		84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_SortAlgorithmVC.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -627,7 +629,7 @@
 			path = IteratorPattern;
 			sourceTree = "<group>";
 		};
-		4F411ACC228AB9DA001BF135 /* DesignPattern🐔 */ = {
+		4F411ACC228AB9DA001BF135 /* DesignPattern&&Basic🐔 */ = {
 			isa = PBXGroup;
 			children = (
 				84B5BD6020C5300F00D2047C /* MineViewController.swift */,
@@ -637,8 +639,9 @@
 				4FC4E196228CFED60017192B /* ObserverPattern */,
 				4F411AD4228AC120001BF135 /* DelegatePattern */,
 				4F411ACD228ABAB8001BF135 /* DecoratePattern */,
+				84B27C62281D5E0600AD3EB4 /* SortAlgorithm */,
 			);
-			path = "DesignPattern🐔";
+			path = "DesignPattern&&Basic🐔";
 			sourceTree = "<group>";
 		};
 		4F411ACD228ABAB8001BF135 /* DecoratePattern */ = {
@@ -1491,6 +1494,14 @@
 			path = GlobalClass;
 			sourceTree = "<group>";
 		};
+		84B27C62281D5E0600AD3EB4 /* SortAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */,
+			);
+			path = SortAlgorithm;
+			sourceTree = "<group>";
+		};
 		84B5BD5B20C50FE200D2047C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1582,7 +1593,7 @@
 			children = (
 				84E9DB6520AAB61100C65A12 /* Resource */,
 				8483707128046FFC0012402C /* DataStruct&&Algorithm📚 */,
-				4F411ACC228AB9DA001BF135 /* DesignPattern🐔 */,
+				4F411ACC228AB9DA001BF135 /* DesignPattern&&Basic🐔 */,
 				845EC801271FECC40006651E /* WWProject🤡 */,
 				845A7249251107E800398876 /* Book-Swift-Moblie🐱 */,
 				84E37BDD20A02D390031DEEE /* iOSDeveloperDemo */,
@@ -2031,6 +2042,7 @@
 				84DAA5402774746400A97694 /* WW_ChiefInspectorVC.swift in Sources */,
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
 				84582FE027CB9094005124CC /* SwiftCubeDisplayView.swift in Sources */,
+				84B27C64281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift in Sources */,
 				843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */,
 				8483706B2802D7070012402C /* WW_CartEditNumView.swift in Sources */,
 				84710DB6272ACAD200A40507 /* ZJ_TableView.swift in Sources */,

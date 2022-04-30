@@ -24,13 +24,13 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
 		print(self.dataArray[indexPath.row])
 		if(indexPath.row == 0){
 			self.navigationController?.pushViewController(CopyPatternViewController(), animated: true)
-		}
+        }else if(indexPath.row == 7){
+            self.navigationController?.pushViewController(ZJ_SortAlgorithmVC(), animated: true)
+        }
 	}
 	
 	var dataArray = NSArray()
 	var tableView = UITableView()
-	
-	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,12 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
                           "ObserverPattern",
                           "DelegatePattern",
                           "DecoratePattern",
-                          "设计模式"]
+                          "设计模式",
+                          "Sort Algorithm"]
 	
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
-			make.top.left.right.equalTo(self.view)
-			make.height.equalTo(400)
+            make.edges.equalTo(view)
 		}
 		self.tableView.dataSource = self;
 		self.tableView.delegate = self;
@@ -138,6 +138,8 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
 		
     }
 	
+    
+    //MARK: DELEGATE
 	func sleep() {
 		
 		print("sleep...")

@@ -29,7 +29,7 @@ class WW_BaseTabBarVC: UITabBarController {
         //MineViewController
         let mineVC = MineViewController()
         addChildViewController(mineVC,
-                               title: "Baisc",
+                               title: "Basic",
                                image: UIImage(named: "ww_tab_bars_ceo_default_img"),
                                selectedImage: UIImage(named: "ww_tab_bars_ceo_selected_img"))
         //TextViewController
