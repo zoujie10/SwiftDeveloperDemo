@@ -121,26 +121,27 @@ class LocationAndMapViewController: UIViewController,CLLocationManagerDelegate {
 		let geocoder = CLGeocoder()
         
 		geocoder.geocodeAddressString(self.searchKeyWords.text!,completionHandler: {(placeMarks, error) -> Void in
-			
-            if placeMarks!.count > 0{
-//				NSLog("查询记录数 i%", placeMarks?.count ?? NSInteger.self)
-				
-				let placemark = placeMarks![0] as CLPlacemark
-//				let addressDic = plaemark.addressDictionary
-//				var address : String
-//				if ((placemark.thoroughfare) != nil) {
-//					address = placemark.thoroughfare!
-//				}
-				
-				let  city = placemark.locality as NSString?
-			
-				let location = placemark.location?.coordinate
-				
-				self.Lat.text = NSString(format: "%3.5f", location!.latitude) as String
-				self.lng.text = NSString(format: "%3.5f", location!.longitude) as String
-				
-				self.address.text = city as String?
-			}
+            
+            guard placeMarks != nil else {
+                return
+            }
+            //                NSLog("查询记录数 i%", placeMarks?.count ?? NSInteger.self)
+            
+            let placemark = placeMarks![0] as CLPlacemark
+            //                let addressDic = plaemark.addressDictionary
+            //                var address : String
+            //                if ((placemark.thoroughfare) != nil) {
+            //                    address = placemark.thoroughfare!
+            //                }
+            
+            let  city = placemark.locality as NSString?
+            
+            let location = placemark.location?.coordinate
+            
+            self.Lat.text = NSString(format: "%3.5f", location!.latitude) as String
+            self.lng.text = NSString(format: "%3.5f", location!.longitude) as String
+            
+            self.address.text = city as String?
 		})
 		
 		self.searchKeyWords.resignFirstResponder()
