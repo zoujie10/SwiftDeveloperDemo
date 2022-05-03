@@ -42,7 +42,8 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
             "售后",
             "榜单",
             "搜索",
-            "客户管理"
+            "客户管理",
+            "分享"
         ]
         //存跳转的控制器
         vcArray = [self.swiftStringFromClass(cls: WW_HomeListVC.self),
@@ -52,7 +53,8 @@ class WW_MainVC: WW_MainBaseVC,UITableViewDelegate,UITableViewDataSource {
                    self.swiftStringFromClass(cls: WW_AfterDetailVC.self),
                    self.swiftStringFromClass(cls: WW_HeroListVC.self),
                    self.swiftStringFromClass(cls: WW_SearchHotWordsVC.self),
-                   self.swiftStringFromClass(cls: WW_CustomerMainVC.self)]
+                   self.swiftStringFromClass(cls: WW_CustomerMainVC.self),
+                   self.swiftStringFromClass(cls: WW_ShareActionVC.self)]
     }
     //MARK: UITableview data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

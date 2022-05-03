@@ -216,6 +216,7 @@
 		8499C5F82517A915003C3DF9 /* SwiftBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A724A251108A900398876 /* SwiftBasicViewController.swift */; };
 		84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */; };
 		84B27C64281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */; };
+		84B27C68282105A800AD3EB4 /* WW_ShareActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C67282105A800AD3EB4 /* WW_ShareActionVC.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -501,6 +502,7 @@
 		849387B4262BC83100C2914C /* GitHubManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManagerVC.swift; sourceTree = "<group>"; };
 		84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeRecommendsCell.swift; sourceTree = "<group>"; };
 		84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_SortAlgorithmVC.swift; sourceTree = "<group>"; };
+		84B27C67282105A800AD3EB4 /* WW_ShareActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ShareActionVC.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -711,7 +713,7 @@
 		84117B7E27672DB200D8B0BB /* AfterSalePage */ = {
 			isa = PBXGroup;
 			children = (
-				845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */,
+				84B27C652820EB6F00AD3EB4 /* View */,
 				844F3F03275DBAFE006762D0 /* WW_AfterDetailVC.swift */,
 				845EC805271FED3A0006651E /* WWAfterSaleDisplayPicEgVC.swift */,
 			);
@@ -1185,6 +1187,7 @@
 				84117B7C27672D7B00D8B0BB /* OrderListPage */,
 				8438A01527EFFFBC00F30F6A /* ComplexOrderListPage */,
 				8438A01627EFFFF800F30F6A /* CartPage */,
+				84B27C662821057E00AD3EB4 /* SharePage */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -1500,6 +1503,22 @@
 				84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */,
 			);
 			path = SortAlgorithm;
+			sourceTree = "<group>";
+		};
+		84B27C652820EB6F00AD3EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84B27C662821057E00AD3EB4 /* SharePage */ = {
+			isa = PBXGroup;
+			children = (
+				84B27C67282105A800AD3EB4 /* WW_ShareActionVC.swift */,
+			);
+			path = SharePage;
 			sourceTree = "<group>";
 		};
 		84B5BD5B20C50FE200D2047C /* View */ = {
@@ -1926,6 +1945,7 @@
 				8455A26C279E830C007EE634 /* WW_HomeChannelSubCell.swift in Sources */,
 				84D95B2D27B2B3B500052E04 /* SwiftCAAnimationViewControllerThree.swift in Sources */,
 				84DAA52F2771C9B500A97694 /* WW_OrderSingleVCTwo.swift in Sources */,
+				84B27C68282105A800AD3EB4 /* WW_ShareActionVC.swift in Sources */,
 				84582FF127D0FAAA005124CC /* WW_FallFreeBehavior.swift in Sources */,
 				8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */,
 				8483706127FF1CAE0012402C /* WW_CartSeckillCell.swift in Sources */,

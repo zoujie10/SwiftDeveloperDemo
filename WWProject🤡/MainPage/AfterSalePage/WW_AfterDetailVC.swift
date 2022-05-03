@@ -12,12 +12,15 @@ class WW_AfterDetailVC: WW_MainBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "售后详情"
+        title = "录入"
+       
+    }
+    
+    func creatUI(){
         view.addSubview(self.changeImageBtn)
         self.changeImageBtn.snp.makeConstraints { make in
             make.center.equalTo(view)
         }
-        // Do any additional setup after loading the view.
     }
     
     lazy var changeImageBtn : UIButton = {
@@ -36,4 +39,10 @@ class WW_AfterDetailVC: WW_MainBaseVC {
         }
         self.present(vc, animated: false, completion: nil)
     }
+    
+    
+    //1.tableview
+    //2. two section
+    //3.  section 1  head + 4 text cells
+    //4.  section 2  title cell ,btn cell,textfield cell,collectionview cell
 }
