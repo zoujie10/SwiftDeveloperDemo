@@ -217,6 +217,10 @@
 		84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */; };
 		84B27C64281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */; };
 		84B27C68282105A800AD3EB4 /* WW_ShareActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C67282105A800AD3EB4 /* WW_ShareActionVC.swift */; };
+		84B27C6A28225B9400AD3EB4 /* WW_AfterInfoTitleTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C6928225B9400AD3EB4 /* WW_AfterInfoTitleTextCell.swift */; };
+		84B27C6C28225F3C00AD3EB4 /* WW_LabelAndButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C6B28225F3C00AD3EB4 /* WW_LabelAndButtonCell.swift */; };
+		84B27C6E28225F5500AD3EB4 /* WW_OnlyTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C6D28225F5500AD3EB4 /* WW_OnlyTextFieldCell.swift */; };
+		84B27C70282261C400AD3EB4 /* WW_AfterInfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C6F282261C400AD3EB4 /* WW_AfterInfoTextCell.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -503,6 +507,10 @@
 		84A2C27C279A98770098BA26 /* WW_HomeRecommendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeRecommendsCell.swift; sourceTree = "<group>"; };
 		84B27C63281D5E5C00AD3EB4 /* ZJ_SortAlgorithmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJ_SortAlgorithmVC.swift; sourceTree = "<group>"; };
 		84B27C67282105A800AD3EB4 /* WW_ShareActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ShareActionVC.swift; sourceTree = "<group>"; };
+		84B27C6928225B9400AD3EB4 /* WW_AfterInfoTitleTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoTitleTextCell.swift; sourceTree = "<group>"; };
+		84B27C6B28225F3C00AD3EB4 /* WW_LabelAndButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_LabelAndButtonCell.swift; sourceTree = "<group>"; };
+		84B27C6D28225F5500AD3EB4 /* WW_OnlyTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_OnlyTextFieldCell.swift; sourceTree = "<group>"; };
+		84B27C6F282261C400AD3EB4 /* WW_AfterInfoTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoTextCell.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -1509,6 +1517,10 @@
 			isa = PBXGroup;
 			children = (
 				845EC807271FEED90006651E /* WWAfterSalePicEgCell.swift */,
+				84B27C6928225B9400AD3EB4 /* WW_AfterInfoTitleTextCell.swift */,
+				84B27C6F282261C400AD3EB4 /* WW_AfterInfoTextCell.swift */,
+				84B27C6B28225F3C00AD3EB4 /* WW_LabelAndButtonCell.swift */,
+				84B27C6D28225F5500AD3EB4 /* WW_OnlyTextFieldCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1955,6 +1967,7 @@
 				842991AF2741508B00A50077 /* SwiftWebViewAndHTML5VC.swift in Sources */,
 				849387B5262BC83100C2914C /* GitHubManagerVC.swift in Sources */,
 				8446EC6427F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift in Sources */,
+				84B27C6C28225F3C00AD3EB4 /* WW_LabelAndButtonCell.swift in Sources */,
 				84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */,
 				4F02FD9322ADF52C00B8CB35 /* CopyObject.swift in Sources */,
 				844F3EE52758B0C5006762D0 /* WW_ClassificationLeftTagsModel.swift in Sources */,
@@ -1969,6 +1982,7 @@
 				4FC4E19C228D021C0017192B /* Observerd.swift in Sources */,
 				844ECB4127F83B66007FC276 /* WW_ComplexOrderListCell.swift in Sources */,
 				848A465820CE1DA100F982F2 /* Singleton.swift in Sources */,
+				84B27C70282261C400AD3EB4 /* WW_AfterInfoTextCell.swift in Sources */,
 				844F3F06275E0021006762D0 /* WW_ClassificationLeftTagsViewModel.swift in Sources */,
 				84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */,
 				84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */,
@@ -2023,6 +2037,7 @@
 				842991DE2747EA0D00A50077 /* SwiftLocalizationVC.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
 				84D95B2F27B8A2F000052E04 /* SwiftSelectAndSortVC.swift in Sources */,
+				84B27C6E28225F5500AD3EB4 /* WW_OnlyTextFieldCell.swift in Sources */,
 				845EC7EA27148A100006651E /* UIKitComponentVC.swift in Sources */,
 				84E37BFF20A038760031DEEE /* TextViewController.swift in Sources */,
 				4F411AD6228AC164001BF135 /* DelegateProtocol.swift in Sources */,
@@ -2071,6 +2086,7 @@
 				84710DBB272B9AD900A40507 /* ZJ_ProductsModel.swift in Sources */,
 				847A569920BE81F200EBB06C /* TabLTableViewController.swift in Sources */,
 				84837065280017530012402C /* WW_CartInvaildCell.swift in Sources */,
+				84B27C6A28225B9400AD3EB4 /* WW_AfterInfoTitleTextCell.swift in Sources */,
 				4F02FDA122AF867E00B8CB35 /* ConcreteAggregrate.swift in Sources */,
 				84710DE5273BFE9100A40507 /* SwiftSoundVideoVC.swift in Sources */,
 				84DAA548277601CA00A97694 /* WW_HeroListFamousSayingCell.swift in Sources */,
