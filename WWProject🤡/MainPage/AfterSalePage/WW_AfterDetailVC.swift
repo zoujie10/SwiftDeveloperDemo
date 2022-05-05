@@ -29,11 +29,14 @@ class WW_AfterDetailVC: WW_MainBaseVC {
                           ," 请输入经销商名称","4 "]
     
     var totalData : NSArray = []
+    var sectionTwoCellArray = [UITableViewCell.classForCoder()]
+    var apply_authorization_letter_type:CustomerDetail_Apply_Authorization_Letter_Type = .Apply_Authorization_Letter
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "录入"
         totalData = [sectionOneData,sectionTwoData]
+        configCell()
         creatUI()
     }
     
@@ -65,6 +68,36 @@ class WW_AfterDetailVC: WW_MainBaseVC {
         self.present(vc, animated: false, completion: nil)
     }
     
+    func configCell(){
+        switch  apply_authorization_letter_type {
+            case .Apply_Authorization_Letter:
+                sectionTwoCellArray = [WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_LabelAndButtonCell.classForCoder(),
+                                      WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_LabelAndButtonCell.classForCoder(),
+                                      WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_OnlyTextFieldCell.classForCoder()]
+            case .View_Data:
+                sectionTwoCellArray = [WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_AfterInfoOnlyBtnCell.classForCoder(),
+                                      WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_AfterInfoPickImageCell.classForCoder()]
+            case .Authorization_Passed:
+                sectionTwoCellArray = [WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_LabelAndButtonCell.classForCoder(),
+                                      WW_AfterInfoTitleTextCell.classForCoder(),
+                                      WW_LabelAndButtonCell.classForCoder(),
+                                      WW_OnlyTextFieldCell.classForCoder()]
+            case .ToReceive_Contract,.View_Authorization_Letter,.Reject_Authorization_Letter,.Reject_Submitting_Data,.Submitting_Data,.Auditting:
+                break
+        }
+        //section 1
+        tableView.register(WW_AfterInfoTextCell.classForCoder(), forCellReuseIdentifier:NSStringFromClass(WW_AfterInfoTextCell.classForCoder()))
+        //section 2
+        for item in sectionTwoCellArray{
+            tableView.register(item.class(), forCellReuseIdentifier: NSStringFromClass(item))
+        }
+    }
     
     //1.tableview
     //2. two section
@@ -72,17 +105,12 @@ class WW_AfterDetailVC: WW_MainBaseVC {
     //4.  section 2  title cell ,btn cell,textfield cell,collectionview cell
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
-        tableView.register(WW_AfterInfoTitleTextCell.classForCoder(), forCellReuseIdentifier:NSStringFromClass(WW_AfterInfoTitleTextCell.classForCoder()))
-        tableView.register(WW_LabelAndButtonCell.classForCoder(), forCellReuseIdentifier:NSStringFromClass(WW_LabelAndButtonCell.classForCoder()))
-        tableView.register(WW_OnlyTextFieldCell.classForCoder(), forCellReuseIdentifier:NSStringFromClass(WW_OnlyTextFieldCell.classForCoder()))
-        tableView.register(WW_AfterInfoTextCell.classForCoder(), forCellReuseIdentifier:NSStringFromClass(WW_AfterInfoTextCell.classForCoder()))
         tableView.contentInset = UIEdgeInsetsMake(15, 0, 0, 0)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.init(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
-        
         return tableView
     }()
 }
@@ -94,26 +122,35 @@ extension WW_AfterDetailVC:UITableViewDelegate,UITableViewDataSource{
             cell.contentLabel.text = self.sectionOneData[indexPath.row]
             return cell
         }else{
-            if indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 4{
-                let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_AfterInfoTitleTextCell.classForCoder())) as! WW_AfterInfoTitleTextCell
+            let classCell: AnyClass = self.sectionTwoCellArray[indexPath.row]
+            if classCell is WW_AfterInfoTitleTextCell.Type{
+                let cell : WW_AfterInfoTitleTextCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_AfterInfoTitleTextCell
                 let string = NSMutableAttributedString(string: " * ", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 13),NSAttributedString.Key.foregroundColor : UIColor(r: 252, g: 68, b: 84)])
                 let subStr = NSAttributedString(string: self.sectionTwoData[indexPath.row])
                 string.append(subStr)
                 cell.titleLabel.attributedText = string
                 return cell
+            }else if classCell is WW_LabelAndButtonCell.Type{
+                let cell : WW_LabelAndButtonCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_LabelAndButtonCell
+                cell.contentLabel.text = self.sectionTwoData[indexPath.row]
+                return cell
+            }else if classCell is WW_OnlyTextFieldCell.Type{
+                let cell : WW_OnlyTextFieldCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_OnlyTextFieldCell
+                cell.mainTextField.placeholder = self.sectionTwoData[indexPath.row]
+                return cell
+            }else if classCell is WW_AfterInfoOnlyBtnCell.Type{
+                let cell : WW_AfterInfoOnlyBtnCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_AfterInfoOnlyBtnCell
+                return cell
+            }else if classCell is WW_AfterInfoPickImageCell.Type{
+                let cell : WW_AfterInfoPickImageCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_AfterInfoPickImageCell
+                return cell
             }else{
-                if indexPath.row == 1 || indexPath.row == 3{
-                    let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_LabelAndButtonCell.classForCoder())) as! WW_LabelAndButtonCell
-                    cell.contentLabel.text = self.sectionTwoData[indexPath.row]
-                    return cell
-                }else{
-                    let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WW_OnlyTextFieldCell.classForCoder())) as! WW_OnlyTextFieldCell
-                    cell.mainTextField.placeholder = self.sectionTwoData[indexPath.row]
-                    return cell
-                }
+                let cell : WW_AfterInfoTitleTextCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_AfterInfoTitleTextCell
+                return cell
             }
         }
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
