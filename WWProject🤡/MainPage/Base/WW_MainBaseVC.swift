@@ -26,7 +26,7 @@ class WW_MainBaseVC: UIViewController {
     }
     //NavBarleftItem
     func configNavigationBar(){
-        if #available(iOS 15, *) {
+        if #available(iOS 14, *) {
             let app = UINavigationBarAppearance.init()
             app.configureWithOpaqueBackground()  // 重置背景和阴影颜色
             app.titleTextAttributes = [

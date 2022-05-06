@@ -277,7 +277,6 @@
 		84FA0FA320AEA96800B6914A /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA120AEA96800B6914A /* team.plist */; };
 		84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0FA420AEC4D700B6914A /* CustomTableViewController.swift */; };
 		84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0FA620AEC72700B6914A /* CustomTableViewCell.swift */; };
-		EEC2298738A6CDA3DD8D13BF /* Pods_iOSDeveloperDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E492A3C46FFD3BDE0612A1 /* Pods_iOSDeveloperDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -590,7 +589,6 @@
 				84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */,
 				84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */,
 				8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */,
-				EEC2298738A6CDA3DD8D13BF /* Pods_iOSDeveloperDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

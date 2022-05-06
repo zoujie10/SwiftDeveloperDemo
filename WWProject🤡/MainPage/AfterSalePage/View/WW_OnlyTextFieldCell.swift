@@ -8,12 +8,12 @@
 
 import UIKit
 
-class WW_OnlyTextFieldCell: UITableViewCell {
+class WW_OnlyTextFieldCell: UITableViewCell,UITextFieldDelegate {
 
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.isUserInteractionEnabled = false
+        self.isUserInteractionEnabled = true
         self.selectionStyle = .none
         creatUI()
     }
@@ -30,18 +30,12 @@ class WW_OnlyTextFieldCell: UITableViewCell {
     
     lazy var mainTextField : UITextField = {
         let tx = UITextField()
+        tx.delegate = self
         return tx
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
     }
 
 }

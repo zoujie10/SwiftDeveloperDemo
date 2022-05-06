@@ -12,7 +12,7 @@ class WW_LabelAndButtonCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.isUserInteractionEnabled = false
+        self.isUserInteractionEnabled = true
         self.selectionStyle = .none
         creatUI()
     }

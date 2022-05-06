@@ -9,7 +9,17 @@
 import UIKit
 
 class WW_AfterInfoOnlyBtnCell: UITableViewCell {
-
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.isUserInteractionEnabled = true
+        self.selectionStyle = .none
+        creatUI()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func creatUI(){}
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

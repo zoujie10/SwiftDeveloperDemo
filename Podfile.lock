@@ -25,6 +25,7 @@ PODS:
   - SDWebImage/Core (5.5.2)
   - SnapKit (4.0.1)
   - Then (2.7.0)
+  - TZImagePickerController (3.8.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - SDWebImage
   - SnapKit
   - Then
+  - TZImagePickerController
 
 SPEC REPOS:
   trunk:
@@ -59,6 +61,7 @@ SPEC REPOS:
     - SDWebImage
     - SnapKit
     - Then
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -76,7 +79,8 @@ SPEC CHECKSUMS:
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  TZImagePickerController: 943511626019431372cf908f24c114521e484f0e
 
-PODFILE CHECKSUM: b6602565c498c049dbfc107a15c99dc655b2b6b7
+PODFILE CHECKSUM: 255cb9293ade82f36173f31db56b2f5e280c8a40
 
 COCOAPODS: 1.11.2
