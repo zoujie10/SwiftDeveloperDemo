@@ -223,6 +223,7 @@
 		84B27C70282261C400AD3EB4 /* WW_AfterInfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C6F282261C400AD3EB4 /* WW_AfterInfoTextCell.swift */; };
 		84B27C752823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C742823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift */; };
 		84B27C772823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C762823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift */; };
+		84B27C9F2826A12300AD3EB4 /* WW_AfterPickImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C9E2826A12300AD3EB4 /* WW_AfterPickImageCell.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -515,6 +516,7 @@
 		84B27C6F282261C400AD3EB4 /* WW_AfterInfoTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoTextCell.swift; sourceTree = "<group>"; };
 		84B27C742823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoOnlyBtnCell.swift; sourceTree = "<group>"; };
 		84B27C762823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoPickImageCell.swift; sourceTree = "<group>"; };
+		84B27C9E2826A12300AD3EB4 /* WW_AfterPickImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterPickImageCell.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -1527,6 +1529,7 @@
 				84B27C6D28225F5500AD3EB4 /* WW_OnlyTextFieldCell.swift */,
 				84B27C742823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift */,
 				84B27C762823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift */,
+				84B27C9E2826A12300AD3EB4 /* WW_AfterPickImageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1924,6 +1927,7 @@
 				84FA0F9E20AEA68A00B6914A /* SimpleTableViewController.swift in Sources */,
 				843208712796A98800E5DC09 /* WW_HomeBaseCell.swift in Sources */,
 				845E0A6E2679CA9E00F11606 /* IteratorTools.swift in Sources */,
+				84B27C9F2826A12300AD3EB4 /* WW_AfterPickImageCell.swift in Sources */,
 				840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */,
 				84D95B2327A6CEED00052E04 /* WW_HomeFreeGiftCell.swift in Sources */,
 				8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */,

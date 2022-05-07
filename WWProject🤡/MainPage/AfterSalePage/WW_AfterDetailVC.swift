@@ -26,7 +26,8 @@ class WW_AfterDetailVC: WW_MainBaseVC {
                            "4. 审核成功后可在旺铺下载查看"]
     let sectionTwoData = [" 选择产线"," 1"
                           ," 选择经销范围"," 3"
-                          ," 请输入经销商名称","4 "]
+                          ," 请输入经销商名称","4 ",
+                          " 请上传图片","6"]
     
     var totalData : NSArray = []
     var sectionTwoCellArray = [UITableViewCell.classForCoder()]
@@ -76,7 +77,9 @@ class WW_AfterDetailVC: WW_MainBaseVC {
                                       WW_AfterInfoTitleTextCell.classForCoder(),
                                       WW_LabelAndButtonCell.classForCoder(),
                                       WW_AfterInfoTitleTextCell.classForCoder(),
-                                      WW_OnlyTextFieldCell.classForCoder()]
+                                      WW_OnlyTextFieldCell.classForCoder(),
+                                       WW_AfterInfoTitleTextCell.classForCoder(),
+                                       WW_AfterInfoPickImageCell.classForCoder()]
             case .View_Data:
                 sectionTwoCellArray = [WW_AfterInfoTitleTextCell.classForCoder(),
                                       WW_AfterInfoOnlyBtnCell.classForCoder(),
@@ -143,6 +146,7 @@ extension WW_AfterDetailVC:UITableViewDelegate,UITableViewDataSource{
                 return cell
             }else if classCell is WW_AfterInfoPickImageCell.Type{
                 let cell : WW_AfterInfoPickImageCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_AfterInfoPickImageCell
+                cell.nav = self.navigationController!
                 return cell
             }else{
                 let cell : WW_AfterInfoTitleTextCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_AfterInfoTitleTextCell
@@ -164,6 +168,10 @@ extension WW_AfterDetailVC:UITableViewDelegate,UITableViewDataSource{
         if (indexPath.section == 0){
             return 35
         }else{
+            let classCell: AnyClass = self.sectionTwoCellArray[indexPath.row]
+            if classCell is WW_AfterInfoPickImageCell.Type{
+                return 130
+            }
             return 45
         }
     }
