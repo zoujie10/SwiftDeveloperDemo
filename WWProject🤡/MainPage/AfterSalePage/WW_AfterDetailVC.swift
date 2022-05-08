@@ -136,6 +136,10 @@ extension WW_AfterDetailVC:UITableViewDelegate,UITableViewDataSource{
             }else if classCell is WW_LabelAndButtonCell.Type{
                 let cell : WW_LabelAndButtonCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_LabelAndButtonCell
                 cell.contentLabel.text = self.sectionTwoData[indexPath.row]
+                cell.jump_type = indexPath.row == 1 ? Click_Btn_Jump_Type.Click_Btn_Jump_Address : .Click_Btn_Jump_Alert
+                cell.click_Block = {jump_Type in
+                    print(jump_Type)
+                }
                 return cell
             }else if classCell is WW_OnlyTextFieldCell.Type{
                 let cell : WW_OnlyTextFieldCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(classCell)) as! WW_OnlyTextFieldCell
