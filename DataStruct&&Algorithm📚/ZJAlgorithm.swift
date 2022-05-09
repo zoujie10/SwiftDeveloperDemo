@@ -121,6 +121,7 @@ class ZJ_Insert_Sort_Algorithm{
             }
         }
         print("Insert sort Algorithm",a)
+        print("reverse array ",a.reversed())
     }
 
 }

@@ -21,12 +21,20 @@ class ZJ_SortAlgorithmVC: WW_MainBaseVC {
         algorithm.Sort_Bubbling_OutSide_optimize()
         let choose = ZJ_Choose_Sorted_Algorithm.init()
         choose.chooseSorted_Algorithm()
+        let insert = ZJ_Insert_Sort_Algorithm()
+        insert.insert_Sort()
+        configUI()
     }
-    
+    func configUI(){
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
+    }
 
     lazy var tableView : UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier:self.cellID)
+        tableView.register(WW_AfterInfoTitleTextCell.classForCoder(), forCellReuseIdentifier:self.cellID)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
@@ -42,10 +50,13 @@ extension ZJ_SortAlgorithmVC:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)!
-        cell.largeContentTitle = sortNameArray[indexPath.row]
+        let cell : WW_AfterInfoTitleTextCell = tableView.dequeueReusableCell(withIdentifier: cellID) as! WW_AfterInfoTitleTextCell
+     
+        cell.titleLabel.text = sortNameArray[indexPath.row]
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 45
+    }
 }
