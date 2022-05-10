@@ -136,9 +136,21 @@ class ZJ_Heap_Sort_Algorithm{
 }
 
 class ZJ_Merge_Sort_Algorithm{
-    
+    func merge_sort_Algorithm(){
+        
+    }
 }
 
 class ZJ_Quick_Sort_Algorithm{
+    func quick_sort_Algorithm(){
+        
+    }
+}
+
+class line_Search{
+    
+}
+
+class binary_Search{
     
 }
