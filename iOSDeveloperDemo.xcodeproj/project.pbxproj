@@ -224,6 +224,7 @@
 		84B27C752823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C742823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift */; };
 		84B27C772823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C762823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift */; };
 		84B27C9F2826A12300AD3EB4 /* WW_AfterPickImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27C9E2826A12300AD3EB4 /* WW_AfterPickImageCell.swift */; };
+		84B27CB1282BC94000AD3EB4 /* WW_ShareImaggViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27CB0282BC94000AD3EB4 /* WW_ShareImaggViewCell.swift */; };
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
@@ -517,6 +518,7 @@
 		84B27C742823F61300AD3EB4 /* WW_AfterInfoOnlyBtnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoOnlyBtnCell.swift; sourceTree = "<group>"; };
 		84B27C762823F62D00AD3EB4 /* WW_AfterInfoPickImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterInfoPickImageCell.swift; sourceTree = "<group>"; };
 		84B27C9E2826A12300AD3EB4 /* WW_AfterPickImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AfterPickImageCell.swift; sourceTree = "<group>"; };
+		84B27CB0282BC94000AD3EB4 /* WW_ShareImaggViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ShareImaggViewCell.swift; sourceTree = "<group>"; };
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -1537,9 +1539,18 @@
 		84B27C662821057E00AD3EB4 /* SharePage */ = {
 			isa = PBXGroup;
 			children = (
+				84B27CAF282BC92800AD3EB4 /* View */,
 				84B27C67282105A800AD3EB4 /* WW_ShareActionVC.swift */,
 			);
 			path = SharePage;
+			sourceTree = "<group>";
+		};
+		84B27CAF282BC92800AD3EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84B27CB0282BC94000AD3EB4 /* WW_ShareImaggViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		84B5BD5B20C50FE200D2047C /* View */ = {
@@ -2004,6 +2015,7 @@
 				84710DDB2736C7ED00A40507 /* SwiftCoreImageVideoVC.swift in Sources */,
 				846EE2CD2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
+				84B27CB1282BC94000AD3EB4 /* WW_ShareImaggViewCell.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
 				84582FEF27D0F755005124CC /* NumberExtension.swift in Sources */,
