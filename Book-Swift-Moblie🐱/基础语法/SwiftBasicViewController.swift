@@ -235,7 +235,10 @@ class SwiftBasicViewController: UIViewController {
         print(intArray.isEmpty)
         print(intArray.count)
         print(intArray.contains(3))
-		
+        let array2 = [2,3]
+        let array1 = [1]
+        let array3 = array1 + array2
+        print("array1+array2 =",array3)
 		array += [6]
         print("array += [6]",array += [6])
 		array.append(7)

@@ -59,4 +59,11 @@ extension ZJ_SortAlgorithmVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 5{
+            let algorithm = ZJ_Quick_Sort_Algorithm.init()
+            let array = algorithm.quick_sort_Algorithm(array: [12,14,19,14,15,12,123,1234,33])
+            print(array)
+        }
+    }
 }

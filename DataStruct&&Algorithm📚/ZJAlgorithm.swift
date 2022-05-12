@@ -140,10 +140,34 @@ class ZJ_Merge_Sort_Algorithm{
         
     }
 }
-
+//策略：（divideand conquer, D&C）
+//1.递归  2.分而治之
+/**
+ D&C解决问题的过程包括两个步骤。(1) 找出基线条件，这种条件必须尽可能简单。(2) 不断将问题分解（或者说缩小规模），直到符合基线条件
+ */
 class ZJ_Quick_Sort_Algorithm{
-    func quick_sort_Algorithm(){
-        
+
+    func quick_sort_Algorithm(array : [Int])->[Int]{
+       
+        if array.count < 2{
+            return array
+        }else{
+            let basicNum = array.first
+            var leftArray = [Int]()
+            var rightArray = [Int]()
+            for i in 1 ..< array.count {
+                if array[i] <= basicNum!{//倒序 >
+                    leftArray.append(array[i])
+                }
+            }
+            for i in 1 ..< array.count{
+                if array[i] > basicNum!{//倒序 <=
+                    rightArray.append(array[i])
+                }
+            }
+            
+            return self.quick_sort_Algorithm(array: leftArray)+[basicNum!]+self.quick_sort_Algorithm(array: rightArray)
+        }
     }
 }
 
