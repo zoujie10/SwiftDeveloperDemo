@@ -64,6 +64,9 @@ extension ZJ_SortAlgorithmVC:UITableViewDelegate,UITableViewDataSource{
             let algorithm = ZJ_Quick_Sort_Algorithm.init()
             let array = algorithm.quick_sort_Algorithm(array: [12,14,19,14,15,12,123,1234,33])
             print(array)
+            
+            let classB = binary_Search()
+            classB.binary_search_method(array: [1,2,3,4,5,6,7,8,9,10], num: 11)
         }
     }
 }

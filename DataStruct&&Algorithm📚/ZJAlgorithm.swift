@@ -170,11 +170,41 @@ class ZJ_Quick_Sort_Algorithm{
         }
     }
 }
-
+//线性搜索 O(n)
 class line_Search{
-    
+   
+    func line_search_Method(){
+        let a = [12,14,19,14,15,12,123,1234,33]
+        let num = 123
+        for i in a {
+            if i == num{
+                return
+            }
+        }
+    }
 }
-
+//二分查找 O(log n)
 class binary_Search{
-    
+
+    func binary_search_method( array :[Int],num:Int){
+        var a = array
+        for _ in 0 ..< a.count {
+            
+            if a.count == 1{
+                if a.first == num{
+                    print("Search Done")
+                    return
+                }else{
+                    print("None")
+                    return
+                }
+            }else if a[a.count/2] < num{
+                a.removeSubrange(0 ..< a.count/2)
+                return binary_search_method(array: a, num: num)
+            }else if a[a.count/2] > num{
+                a.removeSubrange(a.count/2 ..< a.count)
+                return binary_search_method(array: a, num: num)
+            }
+        }
+    }
 }
