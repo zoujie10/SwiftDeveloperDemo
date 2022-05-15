@@ -10,13 +10,16 @@ import UIKit
 import TZImagePickerController
 
 class WW_AfterInfoPickImageCell: UITableViewCell,TZImagePickerControllerDelegate,UINavigationControllerDelegate {
-//    @property (nonatomic , strong) UIImagePickerController *imagePickerVc;
-//    @property (nonatomic , strong) UICollectionView *takePhotoCollectionView;
+
 //    @property (nonatomic , strong) LxGridViewFlowLayout *layout;
 //    @property (nonatomic , strong) NSMutableArray *selectedPhotos;
 //    @property (nonatomic , strong) NSMutableArray *selectedAssets;
 //    @property (nonatomic , assign) BOOL isSelectOriginalPhoto;
 //    @property (nonatomic , strong) CLLocation *location;
+    
+    typealias Select_Photo_Block = (_ selectArray:NSArray) -> Void
+    var select_photo_block : Select_Photo_Block?
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.isUserInteractionEnabled = true

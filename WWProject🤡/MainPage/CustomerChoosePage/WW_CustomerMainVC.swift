@@ -24,7 +24,7 @@ class WW_CustomerMainVC: WW_MainBaseVC {
             make.top.equalTo(view.snp_top).offset(100)
             make.centerX.equalTo(view)
         }
-        
+        sortBtn.setEnlargeEdge(10,10, 100, 10)
     }
     
     @objc func jumpVC(){
@@ -42,4 +42,5 @@ class WW_CustomerMainVC: WW_MainBaseVC {
         btn.addTarget(self, action: #selector(jumpVC), for: .touchUpInside)
         return btn
     }()
+
 }

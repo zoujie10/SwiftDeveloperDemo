@@ -228,6 +228,7 @@
 		84B5BD6120C5300F00D2047C /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BD6020C5300F00D2047C /* MineViewController.swift */; };
 		84BCDF4820A180C8007EDB08 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */; };
 		84BE37832298E18800910E7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE37822298E18800910E7E /* iAd.framework */; };
+		84CD221D28309FFF00275C90 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD221C28309FFF00275C90 /* UIButtonExtension.swift */; };
 		84D305BB22D10CD2001AC087 /* NotesXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */; };
 		84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D305BD22DB3633001AC087 /* JSONParser.swift */; };
 		84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5307720A5717C00598810 /* ScrollViewController.swift */; };
@@ -522,6 +523,7 @@
 		84B5BD6020C5300F00D2047C /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		84BCDF4720A180C8007EDB08 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		84BE37822298E18800910E7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		84CD221C28309FFF00275C90 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		84D305BA22D10CD2001AC087 /* NotesXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesXMLParser.swift; sourceTree = "<group>"; };
 		84D305BD22DB3633001AC087 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		84D5307720A5717C00598810 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -1588,6 +1590,7 @@
 				8440F0FD27857FA9001FE7A1 /* StringExtension.swift */,
 				84582FEE27D0F755005124CC /* NumberExtension.swift */,
 				844ECB4427F9499A007FC276 /* TimeIntervalExtension.swift */,
+				84CD221C28309FFF00275C90 /* UIButtonExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -2016,6 +2019,7 @@
 				846EE2CD2818DDC00090B0F5 /* WW_CartSuperpositionRandomActivityHeaderCell.swift in Sources */,
 				4FC4E198228CFF3D0017192B /* ObserverProtocol.swift in Sources */,
 				84B27CB1282BC94000AD3EB4 /* WW_ShareImaggViewCell.swift in Sources */,
+				84CD221D28309FFF00275C90 /* UIButtonExtension.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
 				84582FEF27D0F755005124CC /* NumberExtension.swift in Sources */,
