@@ -67,6 +67,9 @@ extension ZJ_SortAlgorithmVC:UITableViewDelegate,UITableViewDataSource{
             
             let classB = binary_Search()
             classB.binary_search_method(array: [1,2,3,4,5,6,7,8,9,10], num: 11)
+            
+            let classSum = SumTwoNum.init()
+            print(classSum.twoSum([2,5,5,11], 10))
         }
     }
 }

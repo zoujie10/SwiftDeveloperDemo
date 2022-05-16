@@ -1,5 +1,8 @@
 # SwiftDeveloperDemo
-use to study swift4.0.
+Use to study swift.
+Tools
+Algorithm
+Data struct
 
 ## 1.1应用文件剖析
 
