@@ -70,6 +70,10 @@ extension ZJ_SortAlgorithmVC:UITableViewDelegate,UITableViewDataSource{
             
             let classSum = SumTwoNum.init()
             print(classSum.twoSum([2,5,5,11], 10))
+            
+            let classSum2 = Solution.init()
+//            print(classSum2.addTwoNumbers([9,9,9,9,9,9,9], [9,9,9,9]))
+            print(classSum2.addTwoNumbers([2,4,3], [5,6,4]))
         }
     }
 }
