@@ -50,6 +50,7 @@
 		842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */; };
 		842991F7274A4BE300A50077 /* SwiftGCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F6274A4BE300A50077 /* SwiftGCDVC.swift */; };
 		842991F9274A8F7B00A50077 /* WW_ClassificationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */; };
+		842D7DDF2835107000EC612E /* WW_ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D7DDE2835107000EC612E /* WW_ChartsVC.swift */; };
 		842F786222583FDE0048B63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842F786422583FDE0048B63A /* InfoPlist.strings */; };
 		842F786C2258A6750048B63A /* AccessContactPersonViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F786B2258A6750048B63A /* AccessContactPersonViewcontroller.swift */; };
 		842F78722258AD4C0048B63A /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F78712258AD4C0048B63A /* Contacts.framework */; };
@@ -341,6 +342,7 @@
 		842991F4274A4BAF00A50077 /* SwiftOperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOperationVC.swift; sourceTree = "<group>"; };
 		842991F6274A4BE300A50077 /* SwiftGCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGCDVC.swift; sourceTree = "<group>"; };
 		842991F8274A8F7B00A50077 /* WW_ClassificationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ClassificationListVC.swift; sourceTree = "<group>"; };
+		842D7DDE2835107000EC612E /* WW_ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ChartsVC.swift; sourceTree = "<group>"; };
 		842F785D22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		842F785E22583ECC0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		842F786322583FDE0048B63A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -786,6 +788,14 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		842D7DDD2835104500EC612E /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				842D7DDE2835107000EC612E /* WW_ChartsVC.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		842F785F22583F300048B63A /* Internationalization */ = {
 			isa = PBXGroup;
 			children = (
@@ -1208,6 +1218,7 @@
 				8438A01527EFFFBC00F30F6A /* ComplexOrderListPage */,
 				8438A01627EFFFF800F30F6A /* CartPage */,
 				84B27C662821057E00AD3EB4 /* SharePage */,
+				842D7DDD2835104500EC612E /* Charts */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -2064,6 +2075,7 @@
 				844ECB4327F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift in Sources */,
 				84DAA5462774D12700A97694 /* WW_JXListBaseViewController.swift in Sources */,
 				84E37BDF20A02D390031DEEE /* AppDelegate.swift in Sources */,
+				842D7DDF2835107000EC612E /* WW_ChartsVC.swift in Sources */,
 				8483707728046FFC0012402C /* ZJArray.swift in Sources */,
 				84DAA54D277711E400A97694 /* WW_BaseTabBarVC.swift in Sources */,
 				4F02FD9122ADF4F700B8CB35 /* CopyClass.swift in Sources */,
