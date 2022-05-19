@@ -27,9 +27,9 @@ class WW_ChartsVC: WW_MainBaseVC,ChartViewDelegate {
     func test4()
     {
         self.view.addSubview(self.barChartView)
-//        self.barChartView.frame = CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height/2 - 64)
         self.barChartView.snp.makeConstraints { make in
-            make.left.top.right.equalTo(view)
+            make.top.equalTo(view).offset(15)
+            make.left.right.equalTo(view)
             make.height.equalTo(self.view.bounds.height/2-64)
         }
         self.barChartView.delegate = self
@@ -57,9 +57,10 @@ class WW_ChartsVC: WW_MainBaseVC,ChartViewDelegate {
         xAxis.drawGridLinesEnabled = true   //不绘制网格线
         //xAxis.l = 4  //设置label间隔，若设置为1，则如果能全部显示，则每个柱形下面都会显示label
         xAxis.labelTextColor = UIColor.brown //label文字颜色
-        xAxis.labelCount = 10
+        xAxis.labelCount = 3
         
         self.barChartView.rightAxis.enabled = false  //不绘制右边轴
+        
         //设置左侧Y轴的样式
         let leftAxis = self.barChartView.leftAxis
         leftAxis.forceLabelsEnabled = false   //不强制绘制制定数量的label
@@ -88,15 +89,15 @@ class WW_ChartsVC: WW_MainBaseVC,ChartViewDelegate {
         leftAxis.gridColor = UIColor.init(red: 200/255.0, green: 200/255.0, blue: 200/255.0, alpha: 1.0)  //网格线颜色
         leftAxis.gridAntialiasEnabled = true   //开启抗锯齿
         
-        let limitLine = ChartLimitLine(limit: 20, label: "限制线")
-        limitLine.lineWidth = 2
-        limitLine.lineColor = UIColor.green
-        limitLine.lineDashLengths = [5.0, 5.0]   //虚线样式
-        limitLine.labelPosition = .topRight  //位置
-        leftAxis.addLimitLine(limitLine)  //添加到Y轴上
-        leftAxis.drawLimitLinesBehindDataEnabled = true  //设置限制线绘制在柱形图的后面
+//        let limitLine = ChartLimitLine(limit: 20, label: "限制线")
+//        limitLine.lineWidth = 2
+//        limitLine.lineColor = UIColor.green
+//        limitLine.lineDashLengths = [5.0, 5.0]   //虚线样式
+//        limitLine.labelPosition = .topRight  //位置
+//        leftAxis.addLimitLine(limitLine)  //添加到Y轴上
+//        leftAxis.drawLimitLinesBehindDataEnabled = true  //设置限制线绘制在柱形图的后面
         
-        self.barChartView.legend.enabled = false  //不显示图例说明
+        self.barChartView.legend.enabled = true  //是否显示图例说明
         self.barChartView.chartDescription?.text = "" //不显示，就设为空字符串即可
         
         
@@ -106,17 +107,14 @@ class WW_ChartsVC: WW_MainBaseVC,ChartViewDelegate {
     func setData()
     {
         var xVals = [String]()
-        for i in 0...60
+        for i in 0...3
         {
             xVals.append(NSString(format: "%d年", i+1993) as String)
         }
-//        xVals.append(NSString(format: "%d月",2)as String)
-//        xVals.append(NSString(format: "%d月",3)as String)
-//        xVals.append(NSString(format: "%d月",4)as String)
         //chartView.xAxis.valueFormatter = KMChartAxisValueFormatter.init(xValues as NSArray)
         
         var yVals = [BarChartDataEntry]()
-        for j in 0...60
+        for j in 0...3
         {
             let val = (Double)(arc4random_uniform(40))
 
@@ -128,6 +126,7 @@ class WW_ChartsVC: WW_MainBaseVC,ChartViewDelegate {
         //set1.bar = 0.2  //柱形之间的间隙占整个柱形(柱形+间隙)的比例
         set1.drawValuesEnabled = true  //是否在柱形图上面显示数值
         set1.highlightEnabled = false  //点击选中柱形图是否有高亮效果，（双击空白处取消选中）
+        
         set1.colors = ChartColorTemplates.material()
         
         
@@ -152,12 +151,12 @@ class WW_ChartsVC: WW_MainBaseVC,ChartViewDelegate {
         
         
         self.barChartView.data = data
-        self.barChartView.animate(xAxisDuration: 1)
+        self.barChartView.animate(xAxisDuration: 2)//绘制图标过程的动画效果
 
     }
     
     //点击选中柱形图时的代理方法
-        func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         
     }
 
