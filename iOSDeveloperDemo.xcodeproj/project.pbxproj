@@ -79,6 +79,7 @@
 		8440F0FE27857FA9001FE7A1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FD27857FA9001FE7A1 /* StringExtension.swift */; };
 		8440F1002786C1AF001FE7A1 /* WW_SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0FF2786C1AF001FE7A1 /* WW_SearchResultViewModel.swift */; };
 		8440F1022786C1C6001FE7A1 /* WW_SearchProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F1012786C1C6001FE7A1 /* WW_SearchProductsModel.swift */; };
+		84430F0F2837C55F002C9888 /* WW_SelectPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84430F0E2837C55F002C9888 /* WW_SelectPhotoView.swift */; };
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
@@ -376,6 +377,7 @@
 		8440F0FD27857FA9001FE7A1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8440F0FF2786C1AF001FE7A1 /* WW_SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchResultViewModel.swift; sourceTree = "<group>"; };
 		8440F1012786C1C6001FE7A1 /* WW_SearchProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchProductsModel.swift; sourceTree = "<group>"; };
+		84430F0E2837C55F002C9888 /* WW_SelectPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SelectPhotoView.swift; sourceTree = "<group>"; };
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 			children = (
 				84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */,
 				84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */,
+				84430F0E2837C55F002C9888 /* WW_SelectPhotoView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2053,6 +2056,7 @@
 				84CD221D28309FFF00275C90 /* UIButtonExtension.swift in Sources */,
 				84D5307820A5717C00598810 /* ScrollViewController.swift in Sources */,
 				845EC7F127181CDB0006651E /* ZJ_TextField.swift in Sources */,
+				84430F0F2837C55F002C9888 /* WW_SelectPhotoView.swift in Sources */,
 				84582FEF27D0F755005124CC /* NumberExtension.swift in Sources */,
 				84710DCA272EF48900A40507 /* SwiftUsuallyDevicesVC.swift in Sources */,
 				848A468120CE965E00F982F2 /* Note.swift in Sources */,

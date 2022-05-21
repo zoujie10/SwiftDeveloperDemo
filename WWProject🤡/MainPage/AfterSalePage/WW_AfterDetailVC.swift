@@ -174,7 +174,7 @@ extension WW_AfterDetailVC:UITableViewDelegate,UITableViewDataSource{
         }else{
             let classCell: AnyClass = self.sectionTwoCellArray[indexPath.row]
             if classCell is WW_AfterInfoPickImageCell.Type{
-                return 130
+                return 150
             }
             return 45
         }
