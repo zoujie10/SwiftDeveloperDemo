@@ -49,7 +49,8 @@ class WW_AfterInfoPickImageCell: UITableViewCell {
     }()
     
     lazy var selectPhotoView : WW_SelectPhotoView = {
-        let v = WW_SelectPhotoView.init(selectType: .selecct_single_photo, imageUrl: "")
+//        let v = WW_SelectPhotoView.init(selectType: .selecct_single_photo, imageUrl: "")
+        let v = WW_SelectPhotoView.init(selectType: .select_multiple_photos, photosCount: 3)
         return v
     }()
 }

@@ -11,8 +11,8 @@ import Photos
 import CoreServices
 import TZImagePickerController
 //TODO
-//1.select single photo imageView
-//2.select multiple photos collection
+
+//3.select Alum
 enum SelectPhotoViewType {
     case selecct_single_photo
     case select_multiple_photos
@@ -25,7 +25,7 @@ class WW_SelectPhotoView: UIView, UIImagePickerControllerDelegate & UINavigation
     
     var selectPhotoType : SelectPhotoViewType = .selecct_single_photo
     var imageURL : NSString = ""
-    var collectionItemCount : NSInteger = 0
+    var collectionItemCount : NSInteger = 1
     var selectedPhotos = [UIImage]()
     var selectedAssets = [PHAsset]()
     var isSelectOriginalPhoto : Bool = false //是否选择原图
@@ -111,8 +111,10 @@ class WW_SelectPhotoView: UIView, UIImagePickerControllerDelegate & UINavigation
     lazy var imagePickerVc : UIImagePickerController = {
         let pick = UIImagePickerController.init()
         pick.delegate = self
-        pick.navigationBar.barTintColor = self.nav.navigationBar.barTintColor
-        pick.navigationBar.tintColor = self.nav.navigationBar.tintColor
+//        pick.navigationBar.barTintColor = self.nav.navigationBar.barTintColor
+//        pick.navigationBar.tintColor = self.nav.navigationBar.tintColor
+        pick.navigationBar.barTintColor = UIColor.red
+        pick.navigationBar.tintColor = UIColor.white
         let tzBarItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [TZImagePickerController.self])
         let barItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UIImagePickerController.self])
         let titleTextAttributes : NSDictionary = tzBarItem.titleTextAttributes(for: .normal)! as NSDictionary
@@ -124,13 +126,21 @@ class WW_SelectPhotoView: UIView, UIImagePickerControllerDelegate & UINavigation
 extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     //MARK: Collection View
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionItemCount
+        return self.selectedPhotos.count > 0 ? self.selectedPhotos.count : 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : WW_AfterPickImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! WW_AfterPickImageCell
+        if (self.selectedPhotos.count > 0){
+            cell.uploadImageView.image = self.selectedPhotos[indexPath.row]
+        }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        pushTZImagePickerController()
+    }
+    
     
     //MARK: UIImagePickerController
     func pushTZImagePickerController() {
@@ -161,12 +171,12 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
         
         // 4. 照片排列按修改时间升序
         imagePickerVc!.sortAscendingByModificationDate = true
-        imagePickerVc!.maxImagesCount = 1
+        imagePickerVc!.maxImagesCount = collectionItemCount
         //    / 5. Single selection mode, valid when maxImagesCount = 1
         /// 5. 单选模式,maxImagesCount为1时才生效
         imagePickerVc!.showSelectBtn = false
         imagePickerVc!.allowCrop = true
-        imagePickerVc!.needCircleCrop = true
+        imagePickerVc!.needCircleCrop = false
         
         // 设置竖屏下的裁剪尺寸
         //    NSInteger left = 30;
@@ -178,11 +188,19 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
 
         // 设置是否显示图片序号
         imagePickerVc!.showSelectedIndex = false
-        
-        self.nav.present(imagePickerVc!, animated: true)
+        let vc = topMostController()
+        vc.present(imagePickerVc!, animated: true)
         
     }
     
+    func topMostController() -> UIViewController {
+        var topController: UIViewController = WW_keyWindow!.rootViewController!
+        while (topController.presentedViewController != nil) {
+            topController = topController.presentedViewController!
+        }
+        return topController
+    }
+
     func takePhoto() {
         let authStatus: AVAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
         if authStatus == .restricted || authStatus == .denied {// 无相机权限 做一个友好的提示
@@ -268,7 +286,7 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
         picker.dismiss(animated: true)
 //        let type = info[UIImagePickerController.InfoKey.mediaType] as? String
         let type = info[UIImagePickerControllerMediaType] as! String
-        let tzImagePickerVc = TZImagePickerController(maxImagesCount: 1, delegate: self)!
+        let tzImagePickerVc = TZImagePickerController(maxImagesCount: collectionItemCount, delegate: self)!
         tzImagePickerVc.sortAscendingByModificationDate = true
         tzImagePickerVc.showProgressHUD()
         if type == "public.image"{
@@ -289,7 +307,7 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
         selectedAssets.append(asset!)
         selectedPhotos.append(image!)
 
-        selectImageView.image = image
+        configData()
         if self.select_photo_block != nil {
             select_photo_block!(self.selectedPhotos as NSArray)
         }
@@ -319,13 +337,24 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
         selectedPhotos = photos
         selectedAssets = assets as! [PHAsset]
         self.isSelectOriginalPhoto = isSelectOriginalPhoto
-        selectImageView.image = photos.first
+//        selectImageView.image = photos.first
+        configData()
         if select_photo_block != nil {
             select_photo_block!(selectedPhotos as NSArray)
         }
     }
     func isAlbumCanSelect(_ albumName: String!, result: PHFetchResult<AnyObject>!) -> Bool {
         return true
+    }
+    func configData(){
+        switch self.selectPhotoType {
+            case .selecct_single_photo:
+                selectImageView.image = self.selectedPhotos.first
+                break
+            case .select_multiple_photos:
+                self.takePhotoCollectionView.reloadData()
+                break
+        }
     }
 }
 
