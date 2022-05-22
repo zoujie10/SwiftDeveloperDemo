@@ -158,7 +158,7 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
         // imagePickerVc.photoWidth = 800;
         // 2. Set the appearance
         // 2. 在这里设置imagePickerVc的外观
-        imagePickerVc!.navigationBar.barTintColor = UIColor.white
+        imagePickerVc!.navigationBar.barTintColor = UIColor(r:252,g:85,b:108,a:1)
         imagePickerVc!.iconThemeColor = UIColor(red: 31 / 255.0, green: 185 / 255.0, blue: 34 / 255.0, alpha: 1.0)
         imagePickerVc!.showPhotoCannotSelectLayer = true
         imagePickerVc!.cannotSelectLayerColor = UIColor.white.withAlphaComponent(0.8)
@@ -174,7 +174,7 @@ extension WW_SelectPhotoView :TZImagePickerControllerDelegate,UICollectionViewDe
         imagePickerVc!.maxImagesCount = collectionItemCount
         //    / 5. Single selection mode, valid when maxImagesCount = 1
         /// 5. 单选模式,maxImagesCount为1时才生效
-        imagePickerVc!.showSelectBtn = false
+        imagePickerVc!.showSelectBtn = true
         imagePickerVc!.allowCrop = true
         imagePickerVc!.needCircleCrop = false
         
