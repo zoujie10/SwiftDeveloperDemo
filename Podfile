@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 target 'iOSDeveloperDemo' do
 	platform :ios, '13.0'
 	pod 'SnapKit'
