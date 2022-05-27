@@ -4,6 +4,7 @@ target 'iOSDeveloperDemo' do
 	pod 'SnapKit'
 	pod 'Alamofire'
   pod 'Charts'
+	pod 'AAChartKit'
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
   pod 'Moya'

@@ -1,4 +1,5 @@
 PODS:
+  - AAChartKit (7.0.0)
   - Alamofire (4.7.3)
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
@@ -28,6 +29,7 @@ PODS:
   - TZImagePickerController (3.8.1)
 
 DEPENDENCIES:
+  - AAChartKit
   - Alamofire
   - AlamofireObjectMapper
   - Charts
@@ -45,7 +47,8 @@ DEPENDENCIES:
   - TZImagePickerController
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - AAChartKit
     - Alamofire
     - AlamofireObjectMapper
     - Charts
@@ -64,6 +67,7 @@ SPEC REPOS:
     - TZImagePickerController
 
 SPEC CHECKSUMS:
+  AAChartKit: 873cb452021d544100bac8f82f2002be0d6630b0
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -81,6 +85,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   TZImagePickerController: 943511626019431372cf908f24c114521e484f0e
 
-PODFILE CHECKSUM: 255cb9293ade82f36173f31db56b2f5e280c8a40
+PODFILE CHECKSUM: 1cdcc560da1bc0b3d49b0187000381b4d1d2bc6f
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
