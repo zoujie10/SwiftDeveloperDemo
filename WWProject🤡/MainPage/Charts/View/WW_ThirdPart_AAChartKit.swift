@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AAChartKit
 class WW_ThirdPart_AAChartKit: UIView {
 
 	required init?(coder: NSCoder) {
