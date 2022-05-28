@@ -23,6 +23,7 @@
 		4FC4E19A228D01570017192B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E199228D01570017192B /* Observer.swift */; };
 		4FC4E19C228D021C0017192B /* Observerd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E19B228D021C0017192B /* Observerd.swift */; };
 		4FC4E19E228D02D70017192B /* ObserverPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E19D228D02D70017192B /* ObserverPatternViewController.swift */; };
+		7760530F996A6117ACC14C10 /* Pods_iOSDeveloperDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8480F6C12840AE3F00F4303E /* Pods_iOSDeveloperDemo.framework */; };
 		840D87DA20AD4EC600BA6A1D /* Flag.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D87D920AD4EC600BA6A1D /* Flag.xcassets */; };
 		840E56D020BFE98D002ABD5F /* InfoModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E56CF20BFE98D002ABD5F /* InfoModelViewController.swift */; };
 		84117B73276085F800D8B0BB /* WW_RefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117B72276085F800D8B0BB /* WW_RefreshStateHeader.swift */; };
@@ -189,6 +190,8 @@
 		847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */; };
 		847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */; };
 		847E951A279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */; };
+		8480F6C02840911400F4303E /* WW_ThirdPart_ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480F6BF2840911400F4303E /* WW_ThirdPart_ChartsView.swift */; };
+		8480F6C62840B45200F4303E /* WW_ThirdPart_AAChartKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480F6C52840B45200F4303E /* WW_ThirdPart_AAChartKit.swift */; };
 		8483704A27FC6C0B0012402C /* WW_CartInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */; };
 		8483705727FDA05E0012402C /* cartData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8483704727FC37F40012402C /* cartData.geojson */; };
 		8483705827FDA1DD0012402C /* WW_CartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704827FC3AD90012402C /* WW_CartItems.swift */; };
@@ -284,7 +287,6 @@
 		84FA0FA320AEA96800B6914A /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FA0FA120AEA96800B6914A /* team.plist */; };
 		84FA0FA520AEC4D700B6914A /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0FA420AEC4D700B6914A /* CustomTableViewController.swift */; };
 		84FA0FA720AEC72700B6914A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA0FA620AEC72700B6914A /* CustomTableViewCell.swift */; };
-		D4E4684CC61C6A7F071FA8EA /* Pods_iOSDeveloperDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E492A3C46FFD3BDE0612A1 /* Pods_iOSDeveloperDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -490,6 +492,9 @@
 		847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeCouponCell.swift; sourceTree = "<group>"; };
 		847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelCell.swift; sourceTree = "<group>"; };
 		847E9519279B9CED00B52AEA /* WW_HomeMagicCubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeMagicCubeCell.swift; sourceTree = "<group>"; };
+		8480F6BF2840911400F4303E /* WW_ThirdPart_ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ThirdPart_ChartsView.swift; sourceTree = "<group>"; };
+		8480F6C12840AE3F00F4303E /* Pods_iOSDeveloperDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iOSDeveloperDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8480F6C52840B45200F4303E /* WW_ThirdPart_AAChartKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ThirdPart_AAChartKit.swift; sourceTree = "<group>"; };
 		8483704727FC37F40012402C /* cartData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartData.geojson; sourceTree = "<group>"; };
 		8483704827FC3AD90012402C /* WW_CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartItems.swift; sourceTree = "<group>"; };
 		8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInfoViewModel.swift; sourceTree = "<group>"; };
@@ -604,7 +609,7 @@
 				84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */,
 				84159565224796DE0026259B /* libsqlite3.0.tbd in Frameworks */,
 				8471D411223FDD3D00BE5DDB /* libsqlite3.tbd in Frameworks */,
-				D4E4684CC61C6A7F071FA8EA /* Pods_iOSDeveloperDemo.framework in Frameworks */,
+				7760530F996A6117ACC14C10 /* Pods_iOSDeveloperDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +803,7 @@
 		842D7DDD2835104500EC612E /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				8480F6BE284090EA00F4303E /* View */,
 				842D7DDE2835107000EC612E /* WW_ChartsVC.swift */,
 			);
 			path = Charts;
@@ -1358,6 +1364,7 @@
 		8471D40F223FDD3D00BE5DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8480F6C12840AE3F00F4303E /* Pods_iOSDeveloperDemo.framework */,
 				843358CE22EC2285003AB31D /* CoreLocation.framework */,
 				84BE37822298E18800910E7E /* iAd.framework */,
 				842F78732258AD560048B63A /* ContactsUI.framework */,
@@ -1385,6 +1392,15 @@
 				84598C0F234851B900E72C8B /* NoteBL.swift */,
 			);
 			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		8480F6BE284090EA00F4303E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8480F6BF2840911400F4303E /* WW_ThirdPart_ChartsView.swift */,
+				8480F6C52840B45200F4303E /* WW_ThirdPart_AAChartKit.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8483704327FC37C00012402C /* Model */ = {
@@ -2110,6 +2126,7 @@
 				847A5F5727E964E000F157B4 /* WW_HomeSearchTitleView.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
 				84DAA5312771C9CD00A97694 /* WW_OrderSingleVCThree.swift in Sources */,
+				8480F6C62840B45200F4303E /* WW_ThirdPart_AAChartKit.swift in Sources */,
 				842991DE2747EA0D00A50077 /* SwiftLocalizationVC.swift in Sources */,
 				847515D820D122B1005CC145 /* NoteByArchiver.swift in Sources */,
 				84D95B2F27B8A2F000052E04 /* SwiftSelectAndSortVC.swift in Sources */,
@@ -2186,6 +2203,7 @@
 				847A569B20BE82E700EBB06C /* CitiesTableViewController.swift in Sources */,
 				84D95B4627BAA01300052E04 /* SwiftSlideAnimationButton.swift in Sources */,
 				8446EC6827F561DB00F0D235 /* WW_ComplexOrderListModel.swift in Sources */,
+				8480F6C02840911400F4303E /* WW_ThirdPart_ChartsView.swift in Sources */,
 				842991F5274A4BAF00A50077 /* SwiftOperationVC.swift in Sources */,
 				8438A01427EDE12500F30F6A /* UIPOPoverCustomizeView.swift in Sources */,
 				84710DCF272FC8B300A40507 /* SwiftTableViewEditVC.swift in Sources */,
@@ -2424,7 +2442,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "ZJ-11.iOSDeveloperDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ENABLE_BATCH_MODE = NO;
@@ -2452,7 +2470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "ZJ-11.iOSDeveloperDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ENABLE_BATCH_MODE = NO;
