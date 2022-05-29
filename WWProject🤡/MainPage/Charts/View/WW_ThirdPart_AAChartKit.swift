@@ -44,7 +44,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 		aaChartView?.aa_drawChart(with: aaChartModel!)
 	}
 	func setupAAChartView(){
-		
+		//TODO
 	}
 	func setupAAChartView(with chartType:AAChartType){
 		
