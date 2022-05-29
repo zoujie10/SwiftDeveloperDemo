@@ -27,5 +27,13 @@ class WW_ChartsVC: WW_MainBaseVC {
 			make.left.right.equalTo(self.view)
 			make.height.equalTo(self.view.bounds.height/2-64)
 		}
+		
+		let aaChart = WW_ThirdPart_AAChartKit.init()
+		view.addSubview(aaChart)
+		view.snp.makeConstraints { make in
+			make.top.equalTo(chart.snp_bottom).offset(15)
+			make.left.right.equalTo(self.view)
+			make.height.equalTo(self.view.bounds.height/2-64)
+		}
 	}
 }
