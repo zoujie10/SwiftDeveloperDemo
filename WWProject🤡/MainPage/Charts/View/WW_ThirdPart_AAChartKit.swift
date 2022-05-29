@@ -22,9 +22,17 @@ class WW_ThirdPart_AAChartKit: UIView {
 		case scatter
 	}
 	var aaChartModel: AAChartModel?
-	var aaChartView: AAChartView?
 	var chartType: BasicChartVCChartType?
 	var receivedChartType: String?
+	
+	lazy var aaChartView : AAChartView = {
+		let chart = AAChartView.init()
+		//禁用 AAChartView 滚动效果
+		//设置 AAChartView 的背景色是否为透明
+		chart.scrollEnabled = false
+		chart.isClearBackgroundColor = false
+		return chart
+	}()
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
@@ -41,13 +49,19 @@ class WW_ThirdPart_AAChartKit: UIView {
 		setupAAChartView()
 		let chartType = configureTheChartType()
 		setupAAChartView(with: chartType)
-		aaChartView?.aa_drawChart(with: aaChartModel!)
+		aaChartView.aa_drawChart(with: aaChartModel!)
 	}
 	func setupAAChartView(){
 		//TODO
 	}
 	func setupAAChartView(with chartType:AAChartType){
 		
+	}
+	func setupChartViewEventHandlers(){
+		self.addSubview(self.aaChartView)
+		self.aaChartView.snp.makeConstraints { make in
+			make.edges.equalTo(self)
+		}
 	}
 	func configureTheChartType() -> AAChartType {
 		switch chartType {
