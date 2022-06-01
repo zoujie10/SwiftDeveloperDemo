@@ -29,11 +29,8 @@ class WW_ChartsVC: WW_MainBaseVC {
 		}
 		
 		let aaChart = WW_ThirdPart_AAChartKit.init()
+		aaChart.frame = CGRect(x: 0, y: self.view.bounds.height/2, width: WWScreenWidth, height: WWScreenHeight-self.view.bounds.height/2-64)
 		view.addSubview(aaChart)
-		view.snp.makeConstraints { make in
-			make.top.equalTo(chart.snp_bottom).offset(15)
-			make.left.right.equalTo(self.view)
-			make.height.equalTo(self.view.bounds.height/2-64)
-		}
+		
 	}
 }

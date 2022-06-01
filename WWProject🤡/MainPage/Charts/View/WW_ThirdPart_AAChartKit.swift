@@ -72,6 +72,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 	}
 	func drawChart(){//TODO
 		setupAAChartView()
+		self.chartType = .bar
 		let chartType = configureTheChartType()
 		setupAAChartView(with: chartType)
 		aaChartView.aa_drawChart(with: aaChartModel)
@@ -149,9 +150,61 @@ class WW_ThirdPart_AAChartKit: UIView {
 	
 	
 	func configureTheStyleForDifferentTypeChart(){//为不同类型图表设置样式
+		aaChartModel.categoriesSet()(["Java", "Swift", "Python", "Ruby", "PHP", "Go","C", "C#", "C++", "Perl", "R", "MATLAB", "SQL"])!//设置 X 轴坐标文字内容
+		.animationTypeSet()(AAChartAnimation.easeOutCubic)!//图形的渲染动画类型为 EaseOutCubic
+		.animationDurationSet()(1200)//图形渲染动画时长为1200毫秒
+	}
+	/**
+	 *   图表 Y 轴标示线的设置
+	 *   标示线设置作为图表一项基础功能,用于对图表的基本数据水平均线进行标注
+	 *   虽然不太常被使用,但我们仍然提供了此功能的完整接口,以便于有特殊需求的用户使用
+	 *   解除👆上面的设置 Y 轴标注线的已被注释代码,,运行程序,即可查看实际工程效果以酌情选择
+	 *
+	 **/
+	func configureTheYAxisPlotLineForAAChartView(){/*配置 Y 轴标注线,解开注释,即可查看添加标注线之后的图表效果(NOTE:必须设置 Y 轴可见)*/
+		aaChartModel.yAxisPlotLinesSet()
+		([AAPlotLinesElement.init()
+			.colorSet()("#F05353")!
+			.dashStyleSet()(AAChartLineDashStyleTypeLongDashDot)!
+			.widthSet()(1)!
+			.valueSet()(20)!
+			.zIndexSet()(5)!
+			.labelSet()(AALabel()
+							.textSet()("PlotLines Element One")!
+							.styleSet()(AAStyleColor("#F05353")))!,
+		  AAPlotLinesElement.init()
+			  .colorSet()("#33BDFD")!
+			  .dashStyleSet()(AAChartLineDashStyleTypeLongDashDot)!
+			  .widthSet()(1)!
+			  .valueSet()(40)!
+			  .zIndexSet()(5)!
+			  .labelSet()(AALabel()
+							  .textSet()("PlotLines Element Two")!
+							  .styleSet()(AAStyleColor("#33BDFD")))!,
+		  AAPlotLinesElement.init()
+			  .colorSet()("#ADFF2F")!
+			  .dashStyleSet()(AAChartLineDashStyleTypeLongDashDot)!
+			  .widthSet()(1)!
+			  .valueSet()(60)!
+			  .zIndexSet()(5)!
+			  .labelSet()(AALabel()
+							  .textSet()("PlotLines Element Three")!
+							  .styleSet()(AAStyleColor("#ADFF2F")))!
+			])
+			
+	}
+	
+}
+extension WW_ThirdPart_AAChartKit:AAChartViewEventDelegate{
+	func aaChartViewDidFinishLoad(_ aaChartView: AAChartView!) {
 		
 	}
-	func configureTheYAxisPlotLineForAAChartView(){/*配置 Y 轴标注线,解开注释,即可查看添加标注线之后的图表效果(NOTE:必须设置 Y 轴可见)*/
+	
+	func aaChartView(_ aaChartView: AAChartView!, clickEventWithMessage message: AAClickEventMessageModel!) {
+		
+	}
+	
+	func aaChartView(_ aaChartView: AAChartView!, moveOverEventWithMessage message: AAMoveOverEventMessageModel!) {
 		
 	}
 }
