@@ -32,6 +32,8 @@ class WW_ThirdPart_AAChartKit: UIView {
 		//设置 AAChartView 的背景色是否为透明
 		chart.scrollEnabled = false
 		chart.isClearBackgroundColor = false
+		//解开注释(同时需要注释掉 block 方法),
+//		chart.delegate = self
 		return chart
 	}()
 	
@@ -72,7 +74,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 	}
 	func drawChart(){//TODO
 		setupAAChartView()
-		self.chartType = .bar
+		self.chartType = .column
 		let chartType = configureTheChartType()
 		setupAAChartView(with: chartType)
 		aaChartView.aa_drawChart(with: aaChartModel)
@@ -92,7 +94,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 		
 		aaChartView.clickEventHandler { aaChartView, message in
 			let messageDic = [
-				"category": message!.category,
+//				"category": message?.category as Any,
 				"index": NSNumber(value: message!.index),
 				"name": message!.name,
 				"offset": message!.offset,
@@ -108,7 +110,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 		//获取图表上的手指点击及滑动事件
 		aaChartView.moveOverEventHandler { aaChartView, message in
 			let messageDic = [
-				"category": message!.category,
+//				"category": message?.category as Any,
 				"index": NSNumber(value: message!.index),
 				"name": message!.name,
 				"offset": message!.offset,
@@ -124,23 +126,20 @@ class WW_ThirdPart_AAChartKit: UIView {
 	}
 	func setupAAChartView(with chartType:AAChartType){
 
-		aaChartModel.chartTypeSet()("")!
-			.colorsThemeSet()(["#fe117c", "#ffc069", "#06caf4", "#7dffc0"])!
+		aaChartModel.chartTypeSet()(chartType as String)!
+			.colorsThemeSet()(["#fe117c", "#ffc069", "#06caf4"])!
 			.tooltipValueSuffixSet()("℃")!
-			.yAxisLineWidthSet()(0)!
-			.yAxisGridLineStyleSet()(AALineStyle(width: 0))!
+			.yAxisLineWidthSet()(1)!
+			.yAxisGridLineStyleSet()(AALineStyle(width: 1))!
 			.seriesSet()([AASeriesElement()
 							.nameSet()("2017")?
-							.dataSet()([7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6])as Any,
+							.dataSet()([5.0, 5.9, 9.5, 9.5])as Any,
 						  AASeriesElement()
 							.nameSet()("2018")?
-							.dataSet()([7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6])as Any,
+							.dataSet()([6.0, 6.9, 10.5, 11])as Any,
 						  AASeriesElement()
 							.nameSet()("2019")?
-							.dataSet()([7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6])as Any,
-						  AASeriesElement()
-							.nameSet()("2020")?
-							.dataSet()([7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]) as Any])
+							.dataSet()([7.0, 7.9, 8.5, 10])as Any])
 		
 		configureTheStyleForDifferentTypeChart()//为不同类型图表设置样式
 		configureTheYAxisPlotLineForAAChartView()/*配置 Y 轴标注线,解开注释,即可查看添加标注线之后的图表效果(NOTE:必须设置 Y 轴可见)*/
@@ -150,7 +149,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 	
 	
 	func configureTheStyleForDifferentTypeChart(){//为不同类型图表设置样式
-		aaChartModel.categoriesSet()(["Java", "Swift", "Python", "Ruby", "PHP", "Go","C", "C#", "C++", "Perl", "R", "MATLAB", "SQL"])!//设置 X 轴坐标文字内容
+		aaChartModel.categoriesSet()(["Java", "Swift", "Python","OC"])!//设置 X 轴坐标文字内容
 		.animationTypeSet()(AAChartAnimation.easeOutCubic)!//图形的渲染动画类型为 EaseOutCubic
 		.animationDurationSet()(1200)//图形渲染动画时长为1200毫秒
 	}
