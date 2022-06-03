@@ -53,7 +53,7 @@ extension WW_ChartsVC:UITableViewDelegate,UITableViewDataSource{
 				make.height.equalTo(self.view.bounds.height/2)
 			}
 		}else if indexPath.row == 1{
-			let aaChart = WW_ThirdPart_AAChartKit.init()
+			let aaChart = WW_ThirdPart_AAChartKit_BasicView.init()
 			cell.contentView.addSubview(aaChart)
 			aaChart.frame = CGRect(x: 0, y: 0, width: WWScreenWidth, height: WWScreenHeight-self.view.bounds.height/2)
 		}

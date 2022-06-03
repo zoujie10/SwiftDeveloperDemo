@@ -10,7 +10,7 @@ import UIKit
 import AAChartKit
 import CarPlay
 
-class WW_ThirdPart_AAChartKit: UIView {
+class WW_ThirdPart_AAChartKit_BasicView: UIView {
 	enum BasicChartVCChartType : Int {
 		case column = 0
 		case bar
@@ -161,8 +161,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 	 *
 	 **/
 	func configureTheYAxisPlotLineForAAChartView(){/*配置 Y 轴标注线,解开注释,即可查看添加标注线之后的图表效果(NOTE:必须设置 Y 轴可见)*/
-		aaChartModel.yAxisPlotLinesSet()
-		([AAPlotLinesElement.init()
+		aaChartModel.yAxisPlotLinesSet()([AAPlotLinesElement.init()
 			.colorSet()("#F05353")!
 			.dashStyleSet()(AAChartLineDashStyleTypeLongDashDot)!
 			.widthSet()(1)!
@@ -194,7 +193,7 @@ class WW_ThirdPart_AAChartKit: UIView {
 	}
 	
 }
-extension WW_ThirdPart_AAChartKit:AAChartViewEventDelegate{
+extension WW_ThirdPart_AAChartKit_BasicView:AAChartViewEventDelegate{
 	func aaChartViewDidFinishLoad(_ aaChartView: AAChartView!) {
 		
 	}
