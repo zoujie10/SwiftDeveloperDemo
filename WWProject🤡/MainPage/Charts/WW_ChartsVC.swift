@@ -24,10 +24,6 @@ class WW_ChartsVC: WW_MainBaseVC {
 		mainTableView.snp.makeConstraints { make in
 			make.edges.equalTo(view)
 		}
-//		let aaChart = WW_ThirdPart_AAChartKit.init()
-//		aaChart.frame = CGRect(x: 0, y: self.view.bounds.height/2, width: WWScreenWidth, height: WWScreenHeight-self.view.bounds.height/2-64)
-//		view.addSubview(aaChart)
-		
 	}
 	lazy var mainTableView : UITableView = {
 		let tb = UITableView.init(frame: .zero, style: .plain)
@@ -56,6 +52,10 @@ extension WW_ChartsVC:UITableViewDelegate,UITableViewDataSource{
 			let aaChart = WW_ThirdPart_AAChartKit_BasicView.init()
 			cell.contentView.addSubview(aaChart)
 			aaChart.frame = CGRect(x: 0, y: 0, width: WWScreenWidth, height: WWScreenHeight-self.view.bounds.height/2)
+		}else if indexPath.row == 2{
+			let aaPieChart = WW_ThirdPart_AAChartKit_PieView.init()
+			cell.contentView.addSubview(aaPieChart)
+			aaPieChart.frame = CGRect(x: 0, y: 0, width: WWScreenWidth, height: 250)
 		}
 		return cell
 	}
@@ -66,7 +66,7 @@ extension WW_ChartsVC:UITableViewDelegate,UITableViewDataSource{
 		}else if indexPath.row == 1{
 			return WWScreenHeight-self.view.bounds.height/2+10
 		}else{
-			return 150
+			return 250
 		}
 	}
 }

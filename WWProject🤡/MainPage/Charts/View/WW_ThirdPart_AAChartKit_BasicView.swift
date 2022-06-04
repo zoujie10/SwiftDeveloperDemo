@@ -8,7 +8,7 @@
 
 import UIKit
 import AAChartKit
-import CarPlay
+//import CarPlay
 
 class WW_ThirdPart_AAChartKit_BasicView: UIView {
 	enum BasicChartVCChartType : Int {
@@ -72,7 +72,7 @@ class WW_ThirdPart_AAChartKit_BasicView: UIView {
 		}
 		return ""
 	}
-	func drawChart(){//TODO
+	func drawChart(){
 		setupAAChartView()
 		self.chartType = .column
 		let chartType = configureTheChartType()
