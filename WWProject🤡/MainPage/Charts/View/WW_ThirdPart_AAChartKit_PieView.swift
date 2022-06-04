@@ -35,7 +35,7 @@ class WW_ThirdPart_AAChartKit_PieView: UIView {
 		self.backgroundColor = .white
 		drawChart()
 	}
-	func drawChart(){//TODO
+	func drawChart(){
 		setupAAChartView()
 		configurePieChart()
 		aaChartView.aa_drawChart(with: aaChartModel)

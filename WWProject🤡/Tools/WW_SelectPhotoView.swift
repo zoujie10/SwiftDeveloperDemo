@@ -10,9 +10,7 @@ import UIKit
 import Photos
 import CoreServices
 import TZImagePickerController
-//TODO
 
-//3.select Alum
 enum SelectPhotoViewType {
     case selecct_single_photo
     case select_multiple_photos

@@ -879,13 +879,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		843358CD22EC20CC003AB31D /* Map */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
 		8438A01227EDE0D900F30F6A /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1535,7 +1528,6 @@
 		849FC3A020C9187100C1D18B /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				843358CD22EC20CC003AB31D /* Map */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
