@@ -211,6 +211,6 @@ class binary_Search{
         }
     }
 }
-//广度优先搜索
+//广度优先搜索（breadth-first search, BFS）
 
 //狄克斯特拉算法
