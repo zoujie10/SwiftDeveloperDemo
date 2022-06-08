@@ -24,7 +24,7 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
 		print(self.dataArray[indexPath.row])
 		if(indexPath.row == 0){
 			self.navigationController?.pushViewController(CopyPatternViewController(), animated: true)
-        }else if(indexPath.row == 7){
+        }else if(indexPath.row == 6){
             self.navigationController?.pushViewController(ZJ_SortAlgorithmVC(), animated: true)
         }
 	}
@@ -41,7 +41,6 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
                           "ObserverPattern",
                           "DelegatePattern",
                           "DecoratePattern",
-                          "设计模式",
                           "Sort Algorithm"]
 	
 		self.view.addSubview(self.tableView)
@@ -135,7 +134,6 @@ class MineViewController: UIViewController,PhilosopherDelegate,UITableViewDataSo
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-		
     }
 	
     

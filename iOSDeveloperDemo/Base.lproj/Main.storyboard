@@ -477,7 +477,7 @@
                         <viewControllerLayoutGuide type="top" id="3QY-jT-Yeu"/>
                         <viewControllerLayoutGuide type="bottom" id="D7Y-jx-uZ7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TextViewController" id="1fg-9L-XsW" customClass="UIButton">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TextViewController" id="1fg-9L-XsW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -505,13 +505,16 @@
                                 <rect key="frame" x="69" y="253" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-8c-fgn">
-                                <rect key="frame" x="71" y="187" width="216" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-8c-fgn">
+                                <rect key="frame" x="71" y="186" width="216" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92625093460321561" green="0.89303899902899841" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
-                                    <segment title="Left"/>
-                                    <segment title="Right"/>
+                                    <segment title="近一月"/>
+                                    <segment title="近六月"/>
                                 </segments>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <color key="selectedSegmentTintColor" systemColor="systemPinkColor"/>
                                 <connections>
                                     <action selector="segBtn:" destination="BpS-r2-n7F" eventType="valueChanged" id="6ex-co-FyC"/>
                                     <segue destination="JKE-W9-D0d" kind="presentation" id="8xU-OV-TIN"/>
@@ -1520,6 +1523,12 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
