@@ -35,8 +35,6 @@ class TextViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = UIColor.brown
-//		sliderValue.value = 0
-//		sliderValue.maximumValue = 3
       
         // Do any additional setup after loading the view.
     }
