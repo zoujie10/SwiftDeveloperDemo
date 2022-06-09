@@ -12,7 +12,7 @@ class WW_WorkFlow: NSObject {
 
 }
 /*
-## 流程模板： 工作时间控制在20%
+## 流程模板： 工作时间控制在20%  ,80%用来处理自己想做的事
 
 1.WPApiUrlConfig  配置url
 
