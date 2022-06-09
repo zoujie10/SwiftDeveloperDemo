@@ -193,6 +193,7 @@
 		8480F6C02840911400F4303E /* WW_ThirdPart_ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480F6BF2840911400F4303E /* WW_ThirdPart_ChartsView.swift */; };
 		8480F6C62840B45200F4303E /* WW_ThirdPart_AAChartKit_BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480F6C52840B45200F4303E /* WW_ThirdPart_AAChartKit_BasicView.swift */; };
 		8480F6E02849ABC800F4303E /* WW_ThirdPart_AAChartKit_PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480F6DF2849ABC800F4303E /* WW_ThirdPart_AAChartKit_PieView.swift */; };
+		8480F71028523B1800F4303E /* WW_WorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480F70F28523B1800F4303E /* WW_WorkFlow.swift */; };
 		8483704A27FC6C0B0012402C /* WW_CartInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */; };
 		8483705727FDA05E0012402C /* cartData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8483704727FC37F40012402C /* cartData.geojson */; };
 		8483705827FDA1DD0012402C /* WW_CartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483704827FC3AD90012402C /* WW_CartItems.swift */; };
@@ -497,6 +498,7 @@
 		8480F6C12840AE3F00F4303E /* Pods_iOSDeveloperDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iOSDeveloperDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8480F6C52840B45200F4303E /* WW_ThirdPart_AAChartKit_BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ThirdPart_AAChartKit_BasicView.swift; sourceTree = "<group>"; };
 		8480F6DF2849ABC800F4303E /* WW_ThirdPart_AAChartKit_PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ThirdPart_AAChartKit_PieView.swift; sourceTree = "<group>"; };
+		8480F70F28523B1800F4303E /* WW_WorkFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_WorkFlow.swift; sourceTree = "<group>"; };
 		8483704727FC37F40012402C /* cartData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartData.geojson; sourceTree = "<group>"; };
 		8483704827FC3AD90012402C /* WW_CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartItems.swift; sourceTree = "<group>"; };
 		8483704927FC6C0B0012402C /* WW_CartInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartInfoViewModel.swift; sourceTree = "<group>"; };
@@ -1210,6 +1212,7 @@
 		845EC801271FECC40006651E /* WWProject🤡 */ = {
 			isa = PBXGroup;
 			children = (
+				8480F70F28523B1800F4303E /* WW_WorkFlow.swift */,
 				844F3F01275DB5E2006762D0 /* WW_MainVC.swift */,
 				84A9694A27DE3F7900950A64 /* GlobalClass */,
 				84DAA51D2768816300A97694 /* Extension */,
@@ -2113,6 +2116,7 @@
 				4F411AD3228ABB8F001BF135 /* SelectDesignPatternViewController.swift in Sources */,
 				846BB13520AC26B500268E6D /* Cell.swift in Sources */,
 				847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */,
+				8480F71028523B1800F4303E /* WW_WorkFlow.swift in Sources */,
 				844F3F02275DB5E2006762D0 /* WW_MainVC.swift in Sources */,
 				846EE2CB2818D43C0090B0F5 /* WW_CartActivityModel.swift in Sources */,
 				84710DDE2737CC8600A40507 /* SwiftAnimationSoundVideoVC.swift in Sources */,
