@@ -279,6 +279,7 @@
 		84E9DB6720AAB66E00C65A12 /* China_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E9DB6620AAB66E00C65A12 /* China_cities.plist */; };
 		84EE672720BD32C00051F86C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672620BD32C00051F86C /* PageViewController.swift */; };
 		84EE672920BD344D0051F86C /* SubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE672820BD344D0051F86C /* SubPageViewController.swift */; };
+		84EEB4BC2869F537009254E2 /* 性能优化上.mindnode in Resources */ = {isa = PBXBuildFile; fileRef = 84EEB4BB2869F537009254E2 /* 性能优化上.mindnode */; };
 		84F1CEB3280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1CEB2280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift */; };
 		84F8BF13224F6A3E002E5389 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8BF12224F6A3E002E5389 /* CoreData.framework */; };
 		84F8BF17224F6A6B002E5389 /* CoreDataNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F8BF15224F6A6B002E5389 /* CoreDataNote.xcdatamodeld */; };
@@ -587,6 +588,7 @@
 		84E9DB6620AAB66E00C65A12 /* China_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China_cities.plist; sourceTree = "<group>"; };
 		84EE672620BD32C00051F86C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		84EE672820BD344D0051F86C /* SubPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPageViewController.swift; sourceTree = "<group>"; };
+		84EEB4BB2869F537009254E2 /* 性能优化上.mindnode */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "性能优化上.mindnode"; path = "../../../../Desktop/课程/性能优化/上/性能优化上.mindnode"; sourceTree = "<group>"; };
 		84F1CEB2280AEEC4008C6644 /* WW_CartActivityRandomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CartActivityRandomHeaderView.swift; sourceTree = "<group>"; };
 		84F8BF12224F6A3E002E5389 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84F8BF16224F6A6B002E5389 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -925,6 +927,7 @@
 			isa = PBXGroup;
 			children = (
 				84430F17283BDC48002C9888 /* ZJ_PerformanceOptimizationMainVC.swift */,
+				84EEB4BB2869F537009254E2 /* 性能优化上.mindnode */,
 			);
 			path = PerformanceOptimization;
 			sourceTree = "<group>";
@@ -1890,6 +1893,7 @@
 				844F3ED2274CDA9A006762D0 /* ww_launchscreen_botimg.png in Resources */,
 				842991EE2749236100A50077 /* tiantiansifangmao-07.png in Resources */,
 				84710DE7273D59BB00A40507 /* 宇宙骑士reason.mp3 in Resources */,
+				84EEB4BC2869F537009254E2 /* 性能优化上.mindnode in Resources */,
 				844F3ED4274CDADB006762D0 /* ww_launchscreen_centimg.png in Resources */,
 				842991AC27413CEE00A50077 /* SwiftTestModel.plist in Resources */,
 				84710DB1272A9CF200A40507 /* GitText.txt in Resources */,
