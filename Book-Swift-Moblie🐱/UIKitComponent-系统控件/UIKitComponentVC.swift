@@ -52,6 +52,7 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
         self.segmentBtn.snp.makeConstraints{
             $0.left.equalTo(self.btn)
             $0.top.equalTo(self.switchBtn.snp_bottom).offset(20)
+			$0.size.equalTo(CGSize(width: 150, height: 30))
         }
         
         self.slider.snp.makeConstraints{
@@ -105,7 +106,7 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
     //MARK:Label
     lazy var label : UILabel = {
        let label = UILabel()
-        label.text = "文本"
+        label.text = "富文本"
 //        label.textColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.8)
         label.textColor = .blue
         label.font = .systemFont(ofSize: 18)
@@ -184,6 +185,7 @@ class UIKitComponentVC: UIViewController, UITextFieldDelegate {
         let segmentBtn = UISegmentedControl(items: ["1","2","3","4"])
         segmentBtn.addTarget(self, action: #selector(clicksegmentBtn), for: .valueChanged)//重点action event .valueChanged
         segmentBtn.selectedSegmentIndex = 0
+		segmentBtn.layer.cornerRadius = 8
         return segmentBtn
     }()
     @objc func clicksegmentBtn(){
