@@ -64,15 +64,33 @@ class WW_AlertSelectTipView: UIView {
 		super.init(frame: frame)
 	}
 	
-	convenience init(listData:NSArray) {
+	convenience init(listData:NSArray,title:String) {
 		self.init()
+		addContenView()
+		self.titleLabel.text = title
 	}
-	
+	 
+	func addContenView(){
+		self.addSubview(self.tipsTableView)
+		self.tipsTableView.snp.makeConstraints { make in
+			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 0, 0))
+		}
+	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
 	
+	lazy var titleLabel : UILabel = {
+		let label = UILabel()
+		label.textAlignment = .center
+		label.backgroundColor = .white
+		label.textColor = .black
+		label.text = ""
+		label.font = .boldSystemFont(ofSize: 20)
+		return label;
+	}()
+
 	lazy var tipsTableView : UITableView = {
 		let tableView = UITableView.init(frame: CGRect.zero)
 		tableView.register(WW_AlertSelectTipCell.classForCoder(), forCellReuseIdentifier:"tipsCell")
@@ -92,7 +110,8 @@ extension WW_AlertSelectTipView:UITableViewDelegate,UITableViewDataSource{
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "tipsCell") as! WW_AlertSelectTipCell
+		let cell : WW_AlertSelectTipCell = tableView.dequeueReusableCell(withIdentifier: "tipsCell") as! WW_AlertSelectTipCell
+//		cell.tipsBtn.isSelected =
 		return cell
 	}
 	
