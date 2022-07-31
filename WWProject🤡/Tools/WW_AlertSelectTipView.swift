@@ -22,7 +22,7 @@ class WW_AlertSelectTipCell:UITableViewCell{
 		fatalError("init(coder:) has not been implemented")
 	}
 	@objc func click_method(sender:UIButton){
-		
+		tipsBtn.select(sender)
 		
 	}
 	lazy var Label : UILabel = {
@@ -40,6 +40,8 @@ class WW_AlertSelectTipCell:UITableViewCell{
 		btn.setTitle("", for: .normal)
 		btn.setTitleColor(.black, for: .normal)
 		btn.setTitleColor(.blue, for: .selected)
+		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .normal)
+		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .selected)
 		btn.addTarget(self, action: #selector(click_method), for: .touchUpInside)
 		
 		return btn
