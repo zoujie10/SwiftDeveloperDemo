@@ -14,7 +14,36 @@
 
 import UIKit
 class WW_AlertSelectTipCell:UITableViewCell{
+	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+		super.init(style: .default, reuseIdentifier: reuseIdentifier)
+	}
+
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	@objc func click_method(sender:UIButton){
+		
+		
+	}
+	lazy var Label : UILabel = {
+		let label = UILabel()
+		label.textAlignment = .center
+		label.backgroundColor = .white
+		label.textColor = .black
+		label.text = ""
+		label.font = .boldSystemFont(ofSize: 20)
+		return label;
+	}()
 	
+	lazy var tipsBtn : UIButton = {
+		let btn = UIButton()
+		btn.setTitle("", for: .normal)
+		btn.setTitleColor(.black, for: .normal)
+		btn.setTitleColor(.blue, for: .selected)
+		btn.addTarget(self, action: #selector(click_method), for: .touchUpInside)
+		
+		return btn
+	}()
 }
 
 class WW_AlertSelectTipView: UIView {
