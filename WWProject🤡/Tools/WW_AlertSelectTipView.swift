@@ -14,10 +14,18 @@
 
 import UIKit
 class WW_AlertSelectTipCell:UITableViewCell{
+	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: .default, reuseIdentifier: reuseIdentifier)
+		configUI()
 	}
 
+	func configUI(){
+		self.contentView.addSubview(self.tipsBtn)
+		self.tipsBtn.snp.makeConstraints { make in
+			make.edges.equalTo(self.contentView)
+		}
+	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
