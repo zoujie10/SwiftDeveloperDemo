@@ -8,9 +8,10 @@
 
 //TODO
 //1.single select / mutli select
-//2.On Window 
+//2.On Window
 //3.display animation
 //4.Cancel button  bottom or upRight
+
 import UIKit
 class WW_AlertSelectTipCell:UITableViewCell{
 	
