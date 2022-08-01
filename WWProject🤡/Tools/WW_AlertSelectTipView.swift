@@ -71,9 +71,14 @@ class WW_AlertSelectTipView: UIView {
 	}
 	 
 	func addContenView(){
+		self.addSubview(self.titleLabel)
 		self.addSubview(self.tipsTableView)
+		self.titleLabel.snp.makeConstraints { make in
+			make.left.top.right.equalTo(self)
+			make.height.equalTo(45)
+		}
 		self.tipsTableView.snp.makeConstraints { make in
-			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 0, 0))
+			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 45, 0))
 		}
 	}
 	required init?(coder: NSCoder) {
