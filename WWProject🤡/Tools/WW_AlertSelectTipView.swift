@@ -77,6 +77,9 @@ class WW_AlertSelectTipView: UIView {
 	
 	convenience init(listData:[String],title:String) {
 		self.init()
+		self.layer.cornerRadius = 8
+		self.layer.borderColor = UIColor(r: 150, g: 150, b: 150).cgColor
+		self.layer.borderWidth = 1
 		addContenView()
 		self.titleLabel.text = title
 		self.tipsArray = listData
@@ -91,7 +94,7 @@ class WW_AlertSelectTipView: UIView {
 			make.height.equalTo(45)
 		}
 		self.tipsTableView.snp.makeConstraints { make in
-			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 45, 0))
+			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 0, 0))
 		}
 	}
 	required init?(coder: NSCoder) {
