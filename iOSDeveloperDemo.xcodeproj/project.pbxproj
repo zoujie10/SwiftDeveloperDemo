@@ -187,6 +187,7 @@
 		847A5F5727E964E000F157B4 /* WW_HomeSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A5F5627E964E000F157B4 /* WW_HomeSearchTitleView.swift */; };
 		847A5F5927E971A800F157B4 /* WW_TextScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A5F5827E971A800F157B4 /* WW_TextScrollView.swift */; };
 		847DD7EF2894CFA200B007BE /* WW_AlertSelectTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DD7EE2894CFA200B007BE /* WW_AlertSelectTipView.swift */; };
+		847DD7F42898D2C500B007BE /* WW_CommonUIKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DD7F32898D2C500B007BE /* WW_CommonUIKitVC.swift */; };
 		847E9512279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */; };
 		847E9514279B9C1300B52AEA /* WW_HomeCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */; };
 		847E9516279B9C4500B52AEA /* WW_HomeChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */; };
@@ -493,6 +494,7 @@
 		847A5F5627E964E000F157B4 /* WW_HomeSearchTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeSearchTitleView.swift; sourceTree = "<group>"; };
 		847A5F5827E971A800F157B4 /* WW_TextScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_TextScrollView.swift; sourceTree = "<group>"; };
 		847DD7EE2894CFA200B007BE /* WW_AlertSelectTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_AlertSelectTipView.swift; sourceTree = "<group>"; };
+		847DD7F32898D2C500B007BE /* WW_CommonUIKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_CommonUIKitVC.swift; sourceTree = "<group>"; };
 		847E9511279B9BB100B52AEA /* WW_HomePubicNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomePubicNoticeCell.swift; sourceTree = "<group>"; };
 		847E9513279B9C1300B52AEA /* WW_HomeCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeCouponCell.swift; sourceTree = "<group>"; };
 		847E9515279B9C4500B52AEA /* WW_HomeChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeChannelCell.swift; sourceTree = "<group>"; };
@@ -1244,6 +1246,7 @@
 				8438A01627EFFFF800F30F6A /* CartPage */,
 				84B27C662821057E00AD3EB4 /* SharePage */,
 				842D7DDD2835104500EC612E /* Charts */,
+				847DD7F02898D23600B007BE /* Common UIKit */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -1396,6 +1399,14 @@
 				84598C0F234851B900E72C8B /* NoteBL.swift */,
 			);
 			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		847DD7F02898D23600B007BE /* Common UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				847DD7F32898D2C500B007BE /* WW_CommonUIKitVC.swift */,
+			);
+			path = "Common UIKit";
 			sourceTree = "<group>";
 		};
 		8480F6BE284090EA00F4303E /* View */ = {
@@ -2133,6 +2144,7 @@
 				84710DBF272BC7AA00A40507 /* ZJ_ProductsTableViewCell.swift in Sources */,
 				847A5F5727E964E000F157B4 /* WW_HomeSearchTitleView.swift in Sources */,
 				4F411ACF228ABACC001BF135 /* DecorateViewController.swift in Sources */,
+				847DD7F42898D2C500B007BE /* WW_CommonUIKitVC.swift in Sources */,
 				84DAA5312771C9CD00A97694 /* WW_OrderSingleVCThree.swift in Sources */,
 				8480F6C62840B45200F4303E /* WW_ThirdPart_AAChartKit_BasicView.swift in Sources */,
 				842991DE2747EA0D00A50077 /* SwiftLocalizationVC.swift in Sources */,

@@ -15,25 +15,30 @@
 import UIKit
 class WW_AlertSelectTipCell:UITableViewCell{
 	
+	typealias Select_Index_Block = (_ isSelect:Bool) -> Void
+	var select_index_block : Select_Index_Block!
+	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: .default, reuseIdentifier: reuseIdentifier)
 		configUI()
 	}
 
 	func configUI(){
-		self.contentView.addSubview(self.tipsBtn)
-		self.tipsBtn.snp.makeConstraints { make in
+//		self.contentView.addSubview(self.tipsBtn)
+//		self.tipsBtn.snp.makeConstraints { make in
+//			make.edges.equalTo(self.contentView)
+//		}
+		
+		self.contentView.addSubview(self.tipsLabel)
+		self.tipsLabel.snp.makeConstraints { make in
 			make.edges.equalTo(self.contentView)
 		}
 	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	@objc func click_method(sender:UIButton){
-		tipsBtn.select(sender)
-		
-	}
-	lazy var Label : UILabel = {
+	
+	lazy var tipsLabel : UILabel = {
 		let label = UILabel()
 		label.textAlignment = .center
 		label.backgroundColor = .white
@@ -43,31 +48,39 @@ class WW_AlertSelectTipCell:UITableViewCell{
 		return label;
 	}()
 	
-	lazy var tipsBtn : UIButton = {
-		let btn = UIButton()
-		btn.setTitle("", for: .normal)
-		btn.setTitleColor(.black, for: .normal)
-		btn.setTitleColor(.blue, for: .selected)
-		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .normal)
-		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .selected)
-		btn.addTarget(self, action: #selector(click_method), for: .touchUpInside)
-		
-		return btn
-	}()
+//	lazy var tipsBtn : UIButton = {
+//		let btn = UIButton()
+//		btn.setTitle("", for: .normal)
+//		btn.setTitleColor(.black, for: .normal)
+//		btn.setTitleColor(.blue, for: .selected)
+//		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .normal)
+//		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .selected)
+//		btn.addTarget(self, action: #selector(click_method), for: .touchUpInside)
+//		btn.isHidden = true
+//		return btn
+//	}()
 }
 
 class WW_AlertSelectTipView: UIView {
+	
+	var defaultSelectIndex = 0
+	
+	typealias Select_indexTips_Block = (_ content:String,_ idx : NSInteger) -> Void
+	var select_tips_block : Select_indexTips_Block?
 
 	var tipsArray = [String]()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
+		
 	}
 	
-	convenience init(listData:NSArray,title:String) {
+	convenience init(listData:[String],title:String) {
 		self.init()
 		addContenView()
 		self.titleLabel.text = title
+		self.tipsArray = listData
+		self.tipsTableView.reloadData()
 	}
 	 
 	func addContenView(){
@@ -92,7 +105,7 @@ class WW_AlertSelectTipView: UIView {
 		label.backgroundColor = .white
 		label.textColor = .black
 		label.text = ""
-		label.font = .boldSystemFont(ofSize: 20)
+		label.font = .boldSystemFont(ofSize: 16)
 		return label;
 	}()
 
@@ -116,9 +129,19 @@ extension WW_AlertSelectTipView:UITableViewDelegate,UITableViewDataSource{
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell : WW_AlertSelectTipCell = tableView.dequeueReusableCell(withIdentifier: "tipsCell") as! WW_AlertSelectTipCell
-//		cell.tipsBtn.isSelected =
+		
+		cell.tipsLabel.text = self.tipsArray[indexPath.row]
+		if(self.defaultSelectIndex == indexPath.row){
+			cell.tipsLabel.textColor = .red
+		}else{
+			cell.tipsLabel.textColor = .black
+		}
 		return cell
 	}
 	
-	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		self.defaultSelectIndex = indexPath.row
+		self.select_tips_block!(self.tipsArray[indexPath.row],indexPath.row)
+		self.removeFromSuperview()
+	}
 }
