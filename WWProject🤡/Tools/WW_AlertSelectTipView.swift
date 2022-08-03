@@ -15,19 +15,12 @@
 import UIKit
 class WW_AlertSelectTipCell:UITableViewCell{
 	
-	typealias Select_Index_Block = (_ isSelect:Bool) -> Void
-	var select_index_block : Select_Index_Block!
-	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: .default, reuseIdentifier: reuseIdentifier)
 		configUI()
 	}
 
 	func configUI(){
-//		self.contentView.addSubview(self.tipsBtn)
-//		self.tipsBtn.snp.makeConstraints { make in
-//			make.edges.equalTo(self.contentView)
-//		}
 		
 		self.contentView.addSubview(self.tipsLabel)
 		self.tipsLabel.snp.makeConstraints { make in
@@ -47,18 +40,7 @@ class WW_AlertSelectTipCell:UITableViewCell{
 		label.font = .boldSystemFont(ofSize: 20)
 		return label;
 	}()
-	
-//	lazy var tipsBtn : UIButton = {
-//		let btn = UIButton()
-//		btn.setTitle("", for: .normal)
-//		btn.setTitleColor(.black, for: .normal)
-//		btn.setTitleColor(.blue, for: .selected)
-//		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_select_btn_img_dark"), for: .normal)
-//		btn.setBackgroundImage(UIImage(named: "ww_shoping_carts_unselect_btn_img_dark"), for: .selected)
-//		btn.addTarget(self, action: #selector(click_method), for: .touchUpInside)
-//		btn.isHidden = true
-//		return btn
-//	}()
+
 }
 
 class WW_AlertSelectTipView: UIView {

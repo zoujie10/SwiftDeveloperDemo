@@ -21,7 +21,7 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 		view.addSubview(self.alertjumpBtn)
 		self.alertjumpBtn.snp.makeConstraints { make in
 			make.center.equalTo(self.view)
-			make.size.equalTo(CGSize(width: 50, height: 30))
+			make.size.equalTo(CGSize(width: 100, height: 30))
 		}
 	}
 	@objc func click_method(){
