@@ -72,6 +72,7 @@
 		8438A01427EDE12500F30F6A /* UIPOPoverCustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A01327EDE12500F30F6A /* UIPOPoverCustomizeView.swift */; };
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
 		843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */; };
+		843D5B80289AC26A0017D302 /* WW_PromptAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D5B7F289AC26A0017D302 /* WW_PromptAlertVC.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
 		8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */; };
 		8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */; };
@@ -378,6 +379,7 @@
 		8438A01327EDE12500F30F6A /* UIPOPoverCustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPOPoverCustomizeView.swift; sourceTree = "<group>"; };
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
 		843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAdvanceViewController.swift; sourceTree = "<group>"; };
+		843D5B7F289AC26A0017D302 /* WW_PromptAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_PromptAlertVC.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeListVC.swift; sourceTree = "<group>"; };
 		8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsCollectionCell.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				84117B742760861D00D8B0BB /* WW_RefreshAutoGifFooter.swift */,
 				84430F0E2837C55F002C9888 /* WW_SelectPhotoView.swift */,
 				847DD7EE2894CFA200B007BE /* WW_AlertSelectTipView.swift */,
+				843D5B7F289AC26A0017D302 /* WW_PromptAlertVC.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2078,6 +2081,7 @@
 				84710DAB2725AFD600A40507 /* SwiftTouchViewAndGestureVC.swift in Sources */,
 				84582FD127C77BFB005124CC /* WW_CustomerChooseHeaderView.swift in Sources */,
 				84DAA52D276B0B7D00A97694 /* WW_InformListViewModel.swift in Sources */,
+				843D5B80289AC26A0017D302 /* WW_PromptAlertVC.swift in Sources */,
 				84A2C27D279A98770098BA26 /* WW_HomeRecommendsCell.swift in Sources */,
 				8483707828046FFC0012402C /* ZJDictionary.swift in Sources */,
 				84E37BE120A02D390031DEEE /* HomeVC.swift in Sources */,
