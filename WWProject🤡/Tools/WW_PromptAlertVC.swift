@@ -16,15 +16,48 @@ class WW_PromptAlertVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+	lazy var bgView : UIView = {
+		let view = UIView.init()
+		view.backgroundColor = .white
+		return view
+	}()
+	
+	
+	
+	
+	lazy var Label : UILabel = {
+		let label = UILabel()
+		label.textAlignment = .center
+		label.backgroundColor = .white
+		label.textColor = .black
+		label.text = ""
+		label.font = .boldSystemFont(ofSize: 20)
+		return label;
+	}()
+	
+	lazy var confirmBtn : UIButton = {
+		let btn = UIButton()
+		btn.setTitle("", for: .normal)
+		btn.setTitleColor(.black, for: .normal)
+		btn.addTarget(self, action: #selector(click_method_confirm), for: .touchUpInside)
+		return btn
+	}()
+	
+	lazy var cancelBtn : UIButton = {
+		let btn = UIButton()
+		btn.setTitle("", for: .normal)
+		btn.setTitleColor(.black, for: .normal)
+		btn.addTarget(self, action: #selector(click_method_cancel), for: .touchUpInside)
+		return btn
+	}()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}
+extension WW_PromptAlertVC{
+	@objc func click_method_confirm(){
+		
+	}
+	
+	@objc func click_method_cancel(){
+		
+	}
 }
