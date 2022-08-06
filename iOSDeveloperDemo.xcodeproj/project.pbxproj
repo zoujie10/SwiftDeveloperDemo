@@ -73,6 +73,7 @@
 		8438A40620A983010077A37F /* PickDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A40520A983010077A37F /* PickDataViewController.swift */; };
 		843CCE7725238C2A00E3B0D5 /* SwiftAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */; };
 		843D5B80289AC26A0017D302 /* WW_PromptAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D5B7F289AC26A0017D302 /* WW_PromptAlertVC.swift */; };
+		843D5B9D289D577D0017D302 /* UIViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D5B9C289D577D0017D302 /* UIViewAnimation.swift */; };
 		843E494C20B2DB9300CF190C /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E494B20B2DB9300CF190C /* SectionTableViewController.swift */; };
 		8440F0F3278056A7001FE7A1 /* WW_HomeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */; };
 		8440F0F52780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */; };
@@ -380,6 +381,7 @@
 		8438A40520A983010077A37F /* PickDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDataViewController.swift; sourceTree = "<group>"; };
 		843CCE7625238C2A00E3B0D5 /* SwiftAdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAdvanceViewController.swift; sourceTree = "<group>"; };
 		843D5B7F289AC26A0017D302 /* WW_PromptAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_PromptAlertVC.swift; sourceTree = "<group>"; };
+		843D5B9C289D577D0017D302 /* UIViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimation.swift; sourceTree = "<group>"; };
 		843E494B20B2DB9300CF190C /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		8440F0F2278056A7001FE7A1 /* WW_HomeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_HomeListVC.swift; sourceTree = "<group>"; };
 		8440F0F42780640F001FE7A1 /* WW_SearchHotWordsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_SearchHotWordsCollectionCell.swift; sourceTree = "<group>"; };
@@ -1670,6 +1672,7 @@
 				84582FEE27D0F755005124CC /* NumberExtension.swift */,
 				844ECB4427F9499A007FC276 /* TimeIntervalExtension.swift */,
 				84CD221C28309FFF00275C90 /* UIButtonExtension.swift */,
+				843D5B9C289D577D0017D302 /* UIViewAnimation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -2120,6 +2123,7 @@
 				844F3F08275E0035006762D0 /* WW_ClassificationRightProductsViewModel.swift in Sources */,
 				84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */,
 				844F3EE12758AE7A006762D0 /* ZJ_ProductsRightViewModel.swift in Sources */,
+				843D5B9D289D577D0017D302 /* UIViewAnimation.swift in Sources */,
 				84837063280016760012402C /* WW_CartActivityCell.swift in Sources */,
 				84DAA539277367D700A97694 /* WW_SearchResultVC.swift in Sources */,
 				84D305BE22DB3633001AC087 /* JSONParser.swift in Sources */,
