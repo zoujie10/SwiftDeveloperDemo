@@ -10,15 +10,23 @@ import UIKit
 
 class WW_PromptAlertVC: UIViewController {
 
+	var bgViewHeight = 150
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         makeDefaultUI()
     }
 	func makeDefaultUI(){
+		self.view.addSubview(self.bgView)
+		self.view.addSubview(self.titleLabel)
+		self.view.addSubview(self.confirmBtn)
+		self.view.addSubview(self.cancelBtn)
+		self.view.addSubview(self.contentLabel)
+		
 		
 	}
-	func configContent(title:String){
+	func configContent(title:String,height:NSInteger){
 		self.titleLabel.text = title
 	}
 	
@@ -40,6 +48,15 @@ class WW_PromptAlertVC: UIViewController {
 		return label;
 	}()
 	
+	lazy var contentLabel : UILabel = {
+		let label = UILabel()
+		label.textAlignment = .center
+		label.backgroundColor = .white
+		label.textColor = .black
+		label.text = ""
+		label.font = .boldSystemFont(ofSize: 20)
+		return label;
+	}()
 	lazy var confirmBtn : UIButton = {
 		let btn = UIButton()
 		btn.setTitle("", for: .normal)
