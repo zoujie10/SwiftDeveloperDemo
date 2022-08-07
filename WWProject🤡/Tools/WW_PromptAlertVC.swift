@@ -13,19 +13,24 @@ class WW_PromptAlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        makeDefaultUI()
     }
-    
+	func makeDefaultUI(){
+		
+	}
+	func configContent(title:String){
+		self.titleLabel.text = title
+	}
+	
+	
+	
 	lazy var bgView : UIView = {
 		let view = UIView.init()
 		view.backgroundColor = .white
 		return view
 	}()
 	
-	
-	
-	
-	lazy var Label : UILabel = {
+	lazy var titleLabel : UILabel = {
 		let label = UILabel()
 		label.textAlignment = .center
 		label.backgroundColor = .white
