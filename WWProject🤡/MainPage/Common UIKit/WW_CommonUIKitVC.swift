@@ -12,6 +12,7 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 	var selectIdx = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "常用控件"
 		view.backgroundColor = .white
         // Do any additional setup after loading the view.
 		configBtn()
@@ -21,8 +22,15 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 		view.addSubview(self.alertjumpBtn)
 		self.alertjumpBtn.snp.makeConstraints { make in
 			make.center.equalTo(self.view)
-			make.size.equalTo(CGSize(width: 100, height: 30))
+			make.size.equalTo(CGSize(width: WWScreenWidth, height: 30))
 		}
+		view.addSubview(self.tipjumpBtn)
+		self.tipjumpBtn.snp.makeConstraints { make in
+			make.top.equalTo(self.alertjumpBtn.snp_bottom).offset(20)
+			make.size.equalTo(CGSize(width: WWScreenWidth, height: 30))
+		}
+		
+		
 	}
 	@objc func click_method(){
 		let alert = WW_AlertSelectTipView.init(listData: ["1","2","3"], title: "选择弹框")
@@ -38,11 +46,21 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 			make.height.equalTo(45 * 3 + 50)
 		}
 	}
+	@objc func click_warning_method(){
+		
+	}
 	lazy var alertjumpBtn : UIButton = {
 		let btn = UIButton()
-		btn.setTitle("bounce frame ", for: .normal)
+		btn.setTitle("Alert View", for: .normal)
 		btn.setTitleColor(.black, for: .normal)
 		btn.addTarget(self, action: #selector(click_method), for: .touchUpInside)
+		return btn
+	}()
+	lazy var tipjumpBtn : UIButton = {
+		let btn = UIButton()
+		btn.setTitle("Warning Tip", for: .normal)
+		btn.setTitleColor(.black, for: .normal)
+		btn.addTarget(self, action: #selector(click_warning_method), for: .touchUpInside)
 		return btn
 	}()
 }
