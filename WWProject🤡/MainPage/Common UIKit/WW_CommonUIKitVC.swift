@@ -24,6 +24,7 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 			make.center.equalTo(self.view)
 			make.size.equalTo(CGSize(width: WWScreenWidth, height: 30))
 		}
+		
 		view.addSubview(self.tipjumpBtn)
 		self.tipjumpBtn.snp.makeConstraints { make in
 			make.top.equalTo(self.alertjumpBtn.snp_bottom).offset(20)
