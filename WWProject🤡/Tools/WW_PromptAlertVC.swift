@@ -33,17 +33,21 @@ class WW_PromptAlertVC: UIViewController {
 		}
 		
 		self.titleLabel.snp.makeConstraints { make in
-			
+			make.top.equalTo(view).offset(10)
+			make.centerX.equalTo(view)
 		}
 		self.confirmBtn.snp.makeConstraints { make in
-			
+			make.right.equalTo(view).offset(-15)
+			make.bottom.equalTo(view).offset(-15)
 		}
 		self.cancelBtn.snp.makeConstraints { make in
-			
+			make.left.equalTo(view).offset(-15)
+			make.bottom.equalTo(view).offset(-15)
 		}
 		
 		self.contentLabel.snp.makeConstraints { make in
-			
+			make.top.equalTo(self.titleLabel.snp_bottom).offset(10)
+			make.centerX.equalTo(view)
 		}
 	}
 	
