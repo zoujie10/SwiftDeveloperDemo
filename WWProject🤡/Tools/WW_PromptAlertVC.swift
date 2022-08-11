@@ -40,6 +40,7 @@ class WW_PromptAlertVC: UIViewController {
 			make.right.equalTo(view).offset(-15)
 			make.bottom.equalTo(view).offset(-15)
 		}
+		
 		self.cancelBtn.snp.makeConstraints { make in
 			make.left.equalTo(view).offset(-15)
 			make.bottom.equalTo(view).offset(-15)
@@ -50,7 +51,6 @@ class WW_PromptAlertVC: UIViewController {
 			make.centerX.equalTo(view)
 		}
 	}
-	
 	
 	
 	lazy var bgView : UIView = {
@@ -98,7 +98,13 @@ class WW_PromptAlertVC: UIViewController {
 }
 extension WW_PromptAlertVC{
 	@objc func click_method_confirm(){
-		
+		UIView.animate(withDuration: 0.5) {
+			self.bgView.alpha = 0
+			self.bgView.transform = CGAffineTransform(scaleX: 0.1,y: 0.1)//CGAffineTransformMakeScale(0.1, 0.1)
+		} completion: { done in
+			self.dismiss(animated: true)
+		}
+
 	}
 	
 	@objc func click_method_cancel(){
