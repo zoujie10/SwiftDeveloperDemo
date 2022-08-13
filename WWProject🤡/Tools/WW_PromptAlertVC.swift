@@ -26,6 +26,10 @@ class WW_PromptAlertVC: UIViewController {
 	
 	func configContent(title:String,content:String,confirmTitle:String,cancelTitle:String,height:NSInteger){
 		self.titleLabel.text = title
+		self.contentLabel.text = confirmTitle
+		self.confirmBtn.setTitle(confirmTitle, for: .normal)
+		self.cancelBtn.setTitle(cancelTitle, for: .normal)
+		
 		makeDefaultUI()
 		
 		self.bgView.snp.makeConstraints { make in
@@ -87,6 +91,9 @@ class WW_PromptAlertVC: UIViewController {
 		btn.setTitle("确认", for: .normal)
 		btn.setTitleColor(.black, for: .normal)
 		btn.addTarget(self, action: #selector(click_method_confirm), for: .touchUpInside)
+		btn.layer.cornerRadius = 12
+		btn.layer.borderColor = UIColor(r: 153, g: 153, b: 153, a: 1).cgColor
+		btn.layer.borderWidth = 0.5
 		return btn
 	}()
 	
@@ -95,6 +102,9 @@ class WW_PromptAlertVC: UIViewController {
 		btn.setTitle("取消", for: .normal)
 		btn.setTitleColor(.black, for: .normal)
 		btn.addTarget(self, action: #selector(click_method_cancel), for: .touchUpInside)
+		btn.layer.cornerRadius = 12
+		btn.layer.borderColor = UIColor(r: 65, g: 111, b: 252, a: 1).cgColor
+		btn.layer.borderWidth = 0.5
 		return btn
 	}()
 
