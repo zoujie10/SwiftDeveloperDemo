@@ -18,20 +18,20 @@ class WW_PromptAlertVC: UIViewController {
     }
 	func makeDefaultUI(){
 		self.view.addSubview(self.bgView)
-		self.view.addSubview(self.titleLabel)
-		self.view.addSubview(self.confirmBtn)
-		self.view.addSubview(self.cancelBtn)
-		self.view.addSubview(self.contentLabel)
+		self.bgView.addSubview(self.titleLabel)
+		self.bgView.addSubview(self.confirmBtn)
+		self.bgView.addSubview(self.cancelBtn)
+		self.bgView.addSubview(self.contentLabel)
 	}
 	
 	func configContent(title:String,content:String,confirmTitle:String,cancelTitle:String,height:NSInteger){
 		self.titleLabel.text = title
-		self.contentLabel.text = confirmTitle
+		self.contentLabel.text = content
 		self.confirmBtn.setTitle(confirmTitle, for: .normal)
 		self.cancelBtn.setTitle(cancelTitle, for: .normal)
 		
 		makeDefaultUI()
-		
+		let bgViewwidth  =  WWScreenWidth*3/4;
 		self.bgView.snp.makeConstraints { make in
 			make.width.equalTo(WWScreenWidth*3/4)
 			make.height.equalTo(height > 0 ? height : defaultBgHeight)
@@ -46,23 +46,31 @@ class WW_PromptAlertVC: UIViewController {
 		self.confirmBtn.snp.makeConstraints { make in
 			make.right.equalTo(self.bgView).offset(-15)
 			make.bottom.equalTo(self.bgView).offset(-15)
+			make.width.equalTo((bgViewwidth-40)/2)
 		}
 		
 		self.cancelBtn.snp.makeConstraints { make in
 			make.left.equalTo(self.bgView).offset(15)
 			make.bottom.equalTo(self.bgView).offset(-15)
+			make.width.equalTo((bgViewwidth-40)/2)
 		}
 		
 		self.contentLabel.snp.makeConstraints { make in
 			make.top.equalTo(self.titleLabel.snp_bottom).offset(10)
 			make.centerX.equalTo(self.bgView)
 		}
+		
+		WW_keyWindow?.rootViewController?.addChildViewController(self)
+		WW_keyWindow?.addSubview(self.view)
 	}
 	
 	
 	lazy var bgView : UIView = {
 		let view = UIView.init()
 		view.backgroundColor = .white
+		view.layer.cornerRadius = 12
+		view.layer.borderColor = UIColor(r: 153, g: 153, b: 153, a: 1).cgColor
+		view.layer.borderWidth = 0.5
 		return view
 	}()
 	
@@ -80,9 +88,9 @@ class WW_PromptAlertVC: UIViewController {
 		let label = UILabel()
 		label.textAlignment = .center
 		label.backgroundColor = .white
-		label.textColor = .black
+		label.textColor = UIColor(r: 153, g: 153, b: 153, a: 1)
 		label.text = ""
-		label.font = .boldSystemFont(ofSize: 20)
+		label.font = .boldSystemFont(ofSize: 14)
 		label.numberOfLines = 0
 		return label;
 	}()
@@ -112,15 +120,26 @@ class WW_PromptAlertVC: UIViewController {
 extension WW_PromptAlertVC{
 	@objc func click_method_confirm(){
 		UIView.animate(withDuration: 0.5) {
-			self.bgView.alpha = 0
+			self.bgView.alpha = 0.0
 			self.bgView.transform = CGAffineTransform(scaleX: 0.1,y: 0.1)//CGAffineTransformMakeScale(0.1, 0.1)
 		} completion: { done in
-			self.dismiss(animated: true)
+			self.removeFromParentViewController()
+			self.view.removeFromSuperview()
 		}
 
 	}
 	
 	@objc func click_method_cancel(){
-		
+		self.removeVC()
+	}
+	
+	func removeVC(){
+		UIView.animate(withDuration: 0.2) {
+			self.bgView.alpha = 0.0
+			self.bgView.transform = CGAffineTransform(scaleX: 0.1,y: 0.1)//CGAffineTransformMakeScale(0.1, 0.1)
+		} completion: { done in
+			self.removeFromParentViewController()
+			self.view.removeFromSuperview()
+		}
 	}
 }
