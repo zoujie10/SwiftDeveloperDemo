@@ -13,6 +13,7 @@
 //4.Cancel button  bottom or upRight
 
 import UIKit
+
 class WW_AlertSelectTipCell:UITableViewCell{
 	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -43,7 +44,7 @@ class WW_AlertSelectTipCell:UITableViewCell{
 
 }
 
-class WW_AlertSelectTipView: UIView {
+class WW_AlertSelectTipView: UIViewController {
 	
 	var defaultSelectIndex = 0
 	
@@ -52,35 +53,27 @@ class WW_AlertSelectTipView: UIView {
 
 	var tipsArray = [String]()
 	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		
-	}
-	
-	convenience init(listData:[String],title:String) {
-		self.init()
-		self.layer.cornerRadius = 8
-		self.layer.borderColor = UIColor(r: 150, g: 150, b: 150).cgColor
-		self.layer.borderWidth = 1
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		addContenView()
+	}
+	func showWithData(listData : [String],title:String){
+		WW_keyWindow?.rootViewController?.addChildViewController(self)
+		WW_keyWindow?.addSubview(self.view)
 		self.titleLabel.text = title
 		self.tipsArray = listData
 		self.tipsTableView.reloadData()
 	}
-	 
 	func addContenView(){
-		self.addSubview(self.titleLabel)
-		self.addSubview(self.tipsTableView)
+		view.addSubview(self.titleLabel)
+		view.addSubview(self.tipsTableView)
 		self.titleLabel.snp.makeConstraints { make in
-			make.left.top.right.equalTo(self)
+			make.left.bottom.right.equalTo(view)
 			make.height.equalTo(45)
 		}
 		self.tipsTableView.snp.makeConstraints { make in
 			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 0, 0))
 		}
-	}
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
 	}
 	
 	
@@ -127,6 +120,7 @@ extension WW_AlertSelectTipView:UITableViewDelegate,UITableViewDataSource{
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		self.defaultSelectIndex = indexPath.row
 		self.select_tips_block!(self.tipsArray[indexPath.row],indexPath.row)
-		self.removeFromSuperview()
+		self.removeFromParentViewController()
+		self.view.removeFromSuperview()
 	}
 }

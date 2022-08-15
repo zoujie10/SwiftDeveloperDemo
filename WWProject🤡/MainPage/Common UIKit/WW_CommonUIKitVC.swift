@@ -35,17 +35,13 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 		
 	}
 	@objc func click_method(){
-		let alert = WW_AlertSelectTipView.init(listData: ["1","2","3"], title: "选择弹框")
+
+		let alert = WW_AlertSelectTipView.init()
 		alert.defaultSelectIndex = selectIdx
+		alert.showWithData(listData: ["1","2","3"], title: "选择弹框")
 		alert.select_tips_block = { [self] str , idx in
 			selectIdx = idx
 			print(str,idx)
-			
-		}
-		self.view.addSubview(alert)
-		alert.snp.makeConstraints { make in
-			make.left.right.bottom.equalTo(self.view)
-			make.height.equalTo(45 * 3 + 50)
 		}
 	}
 	@objc func click_warning_method(){

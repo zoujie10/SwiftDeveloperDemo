@@ -119,7 +119,7 @@ class WW_PromptAlertVC: UIViewController {
 }
 extension WW_PromptAlertVC{
 	@objc func click_method_confirm(){
-		UIView.animate(withDuration: 0.5) {
+		UIView.animate(withDuration: 0.3) {
 			self.bgView.alpha = 0.0
 			self.bgView.transform = CGAffineTransform(scaleX: 0.1,y: 0.1)//CGAffineTransformMakeScale(0.1, 0.1)
 		} completion: { done in
