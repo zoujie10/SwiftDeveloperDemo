@@ -38,7 +38,7 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 
 		let alert = WW_AlertSelectTipView.init()
 		alert.defaultSelectIndex = selectIdx
-		alert.showWithData(listData: ["1","2","3"], title: "选择弹框")
+		alert.showWithData(listData: ["1","2","3","4","5"], title: "选择弹框")
 		alert.select_tips_block = { [self] str , idx in
 			selectIdx = idx
 			print(str,idx)

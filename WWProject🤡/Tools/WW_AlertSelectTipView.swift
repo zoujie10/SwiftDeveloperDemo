@@ -27,6 +27,12 @@ class WW_AlertSelectTipCell:UITableViewCell{
 		self.tipsLabel.snp.makeConstraints { make in
 			make.edges.equalTo(self.contentView)
 		}
+		
+		self.contentView.addSubview(self.lineView)
+		self.lineView.snp.makeConstraints { make in
+			make.left.bottom.right.equalTo(self.contentView)
+			make.height.equalTo(0.5)
+		}
 	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
@@ -41,7 +47,12 @@ class WW_AlertSelectTipCell:UITableViewCell{
 		label.font = .boldSystemFont(ofSize: 20)
 		return label;
 	}()
-
+	
+	lazy var lineView : UIView = {
+		let view = UIView.init()
+		view.backgroundColor = .white
+		return view
+	}()
 }
 
 class WW_AlertSelectTipView: UIViewController {
@@ -72,7 +83,8 @@ class WW_AlertSelectTipView: UIViewController {
 			make.height.equalTo(45)
 		}
 		self.tipsTableView.snp.makeConstraints { make in
-			make.edges.equalTo(UIEdgeInsetsMake(45, 0, 0, 0))
+			make.left.right.bottom.equalTo(view)
+			make.height.equalTo(self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height)
 		}
 	}
 	

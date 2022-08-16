@@ -60,6 +60,7 @@ class SwiftGCDVC: UIViewController {
         let globalQueue = DispatchQueue.global()
         
         globalQueue.async(group: group, execute: {
+			Thread.sleep(forTimeInterval: 2)
             print("request step one")
         })
         
