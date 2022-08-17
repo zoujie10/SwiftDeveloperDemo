@@ -66,28 +66,49 @@ class WW_AlertSelectTipView: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		addContenView()
+		view.backgroundColor = UIColor(r: 0, g: 0, b: 0, a: 0.6)
 	}
 	func showWithData(listData : [String],title:String){
 		WW_keyWindow?.rootViewController?.addChildViewController(self)
 		WW_keyWindow?.addSubview(self.view)
 		self.titleLabel.text = title
 		self.tipsArray = listData
+		addContenView()
 		self.tipsTableView.reloadData()
 	}
 	func addContenView(){
-		view.addSubview(self.titleLabel)
-		view.addSubview(self.tipsTableView)
+		self.view.addSubview(self.bgView)
+		self.bgView.addSubview(self.titleLabel)
+		self.bgView.addSubview(self.tipsTableView)
+		
+		self.bgView.snp.makeConstraints { make in
+			make.left.right.bottom.equalTo(view)
+			make.height.equalTo(0)
+		}
+		UIView.animate(withDuration: 1) {
+			self.bgView.snp.updateConstraints{ make in
+				make.height.equalTo(self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height)
+			}
+		} completion: { t in
+			
+		}
+
 		self.titleLabel.snp.makeConstraints { make in
-			make.left.bottom.right.equalTo(view)
+			make.left.top.right.equalTo(bgView)
 			make.height.equalTo(45)
 		}
 		self.tipsTableView.snp.makeConstraints { make in
-			make.left.right.bottom.equalTo(view)
-			make.height.equalTo(self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height)
+			make.left.right.equalTo(bgView)
+			make.top.equalTo(self.titleLabel.snp_bottom)
+			make.height.equalTo(self.tipsArray.count * 45)
 		}
 	}
 	
+	lazy var bgView : UIView = {
+		let view = UIView.init()
+		view.backgroundColor = .white
+		return view
+	}()
 	
 	lazy var titleLabel : UILabel = {
 		let label = UILabel()
@@ -132,7 +153,26 @@ extension WW_AlertSelectTipView:UITableViewDelegate,UITableViewDataSource{
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		self.defaultSelectIndex = indexPath.row
 		self.select_tips_block!(self.tipsArray[indexPath.row],indexPath.row)
-		self.removeFromParentViewController()
-		self.view.removeFromSuperview()
+		removeVC()
+	}
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 45
+	}
+	func removeVC(){
+		UIView.animate(withDuration: 0.2) {
+			self.bgView.frame.origin.y = WWScreenHeight
+		} completion: { done in
+			self.removeFromParentViewController()
+			self.view.removeFromSuperview()
+		}
+	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		let touch = touches.first!
+		let point = touch.location(in: view)
+		let layer = self.view.layer.hitTest(point)
+		if layer == self.view.layer{
+			removeVC()
+		}
 	}
 }

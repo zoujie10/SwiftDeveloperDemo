@@ -142,4 +142,13 @@ extension WW_PromptAlertVC{
 			self.view.removeFromSuperview()
 		}
 	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		let touch = touches.first!
+		let point = touch.location(in: view)
+		let layer = self.view.layer.hitTest(point)
+		if layer == self.view.layer{
+			removeVC()
+		}
+	}
 }
