@@ -15,7 +15,6 @@ extension UIColor{
     convenience init(r : CGFloat,g : CGFloat, b : CGFloat , a:CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: a)
     }
-    
 	
     class var random: UIColor {
         return UIColor(r: CGFloat(arc4random_uniform(256)),

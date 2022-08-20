@@ -29,6 +29,19 @@ class WW_SelectPhotoView: UIView, UIImagePickerControllerDelegate & UINavigation
     var isSelectOriginalPhoto : Bool = false //是否选择原图
     var location : CLLocation?
     
+	//自定义初始化
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	init(frame: CGRect,data : Array<Any>) {
+		super.init(frame: frame)
+	}
+	
     convenience init(selectType : SelectPhotoViewType,imageUrl : NSString) {
         self.init(frame: .zero)
         selectPhotoType = selectType
@@ -41,8 +54,8 @@ class WW_SelectPhotoView: UIView, UIImagePickerControllerDelegate & UINavigation
         collectionItemCount = photosCount
         makeUI()
     }
-    
-    
+	
+	
     func makeUI(){
         switch selectPhotoType {
             case .selecct_single_photo:
