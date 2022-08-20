@@ -81,17 +81,13 @@ class WW_AlertSelectTipView: UIViewController {
 		self.bgView.addSubview(self.titleLabel)
 		self.bgView.addSubview(self.tipsTableView)
 		
-		self.bgView.snp.makeConstraints { make in
-			make.left.right.bottom.equalTo(view)
-			make.height.equalTo(0)
-		}
-		UIView.animate(withDuration: 1) {
-			self.bgView.snp.updateConstraints{ make in
-				make.height.equalTo(self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height)
-			}
-		} completion: { t in
-			
-		}
+		//动画用frame 来做  snp布局无法实现动画
+		self.bgView.frame = CGRect(x: 0, y: Int(WWScreenHeight), width: Int(WWScreenWidth), height: (self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height))
+		let bgView_y =  CGFloat(WWScreenHeight-CGFloat((self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height)))
+		let bgView_height = self.tipsArray.count * 45 + 45 + WW_Device_TabBar_Height
+		UIView.animate(withDuration: 0.2) {
+			self.bgView.frame = CGRect(x: 0, y:Int(bgView_y), width: Int(WWScreenWidth), height:bgView_height)
+		} completion: { t in}
 
 		self.titleLabel.snp.makeConstraints { make in
 			make.left.top.right.equalTo(bgView)
