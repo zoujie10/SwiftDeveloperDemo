@@ -88,10 +88,12 @@
 		8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */; };
 		8443767120BBF76400F28BA8 /* FruitImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443767020BBF76400F28BA8 /* FruitImage.xcassets */; };
 		8443767320BBFD4F00F28BA8 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */; };
+		8445E0B628B50DF9009AD4DB /* QuestionTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445E0B528B50DF9009AD4DB /* QuestionTwo.swift */; };
 		8446EC6427F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6327F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift */; };
 		8446EC6627F556E400F0D235 /* WW_ComplexOrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6527F556E400F0D235 /* WW_ComplexOrderListViewModel.swift */; };
 		8446EC6827F561DB00F0D235 /* WW_ComplexOrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */; };
 		84480F4D253731B800A738B0 /* CopyPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84480F4C253731B800A738B0 /* CopyPatternViewController.swift */; };
+		844839EE28C205BC00B3C43A /* GoodCode_Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844839ED28C205BC00B3C43A /* GoodCode_Practice.swift */; };
 		844ECB3F27F72CEF007FC276 /* orderList.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 844ECB3E27F717EC007FC276 /* orderList.geojson */; };
 		844ECB4127F83B66007FC276 /* WW_ComplexOrderListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844ECB4027F83B66007FC276 /* WW_ComplexOrderListCell.swift */; };
 		844ECB4327F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844ECB4227F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift */; };
@@ -397,10 +399,12 @@
 		8443766E20BBDCB000F28BA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8443767020BBF76400F28BA8 /* FruitImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FruitImage.xcassets; sourceTree = "<group>"; };
 		8443767220BBFD4F00F28BA8 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		8445E0B528B50DF9009AD4DB /* QuestionTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTwo.swift; sourceTree = "<group>"; };
 		8446EC6327F556A400F0D235 /* WW_ComplexOrderSingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderSingPageVC.swift; sourceTree = "<group>"; };
 		8446EC6527F556E400F0D235 /* WW_ComplexOrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListViewModel.swift; sourceTree = "<group>"; };
 		8446EC6727F561DB00F0D235 /* WW_ComplexOrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListModel.swift; sourceTree = "<group>"; };
 		84480F4C253731B800A738B0 /* CopyPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPatternViewController.swift; sourceTree = "<group>"; };
+		844839ED28C205BC00B3C43A /* GoodCode_Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodCode_Practice.swift; sourceTree = "<group>"; };
 		844ECB3E27F717EC007FC276 /* orderList.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = orderList.geojson; sourceTree = "<group>"; };
 		844ECB4027F83B66007FC276 /* WW_ComplexOrderListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListCell.swift; sourceTree = "<group>"; };
 		844ECB4227F83B90007FC276 /* WW_ComplexOrderListItemsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_ComplexOrderListItemsCollectionView.swift; sourceTree = "<group>"; };
@@ -899,6 +903,7 @@
 			isa = PBXGroup;
 			children = (
 				84373FC528AFBBE000003538 /* QuestionOne.swift */,
+				8445E0B528B50DF9009AD4DB /* QuestionTwo.swift */,
 			);
 			path = "Interview Questions";
 			sourceTree = "<group>";
@@ -947,6 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				84430F17283BDC48002C9888 /* ZJ_PerformanceOptimizationMainVC.swift */,
+				844839ED28C205BC00B3C43A /* GoodCode_Practice.swift */,
 				84EEB4BB2869F537009254E2 /* 性能优化上.mindnode */,
 			);
 			path = PerformanceOptimization;
@@ -2187,6 +2193,7 @@
 				84582FE227CCC17C005124CC /* WW_CircleTransition.swift in Sources */,
 				842991F327494A4C00A50077 /* SwiftThreadVC.swift in Sources */,
 				8432086A2793BE9D00E5DC09 /* WW_HomeItemDetailViewModel.swift in Sources */,
+				844839EE28C205BC00B3C43A /* GoodCode_Practice.swift in Sources */,
 				842991D627467EFF00A50077 /* SwiftMixTextPicVC.swift in Sources */,
 				84582FDE27C7E5F0005124CC /* WW_CustomerFiltrateViewModel.swift in Sources */,
 				84117B792764C9B800D8B0BB /* WW_OrderPageVC.swift in Sources */,
@@ -2207,6 +2214,7 @@
 				8443766F20BBDCB000F28BA8 /* RegisterViewController.swift in Sources */,
 				4F02FD9D22AF817A00B8CB35 /* IteratorProtocol.swift in Sources */,
 				844F3ED0274C9345006762D0 /* WWGuidePageVC.swift in Sources */,
+				8445E0B628B50DF9009AD4DB /* QuestionTwo.swift in Sources */,
 				845D81E420B3FCDA00ABD88A /* StaticTableViewController.swift in Sources */,
 				84DAA5402774746400A97694 /* WW_ChiefInspectorVC.swift in Sources */,
 				842991DA2747790900A50077 /* SwiftMapKitVC.swift in Sources */,
