@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+struct provincesItems {
+	let name : String
+	let url : String
+}
 class CollectionViewController: UICollectionViewController {
     
 	var provinces = NSArray()

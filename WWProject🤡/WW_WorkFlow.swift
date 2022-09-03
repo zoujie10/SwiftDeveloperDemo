@@ -24,4 +24,8 @@ class WW_WorkFlow: NSObject {
 
 4.VC UI
 4.View/Cell 代码块
+ 
+5.备份常用VC，View，ViewModel模块
+5.1 直接复制，再根据新UI，逻辑调整  比封装 适配更高效，但重复代码会增多
+
 */
