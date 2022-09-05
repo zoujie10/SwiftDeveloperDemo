@@ -14,7 +14,6 @@ class WW_CustomerMainVC: WW_MainBaseVC {
         self.title = "客户管理"
         view.backgroundColor = UIColor.white
         creatUI()
-      
     }
     
     func creatUI(){
