@@ -65,7 +65,7 @@ class GoodCode_Practice: NSObject {
  // result = ["1", "2"]
  **/
 
-/* MARK: 使用三元运算符?:
+/* MARK: 3 使用三元运算符?:
  推荐
 
  let b = true
@@ -79,4 +79,26 @@ class GoodCode_Practice: NSObject {
  } else {
 	 a = 2
  }
+ **/
+
+/* MARK: 4 使用guard进行提前返回
+ 
+ 推荐
+
+ guard !a else {
+	 return
+ }
+ guard !b else {
+	 return
+ }
+ // do
+ 复制代码
+ 不推荐
+
+ if a {
+	 if b {
+		 // do
+	 }
+ }
+ 
  **/
