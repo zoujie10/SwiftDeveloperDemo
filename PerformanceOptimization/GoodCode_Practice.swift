@@ -44,11 +44,9 @@ class GoodCode_Practice: NSObject {
 
 
 /* MARK: 2 控制流 使用filter/reduce/map代替for循环
-
- 使用filter/reduce/map可以带来很多好处，包括更少的局部变量，减少模板代码，代码更加清晰，可读性更高。
+使用filter/reduce/map可以带来很多好处，包括更少的局部变量，减少模板代码，代码更加清晰，可读性更高。
 
  不推荐
-
  let nums = [1, 2, 3]
  var result = []
  for num in nums {
@@ -102,3 +100,33 @@ class GoodCode_Practice: NSObject {
  }
  
  **/
+
+/* MARK: 使用weak/unowned避免循环引用,减少使用unowned
+ 
+ resource.request().onComplete { [weak self] response in
+   guard let self = self else {
+	 return
+   }
+   let model = self.updateModel(response)
+   self.updateUI(model)
+ }
+
+ resource.request().onComplete { [unowned self] response in
+   let model = self.updateModel(response)
+   self.updateUI(model)
+ }
+ 
+
+ unowned在值不存在时会产生运行时异常导致Crash，只有在确定self一定会存在时才使用unowned。
+
+ class Class {
+	 @objc unowned var object: Object
+	 @objc weak var object: Object?
+ }
+ 
+ unowned/weak区别：
+
+ weak - 必须设置为可选值，会进行弱引用处理性能更差。会自动设置为nil
+ unowned - 可以不设置为可选值，不会进行弱引用处理性能更好。但是不会自动设置为nil, 如果self已释放会触发错误.
+ 引起崩溃。
+ */
