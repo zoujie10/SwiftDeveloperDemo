@@ -101,7 +101,7 @@ class GoodCode_Practice: NSObject {
  
  **/
 
-/* MARK: 使用weak/unowned避免循环引用,减少使用unowned
+/* MARK: 5 使用weak/unowned避免循环引用,减少使用unowned
  
  resource.request().onComplete { [weak self] response in
    guard let self = self else {
@@ -129,4 +129,25 @@ class GoodCode_Practice: NSObject {
  weak - 必须设置为可选值，会进行弱引用处理性能更差。会自动设置为nil
  unowned - 可以不设置为可选值，不会进行弱引用处理性能更好。但是不会自动设置为nil, 如果self已释放会触发错误.
  引起崩溃。
+ */
+/* MARK: 6 使用for where优化循环
+ 
+ for循环添加where语句，只有当where条件满足时才会进入循环
+
+ 不推荐
+
+ for item in collection {
+   if item.hasProperty {
+	 // ...
+   }
+ }
+
+ 
+ 推荐
+
+ for item in collection where item.hasProperty {
+   // item.hasProperty == true，才会进入循环
+ }
+
+ 
  */
