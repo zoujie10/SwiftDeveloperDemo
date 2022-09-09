@@ -148,6 +148,20 @@ class GoodCode_Practice: NSObject {
  for item in collection where item.hasProperty {
    // item.hasProperty == true，才会进入循环
  }
+ */
 
+/* MARK: 7 使用defer
+ 
+ defer可以保证在函数退出前一定会执行。可以使用defer中实现退出时一定会执行的操作例如资源释放等避免遗漏。
+
+ func method() {
+	 lock.lock()
+	 defer {
+		 lock.unlock()
+		 // 会在method作用域结束的时候调用
+	 }
+	 // do
+ }
+ 
  
  */
