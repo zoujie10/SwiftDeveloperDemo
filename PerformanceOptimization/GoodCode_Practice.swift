@@ -165,3 +165,17 @@ class GoodCode_Practice: NSObject {
  
  
  */
+/* MARK: 8 字符串 使用"""
+
+在定义复杂字符串时，使用多行字符串字面量可以保持原有字符串的换行符号/引号等特殊字符，不需要使用\进行转义。
+
+let quotation = """
+The White Rabbit put on his spectacles.  "Where shall I begin,
+please your Majesty?" he asked.
+
+"Begin at the beginning," the King said gravely, "and go on
+till you come to the end; then stop."
+"""
+
+提示：上面字符串中的""和换行可以自动保留。
+ */
