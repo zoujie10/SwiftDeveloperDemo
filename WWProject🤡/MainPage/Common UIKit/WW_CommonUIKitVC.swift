@@ -46,7 +46,14 @@ class WW_CommonUIKitVC: WW_MainBaseVC {
 	}
 	@objc func click_warning_method(){
 		let vc = WW_PromptAlertVC.init()
-		vc.configContent(title: "提示", content: "你说什么就是什么好吗？",confirmTitle: "确认",cancelTitle: "取消",height: 140)
+		let str = """
+The White Rabbit put on his spectacles.  "Where shall I begin,
+please your Majesty?" he asked.
+
+"Begin at the beginning," the King said gravely, "and go on
+till you come to the end; then stop."
+"""
+		vc.configContent(title: "提示", content: str,confirmTitle: "确认",cancelTitle: "取消",height: 240)
 		
 	}
 	lazy var alertjumpBtn : UIButton = {

@@ -57,6 +57,8 @@ class WW_PromptAlertVC: UIViewController {
 		
 		self.contentLabel.snp.makeConstraints { make in
 			make.top.equalTo(self.titleLabel.snp_bottom).offset(10)
+			make.left.equalTo(self.bgView).offset(10)
+			make.right.equalTo(self.bgView).offset(-10);
 			make.centerX.equalTo(self.bgView)
 		}
 		
