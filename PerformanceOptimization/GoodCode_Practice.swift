@@ -179,3 +179,18 @@ please your Majesty?" he asked.
 
 提示：上面字符串中的""和换行可以自动保留。
  */
+
+/* MARK: 9 使用字符串插值
+
+使用字符串插值可以提高代码可读性。
+
+不推荐
+
+let multiplier = 3
+let message = String(multiplier) + "times 2.5 is" + String((Double(multiplier) * 2.5))
+复制代码
+推荐
+
+let multiplier = 3
+let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
+*/

@@ -42,7 +42,7 @@ class MapKitViewController: UIViewController,MKMapViewDelegate {
 		
 		let geocoder = CLGeocoder()
 		geocoder.geocodeAddressString(self.txtQueryKey.text!,completionHandler: {(placeMarks, error) -> Void in
-			if placeMarks!.count > 0{//防止反复点击 刷新多个标注
+			if !placeMarks!.isEmpty{//防止反复点击 刷新多个标注
 				self.mapView.removeAnnotations(self.mapView.annotations)
 			}
 			
