@@ -194,3 +194,22 @@ let message = String(multiplier) + "times 2.5 is" + String((Double(multiplier) *
 let multiplier = 3
 let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 */
+
+/* MARK: 10 函数  使用参数默认值
+
+ 使用参数默认值，可以使调用方传递更少的参数。
+
+ 不推荐
+
+ func test(a: Int, b: String?, c: Int?) {
+ }
+ test(1, nil, nil)
+ 复制代码
+ 推荐
+
+ func test(a: Int, b: String? = nil, c: Int? = nil) {
+ }
+ test(1)
+ 复制代码
+ 提示：相比ObjC，参数默认值也可以让我们定义更少的方法。
+ */
