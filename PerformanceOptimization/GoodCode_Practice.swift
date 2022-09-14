@@ -213,3 +213,14 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
  复制代码
  提示：相比ObjC，参数默认值也可以让我们定义更少的方法。
  */
+/* MARK: 11  使用@discardableResult
+ 某些方法使用方并不一定会处理返回值，可以考虑添加@discardableResult标识提示Xcode允许不处理返回值不进行warning提示。
+
+ // 上报方法使用方不关心是否成功
+ func report(id: String) -> Bool {}
+
+ @discardableResult func report2(id: String) -> Bool {}
+
+ report("1") // 编译器会警告
+ report2("1") // 不处理返回值编译器不会警告
+ */
