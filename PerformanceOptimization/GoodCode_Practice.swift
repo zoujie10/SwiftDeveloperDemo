@@ -224,3 +224,32 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
  report("1") // 编译器会警告
  report2("1") // 不处理返回值编译器不会警告
  */
+
+/* MARK: 12  系统库   KVO/Notification 使用 block API
+
+ block API的优势：
+
+ KVO 可以支持 KeyPath
+ 不需要主动移除监听，observer释放时自动移除监听
+ 不推荐
+
+ class Object: NSObject {
+   init() {
+	 super.init()
+	 addObserver(self, forKeyPath: "value", options: .new, context: nil)
+	 NotificationCenter.default.addObserver(self, selector: #selector(test), name: NSNotification.Name(rawValue: ""), object: nil)
+   }
+
+   override class func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+   }
+
+   @objc private func test() {
+   }
+
+   deinit {
+	 removeObserver(self, forKeyPath: "value")
+	 NotificationCenter.default.removeObserver(self)
+   }
+
+ }
+ */
