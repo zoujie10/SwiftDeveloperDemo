@@ -253,3 +253,11 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 
  }
  */
+/* MARK: 13 - Protocol
+
+ 使用protocol代替继承
+
+ Swift中针对protocol提供了很多新特性，例如默认实现，关联类型，支持值类型。在代码设计时可以优先考虑使用protocol来避免臃肿的父类同时更多使用值类型。
+
+ 提示：一些无法用protocol替代继承的场景：1.需要继承NSObject子类。2.需要调用super方法。3.实现抽象类的能力
+ */
