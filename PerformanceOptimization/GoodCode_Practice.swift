@@ -262,23 +262,4 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
  提示：一些无法用protocol替代继承的场景：1.需要继承NSObject子类。2.需要调用super方法。3.实现抽象类的能力
  */
 
-/* MARK: 14 - Extension:使用extension组织代码
 
- 使用extension将私有方法/父类方法/协议方法等不同功能代码进行分离更加清晰/易维护。
-
- class MyViewController: UIViewController {
-   // class stuff here
- }
- //- Private
- extension: MyViewController {
-	 private func method() {}
- }
- // - UITableViewDataSource
- extension MyViewController: UITableViewDataSource {
-   // table view data source methods
- }
- //- UIScrollViewDelegate
- extension MyViewController: UIScrollViewDelegate {
-   // scroll view delegate methods
- }
- */
