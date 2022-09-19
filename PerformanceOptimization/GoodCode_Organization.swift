@@ -31,6 +31,7 @@ class GoodCode_Organization: NSObject {
    // scroll view delegate methods
  }
  */
+
 /* MARK: 2 代码风格 - 考虑使用SwiftFormat和SwiftLint。
  
  良好的代码风格可以提高代码的可读性，统一的代码风格可以降低团队内相互理解成本。对于Swift的代码格式化建议使用自动格式化工具实现，将自动格式化添加到代码提交流程，通过定义Lint规则统一团队内代码风格。考虑使用SwiftFormat和SwiftLint。
