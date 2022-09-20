@@ -37,3 +37,15 @@ class ZJ_PerformanceOptimizationMainVC: WW_MainBaseVC {
  使用WMO - 编译器可以自动分析推断出final优化为静态派发
  */
 
+/* MARK: 5 使用Slice共享内存优化性能
+
+ 在使用Array/String时，可以使用Slice切片获取一部分数据。Slice保存对原始Array/String的引用共享内存数据，不需要重新分配空间进行存储。
+
+ let midpoint = absences.count / 2
+
+ let firstHalf = absences[..<midpoint]
+ let secondHalf = absences[midpoint...]
+ // firstHalf/secondHalf并不会复制和占用更多内存
+
+ 提示：应避免一直持有Slice，Slice会延长原始Array/String的生命周期导致无法被释放造成内存泄漏。
+ */
