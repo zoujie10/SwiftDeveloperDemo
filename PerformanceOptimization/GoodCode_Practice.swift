@@ -263,3 +263,19 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
  */
 
 
+/* MARK: 14 属性  使用lazy延时初始化属性
+
+ class View {
+	lazy var label: UILabel = {
+		 let label = UILabel()
+		 self.addSubView(label)
+		 return label
+	 }()
+ }
+ 复制代码
+ lazy属性初始化会延迟到第一次使用时，常见的使用场景：
+
+ 初始化比较耗时
+ 可能不会被使用到
+ 初始化过程需要使用self
+ 提示：lazy属性不能保证线程安全*/
